@@ -1,0 +1,14 @@
+{
+  "source_repo": "Liutupi/ai-passport-nabo-xiaozhi",
+  "source_commit": "b4a83db3ad3735fa5dd19194363cb63288a03f33",
+  "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_rgb565_rle.bin",
+  "source_blob_sha256": "34475f298938efa03a642d782384130023b9ff36cdee0edf1222415e4201b4df",
+  "source_frame": 2,
+  "original_range": [
+    57442,
+    84085
+  ],
+  "frame_sha256": "f80910cbdece5ceca88203919c6a63dde6c5d3d878927d5020442aa23ba30bf2",
+  "license": "NABO character art; not covered by MIT",
+  "conversion": "Original pose unchanged; 224x224 source downsampled to 84x84 and composited on launcher background"
+}

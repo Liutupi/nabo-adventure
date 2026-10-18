@@ -1,0 +1,69 @@
+{
+  "state": "USER HARDWARE ACCEPTED; publication download verification pending",
+  "date": "2026-10-19",
+  "app_bytes": 2581856,
+  "app_sha256": "e83a1bb216392c3cb67e5ab08af2a354bed2f2a3f44080ecdd2a7f6291acf390",
+  "host_tests": {
+    "full_suite_passed": 80,
+    "final_portrait_renderer_recheck_passed": 5
+  },
+  "hardware_serial": {
+    "boot": true,
+    "white_coat_launcher_capture": true,
+    "settings_status_pages": true,
+    "dive": "startup, brief play, pause and close via serial; full physical play subsequently confirmed by user",
+    "undercover_players_complete": [
+      5,
+      8
+    ],
+    "blackjack": "settlement and next round passed",
+    "dice": "settlement and next round passed",
+    "jump_landings": 21,
+    "one_person_platform": true,
+    "synthetic_score_persisted": false,
+    "game_switch_cycles": 10,
+    "home_heap_bytes": [
+      247128,
+      247128,
+      247128,
+      247128,
+      247128,
+      247128,
+      247128,
+      247128,
+      247128,
+      247128
+    ],
+    "settings_preserved": true,
+    "jump_best_preserved": 318
+  },
+  "flash_verification": "App at 0x10000 exact; every byte of boot/NVS/PHY/assets/files matched pre-write private backup",
+  "human_acceptance": {
+    "date": "2026-10-19",
+    "physical_controls": "user confirmed passed",
+    "audio": "user confirmed passed",
+    "sleep_button_wake": "user confirmed passed",
+    "scope": [
+      "DIVE",
+      "blackjack",
+      "liars dice",
+      "undercover",
+      "jump",
+      "settings",
+      "long press exit",
+      "automatic sleep and button wake"
+    ],
+    "user_confirmation": "这些项目都已实机确认正常"
+  },
+  "full_image": "Static package uses same public bootloader and partition table as preserved device; first installation with empty NVS not physically exercised",
+  "gallery": {
+    "cover-white-coat.png": "Promotional illustration using established NABO reference",
+    "home-white-coat.png": "Current candidate device render capture",
+    "table-three-games-device.png": "Three current candidate device render captures; table results settled",
+    "jump-one-person-device.png": "Current candidate device render capture during serial test; score recording suppressed",
+    "lcd-dive.png": "Source DIVE project image; DIVE game module unchanged"
+  },
+  "original_local_build_commit": "9d733c20798ead9ef9123248a414added79dcf74",
+  "firmware_tree_git_sha1": "81c2a147dc76408c7bd09faf4158b8bdec06f6d2",
+  "source_identity": "Fresh public history; firmware tree is identical to accepted build inputs; no firmware rebuild"
+}

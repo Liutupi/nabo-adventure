@@ -1,0 +1,11 @@
+{
+  "converter": "lv_font_conv 1.5.3",
+  "font": "SourceHanSansCN-Medium.otf",
+  "font_sha256": "a94e558a2fe972bee4f46bce0843abff37063fd68c33f1e7d9058f6f09432b01",
+  "symbols": "·一上下不书亮人任休位住你保值入关再冰力功动医单取可和咖唱啡器回均声备外存客小局带床度开式德心态意戏房所扬择拿按换播整旁无显暂有木本束来松桌次活消深游潜激片牌特状玩班用电畅眠示离秒站箱线结网置美胶脑自色菜蓄角设调起跳辑返进迷选配量铁键长院需靶音鱼黑，",
+  "outputs": {
+    "collection_font_12": "4c8895a08c5d30fe8cdb7115357e22c07cee3feee522db1f2995ab5ac246f33d",
+    "collection_font_16": "eb71f01870075d315e225bcf12789a556450092a40d6833678bb530555371c9c",
+    "collection_font_18": "ab96874a447f6225fef239e5bf03b11d02c36701cb52efc114f6b44fe3b1942c"
+  }
+}

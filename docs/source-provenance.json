@@ -1,0 +1,334 @@
+{
+  "base_repo": "Liutupi/nabo-dive",
+  "base_commit": "9758dc47a4f662ca2577c9d5f8c0712f66b9bc85",
+  "files": [
+    {
+      "file": "firmware/main/nabo_table.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table.c",
+      "sha256": "ee2e98a48c9ab942d5cc4e178c26b2c1dc71e141c0a83e9f86db3774c1b69d98"
+    },
+    {
+      "file": "firmware/main/nabo_table.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table.h",
+      "sha256": "ba2734af90473a4b397667d65c4990766173c0c94036065028ef5c685374b111"
+    },
+    {
+      "file": "firmware/main/nabo_table_bid.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_bid.c",
+      "sha256": "c8130d11dfea8abf75ae1fadbd12d2a49a6d18b6b090d68c42dde248dfc34938"
+    },
+    {
+      "file": "firmware/main/nabo_table_font_12.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_font_12.c",
+      "sha256": "574b6b86aa93c590f337bc9213e19ed3242729f79e9327f8aa0fe0a6c8b1279a",
+      "source_sha256": "7c1631cae757096a331d0dfed043329c456edd990eda5a5311ec21bc71643bb6",
+      "transformation": "Trimmed blank lines at EOF; glyph data unchanged"
+    },
+    {
+      "file": "firmware/main/nabo_table_font_24.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_font_24.c",
+      "sha256": "cf50381e86f3d83edb87a6740a5826812657388429682032b420da5ad6f7d345",
+      "source_sha256": "42cba4d3905a2d056c2f7ec806ce8fdfa51645c23e29eb2020391940488557e3",
+      "transformation": "Trimmed blank lines at EOF; glyph data unchanged"
+    },
+    {
+      "file": "firmware/main/nabo_table_gfx.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_gfx.c",
+      "sha256": "33476060d5fb69d4c91d36de149db3c6af9305a1631c76610c0456f92137ad3d"
+    },
+    {
+      "file": "firmware/main/nabo_table_gfx.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_gfx.h",
+      "sha256": "9b3ed1a8f1fbbc98bd8c52eedeaa2d3664493ca8f8500d7428361b5b67339c93"
+    },
+    {
+      "file": "firmware/main/nabo_table_model.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_model.c",
+      "sha256": "552ee443f2a50d0382409e50fe32e20c22a3b145cb4bd8992c17e531210b60a1"
+    },
+    {
+      "file": "firmware/main/nabo_table_model.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_model.h",
+      "sha256": "76d4f993187ff830a57060eb06596e9f8024cfab39355b940f75e9f1b9f9460b"
+    },
+    {
+      "file": "firmware/main/nabo_table_scene.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_scene.c",
+      "sha256": "d05866af452b167e6dc2147c8aba7322dcec25cb09bff5be8761760a372ec9ec"
+    },
+    {
+      "file": "firmware/main/nabo_table_scene.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_scene.h",
+      "sha256": "7fbf5c5aba9c95cb047f162634cbd8456ed4ce55226ed3247250e77e68cd38f7"
+    },
+    {
+      "file": "firmware/main/nabo_table_scene_play.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_scene_play.c",
+      "sha256": "4a0c7b61b4b7ddd07b8b3823c4ad4d15ac5968ac8f1b4c86b1ccf40d163af505"
+    },
+    {
+      "file": "firmware/main/nabo_table_scene_uc.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_scene_uc.c",
+      "sha256": "52187014cd026e83abf821773d480c83dc6b9290cb4dd1f09a4c98e10e054989"
+    },
+    {
+      "file": "firmware/main/nabo_table_scene_ui.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_scene_ui.h",
+      "sha256": "caee97515ac186d5410c4a2fcbfd6a3b3e52b1ba3b2288256148183de3946a02"
+    },
+    {
+      "file": "firmware/main/nabo_table_shapes.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_shapes.c",
+      "sha256": "ea56c43829931d8c42c3bf5af40778eaaca3c9c9b75e8358027f3b2e731bdede"
+    },
+    {
+      "file": "firmware/main/nabo_table_sound.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_sound.c",
+      "sha256": "1e3a275fd199ffe48c0e765d9b4f60fa4d717f90521fb11234b81a5b11e333e1"
+    },
+    {
+      "file": "firmware/main/nabo_table_sound.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_sound.h",
+      "sha256": "daec4d6b59f2b49008084babe614683be37f058715cfb53983ffe9bb6fcd190f"
+    },
+    {
+      "file": "firmware/main/nabo_table_sprite_ids.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_sprite_ids.h",
+      "sha256": "f632abbf4ecd989cb8e0e79ff1eca6a7fd58ab1cc974870098b065a1c5c61a9b"
+    },
+    {
+      "file": "firmware/main/nabo_table_sprites.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_sprites.c",
+      "sha256": "933423c2964147beec5d9951b550b03be7591209bc305a5498c3d21c5fdb065e"
+    },
+    {
+      "file": "firmware/main/nabo_table_sprites.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_sprites.h",
+      "sha256": "c7ea7c003271893edd1decd2deb87cc38058e849d0fcf70e3b63ae6dc85c86a6"
+    },
+    {
+      "file": "firmware/main/nabo_table_text.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_text.c",
+      "sha256": "6c7f9411a3d39db149c8a437ef22d26a258c6afa936429d13b7b48a02fc76d2c"
+    },
+    {
+      "file": "firmware/main/nabo_table_text.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_text.h",
+      "sha256": "6a50e7a0786a5189dab4cbc2df49efbda27eb80737184836a2fd5173a8a0cfca"
+    },
+    {
+      "file": "firmware/main/nabo_table_uc.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_uc.c",
+      "sha256": "796eef2c702e054f618287cc6e822136a0af4f1d939f931231a93a76a98389c7"
+    },
+    {
+      "file": "firmware/main/nabo_uc_words.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_uc_words.c",
+      "sha256": "5b51ef67fbb5303892416020b2897a41c04f6c8712e5ace3ee4b804f9afe13d2"
+    },
+    {
+      "file": "firmware/main/nabo_uc_words.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_uc_words.h",
+      "sha256": "a55fa1492e121b88cc0694ac17fb7fd0db1a59792038437f724226bcea3e97a1"
+    },
+    {
+      "file": "firmware/main/nabo_dice_render.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_dice_render.c",
+      "sha256": "018b971da15a7fb0496440b75818179f3ac3734274d1ebed1fd6a37cad5e5061"
+    },
+    {
+      "file": "firmware/main/nabo_dice_render.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_dice_render.h",
+      "sha256": "6eb4a3710efbb3731e54538ba10ee4b8e709ba46a4153dc7eeb3477187311223"
+    },
+    {
+      "file": "firmware/main/nabo_menu_font_16.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_menu_font_16.c",
+      "sha256": "40c431af41b1b0a6f838195cc9cccf99f78abf4ddbac476ff0126ab75dad511f"
+    },
+    {
+      "file": "firmware/main/nabo_mono_font_12.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_mono_font_12.c",
+      "sha256": "264281c5b9969c87547e30136fdc071fb3a897a58d40d7ed8173712c307d01bf"
+    },
+    {
+      "file": "firmware/main/nabo_poster_font_28.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_poster_font_28.c",
+      "sha256": "ce7ed1ecd5eedeb1df4b673470a65ed9816e5ac3bdff3d849d55e58dd897d12d"
+    },
+    {
+      "file": "firmware/main/nabo_poster_font_48.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_poster_font_48.c",
+      "sha256": "ecc849f6cbfbc520cca83bff864577d6d3788ecc74f513ae60ae5a7371d0fbf5"
+    },
+    {
+      "file": "firmware/main/nabo_table_font_12.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_font_12.c",
+      "sha256": "574b6b86aa93c590f337bc9213e19ed3242729f79e9327f8aa0fe0a6c8b1279a",
+      "source_sha256": "7c1631cae757096a331d0dfed043329c456edd990eda5a5311ec21bc71643bb6",
+      "transformation": "Trimmed blank lines at EOF; glyph data unchanged"
+    },
+    {
+      "file": "firmware/main/nabo_table_font_24.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_table_font_24.c",
+      "sha256": "cf50381e86f3d83edb87a6740a5826812657388429682032b420da5ad6f7d345",
+      "source_sha256": "42cba4d3905a2d056c2f7ec806ce8fdfa51645c23e29eb2020391940488557e3",
+      "transformation": "Trimmed blank lines at EOF; glyph data unchanged"
+    },
+    {
+      "file": "firmware/main/nabo_ui_font_18.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_ui_font_18.c",
+      "sha256": "dded3e9e6428a174d9db32c4c0c16b17e3fbd577adb0afdd0e02793e30ec8d51"
+    },
+    {
+      "file": "firmware/main/nabo_jump_assets.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi",
+      "source_commit": "b4a83db3ad3735fa5dd19194363cb63288a03f33",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_jump_assets.h",
+      "sha256": "eafc16db765364ecdb93463760fd97fe2d4827ff260662b2c4cd5a82fc1bcefd"
+    },
+    {
+      "file": "firmware/main/nabo_jump_model.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi",
+      "source_commit": "b4a83db3ad3735fa5dd19194363cb63288a03f33",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_jump_model.c",
+      "sha256": "0cf6e84f593648ab63f8ea36fa51d574e22a7e6af8f3f2210b8ea825bdff8422"
+    },
+    {
+      "file": "firmware/main/nabo_jump_model.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi",
+      "source_commit": "b4a83db3ad3735fa5dd19194363cb63288a03f33",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_jump_model.h",
+      "sha256": "70f673eed9dd85b0c31f943331f3f837fb42a355c64ac4eb6ca701f260619bcb"
+    },
+    {
+      "file": "firmware/main/nabo_jump_rig.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi",
+      "source_commit": "b4a83db3ad3735fa5dd19194363cb63288a03f33",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_jump_rig.c",
+      "sha256": "4b65edb1e4d155b2b96d565fc85930dda12a01d12c14dedce59f400881ad683b"
+    },
+    {
+      "file": "firmware/main/nabo_jump_rig.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi",
+      "source_commit": "b4a83db3ad3735fa5dd19194363cb63288a03f33",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_jump_rig.h",
+      "sha256": "8229df60293b8e8783defe5b2f57056fce41e1e4dd8142795358d9426af74538"
+    },
+    {
+      "file": "firmware/main/nabo_jump_sound.c",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi",
+      "source_commit": "b4a83db3ad3735fa5dd19194363cb63288a03f33",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_jump_sound.c",
+      "sha256": "4e1d22e04432be876e5b337bcbfa998e9408ce8ef4eb6b1af24b0d5527000bef"
+    },
+    {
+      "file": "firmware/main/nabo_jump_sound.h",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi",
+      "source_commit": "b4a83db3ad3735fa5dd19194363cb63288a03f33",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/nabo_jump_sound.h",
+      "sha256": "3aebee0cfde698c5463f587fccdb116b1855327750e0e1f99b51f728ae7ffcbd"
+    },
+    {
+      "file": "firmware/main/jump_sprites.bin",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi",
+      "source_commit": "b4a83db3ad3735fa5dd19194363cb63288a03f33",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/jump_sprites.bin",
+      "sha256": "6d361d6df49837c33a015421e27df1cf5215365131449b1d887f715a8cfbaf61"
+    },
+    {
+      "file": "firmware/main/jump_sounds.bin",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi",
+      "source_commit": "b4a83db3ad3735fa5dd19194363cb63288a03f33",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/jump_sounds.bin",
+      "sha256": "5f8613c19ec519ec38fed11e6ac8599a6dc3553a33136c3a79f89f1617f0cbde"
+    },
+    {
+      "file": "firmware/main/table_sprites.bin",
+      "source_repo": "Liutupi/ai-passport-nabo-xiaozhi-table",
+      "source_commit": "2de454ac3058fd463eb94a373cb4a7269652b3e8",
+      "source_path": "xiaozhi-esp32/main/boards/folotoy/ai-passport-nabo/table_assets/table_sprites.bin",
+      "sha256": "7db081cffdd101df8ffaf954b07575a65f69881c590e993c3502a7b7f9ea4bfe"
+    }
+  ],
+  "collection_changes": {
+    "firmware/main/nabo_table_gfx.c": "Added clipped immutable RGB565 bitmap draw operation for the launcher portrait; original table gameplay rendering retained.",
+    "firmware/main/nabo_table_gfx.h": "Added NTG_BITMAP display-list type and builder.",
+    "white_coat_portrait": "Unmodified original idle pose, frame source and SHA256 documented in art/nabo-white-coat-idle.json."
+  },
+  "accepted_binary_source_identity": {
+    "original_local_build_commit": "9d733c20798ead9ef9123248a414added79dcf74",
+    "firmware_tree_git_sha1": "81c2a147dc76408c7bd09faf4158b8bdec06f6d2",
+    "public_history": "independent root commit; same firmware tree",
+    "app_sha256": "e83a1bb216392c3cb67e5ab08af2a354bed2f2a3f44080ecdd2a7f6291acf390",
+    "rebuilt_for_publication": false
+  }
+}
