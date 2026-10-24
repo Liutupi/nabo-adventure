@@ -117,8 +117,8 @@ class Collection(unittest.TestCase):
         for key in (0, 1, 2): self.assertEqual(self.key(m, key), 0)
         self.assertEqual(m.page, 1)
 
-    def test_every_collection_label_has_a_font_glyph(self):
-        literals = re.findall(r'"([^"\n]*)"', (BOARD/'collection_ui.c').read_text('utf-8'))
+    def test_every_adventure_label_has_a_font_glyph(self):
+        literals = [t for f in sorted(BOARD.glob('adv_*.c')) for t in re.findall(r'"([^"\n]*)"', f.read_text('utf-8'))]
         used = {c for s in literals for c in s if ord(c) > 127}
         for size in (12, 16, 18):
             font = (BOARD/f'collection_font_{size}.c').read_text('utf-8')

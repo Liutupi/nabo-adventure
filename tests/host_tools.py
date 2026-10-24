@@ -12,3 +12,10 @@ def unload_library(handle):
         _ctypes.FreeLibrary(handle)
     else:
         _ctypes.dlclose(handle)
+
+def asm_section():
+    """Read-only data section directive for the host assembler (PE, Mach-O or ELF)."""
+    import sys
+    if os.name == 'nt': return '.section .rdata,"dr"'
+    if sys.platform == 'darwin': return '.const_data'
+    return '.section .rodata'

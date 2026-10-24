@@ -1,4 +1,4 @@
-"""Generate collection-only UI fonts with lv_font_conv 1.5.3 and Source Han Sans.
+"""Generate the adventure UI fonts (every non-ASCII character in main/adv_*.c) with lv_font_conv 1.5.3 and Source Han Sans.
 
 The source font and converter are explicit build inputs and are not copied into firmware.
 The original table/DIVE fonts stay unchanged.
@@ -21,7 +21,8 @@ def main():
     version = subprocess.check_output([args.node, str(args.converter), '--version'], text=True).strip()
     if version != '1.5.3':
         raise ValueError('lv_font_conv 1.5.3 required')
-    symbols = ''.join(sorted({c for c in (ROOT/'main/collection_ui.c').read_text('utf-8') if ord(c) > 127}))
+    sources = sorted((ROOT/'main').glob('adv_*.c'))
+    symbols = ''.join(sorted({c for f in sources for c in f.read_text('utf-8') if ord(c) > 127}))
     metadata = {'converter': 'lv_font_conv ' + version, 'font': args.font.name,
                 'font_sha256': hashlib.sha256(args.font.read_bytes()).hexdigest(), 'symbols': symbols, 'outputs': {}}
     for size in (12, 16, 18):
