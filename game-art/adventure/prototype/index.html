@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NABO 冒险之旅原型</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+SC:wght@500;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f3efe6; --panel: #fffaf0; --ink: #1d2541; --muted: #6b6f80; --line: #d9d2c3; --gold: #f9ad84;
+    --accent: #e35a46; --btn: #2a3150; --btn-ink: #f6ead9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12141f; --panel: #1b1e2d; --ink: #ece6da; --muted: #9a9cab; --line: #2e3247; --gold: #f9ad84;
+      --accent: #ff7a63; --btn: #3a4166; --btn-ink: #f6ead9;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12141f; --panel: #1b1e2d; --ink: #ece6da; --muted: #9a9cab; --line: #2e3247; --gold: #f9ad84;
+    --accent: #ff7a63; --btn: #3a4166; --btn-ink: #f6ead9;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.5 "Noto Sans SC", system-ui, sans-serif; }
+  main { max-width: 1040px; margin: 0 auto; padding: 20px 16px 40px; display: grid; gap: 24px;
+         grid-template-columns: auto minmax(0, 1fr); align-items: start; }
+  h1 { font: 700 20px/1.3 "Noto Sans SC", sans-serif; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 16px; }
+  .device { display: flex; gap: 14px; align-items: center; }
+  .badge { background: #20263d; border-radius: 28px; padding: 22px 16px 26px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+  canvas { display: block; width: 240px; height: 320px; image-rendering: pixelated; border-radius: 6px; background: #000; }
+  .keys { display: flex; flex-direction: column; gap: 10px; }
+  .key { width: 64px; height: 44px; border: 0; border-radius: 12px; background: var(--btn); color: var(--btn-ink);
+         font: 700 14px "Noto Sans SC", sans-serif; cursor: pointer; touch-action: none; user-select: none; }
+  .key:active, .key.down { filter: brightness(1.35); }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+  .panel h2 { font-size: 15px; margin: 0 0 8px; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 6px 0; }
+  .row button, .row input { font: inherit; color: var(--ink); background: transparent; border: 1px solid var(--line);
+                           border-radius: 8px; padding: 4px 10px; }
+  .row button { cursor: pointer; }
+  .row input { width: 90px; }
+  pre { margin: 0; font: 12px/1.45 "Space Mono", ui-monospace, monospace; white-space: pre-wrap; word-break: break-all;
+        max-height: 360px; overflow: auto; }
+  kbd { font: 12px "Space Mono", monospace; border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
+  .stack { display: grid; gap: 14px; min-width: 0; }
+  @media (max-width: 760px) { main { grid-template-columns: 1fr; } .device { justify-content: center; } }
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>NABO 的冒险之旅 · 外壳原型</h1>
+    <p class="sub">规则与固件逐步一致（golden 轨迹对拍）。画面为占位版式。</p>
+    <div class="device">
+      <div class="badge"><canvas id="screen" width="240" height="320"></canvas></div>
+      <div class="keys">
+        <button class="key" data-btn="0">上</button>
+        <button class="key" data-btn="1">下</button>
+        <button class="key" data-btn="2">OK</button>
+      </div>
+    </div>
+  </section>
+  <section class="stack">
+    <div class="panel">
+      <h2>操作</h2>
+      <p class="sub" style="margin:0">键盘 <kbd>↑</kbd> <kbd>↓</kbd> <kbd>Enter</kbd>/<kbd>空格</kbd>；按住 500 ms 为长按，两次单击间隔不到 300 ms 为双击。</p>
+      <div class="row">
+        <button id="reset">清空进度</button>
+        <button id="unlock">全部解锁</button>
+        <label><input type="checkbox" id="test"> 测试模式（不存成绩）</label>
+        <label><input type="checkbox" id="sound" checked> 声音</label>
+      </div>
+      <div class="row">
+        旧游戏离开时的成绩 <input id="legacyScore" type="number" value="12" min="0">
+        <button id="legacyDone">离开跳一跳/深潜</button>
+      </div>
+    </div>
+    <div class="panel"><h2>状态（view，与 C 快照同字段）</h2><pre id="state"></pre></div>
+  </section>
+</main>
+<script src="adv_core.js"></script>
+<script src="adv_draw.js"></script>
+<script>
+(function () {
+  'use strict';
+  const A = window.AdvCore;
+  const canvas = document.getElementById('screen');
+  const ctx = canvas.getContext('2d');
+  const SETTINGS = { volume: 70, brightness: 80, sleep: 300, speaker: true };
+  const SAVE_KEY = 'nabo-adventure-proto';
+  let saved = { best: [0, 0, 0, 0, 0, 0, 0, 0, 0], seen: 0 };
+  try { saved = JSON.parse(localStorage.getItem(SAVE_KEY)) || saved; } catch (e) { /* private window */ }
+  let m = A.create((Math.random() * 2 ** 32) >>> 0, SETTINGS, saved.best, saved.seen);
+
+  function persist() {
+    try { localStorage.setItem(SAVE_KEY, JSON.stringify({ best: m.best, seen: m.seen })); } catch (e) { /* ignore */ }
+  }
+
+  // ---------- cues (same notes as firmware/main/adv_sound.c) ----------
+  const NOTES = [null, [[1200, 25]], [[660, 50], [990, 70]], [[220, 70], [0, 30], [196, 90]],
+    [[523, 80], [659, 80], [784, 80], [1047, 220]], [[880, 45], [550, 70]], [[1320, 40], [1760, 50]], [[180, 120]],
+    [[440, 110], [330, 110], [220, 220]], [[880, 60], [1175, 110]]];
+  let audio = null;
+  function play(cue) {
+    if (!document.getElementById('sound').checked || !NOTES[cue]) return;
+    try {
+      audio = audio || new AudioContext();
+      let t = audio.currentTime;
+      for (const [hz, ms] of NOTES[cue]) {
+        if (hz) {
+          const o = audio.createOscillator(), g = audio.createGain();
+          o.type = 'triangle'; o.frequency.value = hz;
+          g.gain.setValueAtTime(0.12, t); g.gain.linearRampToValueAtTime(0, t + ms / 1000);
+          o.connect(g).connect(audio.destination); o.start(t); o.stop(t + ms / 1000);
+        }
+        t += ms / 1000;
+      }
+    } catch (e) { /* audio unavailable */ }
+  }
+
+  function handle(fx) {
+    if (fx & A.FX.CUE) play(m.cue);
+    if (fx & (A.FX.SAVE_BEST | A.FX.SAVE_PROGRESS)) persist();
+    if (fx & A.FX.OPEN_LEGACY) document.getElementById('legacyScore').focus({ preventScroll: true });
+  }
+
+  // ---------- buttons: PRESS / RELEASE / CLICK / DOUBLE / LONG like the BSP ----------
+  const LONG_MS = 500, DOUBLE_MS = 300;
+  const keys = [0, 1, 2].map(() => ({ down: false, long: false, timer: 0, lastClick: -1e9 }));
+  function press(b) {
+    const k = keys[b];
+    if (k.down) return;
+    k.down = true; k.long = false;
+    handle(A.event(m, b, A.EV.PRESS));
+    k.timer = setTimeout(() => { k.long = true; handle(A.event(m, b, A.EV.LONG)); }, LONG_MS);
+    document.querySelector(`.key[data-btn="${b}"]`).classList.add('down');
+  }
+  function release(b) {
+    const k = keys[b];
+    if (!k.down) return;
+    k.down = false; clearTimeout(k.timer);
+    handle(A.event(m, b, A.EV.RELEASE));
+    if (!k.long) {
+      const now = performance.now();
+      handle(A.event(m, b, A.EV.CLICK));
+      if (now - k.lastClick < DOUBLE_MS) { handle(A.event(m, b, A.EV.DOUBLE)); k.lastClick = -1e9; }
+      else k.lastClick = now;
+    }
+    document.querySelector(`.key[data-btn="${b}"]`).classList.remove('down');
+  }
+  const KEYMAP = { ArrowUp: 0, ArrowDown: 1, Enter: 2, ' ': 2 };
+  addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT' && e.target.type === 'number') return;
+    if (e.key in KEYMAP) { e.preventDefault(); if (!e.repeat) press(KEYMAP[e.key]); }
+  });
+  addEventListener('keyup', e => { if (e.key in KEYMAP) { e.preventDefault(); release(KEYMAP[e.key]); } });
+  for (const el of document.querySelectorAll('.key')) {
+    const b = +el.dataset.btn;
+    el.addEventListener('pointerdown', e => { e.preventDefault(); el.setPointerCapture(e.pointerId); press(b); });
+    el.addEventListener('pointerup', () => release(b));
+    el.addEventListener('pointercancel', () => release(b));
+  }
+
+  document.getElementById('reset').onclick = () => {
+    m = A.create((Math.random() * 2 ** 32) >>> 0, SETTINGS, [0, 0, 0, 0, 0, 0, 0, 0, 0], 0); persist();
+  };
+  document.getElementById('unlock').onclick = () => {
+    for (let s = 1; s < 9; s++) m.best[s] = Math.max(m.best[s], A.threshold(s, 0));
+    persist();
+  };
+  document.getElementById('test').onchange = e => { m.test = e.target.checked; };
+  document.getElementById('legacyDone').onclick = () => {
+    handle(A.legacyDone(m, +document.getElementById('legacyScore').value || 0)); persist();
+  };
+
+  // ---------- fixed 60 Hz loop ----------
+  let last = performance.now(), acc = 0, shown = '';
+  function frame(now) {
+    acc += Math.min(250, now - last); last = now;
+    while (acc >= 1000 / 60) { handle(A.step(m)); acc -= 1000 / 60; }
+    AdvDraw.draw(ctx, m, A);
+    const text = JSON.stringify(A.view(m), null, 1);
+    if (text !== shown) { document.getElementById('state').textContent = text; shown = text; }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

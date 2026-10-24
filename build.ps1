@@ -8,8 +8,8 @@ $env:Path = $idfPythonScripts + ';' + $env:Path
 Push-Location (Join-Path $PSScriptRoot 'firmware')
 try {
     python "$env:IDF_PATH\tools\idf.py" -B build-idf6 -DSDKCONFIG=build-idf6/sdkconfig -DIDF_TARGET=esp32c3 build
-    if ($LASTEXITCODE -ne 0) { throw 'Collection build failed.' }
-    python "$env:IDF_PATH\tools\idf.py" -B build-idf6 merge-bin -o nabo-games-merged.bin
+    if ($LASTEXITCODE -ne 0) { throw 'Adventure build failed.' }
+    python "$env:IDF_PATH\tools\idf.py" -B build-idf6 merge-bin -o nabo-adventure-merged.bin
     if ($LASTEXITCODE -ne 0) { throw 'Firmware merge failed.' }
     python tools/verify_firmware.py build-idf6
     if ($LASTEXITCODE -ne 0) { throw 'Firmware layout verification failed.' }
