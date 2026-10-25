@@ -1,13 +1,22 @@
 #include "adv_sprite.h"
 
-bool adv_sprite_frame_valid(const adv_sprite_t *s, unsigned frame)
+// Logical frame -> physical frame, or -1 when the descriptor or map is invalid.
+static int physical_frame(const adv_sprite_t *s, unsigned frame)
 {
     if (!s || !s->palette || !s->keys || !s->rows || !s->data ||
         !s->width || s->width > ADV_SPRITE_MAX_SIDE ||
         !s->height || s->height > ADV_SPRITE_MAX_SIDE ||
         !s->palette_size || s->palette_size > 64 || frame >= s->frame_count ||
-        s->data_size > ADV_SPRITE_MAX_DATA ||
-        s->row_count != (uint32_t)s->frame_count * (s->height + 1u)) return false;
+        s->data_size > ADV_SPRITE_MAX_DATA || s->row_count % (s->height + 1u)) return -1;
+    uint32_t physical = s->row_count / (s->height + 1u);
+    if (!physical || physical > s->frame_count) return -1;
+    if (physical == s->frame_count) return (int)frame;
+    unsigned mapped = s->keys[physical + frame];
+    return mapped < physical ? (int)mapped : -1;
+}
+
+static bool key_schedule_valid(const adv_sprite_t *s, unsigned frame)
+{
     unsigned key = s->keys[frame];
     if (key > frame || frame - key >= ADV_SPRITE_KEY_INTERVAL || s->keys[key] != key) return false;
     for (unsigned f = key; f <= frame; f++)
@@ -15,10 +24,19 @@ bool adv_sprite_frame_valid(const adv_sprite_t *s, unsigned frame)
     return true;
 }
 
+bool adv_sprite_frame_valid(const adv_sprite_t *s, unsigned frame)
+{
+    int p = physical_frame(s, frame);
+    return p >= 0 && key_schedule_valid(s, (unsigned)p);
+}
+
 bool adv_sprite_row(const adv_sprite_t *s, unsigned frame, unsigned y,
                     uint8_t *out, size_t capacity)
 {
-    if (!out || !adv_sprite_frame_valid(s, frame) || y >= s->height || capacity < s->width) return false;
+    int physical = physical_frame(s, frame);
+    if (!out || physical < 0 || !key_schedule_valid(s, (unsigned)physical) || y >= s->height || capacity < s->width)
+        return false;
+    frame = (unsigned)physical;
     unsigned key = s->keys[frame];
     for (unsigned f = key; f <= frame; f++) {
         uint32_t row = f * (s->height + 1u) + y;

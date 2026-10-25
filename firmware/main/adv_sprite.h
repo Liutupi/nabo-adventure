@@ -8,6 +8,9 @@
 // Rows decode without a framebuffer, allocation or mirroring.
 // adv-row-rle-v3 stores row offsets as uint16, so one sprite piece holds at most
 // 65535 data bytes; the packer rejects anything larger instead of truncating.
+// v4: when row_count/(height+1) physical frames < frame_count, keys[] holds the
+// key schedule for the physical frames followed by a logical->physical frame map,
+// so an identical repeated frame is stored once.
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -25,7 +28,7 @@ typedef struct {
     uint16_t width, height, frame_count, palette_size;  // palette_size includes transparency
     uint32_t row_count, data_size;
     const uint16_t *palette;   // native RGB565, at most 64 entries
-    const uint16_t *keys;      // frame -> nearest preceding keyframe
+    const uint16_t *keys;      // physical frame -> nearest preceding keyframe [, logical -> physical]
     const uint16_t *rows;      // frame * (height + 1) + row -> data offset
     const uint8_t *data;
 } adv_sprite_t;

@@ -31,9 +31,11 @@ class Asset(C.Structure):
 
 
 def asset_for(palette, packed):
-    arrays = [(t * len(v))(*v) for t, v in [(C.c_uint16, palette), (C.c_uint16, packed['keys']),
+    keys = packed['keys'] + (packed.get('map') or [])
+    arrays = [(t * len(v))(*v) for t, v in [(C.c_uint16, palette), (C.c_uint16, keys),
               (C.c_uint16, packed['rows']), (C.c_uint8, packed['data'])]]
-    asset = Asset(packed['width'], packed['height'], len(packed['keys']), len(palette),
+    logical = len(packed['map']) if packed.get('map') else len(packed['keys'])
+    asset = Asset(packed['width'], packed['height'], logical, len(palette),
                   len(packed['rows']), len(packed['data']), *arrays)
     asset.keepalive = arrays
     return asset

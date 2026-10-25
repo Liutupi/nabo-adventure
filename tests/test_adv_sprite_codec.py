@@ -155,10 +155,26 @@ class LiteralCodec(unittest.TestCase):
                     break
             else:
                 sizes.append(size)
-        packed = packer.pack(12, 1, frames)
+        packed = packer.pack_physical(12, 1, frames)   # the key DP over physical frames
         self.assertEqual(len(packed['data']), min(sizes))
         for f, pixels in enumerate(frames):
             self.assertEqual(self.check(packed, True, 6, frame=f), pixels)
+
+    def test_identical_frames_are_stored_once_and_decode_everywhere(self):
+        rng = random.Random(7)
+        a, b, c = (bytes(rng.randrange(6) for _ in range(24)) for _ in range(3))
+        frames = [a, b, b, a, c, a, b]
+        packed = packer.pack(8, 3, frames)
+        self.assertEqual((packed['map'], len(packed['keys'])), ([0, 1, 1, 0, 2, 0, 1], 3))
+        self.assertLess(len(packed['data']), len(packer.pack_physical(8, 3, frames)['data']))
+        for f, pixels in enumerate(frames):
+            self.assertEqual(packer.decode(packed, f, 6), pixels)
+            self.assertEqual(b''.join(bytes(self.check(packed, True, 6, frame=f, y=y)) for y in range(3)), pixels)
+        unique = packer.pack(8, 3, [a, b, c])
+        self.assertIsNone(unique['map'])   # without repeats the stream is exactly a v3 asset
+        bad = dict(packed, map=[0, 1, 3, 0, 2, 0, 1])   # entry 2 points past the physical frames
+        self.check(bad, False, 6, frame=2)
+        self.check(bad, True, 6, frame=4)
 
     def test_deterministic_mutations_match_production_python_and_C(self):
         rng = random.Random(20261025)
