@@ -49,13 +49,13 @@
     text(g.transition?'正在换轨':'当前 '+(g.lane?'下轨':'上轨'),8,36);
     text('预选 '+(g.choice?'下轨':'上轨'),8,54);
     text(g.practice?(g.lesson<2?'练习 1/3':g.lesson<3?'练习 2/3':'练习 3/3'):'送达 '+(g.score>9999?'9999+':g.score+'封'),8,74);
-    c.fillStyle='#203849';c.fillRect(176,34,140,54);
+    c.fillStyle='#203849';c.fillRect(176,32,140,34);
     const r=P.route(g);let title,actionHint;
     if(g.practice){
       [title,actionHint]=[['第一步 选上轨','按上键选择上轨'],['正在切换到上轨','等到红站再送信'],['第二步 送红信','现在轻点一下OK'],['第三步 鸣笛','按住OK让羊离开'],['鸣笛成功','先松开OK'],['你学会了','点OK继续']][g.lesson];
     }else if(r.lane<0){title=g.remaining?'前方暂无车站':'信已送完';actionHint=g.remaining?'看到站牌再选轨':'自动回库补信';}
     else{title='下一站 '+(r.lane?'下轨 ↓':'上轨 ↑');actionHint=r.canChoose?(r.choiceMatches?'已选好，保持轨道':r.lane?'按下键选下轨':'按上键选上轨'):r.atLane?'保持轨道，等送信':g.lane===r.lane?'正在切换轨道':'已过岔口，来不及了';}
-    text(title,246,38,16,'#fffaf0','center');text(actionHint,246,63,12,!g.practice&&r.canChoose&&!r.choiceMatches?'#f3c15a':'#fffaf0','center');
+    text(title,246,33,16,'#fffaf0','center');text(actionHint,246,51,12,!g.practice&&r.canChoose&&!r.choiceMatches?'#f3c15a':'#fffaf0','center');
     const reasons=['','未到送信位置','这站在另一轨','信封颜色不同','没有待送的信','错过站台 蒸汽-250','撞到牲畜 蒸汽-250'];
     const animal=g.events.some(e=>e.type===4&&!e.done&&e.lane===g.lane&&e.x>P.X&&e.x<P.X+g.speed*90);
     const pending=g.hold>0&&g.hold<P.HOLD&&g.tapTarget>=0&&!g.tapReason;

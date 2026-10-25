@@ -152,6 +152,19 @@ class Renderer(unittest.TestCase):
         self.lib.host_post_practice_case(2);self.check('POST waiting for a tap');self.steps(1200)
         self.assertEqual(self.lib.host_phase(),2)
 
+    def test_route_guidance_never_covers_ahead_station_or_its_mail(self):
+        self.new([0,99,0,0,0,0,0,0,0],seen=7)
+        for lane in (0,1):
+            for x in (200,240,280):
+                self.lib.host_post_station_at(lane,x);self.check(f'station visible {lane},{x}')
+                actual=self.view_image()
+                if x==240:self.save('post-station-visible-'+('lower' if lane else 'upper')+'.png',True)
+                self.lib.host_post_station_reference(lane,x);reference=self.view_image()
+                opaque=[(i,p) for i,p in enumerate(reference.getdata()) if p!=(255,0,255)]
+                self.assertGreater(len(opaque),500,'the real station and envelope must be present')
+                scene=list(actual.getdata())
+                self.assertTrue(all(scene[i]==p for i,p in opaque),f'UI obscures station/mail at lane={lane},x={x}')
+
     def test_landscape_rotation_has_no_mirror_and_returns_to_portrait(self):
         self.new([0,99,0,0,0,0,0,0,0],seen=7)
         self.lib.host_post_case(0);self.check('landscape enter')

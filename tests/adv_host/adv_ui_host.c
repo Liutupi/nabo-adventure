@@ -6,6 +6,7 @@
 #include "adv_model.h"
 #include "adv_post.h"
 #include "adv_ui.h"
+#include "adv_ui_art.h"
 #include "adv_ui_animation.h"
 #include "nabo_jump_model.h"
 
@@ -128,6 +129,26 @@ void host_post_case(int which)
         p->events[0]=(adv_post_event_t){POST_FORK,(which==11?90:240)*60,0,0,which==11,0};
         p->events[1]=(adv_post_event_t){POST_STATION,(which==11?190:340)*60,lane,p->mail[0],0,0};
     }
+}
+
+void host_post_station_at(int lane,int x)
+{
+    host_post_case(0);adv_post_t *p=model.game;
+    p->events[0]=(adv_post_event_t){POST_STATION,x*60,lane,p->mail[0],0,0};
+    adv_ui_invalidate();
+}
+
+// Draw the native station alone on a sentinel background. The test compares
+// every opaque station/mail pixel against the complete production scene.
+void host_post_station_reference(int lane,int x)
+{
+    extern void adv_ui_send(void *,int,int,int,int,uint16_t *);
+    static ag_t gfx;static uint16_t strips[2][AG_MAX_W*AG_STRIP];
+    ag_init(&gfx,strips[0],strips[1],adv_ui_send,NULL);ag_viewport(&gfx,320,240);
+    ag_begin(&gfx,99);ag_rect(&gfx,0,0,320,240,0,0xf81f,255,0,0);
+    int y=lane?ADV_POST_LOWER:ADV_POST_UPPER;
+    ui_art_tint(&gfx,"game/post/props/station-platform-mask",x-40,y-66,0xcae6);
+    ui_art(&gfx,"game/post/props/envelope-red",0,x-16,y-64);ag_flush(&gfx);
 }
 
 void host_post_practice_case(int lesson)

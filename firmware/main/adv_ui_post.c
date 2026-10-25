@@ -88,10 +88,11 @@ static void guidance(ag_t *g,const adv_post_t *p)
         action=r.can_choose?(r.choice_matches?"已选好，保持轨道":r.lane?"按下键选下轨":"按上键选上轨"):
             r.at_lane?"保持轨道，等送信":p->lane==r.lane?"正在切换轨道":"已过岔口，来不及了";
     }
-    ag_rect(g,176,34,140,54,4,UI_INK,255,0,0);
-    text(g,title,246,38,16,NT_ALIGN_CENTER,UI_WHITE);
-    if(!p->practice&&r.lane>=0)ag_tri(g,306,47,5,r.lane==0,UI_GOLD);
-    text(g,action,246,63,12,NT_ALIGN_CENTER,!p->practice&&r.can_choose&&!r.choice_matches?UI_GOLD:UI_WHITE);
+    // End above y66: upper-track station roofs and their mail start there.
+    ag_rect(g,176,32,140,34,3,UI_INK,255,0,0);
+    text(g,title,246,33,16,NT_ALIGN_CENTER,UI_WHITE);
+    if(!p->practice&&r.lane>=0)ag_tri(g,306,41,5,r.lane==0,UI_GOLD);
+    text(g,action,246,51,12,NT_ALIGN_CENTER,!p->practice&&r.can_choose&&!r.choice_matches?UI_GOLD:UI_WHITE);
     static const char *const reasons[]={"","未到送信位置","这站在另一轨","信封颜色不同","没有待送的信","错过站台 蒸汽-250","撞到牲畜 蒸汽-250"};
     bool animal=false;
     for(int i=0;i<ADV_POST_CAP;i++) {

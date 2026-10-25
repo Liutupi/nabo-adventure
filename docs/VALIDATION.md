@@ -152,3 +152,22 @@ app **1,514,528 B**，SHA256 **`6667fa0215dc75a02ddbcad93d53bc5b76aba1e797bd9cf4
 | 浏览器 | 横屏原型真实按钮完成选上轨、轻点送1封、长按赶羊；红站会停住等用户操作 |
 | 构建/冻结 | `private/build-post-landscape.log`，实际旧factory边界通过，精确bin/ELF/MAP/配置/字体/源哈希另外冻结 |
 | 工牌 | USB暂离线，尚未刷入；升级、帧率、自动压力、正常练习/NVS、实体横屏/音量/睡醒均待本候选重新验证 |
+
+### 71fafacc · 横屏提示遮挡修正版（当前）
+
+fdec0883随后已保护式刷入并通过自动流程/三游戏各10轮/正常练习/NVS，低干扰26.7–27.3fps；用户指出右提示挡住前方车站，未验收。该阶段证据另存`private/candidates/fdec08837a2b47df000ff61e4acf3451330c60ca1ff95300b43d7efca193aa81/validation.json`。首次POST检查未清理上轮测试留下的吞键位，停在封面；工具补原始沿初始化后重跑通过，14项相关工具回归通过，未修改固件按键规则。
+
+当前SHA256 **`71fafacc9dcfcad50e93def80fa84cd95175b7b51a9e733673552de18b15f7ed`**，app **1,643,024B**，真实旧factory余 **388,592B**。仅把右提示收至车站屋顶上方；蓄力音及规则沿用fdec0883。180项宿主检查（78.540秒）及IDF构建通过，日志`private/tests-post-sign-clear-full.log`、`private/build-post-sign-clear.log`。16项页面测试含上下轨各三个前方位置，车站/信封全部不透明像素与独立生产精灵参照相同；旋转/回竖屏/增量完整性通过，20张既有竖屏画面逐像素不变。
+
+| 检查 | 本镜像结果 |
+|---|---|
+| 保护升级 | `private/device/20261025-204647-386935-receipt.json`：重核COM12与同一MAC，全8MB备份/校验、只写app0x10000、全8MB回读应用及全部保护字节通过；原6MB资源不变 |
+| POST自动流程 | `private/post-smoke/20261025-204847.json`：送5封、一次补给、END至RESULT，10轮+暖机进出/鸣笛/暂停返回通过；地图heap255,860首尾一致，largest114,688 |
+| 旧游戏回归 | `private/smoke/20261025-205008-272124.json`：跳一跳/深潜各10轮+暖机，回地图heap各自255,772稳定，largest114,688；工具留test1后，整套检查确认恢复test0 |
+| 低干扰帧率 | `private/post-quiet-fps-71fafacc.json`：26.9869/27.0232/27.2851fps，中位27.0232，无overflow；仅对应三个3.5–4秒窗口，不宣称所有场景稳定30fps |
+| 正常隔离练习 | `private/post-normal-practice-smoke-71fafacc.json`：前后全局test0，等候不耗汽，150ms点按送1封、鸣笛赶羊成功，真实best/seen不变 |
+| NVS/重启 | `private/nvs-71fafacc-after-auto.json`：24,576B与**本次**刷前备份逐字节一致，SHA256 `fab0af017974c8cfb48f3a09feb535b0137743829f5848be0ee021fee96c655d`；读后重启，正常模式121/5888/4、seen63/6章保持 |
+| 整套清理 | `private/device-suite-71fafacc.json`：五项自动检查全通过，最终明确确认test0；失败时也须尝试并记录正常模式恢复，不能把用户留在全局测试抑制 |
+| 实体状态 | `private/post-human-practice-71fafacc-entry.json`：全局test0、局内practice1/lesson0、蒸汽1000；当前等用户确认车站可见、横屏实体操作和蓄力音。本候选30秒睡醒尚未做，不继承557607结果 |
+
+[本镜像设备练习截图](images/device/post-practice-71fafacc.png)为保持当前模式的320×240合成器捕获，完整76,800像素，已查看；并非实体屏幕照片。原始日志、备份、NVS与精确冻结候选仅在private目录。

@@ -118,6 +118,11 @@ def main():
         port.set_buffer_size(rx_size=1024*1024,tx_size=16384);link=Link(BufferedPort(port),log)
         try:
             initial=link.enable_test();before=(initial['best'],initial['seen'])
+            # Leaving a previous test deliberately swallows held physical keys.
+            # Clear only raw edges before click-only navigation, as the legacy
+            # smoke does. This does not move a normal cover/map selection.
+            for button in range(3):
+                link.edge(button,True);link.edge(button,False)
             if initial['page']==0:link.key('ok');link.map()
             if initial['page']!=0 and initial['page']!=1:raise SmokeError('Reset to cover/map first')
             result['play']=play(link)
