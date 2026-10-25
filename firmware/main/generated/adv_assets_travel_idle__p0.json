@@ -1,0 +1,150 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_travel_idle__p0",
+  "width": 22,
+  "height": 48,
+  "palette_rgb565": [
+    0,
+    4226,
+    6473,
+    8453,
+    10634,
+    10699,
+    12548,
+    12613,
+    12812,
+    12813,
+    14661,
+    14726,
+    14793,
+    16741,
+    16773,
+    16839,
+    16938,
+    17037,
+    18854,
+    21261,
+    23014,
+    23080,
+    23178,
+    23471,
+    25584,
+    27208,
+    27697,
+    29320,
+    29744,
+    29843,
+    31434,
+    31531,
+    31630,
+    33513,
+    33971,
+    34036,
+    37707,
+    37936,
+    38198,
+    39820,
+    44046,
+    44210,
+    44407,
+    46586,
+    50319,
+    50549,
+    52465,
+    52826,
+    54644,
+    54774,
+    54972,
+    59165,
+    60820,
+    60917,
+    61246,
+    63030,
+    63293,
+    63326,
+    63358,
+    65176,
+    65241,
+    65439,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "data_bytes": 2884,
+  "table_bytes": 1712,
+  "frame_sha256": [
+    "c1ca8a5bc8def9e235a5296d3e522d9560b0cc249f8b7387c445587c880bae54",
+    "805a42c2c16b11f8f98bf1cb6217cf730218adad897c4c3e3217cce2ca8e6882",
+    "58ba97f574df0fb7c6f10a61b879a14a8510d90a6b61c86089debbbb80ebdb6e",
+    "63a961f1b0fc612e26ac6f859e2481317f8269d2361a8f67a50115888bfda1b6",
+    "50c9f4af69cc3dcd91abbb5c2b45dbd706ad34b92aad6f8246ffd24a9b74d13b",
+    "9d0b754a3018ce1130b8c96e25ec39b21b61a0e3720cb24400ba7ebe83b4eb3d",
+    "968043079006390b726ce47991875f458492469bcf14b454d21196144358dcf4",
+    "825af8c977a392109790b6e48a74a013d80273c8c58abb32d67df979c4fd3cf0"
+  ],
+  "source_sha256": [
+    "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07",
+    "91b7c6c175296362168f4a26d496e09475c6ed91ec16cd58bc55eb115ac6411a",
+    "5bd861faaf02e9b5f7ab207d979b12e3fe1426115b085cebbedde2b5e5c3f7fd",
+    "670df0d2cc70675f343a77a091f3ad91eb71220e93a88b37938962f11151cb91",
+    "0c609893e3822fda0ac381003aee25688d2d3fc08a3ad68def9ce36b34cdb322",
+    "2858fbbfeb3b58e3929b8af1f3236194dc9f60990fb50ec6d9ea0cdbbb9e82ee",
+    "cb9ebf4e3f408836befe093c3295b48e617b7bb3dd098d6deefe4e164531285e",
+    "eaa1f9d16a52d10276122daea676a13ff2238dfdc8ec368c666a2f56caee6e31"
+  ],
+  "verified_frames": 8,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "travel/idle",
+  "group": "travel",
+  "symbol": "adv_assets_travel_idle__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\000.png",
+      "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\001.png",
+      "sha256": "91b7c6c175296362168f4a26d496e09475c6ed91ec16cd58bc55eb115ac6411a"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\002.png",
+      "sha256": "5bd861faaf02e9b5f7ab207d979b12e3fe1426115b085cebbedde2b5e5c3f7fd"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\003.png",
+      "sha256": "670df0d2cc70675f343a77a091f3ad91eb71220e93a88b37938962f11151cb91"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\004.png",
+      "sha256": "0c609893e3822fda0ac381003aee25688d2d3fc08a3ad68def9ce36b34cdb322"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\005.png",
+      "sha256": "2858fbbfeb3b58e3929b8af1f3236194dc9f60990fb50ec6d9ea0cdbbb9e82ee"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\006.png",
+      "sha256": "cb9ebf4e3f408836befe093c3295b48e617b7bb3dd098d6deefe4e164531285e"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\007.png",
+      "sha256": "eaa1f9d16a52d10276122daea676a13ff2238dfdc8ec368c666a2f56caee6e31"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

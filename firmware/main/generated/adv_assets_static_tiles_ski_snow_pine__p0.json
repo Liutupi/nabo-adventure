@@ -1,0 +1,42 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_tiles_ski_snow_pine__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    15375,
+    48007,
+    65502
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 288,
+  "table_bytes": 144,
+  "frame_sha256": [
+    "8188e36a3dfd0e8ff135e7d7142500ba62fcbb7f27e9401d5487bdd8673dba6d"
+  ],
+  "source_sha256": [
+    "63eb3ddf8e8865f24445732cc82f4fdd27fdd49de5360c3f1461b609e7c226cd"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/tiles/ski/snow-pine",
+  "group": "static",
+  "symbol": "adv_assets_static_tiles_ski_snow_pine__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\ski\\snow-pine.png",
+      "sha256": "63eb3ddf8e8865f24445732cc82f4fdd27fdd49de5360c3f1461b609e7c226cd"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

@@ -2,7 +2,7 @@
 
 FoloToy AI Passport（ESP32-C3 / 8 MB）上的 NABO 游戏合集，独立离线固件：开机进入一张竖向冒险地图，从深海一路到太空，8 个游戏站点，每个游戏三枚印章，盖满一本冒险护照。不需要配网、激活或小智服务。
 
-> **v0.1.0 是骨架，还没上过真机。** 外壳（地图、护照、印章、统一游戏流程）已完成并通过宿主测试；跳一跳、深潜是现成游戏；其余 6 站暂时是占位关卡，正式玩法和美术在做。状态和待办见 [交接本](docs/HANDOFF.md)。
+> **开发中。** 外壳、跳一跳和深潜的基线已完成用户工牌冒烟：页面、三键、声音、各十轮进出及临时 30 秒休眠/上键唤醒；具体镜像与边界见 [验证记录](docs/VALIDATION.md)。其余 6 站仍为占位关卡。新的旅行服、地图、手账界面与“NABO,陪你冒险”开机演出按 [11 轮清单](docs/ART_PROGRESS.md) 制作、集成中，不能把基线验证沿用到后续镜像。
 
 | 封面 | 地图 | 护照 | 盖章 | 游戏标题 | 结算 |
 |---|---|---|---|---|---|
@@ -44,6 +44,7 @@ FoloToy AI Passport（ESP32-C3 / 8 MB）上的 NABO 游戏合集，独立离线�
 | [game-art/adventure/CODEX_PROMPTS.md](game-art/adventure/CODEX_PROMPTS.md) | 美术提示词（按轮次） |
 | [game-art/adventure/BUDGET.md](game-art/adventure/BUDGET.md) | 空间与内存预算 |
 | [docs/BUILD.md](docs/BUILD.md) / [docs/VALIDATION.md](docs/VALIDATION.md) | 构建 / 验证记录 |
+| [docs/SPRITES.md](docs/SPRITES.md) | 精灵打包、逐行解码和合成图回归；正式美术未接入 |
 
 ```sh
 python3 tools/run_tests.py          # 宿主测试（不碰设备）

@@ -1,0 +1,41 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_map_stamp_gold__p0",
+  "width": 16,
+  "height": 16,
+  "palette_rgb565": [
+    0,
+    8649,
+    54567,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 164,
+  "table_bytes": 78,
+  "frame_sha256": [
+    "7ae80e8730e00c021b2e09644436c8b034b59f9f5227d06c00456b2e7a3347c2"
+  ],
+  "source_sha256": [
+    "2cef7dab9d443d056807d79311df9be2dca11a5c9c24bd07fa8438bcc7b0eedc"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/map/stamp-gold",
+  "group": "ui",
+  "symbol": "adv_assets_ui_map_stamp_gold__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\stamp-gold.png",
+      "sha256": "eae4ae327a6829b68d6239f676800b008f1fdf4443e90cdfa14053b004a348f1"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

@@ -1,0 +1,51 @@
+{
+  "tool": "FFmpeg 7.1-essentials_build-www.gyan.dev",
+  "tool_source": "Already installed imageio_ffmpeg binary from a prior local project; no download, system install or persistent PATH change.",
+  "tool_binary_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "tool_binary_distributed": false,
+  "reference": "D:/AI PASSPORT XIAOZHI/nabo-sound-lab/game-art/soundlab/audio/revision-louder/processing.json",
+  "reference_user_acceptance": "r3 physical startup volume: 音量合适了",
+  "voice": "阳光小男孩",
+  "spoken_text": "那波，陪你冒险！",
+  "pitch_and_speed_unchanged": true,
+  "stages": [
+    {
+      "input": "originals/dreamina-d27350e8-2daf-40af-82e2-c71a3a91b168.mp3",
+      "output": "boot-welcome-base.wav",
+      "filter": "highpass=f=90,lowpass=f=6500,loudnorm=I=-16:TP=-3:LRA=7,afade=t=in:d=0.01",
+      "encoding_arguments": ["-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le"]
+    },
+    {
+      "input": "boot-welcome-base.wav",
+      "output": "boot-welcome.wav",
+      "filter": "acompressor=threshold=0.3:ratio=2:attack=5:release=80:makeup=1,volume=6dB,alimiter=limit=0.841395:attack=5:release=80:level=false,afade=t=in:d=0.01",
+      "encoding_arguments": ["-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le"]
+    }
+  ],
+  "base": {
+    "sha256": "1785c8ff03b6a0156183e7b55150e9324957f3de0400f79625b80de0eb08521d",
+    "samples": 43050,
+    "sample_rate": 16000,
+    "channels": 1,
+    "sample_width": 2,
+    "duration_seconds": 2.690625,
+    "sample_peak": 17894,
+    "sample_peak_dbfs": -5.254850039048722,
+    "rms_dbfs": -19.916564263928258,
+    "hard_clipped_samples": 0
+  },
+  "final": {
+    "sha256": "38b4eb8435d6a7915d17af2083a696acfa2660244be1bf7e65dc78251f0c468b",
+    "samples": 43050,
+    "sample_rate": 16000,
+    "channels": 1,
+    "sample_width": 2,
+    "duration_seconds": 2.690625,
+    "sample_peak": 27571,
+    "sample_peak_dbfs": -1.4999483342019322,
+    "rms_dbfs": -14.521097880347735,
+    "hard_clipped_samples": 0
+  },
+  "host_checks_passed": true,
+  "physical_speaker_acceptance": false
+}

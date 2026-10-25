@@ -1,0 +1,39 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_map_footprints_forward__p0",
+  "width": 10,
+  "height": 10,
+  "palette_rgb565": [
+    0,
+    45672
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 54,
+  "table_bytes": 50,
+  "frame_sha256": [
+    "39e07f7f9b23acc9febeb4d353c3d8be85bd6cb441169ac08d0010da39e871cd"
+  ],
+  "source_sha256": [
+    "192f2eaf955a2f938144ecb7d35d8b9b6bae0dc038f8a7b7fa2e48a96c8db44c"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/map/footprints-forward",
+  "group": "ui",
+  "symbol": "adv_assets_ui_map_footprints_forward__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\footprints-forward.png",
+      "sha256": "37dd8aa8c0dedefccbe1c9c229bd52bc65ee1b98f320a684bf858f314be5d5fb"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

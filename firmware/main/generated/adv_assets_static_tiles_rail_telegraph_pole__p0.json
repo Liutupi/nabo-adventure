@@ -1,0 +1,41 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_tiles_rail_telegraph_pole__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    40276,
+    48007
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 344,
+  "table_bytes": 142,
+  "frame_sha256": [
+    "23bb7227e390a57b6edb6dba7f5e756c819201ec0b52b6c025717366edee217f"
+  ],
+  "source_sha256": [
+    "b68b63b27ecba2a4af139de37f3673495db544998a3f433e92ca58725a3e4dc6"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/tiles/rail/telegraph-pole",
+  "group": "static",
+  "symbol": "adv_assets_static_tiles_rail_telegraph_pole__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\rail\\telegraph-pole.png",
+      "sha256": "b68b63b27ecba2a4af139de37f3673495db544998a3f433e92ca58725a3e4dc6"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

@@ -1,0 +1,42 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_map_station_unlocked__p0",
+  "width": 48,
+  "height": 40,
+  "palette_rgb565": [
+    0,
+    8649,
+    44173,
+    50577,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 368,
+  "table_bytes": 176,
+  "frame_sha256": [
+    "749901a604e39a0c56d4444c76c8120061453961a5f59b46145e87a3c8bdb966"
+  ],
+  "source_sha256": [
+    "38c9684ffad4cea56e4c58d72faf3e919ebe56d5d138e79ad0e9c40e72b7b5a8"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/map/station-unlocked",
+  "group": "ui",
+  "symbol": "adv_assets_ui_map_station_unlocked__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\station-unlocked.png",
+      "sha256": "76fd80a94e7ae73fdafac63cc72046b8bfd791c919a92996ffbc9a04fd02f54c"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

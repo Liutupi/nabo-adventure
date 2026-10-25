@@ -1,6 +1,10 @@
 # Codex delivery archives and per-round snapshots stay local (hundreds of MB, duplicates)
 history/
 preview/
+!game-art/adventure/art/preview/
+!game-art/adventure/art/preview/**
+!game-art/adventure/art/ui/preview/
+!game-art/adventure/art/ui/preview/**
 *.zip
 # macOS / editor noise (the source volume writes AppleDouble files)
 ._*

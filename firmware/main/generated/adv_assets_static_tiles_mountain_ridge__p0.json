@@ -1,0 +1,42 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_tiles_mountain_ridge__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    17298,
+    65433,
+    65502
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 282,
+  "table_bytes": 144,
+  "frame_sha256": [
+    "bce971427d197af7bd5b9f4946181be34ee4b04d526d51fecc5e8058a6fd6724"
+  ],
+  "source_sha256": [
+    "aa8e0aa5f24a1f352fb4b628a7a9157e654a9174044461d2f33682916e3141b7"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/tiles/mountain/ridge",
+  "group": "static",
+  "symbol": "adv_assets_static_tiles_mountain_ridge__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\mountain\\ridge.png",
+      "sha256": "aa8e0aa5f24a1f352fb4b628a7a9157e654a9174044461d2f33682916e3141b7"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

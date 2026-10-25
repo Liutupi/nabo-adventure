@@ -1,0 +1,15 @@
+{
+  "samples": 43050,
+  "sample_rate": 16000,
+  "channels": 1,
+  "duration_s": 2.690625,
+  "sha256": "38b4eb8435d6a7915d17af2083a696acfa2660244be1bf7e65dc78251f0c468b",
+  "voice_start_s": 1.4,
+  "voice_end_s": 4.090625,
+  "source_clip_frames": 16,
+  "fps": 12,
+  "two_cycles_s": 2.6666666666666665,
+  "post_cycles_hold_s": 0.023958333333333304,
+  "preview": "preview/travel/welcome-voice-preview.html",
+  "schedule": "WebAudio sample clock; host entry ease-in/out; not device acceptance"
+}

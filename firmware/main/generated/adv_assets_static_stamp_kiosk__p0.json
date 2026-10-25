@@ -1,0 +1,39 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_stamp_kiosk__p0",
+  "width": 96,
+  "height": 96,
+  "palette_rgb565": [
+    0,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 2284,
+  "table_bytes": 394,
+  "frame_sha256": [
+    "84eb023cd33db27f024019f3887eee7801ee8b134879c097cc0a35a0ae768b73"
+  ],
+  "source_sha256": [
+    "2595b0a6a69d31a51b5750b443a7a7cc6188edd2b930a7b8c152991f5042fc12"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/stamp/kiosk",
+  "group": "static",
+  "symbol": "adv_assets_static_stamp_kiosk__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\stamps\\kiosk.png",
+      "sha256": "2595b0a6a69d31a51b5750b443a7a7cc6188edd2b930a7b8c152991f5042fc12"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

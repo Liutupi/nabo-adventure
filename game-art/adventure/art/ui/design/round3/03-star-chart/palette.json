@@ -1,0 +1,19 @@
+{
+  "bg": "#142238",
+  "paper": "#22394e",
+  "ink": "#f4e7c5",
+  "muted": "#9bafbb",
+  "line": "#657b8b",
+  "shadow": "#0c1729",
+  "bar": "#0c1729",
+  "bar_text": "#f4e7c5",
+  "accent": "#e5b85d",
+  "select": "#3c4e5a",
+  "teal": "#72afa6",
+  "blue": "#638fae",
+  "bronze": "#bc875b",
+  "silver": "#aabac8",
+  "gold": "#e5b85d",
+  "white": "#fff7df",
+  "seal": "#34485b"
+}

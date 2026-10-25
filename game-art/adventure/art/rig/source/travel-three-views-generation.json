@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-25",
+  "tool": "built-in image_gen.imagegen",
+  "intent": "Background extraction from the user-selected v2 option 01; no per-frame generation",
+  "approved_input": "../../design/round1/v2/01-hiker-design-board.png",
+  "approved_input_sha256": "3ed446475284c3d1b75ba78a41d75922935ee928bc91ba51fccbd7d8a13a1060",
+  "transparent_background": true,
+  "selected_attempt": 1,
+  "output": "travel-three-views.png",
+  "output_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+  "attempts": [
+    {
+      "number": 1,
+      "prompt": "travel-three-views-prompt.txt",
+      "generated_original": "C:/Users/pc/.codex/generated_images/01a17156-b34f-7b73-aae0-0b162ea1a5dc/exec-487841d5-cc71-4e4f-9115-8e5a7b7a8d24.png",
+      "sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+      "selected": true
+    },
+    {
+      "number": 2,
+      "prompt": "travel-three-views-cleanup-prompt.txt",
+      "generated_original": "C:/Users/pc/.codex/generated_images/01a17156-b34f-7b73-aae0-0b162ea1a5dc/exec-ad788299-d9e4-477a-b716-a35b04a16073.png",
+      "sha256": "bd23120241d9a9ae0840ebe5dbd08b52892efb90db8a0c5d225255fd02fbd599",
+      "selected": false,
+      "reason": "Targeted matte cleanup did not improve the source: alpha1..7 pixels increased from 32290 to 46092, with slight middle-figure positional drift. Retained attempt 1."
+    }
+  ],
+  "postprocessing": "None. Selected generated PNG copied byte-for-byte; no Python, Sharp or SVG cutout, repainting or alpha replacement was applied.",
+  "review_status": "Usable as a part-separation source with explicitly recorded low-alpha matte limitations. Not a claim of pixel-identical identity or final animation acceptance."
+}

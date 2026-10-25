@@ -2,9 +2,11 @@
 
 更新：2026-10-25 · 固件 v0.1.0（骨架）· 提交见 `git log`
 
+**Mac 精灵管线历史增量见第 9 节。** Windows 接手已同步最新界面设计要求，并将构建配置版本统一为 `0.1.0`；设备验证及美术各轮进展将在后续章节记录。镜像仍须以 SHA256 识别。
+
 ## 1. 现在是什么状态
 
-《NABO 的冒险之旅》合集的**骨架已经能编译、宿主测试全过，但还没上过真机**。
+《NABO 的冒险之旅》合集的**骨架已完成 Windows 构建与用户工牌基线冒烟**。当前继续制作、集成 11 轮美术与开机演出；最新范围和镜像验证见第 10 节及 `ART_PROGRESS.md`。
 
 - 合集外壳完整：封面 → 竖向地图（9 个站点）→ 护照亭 / 护照 / 设置 → 盖章仪式 → 统一的游戏流程（标题、倒数、进行中、暂停、结束、结算）。
 - 跳一跳、深潜是现成游戏，从地图进出，最佳成绩回传给外壳算印章。
@@ -36,6 +38,8 @@
 | `firmware/main/adv_demo.c/.h` | 占位游戏 |
 | `firmware/main/adv_rng.h` | mulberry32（与原型一致） |
 | `firmware/main/adv_gfx.c/.h`、`adv_shapes.c`、`adv_text.c/.h` | 直绘渲染器：显示列表 + 脏矩形 + 8 行条带（从牌桌渲染器分出来，去掉了牌、骰子、杯子） |
+| `firmware/main/adv_sprite.c/.h` | Flash 精灵逐行 RLE 解码、关键帧 + 最多 7 个差分帧，供 `AG_SPRITE` 使用 |
+| `tools/generate_adv_sprites.py` / `docs/SPRITES.md` | 最终尺寸 PNG → 共享 64 色 → 行 RLE → C 数组；逐帧核对和接入说明 |
 | `firmware/main/adv_ui.c` | 面板输出、通用部件、封面、护照亭、设置、状态、页面分发 |
 | `firmware/main/adv_ui_map.c` | 地图、护照、盖章 |
 | `firmware/main/adv_ui_session.c` | 游戏标题、资源条、倒数、暂停、结束、结算、占位游戏画面 |
@@ -74,6 +78,8 @@ python firmware/tools/flash_candidate.py --app firmware/build-idf6/nabo-adventur
 
 ## 5. 验证状态（v0.1.0）
 
+以下保留初次交接的历史状态，Windows 实测增量与绑定镜像见第 10 节。
+
 | 项目 | 状态 |
 |---|---|
 | 宿主测试 64 项 | ✅ 全过（macOS，cc） |
@@ -85,9 +91,9 @@ python firmware/tools/flash_candidate.py --app firmware/build-idf6/nabo-adventur
 
 | # | 任务 | 完成标准 |
 |---|---|---|
-| 1 | **真机冒烟**（要用户的工牌） | 刷 app → 封面、地图、护照亭、设置能走通；跳一跳和深潜进出各 10 次不重启；`>adv.status` 记录地图 / 游戏中 / 回地图的 `heap`、`largest`，10 轮不下降；声音不爆音；深睡后按键能唤醒 |
-| 2 | 美术第 1–5 轮（Codex） | 按 `CODEX_PROMPTS.md`：旅行服造型（用户选）→ 骨骼 → **界面风格板（用户选）** → 共用包 / 地图 / 印章 → 界面全套素材 |
-| 3 | 精灵和界面管线 | `tools/generate_adv_sprites.py`（64 色、行 RLE、关键帧 + 差分，打包后逐帧比对；界面包检查 ≤ 32 色）；`adv_gfx` 实现 `AG_SPRITE`、九宫格、数字精灵字体（UI_DESIGN 7.9）；地图和各页面换上新素材 |
+| 1 | **基线真机冒烟已完成**，后续镜像另测 | Windows 候选 app `71cc1f6b…fdb32` 已保护式升级；页面、各十轮进出、三键、声音、临时 30 秒休眠和上键唤醒已查。后续新开机音画及 UI 镜像不得沿用此结果，见第 10 节 |
+| 2 | 美术第 1–5 轮已完成技术交付，待新候选真机 | 用户已选旅行服 v2①及界面①复古护照；共用动作、地图和全套 UI 已生成、自检并接入。第 6–11 轮游戏美术继续制作，详见 ART_PROGRESS |
+| 3 | 精灵和界面管线已接正式共用包 | 行 RLE、runtime manifest/锚点/fps、32 色共享 UI、六套九宫格、大数字、真实 C 解码对拍与生产页面渲染通过；新候选设备验收见第 10 节 |
 | 4 | 小火车 POST（M0–M4） | 原型里做出玩法、调参（`GAMES.md` 第 1 节）→ 录对拍 → `adv_post.c` + `draw` → H 横向模式 → 站点 3 `placeholder = false` |
 | 5 | 地图硬件竖向滚动 | 走一站时镜头平滑滚动，60 fps（参考深潜 `nabo_dive_render.c`） |
 | 6 | 服装系统 | 银章解锁第二款；标题页可切换；存 `adv_skin_<id>` |
@@ -110,3 +116,79 @@ python firmware/tools/flash_candidate.py --app firmware/build-idf6/nabo-adventur
 ## 8. 给 Codex 的开场白（可直接复制）
 
 > 这是 NABO 的冒险之旅合集固件（ESP32-C3 AI Passport 工牌，独立离线版）。先读 `AGENTS.md`、`docs/HANDOFF.md`、`game-art/adventure/DESIGN.md`，并按 nabo-passport-game skill 的流程工作。现在的状态和待办在 HANDOFF 第 5、6 节。今天做待办第 __ 项。改规则先改 `game-art/adventure/prototype/adv_core.js` 并重录 `tests/adv_golden`；每次改完跑 `python3 tools/run_tests.py` 和 `./build.sh`，把结果（测试数、app 大小、SHA256）写回 HANDOFF。
+
+## 9. 2026-10-25 Mac 接手：精灵管线基础支持（未真机验收）
+
+### 范围和接手状态
+
+- 独立克隆，基线 `9735f34f019116f21b806195fd90842cf2bb7a64`；初始 `main...origin/main` 干净。最近三次提交依次为 `9735f34`（交接与设计）、`fd91001`（冒险骨架）、`43d5497`（旧合集发布）。开发分支 `codex/sprite-pipeline`，具体提交用 `git log -1` 确认。
+- 已读 `AGENTS.md`、本交接本、`README.md`、`docs/BUILD.md`、`docs/VALIDATION.md`、`DESIGN.md`、`ART_BRIEF.md`、`BUDGET.md`，并核对实际渲染、测试和构建代码。未修改其他 NABO 项目或本机 Codex memories。
+- 仓库没有 `.agents/skills`；已检查本机通用 `passport-develop`、`passport-build`，其中 IDF 5.5.3 和目录约定不适用于本仓库。未找到文档所指的 `nabo-passport-game`，没有声称执行该技能；实际按本仓库 IDF 6.0.2、宿主门禁和维护约定推进。
+- 第 1 项真机冒烟和第 2 项用户选造型仍待完成。此次明确授权先做第 3 项不依赖美术的编码、解码和渲染支持；不替换正式 NABO 美术、不推进整套六游戏。
+- 初次交接回写时 Mac 环境断连，恢复后已核对：原 11 个改动完整，交接记录未写入，没有发现额外工作区改动。本节补齐该记录。用户后续授权提交到 GitHub 独立分支，未授权合并 main、强推、固件 release 或刷机。
+
+### 完成内容
+
+- `tools/generate_adv_sprites.py`：最终尺寸 RGBA PNG → 全动画共享最多 63 种不透明 RGB565 色 + 透明索引 0 → 逐行 RLE → C 数组和哈希报告。半透明要求显式背景色；关键帧与差分自适应选择，最多 7 个连续差分，打包后逐帧比较量化后的索引帧。
+- `adv_sprite.c/.h`：随机访问逐行还原、元数据和坏流检查；`AG_SPRITE` 使用 256 字节栈上行缓冲和既有 DMA 条带，不分配整帧或堆，不使用浮点、IRAM 或镜像。
+- 回归测试先复现、再修复重叠绘制操作换序时未标记脏区的问题。覆盖透明擦除、裁剪、移动、删除、素材切换和层叠顺序。
+- 新增 10 项合成图测试和独立 ASan/UBSan 检查。CLI 测试使用当前 Python 的 `sys.executable`，避免 Windows 上没有 `python3` 别名时子进程失败；Windows 门禁尚未在该系统执行。
+- 没有修改玩法规则，故原型与 golden 未动；没有增加界面文字或修改页面版式，字库未变，完整门禁重新生成的既有 UI 截图与基线一致。
+- 管线格式、生成命令、C 接入方式和限制见 [SPRITES.md](SPRITES.md)。当前没有正式素材，固件不嵌入合成测试图；构建大小不包含未来美术数据。
+
+### 实际验证与镜像身份
+
+| 类别 | 结果 |
+|---|---|
+| 基线代码测试 | `python3 tools/run_tests.py`，64/64 通过 |
+| 基线构建 | IDF 6.0.2 build / merge-bin / 布局检查通过；app 1,158,976 B；SHA256 `8194915a0eca8caa7cb8fdce59b5b662f8bb5563cc097442df38423ea7445bbc5` |
+| 最终代码测试 | 完整宿主门禁 74/74 通过，既有 64 项 + 新增 10 项；宿主 C 用 `-Wall -Wextra -Werror` |
+| 原生内存检查 | macOS Clang ASan + UBSan，已知关键帧/差分及 50,000 组确定性坏行流通过，退出码 0，无 sanitizer 报告 |
+| 最终构建复核 | IDF 6.0.2 build / merge-bin / 布局检查 PASS；app 1,159,600 B（较基线 +624 B），分区 4,128,768 B，剩余 2,969,168 B |
+| app SHA256 | `6318a43430a2eb55e8b0d842ff5b662f8bb5563cc097442df38423ea7445bbc5` |
+| 合并镜像 | 1,225,136 B；SHA256 `6a179e4425d9979f1bf1d392172a7ee864162e545a2e0b6c142b562bff909b25` |
+| 真机 | **未刷写、未验收**；按键、声音、10 轮进出内存、深睡唤醒、帧率和栈余量都未验证 |
+
+以上是提交前 Mac 工作区构建的身份，不承诺其他路径、时间或编译环境重建得到相同 SHA256。镜像及匹配 ELF/MAP 保留在 Mac 的 `firmware/build-idf6/`；日志和完整哈希清单保留在忽略目录 `private/validation/`，不进入 Git。源码推送不包含固件、设备日志、NVS、备份或凭据，也不是正式固件发布。
+
+### Windows 接手注意
+
+1. Windows 会话继续主线；此分支基于 `9735f34`，取回后先比较当前主线差异。重点合并点为 `adv_gfx.c/.h`、`firmware/main/CMakeLists.txt` 和 `tests/test_adv_renderer.py`，不要覆盖 Windows 已有工作。
+2. 新文件包括 `adv_sprite.c/.h`、打包器、`tests/test_adv_sprites.py` 和两个宿主 C 文件。已有测试只新增解码源文件；没有改站点、按键、音频、NVS 或分区。
+3. 通过 `python tools/run_tests.py`（或可用的 `python3`）和仓库 `build.ps1` 重新验证 Windows 环境；依赖 Python 3、Pillow、Node 和可用的宿主 C/C++ 编译器。可选 sanitizer 指令记录的是 macOS 检查。
+4. 输入 PNG 必须已在最终画布尺寸；总 manifest、骨骼输出缩放和锚点、帧率/循环调度尚未实现。获批美术到位后再接地图；合成图不代表正式美术批准或颜色质量验收。
+5. 真机仍按第 6 节第 1 项执行，须有工牌和刷写授权。发布前还需统一文档/界面 `v0.1.0` 与继承的固件配置版本 `1.0.0`；本轮不改版本或发布固件。
+
+## 10. Windows 主线继续：2026-10-25（进行中）
+
+已克隆到 `D:\AI PASSPORT XIAOZHI\nabo-adventure`，本地分支 `codex/adventure-device-smoke`。主线更新至 `63d19d8`，并将 `8da163a` 的精灵管线整合到工作区，保留新 UI 要求；当前工作尚未提交或推送。
+
+用户目标为按顺序完成全部轮次。Claude 新增 UI 风格板和整包后，原 9 轮为 11 轮。用户已选 **v2①轻便徒步** 与 **①复古护照手账**。最新逐项状态见 [ART_PROGRESS.md](ART_PROGRESS.md)。开机另须有 NABO 出场并说 `NABO,陪你冒险`。在能保证质量时 Codex 自行完成；只有具体动作经反复修正仍不良才请 Grok 补片，先写本地任务并告知用户路径，入口 `../GROK_HANDOFF.md`，当前没有 Grok 生成任务。
+
+### 身份依据与制作边界
+
+第一轮曾误用旧深潜重绘头部，用户明确拒绝，旧三款已撤回。真正原始全身图已原样放入 `art/reference/nabo-idle-original.png`（均相对 `game-art/adventure/`），来源/SHA256 在同目录 `source.json`。第 1 轮 v2 是基于此原图的换装编辑；之后使用用户选定①，禁止再用旧 SVG 头替代。当前 SVG 骨骼明确为原像素切片包装，既保留 masters，也交付每动画共享 64 色正式帧；不是重新手绘的矢量身份。
+
+### 已冻结并上机的外壳基线
+
+- app 1,160,608 B；SHA256 `71cc1f6b2eca742cdb11b5e861694e7a43e5bdf3ce8e1da689f3ca32b66fdb32`；IDF 6.0.2，配置版本已统一 `0.1.0`。
+- 工牌 MAC 尾号 `a9:58`。真实分区为 `legacy_2m_app_6m_assets`：factory `0x10000..0x200000`，assets `0x200000..0x800000`。首次严格布局检查拒绝且没有写入；随后只增加这个精确白名单，按真实 factory 大小与扇区界限复核，保持全备份和全部保护区回读。实际分区表未改。
+- 刷写后 app 和所有受保护字节一致；NVS 在自动游戏测试后再次读回，24,576 B 与升级前完全一致。原日志、备份、回执和冻结 app/ELF/MAP 只留 `private/`。
+- 页面导航、跳一跳和深潜各十轮串口进出通过；第一轮地图 heap：跳一跳 259,052 B 不变，深潜 258,964 B 不变，largest 均 114,688 B。额外一轮同样稳定。
+- 用户确认显示、三键和声音正常；原休眠为 300 秒，在测试保护下临时设 30 秒后，用户确认约 30 秒熄屏、上键唤醒回封面。临时设置未落盘。设备只确认到该镜像；后续音画/UI 不能据此直接验收。
+
+### 程序增量与当前继续点
+
+`adv_persist.c/.h` 统一保护外壳、跳一跳、深潜、教程和设置的测试写入；跳一跳成绩成功后去重；退出测试先停游戏，再重载真实存档。`>adv.open=jump|dive` 仅测试模式的地图可用，不造分数。深潜停止超时不再释放仍存活缓冲。
+
+休眠实测发现底座继承的 codec 关闭后重复停 I2S 告警，已使用公开 `i2s_channel_get_info/is_enabled` 修复；真正错误继续报告。`adv_boot.c/.h` 已用真实 WAV 全部 43,050 个样本对拍，开机语音延后 1,400 ms 一次播放，离开封面/测试重置/休眠立即停播，共用 audio lock；音频为原系列“阳光小男孩”。`AG_NINEPATCH` 已支持单个显示操作的固定角和重复边/中心，最小/最大卡、移动、裁剪、增量 = 整屏回归通过。
+
+最新中间构建 app 1,248,384 B，完整宿主门禁 **115 项通过**；新增开机音频和 I2S 修复尚未上机，当前等第 4–5 轮正式角色/静态包/UI 资产接入再生成候选。六个新游戏的正式规则仍未实现，不把美术或占位关卡当成正式游戏。
+
+### 正式共用包候选（第 1–5 轮，等待真机唤醒）
+
+app **1,514,528 B**，SHA256 **`6667fa0215dc75a02ddbcad93d53bc5b76aba1e797bd9cf42344b81d45578b3e`**，精确 app/ELF/MAP/sdkconfig/素材清单与源哈希已冻结 `private/candidates/<sha>/`。构建及旧 factory 离线容量检查通过，实际尚余 517,088 B；没有改分区或写资源区。**尚未刷写**，不得沿用基线 `71cc…` 的实体认可。
+
+最终完整宿主门禁 128 项通过，含生产渲染 9 项、包器 10 项及锁定地标压暗/透明回归。共用真实 C 包 215 资源/283 帧，11,822 行及九宫格 912 行逐像素核对。RLE/表/目录估算分别 travel 129,224 B、static 74,329 B、UI 73,709 B，详细 ELF 符号及真实预览检查见 VALIDATION。封面为分层原生资源+120px旅行服 NABO，1.4秒后播 `NABO,陪你冒险`；离开页面取消声音。地图为12fps动作与软件镜头插值，60fps硬件滚动仍是待办。
+
+新游戏美术按第 6–11 轮继续，独立包先 `--group post|night|climb|ski|sky|space --output private/game-art-c/<id> --verify-c` 校验，每包≤260KiB；暂不把全部未实现游戏素材嵌进旧2MB factory。用户要求能保证质量时由 Codex 完成；只有真实动作经反复自修仍不顺时才写具体本地 Grok 任务并告知路径。当前 `GROK_HANDOFF.md` 仍待命。

@@ -1,0 +1,32 @@
+{
+  "asset": "02-explorer.png",
+  "created_date": "2026-10-25",
+  "tool": "built-in image_gen.imagegen",
+  "mode": "edit",
+  "use_case": "identity-preserve",
+  "generation_count": 1,
+  "referenced_image_paths": [
+    "D:/AI PASSPORT XIAOZHI/nabo-adventure/game-art/adventure/art/reference/nabo-idle-original.png"
+  ],
+  "reference_sha256": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243",
+  "prompt_file": "02-explorer-prompt.txt",
+  "prompt_sha256": "c4e4a545133a4a1d20ed9e65962a53f55d51be3f660379d3f3d795975f6c1f9c",
+  "generated_original_path": "C:/Users/pc/.codex/generated_images/01a17154-4f72-70f0-8feb-83f8fc5deecc/exec-647cb278-6670-4b89-be5d-01e463077f26.png",
+  "output_sha256": "bb29f3282237d136f5d24d368bd4be6b3de578f895c6e91b53d4db163a358e90",
+  "output_dimensions": [
+    1536,
+    1024
+  ],
+  "transparent_background": false,
+  "manual_review": {
+    "inspected_with": "view_image, original reference and saved output",
+    "identity": "Visually close to original NABO: same cap and readable blue NABO/ECG emblem, dark detailed hair, fine round glasses, soft-rendered face and large-head proportions.",
+    "limitations": "The image model re-rendered facial and hair details; this is a concept-level identity comparison, not pixel-identical preservation. Final identity and outfit acceptance remain for user selection.",
+    "composition": "Exactly three equal-height full-body views, front center and opposing three-quarter views; shoes and cap entirely visible; warm ivory background; no added labels.",
+    "wardrobe": "Khaki explorer vest, plain navy underlayer, olive cargo trousers, brown leather backpack, white shoes; doctor coat/stethoscope/badge removed.",
+    "emblem": "NABO text reads normally in all three visible cap emblems; no mirrored lettering observed.",
+    "prohibited_style_change": "No thick outline, flat vector cartoon, SVG redraw or pixel thumbnail observed."
+  },
+  "source_file_unchanged": true,
+  "copied_without_pixel_processing": true
+}

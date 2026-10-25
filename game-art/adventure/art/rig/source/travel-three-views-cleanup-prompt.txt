@@ -1,0 +1,8 @@
+Use case: background-extraction, one targeted alpha-edge cleanup.
+Image 1 is the transparent three-view source to clean. Image 2 is the already user-approved NABO wardrobe sheet and locks identity, costume and rendering style.
+
+Edit image 1 only to clean its transparent matte. Preserve all three existing NABO figures exactly: face, expression, glasses, hair, white cap with forward NABO and heartbeat logo, body proportions, same poses and views, same teal short jacket, camel satchel, navy clothing and light shoes. Do not redesign or redraw the people, do not change the body or head shapes, do not use the older rejected SVG. The whole point is the same approved characters with cleaner alpha, not another interpretation.
+
+Remove every detached white speck and colored low-opacity fringe around cap tops, hair tips, sleeves, shoes and empty gutters. Make the empty margins, space between people and space below their soles truly alpha 0 with no isolated pixels, shadows, checkerboard or colored pollution. Keep the solid interiors of the cap, face, clothing, bag and shoes fully opaque; alpha smoothing belongs only at real silhouette edges and fine hair. Keep hair wisps that actually join the hair, but remove detached dots or halos. No pale background bleeding around the silhouette. No ground/contact shadow.
+
+Return one high-resolution genuinely transparent RGBA PNG with the three full-body figures still complete, the same matching heights and foot baseline, front / three-quarter-left / three-quarter-right order, separated. No extra text, borders, props, thumbnails or watermark.

@@ -1,0 +1,41 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_passport_grid_normal__p0",
+  "width": 104,
+  "height": 52,
+  "palette_rgb565": [
+    0,
+    15375,
+    44173,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 648,
+  "table_bytes": 222,
+  "frame_sha256": [
+    "e6f541b912ba6266f18c91ff0fe0c3674270fc7482b0b08768560568d4b01474"
+  ],
+  "source_sha256": [
+    "124a8088a4c40ab4c5c383c7fc0ca2da41b7f13ebaa76cc7658a2d7ec3a55c66"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/passport/grid-normal",
+  "group": "ui",
+  "symbol": "adv_assets_ui_passport_grid_normal__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\passport\\grid-normal.png",
+      "sha256": "775bbc5a7dd6f5a7436a201ccfe8c19ab21ca342c33b35817542960200e4fabe"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

@@ -1,0 +1,42 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_wordmarks_night__p0",
+  "width": 200,
+  "height": 80,
+  "palette_rgb565": [
+    0,
+    8649,
+    44173,
+    45672,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 2288,
+  "table_bytes": 336,
+  "frame_sha256": [
+    "f00b81f064dfd71cc62a9fb5b71a4df4204fc332eee0e814444b5ea8e21b9a1e"
+  ],
+  "source_sha256": [
+    "71548f106d650e73d5d962da2c98386d24eb8c37ad0ad1f7d9098e1941389a82"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/wordmarks/night",
+  "group": "ui",
+  "symbol": "adv_assets_ui_wordmarks_night__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\wordmarks\\night.png",
+      "sha256": "2dc0d27de86975e7d88f85acd28a0ffaaab0d990b124baf35c1c8b1e8f3b1320"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

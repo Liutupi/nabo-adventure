@@ -1,0 +1,12 @@
+{
+  "identity_authority": "nabo-idle-original.png",
+  "original_path": "D:\\tab5\\c610679b-5b6d-493a-8075-98a2cd335d65.png",
+  "original_size": [1254, 1254],
+  "original_sha256": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243",
+  "verified_against": "D:\\AI PASSPORT\\nabo-passport\\assets\\assets.json: idle_01.png source_file and source_sha256",
+  "existing_blink_strip": "nabo-idle.png",
+  "blink_strip_sha256": "c63575691d15220e8d6fafdab911a10767a5fc1c13925992dbd10e3a5e93d3fa",
+  "user_correction_date": "2026-10-25",
+  "rejected_identity": "game-art/dive/rig derived SVG head used by withdrawn round1 v1",
+  "license": "NABO character artwork is not covered by the repository MIT code license."
+}

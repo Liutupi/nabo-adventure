@@ -4,6 +4,7 @@ Use the ESP-IDF Python environment (esptool 5.5). Backups and receipts are priva
 Device identity is checked on the same serial connection that performs the write.
 """
 import argparse
+from dataclasses import dataclass
 from datetime import datetime
 import hashlib
 import json
@@ -18,33 +19,69 @@ APP_SIZE = 0x3f0000
 EXPECTED = {'nvs': (1, 2, 0x9000, 0x6000), 'phy_init': (1, 1, 0xf000, 0x1000),
             'factory': (0, 0, APP_OFFSET, APP_SIZE), 'assets': (1, 0x82, 0x400000, 0x300000),
             'files': (1, 0x82, 0x700000, 0x100000)}
+LEGACY_EXPECTED = {'nvs': (1, 2, 0x9000, 0x6000), 'phy_init': (1, 1, 0xf000, 0x1000),
+                   'factory': (0, 0, APP_OFFSET, 0x1f0000), 'assets': (1, 0x41, 0x200000, 0x600000)}
+
+@dataclass(frozen=True)
+class LayoutProfile:
+    name: str
+    partitions: dict
+
+    @property
+    def app_offset(self): return self.partitions['factory'][2]
+
+    @property
+    def app_size(self): return self.partitions['factory'][3]
+
+    @property
+    def app_end(self): return self.app_offset + self.app_size
+
+CANONICAL = LayoutProfile('canonical_4m_app', EXPECTED)
+LEGACY = LayoutProfile('legacy_2m_app_6m_assets', LEGACY_EXPECTED)
+LAYOUT_PROFILES = (CANONICAL, LEGACY)
 
 def digest(data):
     return hashlib.sha256(data).hexdigest()
 
-def validate_app(data, expected_hash):
+def validate_app(data, expected_hash, layout=CANONICAL):
     if not re.fullmatch('[0-9a-f]{64}', expected_hash):
         raise ValueError('An explicit lowercase SHA256 is required')
-    if len(data) < 256 or len(data) > APP_SIZE or data[0] != 0xe9:
+    if layout not in LAYOUT_PROFILES:
+        raise ValueError('Unrecognized layout profile')
+    if len(data) < 256 or len(data) > layout.app_size or data[0] != 0xe9:
         raise ValueError('Invalid app size or image header')
     if struct.unpack_from('<H', data, 12)[0] != 5:
         raise ValueError('Only an ESP32-C3 application is supported')
     if digest(data) != expected_hash:
         raise ValueError('Candidate SHA256 mismatch; no write allowed')
-    erased_end = APP_OFFSET + ((len(data) + 4095) // 4096) * 4096
-    if erased_end > APP_OFFSET + APP_SIZE:
+    erased_end = layout.app_offset + ((len(data) + 4095) // 4096) * 4096
+    if erased_end > layout.app_end:
         raise ValueError('Erase sectors overlap the preserved resource partition')
+    return erased_end
 
 def validate_layout(raw):
     parts, md5 = parse_partition_table(raw)
-    if not md5 or len(parts) != len(EXPECTED):
+    if not md5:
         raise ValueError('Unrecognized partition table')
     actual = {p.label: (p.kind, p.subtype, p.offset, p.size) for p in parts}
-    if actual != EXPECTED:
+    layout = next((profile for profile in LAYOUT_PROFILES
+                   if len(parts) == len(profile.partitions) and actual == profile.partitions), None)
+    if layout is None:
         raise ValueError('Device layout differs; app-only upgrade refused')
     for cursor in range(0, len(parts) * 32, 32):
         if struct.unpack_from('<I', raw, cursor + 28)[0]:
             raise ValueError('Encrypted/flagged partitions are unsupported')
+    return layout
+
+def protected_ranges(layout):
+    return ((0, layout.app_offset), (layout.app_end, FLASH_SIZE))
+
+def verify_preserved(backup, after, layout):
+    if len(backup) != FLASH_SIZE or len(after) != FLASH_SIZE:
+        raise ValueError('Incomplete full-flash comparison')
+    for start, end in protected_ranges(layout):
+        if backup[start:end] != after[start:end]:
+            raise ValueError(f'Preserved region changed: {start:#x}..{end:#x}')
 
 def check_device(esp, expected_mac):
     mac = ':'.join(f'{b:02x}' for b in esp.read_mac())
@@ -88,8 +125,15 @@ def main():
         try:
             check_device(esp, args.expected_mac)
             table = cmds.read_flash(esp, 0x8000, 0x1000, no_progress=True)
-            validate_layout(table)
-            print('Identity, security and exact partition map verified. Reading full private backup...', flush=True)
+            layout = validate_layout(table)
+            receipt.update(layout_profile=layout.name, layout=layout.partitions,
+                           app_offset=layout.app_offset, app_partition_size=layout.app_size,
+                           app_partition_end=layout.app_end,
+                           protected_regions=[{'start': start, 'end': end} for start, end in protected_ranges(layout)])
+            erased_end = validate_app(data, args.sha256, layout)
+            receipt['app_erase_end'] = erased_end
+            print(f'Identity, security and exact {layout.name} partition map verified; '
+                  f'factory {layout.app_offset:#x}..{layout.app_end:#x}. Reading full private backup...', flush=True)
             backup = cmds.read_flash(esp, 0, FLASH_SIZE, no_progress=True)
             if len(backup) != FLASH_SIZE: raise ValueError('Incomplete backup')
             backup_path.write_bytes(backup)
@@ -101,19 +145,19 @@ def main():
                 cmds.reset_chip(esp); print('PASS: backup verified; original firmware restarted', flush=True); return
             # Recheck immediately before writing, on the same open connection.
             check_device(esp, args.expected_mac)
-            print('Writing only application at 0x10000; boot/NVS/PHY/assets/files remain protected...', flush=True)
+            print(f'Writing only application at {layout.app_offset:#x}; boot/NVS/PHY and '
+                  f'all bytes from {layout.app_end:#x} remain protected...', flush=True)
             write_attempted = True
-            cmds.write_flash(esp, [(APP_OFFSET, data)], flash_mode='keep', flash_freq='keep', flash_size='keep')
-            cmds.verify_flash(esp, [(APP_OFFSET, data)])
+            cmds.write_flash(esp, [(layout.app_offset, data)], flash_mode='keep', flash_freq='keep', flash_size='keep')
+            cmds.verify_flash(esp, [(layout.app_offset, data)])
             print('Reading full flash back to compare application and every protected byte...', flush=True)
             after = cmds.read_flash(esp, 0, FLASH_SIZE, no_progress=True)
-            if len(after) != FLASH_SIZE or after[APP_OFFSET:APP_OFFSET+len(data)] != data:
+            if len(after) != FLASH_SIZE or after[layout.app_offset:layout.app_offset+len(data)] != data:
                 raise ValueError('Application readback mismatch')
-            for start, end in ((0, APP_OFFSET), (0x400000, FLASH_SIZE)):
-                if backup[start:end] != after[start:end]:
-                    raise ValueError(f'Preserved region changed: {start:#x}..{end:#x}')
+            verify_preserved(backup, after, layout)
             receipt.update(status='PASS: APP AND ALL PRESERVED BYTES VERIFIED; BOOT NOT YET OBSERVED',
-                           preserved_sha256={'boot_nvs_phy': digest(after[:APP_OFFSET]), 'assets_files': digest(after[0x400000:])})
+                           preserved_sha256={'boot_nvs_phy': digest(after[:layout.app_offset]),
+                                             'resources': digest(after[layout.app_end:])})
             save(); cmds.reset_chip(esp)
             print(f'PASS: restarted candidate; receipt {receipt_path.name}', flush=True)
         except Exception as error:

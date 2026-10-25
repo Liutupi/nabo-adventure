@@ -1,0 +1,41 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_resources_icons_temperature__p0",
+  "width": 16,
+  "height": 16,
+  "palette_rgb565": [
+    0,
+    8649,
+    45672,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 144,
+  "table_bytes": 78,
+  "frame_sha256": [
+    "d3addc390f831f0721c94b11dcb7609d211f24ec6e835fdd701ad84d534d1712"
+  ],
+  "source_sha256": [
+    "c498a8cbc1e33934c899afa8e6cd00c46a972acbead02c83faee6f913a2ae60d"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/resources/icons/temperature",
+  "group": "ui",
+  "symbol": "adv_assets_ui_resources_icons_temperature__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\icons\\temperature.png",
+      "sha256": "128e36fb7c0715dcd46043120333dabc83d58a1a1e47fd7a67b9b2c6517ba3e3"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

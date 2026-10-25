@@ -1,0 +1,78 @@
+{
+  "source_hash_matches_lock": true,
+  "svg_layers_match_raster_pixels": 42,
+  "all_parts_rgb_match_normalized_source": true,
+  "mirror_used": false,
+  "animations": [
+    {
+      "animation": "idle",
+      "frames": 8,
+      "rgba_canvas": [
+        256,
+        256
+      ],
+      "core_sole_y": 224,
+      "target_height_envelope": 48,
+      "shared_delivery_rgba_colours": 64,
+      "shared_target_rgba_colours": 64,
+      "target_sha256": [
+        "75f082eed6990de6512f080224d6125c5fab956602df2e6fdb58d310f0749449",
+        "bf62f5779543d7f8ed36f20b54d14997996c50181f8e95f1fd302c22c6ed73df",
+        "726c34ddc00ace3c463c1260699e9146b66523647a61f30bed397072798c38d2",
+        "566fe9d6f60f72986bc3fe6e1c76189e8bda04f7cb6b84be8d3055adde1c9bf4",
+        "2d729a940a4d851d82e6f2a1249c61249f29e32d2951810fc778bbcb8cc129ed",
+        "b880784197a4f924ed2c051b1a0fd8d409f40894b1d59424ce15762c968e6d7e",
+        "04918219058d41958603f4e7ea1b9283297dc7a5925122a17be9d7a2661963ad",
+        "4e675fdc29247edcb337f25fe416f9cd32644deff457d10a5b60ebc724f1218c"
+      ],
+      "png_hashes_match_manifest": true
+    },
+    {
+      "animation": "walk_left",
+      "frames": 8,
+      "rgba_canvas": [
+        256,
+        256
+      ],
+      "core_sole_y": 224,
+      "target_height_envelope": 48,
+      "shared_delivery_rgba_colours": 64,
+      "shared_target_rgba_colours": 64,
+      "target_sha256": [
+        "d4c234f34bcc7dcceeefe93876104e86fe2e1f4413935a882b868849d063cf69",
+        "ad83879948ff1152872aa0d4d95f82d54198c3d8a7c24d2a0eeae1fdf65776eb",
+        "9b1ead7140a570b61015140d426dd7d3128aa34e64b528562b58ea2d46877d2b",
+        "b587cde58cbdcff4d2bdc7474a225fd60f0741673a0a35e9b9801a6251bd6011",
+        "5430647f1b46731d85342a8029a260288b11b57a88b884364d3d5f87091a41a0",
+        "846b0635d680cac9402437f1e41aad0f7019fddbbb76250386488669cd9bc812",
+        "f5798940fe9d2c1ecd303e91f95740e946e7ab490b4528805b0a29a125d68dad",
+        "c4677209a3a1570baea0273e4501935f1472491b5f596fbd1f7ed89bba64b24f"
+      ],
+      "png_hashes_match_manifest": true
+    },
+    {
+      "animation": "walk_right",
+      "frames": 8,
+      "rgba_canvas": [
+        256,
+        256
+      ],
+      "core_sole_y": 224,
+      "target_height_envelope": 48,
+      "shared_delivery_rgba_colours": 64,
+      "shared_target_rgba_colours": 64,
+      "target_sha256": [
+        "58b2b74ad286f0cc9445bd8afb5c1a5e69f76e776b92a236b17efa18fa80737a",
+        "461ad4bd7598c01baf9f5b9cfa3f370bee1b8e994ab1a02a456839c9e5907c31",
+        "38f212835545ea8fe2fbd39825076b187de9f619f5af6b287a8129fa9c1e9084",
+        "8da69f1d0f499cbea41984cd922b8cb076b388d8839110650358ed3d3ff0581f",
+        "b65229ea501410210951b95cccfd1341c1a5ac6e88c8799660d0d91d75b56054",
+        "9391d9cffe5c5fb0aeabe9a6543c35c8ca5f5349a04152a0adde827ad27453fe",
+        "e81593673d60a81e748be60d19e271b0952c647fe241df1fe64314578531662f",
+        "dd518b4ec879709bdb81f4610cc263ca79d2108cc2e3d99c0cbe98c307c679ef"
+      ],
+      "png_hashes_match_manifest": true
+    }
+  ],
+  "visual_acceptance": "not implied by technical validation"
+}

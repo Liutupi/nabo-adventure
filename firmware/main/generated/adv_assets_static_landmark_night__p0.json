@@ -1,0 +1,47 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_landmark_night__p0",
+  "width": 96,
+  "height": 96,
+  "palette_rgb565": [
+    0,
+    8649,
+    15375,
+    17298,
+    40276,
+    44173,
+    48007,
+    54567,
+    63185,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 1502,
+  "table_bytes": 410,
+  "frame_sha256": [
+    "8a14cae8037c94d33c38e05a75857c8bf28e98a7629c506bc10a57f10f4c52f4"
+  ],
+  "source_sha256": [
+    "5da7308a84004d0913c704e0fa887705992588adce23919e86715c1059464d1e"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/landmark/night",
+  "group": "static",
+  "symbol": "adv_assets_static_landmark_night__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\landmarks\\night.png",
+      "sha256": "5da7308a84004d0913c704e0fa887705992588adce23919e86715c1059464d1e"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

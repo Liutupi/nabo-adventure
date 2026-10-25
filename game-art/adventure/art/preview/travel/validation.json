@@ -1,0 +1,2464 @@
+{
+  "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+  "checks": [
+    {
+      "name": "idle",
+      "frame_count": 8,
+      "frame_reports": [
+        {
+          "index": 0,
+          "pose_degrees": {
+            "torso": 0.0,
+            "upper_arm_l": 0.0,
+            "upper_arm_r": -0.0,
+            "jacket_flap": 0.7191383079063045,
+            "satchel": 0.20686414466293768
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 1,
+          "pose_degrees": {
+            "torso": 0.24748737341529164,
+            "upper_arm_l": 0.5656854249492381,
+            "upper_arm_r": -0.5656854249492381,
+            "jacket_flap": 1.4393244449771856,
+            "satchel": 0.6191424763184833
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 2,
+          "pose_degrees": {
+            "torso": 0.35,
+            "upper_arm_l": 0.8,
+            "upper_arm_r": -0.8,
+            "jacket_flap": 1.3163738428355591,
+            "satchel": 0.6687355423879241
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 3,
+          "pose_degrees": {
+            "torso": 0.24748737341529164,
+            "upper_arm_l": 0.5656854249492381,
+            "upper_arm_r": -0.5656854249492381,
+            "jacket_flap": 0.4223092967140512,
+            "satchel": 0.32659239736744705
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 4,
+          "pose_degrees": {
+            "torso": 4.286263797015736e-17,
+            "upper_arm_l": 9.797174393178826e-17,
+            "upper_arm_r": -9.797174393178826e-17,
+            "jacket_flap": -0.7191383079063043,
+            "satchel": -0.20686414466293748
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 5,
+          "pose_degrees": {
+            "torso": -0.2474873734152916,
+            "upper_arm_l": -0.565685424949238,
+            "upper_arm_r": 0.565685424949238,
+            "jacket_flap": -1.4393244449771856,
+            "satchel": -0.6191424763184832
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 6,
+          "pose_degrees": {
+            "torso": -0.35,
+            "upper_arm_l": -0.8,
+            "upper_arm_r": 0.8,
+            "jacket_flap": -1.3163738428355591,
+            "satchel": -0.6687355423879242
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 7,
+          "pose_degrees": {
+            "torso": -0.24748737341529167,
+            "upper_arm_l": -0.5656854249492381,
+            "upper_arm_r": 0.5656854249492381,
+            "jacket_flap": -0.4223092967140514,
+            "satchel": -0.3265923973674471
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        }
+      ],
+      "master_adjacent_rgba_mae": [
+        0.7667427062988281,
+        0.2260284423828125,
+        0.240264892578125,
+        0.7779769897460938,
+        0.6198501586914062,
+        0.212982177734375,
+        0.2256011962890625,
+        0.6322898864746094
+      ],
+      "periodic_wrap_rgba_mae": 0.6322898864746094,
+      "formal_colours": 64,
+      "runtime_colours": 64,
+      "formal_alpha": [
+        0,
+        255
+      ],
+      "runtime_alpha": [
+        0,
+        255
+      ],
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "source_head_policy": "rigid source slice; registered two-source blend only in explicit turn clips"
+    },
+    {
+      "name": "walk_left",
+      "frame_count": 8,
+      "frame_reports": [
+        {
+          "index": 0,
+          "pose_degrees": {
+            "thigh_l": 0.0,
+            "thigh_r": -0.0,
+            "shin_foot_l": 0.0,
+            "shin_foot_r": 0.0,
+            "upper_arm_l": -0.0,
+            "forearm_hand_l": -0.0,
+            "upper_arm_r": 0.0,
+            "forearm_hand_r": 0.0,
+            "torso": 0.0,
+            "jacket_flap": 1.6939274201851062,
+            "satchel": -0.778836684617301,
+            "collar": 0.0
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 0,
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "alpha_bbox": [
+            81,
+            15,
+            175,
+            224
+          ],
+          "core_bbox": [
+            82,
+            15,
+            173,
+            224
+          ]
+        },
+        {
+          "index": 1,
+          "pose_degrees": {
+            "thigh_l": 7.0710678118654755,
+            "thigh_r": -7.0710678118654755,
+            "shin_foot_l": -3.5355339059327378,
+            "shin_foot_r": 6.035533905932738,
+            "upper_arm_l": -4.949747468305833,
+            "forearm_hand_l": -2.121320343559643,
+            "upper_arm_r": 2.121320343559643,
+            "forearm_hand_r": 1.0606601717798214,
+            "torso": 0.4242640687119285,
+            "jacket_flap": 2.9485887958229307,
+            "satchel": 0.751856248361982,
+            "collar": 0.3535533905932738
+          },
+          "root_bob": -1,
+          "ground_compensation_y": 2,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "alpha_bbox": [
+            80,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            82,
+            16,
+            173,
+            224
+          ]
+        },
+        {
+          "index": 2,
+          "pose_degrees": {
+            "thigh_l": 10.0,
+            "thigh_r": -10.0,
+            "shin_foot_l": -5.0,
+            "shin_foot_r": 10.0,
+            "upper_arm_l": -7.0,
+            "forearm_hand_l": -3.0,
+            "upper_arm_r": 3.0,
+            "forearm_hand_r": 1.5,
+            "torso": 0.6,
+            "jacket_flap": 2.476006844729035,
+            "satchel": 1.8421219880057702,
+            "collar": 0.5
+          },
+          "root_bob": -2,
+          "ground_compensation_y": 3,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "alpha_bbox": [
+            78,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            80,
+            16,
+            173,
+            224
+          ]
+        },
+        {
+          "index": 3,
+          "pose_degrees": {
+            "thigh_l": 7.0710678118654755,
+            "thigh_r": -7.0710678118654755,
+            "shin_foot_l": -3.5355339059327378,
+            "shin_foot_r": 6.035533905932738,
+            "upper_arm_l": -4.949747468305833,
+            "forearm_hand_l": -2.121320343559643,
+            "upper_arm_r": 2.121320343559643,
+            "forearm_hand_r": 1.0606601717798214,
+            "torso": 0.4242640687119285,
+            "jacket_flap": 0.5530136645214849,
+            "satchel": 1.853297650621466,
+            "collar": 0.3535533905932738
+          },
+          "root_bob": -1,
+          "ground_compensation_y": 2,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "alpha_bbox": [
+            80,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            82,
+            16,
+            173,
+            224
+          ]
+        },
+        {
+          "index": 4,
+          "pose_degrees": {
+            "thigh_l": 1.2246467991473533e-15,
+            "thigh_r": -1.2246467991473533e-15,
+            "shin_foot_l": -6.123233995736766e-16,
+            "shin_foot_r": 6.123233995736767e-16,
+            "upper_arm_l": -8.572527594031472e-16,
+            "forearm_hand_l": -3.6739403974420594e-16,
+            "upper_arm_r": 3.6739403974420594e-16,
+            "forearm_hand_r": 1.8369701987210297e-16,
+            "torso": 7.347880794884119e-17,
+            "jacket_flap": -1.6939274201851062,
+            "satchel": 0.778836684617301,
+            "collar": 6.123233995736766e-17
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 0,
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "alpha_bbox": [
+            81,
+            15,
+            175,
+            224
+          ],
+          "core_bbox": [
+            82,
+            15,
+            173,
+            224
+          ]
+        },
+        {
+          "index": 5,
+          "pose_degrees": {
+            "thigh_l": -7.071067811865475,
+            "thigh_r": 7.071067811865475,
+            "shin_foot_l": 6.035533905932737,
+            "shin_foot_r": -3.5355339059327373,
+            "upper_arm_l": 4.949747468305832,
+            "forearm_hand_l": 2.1213203435596424,
+            "upper_arm_r": -2.1213203435596424,
+            "forearm_hand_r": -1.0606601717798212,
+            "torso": -0.42426406871192845,
+            "jacket_flap": -2.94858879582293,
+            "satchel": -0.751856248361982,
+            "collar": -0.35355339059327373
+          },
+          "root_bob": -1,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "alpha_bbox": [
+            81,
+            15,
+            175,
+            225
+          ],
+          "core_bbox": [
+            82,
+            15,
+            173,
+            224
+          ]
+        },
+        {
+          "index": 6,
+          "pose_degrees": {
+            "thigh_l": -10.0,
+            "thigh_r": 10.0,
+            "shin_foot_l": 10.0,
+            "shin_foot_r": -5.0,
+            "upper_arm_l": 7.0,
+            "forearm_hand_l": 3.0,
+            "upper_arm_r": -3.0,
+            "forearm_hand_r": -1.5,
+            "torso": -0.6,
+            "jacket_flap": -2.4760068447290355,
+            "satchel": -1.8421219880057698,
+            "collar": -0.5
+          },
+          "root_bob": -2,
+          "ground_compensation_y": 2,
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "alpha_bbox": [
+            79,
+            15,
+            175,
+            226
+          ],
+          "core_bbox": [
+            82,
+            15,
+            173,
+            224
+          ]
+        },
+        {
+          "index": 7,
+          "pose_degrees": {
+            "thigh_l": -7.071067811865477,
+            "thigh_r": 7.071067811865477,
+            "shin_foot_l": 6.0355339059327395,
+            "shin_foot_r": -3.5355339059327386,
+            "upper_arm_l": 4.949747468305834,
+            "forearm_hand_l": 2.121320343559643,
+            "upper_arm_r": -2.121320343559643,
+            "forearm_hand_r": -1.0606601717798214,
+            "torso": -0.4242640687119286,
+            "jacket_flap": -0.5530136645214865,
+            "satchel": -1.8532976506214665,
+            "collar": -0.35355339059327384
+          },
+          "root_bob": -1,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "alpha_bbox": [
+            81,
+            15,
+            175,
+            225
+          ],
+          "core_bbox": [
+            82,
+            15,
+            173,
+            224
+          ]
+        }
+      ],
+      "master_adjacent_rgba_mae": [
+        7.43145751953125,
+        2.2000808715820312,
+        2.1722068786621094,
+        7.413932800292969,
+        4.662193298339844,
+        2.3240585327148438,
+        2.2834548950195312,
+        4.617115020751953
+      ],
+      "periodic_wrap_rgba_mae": 4.617115020751953,
+      "formal_colours": 64,
+      "runtime_colours": 64,
+      "formal_alpha": [
+        0,
+        255
+      ],
+      "runtime_alpha": [
+        0,
+        255
+      ],
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "source_head_policy": "rigid source slice; registered two-source blend only in explicit turn clips"
+    },
+    {
+      "name": "walk_right",
+      "frame_count": 8,
+      "frame_reports": [
+        {
+          "index": 0,
+          "pose_degrees": {
+            "thigh_l": 0.0,
+            "thigh_r": -0.0,
+            "shin_foot_l": 0.0,
+            "shin_foot_r": 0.0,
+            "upper_arm_l": -0.0,
+            "forearm_hand_l": -0.0,
+            "upper_arm_r": 0.0,
+            "forearm_hand_r": 0.0,
+            "torso": 0.0,
+            "jacket_flap": 1.6939274201851062,
+            "satchel": -0.778836684617301,
+            "collar": 0.0
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 0,
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "alpha_bbox": [
+            83,
+            15,
+            173,
+            224
+          ],
+          "core_bbox": [
+            85,
+            16,
+            172,
+            224
+          ]
+        },
+        {
+          "index": 1,
+          "pose_degrees": {
+            "thigh_l": 7.0710678118654755,
+            "thigh_r": -7.0710678118654755,
+            "shin_foot_l": -3.5355339059327378,
+            "shin_foot_r": 6.035533905932738,
+            "upper_arm_l": -4.949747468305833,
+            "forearm_hand_l": -2.121320343559643,
+            "upper_arm_r": 2.121320343559643,
+            "forearm_hand_r": 1.0606601717798214,
+            "torso": 0.4242640687119285,
+            "jacket_flap": 2.9485887958229307,
+            "satchel": 0.751856248361982,
+            "collar": 0.3535533905932738
+          },
+          "root_bob": -1,
+          "ground_compensation_y": 2,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "alpha_bbox": [
+            83,
+            16,
+            178,
+            226
+          ],
+          "core_bbox": [
+            85,
+            17,
+            176,
+            224
+          ]
+        },
+        {
+          "index": 2,
+          "pose_degrees": {
+            "thigh_l": 10.0,
+            "thigh_r": -10.0,
+            "shin_foot_l": -5.0,
+            "shin_foot_r": 10.0,
+            "upper_arm_l": -7.0,
+            "forearm_hand_l": -3.0,
+            "upper_arm_r": 3.0,
+            "forearm_hand_r": 1.5,
+            "torso": 0.6,
+            "jacket_flap": 2.476006844729035,
+            "satchel": 1.8421219880057702,
+            "collar": 0.5
+          },
+          "root_bob": -2,
+          "ground_compensation_y": 3,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "alpha_bbox": [
+            83,
+            16,
+            179,
+            225
+          ],
+          "core_bbox": [
+            85,
+            17,
+            177,
+            224
+          ]
+        },
+        {
+          "index": 3,
+          "pose_degrees": {
+            "thigh_l": 7.0710678118654755,
+            "thigh_r": -7.0710678118654755,
+            "shin_foot_l": -3.5355339059327378,
+            "shin_foot_r": 6.035533905932738,
+            "upper_arm_l": -4.949747468305833,
+            "forearm_hand_l": -2.121320343559643,
+            "upper_arm_r": 2.121320343559643,
+            "forearm_hand_r": 1.0606601717798214,
+            "torso": 0.4242640687119285,
+            "jacket_flap": 0.5530136645214849,
+            "satchel": 1.853297650621466,
+            "collar": 0.3535533905932738
+          },
+          "root_bob": -1,
+          "ground_compensation_y": 2,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "alpha_bbox": [
+            83,
+            16,
+            178,
+            226
+          ],
+          "core_bbox": [
+            85,
+            17,
+            176,
+            224
+          ]
+        },
+        {
+          "index": 4,
+          "pose_degrees": {
+            "thigh_l": 1.2246467991473533e-15,
+            "thigh_r": -1.2246467991473533e-15,
+            "shin_foot_l": -6.123233995736766e-16,
+            "shin_foot_r": 6.123233995736767e-16,
+            "upper_arm_l": -8.572527594031472e-16,
+            "forearm_hand_l": -3.6739403974420594e-16,
+            "upper_arm_r": 3.6739403974420594e-16,
+            "forearm_hand_r": 1.8369701987210297e-16,
+            "torso": 7.347880794884119e-17,
+            "jacket_flap": -1.6939274201851062,
+            "satchel": 0.778836684617301,
+            "collar": 6.123233995736766e-17
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 0,
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "alpha_bbox": [
+            83,
+            15,
+            173,
+            224
+          ],
+          "core_bbox": [
+            85,
+            16,
+            172,
+            224
+          ]
+        },
+        {
+          "index": 5,
+          "pose_degrees": {
+            "thigh_l": -7.071067811865475,
+            "thigh_r": 7.071067811865475,
+            "shin_foot_l": 6.035533905932737,
+            "shin_foot_r": -3.5355339059327373,
+            "upper_arm_l": 4.949747468305832,
+            "forearm_hand_l": 2.1213203435596424,
+            "upper_arm_r": -2.1213203435596424,
+            "forearm_hand_r": -1.0606601717798212,
+            "torso": -0.42426406871192845,
+            "jacket_flap": -2.94858879582293,
+            "satchel": -0.751856248361982,
+            "collar": -0.35355339059327373
+          },
+          "root_bob": -1,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "alpha_bbox": [
+            83,
+            15,
+            173,
+            225
+          ],
+          "core_bbox": [
+            85,
+            16,
+            171,
+            224
+          ]
+        },
+        {
+          "index": 6,
+          "pose_degrees": {
+            "thigh_l": -10.0,
+            "thigh_r": 10.0,
+            "shin_foot_l": 10.0,
+            "shin_foot_r": -5.0,
+            "upper_arm_l": 7.0,
+            "forearm_hand_l": 3.0,
+            "upper_arm_r": -3.0,
+            "forearm_hand_r": -1.5,
+            "torso": -0.6,
+            "jacket_flap": -2.4760068447290355,
+            "satchel": -1.8421219880057698,
+            "collar": -0.5
+          },
+          "root_bob": -2,
+          "ground_compensation_y": 3,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "alpha_bbox": [
+            83,
+            16,
+            173,
+            227
+          ],
+          "core_bbox": [
+            85,
+            17,
+            171,
+            224
+          ]
+        },
+        {
+          "index": 7,
+          "pose_degrees": {
+            "thigh_l": -7.071067811865477,
+            "thigh_r": 7.071067811865477,
+            "shin_foot_l": 6.0355339059327395,
+            "shin_foot_r": -3.5355339059327386,
+            "upper_arm_l": 4.949747468305834,
+            "forearm_hand_l": 2.121320343559643,
+            "upper_arm_r": -2.121320343559643,
+            "forearm_hand_r": -1.0606601717798214,
+            "torso": -0.4242640687119286,
+            "jacket_flap": -0.5530136645214865,
+            "satchel": -1.8532976506214665,
+            "collar": -0.35355339059327384
+          },
+          "root_bob": -1,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "alpha_bbox": [
+            83,
+            15,
+            173,
+            225
+          ],
+          "core_bbox": [
+            85,
+            16,
+            171,
+            224
+          ]
+        }
+      ],
+      "master_adjacent_rgba_mae": [
+        7.065982818603516,
+        1.968170166015625,
+        1.920166015625,
+        7.043724060058594,
+        4.372211456298828,
+        5.37628173828125,
+        5.399379730224609,
+        4.323612213134766
+      ],
+      "periodic_wrap_rgba_mae": 4.323612213134766,
+      "formal_colours": 64,
+      "runtime_colours": 64,
+      "formal_alpha": [
+        0,
+        255
+      ],
+      "runtime_alpha": [
+        0,
+        255
+      ],
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "source_head_policy": "rigid source slice; registered two-source blend only in explicit turn clips"
+    },
+    {
+      "name": "cheer",
+      "frame_count": 8,
+      "frame_reports": [
+        {
+          "index": 0,
+          "pose_degrees": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "torso": -0.0,
+            "jacket_flap": 0.7191383079063045,
+            "satchel": 0.20686414466293768
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 1,
+          "pose_degrees": {
+            "upper_arm_l": 14.5,
+            "forearm_hand_l": 17.5,
+            "upper_arm_r": -1.75,
+            "forearm_hand_r": -1.25,
+            "torso": -0.35,
+            "jacket_flap": -0.030861692093695492,
+            "satchel": 0.7068641446629377
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 0,
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            70,
+            15,
+            175,
+            224
+          ],
+          "core_bbox": [
+            72,
+            15,
+            174,
+            223
+          ]
+        },
+        {
+          "index": 2,
+          "pose_degrees": {
+            "upper_arm_l": 41.76,
+            "forearm_hand_l": 50.4,
+            "upper_arm_r": -5.04,
+            "forearm_hand_r": -3.5999999999999996,
+            "torso": -1.008,
+            "jacket_flap": -1.4408616920936956,
+            "satchel": 1.6468641446629375
+          },
+          "root_bob": 0,
+          "ground_compensation_y": -2,
+          "head_translation": [
+            0,
+            -2
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            46,
+            13,
+            176,
+            222
+          ],
+          "core_bbox": [
+            47,
+            13,
+            174,
+            221
+          ]
+        },
+        {
+          "index": 3,
+          "pose_degrees": {
+            "upper_arm_l": 58,
+            "forearm_hand_l": 70,
+            "upper_arm_r": -7,
+            "forearm_hand_r": -5,
+            "torso": -1.4,
+            "jacket_flap": -2.2808616920936955,
+            "satchel": 2.2068641446629376
+          },
+          "root_bob": 0,
+          "ground_compensation_y": -3,
+          "head_translation": [
+            0,
+            -3
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            47,
+            12,
+            178,
+            221
+          ],
+          "core_bbox": [
+            49,
+            12,
+            175,
+            220
+          ]
+        },
+        {
+          "index": 4,
+          "pose_degrees": {
+            "upper_arm_l": 55.099999999999994,
+            "forearm_hand_l": 66.5,
+            "upper_arm_r": -6.6499999999999995,
+            "forearm_hand_r": -4.75,
+            "torso": -1.3299999999999998,
+            "jacket_flap": -2.130861692093695,
+            "satchel": 2.1068641446629375
+          },
+          "root_bob": 0,
+          "ground_compensation_y": -2,
+          "head_translation": [
+            0,
+            -2
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            45,
+            13,
+            178,
+            222
+          ],
+          "core_bbox": [
+            48,
+            13,
+            175,
+            221
+          ]
+        },
+        {
+          "index": 5,
+          "pose_degrees": {
+            "upper_arm_l": 34.8,
+            "forearm_hand_l": 42.0,
+            "upper_arm_r": -4.2,
+            "forearm_hand_r": -3.0,
+            "torso": -0.84,
+            "jacket_flap": -1.0808616920936953,
+            "satchel": 1.4068641446629377
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 0,
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            50,
+            15,
+            175,
+            224
+          ],
+          "core_bbox": [
+            51,
+            15,
+            174,
+            223
+          ]
+        },
+        {
+          "index": 6,
+          "pose_degrees": {
+            "upper_arm_l": 10.44,
+            "forearm_hand_l": 12.6,
+            "upper_arm_r": -1.26,
+            "forearm_hand_r": -0.8999999999999999,
+            "torso": -0.252,
+            "jacket_flap": 0.17913830790630447,
+            "satchel": 0.5668641446629377
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            75,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            78,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 7,
+          "pose_degrees": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "torso": -0.0,
+            "jacket_flap": 0.7191383079063045,
+            "satchel": 0.20686414466293768
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        }
+      ],
+      "master_adjacent_rgba_mae": [
+        7.735008239746094,
+        11.218711853027344,
+        8.30569839477539,
+        6.0958709716796875,
+        10.885871887207031,
+        8.951305389404297,
+        2.8891754150390625,
+        0.0
+      ],
+      "periodic_wrap_rgba_mae": null,
+      "formal_colours": 64,
+      "runtime_colours": 64,
+      "formal_alpha": [
+        0,
+        255
+      ],
+      "runtime_alpha": [
+        0,
+        255
+      ],
+      "runtime_canvas": [
+        43,
+        72
+      ],
+      "runtime_anchor": [
+        28,
+        72
+      ],
+      "source_head_policy": "rigid source slice; registered two-source blend only in explicit turn clips"
+    },
+    {
+      "name": "sad",
+      "frame_count": 6,
+      "frame_reports": [
+        {
+          "index": 0,
+          "pose_degrees": {
+            "torso": 0.0,
+            "upper_arm_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_l": 0,
+            "jacket_flap": 0.7191383079063045,
+            "satchel": 0.20686414466293768
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 1,
+          "pose_degrees": {
+            "torso": 0.7000000000000001,
+            "upper_arm_l": -1.12,
+            "upper_arm_r": 0.56,
+            "forearm_hand_l": -0.8400000000000001,
+            "jacket_flap": 0.9991383079063045,
+            "satchel": -0.07313585533706235
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            2
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            17,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            17,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 2,
+          "pose_degrees": {
+            "torso": 1.875,
+            "upper_arm_l": -3.0,
+            "upper_arm_r": 1.5,
+            "forearm_hand_l": -2.25,
+            "jacket_flap": 1.4691383079063045,
+            "satchel": -0.5431358553370623
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            5
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            20,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            20,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 3,
+          "pose_degrees": {
+            "torso": 2.5,
+            "upper_arm_l": -4,
+            "upper_arm_r": 2,
+            "forearm_hand_l": -3,
+            "jacket_flap": 1.7191383079063045,
+            "satchel": -0.7931358553370623
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            7
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            22,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            22,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 4,
+          "pose_degrees": {
+            "torso": 1.375,
+            "upper_arm_l": -2.2,
+            "upper_arm_r": 1.1,
+            "forearm_hand_l": -1.6500000000000001,
+            "jacket_flap": 1.2691383079063046,
+            "satchel": -0.34313585533706237
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            5
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            20,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            20,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 5,
+          "pose_degrees": {
+            "torso": 0.0,
+            "upper_arm_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_l": 0,
+            "jacket_flap": 0.7191383079063045,
+            "satchel": 0.20686414466293768
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        }
+      ],
+      "master_adjacent_rgba_mae": [
+        3.7448768615722656,
+        5.699432373046875,
+        4.5694427490234375,
+        4.941131591796875,
+        6.691410064697266,
+        0.0
+      ],
+      "periodic_wrap_rgba_mae": null,
+      "formal_colours": 64,
+      "runtime_colours": 64,
+      "formal_alpha": [
+        0,
+        255
+      ],
+      "runtime_alpha": [
+        0,
+        255
+      ],
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "source_head_policy": "rigid source slice; registered two-source blend only in explicit turn clips"
+    },
+    {
+      "name": "welcome",
+      "frame_count": 16,
+      "frame_reports": [
+        {
+          "index": 0,
+          "pose_degrees": {
+            "upper_arm_l": 0.0,
+            "forearm_hand_l": 0.0,
+            "upper_arm_r": -0.0,
+            "torso": -0.0,
+            "jacket_flap": 0.7191383079063045,
+            "satchel": 0.20686414466293768
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 1,
+          "pose_degrees": {
+            "upper_arm_l": 0.45672280493227957,
+            "forearm_hand_l": 0.723144441142776,
+            "upper_arm_r": -0.04947830386766362,
+            "torso": -0.02664216362104964,
+            "jacket_flap": 1.2166267699809212,
+            "satchel": 0.5130108905550095
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 2,
+          "pose_degrees": {
+            "upper_arm_l": 1.7573593128807146,
+            "forearm_hand_l": 2.782485578727798,
+            "upper_arm_r": -0.1903805922287441,
+            "torso": -0.10251262658470835,
+            "jacket_flap": 1.6383771234488163,
+            "satchel": 0.7725495696121758
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 3,
+          "pose_degrees": {
+            "upper_arm_l": 3.703899405809461,
+            "forearm_hand_l": 5.864507392531647,
+            "upper_arm_r": -0.4012557689626916,
+            "torso": -0.21606079867221856,
+            "jacket_flap": 1.9201817001709773,
+            "satchel": 0.9459677706719671
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            2
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            17,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            17,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 4,
+          "pose_degrees": {
+            "upper_arm_l": 5.999999999999999,
+            "forearm_hand_l": 9.499999999999998,
+            "upper_arm_r": -0.6499999999999999,
+            "torso": -0.3499999999999999,
+            "jacket_flap": 2.0191383079063048,
+            "satchel": 1.0068641446629378
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            2
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            80,
+            17,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            17,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 5,
+          "pose_degrees": {
+            "upper_arm_l": 8.296100594190538,
+            "forearm_hand_l": 13.13549260746835,
+            "upper_arm_r": -0.8987442310373083,
+            "torso": -0.48393920132778134,
+            "jacket_flap": 1.9201817001709773,
+            "satchel": 0.9459677706719671
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            2
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            77,
+            17,
+            175,
+            225
+          ],
+          "core_bbox": [
+            79,
+            17,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 6,
+          "pose_degrees": {
+            "upper_arm_l": 10.242640687119284,
+            "forearm_hand_l": 16.217514421272202,
+            "upper_arm_r": -1.1096194077712558,
+            "torso": -0.5974873734152916,
+            "jacket_flap": 1.6383771234488163,
+            "satchel": 0.7725495696121758
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            3
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            74,
+            18,
+            175,
+            225
+          ],
+          "core_bbox": [
+            76,
+            18,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 7,
+          "pose_degrees": {
+            "upper_arm_l": 11.54327719506772,
+            "forearm_hand_l": 18.276855558857225,
+            "upper_arm_r": -1.2505216961323364,
+            "torso": -0.6733578363789503,
+            "jacket_flap": 1.2166267699809215,
+            "satchel": 0.5130108905550096
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            3
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            72,
+            18,
+            175,
+            225
+          ],
+          "core_bbox": [
+            75,
+            18,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 8,
+          "pose_degrees": {
+            "upper_arm_l": 12.0,
+            "forearm_hand_l": 19.0,
+            "upper_arm_r": -1.3,
+            "torso": -0.7,
+            "jacket_flap": 0.7191383079063046,
+            "satchel": 0.2068641446629378
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            3
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            71,
+            18,
+            175,
+            225
+          ],
+          "core_bbox": [
+            74,
+            18,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 9,
+          "pose_degrees": {
+            "upper_arm_l": 11.543277195067722,
+            "forearm_hand_l": 18.276855558857225,
+            "upper_arm_r": -1.2505216961323367,
+            "torso": -0.6733578363789504,
+            "jacket_flap": 0.2216498458316879,
+            "satchel": -0.09928260122913407
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            3
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            72,
+            18,
+            175,
+            225
+          ],
+          "core_bbox": [
+            75,
+            18,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 10,
+          "pose_degrees": {
+            "upper_arm_l": 10.242640687119286,
+            "forearm_hand_l": 16.217514421272202,
+            "upper_arm_r": -1.109619407771256,
+            "torso": -0.5974873734152917,
+            "jacket_flap": -0.20010050763620724,
+            "satchel": -0.35882128028630034
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            3
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            74,
+            18,
+            175,
+            225
+          ],
+          "core_bbox": [
+            76,
+            18,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 11,
+          "pose_degrees": {
+            "upper_arm_l": 8.296100594190541,
+            "forearm_hand_l": 13.135492607468358,
+            "upper_arm_r": -0.8987442310373087,
+            "torso": -0.48393920132778157,
+            "jacket_flap": -0.4819050843583681,
+            "satchel": -0.5322394813460916
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            2
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            77,
+            17,
+            175,
+            225
+          ],
+          "core_bbox": [
+            79,
+            17,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 12,
+          "pose_degrees": {
+            "upper_arm_l": 6.000000000000002,
+            "forearm_hand_l": 9.500000000000002,
+            "upper_arm_r": -0.6500000000000001,
+            "torso": -0.35000000000000003,
+            "jacket_flap": -0.5808616920936955,
+            "satchel": -0.5931358553370624
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            2
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            80,
+            17,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            17,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 13,
+          "pose_degrees": {
+            "upper_arm_l": 3.7038994058094596,
+            "forearm_hand_l": 5.864507392531644,
+            "upper_arm_r": -0.4012557689626915,
+            "torso": -0.21606079867221847,
+            "jacket_flap": -0.4819050843583681,
+            "satchel": -0.5322394813460917
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            2
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            17,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            17,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 14,
+          "pose_degrees": {
+            "upper_arm_l": 1.757359312880716,
+            "forearm_hand_l": 2.7824855787278002,
+            "upper_arm_r": -0.19038059222874423,
+            "torso": -0.10251262658470842,
+            "jacket_flap": -0.20010050763620746,
+            "satchel": -0.35882128028630045
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 15,
+          "pose_degrees": {
+            "upper_arm_l": 0.4567228049322809,
+            "forearm_hand_l": 0.7231444411427781,
+            "upper_arm_r": -0.04947830386766377,
+            "torso": -0.02664216362104972,
+            "jacket_flap": 0.22164984583168695,
+            "satchel": -0.09928260122913468
+          },
+          "root_bob": 0,
+          "ground_compensation_y": 1,
+          "head_translation": [
+            0,
+            1
+          ],
+          "head_rigid_translation_only": true,
+          "expression_transform_matches_head": true,
+          "head_source_rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_bbox": [
+            82,
+            16,
+            175,
+            225
+          ],
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        }
+      ],
+      "master_adjacent_rgba_mae": [
+        0.5100479125976562,
+        0.6909713745117188,
+        3.6256790161132812,
+        1.037933349609375,
+        1.0417289733886719,
+        3.6318588256835938,
+        0.7213211059570312,
+        0.3702278137207031,
+        0.37725830078125,
+        0.7239990234375,
+        3.625446319580078,
+        1.0395622253417969,
+        1.0364761352539062,
+        3.632843017578125,
+        0.7070121765136719,
+        0.5170936584472656
+      ],
+      "periodic_wrap_rgba_mae": 0.5170936584472656,
+      "formal_colours": 64,
+      "runtime_colours": 49,
+      "formal_alpha": [
+        0,
+        255
+      ],
+      "runtime_alpha": [
+        0,
+        255
+      ],
+      "runtime_canvas": [
+        58,
+        120
+      ],
+      "runtime_anchor": [
+        31,
+        120
+      ],
+      "source_head_policy": "rigid source slice; registered two-source blend only in explicit turn clips"
+    },
+    {
+      "name": "turn_left",
+      "frame_count": 6,
+      "frame_reports": [
+        {
+          "index": 0,
+          "facing_blend_weight": 0.0,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 1,
+          "facing_blend_weight": 0.09549150281252627,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 2,
+          "facing_blend_weight": 0.3454915028125263,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            83,
+            16,
+            172,
+            224
+          ]
+        },
+        {
+          "index": 3,
+          "facing_blend_weight": 0.6545084971874737,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            82,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 4,
+          "facing_blend_weight": 0.9045084971874737,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            82,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 5,
+          "facing_blend_weight": 1.0,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            82,
+            15,
+            173,
+            224
+          ]
+        }
+      ],
+      "master_adjacent_rgba_mae": [
+        2.699871063232422,
+        3.000621795654297,
+        3.4790077209472656,
+        3.0543060302734375,
+        2.3882369995117188,
+        10.448497772216797
+      ],
+      "periodic_wrap_rgba_mae": null,
+      "formal_colours": 64,
+      "runtime_colours": 64,
+      "formal_alpha": [
+        0,
+        255
+      ],
+      "runtime_alpha": [
+        0,
+        255
+      ],
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "source_head_policy": "rigid source slice; registered two-source blend only in explicit turn clips"
+    },
+    {
+      "name": "turn_front_from_left",
+      "frame_count": 6,
+      "frame_reports": [
+        {
+          "index": 5,
+          "facing_blend_weight": 1.0,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            82,
+            15,
+            173,
+            224
+          ]
+        },
+        {
+          "index": 4,
+          "facing_blend_weight": 0.9045084971874737,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            82,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 3,
+          "facing_blend_weight": 0.6545084971874737,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            82,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 2,
+          "facing_blend_weight": 0.3454915028125263,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            83,
+            16,
+            172,
+            224
+          ]
+        },
+        {
+          "index": 1,
+          "facing_blend_weight": 0.09549150281252627,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 0,
+          "facing_blend_weight": 0.0,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        }
+      ],
+      "master_adjacent_rgba_mae": [
+        2.3882369995117188,
+        3.0543060302734375,
+        3.4790077209472656,
+        3.000621795654297,
+        2.699871063232422,
+        10.448497772216797
+      ],
+      "periodic_wrap_rgba_mae": null,
+      "formal_colours": 64,
+      "runtime_colours": 64,
+      "formal_alpha": [
+        0,
+        255
+      ],
+      "runtime_alpha": [
+        0,
+        255
+      ],
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "source_head_policy": "rigid source slice; registered two-source blend only in explicit turn clips"
+    },
+    {
+      "name": "turn_right",
+      "frame_count": 6,
+      "frame_reports": [
+        {
+          "index": 0,
+          "facing_blend_weight": 0.0,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 1,
+          "facing_blend_weight": 0.09549150281252627,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            84,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 2,
+          "facing_blend_weight": 0.3454915028125263,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            85,
+            16,
+            173,
+            224
+          ]
+        },
+        {
+          "index": 3,
+          "facing_blend_weight": 0.6545084971874737,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            85,
+            16,
+            172,
+            224
+          ]
+        },
+        {
+          "index": 4,
+          "facing_blend_weight": 0.9045084971874737,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            84,
+            16,
+            172,
+            224
+          ]
+        },
+        {
+          "index": 5,
+          "facing_blend_weight": 1.0,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            85,
+            16,
+            172,
+            224
+          ]
+        }
+      ],
+      "master_adjacent_rgba_mae": [
+        2.4977989196777344,
+        2.8816490173339844,
+        3.285137176513672,
+        2.881206512451172,
+        2.8774948120117188,
+        9.88232421875
+      ],
+      "periodic_wrap_rgba_mae": null,
+      "formal_colours": 64,
+      "runtime_colours": 64,
+      "formal_alpha": [
+        0,
+        255
+      ],
+      "runtime_alpha": [
+        0,
+        255
+      ],
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "source_head_policy": "rigid source slice; registered two-source blend only in explicit turn clips"
+    },
+    {
+      "name": "turn_front_from_right",
+      "frame_count": 6,
+      "frame_reports": [
+        {
+          "index": 5,
+          "facing_blend_weight": 1.0,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            85,
+            16,
+            172,
+            224
+          ]
+        },
+        {
+          "index": 4,
+          "facing_blend_weight": 0.9045084971874737,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            84,
+            16,
+            172,
+            224
+          ]
+        },
+        {
+          "index": 3,
+          "facing_blend_weight": 0.6545084971874737,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            85,
+            16,
+            172,
+            224
+          ]
+        },
+        {
+          "index": 2,
+          "facing_blend_weight": 0.3454915028125263,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            85,
+            16,
+            173,
+            224
+          ]
+        },
+        {
+          "index": 1,
+          "facing_blend_weight": 0.09549150281252627,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            84,
+            16,
+            174,
+            224
+          ]
+        },
+        {
+          "index": 0,
+          "facing_blend_weight": 0.0,
+          "head_policy": "two immutable facing slices, rigid eye-midpoint registration then premultiplied blend; no redrawn face",
+          "core_bbox": [
+            83,
+            16,
+            174,
+            224
+          ]
+        }
+      ],
+      "master_adjacent_rgba_mae": [
+        2.8774948120117188,
+        2.881206512451172,
+        3.285137176513672,
+        2.8816490173339844,
+        2.4977989196777344,
+        9.88232421875
+      ],
+      "periodic_wrap_rgba_mae": null,
+      "formal_colours": 64,
+      "runtime_colours": 64,
+      "formal_alpha": [
+        0,
+        255
+      ],
+      "runtime_alpha": [
+        0,
+        255
+      ],
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "source_head_policy": "rigid source slice; registered two-source blend only in explicit turn clips"
+    }
+  ],
+  "alpha_policy": {
+    "discard_below": 16,
+    "operation": "alpha-only; original RGB and source file unchanged",
+    "reason": "non-character low-alpha generator specks; explicitly authorized by root",
+    "core_sampling_bbox_threshold": 128
+  },
+  "identity_boundary": "background extraction was slightly re-rendered; this pipeline reuses those immutable pixels",
+  "not_claimed": [
+    "human visual acceptance",
+    "new painted expressions",
+    "vector-character paths",
+    "hardware C decoder or on-device acceptance"
+  ]
+}

@@ -1,0 +1,3207 @@
+{
+  "version": 1,
+  "skin": "travel",
+  "selected_design": "round1/v2 option 1 light hiking",
+  "canvas": [
+    256,
+    256
+  ],
+  "anchor": [
+    128,
+    224
+  ],
+  "fps": 12,
+  "source": "source/travel-three-views.png",
+  "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+  "source_generation_record": "source/travel-three-views-generation.json",
+  "source_alpha_record": "source/travel-three-views-qa.json",
+  "source_edit_boundary": "Background extraction slightly re-rendered the approved board. This rig does not redraw any source head/face pixels.",
+  "representation": "independent SVG wrappers of approved source pixel slices; not hand-drawn paths",
+  "source_alpha": {
+    "zero_pixels": 957596,
+    "low_alpha_1_to_7_pixels": 32290,
+    "core_over_128_pixels": 573407,
+    "opaque_255_pixels": 1573
+  },
+  "mirror_allowed": false,
+  "part_side_convention": "screen-left/right within each separately supplied view",
+  "alpha_policy": {
+    "discard_below": 16,
+    "operation": "alpha-only; original RGB and source file unchanged",
+    "reason": "non-character low-alpha generator specks; explicitly authorized by root",
+    "core_sampling_bbox_threshold": 128
+  },
+  "draw_order": [
+    "thigh_l",
+    "shin_foot_l",
+    "thigh_r",
+    "shin_foot_r",
+    "upper_arm_l",
+    "forearm_hand_l",
+    "upper_arm_r",
+    "forearm_hand_r",
+    "torso",
+    "jacket_flap",
+    "satchel",
+    "collar",
+    "head",
+    "expression_neutral"
+  ],
+  "views": {
+    "front": {
+      "sampling": {
+        "source_window": [
+          160,
+          0,
+          610,
+          855
+        ],
+        "source_core_bbox_in_window": [
+          59,
+          22,
+          418,
+          838
+        ],
+        "source_sampling_bbox_in_window": [
+          57,
+          20,
+          420,
+          840
+        ],
+        "scale": 0.2549019607843137,
+        "sampled_size": [
+          93,
+          209
+        ],
+        "paste_xy": [
+          82,
+          15
+        ],
+        "core_height": 208,
+        "anchor": [
+          128,
+          224
+        ]
+      },
+      "reference": "common/front/sampled-reference.png",
+      "parts": {
+        "head": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "front",
+          "part": "head",
+          "pivot": [
+            128,
+            97
+          ],
+          "polygon": [
+            [
+              0,
+              0
+            ],
+            [
+              256,
+              0
+            ],
+            [
+              256,
+              100
+            ],
+            [
+              0,
+              100
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "root",
+          "raster": "common/front/head.png",
+          "svg": "common/front/head.svg",
+          "mask": "common/front/head-mask.png",
+          "alpha_bbox": [
+            82,
+            15,
+            175,
+            101
+          ],
+          "rgba_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "overlay": false
+        },
+        "satchel": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "front",
+          "part": "satchel",
+          "pivot": [
+            145,
+            138
+          ],
+          "polygon": [
+            [
+              138,
+              135
+            ],
+            [
+              151,
+              133
+            ],
+            [
+              159,
+              140
+            ],
+            [
+              160,
+              155
+            ],
+            [
+              156,
+              164
+            ],
+            [
+              141,
+              161
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/front/satchel.png",
+          "svg": "skins/travel/front/satchel.svg",
+          "mask": "skins/travel/front/satchel-mask.png",
+          "alpha_bbox": [
+            138,
+            133,
+            161,
+            165
+          ],
+          "rgba_sha256": "e76c3d2437e3c8e39e91e32825c05b84503b54cb60f5e2effef83b72ca17ac70",
+          "overlay": false
+        },
+        "upper_arm_l": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "front",
+          "part": "upper_arm_l",
+          "pivot": [
+            105,
+            106
+          ],
+          "polygon": [
+            [
+              96,
+              99
+            ],
+            [
+              113,
+              103
+            ],
+            [
+              109,
+              128
+            ],
+            [
+              104,
+              142
+            ],
+            [
+              85,
+              143
+            ],
+            [
+              88,
+              119
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                98,
+                134
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/front/upper_arm_l.png",
+          "svg": "skins/travel/front/upper_arm_l.svg",
+          "mask": "skins/travel/front/upper_arm_l-mask.png",
+          "alpha_bbox": [
+            87,
+            102,
+            114,
+            143
+          ],
+          "rgba_sha256": "1bb5dedf678e92a1d7dca9df7d6e0b021125a0e1102a79655fd612d15aff0ca8",
+          "overlay": false
+        },
+        "forearm_hand_l": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "front",
+          "part": "forearm_hand_l",
+          "pivot": [
+            98,
+            134
+          ],
+          "polygon": [
+            [
+              85,
+              129
+            ],
+            [
+              105,
+              130
+            ],
+            [
+              108,
+              155
+            ],
+            [
+              102,
+              168
+            ],
+            [
+              88,
+              165
+            ],
+            [
+              85,
+              147
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                98,
+                134
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "upper_arm_l",
+          "raster": "skins/travel/front/forearm_hand_l.png",
+          "svg": "skins/travel/front/forearm_hand_l.svg",
+          "mask": "skins/travel/front/forearm_hand_l-mask.png",
+          "alpha_bbox": [
+            87,
+            129,
+            109,
+            168
+          ],
+          "rgba_sha256": "edd07918a92c874c6a44fa9e5a28eb93daf128c874d478a264c9d8fb621ec690",
+          "overlay": false
+        },
+        "upper_arm_r": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "front",
+          "part": "upper_arm_r",
+          "pivot": [
+            151,
+            106
+          ],
+          "polygon": [
+            [
+              146,
+              103
+            ],
+            [
+              160,
+              98
+            ],
+            [
+              170,
+              120
+            ],
+            [
+              174,
+              142
+            ],
+            [
+              154,
+              144
+            ],
+            [
+              146,
+              126
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                160,
+                135
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/front/upper_arm_r.png",
+          "svg": "skins/travel/front/upper_arm_r.svg",
+          "mask": "skins/travel/front/upper_arm_r-mask.png",
+          "alpha_bbox": [
+            146,
+            101,
+            173,
+            144
+          ],
+          "rgba_sha256": "835fb3abd05b049734e8537ec5c4fc7ea2313dc556ba9530c7e36f44f91d6839",
+          "overlay": false
+        },
+        "forearm_hand_r": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "front",
+          "part": "forearm_hand_r",
+          "pivot": [
+            160,
+            135
+          ],
+          "polygon": [
+            [
+              153,
+              130
+            ],
+            [
+              175,
+              129
+            ],
+            [
+              174,
+              157
+            ],
+            [
+              168,
+              169
+            ],
+            [
+              152,
+              165
+            ],
+            [
+              151,
+              148
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                160,
+                135
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "upper_arm_r",
+          "raster": "skins/travel/front/forearm_hand_r.png",
+          "svg": "skins/travel/front/forearm_hand_r.svg",
+          "mask": "skins/travel/front/forearm_hand_r-mask.png",
+          "alpha_bbox": [
+            152,
+            130,
+            172,
+            168
+          ],
+          "rgba_sha256": "96bd998300585ebb2ffa27861dd5c23a9cff52b6b746d58e924169d9e01a2f39",
+          "overlay": false
+        },
+        "shin_foot_l": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "front",
+          "part": "shin_foot_l",
+          "pivot": [
+            115,
+            184
+          ],
+          "polygon": [
+            [
+              0,
+              178
+            ],
+            [
+              129,
+              178
+            ],
+            [
+              129,
+              256
+            ],
+            [
+              0,
+              256
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                115,
+                184
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "thigh_l",
+          "raster": "skins/travel/front/shin_foot_l.png",
+          "svg": "skins/travel/front/shin_foot_l.svg",
+          "mask": "skins/travel/front/shin_foot_l-mask.png",
+          "alpha_bbox": [
+            91,
+            178,
+            130,
+            224
+          ],
+          "rgba_sha256": "8c3f2616ec70316de7bb371b8ddd6db26f18cd2747a9ed9c3151b60d60660de5",
+          "overlay": false
+        },
+        "shin_foot_r": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "front",
+          "part": "shin_foot_r",
+          "pivot": [
+            141,
+            184
+          ],
+          "polygon": [
+            [
+              126,
+              178
+            ],
+            [
+              256,
+              178
+            ],
+            [
+              256,
+              256
+            ],
+            [
+              126,
+              256
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                141,
+                184
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "thigh_r",
+          "raster": "skins/travel/front/shin_foot_r.png",
+          "svg": "skins/travel/front/shin_foot_r.svg",
+          "mask": "skins/travel/front/shin_foot_r-mask.png",
+          "alpha_bbox": [
+            130,
+            178,
+            168,
+            224
+          ],
+          "rgba_sha256": "ece1eb3bf3b96d9b306eb520466258194e3922d6d8b9c1f737ddae767c5286a4",
+          "overlay": false
+        },
+        "thigh_l": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "front",
+          "part": "thigh_l",
+          "pivot": [
+            116,
+            155
+          ],
+          "polygon": [
+            [
+              0,
+              151
+            ],
+            [
+              129,
+              151
+            ],
+            [
+              129,
+              189
+            ],
+            [
+              0,
+              189
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                115,
+                184
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "root",
+          "raster": "skins/travel/front/thigh_l.png",
+          "svg": "skins/travel/front/thigh_l.svg",
+          "mask": "skins/travel/front/thigh_l-mask.png",
+          "alpha_bbox": [
+            95,
+            151,
+            130,
+            190
+          ],
+          "rgba_sha256": "22f9947f0934fd191e5e436034935f884c9ab9d52bc937a250a421e8830becb2",
+          "overlay": false
+        },
+        "thigh_r": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "front",
+          "part": "thigh_r",
+          "pivot": [
+            141,
+            155
+          ],
+          "polygon": [
+            [
+              126,
+              151
+            ],
+            [
+              256,
+              151
+            ],
+            [
+              256,
+              189
+            ],
+            [
+              126,
+              189
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                141,
+                184
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "root",
+          "raster": "skins/travel/front/thigh_r.png",
+          "svg": "skins/travel/front/thigh_r.svg",
+          "mask": "skins/travel/front/thigh_r-mask.png",
+          "alpha_bbox": [
+            130,
+            151,
+            163,
+            190
+          ],
+          "rgba_sha256": "2428fb8d045659ba8aa4267ada06a4a1fe3e42b45d95c5c434fb1aa7eec4e279",
+          "overlay": false
+        },
+        "jacket_flap": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "front",
+          "part": "jacket_flap",
+          "pivot": [
+            105,
+            143
+          ],
+          "polygon": [
+            [
+              97,
+              142
+            ],
+            [
+              112,
+              142
+            ],
+            [
+              113,
+              158
+            ],
+            [
+              97,
+              158
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/front/jacket_flap.png",
+          "svg": "skins/travel/front/jacket_flap.svg",
+          "mask": "skins/travel/front/jacket_flap-mask.png",
+          "alpha_bbox": [
+            107,
+            142,
+            113,
+            151
+          ],
+          "rgba_sha256": "7dcefa21b28bb824057698fc7d1477c3cc6a6d7de2925e29b419d878c21aa632",
+          "overlay": false
+        },
+        "collar": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "front",
+          "part": "collar",
+          "pivot": [
+            128,
+            103
+          ],
+          "polygon": [
+            [
+              108,
+              98
+            ],
+            [
+              150,
+              98
+            ],
+            [
+              153,
+              110
+            ],
+            [
+              136,
+              117
+            ],
+            [
+              112,
+              111
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/front/collar.png",
+          "svg": "skins/travel/front/collar.svg",
+          "mask": "skins/travel/front/collar-mask.png",
+          "alpha_bbox": [
+            109,
+            101,
+            152,
+            118
+          ],
+          "rgba_sha256": "afb2ecc7ca6c6eb1bc7494777d6419b36b9c1b399a748ab4b4f48c83e76c2c89",
+          "overlay": false
+        },
+        "torso": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "front",
+          "part": "torso",
+          "pivot": [
+            128,
+            155
+          ],
+          "polygon": null,
+          "overlap_source_circles": [
+            [
+              [
+                105,
+                106
+              ],
+              6
+            ],
+            [
+              [
+                151,
+                106
+              ],
+              6
+            ],
+            [
+              [
+                116,
+                155
+              ],
+              6
+            ],
+            [
+              [
+                141,
+                155
+              ],
+              6
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "root",
+          "raster": "skins/travel/front/torso.png",
+          "svg": "skins/travel/front/torso.svg",
+          "mask": "skins/travel/front/torso-mask.png",
+          "alpha_bbox": [
+            101,
+            100,
+            158,
+            162
+          ],
+          "rgba_sha256": "1fee6fed2f3a27f096a454b87a6223ebd6b7a43e6bf99f3ac3878b146934dbc0",
+          "overlay": false
+        },
+        "expression_neutral": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "front",
+          "part": "expression_neutral",
+          "pivot": [
+            128,
+            80
+          ],
+          "polygon": [
+            [
+              104,
+              66
+            ],
+            [
+              153,
+              66
+            ],
+            [
+              153,
+              95
+            ],
+            [
+              104,
+              95
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "head",
+          "raster": "common/front/expression_neutral.png",
+          "svg": "common/front/expression_neutral.svg",
+          "mask": "common/front/expression_neutral-mask.png",
+          "alpha_bbox": [
+            104,
+            66,
+            154,
+            96
+          ],
+          "rgba_sha256": "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd",
+          "overlay": true
+        }
+      }
+    },
+    "left": {
+      "sampling": {
+        "source_window": [
+          650,
+          0,
+          1110,
+          855
+        ],
+        "source_core_bbox_in_window": [
+          42,
+          22,
+          405,
+          838
+        ],
+        "source_sampling_bbox_in_window": [
+          40,
+          20,
+          407,
+          840
+        ],
+        "scale": 0.2549019607843137,
+        "sampled_size": [
+          94,
+          209
+        ],
+        "paste_xy": [
+          81,
+          15
+        ],
+        "core_height": 208,
+        "anchor": [
+          128,
+          224
+        ]
+      },
+      "reference": "common/left/sampled-reference.png",
+      "parts": {
+        "head": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "left",
+          "part": "head",
+          "pivot": [
+            128,
+            97
+          ],
+          "polygon": [
+            [
+              0,
+              0
+            ],
+            [
+              256,
+              0
+            ],
+            [
+              256,
+              100
+            ],
+            [
+              0,
+              100
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "root",
+          "raster": "common/left/head.png",
+          "svg": "common/left/head.svg",
+          "mask": "common/left/head-mask.png",
+          "alpha_bbox": [
+            81,
+            15,
+            175,
+            101
+          ],
+          "rgba_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "overlay": false
+        },
+        "satchel": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "left",
+          "part": "satchel",
+          "pivot": [
+            145,
+            138
+          ],
+          "polygon": [
+            [
+              138,
+              135
+            ],
+            [
+              151,
+              133
+            ],
+            [
+              159,
+              140
+            ],
+            [
+              160,
+              155
+            ],
+            [
+              156,
+              164
+            ],
+            [
+              141,
+              161
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/left/satchel.png",
+          "svg": "skins/travel/left/satchel.svg",
+          "mask": "skins/travel/left/satchel-mask.png",
+          "alpha_bbox": [
+            138,
+            133,
+            161,
+            165
+          ],
+          "rgba_sha256": "8a3ad1d574fa5238c44dfc9cad24a48ab150aa8e391c6d093a2724366985bd6e",
+          "overlay": false
+        },
+        "upper_arm_l": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "left",
+          "part": "upper_arm_l",
+          "pivot": [
+            105,
+            106
+          ],
+          "polygon": [
+            [
+              96,
+              99
+            ],
+            [
+              113,
+              103
+            ],
+            [
+              109,
+              128
+            ],
+            [
+              104,
+              142
+            ],
+            [
+              85,
+              143
+            ],
+            [
+              88,
+              119
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                98,
+                134
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/left/upper_arm_l.png",
+          "svg": "skins/travel/left/upper_arm_l.svg",
+          "mask": "skins/travel/left/upper_arm_l-mask.png",
+          "alpha_bbox": [
+            85,
+            101,
+            114,
+            144
+          ],
+          "rgba_sha256": "9addb55beaddb1fdad2e0ef314bb1f7ebb043cf9bdb84699279c0e94f2d4ab0d",
+          "overlay": false
+        },
+        "forearm_hand_l": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "left",
+          "part": "forearm_hand_l",
+          "pivot": [
+            98,
+            134
+          ],
+          "polygon": [
+            [
+              85,
+              129
+            ],
+            [
+              105,
+              130
+            ],
+            [
+              108,
+              155
+            ],
+            [
+              102,
+              168
+            ],
+            [
+              88,
+              165
+            ],
+            [
+              85,
+              147
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                98,
+                134
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "upper_arm_l",
+          "raster": "skins/travel/left/forearm_hand_l.png",
+          "svg": "skins/travel/left/forearm_hand_l.svg",
+          "mask": "skins/travel/left/forearm_hand_l-mask.png",
+          "alpha_bbox": [
+            86,
+            129,
+            109,
+            169
+          ],
+          "rgba_sha256": "17ef8b4c726146459c7079243cb58630d848346794d94383e6eb0f1bc99725cf",
+          "overlay": false
+        },
+        "upper_arm_r": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "left",
+          "part": "upper_arm_r",
+          "pivot": [
+            151,
+            106
+          ],
+          "polygon": [
+            [
+              146,
+              103
+            ],
+            [
+              160,
+              98
+            ],
+            [
+              170,
+              120
+            ],
+            [
+              174,
+              142
+            ],
+            [
+              154,
+              144
+            ],
+            [
+              146,
+              126
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                160,
+                135
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/left/upper_arm_r.png",
+          "svg": "skins/travel/left/upper_arm_r.svg",
+          "mask": "skins/travel/left/upper_arm_r-mask.png",
+          "alpha_bbox": [
+            146,
+            101,
+            170,
+            144
+          ],
+          "rgba_sha256": "0f8e3ad0341911e3a27359b9527bcb3af3449b7cf44baac3da2ed5c6c1c6ef77",
+          "overlay": false
+        },
+        "forearm_hand_r": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "left",
+          "part": "forearm_hand_r",
+          "pivot": [
+            160,
+            135
+          ],
+          "polygon": [
+            [
+              153,
+              130
+            ],
+            [
+              175,
+              129
+            ],
+            [
+              174,
+              157
+            ],
+            [
+              168,
+              169
+            ],
+            [
+              152,
+              165
+            ],
+            [
+              151,
+              148
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                160,
+                135
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "upper_arm_r",
+          "raster": "skins/travel/left/forearm_hand_r.png",
+          "svg": "skins/travel/left/forearm_hand_r.svg",
+          "mask": "skins/travel/left/forearm_hand_r-mask.png",
+          "alpha_bbox": [
+            152,
+            130,
+            170,
+            168
+          ],
+          "rgba_sha256": "ce29c50568694df473c0fedd3ad85c230edf50b594e359100934aca3dfb2a9b2",
+          "overlay": false
+        },
+        "shin_foot_l": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "left",
+          "part": "shin_foot_l",
+          "pivot": [
+            115,
+            184
+          ],
+          "polygon": [
+            [
+              0,
+              178
+            ],
+            [
+              129,
+              178
+            ],
+            [
+              129,
+              256
+            ],
+            [
+              0,
+              256
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                115,
+                184
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "thigh_l",
+          "raster": "skins/travel/left/shin_foot_l.png",
+          "svg": "skins/travel/left/shin_foot_l.svg",
+          "mask": "skins/travel/left/shin_foot_l-mask.png",
+          "alpha_bbox": [
+            86,
+            178,
+            130,
+            224
+          ],
+          "rgba_sha256": "5e66175345f62f0d3be113066cfc5f281c482e2ec2dcbdff526955baf8468ba8",
+          "overlay": false
+        },
+        "shin_foot_r": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "left",
+          "part": "shin_foot_r",
+          "pivot": [
+            141,
+            184
+          ],
+          "polygon": [
+            [
+              126,
+              178
+            ],
+            [
+              256,
+              178
+            ],
+            [
+              256,
+              256
+            ],
+            [
+              126,
+              256
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                141,
+                184
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "thigh_r",
+          "raster": "skins/travel/left/shin_foot_r.png",
+          "svg": "skins/travel/left/shin_foot_r.svg",
+          "mask": "skins/travel/left/shin_foot_r-mask.png",
+          "alpha_bbox": [
+            130,
+            178,
+            165,
+            224
+          ],
+          "rgba_sha256": "3b5cc1ce9e9c3d3d875c495699d8160e2a3fa84e3bfcdb6aea55fb4c086ca56b",
+          "overlay": false
+        },
+        "thigh_l": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "left",
+          "part": "thigh_l",
+          "pivot": [
+            116,
+            155
+          ],
+          "polygon": [
+            [
+              0,
+              151
+            ],
+            [
+              129,
+              151
+            ],
+            [
+              129,
+              189
+            ],
+            [
+              0,
+              189
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                115,
+                184
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "root",
+          "raster": "skins/travel/left/thigh_l.png",
+          "svg": "skins/travel/left/thigh_l.svg",
+          "mask": "skins/travel/left/thigh_l-mask.png",
+          "alpha_bbox": [
+            91,
+            151,
+            130,
+            190
+          ],
+          "rgba_sha256": "c94c6c8b9b6ee2dd1bd96464f4c407d60aa7e5fc0f7c2ef51f07c4e86571240c",
+          "overlay": false
+        },
+        "thigh_r": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "left",
+          "part": "thigh_r",
+          "pivot": [
+            141,
+            155
+          ],
+          "polygon": [
+            [
+              126,
+              151
+            ],
+            [
+              256,
+              151
+            ],
+            [
+              256,
+              189
+            ],
+            [
+              126,
+              189
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                141,
+                184
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "root",
+          "raster": "skins/travel/left/thigh_r.png",
+          "svg": "skins/travel/left/thigh_r.svg",
+          "mask": "skins/travel/left/thigh_r-mask.png",
+          "alpha_bbox": [
+            130,
+            151,
+            161,
+            190
+          ],
+          "rgba_sha256": "0757c1df0e4b2d486074d576d88ef5179b647c6d81153f9a025d04e63ce0c05b",
+          "overlay": false
+        },
+        "jacket_flap": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "left",
+          "part": "jacket_flap",
+          "pivot": [
+            105,
+            143
+          ],
+          "polygon": [
+            [
+              97,
+              142
+            ],
+            [
+              112,
+              142
+            ],
+            [
+              113,
+              158
+            ],
+            [
+              97,
+              158
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/left/jacket_flap.png",
+          "svg": "skins/travel/left/jacket_flap.svg",
+          "mask": "skins/travel/left/jacket_flap-mask.png",
+          "alpha_bbox": [
+            107,
+            142,
+            113,
+            151
+          ],
+          "rgba_sha256": "0dd5e6f5d4830d5831264c61989b194bb84c2a40b09378ef6d4df4caabc2e3d0",
+          "overlay": false
+        },
+        "collar": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "left",
+          "part": "collar",
+          "pivot": [
+            128,
+            103
+          ],
+          "polygon": [
+            [
+              108,
+              98
+            ],
+            [
+              150,
+              98
+            ],
+            [
+              153,
+              110
+            ],
+            [
+              136,
+              117
+            ],
+            [
+              112,
+              111
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/left/collar.png",
+          "svg": "skins/travel/left/collar.svg",
+          "mask": "skins/travel/left/collar-mask.png",
+          "alpha_bbox": [
+            109,
+            101,
+            151,
+            118
+          ],
+          "rgba_sha256": "02732e74eca94f9c2c75b20e6dbc4457d38c7893a202e46e608c510b5a2e8807",
+          "overlay": false
+        },
+        "torso": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "left",
+          "part": "torso",
+          "pivot": [
+            128,
+            155
+          ],
+          "polygon": null,
+          "overlap_source_circles": [
+            [
+              [
+                105,
+                106
+              ],
+              6
+            ],
+            [
+              [
+                151,
+                106
+              ],
+              6
+            ],
+            [
+              [
+                116,
+                155
+              ],
+              6
+            ],
+            [
+              [
+                141,
+                155
+              ],
+              6
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "root",
+          "raster": "skins/travel/left/torso.png",
+          "svg": "skins/travel/left/torso.svg",
+          "mask": "skins/travel/left/torso-mask.png",
+          "alpha_bbox": [
+            99,
+            100,
+            156,
+            162
+          ],
+          "rgba_sha256": "ef8416b1dc7e7f2d5c4d8b37258f82d9b1dfac5bdbfd24bb3ef02090ebf26daf",
+          "overlay": false
+        },
+        "expression_neutral": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "left",
+          "part": "expression_neutral",
+          "pivot": [
+            128,
+            80
+          ],
+          "polygon": [
+            [
+              104,
+              66
+            ],
+            [
+              153,
+              66
+            ],
+            [
+              153,
+              95
+            ],
+            [
+              104,
+              95
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "head",
+          "raster": "common/left/expression_neutral.png",
+          "svg": "common/left/expression_neutral.svg",
+          "mask": "common/left/expression_neutral-mask.png",
+          "alpha_bbox": [
+            104,
+            66,
+            154,
+            96
+          ],
+          "rgba_sha256": "5d9e00de0489af582a4afb0a323f046ee1a561373affd943e335896e9c0efc5f",
+          "overlay": true
+        }
+      }
+    },
+    "right": {
+      "sampling": {
+        "source_window": [
+          1180,
+          0,
+          1630,
+          855
+        ],
+        "source_core_bbox_in_window": [
+          40,
+          21,
+          390,
+          841
+        ],
+        "source_sampling_bbox_in_window": [
+          38,
+          19,
+          392,
+          843
+        ],
+        "scale": 0.25365853658536586,
+        "sampled_size": [
+          90,
+          209
+        ],
+        "paste_xy": [
+          83,
+          15
+        ],
+        "core_height": 208,
+        "anchor": [
+          128,
+          224
+        ]
+      },
+      "reference": "common/right/sampled-reference.png",
+      "parts": {
+        "head": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "right",
+          "part": "head",
+          "pivot": [
+            128,
+            97
+          ],
+          "polygon": [
+            [
+              0,
+              0
+            ],
+            [
+              256,
+              0
+            ],
+            [
+              256,
+              100
+            ],
+            [
+              0,
+              100
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "root",
+          "raster": "common/right/head.png",
+          "svg": "common/right/head.svg",
+          "mask": "common/right/head-mask.png",
+          "alpha_bbox": [
+            83,
+            15,
+            173,
+            101
+          ],
+          "rgba_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "overlay": false
+        },
+        "satchel": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "right",
+          "part": "satchel",
+          "pivot": [
+            145,
+            138
+          ],
+          "polygon": [
+            [
+              140,
+              135
+            ],
+            [
+              153,
+              133
+            ],
+            [
+              161,
+              140
+            ],
+            [
+              162,
+              155
+            ],
+            [
+              158,
+              164
+            ],
+            [
+              143,
+              161
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/right/satchel.png",
+          "svg": "skins/travel/right/satchel.svg",
+          "mask": "skins/travel/right/satchel-mask.png",
+          "alpha_bbox": [
+            140,
+            133,
+            163,
+            165
+          ],
+          "rgba_sha256": "fd11071ba4930d236d53fc8a1f2e02740e25e2d546980208ba9e1c16bb42f91e",
+          "overlay": false
+        },
+        "upper_arm_l": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "right",
+          "part": "upper_arm_l",
+          "pivot": [
+            105,
+            106
+          ],
+          "polygon": [
+            [
+              96,
+              99
+            ],
+            [
+              113,
+              103
+            ],
+            [
+              109,
+              128
+            ],
+            [
+              104,
+              142
+            ],
+            [
+              85,
+              143
+            ],
+            [
+              88,
+              119
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                98,
+                134
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/right/upper_arm_l.png",
+          "svg": "skins/travel/right/upper_arm_l.svg",
+          "mask": "skins/travel/right/upper_arm_l-mask.png",
+          "alpha_bbox": [
+            90,
+            102,
+            114,
+            143
+          ],
+          "rgba_sha256": "a36c7812a8536ee20a716b3c157c6b1d27d144291e24ec126060fe6052a9d4cc",
+          "overlay": false
+        },
+        "forearm_hand_l": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "right",
+          "part": "forearm_hand_l",
+          "pivot": [
+            98,
+            134
+          ],
+          "polygon": [
+            [
+              85,
+              129
+            ],
+            [
+              105,
+              130
+            ],
+            [
+              108,
+              155
+            ],
+            [
+              102,
+              168
+            ],
+            [
+              88,
+              165
+            ],
+            [
+              85,
+              147
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                98,
+                134
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "upper_arm_l",
+          "raster": "skins/travel/right/forearm_hand_l.png",
+          "svg": "skins/travel/right/forearm_hand_l.svg",
+          "mask": "skins/travel/right/forearm_hand_l-mask.png",
+          "alpha_bbox": [
+            90,
+            129,
+            109,
+            169
+          ],
+          "rgba_sha256": "92e84bd6c58f2f083458c76bd52d939350f74754ae798b922e5e238551da0763",
+          "overlay": false
+        },
+        "upper_arm_r": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "right",
+          "part": "upper_arm_r",
+          "pivot": [
+            151,
+            106
+          ],
+          "polygon": [
+            [
+              146,
+              103
+            ],
+            [
+              160,
+              98
+            ],
+            [
+              170,
+              120
+            ],
+            [
+              174,
+              142
+            ],
+            [
+              154,
+              144
+            ],
+            [
+              146,
+              126
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                160,
+                135
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/right/upper_arm_r.png",
+          "svg": "skins/travel/right/upper_arm_r.svg",
+          "mask": "skins/travel/right/upper_arm_r-mask.png",
+          "alpha_bbox": [
+            146,
+            101,
+            169,
+            144
+          ],
+          "rgba_sha256": "00d60d6a63f50e002f6e097cbf50c9ac3dd1a13d54c7cc52232a6fab796c325c",
+          "overlay": false
+        },
+        "forearm_hand_r": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "right",
+          "part": "forearm_hand_r",
+          "pivot": [
+            160,
+            135
+          ],
+          "polygon": [
+            [
+              153,
+              130
+            ],
+            [
+              175,
+              129
+            ],
+            [
+              174,
+              157
+            ],
+            [
+              168,
+              169
+            ],
+            [
+              152,
+              165
+            ],
+            [
+              151,
+              148
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                160,
+                135
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "upper_arm_r",
+          "raster": "skins/travel/right/forearm_hand_r.png",
+          "svg": "skins/travel/right/forearm_hand_r.svg",
+          "mask": "skins/travel/right/forearm_hand_r-mask.png",
+          "alpha_bbox": [
+            152,
+            130,
+            169,
+            168
+          ],
+          "rgba_sha256": "a620f9f9c79d791be9d9097f14298eeb24222bb3a3d2ee43b07d69fbeb1fa8a6",
+          "overlay": false
+        },
+        "shin_foot_l": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "right",
+          "part": "shin_foot_l",
+          "pivot": [
+            115,
+            184
+          ],
+          "polygon": [
+            [
+              0,
+              178
+            ],
+            [
+              129,
+              178
+            ],
+            [
+              129,
+              256
+            ],
+            [
+              0,
+              256
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                115,
+                184
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "thigh_l",
+          "raster": "skins/travel/right/shin_foot_l.png",
+          "svg": "skins/travel/right/shin_foot_l.svg",
+          "mask": "skins/travel/right/shin_foot_l-mask.png",
+          "alpha_bbox": [
+            97,
+            178,
+            130,
+            224
+          ],
+          "rgba_sha256": "c3bf85112def7b6a25bf03fe66ce498c7dcfa66a6d59de55857f82b6f56cbb1c",
+          "overlay": false
+        },
+        "shin_foot_r": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "right",
+          "part": "shin_foot_r",
+          "pivot": [
+            141,
+            184
+          ],
+          "polygon": [
+            [
+              126,
+              178
+            ],
+            [
+              256,
+              178
+            ],
+            [
+              256,
+              256
+            ],
+            [
+              126,
+              256
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                141,
+                184
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "thigh_r",
+          "raster": "skins/travel/right/shin_foot_r.png",
+          "svg": "skins/travel/right/shin_foot_r.svg",
+          "mask": "skins/travel/right/shin_foot_r-mask.png",
+          "alpha_bbox": [
+            130,
+            178,
+            173,
+            224
+          ],
+          "rgba_sha256": "e1ff4899ecd1f9b808b374a4525fb266d7e1ec1089a863389cdbaffd5ad1bb4d",
+          "overlay": false
+        },
+        "thigh_l": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "right",
+          "part": "thigh_l",
+          "pivot": [
+            116,
+            155
+          ],
+          "polygon": [
+            [
+              0,
+              151
+            ],
+            [
+              129,
+              151
+            ],
+            [
+              129,
+              189
+            ],
+            [
+              0,
+              189
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                115,
+                184
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "root",
+          "raster": "skins/travel/right/thigh_l.png",
+          "svg": "skins/travel/right/thigh_l.svg",
+          "mask": "skins/travel/right/thigh_l-mask.png",
+          "alpha_bbox": [
+            100,
+            151,
+            130,
+            190
+          ],
+          "rgba_sha256": "c6959b4e1a6b155fadbb7898f60035e50df6a1b25899e2789541801c9df96d5f",
+          "overlay": false
+        },
+        "thigh_r": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "right",
+          "part": "thigh_r",
+          "pivot": [
+            141,
+            155
+          ],
+          "polygon": [
+            [
+              126,
+              151
+            ],
+            [
+              256,
+              151
+            ],
+            [
+              256,
+              189
+            ],
+            [
+              126,
+              189
+            ]
+          ],
+          "overlap_source_circles": [
+            [
+              [
+                141,
+                184
+              ],
+              5
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "root",
+          "raster": "skins/travel/right/thigh_r.png",
+          "svg": "skins/travel/right/thigh_r.svg",
+          "mask": "skins/travel/right/thigh_r-mask.png",
+          "alpha_bbox": [
+            130,
+            151,
+            161,
+            190
+          ],
+          "rgba_sha256": "3b02e967fd01e044691f2f342f996f7114746d30d87011e08fb9aabbb5c8e47b",
+          "overlay": false
+        },
+        "jacket_flap": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "right",
+          "part": "jacket_flap",
+          "pivot": [
+            105,
+            143
+          ],
+          "polygon": [
+            [
+              97,
+              142
+            ],
+            [
+              112,
+              142
+            ],
+            [
+              113,
+              158
+            ],
+            [
+              97,
+              158
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/right/jacket_flap.png",
+          "svg": "skins/travel/right/jacket_flap.svg",
+          "mask": "skins/travel/right/jacket_flap-mask.png",
+          "alpha_bbox": [
+            107,
+            142,
+            113,
+            151
+          ],
+          "rgba_sha256": "eeb0af95ff1854b9dd15e54131b877db39f6b57347f7c725f4536dc242cc4aa4",
+          "overlay": false
+        },
+        "collar": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "right",
+          "part": "collar",
+          "pivot": [
+            128,
+            103
+          ],
+          "polygon": [
+            [
+              108,
+              98
+            ],
+            [
+              150,
+              98
+            ],
+            [
+              153,
+              110
+            ],
+            [
+              136,
+              117
+            ],
+            [
+              112,
+              111
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "torso",
+          "raster": "skins/travel/right/collar.png",
+          "svg": "skins/travel/right/collar.svg",
+          "mask": "skins/travel/right/collar-mask.png",
+          "alpha_bbox": [
+            109,
+            101,
+            152,
+            118
+          ],
+          "rgba_sha256": "2368aa410d7bbad7f89d29ba60f51d39364d82b3d0089f80b7e197cbdfb858bd",
+          "overlay": false
+        },
+        "torso": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "right",
+          "part": "torso",
+          "pivot": [
+            128,
+            155
+          ],
+          "polygon": null,
+          "overlap_source_circles": [
+            [
+              [
+                105,
+                106
+              ],
+              6
+            ],
+            [
+              [
+                151,
+                106
+              ],
+              6
+            ],
+            [
+              [
+                116,
+                155
+              ],
+              6
+            ],
+            [
+              [
+                141,
+                155
+              ],
+              6
+            ]
+          ],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "root",
+          "raster": "skins/travel/right/torso.png",
+          "svg": "skins/travel/right/torso.svg",
+          "mask": "skins/travel/right/torso-mask.png",
+          "alpha_bbox": [
+            102,
+            100,
+            157,
+            162
+          ],
+          "rgba_sha256": "db8c6b19089b7ab8e9934c5f2fb82dc6bd957f3fe5330e728745aa85a6cdbf53",
+          "overlay": false
+        },
+        "expression_neutral": {
+          "source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+          "facing": "right",
+          "part": "expression_neutral",
+          "pivot": [
+            128,
+            80
+          ],
+          "polygon": [
+            [
+              104,
+              66
+            ],
+            [
+              153,
+              66
+            ],
+            [
+              153,
+              95
+            ],
+            [
+              104,
+              95
+            ]
+          ],
+          "overlap_source_circles": [],
+          "pixel_policy": "original normalized RGBA copied under explicit binary mask only",
+          "parent": "head",
+          "raster": "common/right/expression_neutral.png",
+          "svg": "common/right/expression_neutral.svg",
+          "mask": "common/right/expression_neutral-mask.png",
+          "alpha_bbox": [
+            104,
+            66,
+            154,
+            96
+          ],
+          "rgba_sha256": "c089666e749d51c200e4835796c463086ff582acb8a7c5b250b0f3599291997c",
+          "overlay": true
+        }
+      }
+    }
+  },
+  "animations": {
+    "idle": {
+      "facing": "front",
+      "fps": 12,
+      "loop": true,
+      "easing": "periodic sine/cosine sampled uniformly; no endpoint duplication",
+      "keyframes": [
+        {
+          "frame": 0,
+          "phase": 0.0,
+          "angles_degrees": {
+            "torso": 0.0,
+            "upper_arm_l": 0.0,
+            "upper_arm_r": -0.0,
+            "jacket_flap": 0.7191383079063045,
+            "satchel": 0.20686414466293768
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 1,
+          "phase": 0.125,
+          "angles_degrees": {
+            "torso": 0.24748737341529164,
+            "upper_arm_l": 0.5656854249492381,
+            "upper_arm_r": -0.5656854249492381,
+            "jacket_flap": 1.4393244449771856,
+            "satchel": 0.6191424763184833
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 2,
+          "phase": 0.25,
+          "angles_degrees": {
+            "torso": 0.35,
+            "upper_arm_l": 0.8,
+            "upper_arm_r": -0.8,
+            "jacket_flap": 1.3163738428355591,
+            "satchel": 0.6687355423879241
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 3,
+          "phase": 0.375,
+          "angles_degrees": {
+            "torso": 0.24748737341529164,
+            "upper_arm_l": 0.5656854249492381,
+            "upper_arm_r": -0.5656854249492381,
+            "jacket_flap": 0.4223092967140512,
+            "satchel": 0.32659239736744705
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 4,
+          "phase": 0.5,
+          "angles_degrees": {
+            "torso": 4.286263797015736e-17,
+            "upper_arm_l": 9.797174393178826e-17,
+            "upper_arm_r": -9.797174393178826e-17,
+            "jacket_flap": -0.7191383079063043,
+            "satchel": -0.20686414466293748
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 5,
+          "phase": 0.625,
+          "angles_degrees": {
+            "torso": -0.2474873734152916,
+            "upper_arm_l": -0.565685424949238,
+            "upper_arm_r": 0.565685424949238,
+            "jacket_flap": -1.4393244449771856,
+            "satchel": -0.6191424763184832
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 6,
+          "phase": 0.75,
+          "angles_degrees": {
+            "torso": -0.35,
+            "upper_arm_l": -0.8,
+            "upper_arm_r": 0.8,
+            "jacket_flap": -1.3163738428355591,
+            "satchel": -0.6687355423879242
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 7,
+          "phase": 0.875,
+          "angles_degrees": {
+            "torso": -0.24748737341529167,
+            "upper_arm_l": -0.5656854249492381,
+            "upper_arm_r": 0.5656854249492381,
+            "jacket_flap": -0.4223092967140514,
+            "satchel": -0.3265923973674471
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        }
+      ]
+    },
+    "walk_left": {
+      "facing": "left",
+      "fps": 12,
+      "loop": true,
+      "easing": "periodic sine/cosine sampled uniformly; no endpoint duplication",
+      "keyframes": [
+        {
+          "frame": 0,
+          "phase": 0.0,
+          "angles_degrees": {
+            "thigh_l": 0.0,
+            "thigh_r": -0.0,
+            "shin_foot_l": 0.0,
+            "shin_foot_r": 0.0,
+            "upper_arm_l": -0.0,
+            "forearm_hand_l": -0.0,
+            "upper_arm_r": 0.0,
+            "forearm_hand_r": 0.0,
+            "torso": 0.0,
+            "jacket_flap": 1.6939274201851062,
+            "satchel": -0.778836684617301,
+            "collar": 0.0
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 1,
+          "phase": 0.125,
+          "angles_degrees": {
+            "thigh_l": 7.0710678118654755,
+            "thigh_r": -7.0710678118654755,
+            "shin_foot_l": -3.5355339059327378,
+            "shin_foot_r": 6.035533905932738,
+            "upper_arm_l": -4.949747468305833,
+            "forearm_hand_l": -2.121320343559643,
+            "upper_arm_r": 2.121320343559643,
+            "forearm_hand_r": 1.0606601717798214,
+            "torso": 0.4242640687119285,
+            "jacket_flap": 2.9485887958229307,
+            "satchel": 0.751856248361982,
+            "collar": 0.3535533905932738
+          },
+          "root_bob_y": -1,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 2,
+          "phase": 0.25,
+          "angles_degrees": {
+            "thigh_l": 10.0,
+            "thigh_r": -10.0,
+            "shin_foot_l": -5.0,
+            "shin_foot_r": 10.0,
+            "upper_arm_l": -7.0,
+            "forearm_hand_l": -3.0,
+            "upper_arm_r": 3.0,
+            "forearm_hand_r": 1.5,
+            "torso": 0.6,
+            "jacket_flap": 2.476006844729035,
+            "satchel": 1.8421219880057702,
+            "collar": 0.5
+          },
+          "root_bob_y": -2,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 3,
+          "phase": 0.375,
+          "angles_degrees": {
+            "thigh_l": 7.0710678118654755,
+            "thigh_r": -7.0710678118654755,
+            "shin_foot_l": -3.5355339059327378,
+            "shin_foot_r": 6.035533905932738,
+            "upper_arm_l": -4.949747468305833,
+            "forearm_hand_l": -2.121320343559643,
+            "upper_arm_r": 2.121320343559643,
+            "forearm_hand_r": 1.0606601717798214,
+            "torso": 0.4242640687119285,
+            "jacket_flap": 0.5530136645214849,
+            "satchel": 1.853297650621466,
+            "collar": 0.3535533905932738
+          },
+          "root_bob_y": -1,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 4,
+          "phase": 0.5,
+          "angles_degrees": {
+            "thigh_l": 1.2246467991473533e-15,
+            "thigh_r": -1.2246467991473533e-15,
+            "shin_foot_l": -6.123233995736766e-16,
+            "shin_foot_r": 6.123233995736767e-16,
+            "upper_arm_l": -8.572527594031472e-16,
+            "forearm_hand_l": -3.6739403974420594e-16,
+            "upper_arm_r": 3.6739403974420594e-16,
+            "forearm_hand_r": 1.8369701987210297e-16,
+            "torso": 7.347880794884119e-17,
+            "jacket_flap": -1.6939274201851062,
+            "satchel": 0.778836684617301,
+            "collar": 6.123233995736766e-17
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 5,
+          "phase": 0.625,
+          "angles_degrees": {
+            "thigh_l": -7.071067811865475,
+            "thigh_r": 7.071067811865475,
+            "shin_foot_l": 6.035533905932737,
+            "shin_foot_r": -3.5355339059327373,
+            "upper_arm_l": 4.949747468305832,
+            "forearm_hand_l": 2.1213203435596424,
+            "upper_arm_r": -2.1213203435596424,
+            "forearm_hand_r": -1.0606601717798212,
+            "torso": -0.42426406871192845,
+            "jacket_flap": -2.94858879582293,
+            "satchel": -0.751856248361982,
+            "collar": -0.35355339059327373
+          },
+          "root_bob_y": -1,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 6,
+          "phase": 0.75,
+          "angles_degrees": {
+            "thigh_l": -10.0,
+            "thigh_r": 10.0,
+            "shin_foot_l": 10.0,
+            "shin_foot_r": -5.0,
+            "upper_arm_l": 7.0,
+            "forearm_hand_l": 3.0,
+            "upper_arm_r": -3.0,
+            "forearm_hand_r": -1.5,
+            "torso": -0.6,
+            "jacket_flap": -2.4760068447290355,
+            "satchel": -1.8421219880057698,
+            "collar": -0.5
+          },
+          "root_bob_y": -2,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 7,
+          "phase": 0.875,
+          "angles_degrees": {
+            "thigh_l": -7.071067811865477,
+            "thigh_r": 7.071067811865477,
+            "shin_foot_l": 6.0355339059327395,
+            "shin_foot_r": -3.5355339059327386,
+            "upper_arm_l": 4.949747468305834,
+            "forearm_hand_l": 2.121320343559643,
+            "upper_arm_r": -2.121320343559643,
+            "forearm_hand_r": -1.0606601717798214,
+            "torso": -0.4242640687119286,
+            "jacket_flap": -0.5530136645214865,
+            "satchel": -1.8532976506214665,
+            "collar": -0.35355339059327384
+          },
+          "root_bob_y": -1,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        }
+      ]
+    },
+    "walk_right": {
+      "facing": "right",
+      "fps": 12,
+      "loop": true,
+      "easing": "periodic sine/cosine sampled uniformly; no endpoint duplication",
+      "keyframes": [
+        {
+          "frame": 0,
+          "phase": 0.0,
+          "angles_degrees": {
+            "thigh_l": 0.0,
+            "thigh_r": -0.0,
+            "shin_foot_l": 0.0,
+            "shin_foot_r": 0.0,
+            "upper_arm_l": -0.0,
+            "forearm_hand_l": -0.0,
+            "upper_arm_r": 0.0,
+            "forearm_hand_r": 0.0,
+            "torso": 0.0,
+            "jacket_flap": 1.6939274201851062,
+            "satchel": -0.778836684617301,
+            "collar": 0.0
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 1,
+          "phase": 0.125,
+          "angles_degrees": {
+            "thigh_l": 7.0710678118654755,
+            "thigh_r": -7.0710678118654755,
+            "shin_foot_l": -3.5355339059327378,
+            "shin_foot_r": 6.035533905932738,
+            "upper_arm_l": -4.949747468305833,
+            "forearm_hand_l": -2.121320343559643,
+            "upper_arm_r": 2.121320343559643,
+            "forearm_hand_r": 1.0606601717798214,
+            "torso": 0.4242640687119285,
+            "jacket_flap": 2.9485887958229307,
+            "satchel": 0.751856248361982,
+            "collar": 0.3535533905932738
+          },
+          "root_bob_y": -1,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 2,
+          "phase": 0.25,
+          "angles_degrees": {
+            "thigh_l": 10.0,
+            "thigh_r": -10.0,
+            "shin_foot_l": -5.0,
+            "shin_foot_r": 10.0,
+            "upper_arm_l": -7.0,
+            "forearm_hand_l": -3.0,
+            "upper_arm_r": 3.0,
+            "forearm_hand_r": 1.5,
+            "torso": 0.6,
+            "jacket_flap": 2.476006844729035,
+            "satchel": 1.8421219880057702,
+            "collar": 0.5
+          },
+          "root_bob_y": -2,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 3,
+          "phase": 0.375,
+          "angles_degrees": {
+            "thigh_l": 7.0710678118654755,
+            "thigh_r": -7.0710678118654755,
+            "shin_foot_l": -3.5355339059327378,
+            "shin_foot_r": 6.035533905932738,
+            "upper_arm_l": -4.949747468305833,
+            "forearm_hand_l": -2.121320343559643,
+            "upper_arm_r": 2.121320343559643,
+            "forearm_hand_r": 1.0606601717798214,
+            "torso": 0.4242640687119285,
+            "jacket_flap": 0.5530136645214849,
+            "satchel": 1.853297650621466,
+            "collar": 0.3535533905932738
+          },
+          "root_bob_y": -1,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 4,
+          "phase": 0.5,
+          "angles_degrees": {
+            "thigh_l": 1.2246467991473533e-15,
+            "thigh_r": -1.2246467991473533e-15,
+            "shin_foot_l": -6.123233995736766e-16,
+            "shin_foot_r": 6.123233995736767e-16,
+            "upper_arm_l": -8.572527594031472e-16,
+            "forearm_hand_l": -3.6739403974420594e-16,
+            "upper_arm_r": 3.6739403974420594e-16,
+            "forearm_hand_r": 1.8369701987210297e-16,
+            "torso": 7.347880794884119e-17,
+            "jacket_flap": -1.6939274201851062,
+            "satchel": 0.778836684617301,
+            "collar": 6.123233995736766e-17
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 5,
+          "phase": 0.625,
+          "angles_degrees": {
+            "thigh_l": -7.071067811865475,
+            "thigh_r": 7.071067811865475,
+            "shin_foot_l": 6.035533905932737,
+            "shin_foot_r": -3.5355339059327373,
+            "upper_arm_l": 4.949747468305832,
+            "forearm_hand_l": 2.1213203435596424,
+            "upper_arm_r": -2.1213203435596424,
+            "forearm_hand_r": -1.0606601717798212,
+            "torso": -0.42426406871192845,
+            "jacket_flap": -2.94858879582293,
+            "satchel": -0.751856248361982,
+            "collar": -0.35355339059327373
+          },
+          "root_bob_y": -1,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 6,
+          "phase": 0.75,
+          "angles_degrees": {
+            "thigh_l": -10.0,
+            "thigh_r": 10.0,
+            "shin_foot_l": 10.0,
+            "shin_foot_r": -5.0,
+            "upper_arm_l": 7.0,
+            "forearm_hand_l": 3.0,
+            "upper_arm_r": -3.0,
+            "forearm_hand_r": -1.5,
+            "torso": -0.6,
+            "jacket_flap": -2.4760068447290355,
+            "satchel": -1.8421219880057698,
+            "collar": -0.5
+          },
+          "root_bob_y": -2,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 7,
+          "phase": 0.875,
+          "angles_degrees": {
+            "thigh_l": -7.071067811865477,
+            "thigh_r": 7.071067811865477,
+            "shin_foot_l": 6.0355339059327395,
+            "shin_foot_r": -3.5355339059327386,
+            "upper_arm_l": 4.949747468305834,
+            "forearm_hand_l": 2.121320343559643,
+            "upper_arm_r": -2.121320343559643,
+            "forearm_hand_r": -1.0606601717798214,
+            "torso": -0.4242640687119286,
+            "jacket_flap": -0.5530136645214865,
+            "satchel": -1.8532976506214665,
+            "collar": -0.35355339059327384
+          },
+          "root_bob_y": -1,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        }
+      ]
+    },
+    "cheer": {
+      "facing": "front",
+      "fps": 12,
+      "loop": false,
+      "easing": "periodic sine/cosine sampled uniformly; no endpoint duplication",
+      "keyframes": [
+        {
+          "frame": 0,
+          "phase": 0.0,
+          "angles_degrees": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "torso": -0.0,
+            "jacket_flap": 0.7191383079063045,
+            "satchel": 0.20686414466293768
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 1,
+          "phase": 0.125,
+          "angles_degrees": {
+            "upper_arm_l": 14.5,
+            "forearm_hand_l": 17.5,
+            "upper_arm_r": -1.75,
+            "forearm_hand_r": -1.25,
+            "torso": -0.35,
+            "jacket_flap": -0.030861692093695492,
+            "satchel": 0.7068641446629377
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 1
+        },
+        {
+          "frame": 2,
+          "phase": 0.25,
+          "angles_degrees": {
+            "upper_arm_l": 41.76,
+            "forearm_hand_l": 50.4,
+            "upper_arm_r": -5.04,
+            "forearm_hand_r": -3.5999999999999996,
+            "torso": -1.008,
+            "jacket_flap": -1.4408616920936956,
+            "satchel": 1.6468641446629375
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 3
+        },
+        {
+          "frame": 3,
+          "phase": 0.375,
+          "angles_degrees": {
+            "upper_arm_l": 58,
+            "forearm_hand_l": 70,
+            "upper_arm_r": -7,
+            "forearm_hand_r": -5,
+            "torso": -1.4,
+            "jacket_flap": -2.2808616920936955,
+            "satchel": 2.2068641446629376
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 4
+        },
+        {
+          "frame": 4,
+          "phase": 0.5,
+          "angles_degrees": {
+            "upper_arm_l": 55.099999999999994,
+            "forearm_hand_l": 66.5,
+            "upper_arm_r": -6.6499999999999995,
+            "forearm_hand_r": -4.75,
+            "torso": -1.3299999999999998,
+            "jacket_flap": -2.130861692093695,
+            "satchel": 2.1068641446629375
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 3
+        },
+        {
+          "frame": 5,
+          "phase": 0.625,
+          "angles_degrees": {
+            "upper_arm_l": 34.8,
+            "forearm_hand_l": 42.0,
+            "upper_arm_r": -4.2,
+            "forearm_hand_r": -3.0,
+            "torso": -0.84,
+            "jacket_flap": -1.0808616920936953,
+            "satchel": 1.4068641446629377
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 1
+        },
+        {
+          "frame": 6,
+          "phase": 0.75,
+          "angles_degrees": {
+            "upper_arm_l": 10.44,
+            "forearm_hand_l": 12.6,
+            "upper_arm_r": -1.26,
+            "forearm_hand_r": -0.8999999999999999,
+            "torso": -0.252,
+            "jacket_flap": 0.17913830790630447,
+            "satchel": 0.5668641446629377
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 7,
+          "phase": 0.875,
+          "angles_degrees": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "torso": -0.0,
+            "jacket_flap": 0.7191383079063045,
+            "satchel": 0.20686414466293768
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        }
+      ]
+    },
+    "sad": {
+      "facing": "front",
+      "fps": 12,
+      "loop": false,
+      "easing": "periodic sine/cosine sampled uniformly; no endpoint duplication",
+      "keyframes": [
+        {
+          "frame": 0,
+          "phase": 0.0,
+          "angles_degrees": {
+            "torso": 0.0,
+            "upper_arm_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_l": 0,
+            "jacket_flap": 0.7191383079063045,
+            "satchel": 0.20686414466293768
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 1,
+          "phase": 0.16666666666666666,
+          "angles_degrees": {
+            "torso": 0.7000000000000001,
+            "upper_arm_l": -1.12,
+            "upper_arm_r": 0.56,
+            "forearm_hand_l": -0.8400000000000001,
+            "jacket_flap": 0.9991383079063045,
+            "satchel": -0.07313585533706235
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 1,
+          "ground_lift": 0
+        },
+        {
+          "frame": 2,
+          "phase": 0.3333333333333333,
+          "angles_degrees": {
+            "torso": 1.875,
+            "upper_arm_l": -3.0,
+            "upper_arm_r": 1.5,
+            "forearm_hand_l": -2.25,
+            "jacket_flap": 1.4691383079063045,
+            "satchel": -0.5431358553370623
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 4,
+          "ground_lift": 0
+        },
+        {
+          "frame": 3,
+          "phase": 0.5,
+          "angles_degrees": {
+            "torso": 2.5,
+            "upper_arm_l": -4,
+            "upper_arm_r": 2,
+            "forearm_hand_l": -3,
+            "jacket_flap": 1.7191383079063045,
+            "satchel": -0.7931358553370623
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 6,
+          "ground_lift": 0
+        },
+        {
+          "frame": 4,
+          "phase": 0.6666666666666666,
+          "angles_degrees": {
+            "torso": 1.375,
+            "upper_arm_l": -2.2,
+            "upper_arm_r": 1.1,
+            "forearm_hand_l": -1.6500000000000001,
+            "jacket_flap": 1.2691383079063046,
+            "satchel": -0.34313585533706237
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 4,
+          "ground_lift": 0
+        },
+        {
+          "frame": 5,
+          "phase": 0.8333333333333334,
+          "angles_degrees": {
+            "torso": 0.0,
+            "upper_arm_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_l": 0,
+            "jacket_flap": 0.7191383079063045,
+            "satchel": 0.20686414466293768
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        }
+      ]
+    },
+    "welcome": {
+      "facing": "front",
+      "fps": 12,
+      "loop": true,
+      "easing": "periodic sine/cosine sampled uniformly; no endpoint duplication",
+      "keyframes": [
+        {
+          "frame": 0,
+          "phase": 0.0,
+          "angles_degrees": {
+            "upper_arm_l": 0.0,
+            "forearm_hand_l": 0.0,
+            "upper_arm_r": -0.0,
+            "torso": -0.0,
+            "jacket_flap": 0.7191383079063045,
+            "satchel": 0.20686414466293768
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 1,
+          "phase": 0.0625,
+          "angles_degrees": {
+            "upper_arm_l": 0.45672280493227957,
+            "forearm_hand_l": 0.723144441142776,
+            "upper_arm_r": -0.04947830386766362,
+            "torso": -0.02664216362104964,
+            "jacket_flap": 1.2166267699809212,
+            "satchel": 0.5130108905550095
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 2,
+          "phase": 0.125,
+          "angles_degrees": {
+            "upper_arm_l": 1.7573593128807146,
+            "forearm_hand_l": 2.782485578727798,
+            "upper_arm_r": -0.1903805922287441,
+            "torso": -0.10251262658470835,
+            "jacket_flap": 1.6383771234488163,
+            "satchel": 0.7725495696121758
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 3,
+          "phase": 0.1875,
+          "angles_degrees": {
+            "upper_arm_l": 3.703899405809461,
+            "forearm_hand_l": 5.864507392531647,
+            "upper_arm_r": -0.4012557689626916,
+            "torso": -0.21606079867221856,
+            "jacket_flap": 1.9201817001709773,
+            "satchel": 0.9459677706719671
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 1,
+          "ground_lift": 0
+        },
+        {
+          "frame": 4,
+          "phase": 0.25,
+          "angles_degrees": {
+            "upper_arm_l": 5.999999999999999,
+            "forearm_hand_l": 9.499999999999998,
+            "upper_arm_r": -0.6499999999999999,
+            "torso": -0.3499999999999999,
+            "jacket_flap": 2.0191383079063048,
+            "satchel": 1.0068641446629378
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 1,
+          "ground_lift": 0
+        },
+        {
+          "frame": 5,
+          "phase": 0.3125,
+          "angles_degrees": {
+            "upper_arm_l": 8.296100594190538,
+            "forearm_hand_l": 13.13549260746835,
+            "upper_arm_r": -0.8987442310373083,
+            "torso": -0.48393920132778134,
+            "jacket_flap": 1.9201817001709773,
+            "satchel": 0.9459677706719671
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 1,
+          "ground_lift": 0
+        },
+        {
+          "frame": 6,
+          "phase": 0.375,
+          "angles_degrees": {
+            "upper_arm_l": 10.242640687119284,
+            "forearm_hand_l": 16.217514421272202,
+            "upper_arm_r": -1.1096194077712558,
+            "torso": -0.5974873734152916,
+            "jacket_flap": 1.6383771234488163,
+            "satchel": 0.7725495696121758
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 2,
+          "ground_lift": 0
+        },
+        {
+          "frame": 7,
+          "phase": 0.4375,
+          "angles_degrees": {
+            "upper_arm_l": 11.54327719506772,
+            "forearm_hand_l": 18.276855558857225,
+            "upper_arm_r": -1.2505216961323364,
+            "torso": -0.6733578363789503,
+            "jacket_flap": 1.2166267699809215,
+            "satchel": 0.5130108905550096
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 2,
+          "ground_lift": 0
+        },
+        {
+          "frame": 8,
+          "phase": 0.5,
+          "angles_degrees": {
+            "upper_arm_l": 12.0,
+            "forearm_hand_l": 19.0,
+            "upper_arm_r": -1.3,
+            "torso": -0.7,
+            "jacket_flap": 0.7191383079063046,
+            "satchel": 0.2068641446629378
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 2,
+          "ground_lift": 0
+        },
+        {
+          "frame": 9,
+          "phase": 0.5625,
+          "angles_degrees": {
+            "upper_arm_l": 11.543277195067722,
+            "forearm_hand_l": 18.276855558857225,
+            "upper_arm_r": -1.2505216961323367,
+            "torso": -0.6733578363789504,
+            "jacket_flap": 0.2216498458316879,
+            "satchel": -0.09928260122913407
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 2,
+          "ground_lift": 0
+        },
+        {
+          "frame": 10,
+          "phase": 0.625,
+          "angles_degrees": {
+            "upper_arm_l": 10.242640687119286,
+            "forearm_hand_l": 16.217514421272202,
+            "upper_arm_r": -1.109619407771256,
+            "torso": -0.5974873734152917,
+            "jacket_flap": -0.20010050763620724,
+            "satchel": -0.35882128028630034
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 2,
+          "ground_lift": 0
+        },
+        {
+          "frame": 11,
+          "phase": 0.6875,
+          "angles_degrees": {
+            "upper_arm_l": 8.296100594190541,
+            "forearm_hand_l": 13.135492607468358,
+            "upper_arm_r": -0.8987442310373087,
+            "torso": -0.48393920132778157,
+            "jacket_flap": -0.4819050843583681,
+            "satchel": -0.5322394813460916
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 1,
+          "ground_lift": 0
+        },
+        {
+          "frame": 12,
+          "phase": 0.75,
+          "angles_degrees": {
+            "upper_arm_l": 6.000000000000002,
+            "forearm_hand_l": 9.500000000000002,
+            "upper_arm_r": -0.6500000000000001,
+            "torso": -0.35000000000000003,
+            "jacket_flap": -0.5808616920936955,
+            "satchel": -0.5931358553370624
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 1,
+          "ground_lift": 0
+        },
+        {
+          "frame": 13,
+          "phase": 0.8125,
+          "angles_degrees": {
+            "upper_arm_l": 3.7038994058094596,
+            "forearm_hand_l": 5.864507392531644,
+            "upper_arm_r": -0.4012557689626915,
+            "torso": -0.21606079867221847,
+            "jacket_flap": -0.4819050843583681,
+            "satchel": -0.5322394813460917
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 1,
+          "ground_lift": 0
+        },
+        {
+          "frame": 14,
+          "phase": 0.875,
+          "angles_degrees": {
+            "upper_arm_l": 1.757359312880716,
+            "forearm_hand_l": 2.7824855787278002,
+            "upper_arm_r": -0.19038059222874423,
+            "torso": -0.10251262658470842,
+            "jacket_flap": -0.20010050763620746,
+            "satchel": -0.35882128028630045
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        },
+        {
+          "frame": 15,
+          "phase": 0.9375,
+          "angles_degrees": {
+            "upper_arm_l": 0.4567228049322809,
+            "forearm_hand_l": 0.7231444411427781,
+            "upper_arm_r": -0.04947830386766377,
+            "torso": -0.02664216362104972,
+            "jacket_flap": 0.22164984583168695,
+            "satchel": -0.09928260122913468
+          },
+          "root_bob_y": 0,
+          "head_offset_y": 0,
+          "ground_lift": 0
+        }
+      ]
+    }
+  }
+}

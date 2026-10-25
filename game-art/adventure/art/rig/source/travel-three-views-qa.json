@@ -1,0 +1,37 @@
+{
+  "size": [1774, 887],
+  "mode": "RGBA",
+  "true_alpha": true,
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "fully_transparent_pixels": 957596,
+  "partially_transparent_pixels": 614369,
+  "fully_opaque_pixels": 1573,
+  "core_pixels_alpha_gt_128": 573407,
+  "low_alpha_pixels_1_to_7": 32290,
+  "dominant_subject_alpha": 253,
+  "core_bboxes_alpha_gt_128": {
+    "front": [219, 22, 578, 838],
+    "three-quarter-left": [692, 22, 1055, 838],
+    "three-quarter-right": [1220, 21, 1570, 841]
+  },
+  "core_heights": [816, 816, 820],
+  "three_subjects_separated": true,
+  "fully_transparent_below_y": 855,
+  "gutters": [
+    {"x_range": [0, 200], "nonzero_alpha_pixels": 21, "max_alpha": 1},
+    {"x_range": [590, 680], "nonzero_alpha_pixels": 53, "max_alpha": 1},
+    {"x_range": [1070, 1200], "nonzero_alpha_pixels": 548, "max_alpha": 1},
+    {"x_range": [1600, 1774], "nonzero_alpha_pixels": 3, "max_alpha": 1}
+  ],
+  "top_20_rows": {"nonzero_alpha_pixels": 590, "max_alpha_below": 8},
+  "visual_review": {
+    "approved_sheet_and_generated_source_viewed": true,
+    "identity_and_costume": "Same recognizable NABO identity, white cap and forward NABO wordmark in each view; selected teal short jacket, navy layers, camel crossbody satchel and walking shoes remain. Original refined dimensional illustration retained; no rejected SVG used.",
+    "differences": "Generated extraction slightly repaints texture and silhouette instead of retaining foreground pixels exactly. View heights differ by 4 source pixels, so later registration must align feet and scale. Low-alpha detached white/color specks remain outside the main silhouettes; fully clean matte is not claimed.",
+    "no_ground_shadow": true,
+    "source_usable_for_part_separation": true,
+    "clean_matte_accepted": false,
+    "followup_contract": "Preserve this source hash and original RGB/alpha. Any part masks that exclude detached non-character low-alpha specks must be explicit and recorded; do not silently redraw head, cap, face or clothing. Use one common head per facing in all later poses, and never mirror the cap lettering."
+  }
+}

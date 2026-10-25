@@ -1,0 +1,12 @@
+# Human-written source uses LF; hash-bound generated/authoring files keep bytes.
+* text=auto eol=lf
+game-art/adventure/art/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+game-art/adventure/audio/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+firmware/main/generated/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.png binary
+*.gif binary
+*.jpg binary
+*.jpeg binary
+*.wav binary
+*.mp3 binary
+*.bin binary

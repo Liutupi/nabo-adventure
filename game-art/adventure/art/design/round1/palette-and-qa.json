@@ -1,0 +1,472 @@
+{
+  "characters": {
+    "01-hiker-front": {
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        68,
+        6,
+        188,
+        224
+      ],
+      "feet_anchor": [
+        128,
+        224
+      ],
+      "target_height_px": 48,
+      "source_color_count": 25,
+      "source_colors": [
+        "#175383",
+        "#194B4B",
+        "#1D2938",
+        "#2670B5",
+        "#2A6D67",
+        "#322C2A",
+        "#3E8B80",
+        "#3F322A",
+        "#54392D",
+        "#654533",
+        "#795038",
+        "#855B39",
+        "#897451",
+        "#8EA9B7",
+        "#B19C6B",
+        "#B96F50",
+        "#BD8A4C",
+        "#BFA47B",
+        "#CDDDE2",
+        "#D76948",
+        "#D9C591",
+        "#DFA072",
+        "#E5B76F",
+        "#F4F7F2",
+        "#F5C394"
+      ],
+      "target_rgba_color_count": 64,
+      "whole_character_mirror": false,
+      "wordmark_forward": true,
+      "png_sha256": "138395321e8e6f03051ff3f46f9f3eaa93ba2d722550d00c535914d68b777ee5"
+    },
+    "01-hiker-three-quarter-left": {
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        68,
+        6,
+        188,
+        224
+      ],
+      "feet_anchor": [
+        128,
+        224
+      ],
+      "target_height_px": 48,
+      "source_color_count": 25,
+      "source_colors": [
+        "#175383",
+        "#194B4B",
+        "#1D2938",
+        "#2670B5",
+        "#2A6D67",
+        "#322C2A",
+        "#3E8B80",
+        "#3F322A",
+        "#54392D",
+        "#654533",
+        "#795038",
+        "#855B39",
+        "#897451",
+        "#8EA9B7",
+        "#B19C6B",
+        "#B96F50",
+        "#BD8A4C",
+        "#BFA47B",
+        "#CDDDE2",
+        "#D76948",
+        "#D9C591",
+        "#DFA072",
+        "#E5B76F",
+        "#F4F7F2",
+        "#F5C394"
+      ],
+      "target_rgba_color_count": 64,
+      "whole_character_mirror": false,
+      "wordmark_forward": true,
+      "png_sha256": "f4014235a6c078cd550b80c49ec6d38934c15428fdcff465066936f5739d5215"
+    },
+    "01-hiker-three-quarter-right": {
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        68,
+        6,
+        188,
+        224
+      ],
+      "feet_anchor": [
+        128,
+        224
+      ],
+      "target_height_px": 48,
+      "source_color_count": 25,
+      "source_colors": [
+        "#175383",
+        "#194B4B",
+        "#1D2938",
+        "#2670B5",
+        "#2A6D67",
+        "#322C2A",
+        "#3E8B80",
+        "#3F322A",
+        "#54392D",
+        "#654533",
+        "#795038",
+        "#855B39",
+        "#897451",
+        "#8EA9B7",
+        "#B19C6B",
+        "#B96F50",
+        "#BD8A4C",
+        "#BFA47B",
+        "#CDDDE2",
+        "#D76948",
+        "#D9C591",
+        "#DFA072",
+        "#E5B76F",
+        "#F4F7F2",
+        "#F5C394"
+      ],
+      "target_rgba_color_count": 64,
+      "whole_character_mirror": false,
+      "wordmark_forward": true,
+      "png_sha256": "170f3a6b9d49509e7da06ff560a34ec683e8421574a13c30b9c1a327c89f0a00"
+    },
+    "02-explorer-front": {
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        68,
+        6,
+        188,
+        224
+      ],
+      "feet_anchor": [
+        128,
+        224
+      ],
+      "target_height_px": 48,
+      "source_color_count": 28,
+      "source_colors": [
+        "#175383",
+        "#1D2938",
+        "#2670B5",
+        "#314238",
+        "#322C2A",
+        "#3F322A",
+        "#455B4E",
+        "#4E3125",
+        "#54392D",
+        "#647B66",
+        "#654533",
+        "#684D2D",
+        "#75452F",
+        "#795038",
+        "#897451",
+        "#8EA9B7",
+        "#92703D",
+        "#9B6240",
+        "#B9583C",
+        "#B96F50",
+        "#BAA47C",
+        "#BD9253",
+        "#BFA47B",
+        "#CDDDE2",
+        "#DFA072",
+        "#E7D6AB",
+        "#F4F7F2",
+        "#F5C394"
+      ],
+      "target_rgba_color_count": 64,
+      "whole_character_mirror": false,
+      "wordmark_forward": true,
+      "png_sha256": "06a7e26e30a720a26891ca3abfb334688d32b556d8fed6e95708b4f9e118259c"
+    },
+    "02-explorer-three-quarter-left": {
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        68,
+        6,
+        188,
+        224
+      ],
+      "feet_anchor": [
+        128,
+        224
+      ],
+      "target_height_px": 48,
+      "source_color_count": 28,
+      "source_colors": [
+        "#175383",
+        "#1D2938",
+        "#2670B5",
+        "#314238",
+        "#322C2A",
+        "#3F322A",
+        "#455B4E",
+        "#4E3125",
+        "#54392D",
+        "#647B66",
+        "#654533",
+        "#684D2D",
+        "#75452F",
+        "#795038",
+        "#897451",
+        "#8EA9B7",
+        "#92703D",
+        "#9B6240",
+        "#B9583C",
+        "#B96F50",
+        "#BAA47C",
+        "#BD9253",
+        "#BFA47B",
+        "#CDDDE2",
+        "#DFA072",
+        "#E7D6AB",
+        "#F4F7F2",
+        "#F5C394"
+      ],
+      "target_rgba_color_count": 64,
+      "whole_character_mirror": false,
+      "wordmark_forward": true,
+      "png_sha256": "ab5d38db6b8cc809cd6819d47d24a0adf25b2ec3dfa791cd3c12552e008f4417"
+    },
+    "02-explorer-three-quarter-right": {
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        68,
+        6,
+        188,
+        224
+      ],
+      "feet_anchor": [
+        128,
+        224
+      ],
+      "target_height_px": 48,
+      "source_color_count": 28,
+      "source_colors": [
+        "#175383",
+        "#1D2938",
+        "#2670B5",
+        "#314238",
+        "#322C2A",
+        "#3F322A",
+        "#455B4E",
+        "#4E3125",
+        "#54392D",
+        "#647B66",
+        "#654533",
+        "#684D2D",
+        "#75452F",
+        "#795038",
+        "#897451",
+        "#8EA9B7",
+        "#92703D",
+        "#9B6240",
+        "#B9583C",
+        "#B96F50",
+        "#BAA47C",
+        "#BD9253",
+        "#BFA47B",
+        "#CDDDE2",
+        "#DFA072",
+        "#E7D6AB",
+        "#F4F7F2",
+        "#F5C394"
+      ],
+      "target_rgba_color_count": 64,
+      "whole_character_mirror": false,
+      "wordmark_forward": true,
+      "png_sha256": "7893f998f4dfd2af790ee1440bca8a6c1b1007fe497186df0e63550c1007f4d7"
+    },
+    "03-post-traveler-front": {
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        68,
+        6,
+        188,
+        224
+      ],
+      "feet_anchor": [
+        128,
+        224
+      ],
+      "target_height_px": 48,
+      "source_color_count": 25,
+      "source_colors": [
+        "#175383",
+        "#1D2938",
+        "#1E354E",
+        "#2670B5",
+        "#2B4C6C",
+        "#322C2A",
+        "#3E6688",
+        "#3F322A",
+        "#54392D",
+        "#65402E",
+        "#654533",
+        "#774629",
+        "#795038",
+        "#8D593D",
+        "#8EA9B7",
+        "#A36538",
+        "#B37854",
+        "#B96F50",
+        "#BFA47B",
+        "#C88A50",
+        "#CDDDE2",
+        "#D5944D",
+        "#DFA072",
+        "#F4F7F2",
+        "#F5C394"
+      ],
+      "target_rgba_color_count": 64,
+      "whole_character_mirror": false,
+      "wordmark_forward": true,
+      "png_sha256": "33c2a83815a409543ec2e2a9f1eb9e69a2a65a9769ea7b65a2a821d838bf9808"
+    },
+    "03-post-traveler-three-quarter-left": {
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        68,
+        6,
+        188,
+        224
+      ],
+      "feet_anchor": [
+        128,
+        224
+      ],
+      "target_height_px": 48,
+      "source_color_count": 25,
+      "source_colors": [
+        "#175383",
+        "#1D2938",
+        "#1E354E",
+        "#2670B5",
+        "#2B4C6C",
+        "#322C2A",
+        "#3E6688",
+        "#3F322A",
+        "#54392D",
+        "#65402E",
+        "#654533",
+        "#774629",
+        "#795038",
+        "#8D593D",
+        "#8EA9B7",
+        "#A36538",
+        "#B37854",
+        "#B96F50",
+        "#BFA47B",
+        "#C88A50",
+        "#CDDDE2",
+        "#D5944D",
+        "#DFA072",
+        "#F4F7F2",
+        "#F5C394"
+      ],
+      "target_rgba_color_count": 64,
+      "whole_character_mirror": false,
+      "wordmark_forward": true,
+      "png_sha256": "b931fe0f4651d23910e35cf9d5c3b30b4980653a1d1d91047ea9463aa2b61a65"
+    },
+    "03-post-traveler-three-quarter-right": {
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        68,
+        6,
+        188,
+        224
+      ],
+      "feet_anchor": [
+        128,
+        224
+      ],
+      "target_height_px": 48,
+      "source_color_count": 25,
+      "source_colors": [
+        "#175383",
+        "#1D2938",
+        "#1E354E",
+        "#2670B5",
+        "#2B4C6C",
+        "#322C2A",
+        "#3E6688",
+        "#3F322A",
+        "#54392D",
+        "#65402E",
+        "#654533",
+        "#774629",
+        "#795038",
+        "#8D593D",
+        "#8EA9B7",
+        "#A36538",
+        "#B37854",
+        "#B96F50",
+        "#BFA47B",
+        "#C88A50",
+        "#CDDDE2",
+        "#D5944D",
+        "#DFA072",
+        "#F4F7F2",
+        "#F5C394"
+      ],
+      "target_rgba_color_count": 64,
+      "whole_character_mirror": false,
+      "wordmark_forward": true,
+      "png_sha256": "3617d8dc85319658a7a6f229de73c1e4db001146cfa482c7523dde33ea7c6e93"
+    }
+  },
+  "target_preview": "48px visible character on 64px tile; palette <=64 then RGB565; not production sprite pack",
+  "target_anchor": [
+    32,
+    56
+  ],
+  "preview_backgrounds": {
+    "town": "#F6E2B4",
+    "deep_sea": "#0B2A4A"
+  }
+}

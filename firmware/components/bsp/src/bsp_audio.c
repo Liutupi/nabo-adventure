@@ -155,8 +155,12 @@ static esp_err_t audio_disable_i2s_channels(void) {
 
     for (size_t i = 0; i < sizeof(channels) / sizeof(channels[0]); i++) {
         if (!channels[i].channel) continue;
-        esp_err_t e = i2s_channel_disable(channels[i].channel);
-        if (e == ESP_ERR_INVALID_STATE) e = ESP_OK; // READY 即已停止。
+        // codec-dev close may already have disabled either channel. Query the
+        // public driver state before stopping: disable() logs an error for READY.
+        // A failed query or a failed stop of an enabled channel is still an error.
+        i2s_chan_info_t info = {0};
+        esp_err_t e = i2s_channel_get_info(channels[i].channel, &info);
+        if (e == ESP_OK && info.is_enabled) e = i2s_channel_disable(channels[i].channel);
         if (e != ESP_OK) {
             ESP_LOGE(TAG, "I2S %s 停止失败: %s", channels[i].name,
                      esp_err_to_name(e));

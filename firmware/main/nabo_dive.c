@@ -1,10 +1,12 @@
 #include "nabo_dive.h"
+#include "adv_persist.h"
 #include <math.h>
 #include <stdatomic.h>
 #include <string.h>
 #include "esp_heap_caps.h"
 #include "esp_cpu.h"
 #include "esp_log.h"
+#include "esp_system.h"
 #include "esp_timer.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/semphr.h"
@@ -120,16 +122,7 @@ static float load_best(void) {
     return (float)v;
 }
 static void save_best(float px) {
-    nvs_handle_t h;
-    esp_err_t err = nvs_open("nabo_ui", NVS_READWRITE, &h);
-    if (err == ESP_OK) {
-        err = nvs_set_u32(h, "dive_best", (uint32_t)px);
-        if (err == ESP_OK)
-            err = nvs_commit(h);
-        nvs_close(h);
-    }
-    if (err != ESP_OK)
-        ESP_LOGE(TAG, "best save failed: %d", err);
+    adv_persist_u32("dive_best", (uint32_t)px);
 }
 static bool load_dashed(void) {
     nvs_handle_t h;
@@ -141,12 +134,7 @@ static bool load_dashed(void) {
     return v != 0;
 }
 static void save_dashed(void) {
-    nvs_handle_t h;
-    if (nvs_open("nabo_ui", NVS_READWRITE, &h) == ESP_OK) {
-        nvs_set_u8(h, "dive_dashed", 1);
-        nvs_commit(h);
-        nvs_close(h);
-    }
+    adv_persist_u8("dive_dashed", 1);
 }
 
 /* ---------- game task ---------- */
@@ -369,7 +357,11 @@ bool nabo_dive_open(esp_lcd_panel_io_handle_t io, esp_lcd_panel_handle_t panel, 
         log_heap("open: buffers failed");
         atomic_store(&s_stop, true);
         xTaskNotifyGive(s_task);  // the task sees s_stop before touching any buffer
-        xSemaphoreTake(s_done, pdMS_TO_TICKS(500));
+        if (xSemaphoreTake(s_done, pdMS_TO_TICKS(500)) != pdTRUE) {
+            ESP_LOGE(TAG, "open rollback: game task did not stop; restarting without freeing live buffers");
+            esp_restart();
+            return false;
+        }
         s_task = NULL;
         release();
         return false;
@@ -386,8 +378,11 @@ void nabo_dive_close(void) {
         return;
     atomic_store(&s_stop, true);
     xTaskNotifyGive(s_task);
-    if (xSemaphoreTake(s_done, pdMS_TO_TICKS(500)) != pdTRUE)
+    if (xSemaphoreTake(s_done, pdMS_TO_TICKS(500)) != pdTRUE) {
         ESP_LOGE(TAG, "close: game task did not stop");
+        esp_restart();  // its task may still use game, render and DMA buffers
+        return;
+    }
     s_task = NULL;
     release();
     atomic_store(&s_running, false);

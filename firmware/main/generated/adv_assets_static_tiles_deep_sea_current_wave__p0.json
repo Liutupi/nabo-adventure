@@ -1,0 +1,39 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_tiles_deep_sea_current_wave__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    17298
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 248,
+  "table_bytes": 138,
+  "frame_sha256": [
+    "bee5d2dbdc1b087050db33e21ebeaefa7a7bcd8379cbfb1f976c4fb4606fe7d7"
+  ],
+  "source_sha256": [
+    "0172b53ebd01b076bf1d20f843114afe3b4faaf41be3d0b68243728da21fcada"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/tiles/deep-sea/current-wave",
+  "group": "static",
+  "symbol": "adv_assets_static_tiles_deep_sea_current_wave__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\deep-sea\\current-wave.png",
+      "sha256": "0172b53ebd01b076bf1d20f843114afe3b4faaf41be3d0b68243728da21fcada"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

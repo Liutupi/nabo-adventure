@@ -1,0 +1,150 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_travel_walk_left__p0",
+  "width": 22,
+  "height": 48,
+  "palette_rgb565": [
+    0,
+    4226,
+    6473,
+    8453,
+    10634,
+    10699,
+    12548,
+    12613,
+    12812,
+    12813,
+    14661,
+    14726,
+    14793,
+    16741,
+    16773,
+    16839,
+    16938,
+    17037,
+    18854,
+    21261,
+    23014,
+    23080,
+    23178,
+    23471,
+    25584,
+    27208,
+    27697,
+    29320,
+    29744,
+    29843,
+    31434,
+    31531,
+    31630,
+    33513,
+    33971,
+    34036,
+    37707,
+    37936,
+    38198,
+    39820,
+    44046,
+    44210,
+    44407,
+    46586,
+    50319,
+    50549,
+    52465,
+    52826,
+    54644,
+    54774,
+    54972,
+    59165,
+    60820,
+    60917,
+    61246,
+    63030,
+    63293,
+    63326,
+    63358,
+    65176,
+    65241,
+    65439,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "data_bytes": 6594,
+  "table_bytes": 1712,
+  "frame_sha256": [
+    "279592af18e570ee51a6de6b28306c74c07d0fb2fc88eec24e1dc013c2409de8",
+    "6917e0103fbdb5dfdc5fdad4ebab06dd34e660e508c24b755e254162e4aa1c2b",
+    "b108e2eece9371f7550298503f75a24e9951f3b90d6b4ae08fb3232c1dd29b6b",
+    "bf5546e99fee5694d04e006e05e9db24a5fb400291943885507b79609e127e38",
+    "9c96b4a584f11092856db5fe82808aec975050dc861365667acd98efc05bbfc1",
+    "b67014cc433c4094a6b6d596cafc36d0efc161553eadaf6bbc9e42dd1d0f6ff6",
+    "b0f3f3d31e5205b7704ab4334a0bb3d405053f61d72709012c0f0a252be1f069",
+    "e865a9eaabcb00fccc1820a370b2405d0e89624c0f64767d45639f42c4e8ec9b"
+  ],
+  "source_sha256": [
+    "b200061ceaf388c7785f7a8ba9f2b48d52de00afba76aabb1231f3681b6dc101",
+    "8c72c9862f2a5b1fdb9caf286b2edfc0b36e9db8e1bcc5666f1e72fca68512b5",
+    "0917444e6a5e6bf864bad96335b7aad4a74bad518798ad7438ae535fcb2c73cb",
+    "e9092c6998e9f4299ddbd33497cad5a0797a5e722f001b2f2d756dce04f14016",
+    "17fc9545a9ea162987bfadef67e68151689f51e2e07fd78ca16f12948a5e325d",
+    "0d62b6973f308cbf9e7ec2f420c7b1fceaaea970116455b975a9b35c7e9feb30",
+    "aa485192d455343fb91840952ca540284fdd4b653f67e11f86ae97b739052e24",
+    "c51384427e02050eef6aff8ce19b669b783873f7cdb9f2e3237faf2fad49f670"
+  ],
+  "verified_frames": 8,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "travel/walk_left",
+  "group": "travel",
+  "symbol": "adv_assets_travel_walk_left__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\000.png",
+      "sha256": "b200061ceaf388c7785f7a8ba9f2b48d52de00afba76aabb1231f3681b6dc101"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\001.png",
+      "sha256": "8c72c9862f2a5b1fdb9caf286b2edfc0b36e9db8e1bcc5666f1e72fca68512b5"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\002.png",
+      "sha256": "0917444e6a5e6bf864bad96335b7aad4a74bad518798ad7438ae535fcb2c73cb"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\003.png",
+      "sha256": "e9092c6998e9f4299ddbd33497cad5a0797a5e722f001b2f2d756dce04f14016"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\004.png",
+      "sha256": "17fc9545a9ea162987bfadef67e68151689f51e2e07fd78ca16f12948a5e325d"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\005.png",
+      "sha256": "0d62b6973f308cbf9e7ec2f420c7b1fceaaea970116455b975a9b35c7e9feb30"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\006.png",
+      "sha256": "aa485192d455343fb91840952ca540284fdd4b653f67e11f86ae97b739052e24"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\007.png",
+      "sha256": "c51384427e02050eef6aff8ce19b669b783873f7cdb9f2e3237faf2fad49f670"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

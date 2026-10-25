@@ -1,0 +1,41 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_resources_icons_oxygen__p0",
+  "width": 16,
+  "height": 16,
+  "palette_rgb565": [
+    0,
+    8649,
+    17298,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 152,
+  "table_bytes": 78,
+  "frame_sha256": [
+    "8cb5757d1d6d167610b9663ec0d2069fdca8e0acbb511801128e2a31198f43d9"
+  ],
+  "source_sha256": [
+    "19b4d5d47fdad881eeefa226f71fb6be07422411d9f5b4f652918430e1f22383"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/resources/icons/oxygen",
+  "group": "ui",
+  "symbol": "adv_assets_ui_resources_icons_oxygen__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\icons\\oxygen.png",
+      "sha256": "db2e5cde83c3a0afaa0a13ad5d0273161977f54bbe5d47e9512f8deb6ef0a038"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-25",
+  "review_scope": "10 clips / 78 formal frames / 78 runtime frames, their complete contact sheets, master-versus-64-color comparisons, facing contacts, neck self-repair comparison, GIF views and same-screen idle/walk/idle sequence",
+  "internal_review": "The original head/face/cap/glasses remain tied together. New actions use existing source pixel limbs and fixed-anchor transforms; no per-frame AI or rejected SVG head is used.",
+  "self_repairs": [
+    "Cheer independent head lift exposed a visible two-row neck gap: the recorded 20 empty core neck pixels became 0 after restoring the attached head and using a whole-body hop.",
+    "Cheer was revised from a low sideways indication to a near-arm celebratory lift, keeping elbow/shoulder source overlap intact.",
+    "The 48px family now shares one crop, scale, anchor and palette. Six-frame eye-midpoint-registered source turns replace the abrupt facing swap; endpoint poses are pixel-identical to idle/walk.",
+    "The hand formerly claimed by the satchel mask is now independent. The occluded far arm stays inside available source overlap instead of synthesizing hidden anatomy."
+  ],
+  "measured_continuity": {
+    "left_boundary_centroid_delta_px_max": 0.13790045646646418,
+    "right_boundary_centroid_delta_px_max": 0.0956193876729388,
+    "boundary_sole_delta_px_max": 0,
+    "left_max_adjacent_turn_head_change_vs_hard_cut": 0.3691564843422503,
+    "right_max_adjacent_turn_head_change_vs_hard_cut": 0.44949320433079937
+  },
+  "remaining_visual_limits": [
+    "Turn midposes retain some full-size dissolve softness; they are registered original-view blends rather than new 3D rotation drawings.",
+    "Sad is a restrained head/shoulder slump with the original neutral face; new sad eyes or mouth were not invented.",
+    "Welcome uses the intact original neutral mouth and gentle nod/invitation. Voice timing is synchronized narration, not phoneme lip sync.",
+    "The 64-color large-frame deliverables visibly posterize smooth source shading; lossless masters and final-size comparisons keep this difference inspectable.",
+    "Background extraction slightly re-rendered the approved outfit board and retained faint fringe; source SHA and alpha thresholds remain explicit."
+  ],
+  "welcome_timing": "Original WAV independently read as 43050 samples / 16000Hz = 2.690625s. WebAudio host preview schedules at +1.400s; two 16-frame/12fps cycles plus 23.958ms neutral hold cover the voice. HTML JavaScript syntax was checked; browser audio playback and real-device timing are separate checks.",
+  "technical_reproducibility": "441 generated files reproduced byte-for-byte in an isolated scratch tree; 41 GIF files decoded for timing. Frozen live PNGs were not rewritten during the check.",
+  "grok_needed_for_current_clips": false,
+  "acceptance_boundary": "Internal visual/self-repair review and saved-file checks do not imply human or on-device acceptance. They do not block the authorized next production round."
+}

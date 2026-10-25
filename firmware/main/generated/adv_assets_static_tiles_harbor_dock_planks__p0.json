@@ -1,0 +1,42 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_tiles_harbor_dock_planks__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    29514,
+    48007,
+    54567
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 190,
+  "table_bytes": 144,
+  "frame_sha256": [
+    "71062cdf5d110edf0a2f157c5ce4ba9f4ae4215d1b1c29c687196b63fb1ef876"
+  ],
+  "source_sha256": [
+    "548732a6ff55f112ae2cd4b88deb800caf3792df66b0f330d77f868604d4cf43"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/tiles/harbor/dock-planks",
+  "group": "static",
+  "symbol": "adv_assets_static_tiles_harbor_dock_planks__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\harbor\\dock-planks.png",
+      "sha256": "548732a6ff55f112ae2cd4b88deb800caf3792df66b0f330d77f868604d4cf43"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

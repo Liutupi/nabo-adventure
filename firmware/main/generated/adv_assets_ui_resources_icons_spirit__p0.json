@@ -1,0 +1,41 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_resources_icons_spirit__p0",
+  "width": 16,
+  "height": 16,
+  "palette_rgb565": [
+    0,
+    8649,
+    45672,
+    54567
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 120,
+  "table_bytes": 78,
+  "frame_sha256": [
+    "aa18f26d18465022ed03bf91164d61a5f36e4708fb7f7df4de737fba37d8b852"
+  ],
+  "source_sha256": [
+    "d4c9d80829013da66ee7b1c101eaa340e3d76536c4705cf4eb41b757a473f587"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/resources/icons/spirit",
+  "group": "ui",
+  "symbol": "adv_assets_ui_resources_icons_spirit__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\icons\\spirit.png",
+      "sha256": "60c72ccb77938680166bc162a5a19be792c34036aced67fa34e66ae760533886"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

@@ -1,0 +1,41 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_resources_icons_steam__p0",
+  "width": 16,
+  "height": 16,
+  "palette_rgb565": [
+    0,
+    8649,
+    15375,
+    29514
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 148,
+  "table_bytes": 78,
+  "frame_sha256": [
+    "0838185e1fc44d5da3d2cd6f39e4fea7d20df0beb2b2a99e70b4720cf8f24628"
+  ],
+  "source_sha256": [
+    "579e8ac49848ca6d56842df864e9c04de1a01d03e17476717223a401a81663b4"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/resources/icons/steam",
+  "group": "ui",
+  "symbol": "adv_assets_ui_resources_icons_steam__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\icons\\steam.png",
+      "sha256": "787a93ff6825eb9c151cec800f1de0b857a448c83246cd12864f182261322af3"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

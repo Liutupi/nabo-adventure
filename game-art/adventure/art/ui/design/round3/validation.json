@@ -1,0 +1,163 @@
+{
+  "status": "PASS: NATIVE PIXEL STRUCTURE AND PALETTE CHECKS",
+  "visual_review": "All 12 final screens inspected individually with view_image at 1x.",
+  "user_selection": "pending",
+  "screens": {
+    "01-passport/map": {
+      "size": [
+        240,
+        320
+      ],
+      "native_scale": 1,
+      "ui_colors": 10,
+      "character_visible_colors": 60,
+      "text_bounds": "pass",
+      "layer_assembly": "pixel_equal",
+      "visual_clipping": "no clipped important text detected",
+      "selection_state": "filled highlight plus border/corner shape; not color alone"
+    },
+    "01-passport/passport": {
+      "size": [
+        240,
+        320
+      ],
+      "native_scale": 1,
+      "ui_colors": 9,
+      "character_visible_colors": 0,
+      "text_bounds": "pass",
+      "layer_assembly": "pixel_equal",
+      "visual_clipping": "no clipped important text detected",
+      "selection_state": "filled highlight plus border/corner shape; not color alone"
+    },
+    "01-passport/post-title": {
+      "size": [
+        240,
+        320
+      ],
+      "native_scale": 1,
+      "ui_colors": 12,
+      "character_visible_colors": 60,
+      "text_bounds": "pass",
+      "layer_assembly": "pixel_equal",
+      "visual_clipping": "no clipped important text detected",
+      "selection_state": "filled highlight plus border/corner shape; not color alone"
+    },
+    "01-passport/result": {
+      "size": [
+        240,
+        320
+      ],
+      "native_scale": 1,
+      "ui_colors": 10,
+      "character_visible_colors": 59,
+      "text_bounds": "pass",
+      "layer_assembly": "pixel_equal",
+      "visual_clipping": "no clipped important text detected",
+      "selection_state": "filled highlight plus border/corner shape; not color alone"
+    },
+    "02-sticker/map": {
+      "size": [
+        240,
+        320
+      ],
+      "native_scale": 1,
+      "ui_colors": 13,
+      "character_visible_colors": 60,
+      "text_bounds": "pass",
+      "layer_assembly": "pixel_equal",
+      "visual_clipping": "no clipped important text detected",
+      "selection_state": "filled highlight plus border/corner shape; not color alone"
+    },
+    "02-sticker/passport": {
+      "size": [
+        240,
+        320
+      ],
+      "native_scale": 1,
+      "ui_colors": 11,
+      "character_visible_colors": 0,
+      "text_bounds": "pass",
+      "layer_assembly": "pixel_equal",
+      "visual_clipping": "no clipped important text detected",
+      "selection_state": "filled highlight plus border/corner shape; not color alone"
+    },
+    "02-sticker/post-title": {
+      "size": [
+        240,
+        320
+      ],
+      "native_scale": 1,
+      "ui_colors": 13,
+      "character_visible_colors": 60,
+      "text_bounds": "pass",
+      "layer_assembly": "pixel_equal",
+      "visual_clipping": "no clipped important text detected",
+      "selection_state": "filled highlight plus border/corner shape; not color alone"
+    },
+    "02-sticker/result": {
+      "size": [
+        240,
+        320
+      ],
+      "native_scale": 1,
+      "ui_colors": 12,
+      "character_visible_colors": 59,
+      "text_bounds": "pass",
+      "layer_assembly": "pixel_equal",
+      "visual_clipping": "no clipped important text detected",
+      "selection_state": "filled highlight plus border/corner shape; not color alone"
+    },
+    "03-star-chart/map": {
+      "size": [
+        240,
+        320
+      ],
+      "native_scale": 1,
+      "ui_colors": 10,
+      "character_visible_colors": 60,
+      "text_bounds": "pass",
+      "layer_assembly": "pixel_equal",
+      "visual_clipping": "no clipped important text detected",
+      "selection_state": "filled highlight plus border/corner shape; not color alone"
+    },
+    "03-star-chart/passport": {
+      "size": [
+        240,
+        320
+      ],
+      "native_scale": 1,
+      "ui_colors": 9,
+      "character_visible_colors": 0,
+      "text_bounds": "pass",
+      "layer_assembly": "pixel_equal",
+      "visual_clipping": "no clipped important text detected",
+      "selection_state": "filled highlight plus border/corner shape; not color alone"
+    },
+    "03-star-chart/post-title": {
+      "size": [
+        240,
+        320
+      ],
+      "native_scale": 1,
+      "ui_colors": 11,
+      "character_visible_colors": 60,
+      "text_bounds": "pass",
+      "layer_assembly": "pixel_equal",
+      "visual_clipping": "no clipped important text detected",
+      "selection_state": "filled highlight plus border/corner shape; not color alone"
+    },
+    "03-star-chart/result": {
+      "size": [
+        240,
+        320
+      ],
+      "native_scale": 1,
+      "ui_colors": 10,
+      "character_visible_colors": 59,
+      "text_bounds": "pass",
+      "layer_assembly": "pixel_equal",
+      "visual_clipping": "no clipped important text detected",
+      "selection_state": "filled highlight plus border/corner shape; not color alone"
+    }
+  }
+}

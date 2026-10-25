@@ -4,9 +4,12 @@
 #include <stdatomic.h>
 #include <stdio.h>
 #include <string.h>
+#include "adv_boot.h"
 #include "adv_model.h"
+#include "adv_persist.h"
 #include "adv_sound.h"
 #include "adv_ui.h"
+#include "adv_ui_animation.h"
 #include "bsp_audio.h"
 #include "bsp_battery.h"
 #include "bsp_button.h"
@@ -17,6 +20,7 @@
 #include "esp_log.h"
 #include "esp_random.h"
 #include "esp_sleep.h"
+#include "esp_system.h"
 #include "esp_timer.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/queue.h"
@@ -26,13 +30,11 @@
 #include "nabo_dive_model.h"
 #include "nabo_jump_model.h"
 #include "nabo_jump_sound.h"
-#include "nvs.h"
 #include "nvs_flash.h"
 
 #define TAG "NABO-Adventure"
 #define CHUNK 320
 #define STEP_US 16667
-#define NVS_NS "nabo_ui"   // shared with the NABO games collection: settings and records carry over
 #define STATION_JUMP 1
 #define STATION_DIVE 2
 
@@ -42,6 +44,10 @@ typedef enum { OWNER_SHELL, OWNER_JUMP, OWNER_DIVE } owner_t;
 static QueueHandle_t s_inputs;
 static SemaphoreHandle_t s_audio_lock;
 static adv_model_t s_model;
+static adv_boot_t s_boot;
+static bool s_boot_closed;
+extern const uint8_t boot_wav_start[] asm("_binary_adv_boot_voice_wav_start");
+extern const uint8_t boot_wav_end[] asm("_binary_adv_boot_voice_wav_end");
 static owner_t s_owner = OWNER_SHELL;        // who draws and who feeds PCM
 static nabo_jump_t s_jump;
 static bool s_audio_ok, s_test;
@@ -55,73 +61,16 @@ static void report_error(const char *what, esp_err_t err)
     if (err != ESP_OK) ESP_LOGE(TAG, "%s: %s", what, esp_err_to_name(err));
 }
 
-// ---------- persistence ----------
-
-static uint32_t read_u32(nvs_handle_t h, const char *key)
-{
-    uint32_t v = 0;
-    nvs_get_u32(h, key, &v);
-    return v;
-}
-
 static void best_key(char *out, size_t size, int station) { snprintf(out, size, "adv_b_%s", adv_station[station].id); }
 
-static void load(cg_settings_t *s, uint32_t best[ADV_STATIONS], uint32_t *seen)
+static void stop_boot(void)
 {
-    *s = (cg_settings_t){.volume = 70, .brightness = 80, .sleep_seconds = 300, .speaker = true};
-    memset(best, 0, sizeof(uint32_t) * ADV_STATIONS);
-    *seen = 0;
-    nvs_handle_t h;
-    if (nvs_open(NVS_NS, NVS_READONLY, &h) != ESP_OK) return;
-    int32_t v; uint8_t b;
-    if (nvs_get_i32(h, "volume", &v) == ESP_OK) s->volume = v;
-    if (nvs_get_i32(h, "brightness", &v) == ESP_OK) s->brightness = v;
-    if (nvs_get_i32(h, "sleep", &v) == ESP_OK) s->sleep_seconds = v;
-    if (nvs_get_u8(h, "speaker", &b) == ESP_OK) s->speaker = b != 0;
-    best[STATION_JUMP] = read_u32(h, "jump_best");
-    best[STATION_DIVE] = (uint32_t)dive_depth_m((float)read_u32(h, "dive_best"));   // stored in pixels
-    for (int i = STATION_DIVE + 1; i < ADV_STATIONS; i++) {
-        char key[16];
-        best_key(key, sizeof(key), i);
-        best[i] = read_u32(h, key);
-    }
-    *seen = read_u32(h, "adv_seen");
-    nvs_close(h);
-    cg_sanitize(s);
-}
-
-static void save_u32(const char *key, uint32_t value)
-{
-    if (s_test) return;   // scripted runs never touch records
-    nvs_handle_t h;
-    esp_err_t err = nvs_open(NVS_NS, NVS_READWRITE, &h);
-    if (err == ESP_OK) {
-        err = nvs_set_u32(h, key, value);
-        if (!err) err = nvs_commit(h);
-        nvs_close(h);
-    }
-    report_error(key, err);
-}
-
-static void save_settings(void)
-{
-    const cg_settings_t *s = &s_model.cfg.settings;
-    nvs_handle_t h;
-    esp_err_t err = nvs_open(NVS_NS, NVS_READWRITE, &h);
-    if (err == ESP_OK) {
-        err = nvs_set_i32(h, "volume", s->volume);
-        if (!err) err = nvs_set_i32(h, "brightness", s->brightness);
-        if (!err) err = nvs_set_i32(h, "sleep", s->sleep_seconds);
-        if (!err) err = nvs_set_u8(h, "speaker", s->speaker);
-        if (!err) err = nvs_commit(h);
-        nvs_close(h);
-    }
-    report_error("settings save", err);
-}
-
-static void save_jump_best(void)
-{
-    if (s_jump.best > s_model.best[STATION_JUMP]) save_u32("jump_best", s_jump.best);
+    if (s_boot_closed) return;
+    xSemaphoreTake(s_audio_lock, portMAX_DELAY);
+    adv_boot_stop(&s_boot);
+    xSemaphoreGive(s_audio_lock);
+    s_boot_closed = true;
+    adv_ui_boot_end();
 }
 
 static void apply_settings(void)
@@ -140,6 +89,8 @@ static void apply_settings(void)
 static void set_owner(owner_t next)
 {
     xSemaphoreTake(s_audio_lock, portMAX_DELAY);
+    adv_boot_stop(&s_boot); s_boot_closed = true;
+    adv_ui_boot_end();
     if (s_owner == OWNER_DIVE) nabo_dive_close();
     else adv_ui_close();
     bool ok;
@@ -165,14 +116,15 @@ static void set_owner(owner_t next)
 
 static void handle_fx(int fx)
 {
+    if (s_model.page != ADV_PAGE_COVER) stop_boot();
     if (fx & ADV_FX_CUE) atomic_store(&s_cue, s_model.cue);
     if (fx & ADV_FX_APPLY_SETTINGS) apply_settings();
-    if (fx & ADV_FX_SAVE_SETTINGS) save_settings();
-    if (fx & ADV_FX_SAVE_PROGRESS) save_u32("adv_seen", s_model.seen);
+    if (fx & ADV_FX_SAVE_SETTINGS) adv_persist_settings(&s_model.cfg.settings);
+    if (fx & ADV_FX_SAVE_PROGRESS) adv_persist_u32("adv_seen", s_model.seen);
     if (fx & ADV_FX_SAVE_BEST) {
         char key[16];
         best_key(key, sizeof(key), s_model.station);
-        save_u32(key, s_model.best[s_model.station]);
+        adv_persist_u32(key, s_model.best[s_model.station]);
     }
     if (fx & ADV_FX_NOMEM) ESP_LOGE(TAG, "session allocation failed; heap=%u", (unsigned)esp_get_free_heap_size());
     if (fx & ADV_FX_OPEN_LEGACY) set_owner(s_model.cursor == STATION_DIVE ? OWNER_DIVE : OWNER_JUMP);
@@ -183,12 +135,12 @@ static void legacy_back(void)
 {
     uint32_t best;
     if (s_owner == OWNER_JUMP) {
-        save_jump_best();
+        adv_persist_jump(s_jump.best);
         best = s_jump.best;
     } else {
-        nvs_handle_t h;
-        best = 0;
-        if (nvs_open(NVS_NS, NVS_READONLY, &h) == ESP_OK) { best = (uint32_t)dive_depth_m((float)read_u32(h, "dive_best")); nvs_close(h); }
+        cg_settings_t settings; uint32_t saved[ADV_STATIONS], seen;
+        adv_persist_load(&settings, saved, &seen);
+        best = saved[STATION_DIVE];
     }
     set_owner(OWNER_SHELL);
     handle_fx(adv_legacy_done(&s_model, best));
@@ -217,7 +169,7 @@ static void jump_button(const input_t *in)
     } else if (in->event == BSP_BTN_CLICK && in->button == BSP_BTN_UP) legacy_back();
     else if (in->event == BSP_BTN_CLICK && in->button == BSP_BTN_DOWN) s_jump.character = 1 - s_jump.character;
     else if (in->event == BSP_BTN_LONG && in->button == BSP_BTN_DOWN) {
-        save_jump_best();
+        adv_persist_jump(s_jump.best);
         nabo_jump_reset(&s_jump, esp_random(), s_jump.best);
         adv_ui_invalidate();
     }
@@ -254,6 +206,7 @@ static void handle_button(const input_t *in)
 static void status(void)
 {
     adv_status_t st = adv_game_status(&s_model);
+    flockfile(stdout);  // keep independent legacy-game logs out of this JSON line
     printf("@adv {\"page\":%d,\"owner\":%d,\"cursor\":%d,\"station\":%d,\"phase\":%d,\"score\":%u,\"res\":%d,"
            "\"seen\":%u,\"stamps\":%d,\"test\":%d,\"heap\":%u,\"largest\":%u,\"bytes\":%u,\"overflow\":%d,\"best\":[",
            s_model.page, s_owner, s_model.cursor, s_model.in_session ? s_model.station : -1,
@@ -262,6 +215,7 @@ static void status(void)
            (unsigned)heap_caps_get_largest_free_block(MALLOC_CAP_8BIT), (unsigned)adv_ui_bytes(), adv_ui_overflow());
     for (int i = 0; i < ADV_STATIONS; i++) printf("%s%u", i ? "," : "", (unsigned)s_model.best[i]);
     puts("]}");
+    funlockfile(stdout);
 }
 
 static void inject(int button, int event)
@@ -270,9 +224,49 @@ static void inject(int button, int event)
     handle_button(&in);
 }
 
+static void set_test(bool enabled)
+{
+    if (enabled == s_test) return;
+    stop_boot();
+    // Keep every writer suppressed until the legacy task has stopped and its test
+    // state is discarded. Leaving test mode reloads durable settings/progress.
+    adv_persist_set_test(true);
+    if (s_owner != OWNER_SHELL) legacy_back();
+    if (!enabled) {
+        xSemaphoreTake(s_audio_lock, portMAX_DELAY);
+        adv_persist_restore(&s_model, esp_random());
+        memset(&s_jump, 0, sizeof(s_jump));
+        s_held = 0; s_swallowed = 7;
+        xSemaphoreGive(s_audio_lock);
+        apply_settings();
+        adv_ui_invalidate();
+    }
+    s_test = s_model.test = enabled;
+    adv_persist_set_test(enabled);
+    s_last_input_us = s_step_us = esp_timer_get_time();
+}
+
+static void diagnostic_open(const char *name)
+{
+    if (!s_test || s_owner != OWNER_SHELL || s_model.page != ADV_PAGE_MAP) {
+        puts("@error open requires test mode and the map"); return;
+    }
+    int station = !strcmp(name, "jump") ? STATION_JUMP : !strcmp(name, "dive") ? STATION_DIVE : -1;
+    if (station < 0) { puts("@error unknown game"); return; }
+    // This diagnostic bypasses the map unlock check without touching model rules
+    // or adding fake records. The ordinary owner/return lifecycle stays in use.
+    s_model.cursor = station;
+    s_model.page = ADV_PAGE_LEGACY;
+    set_owner(station == STATION_JUMP ? OWNER_JUMP : OWNER_DIVE);
+    s_last_input_us = esp_timer_get_time();
+    if (s_owner == OWNER_SHELL) puts("@error game open failed");
+    else printf("@adv open=%s\n", name);
+}
+
 static void command(const char *line)
 {
     if (!strcmp(line, ">adv.status")) status();
+    else if (!strncmp(line, ">adv.open=", 10)) diagnostic_open(line + 10);
     else if (!strncmp(line, ">adv.key=", 9)) {
         static const struct { const char *name; int button, event; } keys[] = {
             {"up", BSP_BTN_UP, BSP_BTN_CLICK}, {"down", BSP_BTN_DOWN, BSP_BTN_CLICK}, {"ok", BSP_BTN_OK, BSP_BTN_CLICK},
@@ -291,7 +285,7 @@ static void command(const char *line)
         else adv_ui_capture();
     } else if (!strncmp(line, ">adv.test=", 10)) {
         // Test mode: nothing is saved, and the model never raises a record save.
-        s_test = s_model.test = line[10] == '1';
+        set_test(line[10] == '1');
         printf("@adv test=%d\n", s_test);
     } else puts("@error unknown command");
 }
@@ -335,6 +329,8 @@ static void audio_task(void *arg)
             int cue = atomic_exchange(&s_cue, 0);
             if (cue > 0) adv_sound_start(&cue_audio, cue);
             adv_sound_fill(&cue_audio, pcm, CHUNK);
+            adv_boot_tick(&s_boot, (uint32_t)(esp_timer_get_time() / 1000));
+            adv_boot_fill(&s_boot, pcm, CHUNK);
         }
         bool delay = !s_audio_ok || bsp_audio_write(pcm, sizeof(pcm)) != ESP_OK;
         xSemaphoreGive(s_audio_lock);
@@ -350,8 +346,10 @@ static void sleep_now(void)
 {
     if (s_held || bsp_button_read_mv() < BSP_BTN_MV_RELEASED_MIN) return;
     xSemaphoreTake(s_audio_lock, portMAX_DELAY);
+    adv_boot_stop(&s_boot); s_boot_closed = true;
+    adv_ui_boot_end();
     if (s_owner == OWNER_DIVE) nabo_dive_close();
-    else { if (s_owner == OWNER_JUMP) save_jump_best(); adv_ui_close(); }
+    else { if (s_owner == OWNER_JUMP) adv_persist_jump(s_jump.best); adv_ui_close(); }
     bsp_display_backlight(0);
     int level = 0;
     if (bsp_button_prepare_deep_sleep(&level) != ESP_OK || !level) esp_restart();
@@ -377,7 +375,7 @@ static void jump_tick(uint32_t ms)
     }
     if (before == JUMP_SCROLLING && s_jump.phase == JUMP_FLYING) atomic_store(&s_jump_cue, 1);
     if (s_jump.phase == JUMP_FALLING && before != JUMP_FALLING) atomic_store(&s_jump_cue, 4);
-    if (s_jump.phase == JUMP_OVER) save_jump_best();
+    if (s_jump.phase == JUMP_OVER) adv_persist_jump(s_jump.best);
     adv_jump_draw(&s_jump, ms, false);
 }
 
@@ -387,6 +385,7 @@ static void adventure_task(void *arg)
     int battery = -1, mv = -1;
     int64_t battery_at = 0;
     bool dirty = true;
+    uint32_t last_ui_frame = UINT32_MAX;
     for (;;) {
         if (atomic_exchange(&s_overflow, false)) {
             ESP_LOGE(TAG, "input overflow; cancelling held actions");
@@ -403,6 +402,8 @@ static void adventure_task(void *arg)
         if (us - battery_at >= 5000000) { battery = bsp_battery_soc(); mv = bsp_battery_mv(); battery_at = us; }
         if (s_owner == OWNER_JUMP) jump_tick(ms);
         else if (s_owner == OWNER_SHELL) {
+            uint32_t ui_frame = ms / 1000u * 12u + ms % 1000u * 12u / 1000u;
+            if (ui_frame != last_ui_frame) { dirty = true; last_ui_frame = ui_frame; }
             // Fixed 60 Hz model steps; never more than a few to catch up after a slow frame.
             int steps = 0;
             while (us - s_step_us >= STEP_US && steps < 4) {
@@ -430,7 +431,7 @@ void app_main(void)
     if (!s_inputs || !s_audio_lock) { ESP_LOGE(TAG, "startup allocation failed"); return; }
     cg_settings_t settings;
     uint32_t best[ADV_STATIONS], seen;
-    load(&settings, best, &seen);
+    adv_persist_load(&settings, best, &seen);
     adv_init(&s_model, esp_random(), &settings, best, seen);
     ESP_ERROR_CHECK(bsp_display_init());
     report_error("battery", bsp_battery_init());
@@ -439,8 +440,14 @@ void app_main(void)
     atomic_store(&s_jump_cue, -1);
     if (!adv_ui_open()) { ESP_LOGE(TAG, "launcher allocation failed"); return; }
     s_last_input_us = s_step_us = esp_timer_get_time();
+    adv_ui_boot_begin((uint32_t)(s_last_input_us / 1000));
     adv_ui_draw(&s_model, (uint32_t)(s_last_input_us / 1000), -1, -1);
     apply_settings();
+    uint32_t visual_start_ms = (uint32_t)(esp_timer_get_time() / 1000);
+    adv_ui_boot_begin(visual_start_ms);
+    if (!adv_boot_open(&s_boot, boot_wav_start, (size_t)(boot_wav_end - boot_wav_start),
+                       visual_start_ms))
+        ESP_LOGW(TAG, "boot narration unavailable; cover remains playable");
     if (xTaskCreate(audio_task, "adv_audio", 4096, NULL, 5, NULL) != pdPASS ||
         xTaskCreate(adventure_task, "adv_ui", 10240, NULL, 4, NULL) != pdPASS ||
         xTaskCreate(serial_task, "adv_serial", 4096, NULL, 3, NULL) != pdPASS) {

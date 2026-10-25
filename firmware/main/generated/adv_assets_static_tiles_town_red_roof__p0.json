@@ -1,0 +1,44 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_tiles_town_red_roof__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    17298,
+    45672,
+    48007,
+    54567,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 366,
+  "table_bytes": 148,
+  "frame_sha256": [
+    "aff97c119c4df8eb8fe2a4af66deb7d00257775c5a34124ab9e49f70093d83b1"
+  ],
+  "source_sha256": [
+    "83e638db8c492c9768a696269cb33ca7a13707e725b2691ca44d5cdeea61915d"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/tiles/town/red-roof",
+  "group": "static",
+  "symbol": "adv_assets_static_tiles_town_red_roof__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\town\\red-roof.png",
+      "sha256": "83e638db8c492c9768a696269cb33ca7a13707e725b2691ca44d5cdeea61915d"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

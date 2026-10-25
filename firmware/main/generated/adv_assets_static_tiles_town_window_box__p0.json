@@ -1,0 +1,46 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_tiles_town_window_box__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    15375,
+    17298,
+    44173,
+    45672,
+    48007,
+    54567,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 532,
+  "table_bytes": 152,
+  "frame_sha256": [
+    "5a6145cfb90f19d77cbd240c6af8e22a701733cba642dbecc7b89bb11c716e92"
+  ],
+  "source_sha256": [
+    "e744b9fc86bdcd2e1bee6d4080d5258a6d211dafb5bc5a30f87ee724b91ddd2c"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/tiles/town/window-box",
+  "group": "static",
+  "symbol": "adv_assets_static_tiles_town_window_box__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\town\\window-box.png",
+      "sha256": "e744b9fc86bdcd2e1bee6d4080d5258a6d211dafb5bc5a30f87ee724b91ddd2c"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

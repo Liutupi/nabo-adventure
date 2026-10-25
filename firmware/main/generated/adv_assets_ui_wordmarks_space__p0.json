@@ -1,0 +1,42 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_wordmarks_space__p0",
+  "width": 200,
+  "height": 80,
+  "palette_rgb565": [
+    0,
+    8649,
+    44173,
+    45672,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 2068,
+  "table_bytes": 336,
+  "frame_sha256": [
+    "4b5297522b7a36cbaa69793426189a42000c169a25d57395ed58fc2bd0fc0951"
+  ],
+  "source_sha256": [
+    "9ab75b6c9cb355c2a08befbe365471e8501eae08ee45cd2ad17fa2cc7f89c335"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/wordmarks/space",
+  "group": "ui",
+  "symbol": "adv_assets_ui_wordmarks_space__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\wordmarks\\space.png",
+      "sha256": "e2b554dcb5eaa876e184ab2883509cdce67e75f00b4e229e8c78a216410dce62"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

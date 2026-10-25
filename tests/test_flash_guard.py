@@ -7,7 +7,8 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'firmware/tools'))
-from flash_candidate import APP_SIZE, EXPECTED, check_device, validate_app, validate_layout
+from flash_candidate import (APP_SIZE, EXPECTED, FLASH_SIZE, LEGACY_EXPECTED, CANONICAL, LEGACY,
+                             check_device, protected_ranges, validate_app, validate_layout, verify_preserved)
 from verify_firmware import validate_flash_size
 
 def table(entries):
@@ -49,6 +50,51 @@ class Guard(unittest.TestCase):
         wrong = entries.copy(); name, k, s, offset, _, flags = wrong[2]
         wrong[2] = (name, k, s, offset, 0x7f0000, flags)
         with self.assertRaises(ValueError): validate_layout(table(wrong))
+
+    def test_exact_legacy_profile_is_accepted_without_changing_canonical(self):
+        for expected, profile in ((EXPECTED, CANONICAL), (LEGACY_EXPECTED, LEGACY)):
+            entries = [(name, *values, 0) for name, values in expected.items()]
+            self.assertEqual(validate_layout(table(entries)), profile)
+        self.assertEqual(protected_ranges(CANONICAL), ((0, 0x10000), (0x400000, FLASH_SIZE)))
+        self.assertEqual(protected_ranges(LEGACY), ((0, 0x10000), (0x200000, FLASH_SIZE)))
+
+    def test_legacy_app_size_and_rounded_erase_end_use_actual_factory(self):
+        # A canonical-size candidate must still be rejected on the smaller real device.
+        too_large = self.image(LEGACY.app_size + 1)
+        sha = hashlib.sha256(too_large).hexdigest()
+        validate_app(too_large, sha, CANONICAL)
+        with self.assertRaises(ValueError): validate_app(too_large, sha, LEGACY)
+        for size in (LEGACY.app_size, LEGACY.app_size - 4095):
+            data = self.image(size)
+            self.assertEqual(validate_app(data, hashlib.sha256(data).hexdigest(), LEGACY), 0x200000)
+        data = self.image(LEGACY.app_size - 4096)
+        self.assertEqual(validate_app(data, hashlib.sha256(data).hexdigest(), LEGACY), 0x1ff000)
+
+    def test_every_legacy_partition_field_difference_is_rejected(self):
+        entries = [(name, *values, 0) for name, values in LEGACY_EXPECTED.items()]
+        for index, entry in enumerate(entries):
+            # label, type, subtype, offset, size, flags: no approximate layouts.
+            for field in range(6):
+                changed = list(entry)
+                changed[field] = 'other' if field == 0 else changed[field] + 1
+                wrong = entries.copy(); wrong[index] = tuple(changed)
+                with self.subTest(partition=entry[0], field=field), self.assertRaises(ValueError):
+                    validate_layout(table(wrong))
+        for wrong in (entries[:-1], entries + [('files', 1, 0x82, 0x700000, 0x100000, 0)]):
+            with self.assertRaises(ValueError): validate_layout(table(wrong))
+
+    def test_legacy_readback_protects_every_byte_after_real_factory_end(self):
+        before = bytes(FLASH_SIZE)
+        after = bytearray(before)
+        after[0x10000:0x10004] = b'app!'
+        verify_preserved(before, after, LEGACY)
+        # Especially the legacy-only 0x200000..0x400000 protected range.
+        for address in (0, 0x9000, 0xffff, 0x200000, 0x300000, FLASH_SIZE - 1):
+            changed = bytearray(after); changed[address] = 1
+            with self.subTest(address=address), self.assertRaisesRegex(ValueError, 'Preserved region'):
+                verify_preserved(before, changed, LEGACY)
+        with self.assertRaisesRegex(ValueError, 'Incomplete'):
+            verify_preserved(before, after[:-1], LEGACY)
 
     def test_encrypted_partition_and_corrupt_table_are_rejected(self):
         entries = [(name, *values, int(name == 'nvs')) for name, values in EXPECTED.items()]

@@ -1,0 +1,257 @@
+{
+  "isolation": "scratch tree under preview/travel; frozen live assets never rewritten",
+  "files_compared": 441,
+  "byte_identical_after_rebuild": true,
+  "changed": [],
+  "runtime_contracts_match": true,
+  "gif_checks": [
+    {
+      "file": "preview/travel/cheer-deep_sea.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/cheer-delivery.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/cheer-rig.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/cheer-town.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/idle-deep_sea.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/idle-delivery.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/idle-rig.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/idle-town.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/idle-walk-continuity.gif",
+      "frames": 41,
+      "duration_ms": 3420,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/sad-deep_sea.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/sad-delivery.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/sad-rig.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/sad-town.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_front_from_left-deep_sea.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_front_from_left-delivery.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_front_from_left-rig.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_front_from_left-town.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_front_from_right-deep_sea.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_front_from_right-delivery.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_front_from_right-rig.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_front_from_right-town.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_left-deep_sea.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_left-delivery.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_left-rig.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_left-town.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_right-deep_sea.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_right-delivery.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_right-rig.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/turn_right-town.gif",
+      "frames": 6,
+      "duration_ms": 500,
+      "loop": null
+    },
+    {
+      "file": "preview/travel/walk_left-deep_sea.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/walk_left-delivery.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/walk_left-rig.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/walk_left-town.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/walk_right-deep_sea.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/walk_right-delivery.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/walk_right-rig.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/walk_right-town.gif",
+      "frames": 8,
+      "duration_ms": 670,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/welcome-deep_sea.gif",
+      "frames": 16,
+      "duration_ms": 1330,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/welcome-delivery.gif",
+      "frames": 16,
+      "duration_ms": 1330,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/welcome-rig.gif",
+      "frames": 16,
+      "duration_ms": 1330,
+      "loop": 0
+    },
+    {
+      "file": "preview/travel/welcome-town.gif",
+      "frames": 16,
+      "duration_ms": 1330,
+      "loop": 0
+    }
+  ],
+  "technical_verification_passed": true,
+  "not_a_human_visual_acceptance": true
+}

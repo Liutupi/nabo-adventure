@@ -1,0 +1,41 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_tiles_harbor_rope_coil__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    48007,
+    54567
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 408,
+  "table_bytes": 142,
+  "frame_sha256": [
+    "c7186197a7aa44203c34416c7ed61a6bdbdee58ca11a07f13adbf0a039aec6af"
+  ],
+  "source_sha256": [
+    "c2b03b03ac8f74252fc2c9056a6541bba8a2a012a9e96f793d03993b6b67f3b1"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/tiles/harbor/rope-coil",
+  "group": "static",
+  "symbol": "adv_assets_static_tiles_harbor_rope_coil__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\harbor\\rope-coil.png",
+      "sha256": "c2b03b03ac8f74252fc2c9056a6541bba8a2a012a9e96f793d03993b6b67f3b1"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

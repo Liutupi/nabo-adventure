@@ -1,0 +1,39 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_numbers_36_4__p0",
+  "width": 29,
+  "height": 36,
+  "palette_rgb565": [
+    0,
+    8649
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 252,
+  "table_bytes": 154,
+  "frame_sha256": [
+    "186049aacf51d37d50d4e9a688c535c7da01f91034ea1df5baa814fda864b8fb"
+  ],
+  "source_sha256": [
+    "aee49beebd740c14356e7d0c66c338ac901989f362e13bd3a017474127d8f88d"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/numbers/36/4",
+  "group": "ui",
+  "symbol": "adv_assets_ui_numbers_36_4__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\numbers\\36\\4.png",
+      "sha256": "b7783ed1863858ef6da98382af3302828e47425ff46d3dbc17039dfb30f8e0f8"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

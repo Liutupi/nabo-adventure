@@ -1,0 +1,102 @@
+{
+  "idle": {
+    "rgb565_palette": 64,
+    "rle_data_bytes": 2884,
+    "table_bytes": 1712,
+    "c3_descriptor_bytes": 32,
+    "total_unaligned_bytes": 4628,
+    "verified_frames": 8,
+    "source": "actual repository generate_adv_sprites.index_frames/pack/decode",
+    "comparison": "exact after shared RGB565 quantization, not C decoder validation"
+  },
+  "walk_left": {
+    "rgb565_palette": 64,
+    "rle_data_bytes": 6594,
+    "table_bytes": 1712,
+    "c3_descriptor_bytes": 32,
+    "total_unaligned_bytes": 8338,
+    "verified_frames": 8,
+    "source": "actual repository generate_adv_sprites.index_frames/pack/decode",
+    "comparison": "exact after shared RGB565 quantization, not C decoder validation"
+  },
+  "walk_right": {
+    "rgb565_palette": 64,
+    "rle_data_bytes": 7368,
+    "table_bytes": 1712,
+    "c3_descriptor_bytes": 32,
+    "total_unaligned_bytes": 9112,
+    "verified_frames": 8,
+    "source": "actual repository generate_adv_sprites.index_frames/pack/decode",
+    "comparison": "exact after shared RGB565 quantization, not C decoder validation"
+  },
+  "cheer": {
+    "rgb565_palette": 64,
+    "rle_data_bytes": 18744,
+    "table_bytes": 2480,
+    "c3_descriptor_bytes": 32,
+    "total_unaligned_bytes": 21256,
+    "verified_frames": 8,
+    "source": "actual repository generate_adv_sprites.index_frames/pack/decode",
+    "comparison": "exact after shared RGB565 quantization, not C decoder validation"
+  },
+  "sad": {
+    "rgb565_palette": 64,
+    "rle_data_bytes": 5772,
+    "table_bytes": 1316,
+    "c3_descriptor_bytes": 32,
+    "total_unaligned_bytes": 7120,
+    "verified_frames": 6,
+    "source": "actual repository generate_adv_sprites.index_frames/pack/decode",
+    "comparison": "exact after shared RGB565 quantization, not C decoder validation"
+  },
+  "welcome": {
+    "rgb565_palette": 48,
+    "rle_data_bytes": 39826,
+    "table_bytes": 7872,
+    "c3_descriptor_bytes": 32,
+    "total_unaligned_bytes": 47730,
+    "verified_frames": 16,
+    "source": "actual repository generate_adv_sprites.index_frames/pack/decode",
+    "comparison": "exact after shared RGB565 quantization, not C decoder validation"
+  },
+  "turn_left": {
+    "rgb565_palette": 64,
+    "rle_data_bytes": 6428,
+    "table_bytes": 1316,
+    "c3_descriptor_bytes": 32,
+    "total_unaligned_bytes": 7776,
+    "verified_frames": 6,
+    "source": "actual repository generate_adv_sprites.index_frames/pack/decode",
+    "comparison": "exact after shared RGB565 quantization, not C decoder validation"
+  },
+  "turn_front_from_left": {
+    "rgb565_palette": 64,
+    "rle_data_bytes": 6456,
+    "table_bytes": 1316,
+    "c3_descriptor_bytes": 32,
+    "total_unaligned_bytes": 7804,
+    "verified_frames": 6,
+    "source": "actual repository generate_adv_sprites.index_frames/pack/decode",
+    "comparison": "exact after shared RGB565 quantization, not C decoder validation"
+  },
+  "turn_right": {
+    "rgb565_palette": 64,
+    "rle_data_bytes": 6168,
+    "table_bytes": 1316,
+    "c3_descriptor_bytes": 32,
+    "total_unaligned_bytes": 7516,
+    "verified_frames": 6,
+    "source": "actual repository generate_adv_sprites.index_frames/pack/decode",
+    "comparison": "exact after shared RGB565 quantization, not C decoder validation"
+  },
+  "turn_front_from_right": {
+    "rgb565_palette": 64,
+    "rle_data_bytes": 6098,
+    "table_bytes": 1316,
+    "c3_descriptor_bytes": 32,
+    "total_unaligned_bytes": 7446,
+    "verified_frames": 6,
+    "source": "actual repository generate_adv_sprites.index_frames/pack/decode",
+    "comparison": "exact after shared RGB565 quantization, not C decoder validation"
+  }
+}

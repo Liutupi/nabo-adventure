@@ -1,0 +1,179 @@
+{
+  "source_hash_matches_lock": true,
+  "svg_layers_match_raster_pixels": 42,
+  "all_parts_rgb_match_normalized_source": true,
+  "mirror_used": false,
+  "animations": [
+    {
+      "name": "idle",
+      "frames": 8,
+      "formal_rgba_colours": 64,
+      "runtime_rgba_colours": 64,
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "binary_alpha": true,
+      "hashes_match": true
+    },
+    {
+      "name": "walk_left",
+      "frames": 8,
+      "formal_rgba_colours": 64,
+      "runtime_rgba_colours": 64,
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "binary_alpha": true,
+      "hashes_match": true
+    },
+    {
+      "name": "walk_right",
+      "frames": 8,
+      "formal_rgba_colours": 64,
+      "runtime_rgba_colours": 64,
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "binary_alpha": true,
+      "hashes_match": true
+    },
+    {
+      "name": "cheer",
+      "frames": 8,
+      "formal_rgba_colours": 64,
+      "runtime_rgba_colours": 64,
+      "runtime_canvas": [
+        43,
+        72
+      ],
+      "runtime_anchor": [
+        28,
+        72
+      ],
+      "binary_alpha": true,
+      "hashes_match": true
+    },
+    {
+      "name": "sad",
+      "frames": 6,
+      "formal_rgba_colours": 64,
+      "runtime_rgba_colours": 64,
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "binary_alpha": true,
+      "hashes_match": true
+    },
+    {
+      "name": "welcome",
+      "frames": 16,
+      "formal_rgba_colours": 64,
+      "runtime_rgba_colours": 49,
+      "runtime_canvas": [
+        58,
+        120
+      ],
+      "runtime_anchor": [
+        31,
+        120
+      ],
+      "binary_alpha": true,
+      "hashes_match": true
+    },
+    {
+      "name": "turn_left",
+      "frames": 6,
+      "formal_rgba_colours": 64,
+      "runtime_rgba_colours": 64,
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "binary_alpha": true,
+      "hashes_match": true
+    },
+    {
+      "name": "turn_front_from_left",
+      "frames": 6,
+      "formal_rgba_colours": 64,
+      "runtime_rgba_colours": 64,
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "binary_alpha": true,
+      "hashes_match": true
+    },
+    {
+      "name": "turn_right",
+      "frames": 6,
+      "formal_rgba_colours": 64,
+      "runtime_rgba_colours": 64,
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "binary_alpha": true,
+      "hashes_match": true
+    },
+    {
+      "name": "turn_front_from_right",
+      "frames": 6,
+      "formal_rgba_colours": 64,
+      "runtime_rgba_colours": 64,
+      "runtime_canvas": [
+        22,
+        48
+      ],
+      "runtime_anchor": [
+        11,
+        48
+      ],
+      "binary_alpha": true,
+      "hashes_match": true
+    }
+  ],
+  "transitions": [
+    {
+      "side": "left",
+      "all_four_turn_endpoints_pixel_identical": true
+    },
+    {
+      "side": "right",
+      "all_four_turn_endpoints_pixel_identical": true
+    }
+  ],
+  "visual_acceptance": "not implied by technical validation"
+}

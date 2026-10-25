@@ -1,14 +1,28 @@
+# IDF reads component requirements once in CMake script mode, where
+# CONFIGURE_DEPENDS is unavailable. The normal configure tracks new assets.
+if(CMAKE_SCRIPT_MODE_FILE)
+    file(GLOB ADV_GENERATED "${CMAKE_CURRENT_SOURCE_DIR}/generated/*.c")
+else()
+    file(GLOB ADV_GENERATED CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/generated/*.c")
+endif()
 idf_component_register(
     SRCS
+        ${ADV_GENERATED}
+        "adv_boot.c"
         "adv_demo.c"
         "adv_gfx.c"
         "adv_main.c"
         "adv_model.c"
+        "adv_ninepatch.c"
+        "adv_persist.c"
         "adv_shapes.c"
         "adv_sound.c"
+        "adv_sprite.c"
         "adv_stations.c"
         "adv_text.c"
         "adv_ui.c"
+        "adv_ui_animation.c"
+        "adv_ui_art.c"
         "adv_ui_jump.c"
         "adv_ui_map.c"
         "adv_ui_session.c"
@@ -35,6 +49,6 @@ idf_component_register(
         "nabo_ui_font_18.c"
     INCLUDE_DIRS "."
     REQUIRES bsp lvgl esp_lcd esp_timer nvs_flash esp_rom
-    EMBED_FILES "jump_sprites.bin" "jump_sounds.bin"
+    EMBED_FILES "jump_sprites.bin" "jump_sounds.bin" "adv_boot_voice.wav"
 )
 target_compile_options(${COMPONENT_LIB} PRIVATE -O2)

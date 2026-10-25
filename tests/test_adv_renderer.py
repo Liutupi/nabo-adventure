@@ -17,8 +17,8 @@ BOARD = ROOT/'firmware/main'
 HOST = ROOT/'tests/adv_host'
 UP, DOWN, OK = 0, 1, 2
 PRESS, CLICK, DOUBLE, LONG, RELEASE = 0, 1, 2, 3, 4
-SOURCES = ['adv_model.c', 'adv_stations.c', 'adv_demo.c', 'collection_model.c', 'adv_gfx.c', 'adv_shapes.c',
-           'adv_text.c', 'adv_ui.c', 'adv_ui_map.c', 'adv_ui_session.c', 'adv_ui_jump.c', 'collection_portrait.c',
+SOURCES = ['adv_model.c', 'adv_stations.c', 'adv_demo.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
+           'adv_text.c', 'adv_ui.c', 'adv_ui_animation.c', 'adv_ui_art.c', 'adv_ui_map.c', 'adv_ui_session.c', 'adv_ui_jump.c', 'collection_portrait.c',
            'nabo_jump_model.c', 'nabo_jump_rig.c', 'nabo_dive_text.c', 'collection_font_12.c', 'collection_font_16.c',
            'collection_font_18.c', 'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c']
 
@@ -38,7 +38,7 @@ class Renderer(unittest.TestCase):
         library = folder/'adv_render.dll'
         subprocess.run([CC, '-std=gnu11', '-O2', '-shared', SHARED_EXPORT, '-Wall', '-Wextra', '-Werror',
                         '-Wno-missing-field-initializers', '-I', str(HOST), '-I', str(BOARD)] +
-                       [str(BOARD/s) for s in SOURCES] + [str(HOST/'adv_ui_host.c'), str(assembly), '-lm', '-o',
+                       [str(BOARD/s) for s in SOURCES] + [str(p) for p in sorted((BOARD/'generated').glob('*.c'))] + [str(HOST/'adv_ui_host.c'), str(assembly), '-lm', '-o',
                        str(library)], check=True)
         cls.lib = lib = ctypes.CDLL(str(library))
         lib.host_new.argtypes = [ctypes.c_uint32, ctypes.POINTER(ctypes.c_uint32), ctypes.c_uint32]
@@ -48,6 +48,8 @@ class Renderer(unittest.TestCase):
         lib.host_jump_tick.argtypes = [ctypes.c_uint32, ctypes.c_int]
         lib.host_jump_item.argtypes = [ctypes.c_int, ctypes.c_int]
         lib.host_band.argtypes = [ctypes.c_uint16, ctypes.c_uint16]
+        lib.host_draw_at.argtypes = [ctypes.c_uint32]
+        lib.host_boot_start.argtypes = [ctypes.c_uint32]
         cls.previews = ROOT/'private/previews'
         cls.previews.mkdir(parents=True, exist_ok=True)
         cls.docs = ROOT/'docs/images/ui'
@@ -135,6 +137,26 @@ class Renderer(unittest.TestCase):
             self.save(f'map-{i}.png')
             self.click(UP)
         self.save('map-space.png', True)
+
+    def test_boot_and_map_animation_incremental_matches_full_at_boundaries(self):
+        self.new([0, 60, 700, 30, 70, 400, 50, 1200, 1000], seen=0xffffff)
+        self.lib.host_boot_start(1000)
+        frames = []
+        for t in (0, 250, 449, 450, 600, 1000, 1399, 1400, 1500, 2000, 2733, 2734, 4066, 4067, 5000):
+            self.lib.host_draw_at(1000 + t)
+            self.check(f'boot {t}')
+            frames.append(self.snapshot())
+            if t in (0, 1000, 2000, 5000): self.save(f'boot-{t}.png', True)
+        self.assertNotEqual(frames[0], frames[-1])
+        self.assertEqual(frames[-2], frames[-1], 'cover settles after its one-time introduction')
+        self.click(OK)
+        self.click(UP)
+        frames = []
+        for t in (0, 200, 416, 499, 500, 800, 1166, 1167, 1500, 1666, 1667, 1800):
+            self.lib.host_draw_at(6000 + t)
+            self.check(f'map travel {t}')
+            frames.append(self.snapshot())
+        self.assertNotEqual(frames[0], frames[4])
 
     def test_random_inputs_never_leave_stale_pixels(self):
         self.new([0, 30, 700, 12, 11, 0, 0, 0, 0])

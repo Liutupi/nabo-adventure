@@ -1,0 +1,40 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_resources_icons_fuel__p0",
+  "width": 16,
+  "height": 16,
+  "palette_rgb565": [
+    0,
+    8649,
+    54567
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 192,
+  "table_bytes": 76,
+  "frame_sha256": [
+    "e6b19f594bbae62a12fb50f91e3d150f282ee37c96a6cde25e55315851cdf99c"
+  ],
+  "source_sha256": [
+    "f5a2fa68b1fa72509679f19dbdcbbeef7fe39cd3b92739f156b6d7bb355889b9"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/resources/icons/fuel",
+  "group": "ui",
+  "symbol": "adv_assets_ui_resources_icons_fuel__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\icons\\fuel.png",
+      "sha256": "c782c1caea1d961d80c14ce152bec284eb7a232948cf108bf89bd3e40ce8d078"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

@@ -1,0 +1,41 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_map_lock__p0",
+  "width": 16,
+  "height": 16,
+  "palette_rgb565": [
+    0,
+    8649,
+    29514,
+    56884
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 152,
+  "table_bytes": 78,
+  "frame_sha256": [
+    "b50bcfdca3f9af536d739685e52175a8d2dcd4ef69860ae4fb81ba07058ce1e1"
+  ],
+  "source_sha256": [
+    "51d18d4f75e00fa313ec02367c72f41877c26c871cf5cc99198aaec61e665157"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/map/lock",
+  "group": "ui",
+  "symbol": "adv_assets_ui_map_lock__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\lock.png",
+      "sha256": "b8514b70be05d9678c2ff20e37beb23cbedae4ec66b631c1e03df853613117d4"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

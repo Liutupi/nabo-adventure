@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-25",
+  "workflow": "built-in image_gen identity-preserve edit",
+  "reference": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\reference\\nabo-idle-original.png",
+  "reference_sha256": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243",
+  "generated_source": "C:\\Users\\pc\\.codex\\generated_images\\01a17154-5dc2-7100-97a6-8e7f4eb4993f\\exec-33cfe3a4-fb1a-436c-ada1-eff97e728a1e.png",
+  "output": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\design\\round1\\v2\\03-post-traveler.png",
+  "output_sha256": "605f7bb06888f2da008f9a3f14108480e7b737b85542309d08fb11edc86b76b2",
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "transparent_background": false,
+  "prompt_file": "03-post-traveler-prompt.txt",
+  "generation_count": 1,
+  "status": "candidate_pending_user_selection",
+  "visual_review": "Three full-body views, short olive cape, postal bag and short boots. Original soft dimensional style retained; dark wavy hair, rounded black glasses, blue-gray eyes and white cap retained. NABO and cap marks read forward in every view. Visual comparison does not establish exact pixel identity across newly generated angles."
+}

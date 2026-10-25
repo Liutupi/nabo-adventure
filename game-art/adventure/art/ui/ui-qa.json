@@ -1,0 +1,21 @@
+{
+  "status": "PASS: EXPORTED PIXEL AND STRUCTURAL CHECKS",
+  "firmware_or_device_acceptance": false,
+  "assets": 137,
+  "shared_ui_visible_colors": 13,
+  "nine_slice": "6 families/states; 48x32 and 240x120; original corners, no interior gaps",
+  "font": {
+    "path": "D:\\AI PASSPORT XIAOZHI\\nabo-fortune\\tools\\fonts\\SourceHanSansCN-Medium.otf",
+    "sha256": "a94e558a2fe972bee4f46bce0843abff37063fd68c33f1e7d9058f6f09432b01",
+    "chinese_sizes_px": [
+      12,
+      16,
+      18
+    ]
+  },
+  "cover_layer_assembly": "pixel_equal",
+  "preview_screen_count": 13,
+  "row_rle_estimate_bytes_deduplicated": 62140,
+  "packed_limit_bytes": 163840,
+  "actual_firmware_pack_measurement": "pending integration; this is an explicit estimate, not PNG byte size"
+}

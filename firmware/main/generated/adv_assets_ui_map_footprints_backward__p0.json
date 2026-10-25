@@ -1,0 +1,39 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_map_footprints_backward__p0",
+  "width": 10,
+  "height": 10,
+  "palette_rgb565": [
+    0,
+    45672
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 54,
+  "table_bytes": 50,
+  "frame_sha256": [
+    "a2f280f52fd77bdd7e94fa016c1f2d1758cb50acbe6cefd0fa215e2e48756ba6"
+  ],
+  "source_sha256": [
+    "40112acc7c618b54d3ff1b0e8aed883beaa4a8b5b8e926875a5f495af178ddc4"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/map/footprints-backward",
+  "group": "ui",
+  "symbol": "adv_assets_ui_map_footprints_backward__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\footprints-backward.png",
+      "sha256": "1b288ae6af50dffcbe1856a21dc550bff4e4551896751e2f1f7becfab9465f6a"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

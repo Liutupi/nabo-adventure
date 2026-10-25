@@ -1,0 +1,136 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_travel_turn_right__p0",
+  "width": 22,
+  "height": 48,
+  "palette_rgb565": [
+    0,
+    4226,
+    6473,
+    8453,
+    10634,
+    10699,
+    12548,
+    12613,
+    12812,
+    12813,
+    14661,
+    14726,
+    14793,
+    16741,
+    16773,
+    16839,
+    16938,
+    17037,
+    18854,
+    21261,
+    23014,
+    23080,
+    23178,
+    23471,
+    25584,
+    27208,
+    27697,
+    29320,
+    29744,
+    29843,
+    31434,
+    31531,
+    31630,
+    33513,
+    33971,
+    34036,
+    37707,
+    37936,
+    38198,
+    39820,
+    44046,
+    44210,
+    44407,
+    46586,
+    50319,
+    50549,
+    52465,
+    52826,
+    54644,
+    54774,
+    54972,
+    59165,
+    60820,
+    60917,
+    61246,
+    63030,
+    63293,
+    63326,
+    63358,
+    65176,
+    65241,
+    65439,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "data_bytes": 6168,
+  "table_bytes": 1316,
+  "frame_sha256": [
+    "c1ca8a5bc8def9e235a5296d3e522d9560b0cc249f8b7387c445587c880bae54",
+    "8f1e3e9ae175ac6ee37a72f65153d679cd48a154aee4d458587e9f240079968f",
+    "aa2c75d687a5d41daf916117b35a9df08e96608bd033cbc3164f15563f219dbe",
+    "47d33d69e317e5935ec3a06b22ea6c89bb3badd95b66b2f089bd602f16e2f6e3",
+    "81c623c574adabbc1d921bfe3917d9bf969e547d7868ebc3d887fc11045243c6",
+    "e2067209704995a18a74a1d17ca1b8c2c065332962221c3dab5898bb4466e41b"
+  ],
+  "source_sha256": [
+    "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07",
+    "e6d5538c7c10e122a082e8b2d7b12c0444c6150fd5c581a71eb6b1a782ea41eb",
+    "34764bb8a40ea4f0d54e9bd130b2a86f9b25d5f3a1a9b12de0ebbe5a8ec16f55",
+    "ccdd0f3ea45b412017afa929fceffd0f71127fd96a092417c5eb48cdb4d11196",
+    "40e705c8e6b55ddfadfabab7a4df0ee515359d51a53577f1c2321ee0f157da81",
+    "b3ce32133dfa613776ea7bae89002287fe62b19f0c192d8ac3b969748514047d"
+  ],
+  "verified_frames": 6,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "travel/turn_right",
+  "group": "travel",
+  "symbol": "adv_assets_travel_turn_right__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\turn_right\\000.png",
+      "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\turn_right\\001.png",
+      "sha256": "e6d5538c7c10e122a082e8b2d7b12c0444c6150fd5c581a71eb6b1a782ea41eb"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\turn_right\\002.png",
+      "sha256": "34764bb8a40ea4f0d54e9bd130b2a86f9b25d5f3a1a9b12de0ebbe5a8ec16f55"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\turn_right\\003.png",
+      "sha256": "ccdd0f3ea45b412017afa929fceffd0f71127fd96a092417c5eb48cdb4d11196"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\turn_right\\004.png",
+      "sha256": "40e705c8e6b55ddfadfabab7a4df0ee515359d51a53577f1c2321ee0f157da81"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\turn_right\\005.png",
+      "sha256": "b3ce32133dfa613776ea7bae89002287fe62b19f0c192d8ac3b969748514047d"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

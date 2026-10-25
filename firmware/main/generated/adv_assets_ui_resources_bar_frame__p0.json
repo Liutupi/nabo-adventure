@@ -1,0 +1,40 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_resources_bar_frame__p0",
+  "width": 128,
+  "height": 10,
+  "palette_rgb565": [
+    0,
+    8649,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 44,
+  "table_bytes": 52,
+  "frame_sha256": [
+    "a58c6c99a0c8f58bd12b3e06b10d51339ad538e496f609b3bd6dbeac581a011f"
+  ],
+  "source_sha256": [
+    "a5902505018441ee24aedce3a43764bf53836269adbee3082ded870ee051a0ab"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/resources/bar-frame",
+  "group": "ui",
+  "symbol": "adv_assets_ui_resources_bar_frame__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\bar-frame.png",
+      "sha256": "fcdf1d911cd1f372c79a4d6cd96a1884e74348fe61ba82ae3c6816b313985602"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

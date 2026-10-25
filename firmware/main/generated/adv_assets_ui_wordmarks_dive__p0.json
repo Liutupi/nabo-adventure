@@ -1,0 +1,42 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_wordmarks_dive__p0",
+  "width": 200,
+  "height": 80,
+  "palette_rgb565": [
+    0,
+    8649,
+    44173,
+    45672,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 2160,
+  "table_bytes": 336,
+  "frame_sha256": [
+    "c981eb119b5ca64c5211d813d9b771802b92d9355a89cbdb19f0df8fa1bd1eba"
+  ],
+  "source_sha256": [
+    "86123c98466f2460673f714e6a3acb317f287521fd31e3ac6a46364a27bc696b"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/wordmarks/dive",
+  "group": "ui",
+  "symbol": "adv_assets_ui_wordmarks_dive__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\wordmarks\\dive.png",
+      "sha256": "c5ea475f5ad173fde9bc148dba6e24631b01fd3c9f62f78e70bd5e19938c8753"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

@@ -6,15 +6,14 @@
 
 static void draw_backdrop(ag_t *g, const adv_station_t *st)
 {
-    uint16_t c = st->color;
-    int r = (c >> 11) * 255 / 31, gr = (c >> 5 & 63) * 255 / 63, b = (c & 31) * 255 / 31;
-    ag_band(g, 0, 320, ag_rgb(r / 5, gr / 5, b / 4 + 20), ag_rgb(r / 2, gr / 2, b / 2));
+    (void)st;
+    ui_paper(g);
 }
 
 // Placeholder play field (adv_demo.c): the track, the zone and the marker.
 static void draw_demo(ag_t *g, const adv_demo_t *d, const adv_station_t *st)
 {
-    ag_text(g, &collection_font_16, "占位关卡", 120, 108, NT_ALIGN_CENTER, UI_PAPER);
+    ag_text(g, &collection_font_16, "占位关卡", 120, 108, NT_ALIGN_CENTER, UI_INK);
     ag_text(g, &collection_font_12, "正式玩法和美术完成后替换", 120, 128, NT_ALIGN_CENTER, UI_DIM);
     int zx = 20 + (d->zc - d->zh) * 200 / 1000, zw = d->zh * 2 * 200 / 1000, mx = 20 + d->p * 200 / 1000;
     ag_rect(g, 16, 180, 208, 20, 10, UI_INK, 200, d->miss ? UI_RED : UI_PAPER, d->miss ? 2 : 1);
@@ -22,17 +21,19 @@ static void draw_demo(ag_t *g, const adv_demo_t *d, const adv_station_t *st)
     if (d->hit) ag_glow(g, mx, 190, 26, UI_GOLD);
     ag_rect(g, mx - 3, 174, 6, 32, 3, UI_WHITE, 255, UI_INK, 1);
     ag_tri(g, mx, 214, 10, true, UI_WHITE);
-    ag_text(g, &collection_font_12, "色块里按 OK 得分 · 按错扣四分之一", 120, 248, NT_ALIGN_CENTER, UI_PAPER);
+    ag_text(g, &collection_font_12, "色块里按 OK 得分 · 按错扣四分之一", 120, 248, NT_ALIGN_CENTER, UI_INK);
 }
 
-static void draw_hud(ag_t *g, const adv_model_t *m, const adv_station_t *st)
+static void draw_hud(ag_t *g, const adv_model_t *m)
 {
     adv_status_t status = adv_game_status(m);
-    ag_rect(g, 0, 0, 240, 34, 0, UI_INK, 210, 0, 0);
-    ag_text(g, &collection_font_12, st->resource, 10, 21, NT_ALIGN_LEFT, UI_PAPER);
-    int w = status.resource * 120 / ADV_RESOURCE_MAX;
-    ag_rect(g, 40, 12, 124, 10, 5, ag_rgb(20, 24, 40), 255, UI_PAPER, 1);
-    if (w > 0) ag_rect(g, 42, 14, w, 6, 3, status.resource < ADV_RESOURCE_MAX / 4 ? UI_RED : st->color, 255, 0, 0);
+    ui_art(g, "ui/bars/top", 0, 0, 0);
+    static const char *const icons[] = {"", "stamina", "oxygen", "steam", "spirit", "stamina", "temperature", "hot-air", "fuel"};
+    char icon[64]; snprintf(icon, sizeof(icon), "ui/resources/icons/%s", icons[m->station]);
+    ui_art(g, icon, 0, 10, 8);
+    ui_art(g, "ui/resources/bar-frame", 0, 36, 11);
+    int w = status.resource * 124 / ADV_RESOURCE_MAX;
+    if (w > 0) ag_rect(g, 38, 13, w, 6, 0, status.resource < ADV_RESOURCE_MAX / 4 ? UI_RED : ADV_ASSETS_UI_TEAL, 255, 0, 0);
     char score[16];
     snprintf(score, sizeof(score), "%u", (unsigned)status.score);
     ag_text(g, &nabo_poster_font_28, score, 230, 29, NT_ALIGN_RIGHT, UI_WHITE);
@@ -40,12 +41,12 @@ static void draw_hud(ag_t *g, const adv_model_t *m, const adv_station_t *st)
 
 static void draw_title(ag_t *g, const adv_model_t *m, const adv_station_t *st, int s)
 {
-    ag_text(g, &collection_font_12, st->world, 120, 44, NT_ALIGN_CENTER, UI_PAPER);
-    ag_text(g, &nabo_poster_font_28, st->en, 120, 80, NT_ALIGN_CENTER, UI_WHITE);
-    ag_text(g, &collection_font_18, st->cn, 120, 108, NT_ALIGN_CENTER, UI_GOLD);
+    ui_header(g, st->world, NULL);
+    char wordmark[64];
+    snprintf(wordmark, sizeof(wordmark), "ui/wordmarks/%s", st->id);
+    ui_art(g, wordmark, 0, 20, 38);
     if (st->placeholder) {
-        ag_rect(g, 80, 120, 80, 20, 10, UI_GOLD, 255, UI_INK, 1);
-        ag_text(g, &collection_font_12, "占位关卡", 120, 135, NT_ALIGN_CENTER, UI_INK);
+        ui_art(g, "ui/labels/placeholder", 0, 76, 120);
     }
     uint32_t earned = adv_earned(m);
     for (int tier = 0; tier < 3; tier++) {
@@ -54,18 +55,18 @@ static void draw_title(ag_t *g, const adv_model_t *m, const adv_station_t *st, i
         ag_circle(g, x, 182, 18, ui_tier_color(tier), on ? 255 : 40, on ? UI_INK : ui_tier_color(tier), 2);
         char th[16];
         snprintf(th, sizeof(th), "%u", (unsigned)adv_threshold(s, tier));
-        ag_text(g, &nabo_mono_font_12, th, x, 218, NT_ALIGN_CENTER, UI_PAPER);
+        ag_text(g, &nabo_mono_font_12, th, x, 218, NT_ALIGN_CENTER, UI_INK);
     }
     char best[32];
     snprintf(best, sizeof(best), "最佳 %u", (unsigned)m->best[s]);
-    ag_text(g, &collection_font_18, best, 120, 254, NT_ALIGN_CENTER, UI_PAPER);
+    ag_text(g, &collection_font_18, best, 120, 254, NT_ALIGN_CENTER, UI_INK);
     ui_footer(g, "OK 开始 · 长按上 回地图");
 }
 
 static void draw_card(ag_t *g, int y, int h)
 {
     ag_rect(g, 0, 34, 240, 286, 0, UI_INK, 150, 0, 0);
-    ag_rect(g, 24, y, 192, h, 14, UI_PAPER, 250, UI_INK, 2);
+    ui_popup(g, 24, y, 192, h);
 }
 
 static void draw_result(ag_t *g, const adv_model_t *m, int s)
@@ -75,10 +76,9 @@ static void draw_result(ag_t *g, const adv_model_t *m, int s)
     ag_text(g, &collection_font_16, "本局成绩", 120, 88, NT_ALIGN_CENTER, UI_INK);
     char line[32];
     snprintf(line, sizeof(line), "%u", (unsigned)status.score);
-    ag_text(g, &nabo_poster_font_48, line, 120, 142, NT_ALIGN_CENTER, UI_INK);
+    ui_number(g, line, 36, 120, 106, NT_ALIGN_CENTER);
     if (m->record) {
-        ag_rect(g, 82, 152, 76, 20, 10, UI_GOLD, 255, UI_INK, 1);
-        ag_text(g, &collection_font_12, m->test ? "测试不记录" : "新纪录", 120, 167, NT_ALIGN_CENTER, UI_INK);
+        ui_art(g, m->test ? "ui/labels/test-no-record" : "ui/labels/new-record", 0, m->test ? 72 : 84, 150);
     }
     snprintf(line, sizeof(line), "最佳 %u", (unsigned)m->best[s]);
     ag_text(g, &collection_font_16, line, 120, 194, NT_ALIGN_CENTER, UI_INK);
@@ -99,13 +99,13 @@ void ui_draw_session(ag_t *g, const adv_model_t *m)
     ag_begin(g, m->phase == ADV_RESULT ? UI_SCENE_RESULT : UI_SCENE_PLAY);
     draw_backdrop(g, st);
     if (st->game == &adv_demo_game) draw_demo(g, m->game, st);
-    draw_hud(g, m, st);
+    draw_hud(g, m);
     if (m->phase == ADV_READY) {
         char n[12];
         snprintf(n, sizeof(n), "%d", (m->t + 59) / 60);
         ag_glow(g, 120, 150, 50, UI_GOLD);
-        ag_text(g, &nabo_poster_font_48, n, 120, 168, NT_ALIGN_CENTER, UI_WHITE);
-        ag_text(g, &collection_font_18, "准备", 120, 270, NT_ALIGN_CENTER, UI_PAPER);
+        ui_number(g, n, 36, 120, 132, NT_ALIGN_CENTER);
+        ag_text(g, &collection_font_18, "准备", 120, 270, NT_ALIGN_CENTER, UI_INK);
     } else if (m->phase == ADV_END) {
         ag_rect(g, 70, 136, 100, 40, 12, UI_INK, 230, UI_RED, 2);
         ag_text(g, &collection_font_18, "结束", 120, 163, NT_ALIGN_CENTER, UI_PAPER);

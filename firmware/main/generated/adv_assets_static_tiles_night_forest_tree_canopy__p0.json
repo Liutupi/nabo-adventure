@@ -1,0 +1,42 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_tiles_night_forest_tree_canopy__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    15375,
+    17298,
+    48007
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 348,
+  "table_bytes": 144,
+  "frame_sha256": [
+    "fd314583aad59c218109bdf4f472c9d66c51ec4cfbf24362516c153f397e5815"
+  ],
+  "source_sha256": [
+    "1eabc966d94af1e137a567ab95f96da811e16a88a36af59c3521e5369ce6b6dc"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/tiles/night-forest/tree-canopy",
+  "group": "static",
+  "symbol": "adv_assets_static_tiles_night_forest_tree_canopy__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\night-forest\\tree-canopy.png",
+      "sha256": "1eabc966d94af1e137a567ab95f96da811e16a88a36af59c3521e5369ce6b6dc"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

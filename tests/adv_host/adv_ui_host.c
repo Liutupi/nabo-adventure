@@ -5,6 +5,7 @@
 #include "adv_gfx.h"
 #include "adv_model.h"
 #include "adv_ui.h"
+#include "adv_ui_animation.h"
 #include "nabo_jump_model.h"
 
 static uint16_t pixels[240 * 320];
@@ -40,7 +41,9 @@ int host_new(uint32_t seed, const uint32_t *best, uint32_t seen)
     if (!adv_ui_open()) return 0;
     cg_settings_t s = {70, 80, 300, true};
     adv_init(&model, seed, &s, best, seen);
-    adv_ui_draw(&model, 1000, 85, 4010);
+    now = 1000;
+    adv_ui_boot_end();
+    adv_ui_draw(&model, now, 85, 4010);
     return 1;
 }
 int host_event(int button, int event) { return adv_event(&model, (adv_btn_t)button, (adv_ev_t)event); }
@@ -51,8 +54,10 @@ int host_steps(int n)
     return fx;
 }
 int host_legacy(uint32_t best) { return adv_legacy_done(&model, best); }
-void host_draw(void) { adv_ui_draw(&model, 1000, 85, 4010); }
-void host_full(void) { adv_ui_invalidate(); adv_ui_draw(&model, 1000, 85, 4010); }
+void host_draw(void) { adv_ui_draw(&model, now, 85, 4010); }
+void host_draw_at(uint32_t ms) { now = ms; host_draw(); }
+void host_boot_start(uint32_t ms) { now = ms; adv_ui_boot_begin(ms); }
+void host_full(void) { adv_ui_invalidate(); adv_ui_draw(&model, now, 85, 4010); }
 int host_overflow(void) { return adv_ui_overflow(); }
 int host_page(void) { return model.page; }
 int host_phase(void) { return model.in_session ? model.phase : -1; }

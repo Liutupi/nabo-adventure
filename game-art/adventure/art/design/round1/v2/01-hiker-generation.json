@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-25",
+  "tool": "built-in image_gen.imagegen",
+  "mode": "identity-preserve edit",
+  "calls": 1,
+  "reference": "../../../reference/nabo-idle-original.png",
+  "reference_sha256": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243",
+  "generated_original": "C:/Users/pc/.codex/generated_images/01a17156-b34f-7b73-aae0-0b162ea1a5dc/exec-8f3901e8-856a-4c9f-a4ac-7d5c001f8e20.png",
+  "workspace_output": "01-hiker-design-board.png",
+  "output_sha256": "3ed446475284c3d1b75ba78a41d75922935ee928bc91ba51fccbd7d8a13a1060",
+  "size": [1774, 887],
+  "mode_of_png": "RGB",
+  "transparent_background": false,
+  "prompt_file": "01-hiker-prompt.txt",
+  "visual_review": {
+    "reference_and_output_viewed": true,
+    "identity_basis": "Only the original 1254px NABO PNG; no previous SVG or rejected design supplied",
+    "observations": "The output retains the original soft dimensional illustration, face and eyes, glasses, hair, white cap and forward NABO wordmark. It shows three aligned full-body views with the requested short hiking jacket, crossbody satchel and walking shoes. The source medical coat, stethoscope and badge were replaced. Front identity is recognizable and much closer to the original than the withdrawn SVG studies; generated facial projections are not pixel-identical to the source.",
+    "selection_status": "awaiting user review; not accepted identity or final art",
+    "limitations": "This is generated costume concept art. Fine facial projection and cap/wordmark geometry still require user comparison and approval before rigging. No 48px sprite packing or animation validation performed."
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_travel_cheer__p0",
+  "width": 43,
+  "height": 72,
+  "palette_rgb565": [
+    0,
+    2113,
+    6307,
+    6405,
+    6472,
+    8553,
+    10565,
+    10667,
+    12548,
+    12613,
+    12713,
+    12779,
+    12813,
+    14660,
+    14694,
+    14859,
+    14925,
+    16773,
+    16807,
+    18821,
+    19181,
+    20934,
+    20999,
+    21066,
+    23471,
+    27175,
+    27698,
+    29288,
+    29386,
+    29615,
+    29810,
+    29875,
+    31564,
+    34004,
+    34069,
+    35561,
+    35921,
+    37739,
+    38231,
+    41900,
+    44078,
+    46257,
+    46486,
+    50746,
+    52335,
+    52629,
+    54513,
+    54972,
+    58935,
+    59132,
+    60787,
+    60885,
+    61245,
+    61246,
+    63325,
+    63358,
+    63390,
+    65078,
+    65143,
+    65208,
+    65241,
+    65439,
+    65503,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    2,
+    2,
+    2,
+    5,
+    5,
+    5
+  ],
+  "data_bytes": 18744,
+  "table_bytes": 2480,
+  "frame_sha256": [
+    "6d5974b33ed8e4ea32d53dd644975b3153bbadca77c0e25023090caee9c390d1",
+    "d5c0a86ddfce6eaabb30916097c7a9ae8b71ba45b788cc71632e36b57476ee1f",
+    "c7d2a0f344c0ef2d0fd818d8dd64549afeeb54386e432a25f8dfb0b987476b7d",
+    "ad60ac853f5c7a00b8f189379614b4f46c79cfc4b1152938116ca97954abad87",
+    "9e9a680da65216eee1e9141103356cb6abb18d70badc53bea3725b52ae7830e8",
+    "6dff6d78edcc43ceca8aa292a9c32f717bdb87fa6c80a68e6361f08d39a49b7b",
+    "6dc988b6968c82e20b12b06d1909ef0ad5bdebda8754d6fcb1c2ae27e6d12898",
+    "6d5974b33ed8e4ea32d53dd644975b3153bbadca77c0e25023090caee9c390d1"
+  ],
+  "source_sha256": [
+    "783f4e55369fc46d682eeb5e5bcb1c9c04c18ceca20b82ddaa650066408cf45c",
+    "bf0dadd87c46de44b69320bf9e22a7ac7559095958ac97e5559025c0e9d6d3e7",
+    "7fb7b3642c91c6215618d3bfb73477bf927ba64587d8d03dad79645f6681e3ab",
+    "a9d344d304086e16a62ade6b916c106f59d8f1945056266c0c4285ca345fc7c3",
+    "1d149e49a52ffb41b5c46e21fbc694f049e4086912e454dcffa43dd725ac9f45",
+    "69b4264592427960907efb49e7f4e23e738ca5084b7d8c19540bec8c54725ce0",
+    "fe1e249aa9afc60fe37e3700f71aaaf6ba3a75549ac28acd0e2fd24dd37438f4",
+    "783f4e55369fc46d682eeb5e5bcb1c9c04c18ceca20b82ddaa650066408cf45c"
+  ],
+  "verified_frames": 8,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "travel/cheer",
+  "group": "travel",
+  "symbol": "adv_assets_travel_cheer__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\000.png",
+      "sha256": "783f4e55369fc46d682eeb5e5bcb1c9c04c18ceca20b82ddaa650066408cf45c"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\001.png",
+      "sha256": "bf0dadd87c46de44b69320bf9e22a7ac7559095958ac97e5559025c0e9d6d3e7"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\002.png",
+      "sha256": "7fb7b3642c91c6215618d3bfb73477bf927ba64587d8d03dad79645f6681e3ab"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\003.png",
+      "sha256": "a9d344d304086e16a62ade6b916c106f59d8f1945056266c0c4285ca345fc7c3"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\004.png",
+      "sha256": "1d149e49a52ffb41b5c46e21fbc694f049e4086912e454dcffa43dd725ac9f45"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\005.png",
+      "sha256": "69b4264592427960907efb49e7f4e23e738ca5084b7d8c19540bec8c54725ce0"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\006.png",
+      "sha256": "fe1e249aa9afc60fe37e3700f71aaaf6ba3a75549ac28acd0e2fd24dd37438f4"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\007.png",
+      "sha256": "783f4e55369fc46d682eeb5e5bcb1c9c04c18ceca20b82ddaa650066408cf45c"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

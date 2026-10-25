@@ -1,0 +1,41 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_ui_cards_menu_selected_top_right__p0",
+  "width": 12,
+  "height": 12,
+  "palette_rgb565": [
+    0,
+    8649,
+    45672,
+    63185
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 78,
+  "table_bytes": 62,
+  "frame_sha256": [
+    "7ff22f06bf25b4d73c79f5e2ec76c3bc2659d45a543ce5530a2442e61e5881fb"
+  ],
+  "source_sha256": [
+    "60d46aa8159bbc59f12169a9b276d1694127e9a9bb4c0308abc11bccf4df7bd8"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ui/cards/menu/selected/top-right",
+  "group": "ui",
+  "symbol": "adv_assets_ui_cards_menu_selected_top_right__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\cards\\menu\\selected\\top-right.png",
+      "sha256": "8ebef04da87b96561a39733d5bb2aa8c4e02e23746c8c61ac36f36909b8d65a4"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

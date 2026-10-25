@@ -1,0 +1,68 @@
+{
+  "self_repairs": [
+    {
+      "issue": "Cheer independent head lift exposed a 2-row neck gap.",
+      "evidence_before": "revisions/cheer-attempt1-neck-gap.png",
+      "core_neck_empty_pixels_before": 20,
+      "fix": "Use whole-body hop; keep original head attached to the collar. No hidden anatomy drawn.",
+      "core_neck_empty_pixels_after": 0,
+      "comparison": "revisions/cheer-neck-before-after.png"
+    },
+    {
+      "issue": "Initial low celebration arm looked more like a flat sideways indication.",
+      "fix": "Raised existing near upper arm 58 degrees and source forearm 70 degrees; retained source overlap at shoulder/elbow.",
+      "evidence": "revisions/cheer-attempt2-raised-arm.png"
+    },
+    {
+      "issue": "Independent per-action runtime crop/palette could pop scale, origin and clothing colors at facing switches.",
+      "fix": "One shared crop/scale/palette for every 48px idle/walk/sad/turn; four 6-frame registered facing-source turns with exact endpoint reuse."
+    }
+  ],
+  "continuity_summary": {
+    "left": {
+      "max_boundary_centroid_delta_px": 0.13790045646646418,
+      "max_boundary_sole_delta_px": 0,
+      "hard_cut_head_rgba_mae": 30.496685606060606,
+      "registered_turn_adjacent_head_rgba_mae": [
+        2.7163825757575757,
+        7.705965909090909,
+        11.258049242424242,
+        7.704545454545454,
+        3.684659090909091
+      ],
+      "registered_turn_max_vs_hard_cut_ratio": 0.3691564843422503
+    },
+    "right": {
+      "max_boundary_centroid_delta_px": 0.0956193876729388,
+      "max_boundary_sole_delta_px": 0,
+      "hard_cut_head_rgba_mae": 24.664772727272727,
+      "registered_turn_adjacent_head_rgba_mae": [
+        2.771780303030303,
+        6.2116477272727275,
+        11.086647727272727,
+        5.682765151515151,
+        1.9801136363636365
+      ],
+      "registered_turn_max_vs_hard_cut_ratio": 0.44949320433079937
+    }
+  },
+  "nonloop_neutral_endpoints_match_idle_master": {
+    "cheer": [
+      true,
+      true
+    ],
+    "sad": [
+      true,
+      true
+    ]
+  },
+  "grok_needed_for_current_clips": false,
+  "known_visual_limits": [
+    "Turn midposes are registered source dissolves, not newly drawn 3D yaw angles; slight full-size blending remains.",
+    "Sad uses a head/shoulder slump and withdrawn arms with the original neutral face; no new frown was invented.",
+    "Cheer is a near-arm celebration and small hop. The satchel-occluded far arm remains restrained.",
+    "Welcome preserves the original neutral mouth; voice is synchronized narration, not phoneme lip sync.",
+    "64-color large deliverables posterize smooth source shading. Lossless masters and true final-size previews preserve the comparison."
+  ],
+  "review_boundary": "Technical gates and self-repair evidence do not claim user or on-device animation acceptance."
+}

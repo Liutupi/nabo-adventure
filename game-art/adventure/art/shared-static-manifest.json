@@ -1,0 +1,4013 @@
+{
+  "version": 1,
+  "stage": "round4-shared-static",
+  "status": "agent_checked; user artwork review pending",
+  "design": "selected round3 01-passport; original native pixel art, editable SVG companions; no generated or redrawn NABO",
+  "palette": {
+    "path": "ui/design/round3/01-passport/palette.json",
+    "sha256": "937c2d09f1ee0ee124b7c13f562b5ea8208a7901a9aa1a0637c5d1310b8de457",
+    "visible_colors": [
+      "#203849",
+      "#3f817b",
+      "#477191",
+      "#756b55",
+      "#9ca8a7",
+      "#a89269",
+      "#b64c43",
+      "#b9703d",
+      "#c7b389",
+      "#d1a43f",
+      "#ddc7a0",
+      "#e7d5ad",
+      "#f3d88a",
+      "#fff0cd",
+      "#fffaf0"
+    ]
+  },
+  "backgrounds": {
+    "deep-sea": {
+      "source_rgb": [
+        6,
+        20,
+        52
+      ],
+      "rgb565": "0x00a6",
+      "preview_rgb": [
+        0,
+        20,
+        49
+      ]
+    },
+    "harbor": {
+      "source_rgb": [
+        40,
+        120,
+        160
+      ],
+      "rgb565": "0x2bd4",
+      "preview_rgb": [
+        41,
+        121,
+        164
+      ]
+    },
+    "town": {
+      "source_rgb": [
+        246,
+        226,
+        180
+      ],
+      "rgb565": "0xf716",
+      "preview_rgb": [
+        246,
+        226,
+        180
+      ]
+    },
+    "rail": {
+      "source_rgb": [
+        150,
+        200,
+        110
+      ],
+      "rgb565": "0x964d",
+      "preview_rgb": [
+        148,
+        202,
+        106
+      ]
+    },
+    "night-forest": {
+      "source_rgb": [
+        24,
+        48,
+        60
+      ],
+      "rgb565": "0x1987",
+      "preview_rgb": [
+        24,
+        48,
+        57
+      ]
+    },
+    "mountain": {
+      "source_rgb": [
+        150,
+        170,
+        200
+      ],
+      "rgb565": "0x9559",
+      "preview_rgb": [
+        148,
+        170,
+        205
+      ]
+    },
+    "ski": {
+      "source_rgb": [
+        225,
+        236,
+        248
+      ],
+      "rgb565": "0xe77f",
+      "preview_rgb": [
+        230,
+        238,
+        255
+      ]
+    },
+    "sky": {
+      "source_rgb": [
+        140,
+        200,
+        250
+      ],
+      "rgb565": "0x8e5f",
+      "preview_rgb": [
+        139,
+        202,
+        255
+      ]
+    },
+    "space": {
+      "source_rgb": [
+        16,
+        10,
+        40
+      ],
+      "rgb565": "0x1045",
+      "preview_rgb": [
+        16,
+        8,
+        41
+      ]
+    }
+  },
+  "background_source": {
+    "path": "firmware/main/adv_ui_map.c",
+    "sha256": "2d824d739d7c4fd26afb47ae148a79ff430a54a6682eca8075a824b20a5e8ab2",
+    "note": "Current WORLD raw RGB is converted through RGB565 before preview. Kiosk path index1 currently uses harbor ground."
+  },
+  "ui_preview_colors": {
+    "UI_INK": {
+      "rgb565": "0x1927",
+      "preview_rgb": [
+        24,
+        36,
+        57
+      ]
+    },
+    "UI_BRONZE": {
+      "rgb565": "0xcbe6",
+      "preview_rgb": [
+        205,
+        125,
+        49
+      ]
+    }
+  },
+  "worlds": {
+    "deep-sea": [
+      "tiles/deep-sea/seaweed",
+      "tiles/deep-sea/bubble-chain",
+      "tiles/deep-sea/coral-fan",
+      "tiles/deep-sea/shell",
+      "tiles/deep-sea/sea-rock",
+      "tiles/deep-sea/current-wave"
+    ],
+    "harbor": [
+      "tiles/harbor/wave-line",
+      "tiles/harbor/wave-crest",
+      "tiles/harbor/dock-planks",
+      "tiles/harbor/rope-coil",
+      "tiles/harbor/mooring-post",
+      "tiles/harbor/buoy"
+    ],
+    "town": [
+      "tiles/town/red-roof",
+      "tiles/town/street-lamp",
+      "tiles/town/flowerbed",
+      "tiles/town/cobble-path",
+      "tiles/town/window-box",
+      "tiles/town/bunting"
+    ],
+    "rail": [
+      "tiles/rail/rail-straight",
+      "tiles/rail/rail-crossing",
+      "tiles/rail/wheat",
+      "tiles/rail/telegraph-pole",
+      "tiles/rail/trackside-grass",
+      "tiles/rail/mail-sign"
+    ],
+    "night-forest": [
+      "tiles/night-forest/tree-canopy",
+      "tiles/night-forest/shrub",
+      "tiles/night-forest/fern",
+      "tiles/night-forest/fireflies",
+      "tiles/night-forest/mushrooms",
+      "tiles/night-forest/branch"
+    ],
+    "mountain": [
+      "tiles/mountain/rock-face",
+      "tiles/mountain/snowcap-rock",
+      "tiles/mountain/snow-drift",
+      "tiles/mountain/ridge",
+      "tiles/mountain/young-pine",
+      "tiles/mountain/ice-crystals"
+    ],
+    "ski": [
+      "tiles/ski/snow-pine",
+      "tiles/ski/gate-poles",
+      "tiles/ski/snow-track",
+      "tiles/mountain/snow-drift",
+      "tiles/ski/snow-mound",
+      "tiles/ski/small-spruce"
+    ],
+    "sky": [
+      "tiles/sky/cloud-large",
+      "tiles/sky/cloud-small",
+      "tiles/sky/cloud-chain",
+      "tiles/sky/wind-ribbon",
+      "tiles/sky/feather",
+      "tiles/sky/bird-silhouette"
+    ],
+    "space": [
+      "tiles/space/star-field",
+      "tiles/space/asteroid",
+      "tiles/space/ring-planet",
+      "tiles/space/orbit-dots",
+      "tiles/space/comet",
+      "tiles/space/crater"
+    ]
+  },
+  "assets": [
+    {
+      "id": "tiles/deep-sea/seaweed",
+      "path": "map/tiles/deep-sea/seaweed.png",
+      "source_svg": "map/tiles/deep-sea/seaweed.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "deep-sea"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 3,
+        "visible_colors": 2,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          1,
+          4,
+          31,
+          30
+        ],
+        "margins": [
+          1,
+          4,
+          1,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "d1e6cf9c833a1784774782b4da638acc65c45777787231e7213676a0de557061",
+      "source_sha256": "2d9309ab6255df016c117f2cd24e0bd9d887bc3115763168fda93c4646bb5e90",
+      "previews": {
+        "deep-sea": "preview/shared-static/tile/tiles-deep-sea-seaweed-deep-sea.png"
+      }
+    },
+    {
+      "id": "tiles/deep-sea/bubble-chain",
+      "path": "map/tiles/deep-sea/bubble-chain.png",
+      "source_svg": "map/tiles/deep-sea/bubble-chain.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "deep-sea"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 3,
+        "visible_colors": 2,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          5,
+          2,
+          26,
+          29
+        ],
+        "margins": [
+          5,
+          2,
+          6,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "0d9e83cc68bc23bb7ff7dc5d367b9221314c70819b6bd9a448215eec7d249015",
+      "source_sha256": "0d059a9f5a5833286c4d54893fc5be73afdc465f348b633b394fb1f56e6e7c3e",
+      "previews": {
+        "deep-sea": "preview/shared-static/tile/tiles-deep-sea-bubble-chain-deep-sea.png"
+      }
+    },
+    {
+      "id": "tiles/deep-sea/coral-fan",
+      "path": "map/tiles/deep-sea/coral-fan.png",
+      "source_svg": "map/tiles/deep-sea/coral-fan.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "deep-sea"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          1,
+          3,
+          30,
+          31
+        ],
+        "margins": [
+          1,
+          3,
+          2,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "84e4d5dbb2b070c2af9748e8ba4acf96ee1449df8c8acd464d5b0ce840829625",
+      "source_sha256": "eb64048063146a3aac5642aa0351086bbefb5fe5ccf8d5e186cac4b7276858d1",
+      "previews": {
+        "deep-sea": "preview/shared-static/tile/tiles-deep-sea-coral-fan-deep-sea.png"
+      }
+    },
+    {
+      "id": "tiles/deep-sea/shell",
+      "path": "map/tiles/deep-sea/shell.png",
+      "source_svg": "map/tiles/deep-sea/shell.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "deep-sea"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          6,
+          30,
+          29
+        ],
+        "margins": [
+          3,
+          6,
+          2,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "9f85cc928423214e0f275f59f793ac5f9e8ad6b3f64e9c382b9896f278307b60",
+      "source_sha256": "922a62416452183ba7b760918dadba391f03872d2ad18cbec6ca2a811a84d1b7",
+      "previews": {
+        "deep-sea": "preview/shared-static/tile/tiles-deep-sea-shell-deep-sea.png"
+      }
+    },
+    {
+      "id": "tiles/deep-sea/sea-rock",
+      "path": "map/tiles/deep-sea/sea-rock.png",
+      "source_svg": "map/tiles/deep-sea/sea-rock.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "deep-sea"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          7,
+          30,
+          29
+        ],
+        "margins": [
+          3,
+          7,
+          2,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "22143e9c9b949b0393e9c0a1f90d1f8bbc92f786448fd79e4320e41e5769530f",
+      "source_sha256": "c897c5cf992a279758744ad9b6f79b64c7bec652288149d1ef697c844a05bf98",
+      "previews": {
+        "deep-sea": "preview/shared-static/tile/tiles-deep-sea-sea-rock-deep-sea.png"
+      }
+    },
+    {
+      "id": "tiles/deep-sea/current-wave",
+      "path": "map/tiles/deep-sea/current-wave.png",
+      "source_svg": "map/tiles/deep-sea/current-wave.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "deep-sea"
+      ],
+      "repeat_axes": "x",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 2,
+        "visible_colors": 1,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          8,
+          32,
+          26
+        ],
+        "margins": [
+          0,
+          8,
+          0,
+          6
+        ],
+        "seams": {
+          "x": true
+        }
+      },
+      "sha256": "0172b53ebd01b076bf1d20f843114afe3b4faaf41be3d0b68243728da21fcada",
+      "source_sha256": "fbde876dcd6da65ebadbbeb8abae01829c4f393bb984f13d2e6afc3aa45f86cc",
+      "previews": {
+        "deep-sea": "preview/shared-static/tile/tiles-deep-sea-current-wave-deep-sea.png",
+        "repeat_3x3_native": "preview/shared-static/repeats/tiles-deep-sea-current-wave.png"
+      }
+    },
+    {
+      "id": "tiles/harbor/wave-line",
+      "path": "map/tiles/harbor/wave-line.png",
+      "source_svg": "map/tiles/harbor/wave-line.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "harbor"
+      ],
+      "repeat_axes": "x",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 2,
+        "visible_colors": 1,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          8,
+          32,
+          26
+        ],
+        "margins": [
+          0,
+          8,
+          0,
+          6
+        ],
+        "seams": {
+          "x": true
+        }
+      },
+      "sha256": "16297e2d826c2942b8ca05d504e486b3e7bd5830dd792db0c5b10c7f2c70d658",
+      "source_sha256": "c2c018c884f028dc5cb5ff2d370c41045f8acc093832400ece092efac8e41a54",
+      "previews": {
+        "harbor": "preview/shared-static/tile/tiles-harbor-wave-line-harbor.png",
+        "repeat_3x3_native": "preview/shared-static/repeats/tiles-harbor-wave-line.png"
+      }
+    },
+    {
+      "id": "tiles/harbor/wave-crest",
+      "path": "map/tiles/harbor/wave-crest.png",
+      "source_svg": "map/tiles/harbor/wave-crest.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "harbor"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          6,
+          30,
+          29
+        ],
+        "margins": [
+          2,
+          6,
+          2,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "aba54606bbc19471fdcbdcd209c42d7bea188a5e33f1db5d944106af4666d12d",
+      "source_sha256": "e6450c38d2a64859ef9b4987a3071de77bf73dec8580b8110a8263cc39ec1af2",
+      "previews": {
+        "harbor": "preview/shared-static/tile/tiles-harbor-wave-crest-harbor.png"
+      }
+    },
+    {
+      "id": "tiles/harbor/dock-planks",
+      "path": "map/tiles/harbor/dock-planks.png",
+      "source_svg": "map/tiles/harbor/dock-planks.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "harbor"
+      ],
+      "repeat_axes": "x",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          6,
+          32,
+          27
+        ],
+        "margins": [
+          0,
+          6,
+          0,
+          5
+        ],
+        "seams": {
+          "x": true
+        }
+      },
+      "sha256": "548732a6ff55f112ae2cd4b88deb800caf3792df66b0f330d77f868604d4cf43",
+      "source_sha256": "f652216e2b1607ca0b9a7970a92ef49451bb779353489398e73ed9f890324fff",
+      "previews": {
+        "harbor": "preview/shared-static/tile/tiles-harbor-dock-planks-harbor.png",
+        "repeat_3x3_native": "preview/shared-static/repeats/tiles-harbor-dock-planks.png"
+      }
+    },
+    {
+      "id": "tiles/harbor/rope-coil",
+      "path": "map/tiles/harbor/rope-coil.png",
+      "source_svg": "map/tiles/harbor/rope-coil.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "harbor"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          5,
+          5,
+          31,
+          30
+        ],
+        "margins": [
+          5,
+          5,
+          1,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "c2b03b03ac8f74252fc2c9056a6541bba8a2a012a9e96f793d03993b6b67f3b1",
+      "source_sha256": "b6550a951df35fa3e84330fe0361c1c145146a65d28d690d6d9d923dbbd3379d",
+      "previews": {
+        "harbor": "preview/shared-static/tile/tiles-harbor-rope-coil-harbor.png"
+      }
+    },
+    {
+      "id": "tiles/harbor/mooring-post",
+      "path": "map/tiles/harbor/mooring-post.png",
+      "source_svg": "map/tiles/harbor/mooring-post.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "harbor"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 6,
+        "visible_colors": 5,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          6,
+          5,
+          28,
+          30
+        ],
+        "margins": [
+          6,
+          5,
+          4,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "6d7202c4d584164ebe68373b2ab1c7bb039cd2e18265e0c29d8b0f1008b9c78a",
+      "source_sha256": "989b9163f48d47debed23999b122b41bd906c6d7a0c5babf0dc56cae46d1d6a5",
+      "previews": {
+        "harbor": "preview/shared-static/tile/tiles-harbor-mooring-post-harbor.png"
+      }
+    },
+    {
+      "id": "tiles/harbor/buoy",
+      "path": "map/tiles/harbor/buoy.png",
+      "source_svg": "map/tiles/harbor/buoy.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "harbor"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          5,
+          3,
+          29,
+          28
+        ],
+        "margins": [
+          5,
+          3,
+          3,
+          4
+        ],
+        "seams": {}
+      },
+      "sha256": "8d526bdfdcb7680105726a7524e65fd70d075e6d45950361f1877b2b9561350b",
+      "source_sha256": "c4baf2b6bde30625d96265ce6649fe6c6e8ff8d6177542d6ae3aac6383f7fe93",
+      "previews": {
+        "harbor": "preview/shared-static/tile/tiles-harbor-buoy-harbor.png"
+      }
+    },
+    {
+      "id": "tiles/town/red-roof",
+      "path": "map/tiles/town/red-roof.png",
+      "source_svg": "map/tiles/town/red-roof.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "town"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 7,
+        "visible_colors": 6,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          4,
+          31,
+          30
+        ],
+        "margins": [
+          2,
+          4,
+          1,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "83e638db8c492c9768a696269cb33ca7a13707e725b2691ca44d5cdeea61915d",
+      "source_sha256": "e7ed8f31ce25788da3f874b46c917aac8709bbc2fad1b23ab82291a3054b5aeb",
+      "previews": {
+        "town": "preview/shared-static/tile/tiles-town-red-roof-town.png"
+      }
+    },
+    {
+      "id": "tiles/town/street-lamp",
+      "path": "map/tiles/town/street-lamp.png",
+      "source_svg": "map/tiles/town/street-lamp.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "town"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 6,
+        "visible_colors": 5,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          8,
+          2,
+          24,
+          31
+        ],
+        "margins": [
+          8,
+          2,
+          8,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "4e328bd10bac49cc41f49bd1f9cb40c818b343ff4f4325ba6db5a7ecbec555bc",
+      "source_sha256": "958455b97b3f2d07aa61edc31cb2462726524bba0cadf1885440cbaa7118a8ed",
+      "previews": {
+        "town": "preview/shared-static/tile/tiles-town-street-lamp-town.png"
+      }
+    },
+    {
+      "id": "tiles/town/flowerbed",
+      "path": "map/tiles/town/flowerbed.png",
+      "source_svg": "map/tiles/town/flowerbed.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "town"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 7,
+        "visible_colors": 6,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          4,
+          12,
+          29,
+          30
+        ],
+        "margins": [
+          4,
+          12,
+          3,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "a0e603e41fcf5289f38b4f28d8778cb1316ed42af415251d851da4e39a93e38d",
+      "source_sha256": "d4b2afcded9646c78500961f2506c62bc1ea76250f110d5f3afe007acb679040",
+      "previews": {
+        "town": "preview/shared-static/tile/tiles-town-flowerbed-town.png"
+      }
+    },
+    {
+      "id": "tiles/town/cobble-path",
+      "path": "map/tiles/town/cobble-path.png",
+      "source_svg": "map/tiles/town/cobble-path.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "town"
+      ],
+      "repeat_axes": "xy",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          3,
+          30,
+          28
+        ],
+        "margins": [
+          2,
+          3,
+          2,
+          4
+        ],
+        "seams": {
+          "x": true,
+          "y": true
+        }
+      },
+      "sha256": "47bdc55799fdbbc0db59447b03834d9a72c3d322c5cbb69b3b7c2a8c5557503c",
+      "source_sha256": "5dbea37607f2aeec81b85a770a11c3e9e91dd2438e1648220fa07a32b99886eb",
+      "previews": {
+        "town": "preview/shared-static/tile/tiles-town-cobble-path-town.png",
+        "repeat_3x3_native": "preview/shared-static/repeats/tiles-town-cobble-path.png"
+      }
+    },
+    {
+      "id": "tiles/town/window-box",
+      "path": "map/tiles/town/window-box.png",
+      "source_svg": "map/tiles/town/window-box.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "town"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 9,
+        "visible_colors": 8,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          4,
+          3,
+          29,
+          30
+        ],
+        "margins": [
+          4,
+          3,
+          3,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "e744b9fc86bdcd2e1bee6d4080d5258a6d211dafb5bc5a30f87ee724b91ddd2c",
+      "source_sha256": "ceececf9261fecde5ff3a5342d261b93b155ebc7b94240262a5f164d5daa62ca",
+      "previews": {
+        "town": "preview/shared-static/tile/tiles-town-window-box-town.png"
+      }
+    },
+    {
+      "id": "tiles/town/bunting",
+      "path": "map/tiles/town/bunting.png",
+      "source_svg": "map/tiles/town/bunting.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "town"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          7,
+          30,
+          20
+        ],
+        "margins": [
+          2,
+          7,
+          2,
+          12
+        ],
+        "seams": {}
+      },
+      "sha256": "6da0b8085c835b4f6c75c0d240cd468ecd73298967f96d813cbbcc40bfa103d7",
+      "source_sha256": "1b44fb23f3f5facbaa3a89e752ae817895978ba2b6e6f14b8d13c58b0c51be66",
+      "previews": {
+        "town": "preview/shared-static/tile/tiles-town-bunting-town.png"
+      }
+    },
+    {
+      "id": "tiles/rail/rail-straight",
+      "path": "map/tiles/rail/rail-straight.png",
+      "source_svg": "map/tiles/rail/rail-straight.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "rail"
+      ],
+      "repeat_axes": "y",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          0,
+          29,
+          32
+        ],
+        "margins": [
+          3,
+          0,
+          3,
+          0
+        ],
+        "seams": {
+          "y": true
+        }
+      },
+      "sha256": "0579917e1b4a0d82544cfee4618f07ddfb8490acdfe54f787433253f0a3484c2",
+      "source_sha256": "6ca6d8281e9b3025ec664160b06d7cf7bda817212cd516e35bfbad635b0b6777",
+      "previews": {
+        "rail": "preview/shared-static/tile/tiles-rail-rail-straight-rail.png",
+        "repeat_3x3_native": "preview/shared-static/repeats/tiles-rail-rail-straight.png"
+      }
+    },
+    {
+      "id": "tiles/rail/rail-crossing",
+      "path": "map/tiles/rail/rail-crossing.png",
+      "source_svg": "map/tiles/rail/rail-crossing.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "rail"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          3,
+          30,
+          30
+        ],
+        "margins": [
+          2,
+          3,
+          2,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "dd963d89203896cbc102e4941b1b16cb9c373a13b44079cb8c898f0bea6721f6",
+      "source_sha256": "88e8c4c20b1db1671816c68da294644a46990380463b144168aee47679a28627",
+      "previews": {
+        "rail": "preview/shared-static/tile/tiles-rail-rail-crossing-rail.png"
+      }
+    },
+    {
+      "id": "tiles/rail/wheat",
+      "path": "map/tiles/rail/wheat.png",
+      "source_svg": "map/tiles/rail/wheat.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "rail"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          4,
+          30,
+          30
+        ],
+        "margins": [
+          3,
+          4,
+          2,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "04111181a053208b7090595dc21a5a429dbf3cd8e9a8ab3b803da190c967d6a8",
+      "source_sha256": "2f1272937408ffd88d34651d11c9363f541067154daf96d817af41ea485891f0",
+      "previews": {
+        "rail": "preview/shared-static/tile/tiles-rail-wheat-rail.png"
+      }
+    },
+    {
+      "id": "tiles/rail/telegraph-pole",
+      "path": "map/tiles/rail/telegraph-pole.png",
+      "source_svg": "map/tiles/rail/telegraph-pole.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "rail"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          5,
+          3,
+          28,
+          31
+        ],
+        "margins": [
+          5,
+          3,
+          4,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "b68b63b27ecba2a4af139de37f3673495db544998a3f433e92ca58725a3e4dc6",
+      "source_sha256": "113429bab9f724eb28687ffae7b8aa59a741f56ffd4968c10299dff8dc73ea32",
+      "previews": {
+        "rail": "preview/shared-static/tile/tiles-rail-telegraph-pole-rail.png"
+      }
+    },
+    {
+      "id": "tiles/rail/trackside-grass",
+      "path": "map/tiles/rail/trackside-grass.png",
+      "source_svg": "map/tiles/rail/trackside-grass.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "rail"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 3,
+        "visible_colors": 2,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          4,
+          31,
+          31
+        ],
+        "margins": [
+          3,
+          4,
+          1,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "cad1f67de897a4180f540a3e0240ccf13b6443efaeee65542bcfa53af48ea6bc",
+      "source_sha256": "ef9c1b3f0bcdc33f053058297156141939c268178a6d3ecfec976bcdb1c6e2ba",
+      "previews": {
+        "rail": "preview/shared-static/tile/tiles-rail-trackside-grass-rail.png"
+      }
+    },
+    {
+      "id": "tiles/rail/mail-sign",
+      "path": "map/tiles/rail/mail-sign.png",
+      "source_svg": "map/tiles/rail/mail-sign.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "rail"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 6,
+        "visible_colors": 5,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          4,
+          5,
+          29,
+          30
+        ],
+        "margins": [
+          4,
+          5,
+          3,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "30e596a3c7f394e9402ae66f826fa94d57f52801736b48fd117afb7d2f25e2b1",
+      "source_sha256": "2e58368caa1b249adf0805bdd288545ccd3bf2a1159e83797feca6d381569f03",
+      "previews": {
+        "rail": "preview/shared-static/tile/tiles-rail-mail-sign-rail.png"
+      }
+    },
+    {
+      "id": "tiles/night-forest/tree-canopy",
+      "path": "map/tiles/night-forest/tree-canopy.png",
+      "source_svg": "map/tiles/night-forest/tree-canopy.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "night-forest"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          3,
+          31,
+          31
+        ],
+        "margins": [
+          2,
+          3,
+          1,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "1eabc966d94af1e137a567ab95f96da811e16a88a36af59c3521e5369ce6b6dc",
+      "source_sha256": "bfad363787097a3b7899644de0f0d4a001361f04532a92914aaa98f65d9bd375",
+      "previews": {
+        "night-forest": "preview/shared-static/tile/tiles-night-forest-tree-canopy-night-forest.png"
+      }
+    },
+    {
+      "id": "tiles/night-forest/shrub",
+      "path": "map/tiles/night-forest/shrub.png",
+      "source_svg": "map/tiles/night-forest/shrub.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "night-forest"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          4,
+          31,
+          31
+        ],
+        "margins": [
+          3,
+          4,
+          1,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "a852d0c7ce9aa1c9b3d21132da4b4a6395bb6a4c897437cc19da2af6f3e9b236",
+      "source_sha256": "bd662b70cc4b880ff63de05e9b31fc3a3a0911381851be218858bf2c7ff36912",
+      "previews": {
+        "night-forest": "preview/shared-static/tile/tiles-night-forest-shrub-night-forest.png"
+      }
+    },
+    {
+      "id": "tiles/night-forest/fern",
+      "path": "map/tiles/night-forest/fern.png",
+      "source_svg": "map/tiles/night-forest/fern.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "night-forest"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 3,
+        "visible_colors": 2,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          4,
+          31,
+          31
+        ],
+        "margins": [
+          3,
+          4,
+          1,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "cad1f67de897a4180f540a3e0240ccf13b6443efaeee65542bcfa53af48ea6bc",
+      "source_sha256": "7dcd7d2dd2dc65c8a97079e19c939a56fb63e7c6d228771adbdcc8f5ad36f457",
+      "previews": {
+        "night-forest": "preview/shared-static/tile/tiles-night-forest-fern-night-forest.png"
+      }
+    },
+    {
+      "id": "tiles/night-forest/fireflies",
+      "path": "map/tiles/night-forest/fireflies.png",
+      "source_svg": "map/tiles/night-forest/fireflies.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "night-forest"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 3,
+        "visible_colors": 2,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          4,
+          4,
+          27,
+          28
+        ],
+        "margins": [
+          4,
+          4,
+          5,
+          4
+        ],
+        "seams": {}
+      },
+      "sha256": "e4f17f0b00d4a6c72e68a5db0ffdbba4e7b54a9150419604ddb6cd385203ceaf",
+      "source_sha256": "04ff96e60babd19aeeb8073225c6464405a8d5bb8ad85cadf02f8d4ac93507f0",
+      "previews": {
+        "night-forest": "preview/shared-static/tile/tiles-night-forest-fireflies-night-forest.png"
+      }
+    },
+    {
+      "id": "tiles/night-forest/mushrooms",
+      "path": "map/tiles/night-forest/mushrooms.png",
+      "source_svg": "map/tiles/night-forest/mushrooms.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "night-forest"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          8,
+          30,
+          30
+        ],
+        "margins": [
+          3,
+          8,
+          2,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "64d4cd3185035f67cc4ee697f7aa6b7be055175c9a3fdf03630af01b8732072e",
+      "source_sha256": "229d3b092f9ffd2dc674b88ffd060e3c0201fbceb046cf7560d9afe1736594ea",
+      "previews": {
+        "night-forest": "preview/shared-static/tile/tiles-night-forest-mushrooms-night-forest.png"
+      }
+    },
+    {
+      "id": "tiles/night-forest/branch",
+      "path": "map/tiles/night-forest/branch.png",
+      "source_svg": "map/tiles/night-forest/branch.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "night-forest"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          5,
+          30,
+          29
+        ],
+        "margins": [
+          3,
+          5,
+          2,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "51059893db783042dd154b49336026d9b771f642d2b5fef1f88f70847d0aa03b",
+      "source_sha256": "d72e7d697846dbf3353a2ac19473a7384f9e4b3649c344698230991b6af1d819",
+      "previews": {
+        "night-forest": "preview/shared-static/tile/tiles-night-forest-branch-night-forest.png"
+      }
+    },
+    {
+      "id": "tiles/mountain/rock-face",
+      "path": "map/tiles/mountain/rock-face.png",
+      "source_svg": "map/tiles/mountain/rock-face.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "mountain"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          7,
+          30,
+          29
+        ],
+        "margins": [
+          3,
+          7,
+          2,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "22143e9c9b949b0393e9c0a1f90d1f8bbc92f786448fd79e4320e41e5769530f",
+      "source_sha256": "4fd67704a8174b808c0ba3cad4aeea372fd387b3cce7fd1ff3ddede4b0999c90",
+      "previews": {
+        "mountain": "preview/shared-static/tile/tiles-mountain-rock-face-mountain.png"
+      }
+    },
+    {
+      "id": "tiles/mountain/snowcap-rock",
+      "path": "map/tiles/mountain/snowcap-rock.png",
+      "source_svg": "map/tiles/mountain/snowcap-rock.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "mountain"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          8,
+          30,
+          30
+        ],
+        "margins": [
+          3,
+          8,
+          2,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "1b94744c19c7bb95a7faf3c53bb9b3d410cdbf932aa690722797fe997928264e",
+      "source_sha256": "63131a532089dac618ccbaae8425e1801c405dd64dc1629a9c766215c4bb7dd4",
+      "previews": {
+        "mountain": "preview/shared-static/tile/tiles-mountain-snowcap-rock-mountain.png"
+      }
+    },
+    {
+      "id": "tiles/mountain/snow-drift",
+      "path": "map/tiles/mountain/snow-drift.png",
+      "source_svg": "map/tiles/mountain/snow-drift.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "mountain",
+        "ski"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          13,
+          30,
+          29
+        ],
+        "margins": [
+          3,
+          13,
+          2,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "a0f7dbce9a93da1b7299e33c73b81745b4f1c37bd97c8781565009f2b3947033",
+      "source_sha256": "dddcfa06896b4e31eea3a56c54d9d5727442d249742df1298383c93e9a84fed0",
+      "previews": {
+        "mountain": "preview/shared-static/tile/tiles-mountain-snow-drift-mountain.png",
+        "ski": "preview/shared-static/tile/tiles-mountain-snow-drift-ski.png"
+      }
+    },
+    {
+      "id": "tiles/mountain/ridge",
+      "path": "map/tiles/mountain/ridge.png",
+      "source_svg": "map/tiles/mountain/ridge.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "mountain"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          5,
+          31,
+          28
+        ],
+        "margins": [
+          2,
+          5,
+          1,
+          4
+        ],
+        "seams": {}
+      },
+      "sha256": "aa8e0aa5f24a1f352fb4b628a7a9157e654a9174044461d2f33682916e3141b7",
+      "source_sha256": "3e99233dc72ff93278864836cbb2305dc8d4a4360fa4c941f56b2ab053e3ced1",
+      "previews": {
+        "mountain": "preview/shared-static/tile/tiles-mountain-ridge-mountain.png"
+      }
+    },
+    {
+      "id": "tiles/mountain/young-pine",
+      "path": "map/tiles/mountain/young-pine.png",
+      "source_svg": "map/tiles/mountain/young-pine.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "mountain"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          5,
+          3,
+          28,
+          31
+        ],
+        "margins": [
+          5,
+          3,
+          4,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "b262291829ffa4226bdbe2f633b6d6455076861ea891f0b07072aae0bf266036",
+      "source_sha256": "5ef86d934955f611af72514954f27dbbe456c98aa2a1e750eb1076b22ac13b7d",
+      "previews": {
+        "mountain": "preview/shared-static/tile/tiles-mountain-young-pine-mountain.png"
+      }
+    },
+    {
+      "id": "tiles/mountain/ice-crystals",
+      "path": "map/tiles/mountain/ice-crystals.png",
+      "source_svg": "map/tiles/mountain/ice-crystals.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "mountain"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 3,
+        "visible_colors": 2,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          4,
+          30,
+          31
+        ],
+        "margins": [
+          2,
+          4,
+          2,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "d4226c2f39ab5f08a5c4fd40e4165ccb72bbbae3fa5248f522584016b738b886",
+      "source_sha256": "7db9aa40de419104dbd52360f988d712e1d8dd860c4348aef77915a0cbed5a64",
+      "previews": {
+        "mountain": "preview/shared-static/tile/tiles-mountain-ice-crystals-mountain.png"
+      }
+    },
+    {
+      "id": "tiles/ski/snow-pine",
+      "path": "map/tiles/ski/snow-pine.png",
+      "source_svg": "map/tiles/ski/snow-pine.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "ski"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          5,
+          3,
+          28,
+          31
+        ],
+        "margins": [
+          5,
+          3,
+          4,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "63eb3ddf8e8865f24445732cc82f4fdd27fdd49de5360c3f1461b609e7c226cd",
+      "source_sha256": "9e33d3072402752d4dff11a7b85faf4de352bb73af5eea0161b3392627e6e76b",
+      "previews": {
+        "ski": "preview/shared-static/tile/tiles-ski-snow-pine-ski.png"
+      }
+    },
+    {
+      "id": "tiles/ski/gate-poles",
+      "path": "map/tiles/ski/gate-poles.png",
+      "source_svg": "map/tiles/ski/gate-poles.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "ski"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          6,
+          4,
+          27,
+          30
+        ],
+        "margins": [
+          6,
+          4,
+          5,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "f6786f666678472a52d8e93e6d0666cc7b443e3d710fed4ce1f019d3884acb26",
+      "source_sha256": "462088cf01b455f873fad8cd41b3133db42429b2820f58b3def29651529c3f69",
+      "previews": {
+        "ski": "preview/shared-static/tile/tiles-ski-gate-poles-ski.png"
+      }
+    },
+    {
+      "id": "tiles/ski/snow-track",
+      "path": "map/tiles/ski/snow-track.png",
+      "source_svg": "map/tiles/ski/snow-track.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "ski"
+      ],
+      "repeat_axes": "y",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 3,
+        "visible_colors": 2,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          10,
+          0,
+          24,
+          32
+        ],
+        "margins": [
+          10,
+          0,
+          8,
+          0
+        ],
+        "seams": {
+          "y": true
+        }
+      },
+      "sha256": "9fc98cc1c143f19201eb40a9f409dc40265af600c24b02c0d562dc02d112c25a",
+      "source_sha256": "966b9e6e41bcd878257a76cc8cb25d7c0ccd3c2646c6f4b449fc4136d7bf3398",
+      "previews": {
+        "ski": "preview/shared-static/tile/tiles-ski-snow-track-ski.png",
+        "repeat_3x3_native": "preview/shared-static/repeats/tiles-ski-snow-track.png"
+      }
+    },
+    {
+      "id": "tiles/ski/snow-mound",
+      "path": "map/tiles/ski/snow-mound.png",
+      "source_svg": "map/tiles/ski/snow-mound.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "ski"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          8,
+          30,
+          30
+        ],
+        "margins": [
+          3,
+          8,
+          2,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "1b94744c19c7bb95a7faf3c53bb9b3d410cdbf932aa690722797fe997928264e",
+      "source_sha256": "e90380503fc4400580b7e374529d11078cd81798114b1c4cceb320c7a4785fd2",
+      "previews": {
+        "ski": "preview/shared-static/tile/tiles-ski-snow-mound-ski.png"
+      }
+    },
+    {
+      "id": "tiles/ski/small-spruce",
+      "path": "map/tiles/ski/small-spruce.png",
+      "source_svg": "map/tiles/ski/small-spruce.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "ski"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          5,
+          3,
+          28,
+          31
+        ],
+        "margins": [
+          5,
+          3,
+          4,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "63eb3ddf8e8865f24445732cc82f4fdd27fdd49de5360c3f1461b609e7c226cd",
+      "source_sha256": "003755bb01511a5aa893860958caf6d1e509f0ef34aae7ac8a8e4e3fbeeb0ffd",
+      "previews": {
+        "ski": "preview/shared-static/tile/tiles-ski-small-spruce-ski.png"
+      }
+    },
+    {
+      "id": "tiles/sky/cloud-large",
+      "path": "map/tiles/sky/cloud-large.png",
+      "source_svg": "map/tiles/sky/cloud-large.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "sky"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          7,
+          31,
+          24
+        ],
+        "margins": [
+          2,
+          7,
+          1,
+          8
+        ],
+        "seams": {}
+      },
+      "sha256": "74c102a22c030810de0679fb4c27899b5b6d5e68fcb74e0d8d988251f5a770d6",
+      "source_sha256": "a91b175365a6fcb99ebbddc29893f4156c96c7a8e1882a62a0febe8aed66e7cc",
+      "previews": {
+        "sky": "preview/shared-static/tile/tiles-sky-cloud-large-sky.png"
+      }
+    },
+    {
+      "id": "tiles/sky/cloud-small",
+      "path": "map/tiles/sky/cloud-small.png",
+      "source_svg": "map/tiles/sky/cloud-small.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "sky"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          5,
+          9,
+          28,
+          23
+        ],
+        "margins": [
+          5,
+          9,
+          4,
+          9
+        ],
+        "seams": {}
+      },
+      "sha256": "57dc9901ca3b70c464d6615664b235e7fd8525c43ac9c99cda2f4b142f4c0906",
+      "source_sha256": "e41a97d630dc33dd200a28da474d7c929bcbc5369a025feb0b3b8a4dc0f2a426",
+      "previews": {
+        "sky": "preview/shared-static/tile/tiles-sky-cloud-small-sky.png"
+      }
+    },
+    {
+      "id": "tiles/sky/cloud-chain",
+      "path": "map/tiles/sky/cloud-chain.png",
+      "source_svg": "map/tiles/sky/cloud-chain.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "sky"
+      ],
+      "repeat_axes": "x",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 3,
+        "visible_colors": 2,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          12,
+          32,
+          27
+        ],
+        "margins": [
+          0,
+          12,
+          0,
+          5
+        ],
+        "seams": {
+          "x": true
+        }
+      },
+      "sha256": "eaf72ff9705b239ec784438e262a9e2bd172872a7154b10fd2e3e4c2afaf8977",
+      "source_sha256": "b2f99d65c251f6c3f0ec341aa8670ee745ef849f17869db27cf3311c71d4d81f",
+      "previews": {
+        "sky": "preview/shared-static/tile/tiles-sky-cloud-chain-sky.png",
+        "repeat_3x3_native": "preview/shared-static/repeats/tiles-sky-cloud-chain.png"
+      }
+    },
+    {
+      "id": "tiles/sky/wind-ribbon",
+      "path": "map/tiles/sky/wind-ribbon.png",
+      "source_svg": "map/tiles/sky/wind-ribbon.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "sky"
+      ],
+      "repeat_axes": "x",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 2,
+        "visible_colors": 1,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          8,
+          32,
+          26
+        ],
+        "margins": [
+          0,
+          8,
+          0,
+          6
+        ],
+        "seams": {
+          "x": true
+        }
+      },
+      "sha256": "16297e2d826c2942b8ca05d504e486b3e7bd5830dd792db0c5b10c7f2c70d658",
+      "source_sha256": "4b42ab6358687c2582ad568b4dcaadd933d8ac10a52b8b62fc21d6f8ca7a2c1d",
+      "previews": {
+        "sky": "preview/shared-static/tile/tiles-sky-wind-ribbon-sky.png",
+        "repeat_3x3_native": "preview/shared-static/repeats/tiles-sky-wind-ribbon.png"
+      }
+    },
+    {
+      "id": "tiles/sky/feather",
+      "path": "map/tiles/sky/feather.png",
+      "source_svg": "map/tiles/sky/feather.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "sky"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          5,
+          3,
+          28,
+          30
+        ],
+        "margins": [
+          5,
+          3,
+          4,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "134505217c36ee5e1df4f873a1400f7bad1514448a5a280f990895e76df98412",
+      "source_sha256": "a430ced0b8172a637b846651c47706d69ff6845422a80d2bf775f01d7c8e7e99",
+      "previews": {
+        "sky": "preview/shared-static/tile/tiles-sky-feather-sky.png"
+      }
+    },
+    {
+      "id": "tiles/sky/bird-silhouette",
+      "path": "map/tiles/sky/bird-silhouette.png",
+      "source_svg": "map/tiles/sky/bird-silhouette.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "sky"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 2,
+        "visible_colors": 1,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          9,
+          30,
+          24
+        ],
+        "margins": [
+          3,
+          9,
+          2,
+          8
+        ],
+        "seams": {}
+      },
+      "sha256": "7212dde37b96452b1956083d0bc3b446875aafdb91587ed77763642ad6157e56",
+      "source_sha256": "ecc508deaad777ba4090d92714fa50b3ad788025d91fe7cdc45abe0908073bb4",
+      "previews": {
+        "sky": "preview/shared-static/tile/tiles-sky-bird-silhouette-sky.png"
+      }
+    },
+    {
+      "id": "tiles/space/star-field",
+      "path": "map/tiles/space/star-field.png",
+      "source_svg": "map/tiles/space/star-field.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "space"
+      ],
+      "repeat_axes": "xy",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          4,
+          4,
+          30,
+          28
+        ],
+        "margins": [
+          4,
+          4,
+          2,
+          4
+        ],
+        "seams": {
+          "x": true,
+          "y": true
+        }
+      },
+      "sha256": "13b53ccfabcb3bd9762942ace7426c4785ea6ffb2be1529caa0bf40452d92c9a",
+      "source_sha256": "8b9e32817116568844ce9abc923960279f06951d0a20e0281cdb9d0f8b8c4b4d",
+      "previews": {
+        "space": "preview/shared-static/tile/tiles-space-star-field-space.png",
+        "repeat_3x3_native": "preview/shared-static/repeats/tiles-space-star-field.png"
+      }
+    },
+    {
+      "id": "tiles/space/asteroid",
+      "path": "map/tiles/space/asteroid.png",
+      "source_svg": "map/tiles/space/asteroid.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "space"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          4,
+          29,
+          30
+        ],
+        "margins": [
+          2,
+          4,
+          3,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "0c3fd7d7a9eedb33a746ed3272af55162e9e0d75950ff849a2c320e7ca6ffc24",
+      "source_sha256": "05f53713f94ace8541f3d993821c46b2c220ed5e50207dc6a8548d868acb2955",
+      "previews": {
+        "space": "preview/shared-static/tile/tiles-space-asteroid-space.png"
+      }
+    },
+    {
+      "id": "tiles/space/ring-planet",
+      "path": "map/tiles/space/ring-planet.png",
+      "source_svg": "map/tiles/space/ring-planet.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "space"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 6,
+        "visible_colors": 5,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          5,
+          31,
+          28
+        ],
+        "margins": [
+          2,
+          5,
+          1,
+          4
+        ],
+        "seams": {}
+      },
+      "sha256": "afc8a8d34165b0bebfc9d8557cd6b01dde9686c4b3377a58def77d4efcea6547",
+      "source_sha256": "ff66b0eac3076bdfa5fec79cc681aa7fdb22053b4a1898e86cc3e5ceebe2bd3b",
+      "previews": {
+        "space": "preview/shared-static/tile/tiles-space-ring-planet-space.png"
+      }
+    },
+    {
+      "id": "tiles/space/orbit-dots",
+      "path": "map/tiles/space/orbit-dots.png",
+      "source_svg": "map/tiles/space/orbit-dots.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "space"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          5,
+          29,
+          26
+        ],
+        "margins": [
+          2,
+          5,
+          3,
+          6
+        ],
+        "seams": {}
+      },
+      "sha256": "badfff4f569a2bef3e8c81321e2e3e0f585fe335eba14b5e2058c8c00706f99f",
+      "source_sha256": "a04df75a99666d5357721966ac02ee0806fcddc894652c68be223477a6f1c02e",
+      "previews": {
+        "space": "preview/shared-static/tile/tiles-space-orbit-dots-space.png"
+      }
+    },
+    {
+      "id": "tiles/space/comet",
+      "path": "map/tiles/space/comet.png",
+      "source_svg": "map/tiles/space/comet.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "space"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          4,
+          5,
+          27,
+          31
+        ],
+        "margins": [
+          4,
+          5,
+          5,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "ef10e490ecbb609f4bb008cffad1e5e16068ed70223ce19e7f7490d8ff38c024",
+      "source_sha256": "fa46a71b487a6d9982136bea2499fece802d8de006f07860c47f7b6c48d64722",
+      "previews": {
+        "space": "preview/shared-static/tile/tiles-space-comet-space.png"
+      }
+    },
+    {
+      "id": "tiles/space/crater",
+      "path": "map/tiles/space/crater.png",
+      "source_svg": "map/tiles/space/crater.svg",
+      "category": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "color_limit": 16,
+      "worlds": [
+        "space"
+      ],
+      "repeat_axes": "",
+      "anchor": [
+        16,
+        31
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          4,
+          29,
+          30
+        ],
+        "margins": [
+          2,
+          4,
+          3,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "0c3fd7d7a9eedb33a746ed3272af55162e9e0d75950ff849a2c320e7ca6ffc24",
+      "source_sha256": "a094fa260dd16984ea66cfde211327444c1fbf31aca86c2c851762f340da99fb",
+      "previews": {
+        "space": "preview/shared-static/tile/tiles-space-crater-space.png"
+      }
+    },
+    {
+      "id": "landmark/kiosk",
+      "path": "map/landmarks/kiosk.png",
+      "source_svg": "map/landmarks/kiosk.svg",
+      "category": "landmark",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 32,
+      "worlds": [
+        "harbor"
+      ],
+      "station": "kiosk",
+      "anchor": [
+        48,
+        88
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 11,
+        "visible_colors": 10,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          7,
+          9,
+          91,
+          89
+        ],
+        "margins": [
+          7,
+          9,
+          5,
+          7
+        ],
+        "seams": {}
+      },
+      "sha256": "053f4bba2f368f5f9003d574f53b45e6b822751f503dd58f85249f6f6107e5a1",
+      "source_sha256": "031bb5fbcd9ff487b86e309cc85a37c61157fd6e46318a026f9e41174e396986",
+      "previews": {
+        "harbor": "preview/shared-static/landmark/landmark-kiosk-harbor.png"
+      }
+    },
+    {
+      "id": "stamp/kiosk",
+      "path": "stamps/kiosk.png",
+      "source_svg": "stamps/kiosk.svg",
+      "category": "stamp",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 2,
+      "worlds": [
+        "harbor"
+      ],
+      "station": "kiosk",
+      "tintable": true,
+      "lettering": "none; annulus reserved for engine",
+      "anchor": [
+        48,
+        48
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 2,
+        "visible_colors": 1,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          3,
+          93,
+          93
+        ],
+        "margins": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "2595b0a6a69d31a51b5750b443a7a7cc6188edd2b930a7b8c152991f5042fc12",
+      "source_sha256": "1e03a7a06ea1f751958da3347dd720e3acaf0ec11d13880b9eaa9816f55502c8",
+      "previews": {
+        "harbor": "preview/shared-static/stamp/stamp-kiosk-harbor.png",
+        "ui_ink": "preview/shared-static/stamp/stamp-kiosk-ui-ink.png"
+      }
+    },
+    {
+      "id": "landmark/jump",
+      "path": "map/landmarks/jump.png",
+      "source_svg": "map/landmarks/jump.svg",
+      "category": "landmark",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 32,
+      "worlds": [
+        "town"
+      ],
+      "station": "jump",
+      "anchor": [
+        48,
+        88
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 8,
+        "visible_colors": 7,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          10,
+          15,
+          92,
+          83
+        ],
+        "margins": [
+          10,
+          15,
+          4,
+          13
+        ],
+        "seams": {}
+      },
+      "sha256": "af2889591d7a04240f1cfc1faba86c9aaad4a6d63375b56afebffe6f2a119ec3",
+      "source_sha256": "84f579330c829f9f8177cd1c9358fd3fbfc20fa5b224ea4524c5f1ef4dac208c",
+      "previews": {
+        "town": "preview/shared-static/landmark/landmark-jump-town.png"
+      }
+    },
+    {
+      "id": "stamp/jump",
+      "path": "stamps/jump.png",
+      "source_svg": "stamps/jump.svg",
+      "category": "stamp",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 2,
+      "worlds": [
+        "town"
+      ],
+      "station": "jump",
+      "tintable": true,
+      "lettering": "none; annulus reserved for engine",
+      "anchor": [
+        48,
+        48
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 2,
+        "visible_colors": 1,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          3,
+          93,
+          93
+        ],
+        "margins": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "d76db59ac0bdc7692a9a6b7c00c52be1f2afe8a562fb1762fda263b7a84f6f2c",
+      "source_sha256": "7cbbc327e5be171fb427a1534f0050cb1428c2247db313e33698b425fbb784e9",
+      "previews": {
+        "town": "preview/shared-static/stamp/stamp-jump-town.png",
+        "ui_ink": "preview/shared-static/stamp/stamp-jump-ui-ink.png"
+      }
+    },
+    {
+      "id": "landmark/dive",
+      "path": "map/landmarks/dive.png",
+      "source_svg": "map/landmarks/dive.svg",
+      "category": "landmark",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 32,
+      "worlds": [
+        "deep-sea"
+      ],
+      "station": "dive",
+      "anchor": [
+        48,
+        88
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 9,
+        "visible_colors": 8,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          7,
+          7,
+          88,
+          87
+        ],
+        "margins": [
+          7,
+          7,
+          8,
+          9
+        ],
+        "seams": {}
+      },
+      "sha256": "d341b383c9798d8769e9d094f4b6c29e13667f7a8d155122036e4cd5d0f76809",
+      "source_sha256": "2b433936e69f76faa1906a670a286a4ccb18437970f020095dc55ae315ae692a",
+      "previews": {
+        "deep-sea": "preview/shared-static/landmark/landmark-dive-deep-sea.png"
+      }
+    },
+    {
+      "id": "stamp/dive",
+      "path": "stamps/dive.png",
+      "source_svg": "stamps/dive.svg",
+      "category": "stamp",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 2,
+      "worlds": [
+        "deep-sea"
+      ],
+      "station": "dive",
+      "tintable": true,
+      "lettering": "none; annulus reserved for engine",
+      "anchor": [
+        48,
+        48
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 2,
+        "visible_colors": 1,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          3,
+          93,
+          93
+        ],
+        "margins": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "2f1456b213066289080946789804bc40fe255b3938bed9a1fc048a1d49b04068",
+      "source_sha256": "a440fa52d2ab9b77debe79298e1cbb39e95e3b5647f05b819a1027cb69815c09",
+      "previews": {
+        "deep-sea": "preview/shared-static/stamp/stamp-dive-deep-sea.png",
+        "ui_ink": "preview/shared-static/stamp/stamp-dive-ui-ink.png"
+      }
+    },
+    {
+      "id": "landmark/post",
+      "path": "map/landmarks/post.png",
+      "source_svg": "map/landmarks/post.svg",
+      "category": "landmark",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 32,
+      "worlds": [
+        "rail"
+      ],
+      "station": "post",
+      "anchor": [
+        48,
+        88
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 8,
+        "visible_colors": 7,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          9,
+          7,
+          87,
+          87
+        ],
+        "margins": [
+          9,
+          7,
+          9,
+          9
+        ],
+        "seams": {}
+      },
+      "sha256": "7f91c03cc1d4c0faeb1990b7c91d7d927e74d192347d67c089a7dcf9ed107623",
+      "source_sha256": "1cc350013bed036b2f58576abf23ab2ff716209ccc9a19f52e33d70dd65407bb",
+      "previews": {
+        "rail": "preview/shared-static/landmark/landmark-post-rail.png"
+      }
+    },
+    {
+      "id": "stamp/post",
+      "path": "stamps/post.png",
+      "source_svg": "stamps/post.svg",
+      "category": "stamp",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 2,
+      "worlds": [
+        "rail"
+      ],
+      "station": "post",
+      "tintable": true,
+      "lettering": "none; annulus reserved for engine",
+      "anchor": [
+        48,
+        48
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 2,
+        "visible_colors": 1,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          3,
+          93,
+          93
+        ],
+        "margins": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "7bffc062959676414d6a193db220263e943383a54611d84cea3f147db6f3778c",
+      "source_sha256": "57943cc47d787ec2bb5e4b74794c2ca8f95d1af99e61988421124769da0b1287",
+      "previews": {
+        "rail": "preview/shared-static/stamp/stamp-post-rail.png",
+        "ui_ink": "preview/shared-static/stamp/stamp-post-ui-ink.png"
+      }
+    },
+    {
+      "id": "landmark/night",
+      "path": "map/landmarks/night.png",
+      "source_svg": "map/landmarks/night.svg",
+      "category": "landmark",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 32,
+      "worlds": [
+        "night-forest"
+      ],
+      "station": "night",
+      "anchor": [
+        48,
+        88
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 10,
+        "visible_colors": 9,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          11,
+          5,
+          83,
+          88
+        ],
+        "margins": [
+          11,
+          5,
+          13,
+          8
+        ],
+        "seams": {}
+      },
+      "sha256": "5da7308a84004d0913c704e0fa887705992588adce23919e86715c1059464d1e",
+      "source_sha256": "4e19caa6f5ee5c071577ad645eaf717883a8b21b0a7207a0be3c35e919cbac95",
+      "previews": {
+        "night-forest": "preview/shared-static/landmark/landmark-night-night-forest.png"
+      }
+    },
+    {
+      "id": "stamp/night",
+      "path": "stamps/night.png",
+      "source_svg": "stamps/night.svg",
+      "category": "stamp",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 2,
+      "worlds": [
+        "night-forest"
+      ],
+      "station": "night",
+      "tintable": true,
+      "lettering": "none; annulus reserved for engine",
+      "anchor": [
+        48,
+        48
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 2,
+        "visible_colors": 1,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          3,
+          93,
+          93
+        ],
+        "margins": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "9261d81b449d013889b61dec07ac638f4608f93719a1b4e7b9b6b2f3139bb011",
+      "source_sha256": "660a2639f5b2a5298ffe0ddd041016d8fa3a80d5e32cf95c8104750d3e404baf",
+      "previews": {
+        "night-forest": "preview/shared-static/stamp/stamp-night-night-forest.png",
+        "ui_ink": "preview/shared-static/stamp/stamp-night-ui-ink.png"
+      }
+    },
+    {
+      "id": "landmark/climb",
+      "path": "map/landmarks/climb.png",
+      "source_svg": "map/landmarks/climb.svg",
+      "category": "landmark",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 32,
+      "worlds": [
+        "mountain"
+      ],
+      "station": "climb",
+      "anchor": [
+        48,
+        88
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 7,
+        "visible_colors": 6,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          8,
+          10,
+          88,
+          90
+        ],
+        "margins": [
+          8,
+          10,
+          8,
+          6
+        ],
+        "seams": {}
+      },
+      "sha256": "ac128f0afb2902bdc9418a51d87068c238690d326125d664fbebe84cd5729c94",
+      "source_sha256": "89d459a9890fc5629e8e8d6fab87d9d018738f21a2478d86ee96281f8a80e052",
+      "previews": {
+        "mountain": "preview/shared-static/landmark/landmark-climb-mountain.png"
+      }
+    },
+    {
+      "id": "stamp/climb",
+      "path": "stamps/climb.png",
+      "source_svg": "stamps/climb.svg",
+      "category": "stamp",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 2,
+      "worlds": [
+        "mountain"
+      ],
+      "station": "climb",
+      "tintable": true,
+      "lettering": "none; annulus reserved for engine",
+      "anchor": [
+        48,
+        48
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 2,
+        "visible_colors": 1,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          3,
+          93,
+          93
+        ],
+        "margins": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "88cc990b806b516850cf9929ec8fe306d06d9accaa7b924a66f463e400595fa7",
+      "source_sha256": "473e2749c4e2ad94872cf7824d41e41c138de603f8099f73fb599b1babbf0181",
+      "previews": {
+        "mountain": "preview/shared-static/stamp/stamp-climb-mountain.png",
+        "ui_ink": "preview/shared-static/stamp/stamp-climb-ui-ink.png"
+      }
+    },
+    {
+      "id": "landmark/ski",
+      "path": "map/landmarks/ski.png",
+      "source_svg": "map/landmarks/ski.svg",
+      "category": "landmark",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 32,
+      "worlds": [
+        "ski"
+      ],
+      "station": "ski",
+      "anchor": [
+        48,
+        88
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 8,
+        "visible_colors": 7,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          10,
+          14,
+          87,
+          91
+        ],
+        "margins": [
+          10,
+          14,
+          9,
+          5
+        ],
+        "seams": {}
+      },
+      "sha256": "a4d9f679d11503195225a51fd32af67fde6b7fa1316191cb40375ce8470efcfe",
+      "source_sha256": "9ec5858a36b0e43a98c785f711bffac8463a3a255783eec365da016cf2da866a",
+      "previews": {
+        "ski": "preview/shared-static/landmark/landmark-ski-ski.png"
+      }
+    },
+    {
+      "id": "stamp/ski",
+      "path": "stamps/ski.png",
+      "source_svg": "stamps/ski.svg",
+      "category": "stamp",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 2,
+      "worlds": [
+        "ski"
+      ],
+      "station": "ski",
+      "tintable": true,
+      "lettering": "none; annulus reserved for engine",
+      "anchor": [
+        48,
+        48
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 2,
+        "visible_colors": 1,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          3,
+          93,
+          93
+        ],
+        "margins": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "efb7f2f3fb4333e3e42e557d45f0580adcb3ae4ed94a59e89bdba5ff717fbdc6",
+      "source_sha256": "448ca69668a43bf679b6e270d9c368237fb7657178a932d5cb343b3ff6cbc213",
+      "previews": {
+        "ski": "preview/shared-static/stamp/stamp-ski-ski.png",
+        "ui_ink": "preview/shared-static/stamp/stamp-ski-ui-ink.png"
+      }
+    },
+    {
+      "id": "landmark/sky",
+      "path": "map/landmarks/sky.png",
+      "source_svg": "map/landmarks/sky.svg",
+      "category": "landmark",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 32,
+      "worlds": [
+        "sky"
+      ],
+      "station": "sky",
+      "anchor": [
+        48,
+        88
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 8,
+        "visible_colors": 7,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          14,
+          6,
+          86,
+          90
+        ],
+        "margins": [
+          14,
+          6,
+          10,
+          6
+        ],
+        "seams": {}
+      },
+      "sha256": "835e69ed79dc5212399a229b2a398dd627f726f545e9c28cefcd4778961943f0",
+      "source_sha256": "029f9753b18cfdc5b14741acbfb5cf15e8aed5a59e5b7d8f94a09320888c0d64",
+      "previews": {
+        "sky": "preview/shared-static/landmark/landmark-sky-sky.png"
+      }
+    },
+    {
+      "id": "stamp/sky",
+      "path": "stamps/sky.png",
+      "source_svg": "stamps/sky.svg",
+      "category": "stamp",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 2,
+      "worlds": [
+        "sky"
+      ],
+      "station": "sky",
+      "tintable": true,
+      "lettering": "none; annulus reserved for engine",
+      "anchor": [
+        48,
+        48
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 2,
+        "visible_colors": 1,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          3,
+          93,
+          93
+        ],
+        "margins": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "ba53e36b53eee0b10dec41c65d346f902d6e530f12850697fe507d7aed6f1ad6",
+      "source_sha256": "554f4bf669ba8a834db1edad87996aff321e00b8336190ce27fe88bfae6c810d",
+      "previews": {
+        "sky": "preview/shared-static/stamp/stamp-sky-sky.png",
+        "ui_ink": "preview/shared-static/stamp/stamp-sky-ui-ink.png"
+      }
+    },
+    {
+      "id": "landmark/space",
+      "path": "map/landmarks/space.png",
+      "source_svg": "map/landmarks/space.svg",
+      "category": "landmark",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 32,
+      "worlds": [
+        "space"
+      ],
+      "station": "space",
+      "anchor": [
+        48,
+        88
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 10,
+        "visible_colors": 9,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          10,
+          7,
+          87,
+          89
+        ],
+        "margins": [
+          10,
+          7,
+          9,
+          7
+        ],
+        "seams": {}
+      },
+      "sha256": "6764b4f23eb63172419a6d00ab004dfffff02bf0e6f316481c00ac07bebb8bd1",
+      "source_sha256": "05942ef0f23c1866336d82bd88650892b68198204206fe990feeca0c0c933384",
+      "previews": {
+        "space": "preview/shared-static/landmark/landmark-space-space.png"
+      }
+    },
+    {
+      "id": "stamp/space",
+      "path": "stamps/space.png",
+      "source_svg": "stamps/space.svg",
+      "category": "stamp",
+      "size": [
+        96,
+        96
+      ],
+      "color_limit": 2,
+      "worlds": [
+        "space"
+      ],
+      "station": "space",
+      "tintable": true,
+      "lettering": "none; annulus reserved for engine",
+      "anchor": [
+        48,
+        48
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 2,
+        "visible_colors": 1,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          3,
+          93,
+          93
+        ],
+        "margins": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "seams": {}
+      },
+      "sha256": "339fbdcadd076e696d2d2595f5e9a8e657c8d09cbc6552de1e63e55037d2f07b",
+      "source_sha256": "775a157de65c1458c6e9d1e800630a911dbfa109d3f7d8a7dafe298488f4e9ee",
+      "previews": {
+        "space": "preview/shared-static/stamp/stamp-space-space.png",
+        "ui_ink": "preview/shared-static/stamp/stamp-space-ui-ink.png"
+      }
+    },
+    {
+      "id": "icon/oxygen",
+      "path": "icons/oxygen.png",
+      "source_svg": "icons/oxygen.svg",
+      "category": "icon",
+      "size": [
+        16,
+        16
+      ],
+      "color_limit": 8,
+      "worlds": [
+        "deep-sea"
+      ],
+      "resource": "oxygen",
+      "anchor": [
+        8,
+        8
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 6,
+        "visible_colors": 5,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          4,
+          1,
+          12,
+          15
+        ],
+        "margins": [
+          4,
+          1,
+          4,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "151bc515d53f73278a797eea165d7c110afd593dfd728e321f252f8c11e93d05",
+      "source_sha256": "60ead6c989c2de69889e5b37c17da399a242d0eb2660fe29fca44ffc8b1e927d",
+      "previews": {
+        "deep-sea": "preview/shared-static/icon/icon-oxygen-deep-sea.png",
+        "ui_ink": "preview/shared-static/icon/icon-oxygen-ui-ink.png"
+      }
+    },
+    {
+      "id": "icon/stamina",
+      "path": "icons/stamina.png",
+      "source_svg": "icons/stamina.svg",
+      "category": "icon",
+      "size": [
+        16,
+        16
+      ],
+      "color_limit": 8,
+      "worlds": [
+        "town"
+      ],
+      "resource": "stamina",
+      "anchor": [
+        8,
+        8
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          1,
+          14,
+          15
+        ],
+        "margins": [
+          3,
+          1,
+          2,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "e0217a47fb71230d11e450493eca03c923f61fb74eed0a308e4a488088daeed0",
+      "source_sha256": "d910d861864163c06ff73527357f0ff632e9979ee33d9f78dbd88201393eb3e2",
+      "previews": {
+        "town": "preview/shared-static/icon/icon-stamina-town.png",
+        "ui_ink": "preview/shared-static/icon/icon-stamina-ui-ink.png"
+      }
+    },
+    {
+      "id": "icon/steam",
+      "path": "icons/steam.png",
+      "source_svg": "icons/steam.svg",
+      "category": "icon",
+      "size": [
+        16,
+        16
+      ],
+      "color_limit": 8,
+      "worlds": [
+        "rail"
+      ],
+      "resource": "steam",
+      "anchor": [
+        8,
+        8
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          2,
+          15,
+          15
+        ],
+        "margins": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "9a64d567d86a690751741ca1eaff31f66dd1acdbb7f71fcd9caddc03c4e0848d",
+      "source_sha256": "13ff32aa6cd5d8b787eea06057c6227cf843b41e327126bc5e1542bdeb1820d9",
+      "previews": {
+        "rail": "preview/shared-static/icon/icon-steam-rail.png",
+        "ui_ink": "preview/shared-static/icon/icon-steam-ui-ink.png"
+      }
+    },
+    {
+      "id": "icon/spirit",
+      "path": "icons/spirit.png",
+      "source_svg": "icons/spirit.svg",
+      "category": "icon",
+      "size": [
+        16,
+        16
+      ],
+      "color_limit": 8,
+      "worlds": [
+        "night-forest"
+      ],
+      "resource": "spirit",
+      "anchor": [
+        8,
+        8
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          2,
+          14,
+          14
+        ],
+        "margins": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "seams": {}
+      },
+      "sha256": "2f1a4e35393568cf45b38ee3b6a5fef8613fdd65e41baa5efbad87ecbf0bf45d",
+      "source_sha256": "2835597e6476e28c10b7dd8df62480f34b0692d66eb91f5bb08a41d9b11b3106",
+      "previews": {
+        "night-forest": "preview/shared-static/icon/icon-spirit-night-forest.png",
+        "ui_ink": "preview/shared-static/icon/icon-spirit-ui-ink.png"
+      }
+    },
+    {
+      "id": "icon/warmth",
+      "path": "icons/warmth.png",
+      "source_svg": "icons/warmth.svg",
+      "category": "icon",
+      "size": [
+        16,
+        16
+      ],
+      "color_limit": 8,
+      "worlds": [
+        "ski"
+      ],
+      "resource": "warmth",
+      "anchor": [
+        8,
+        8
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 5,
+        "visible_colors": 4,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          4,
+          1,
+          14,
+          15
+        ],
+        "margins": [
+          4,
+          1,
+          2,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "026bc94edb20620b692cd9783999352b40a1911618e1d0fcc8d76b910a98793b",
+      "source_sha256": "9b78db129b13f0c1238d3c2a2b55936738c2102772a9c7723df0e53f05c0dcb4",
+      "previews": {
+        "ski": "preview/shared-static/icon/icon-warmth-ski.png",
+        "ui_ink": "preview/shared-static/icon/icon-warmth-ui-ink.png"
+      }
+    },
+    {
+      "id": "icon/hot-air",
+      "path": "icons/hot-air.png",
+      "source_svg": "icons/hot-air.svg",
+      "category": "icon",
+      "size": [
+        16,
+        16
+      ],
+      "color_limit": 8,
+      "worlds": [
+        "sky"
+      ],
+      "resource": "hot-air",
+      "anchor": [
+        8,
+        8
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 4,
+        "visible_colors": 3,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          1,
+          14,
+          15
+        ],
+        "margins": [
+          3,
+          1,
+          2,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "d7bdc4337cafe9c0b57702cd7b273aa7ca67e42bd2a9c9c460b73195f8dfd210",
+      "source_sha256": "8c20c75fc483d2e26067ef2921f1c3b4f96b771830b765153e7b5a9ba53d0c19",
+      "previews": {
+        "sky": "preview/shared-static/icon/icon-hot-air-sky.png",
+        "ui_ink": "preview/shared-static/icon/icon-hot-air-ui-ink.png"
+      }
+    },
+    {
+      "id": "icon/fuel",
+      "path": "icons/fuel.png",
+      "source_svg": "icons/fuel.svg",
+      "category": "icon",
+      "size": [
+        16,
+        16
+      ],
+      "color_limit": 8,
+      "worlds": [
+        "space"
+      ],
+      "resource": "fuel",
+      "anchor": [
+        8,
+        8
+      ],
+      "qa": {
+        "passed": true,
+        "errors": [],
+        "rgba_colors": 6,
+        "visible_colors": 5,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          1,
+          15,
+          15
+        ],
+        "margins": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "seams": {}
+      },
+      "sha256": "1939d939fed173896c0c461c50022b00b63ad37196e6842edb4cb1563536a0eb",
+      "source_sha256": "f7f44ded388f43695897a14535b032fe856d0b84b0de218507154c58bbc03ed1",
+      "previews": {
+        "space": "preview/shared-static/icon/icon-fuel-space.png",
+        "ui_ink": "preview/shared-static/icon/icon-fuel-ui-ink.png"
+      }
+    }
+  ],
+  "counts": {
+    "worlds": 9,
+    "logical_tiles": 54,
+    "unique_tiles": 53,
+    "landmarks": 9,
+    "stamps": 9,
+    "icons": 7,
+    "unique_assets": 78
+  },
+  "qa": {
+    "passed": true,
+    "world_tile_group_rgba_colors": {
+      "deep-sea": 11,
+      "harbor": 9,
+      "town": 12,
+      "rail": 10,
+      "night-forest": 8,
+      "mountain": 11,
+      "ski": 9,
+      "sky": 6,
+      "space": 9
+    },
+    "seams_checked": "Exact RGBA edge bytes for declared repeat axes; 3x3 previews included",
+    "clipping_checked": "Transparent margin except intentionally periodic tile edges",
+    "visual_review": "See preview/shared-static/QA.md"
+  },
+  "provenance": {
+    "game-art\\adventure\\art\\ui\\design\\round3\\01-passport\\palette.json": "937c2d09f1ee0ee124b7c13f562b5ea8208a7901a9aa1a0637c5d1310b8de457",
+    "firmware\\main\\adv_ui_map.c": "2d824d739d7c4fd26afb47ae148a79ff430a54a6682eca8075a824b20a5e8ab2",
+    "firmware\\main\\adv_ui_internal.h": "120a67e4de1976e692b373ffcbc4537e45a32c20032769ce8c0ef738407d4f71",
+    "D:\\AI PASSPORT XIAOZHI\\nabo-fortune\\tools\\fonts\\SourceHanSansCN-Medium.otf": "a94e558a2fe972bee4f46bce0843abff37063fd68c33f1e7d9058f6f09432b01",
+    "game-art\\adventure\\tools\\build_shared_static.py": "b836e27b9aa922315223eda5739b131073f7c61cba38364c72f23ea4efc6c3d5",
+    "game-art\\adventure\\tools\\shared_static_canvas.py": "879db009db36b1de3adc285664b8b95e135c7ecee11e1c5b9e662c5ca4812155",
+    "game-art\\adventure\\tools\\shared_static_landmarks.py": "cd0f95f6af921abd962986a1dd9b7041b71d1c62374a262bbf9f09791472a159",
+    "game-art\\adventure\\tools\\shared_static_tiles.py": "b3c0d167284302c22c9ad005e282db4dac52e9c3afd1ef63d3849bf7e87763f8",
+    "game-art\\adventure\\tools\\shared_static_marks.py": "7011bc0bc6244a8b0853b1591da4a4d71b88b20a34948e680d4b5d49610dfd61"
+  }
+}

@@ -8,7 +8,7 @@
 #include <string.h>
 #include "bsp_display.h"
 #include "bsp_pins.h"
-#include "collection_portrait.h"
+#include "adv_ui_animation.h"
 #include "esp_heap_caps.h"
 #include "esp_lcd_panel_io.h"
 #include "esp_lcd_panel_ops.h"
@@ -18,6 +18,8 @@
 static ag_t *s_gfx;
 static uint16_t *s_strip[2];
 static bool s_capture;
+static uint32_t s_millis;
+uint32_t ui_millis(void) { return s_millis; }
 
 // Shared with adv_ui_jump.c, which composes its own rows.
 uint16_t *adv_ui_strip(void) { return s_strip[0]; }
@@ -55,6 +57,7 @@ bool adv_ui_open(void)
         return false;
     }
     ag_init(s_gfx, s_strip[0], s_strip[1], adv_ui_send, NULL);
+    ui_map_reset();
     return true;
 }
 
@@ -82,14 +85,14 @@ bool adv_ui_overflow(void) { return s_gfx && s_gfx->overflow; }
 
 void ui_header(ag_t *g, const char *title, const char *right)
 {
-    ag_rect(g, 0, 0, 240, 32, 0, UI_INK, 235, 0, 0);
+    ui_art(g, "ui/bars/top", 0, 0, 0);
     ag_text(g, &collection_font_16, title, 12, 22, NT_ALIGN_LEFT, UI_PAPER);
-    if (right) ag_text(g, &collection_font_16, right, 228, 22, NT_ALIGN_RIGHT, UI_GOLD);
+    if (right) ag_text(g, &collection_font_12, right, 228, 21, NT_ALIGN_RIGHT, UI_PAPER);
 }
 
 void ui_footer(ag_t *g, const char *hint)
 {
-    ag_rect(g, 0, 290, 240, 30, 0, UI_INK, 235, 0, 0);
+    ui_art(g, "ui/bars/bottom", 0, 0, 290);
     ag_text(g, &collection_font_12, hint, 120, 310, NT_ALIGN_CENTER, UI_PAPER);
 }
 
@@ -108,27 +111,25 @@ int ui_stamp_count(const adv_model_t *m) { return __builtin_popcount(adv_earned(
 
 static void draw_cover(ag_t *g, const adv_model_t *m)
 {
-    ag_band(g, 0, 200, ag_rgb(28, 36, 86), ag_rgb(118, 120, 170));
-    ag_band(g, 200, 120, ag_rgb(118, 120, 170), ag_rgb(244, 196, 150));
-    ag_glow(g, 120, 196, 70, UI_GOLD);
-    ag_text(g, &nabo_poster_font_28, "NABO", 120, 58, NT_ALIGN_CENTER, UI_WHITE);
-    ag_text(g, &nabo_poster_font_28, "ADVENTURE", 120, 90, NT_ALIGN_CENTER, UI_GOLD);
-    ag_text(g, &collection_font_18, "NABO 的冒险之旅", 120, 120, NT_ALIGN_CENTER, UI_PAPER);
-    ag_circle(g, 120, 196, 54, UI_PAPER, 255, UI_INK, 3);
-    ag_bitmap(g, collection_portrait, 120 - COLLECTION_PORTRAIT_W / 2, 196 - COLLECTION_PORTRAIT_H / 2,
-              COLLECTION_PORTRAIT_W, COLLECTION_PORTRAIT_H);
-    char line[32];
-    snprintf(line, sizeof(line), "STAMPS %d/24", ui_stamp_count(m));
-    ag_text(g, &nabo_mono_font_12, line, 120, 276, NT_ALIGN_CENTER, UI_INK);
-    ag_rect(g, 60, 284, 120, 26, 13, UI_GOLD, 255, UI_INK, 2);
-    ag_text(g, &collection_font_16, "按 OK 出发", 120, 302, NT_ALIGN_CENTER, UI_INK);
+    (void)m;
+    uint32_t t = adv_ui_boot_initial() ? adv_ui_boot_elapsed(ui_millis()) : 5000;
+    ui_art(g, "ui/cover-background-top", 0, 0, 0);
+    ui_art(g, "ui/cover-background-bottom", 0, 0, 0);
+    int title_y = t < 450 ? -82 + (int)t * 90 / 450 : 8;
+    ui_art(g, "ui/wordmarks/collection", 0, 10, title_y);
+    // The original face stays rigid; narration has a nod/invitation, not lip sync.
+    int x = t < 600 ? 270 : t < 1400 ? 270 - (int)(t - 600) * 150 / 800 : 120;
+    uint32_t action = t >= 1400 && t < 4067 ? (t - 1400) % 1334 : 0;
+    ui_art_anchor(g, "travel/welcome", action, x, 266);
+    ui_art(g, "ui/labels/boot-caption", 0, 10, 270);
+    ui_art(g, "ui/labels/press-start", 0, 36, 292);
 }
 
 // ---------- kiosk ----------
 
 static void draw_kiosk(ag_t *g, const adv_model_t *m)
 {
-    ag_band(g, 0, 320, ag_rgb(246, 226, 180), ag_rgb(232, 176, 120));
+    ui_paper(g);
     char count[16];
     snprintf(count, sizeof(count), "章 %d/24", ui_stamp_count(m));
     ui_header(g, "护照亭", count);
@@ -138,7 +139,7 @@ static void draw_kiosk(ag_t *g, const adv_model_t *m)
     for (int i = 0; i < 3; i++) {
         bool on = i == m->kiosk;
         int y = 124 + i * 46;
-        ag_rect(g, 30, y, 180, 36, 10, on ? UI_GOLD : UI_PAPER, 255, UI_INK, on ? 2 : 1);
+        ui_card(g, 30, y, 180, 36, on, false);
         ag_text(g, &collection_font_18, items[i], 120, y + 25, NT_ALIGN_CENTER, UI_INK);
     }
     ui_footer(g, "上/下选择 · OK确认 · 长按上返回");
@@ -149,16 +150,16 @@ static void draw_kiosk(ag_t *g, const adv_model_t *m)
 static void draw_settings(ag_t *g, const adv_model_t *m)
 {
     const cg_model_t *c = &m->cfg;
-    ag_band(g, 0, 320, UI_INK, ag_rgb(40, 34, 70));
-    ag_text(g, &nabo_poster_font_28, "SETTINGS", 120, 39, NT_ALIGN_CENTER, UI_GOLD);
+    ui_paper(g);
+    ui_header(g, "设置", NULL);
     ag_text(g, &collection_font_16, c->editing >= 0 ? "上/下调整 · OK保存" : "声音 · 显示 · 休眠", 120, 69,
-            NT_ALIGN_CENTER, UI_PAPER);
+            NT_ALIGN_CENTER, UI_INK);
     static const char *const names[] = {"音量", "亮度", "扬声器", "自动休眠", "设备状态", "返回"};
     for (int i = 0; i < 6; i++) {
         bool on = i == c->settings_cursor;
-        int y = 93 + 30 * i;
-        ag_rect(g, 16, y, 208, 27, 5, on ? UI_GOLD : UI_INK, 255, 0x42ec, on ? 1 : 0);
-        ag_text(g, &collection_font_18, names[i], 26, y + 21, NT_ALIGN_LEFT, on ? UI_INK : UI_PAPER);
+        int y = 80 + 34 * i;
+        ui_card(g, 16, y, 208, 34, on, false);
+        ag_text(g, &collection_font_16, names[i], 26, y + 24, NT_ALIGN_LEFT, UI_INK);
         char value[24] = "";
         if (i == 0) snprintf(value, sizeof(value), "%d%%", c->settings.volume);
         if (i == 1) snprintf(value, sizeof(value), "%d%%", c->settings.brightness);
@@ -167,33 +168,33 @@ static void draw_settings(ag_t *g, const adv_model_t *m)
             if (c->settings.sleep_seconds) snprintf(value, sizeof(value), "%d秒", c->settings.sleep_seconds);
             else snprintf(value, sizeof(value), "不休眠");
         }
-        ag_text(g, &collection_font_16, value, 214, y + 20, NT_ALIGN_RIGHT, on ? UI_INK : UI_PAPER);
+        ag_text(g, &collection_font_16, value, 214, y + 24, NT_ALIGN_RIGHT, UI_INK);
     }
-    ag_text(g, &collection_font_16, c->editing >= 0 ? "长按上取消本次调整" : "长按上返回护照亭", 120, 305,
-            NT_ALIGN_CENTER, UI_PAPER);
+    ui_footer(g, c->editing >= 0 ? "长按上取消本次调整" : "长按上返回护照亭");
 }
 
 static void draw_status(ag_t *g, int battery, int mv)
 {
     char value[48];
-    ag_band(g, 0, 320, UI_INK, ag_rgb(40, 34, 70));
-    ag_text(g, &nabo_poster_font_28, "STATUS", 120, 39, NT_ALIGN_CENTER, UI_GOLD);
-    ag_text(g, &collection_font_18, "NABO 的冒险之旅", 120, 94, NT_ALIGN_CENTER, UI_PAPER);
-    ag_text(g, &nabo_mono_font_12, ADV_VERSION, 120, 119, NT_ALIGN_CENTER, UI_GOLD);
+    ui_paper(g);
+    ui_header(g, "设备状态", NULL);
+    ui_popup(g, 12, 56, 216, 220);
+    ag_text(g, &collection_font_18, "NABO 的冒险之旅", 120, 94, NT_ALIGN_CENTER, UI_INK);
+    ag_text(g, &nabo_mono_font_12, ADV_VERSION, 120, 119, NT_ALIGN_CENTER, UI_RED);
     snprintf(value, sizeof(value), battery >= 0 ? "电量 %d%%" : "电量暂不可用", battery);
-    ag_text(g, &collection_font_18, value, 120, 157, NT_ALIGN_CENTER, UI_PAPER);
+    ag_text(g, &collection_font_18, value, 120, 157, NT_ALIGN_CENTER, UI_INK);
     snprintf(value, sizeof(value), mv >= 0 ? "%d mV" : "-- mV", mv);
-    ag_text(g, &nabo_mono_font_12, value, 120, 182, NT_ALIGN_CENTER, UI_GOLD);
-    ag_text(g, &collection_font_16, "无需配网和激活", 120, 223, NT_ALIGN_CENTER, UI_PAPER);
-    ag_text(g, &collection_font_16, "所有游戏均可离线玩", 120, 251, NT_ALIGN_CENTER, UI_PAPER);
-    ag_text(g, &collection_font_16, "按任意键返回设置", 120, 305, NT_ALIGN_CENTER, UI_PAPER);
+    ag_text(g, &nabo_mono_font_12, value, 120, 182, NT_ALIGN_CENTER, UI_RED);
+    ag_text(g, &collection_font_16, "无需配网和激活", 120, 223, NT_ALIGN_CENTER, UI_INK);
+    ag_text(g, &collection_font_16, "所有游戏均可离线玩", 120, 251, NT_ALIGN_CENTER, UI_INK);
+    ui_footer(g, "按任意键返回设置");
 }
 
 // ---------- dispatch ----------
 
 void adv_ui_draw(const adv_model_t *m, uint32_t ms, int battery, int mv)
 {
-    (void)ms;
+    s_millis = ms;
     if (!s_gfx) return;
     ag_t *g = s_gfx;
     switch (m->page) {

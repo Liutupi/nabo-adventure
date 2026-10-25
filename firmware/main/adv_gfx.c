@@ -124,6 +124,54 @@ bool ag_bitmap(ag_t *g, const uint16_t *pixels, int x, int y, int w, int h)
     return true;
 }
 
+static bool sprite(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y,
+                   bool tinted, uint16_t color, bool dimmed)
+{
+    if (!adv_sprite_frame_valid(asset, frame) || x < INT16_MIN || y < INT16_MIN ||
+        x > INT16_MAX - asset->width || y > INT16_MAX - asset->height) return false;
+    ag_op_t *op = add(g, AG_SPRITE, x, y, x + asset->width, y + asset->height);
+    if (!op) return false;
+    op->u.sprite.asset = asset;
+    op->u.sprite.frame = (uint16_t)frame;
+    op->u.sprite.tinted = tinted;
+    op->u.sprite.color = color;
+    op->u.sprite.dimmed = dimmed;
+    uintptr_t ptr = (uintptr_t)asset;
+    uint32_t h = (uint32_t)ptr;
+    // Include both halves on 64-bit hosts, without shifting a 32-bit C3 pointer.
+    h = mix(h, (uint32_t)((uint64_t)ptr >> 32));
+    seal(op, mix(mix(mix(mix(h, frame), tinted), color), dimmed));
+    return true;
+}
+
+bool ag_sprite(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y)
+{
+    return sprite(g, asset, frame, x, y, false, 0, false);
+}
+
+bool ag_sprite_tint(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y, uint16_t color)
+{
+    return sprite(g, asset, frame, x, y, true, color, false);
+}
+
+bool ag_sprite_dim(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y)
+{
+    return sprite(g, asset, frame, x, y, false, 0, true);
+}
+
+bool ag_ninepatch(ag_t *g, const adv_ninepatch_t *asset, int x, int y, int w, int h)
+{
+    if (!adv_ninepatch_valid(asset) || w < asset->tile[0]->width + asset->tile[2]->width ||
+        h < asset->tile[0]->height + asset->tile[6]->height || x < INT16_MIN || y < INT16_MIN ||
+        w > INT16_MAX || h > INT16_MAX || x > INT16_MAX - w || y > INT16_MAX - h) return false;
+    ag_op_t *op = add(g, AG_NINEPATCH, x, y, x + w, y + h);
+    if (!op) return false;
+    op->u.ninepatch.asset = asset;
+    uintptr_t ptr = (uintptr_t)asset;
+    seal(op, mix((uint32_t)ptr, (uint32_t)((uint64_t)ptr >> 32)));
+    return true;
+}
+
 // ---------- dirty rectangles ----------
 
 typedef struct { int16_t x0, y0, x1, y1; } rect_t;
@@ -168,6 +216,30 @@ static void paint(ag_t *g, const ag_op_t *op, int y, int x0, int x1, uint16_t *r
         for (int x = first; x < last; x++) row[x - x0] = src[x - op->x0];
         break;
     }
+    case AG_SPRITE: {
+        const adv_sprite_t *s = op->u.sprite.asset;
+        uint8_t indices[ADV_SPRITE_MAX_SIDE];
+        if (!adv_sprite_row(s, op->u.sprite.frame, (unsigned)(y - op->y0), indices, sizeof(indices))) break;
+        int first = x0 > op->x0 ? x0 : op->x0;
+        int last = x1 < op->x1 ? x1 : op->x1;
+        for (int x = first; x < last; x++) {
+            uint8_t index = indices[x - op->x0];
+            if (index) {
+                uint16_t color = op->u.sprite.tinted ? op->u.sprite.color : s->palette[index];
+                // Halve each RGB565 channel independently, without cross-channel carries.
+                row[x - x0] = op->u.sprite.dimmed ? (color & 0xf7deu) >> 1 : color;
+            }
+        }
+        break;
+    }
+    case AG_NINEPATCH: {
+        int first = x0 > op->x0 ? x0 : op->x0;
+        int last = x1 < op->x1 ? x1 : op->x1;
+        (void)adv_ninepatch_row(op->u.ninepatch.asset, (unsigned)(op->x1 - op->x0),
+                               (unsigned)(op->y1 - op->y0), (unsigned)(y - op->y0),
+                               (unsigned)(first - op->x0), (unsigned)(last - op->x0), row + first - x0);
+        break;
+    }
     default: break;
     }
 }
@@ -200,7 +272,8 @@ void ag_flush(ag_t *g)
             int j = 0;
             while (j < g->prev_n && (matched_prev[j] || op->kind != g->prev[j].kind || op->key != g->prev[j].key)) j++;
             if (j < g->prev_n) matched_prev[j] = true;
-            else add_rect(rects, &n, op->x0, op->y0, op->x1, op->y1, &overflow);
+            // Identical ops in a different order can change overlapping pixels.
+            if (j >= g->prev_n || j != i) add_rect(rects, &n, op->x0, op->y0, op->x1, op->y1, &overflow);
         }
         for (int j = 0; j < g->prev_n && !overflow; j++)
             if (!matched_prev[j]) add_rect(rects, &n, g->prev[j].x0, g->prev[j].y0, g->prev[j].x1, g->prev[j].y1, &overflow);

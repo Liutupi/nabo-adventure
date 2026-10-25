@@ -1,6 +1,6 @@
 # 给 Codex 的提示词（按轮次）
 
-每轮结束都交给用户确认，确认后再进下一轮。所有轮次都以 `game-art/adventure/ART_BRIEF.md` 为准；写提示词时只写 “NABO”，不描述长相、不附参考图（Codex 已经知道 NABO）。
+按用户 2026-10-25 的继续任务要求逐轮制作、自检并推进；旅行服和界面风格的主观选型交给用户，普通制作轮次由 Codex 保证质量后继续。只有具体动作经反复修正仍衔接不好时才请 Grok 补片，先写本地任务并告知路径，见根目录 `GROK_HANDOFF.md`。所有轮次都以 `game-art/adventure/ART_BRIEF.md` 为准；提示词只称 “NABO”，必须先查看并附 `art/reference/nabo-idle-original.png` 高清原图锁定身份，不凭模型记忆重画。2026-10-25 用户已拒绝基于旧深潜重绘 SVG 的第 1 轮初稿，该版本撤回；新版以 `art/design/round1/v2/` 为准。
 
 ---
 

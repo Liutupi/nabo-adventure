@@ -1,0 +1,7908 @@
+{
+  "schema": "adventure-assets-package-v1",
+  "format": "adv-row-rle-v1",
+  "groups": {
+    "static": {
+      "rle_bytes": 51906,
+      "table_bytes": 15332,
+      "descriptor_catalog_estimate_c3": 7091,
+      "resources": 78,
+      "pieces": 78,
+      "frames": 78,
+      "static_bytes_estimate_c3": 74329
+    },
+    "travel": {
+      "rle_bytes": 106338,
+      "table_bytes": 22068,
+      "descriptor_catalog_estimate_c3": 818,
+      "resources": 10,
+      "pieces": 10,
+      "frames": 78,
+      "static_bytes_estimate_c3": 129224
+    },
+    "ui": {
+      "rle_bytes": 47520,
+      "table_bytes": 14400,
+      "descriptor_catalog_estimate_c3": 11789,
+      "resources": 127,
+      "pieces": 127,
+      "frames": 127,
+      "static_bytes_estimate_c3": 73709
+    }
+  },
+  "files": [
+    "adv_assets_catalog.c",
+    "adv_assets_catalog.h",
+    "adv_assets_static_icon_fuel__p0.c",
+    "adv_assets_static_icon_fuel__p0.h",
+    "adv_assets_static_icon_fuel__p0.json",
+    "adv_assets_static_icon_hot_air__p0.c",
+    "adv_assets_static_icon_hot_air__p0.h",
+    "adv_assets_static_icon_hot_air__p0.json",
+    "adv_assets_static_icon_oxygen__p0.c",
+    "adv_assets_static_icon_oxygen__p0.h",
+    "adv_assets_static_icon_oxygen__p0.json",
+    "adv_assets_static_icon_spirit__p0.c",
+    "adv_assets_static_icon_spirit__p0.h",
+    "adv_assets_static_icon_spirit__p0.json",
+    "adv_assets_static_icon_stamina__p0.c",
+    "adv_assets_static_icon_stamina__p0.h",
+    "adv_assets_static_icon_stamina__p0.json",
+    "adv_assets_static_icon_steam__p0.c",
+    "adv_assets_static_icon_steam__p0.h",
+    "adv_assets_static_icon_steam__p0.json",
+    "adv_assets_static_icon_warmth__p0.c",
+    "adv_assets_static_icon_warmth__p0.h",
+    "adv_assets_static_icon_warmth__p0.json",
+    "adv_assets_static_landmark_climb__p0.c",
+    "adv_assets_static_landmark_climb__p0.h",
+    "adv_assets_static_landmark_climb__p0.json",
+    "adv_assets_static_landmark_dive__p0.c",
+    "adv_assets_static_landmark_dive__p0.h",
+    "adv_assets_static_landmark_dive__p0.json",
+    "adv_assets_static_landmark_jump__p0.c",
+    "adv_assets_static_landmark_jump__p0.h",
+    "adv_assets_static_landmark_jump__p0.json",
+    "adv_assets_static_landmark_kiosk__p0.c",
+    "adv_assets_static_landmark_kiosk__p0.h",
+    "adv_assets_static_landmark_kiosk__p0.json",
+    "adv_assets_static_landmark_night__p0.c",
+    "adv_assets_static_landmark_night__p0.h",
+    "adv_assets_static_landmark_night__p0.json",
+    "adv_assets_static_landmark_post__p0.c",
+    "adv_assets_static_landmark_post__p0.h",
+    "adv_assets_static_landmark_post__p0.json",
+    "adv_assets_static_landmark_ski__p0.c",
+    "adv_assets_static_landmark_ski__p0.h",
+    "adv_assets_static_landmark_ski__p0.json",
+    "adv_assets_static_landmark_sky__p0.c",
+    "adv_assets_static_landmark_sky__p0.h",
+    "adv_assets_static_landmark_sky__p0.json",
+    "adv_assets_static_landmark_space__p0.c",
+    "adv_assets_static_landmark_space__p0.h",
+    "adv_assets_static_landmark_space__p0.json",
+    "adv_assets_static_stamp_climb__p0.c",
+    "adv_assets_static_stamp_climb__p0.h",
+    "adv_assets_static_stamp_climb__p0.json",
+    "adv_assets_static_stamp_dive__p0.c",
+    "adv_assets_static_stamp_dive__p0.h",
+    "adv_assets_static_stamp_dive__p0.json",
+    "adv_assets_static_stamp_jump__p0.c",
+    "adv_assets_static_stamp_jump__p0.h",
+    "adv_assets_static_stamp_jump__p0.json",
+    "adv_assets_static_stamp_kiosk__p0.c",
+    "adv_assets_static_stamp_kiosk__p0.h",
+    "adv_assets_static_stamp_kiosk__p0.json",
+    "adv_assets_static_stamp_night__p0.c",
+    "adv_assets_static_stamp_night__p0.h",
+    "adv_assets_static_stamp_night__p0.json",
+    "adv_assets_static_stamp_post__p0.c",
+    "adv_assets_static_stamp_post__p0.h",
+    "adv_assets_static_stamp_post__p0.json",
+    "adv_assets_static_stamp_ski__p0.c",
+    "adv_assets_static_stamp_ski__p0.h",
+    "adv_assets_static_stamp_ski__p0.json",
+    "adv_assets_static_stamp_sky__p0.c",
+    "adv_assets_static_stamp_sky__p0.h",
+    "adv_assets_static_stamp_sky__p0.json",
+    "adv_assets_static_stamp_space__p0.c",
+    "adv_assets_static_stamp_space__p0.h",
+    "adv_assets_static_stamp_space__p0.json",
+    "adv_assets_static_tiles_deep_sea_bubble_chain__p0.c",
+    "adv_assets_static_tiles_deep_sea_bubble_chain__p0.h",
+    "adv_assets_static_tiles_deep_sea_bubble_chain__p0.json",
+    "adv_assets_static_tiles_deep_sea_coral_fan__p0.c",
+    "adv_assets_static_tiles_deep_sea_coral_fan__p0.h",
+    "adv_assets_static_tiles_deep_sea_coral_fan__p0.json",
+    "adv_assets_static_tiles_deep_sea_current_wave__p0.c",
+    "adv_assets_static_tiles_deep_sea_current_wave__p0.h",
+    "adv_assets_static_tiles_deep_sea_current_wave__p0.json",
+    "adv_assets_static_tiles_deep_sea_sea_rock__p0.c",
+    "adv_assets_static_tiles_deep_sea_sea_rock__p0.h",
+    "adv_assets_static_tiles_deep_sea_sea_rock__p0.json",
+    "adv_assets_static_tiles_deep_sea_seaweed__p0.c",
+    "adv_assets_static_tiles_deep_sea_seaweed__p0.h",
+    "adv_assets_static_tiles_deep_sea_seaweed__p0.json",
+    "adv_assets_static_tiles_deep_sea_shell__p0.c",
+    "adv_assets_static_tiles_deep_sea_shell__p0.h",
+    "adv_assets_static_tiles_deep_sea_shell__p0.json",
+    "adv_assets_static_tiles_harbor_buoy__p0.c",
+    "adv_assets_static_tiles_harbor_buoy__p0.h",
+    "adv_assets_static_tiles_harbor_buoy__p0.json",
+    "adv_assets_static_tiles_harbor_dock_planks__p0.c",
+    "adv_assets_static_tiles_harbor_dock_planks__p0.h",
+    "adv_assets_static_tiles_harbor_dock_planks__p0.json",
+    "adv_assets_static_tiles_harbor_mooring_post__p0.c",
+    "adv_assets_static_tiles_harbor_mooring_post__p0.h",
+    "adv_assets_static_tiles_harbor_mooring_post__p0.json",
+    "adv_assets_static_tiles_harbor_rope_coil__p0.c",
+    "adv_assets_static_tiles_harbor_rope_coil__p0.h",
+    "adv_assets_static_tiles_harbor_rope_coil__p0.json",
+    "adv_assets_static_tiles_harbor_wave_crest__p0.c",
+    "adv_assets_static_tiles_harbor_wave_crest__p0.h",
+    "adv_assets_static_tiles_harbor_wave_crest__p0.json",
+    "adv_assets_static_tiles_harbor_wave_line__p0.c",
+    "adv_assets_static_tiles_harbor_wave_line__p0.h",
+    "adv_assets_static_tiles_harbor_wave_line__p0.json",
+    "adv_assets_static_tiles_mountain_ice_crystals__p0.c",
+    "adv_assets_static_tiles_mountain_ice_crystals__p0.h",
+    "adv_assets_static_tiles_mountain_ice_crystals__p0.json",
+    "adv_assets_static_tiles_mountain_ridge__p0.c",
+    "adv_assets_static_tiles_mountain_ridge__p0.h",
+    "adv_assets_static_tiles_mountain_ridge__p0.json",
+    "adv_assets_static_tiles_mountain_rock_face__p0.c",
+    "adv_assets_static_tiles_mountain_rock_face__p0.h",
+    "adv_assets_static_tiles_mountain_rock_face__p0.json",
+    "adv_assets_static_tiles_mountain_snow_drift__p0.c",
+    "adv_assets_static_tiles_mountain_snow_drift__p0.h",
+    "adv_assets_static_tiles_mountain_snow_drift__p0.json",
+    "adv_assets_static_tiles_mountain_snowcap_rock__p0.c",
+    "adv_assets_static_tiles_mountain_snowcap_rock__p0.h",
+    "adv_assets_static_tiles_mountain_snowcap_rock__p0.json",
+    "adv_assets_static_tiles_mountain_young_pine__p0.c",
+    "adv_assets_static_tiles_mountain_young_pine__p0.h",
+    "adv_assets_static_tiles_mountain_young_pine__p0.json",
+    "adv_assets_static_tiles_night_forest_branch__p0.c",
+    "adv_assets_static_tiles_night_forest_branch__p0.h",
+    "adv_assets_static_tiles_night_forest_branch__p0.json",
+    "adv_assets_static_tiles_night_forest_fern__p0.c",
+    "adv_assets_static_tiles_night_forest_fern__p0.h",
+    "adv_assets_static_tiles_night_forest_fern__p0.json",
+    "adv_assets_static_tiles_night_forest_fireflies__p0.c",
+    "adv_assets_static_tiles_night_forest_fireflies__p0.h",
+    "adv_assets_static_tiles_night_forest_fireflies__p0.json",
+    "adv_assets_static_tiles_night_forest_mushrooms__p0.c",
+    "adv_assets_static_tiles_night_forest_mushrooms__p0.h",
+    "adv_assets_static_tiles_night_forest_mushrooms__p0.json",
+    "adv_assets_static_tiles_night_forest_shrub__p0.c",
+    "adv_assets_static_tiles_night_forest_shrub__p0.h",
+    "adv_assets_static_tiles_night_forest_shrub__p0.json",
+    "adv_assets_static_tiles_night_forest_tree_canopy__p0.c",
+    "adv_assets_static_tiles_night_forest_tree_canopy__p0.h",
+    "adv_assets_static_tiles_night_forest_tree_canopy__p0.json",
+    "adv_assets_static_tiles_rail_mail_sign__p0.c",
+    "adv_assets_static_tiles_rail_mail_sign__p0.h",
+    "adv_assets_static_tiles_rail_mail_sign__p0.json",
+    "adv_assets_static_tiles_rail_rail_crossing__p0.c",
+    "adv_assets_static_tiles_rail_rail_crossing__p0.h",
+    "adv_assets_static_tiles_rail_rail_crossing__p0.json",
+    "adv_assets_static_tiles_rail_rail_straight__p0.c",
+    "adv_assets_static_tiles_rail_rail_straight__p0.h",
+    "adv_assets_static_tiles_rail_rail_straight__p0.json",
+    "adv_assets_static_tiles_rail_telegraph_pole__p0.c",
+    "adv_assets_static_tiles_rail_telegraph_pole__p0.h",
+    "adv_assets_static_tiles_rail_telegraph_pole__p0.json",
+    "adv_assets_static_tiles_rail_trackside_grass__p0.c",
+    "adv_assets_static_tiles_rail_trackside_grass__p0.h",
+    "adv_assets_static_tiles_rail_trackside_grass__p0.json",
+    "adv_assets_static_tiles_rail_wheat__p0.c",
+    "adv_assets_static_tiles_rail_wheat__p0.h",
+    "adv_assets_static_tiles_rail_wheat__p0.json",
+    "adv_assets_static_tiles_ski_gate_poles__p0.c",
+    "adv_assets_static_tiles_ski_gate_poles__p0.h",
+    "adv_assets_static_tiles_ski_gate_poles__p0.json",
+    "adv_assets_static_tiles_ski_small_spruce__p0.c",
+    "adv_assets_static_tiles_ski_small_spruce__p0.h",
+    "adv_assets_static_tiles_ski_small_spruce__p0.json",
+    "adv_assets_static_tiles_ski_snow_mound__p0.c",
+    "adv_assets_static_tiles_ski_snow_mound__p0.h",
+    "adv_assets_static_tiles_ski_snow_mound__p0.json",
+    "adv_assets_static_tiles_ski_snow_pine__p0.c",
+    "adv_assets_static_tiles_ski_snow_pine__p0.h",
+    "adv_assets_static_tiles_ski_snow_pine__p0.json",
+    "adv_assets_static_tiles_ski_snow_track__p0.c",
+    "adv_assets_static_tiles_ski_snow_track__p0.h",
+    "adv_assets_static_tiles_ski_snow_track__p0.json",
+    "adv_assets_static_tiles_sky_bird_silhouette__p0.c",
+    "adv_assets_static_tiles_sky_bird_silhouette__p0.h",
+    "adv_assets_static_tiles_sky_bird_silhouette__p0.json",
+    "adv_assets_static_tiles_sky_cloud_chain__p0.c",
+    "adv_assets_static_tiles_sky_cloud_chain__p0.h",
+    "adv_assets_static_tiles_sky_cloud_chain__p0.json",
+    "adv_assets_static_tiles_sky_cloud_large__p0.c",
+    "adv_assets_static_tiles_sky_cloud_large__p0.h",
+    "adv_assets_static_tiles_sky_cloud_large__p0.json",
+    "adv_assets_static_tiles_sky_cloud_small__p0.c",
+    "adv_assets_static_tiles_sky_cloud_small__p0.h",
+    "adv_assets_static_tiles_sky_cloud_small__p0.json",
+    "adv_assets_static_tiles_sky_feather__p0.c",
+    "adv_assets_static_tiles_sky_feather__p0.h",
+    "adv_assets_static_tiles_sky_feather__p0.json",
+    "adv_assets_static_tiles_sky_wind_ribbon__p0.c",
+    "adv_assets_static_tiles_sky_wind_ribbon__p0.h",
+    "adv_assets_static_tiles_sky_wind_ribbon__p0.json",
+    "adv_assets_static_tiles_space_asteroid__p0.c",
+    "adv_assets_static_tiles_space_asteroid__p0.h",
+    "adv_assets_static_tiles_space_asteroid__p0.json",
+    "adv_assets_static_tiles_space_comet__p0.c",
+    "adv_assets_static_tiles_space_comet__p0.h",
+    "adv_assets_static_tiles_space_comet__p0.json",
+    "adv_assets_static_tiles_space_crater__p0.c",
+    "adv_assets_static_tiles_space_crater__p0.h",
+    "adv_assets_static_tiles_space_crater__p0.json",
+    "adv_assets_static_tiles_space_orbit_dots__p0.c",
+    "adv_assets_static_tiles_space_orbit_dots__p0.h",
+    "adv_assets_static_tiles_space_orbit_dots__p0.json",
+    "adv_assets_static_tiles_space_ring_planet__p0.c",
+    "adv_assets_static_tiles_space_ring_planet__p0.h",
+    "adv_assets_static_tiles_space_ring_planet__p0.json",
+    "adv_assets_static_tiles_space_star_field__p0.c",
+    "adv_assets_static_tiles_space_star_field__p0.h",
+    "adv_assets_static_tiles_space_star_field__p0.json",
+    "adv_assets_static_tiles_town_bunting__p0.c",
+    "adv_assets_static_tiles_town_bunting__p0.h",
+    "adv_assets_static_tiles_town_bunting__p0.json",
+    "adv_assets_static_tiles_town_cobble_path__p0.c",
+    "adv_assets_static_tiles_town_cobble_path__p0.h",
+    "adv_assets_static_tiles_town_cobble_path__p0.json",
+    "adv_assets_static_tiles_town_flowerbed__p0.c",
+    "adv_assets_static_tiles_town_flowerbed__p0.h",
+    "adv_assets_static_tiles_town_flowerbed__p0.json",
+    "adv_assets_static_tiles_town_red_roof__p0.c",
+    "adv_assets_static_tiles_town_red_roof__p0.h",
+    "adv_assets_static_tiles_town_red_roof__p0.json",
+    "adv_assets_static_tiles_town_street_lamp__p0.c",
+    "adv_assets_static_tiles_town_street_lamp__p0.h",
+    "adv_assets_static_tiles_town_street_lamp__p0.json",
+    "adv_assets_static_tiles_town_window_box__p0.c",
+    "adv_assets_static_tiles_town_window_box__p0.h",
+    "adv_assets_static_tiles_town_window_box__p0.json",
+    "adv_assets_travel_cheer__p0.c",
+    "adv_assets_travel_cheer__p0.h",
+    "adv_assets_travel_cheer__p0.json",
+    "adv_assets_travel_idle__p0.c",
+    "adv_assets_travel_idle__p0.h",
+    "adv_assets_travel_idle__p0.json",
+    "adv_assets_travel_sad__p0.c",
+    "adv_assets_travel_sad__p0.h",
+    "adv_assets_travel_sad__p0.json",
+    "adv_assets_travel_turn_front_from_left__p0.c",
+    "adv_assets_travel_turn_front_from_left__p0.h",
+    "adv_assets_travel_turn_front_from_left__p0.json",
+    "adv_assets_travel_turn_front_from_right__p0.c",
+    "adv_assets_travel_turn_front_from_right__p0.h",
+    "adv_assets_travel_turn_front_from_right__p0.json",
+    "adv_assets_travel_turn_left__p0.c",
+    "adv_assets_travel_turn_left__p0.h",
+    "adv_assets_travel_turn_left__p0.json",
+    "adv_assets_travel_turn_right__p0.c",
+    "adv_assets_travel_turn_right__p0.h",
+    "adv_assets_travel_turn_right__p0.json",
+    "adv_assets_travel_walk_left__p0.c",
+    "adv_assets_travel_walk_left__p0.h",
+    "adv_assets_travel_walk_left__p0.json",
+    "adv_assets_travel_walk_right__p0.c",
+    "adv_assets_travel_walk_right__p0.h",
+    "adv_assets_travel_walk_right__p0.json",
+    "adv_assets_travel_welcome__p0.c",
+    "adv_assets_travel_welcome__p0.h",
+    "adv_assets_travel_welcome__p0.json",
+    "adv_assets_ui_bars_bottom__p0.c",
+    "adv_assets_ui_bars_bottom__p0.h",
+    "adv_assets_ui_bars_bottom__p0.json",
+    "adv_assets_ui_bars_top__p0.c",
+    "adv_assets_ui_bars_top__p0.h",
+    "adv_assets_ui_bars_top__p0.json",
+    "adv_assets_ui_cards_info_current_bottom__p0.c",
+    "adv_assets_ui_cards_info_current_bottom__p0.h",
+    "adv_assets_ui_cards_info_current_bottom__p0.json",
+    "adv_assets_ui_cards_info_current_bottom_left__p0.c",
+    "adv_assets_ui_cards_info_current_bottom_left__p0.h",
+    "adv_assets_ui_cards_info_current_bottom_left__p0.json",
+    "adv_assets_ui_cards_info_current_bottom_right__p0.c",
+    "adv_assets_ui_cards_info_current_bottom_right__p0.h",
+    "adv_assets_ui_cards_info_current_bottom_right__p0.json",
+    "adv_assets_ui_cards_info_current_center__p0.c",
+    "adv_assets_ui_cards_info_current_center__p0.h",
+    "adv_assets_ui_cards_info_current_center__p0.json",
+    "adv_assets_ui_cards_info_current_left__p0.c",
+    "adv_assets_ui_cards_info_current_left__p0.h",
+    "adv_assets_ui_cards_info_current_left__p0.json",
+    "adv_assets_ui_cards_info_current_right__p0.c",
+    "adv_assets_ui_cards_info_current_right__p0.h",
+    "adv_assets_ui_cards_info_current_right__p0.json",
+    "adv_assets_ui_cards_info_current_top__p0.c",
+    "adv_assets_ui_cards_info_current_top__p0.h",
+    "adv_assets_ui_cards_info_current_top__p0.json",
+    "adv_assets_ui_cards_info_current_top_left__p0.c",
+    "adv_assets_ui_cards_info_current_top_left__p0.h",
+    "adv_assets_ui_cards_info_current_top_left__p0.json",
+    "adv_assets_ui_cards_info_current_top_right__p0.c",
+    "adv_assets_ui_cards_info_current_top_right__p0.h",
+    "adv_assets_ui_cards_info_current_top_right__p0.json",
+    "adv_assets_ui_cards_info_normal_bottom__p0.c",
+    "adv_assets_ui_cards_info_normal_bottom__p0.h",
+    "adv_assets_ui_cards_info_normal_bottom__p0.json",
+    "adv_assets_ui_cards_info_normal_bottom_left__p0.c",
+    "adv_assets_ui_cards_info_normal_bottom_left__p0.h",
+    "adv_assets_ui_cards_info_normal_bottom_left__p0.json",
+    "adv_assets_ui_cards_info_normal_bottom_right__p0.c",
+    "adv_assets_ui_cards_info_normal_bottom_right__p0.h",
+    "adv_assets_ui_cards_info_normal_bottom_right__p0.json",
+    "adv_assets_ui_cards_info_normal_center__p0.c",
+    "adv_assets_ui_cards_info_normal_center__p0.h",
+    "adv_assets_ui_cards_info_normal_center__p0.json",
+    "adv_assets_ui_cards_info_normal_left__p0.c",
+    "adv_assets_ui_cards_info_normal_left__p0.h",
+    "adv_assets_ui_cards_info_normal_left__p0.json",
+    "adv_assets_ui_cards_info_normal_right__p0.c",
+    "adv_assets_ui_cards_info_normal_right__p0.h",
+    "adv_assets_ui_cards_info_normal_right__p0.json",
+    "adv_assets_ui_cards_info_normal_top__p0.c",
+    "adv_assets_ui_cards_info_normal_top__p0.h",
+    "adv_assets_ui_cards_info_normal_top__p0.json",
+    "adv_assets_ui_cards_info_normal_top_left__p0.c",
+    "adv_assets_ui_cards_info_normal_top_left__p0.h",
+    "adv_assets_ui_cards_info_normal_top_left__p0.json",
+    "adv_assets_ui_cards_info_normal_top_right__p0.c",
+    "adv_assets_ui_cards_info_normal_top_right__p0.h",
+    "adv_assets_ui_cards_info_normal_top_right__p0.json",
+    "adv_assets_ui_cards_menu_disabled_bottom__p0.c",
+    "adv_assets_ui_cards_menu_disabled_bottom__p0.h",
+    "adv_assets_ui_cards_menu_disabled_bottom__p0.json",
+    "adv_assets_ui_cards_menu_disabled_bottom_left__p0.c",
+    "adv_assets_ui_cards_menu_disabled_bottom_left__p0.h",
+    "adv_assets_ui_cards_menu_disabled_bottom_left__p0.json",
+    "adv_assets_ui_cards_menu_disabled_bottom_right__p0.c",
+    "adv_assets_ui_cards_menu_disabled_bottom_right__p0.h",
+    "adv_assets_ui_cards_menu_disabled_bottom_right__p0.json",
+    "adv_assets_ui_cards_menu_disabled_center__p0.c",
+    "adv_assets_ui_cards_menu_disabled_center__p0.h",
+    "adv_assets_ui_cards_menu_disabled_center__p0.json",
+    "adv_assets_ui_cards_menu_disabled_left__p0.c",
+    "adv_assets_ui_cards_menu_disabled_left__p0.h",
+    "adv_assets_ui_cards_menu_disabled_left__p0.json",
+    "adv_assets_ui_cards_menu_disabled_right__p0.c",
+    "adv_assets_ui_cards_menu_disabled_right__p0.h",
+    "adv_assets_ui_cards_menu_disabled_right__p0.json",
+    "adv_assets_ui_cards_menu_disabled_top__p0.c",
+    "adv_assets_ui_cards_menu_disabled_top__p0.h",
+    "adv_assets_ui_cards_menu_disabled_top__p0.json",
+    "adv_assets_ui_cards_menu_disabled_top_left__p0.c",
+    "adv_assets_ui_cards_menu_disabled_top_left__p0.h",
+    "adv_assets_ui_cards_menu_disabled_top_left__p0.json",
+    "adv_assets_ui_cards_menu_disabled_top_right__p0.c",
+    "adv_assets_ui_cards_menu_disabled_top_right__p0.h",
+    "adv_assets_ui_cards_menu_disabled_top_right__p0.json",
+    "adv_assets_ui_cards_menu_normal_bottom__p0.c",
+    "adv_assets_ui_cards_menu_normal_bottom__p0.h",
+    "adv_assets_ui_cards_menu_normal_bottom__p0.json",
+    "adv_assets_ui_cards_menu_normal_bottom_left__p0.c",
+    "adv_assets_ui_cards_menu_normal_bottom_left__p0.h",
+    "adv_assets_ui_cards_menu_normal_bottom_left__p0.json",
+    "adv_assets_ui_cards_menu_normal_bottom_right__p0.c",
+    "adv_assets_ui_cards_menu_normal_bottom_right__p0.h",
+    "adv_assets_ui_cards_menu_normal_bottom_right__p0.json",
+    "adv_assets_ui_cards_menu_normal_center__p0.c",
+    "adv_assets_ui_cards_menu_normal_center__p0.h",
+    "adv_assets_ui_cards_menu_normal_center__p0.json",
+    "adv_assets_ui_cards_menu_normal_left__p0.c",
+    "adv_assets_ui_cards_menu_normal_left__p0.h",
+    "adv_assets_ui_cards_menu_normal_left__p0.json",
+    "adv_assets_ui_cards_menu_normal_right__p0.c",
+    "adv_assets_ui_cards_menu_normal_right__p0.h",
+    "adv_assets_ui_cards_menu_normal_right__p0.json",
+    "adv_assets_ui_cards_menu_normal_top__p0.c",
+    "adv_assets_ui_cards_menu_normal_top__p0.h",
+    "adv_assets_ui_cards_menu_normal_top__p0.json",
+    "adv_assets_ui_cards_menu_normal_top_left__p0.c",
+    "adv_assets_ui_cards_menu_normal_top_left__p0.h",
+    "adv_assets_ui_cards_menu_normal_top_left__p0.json",
+    "adv_assets_ui_cards_menu_normal_top_right__p0.c",
+    "adv_assets_ui_cards_menu_normal_top_right__p0.h",
+    "adv_assets_ui_cards_menu_normal_top_right__p0.json",
+    "adv_assets_ui_cards_menu_selected_bottom__p0.c",
+    "adv_assets_ui_cards_menu_selected_bottom__p0.h",
+    "adv_assets_ui_cards_menu_selected_bottom__p0.json",
+    "adv_assets_ui_cards_menu_selected_bottom_left__p0.c",
+    "adv_assets_ui_cards_menu_selected_bottom_left__p0.h",
+    "adv_assets_ui_cards_menu_selected_bottom_left__p0.json",
+    "adv_assets_ui_cards_menu_selected_bottom_right__p0.c",
+    "adv_assets_ui_cards_menu_selected_bottom_right__p0.h",
+    "adv_assets_ui_cards_menu_selected_bottom_right__p0.json",
+    "adv_assets_ui_cards_menu_selected_center__p0.c",
+    "adv_assets_ui_cards_menu_selected_center__p0.h",
+    "adv_assets_ui_cards_menu_selected_center__p0.json",
+    "adv_assets_ui_cards_menu_selected_left__p0.c",
+    "adv_assets_ui_cards_menu_selected_left__p0.h",
+    "adv_assets_ui_cards_menu_selected_left__p0.json",
+    "adv_assets_ui_cards_menu_selected_right__p0.c",
+    "adv_assets_ui_cards_menu_selected_right__p0.h",
+    "adv_assets_ui_cards_menu_selected_right__p0.json",
+    "adv_assets_ui_cards_menu_selected_top__p0.c",
+    "adv_assets_ui_cards_menu_selected_top__p0.h",
+    "adv_assets_ui_cards_menu_selected_top__p0.json",
+    "adv_assets_ui_cards_menu_selected_top_left__p0.c",
+    "adv_assets_ui_cards_menu_selected_top_left__p0.h",
+    "adv_assets_ui_cards_menu_selected_top_left__p0.json",
+    "adv_assets_ui_cards_menu_selected_top_right__p0.c",
+    "adv_assets_ui_cards_menu_selected_top_right__p0.h",
+    "adv_assets_ui_cards_menu_selected_top_right__p0.json",
+    "adv_assets_ui_cards_popup_normal_bottom__p0.c",
+    "adv_assets_ui_cards_popup_normal_bottom__p0.h",
+    "adv_assets_ui_cards_popup_normal_bottom__p0.json",
+    "adv_assets_ui_cards_popup_normal_bottom_left__p0.c",
+    "adv_assets_ui_cards_popup_normal_bottom_left__p0.h",
+    "adv_assets_ui_cards_popup_normal_bottom_left__p0.json",
+    "adv_assets_ui_cards_popup_normal_bottom_right__p0.c",
+    "adv_assets_ui_cards_popup_normal_bottom_right__p0.h",
+    "adv_assets_ui_cards_popup_normal_bottom_right__p0.json",
+    "adv_assets_ui_cards_popup_normal_center__p0.c",
+    "adv_assets_ui_cards_popup_normal_center__p0.h",
+    "adv_assets_ui_cards_popup_normal_center__p0.json",
+    "adv_assets_ui_cards_popup_normal_left__p0.c",
+    "adv_assets_ui_cards_popup_normal_left__p0.h",
+    "adv_assets_ui_cards_popup_normal_left__p0.json",
+    "adv_assets_ui_cards_popup_normal_right__p0.c",
+    "adv_assets_ui_cards_popup_normal_right__p0.h",
+    "adv_assets_ui_cards_popup_normal_right__p0.json",
+    "adv_assets_ui_cards_popup_normal_top__p0.c",
+    "adv_assets_ui_cards_popup_normal_top__p0.h",
+    "adv_assets_ui_cards_popup_normal_top__p0.json",
+    "adv_assets_ui_cards_popup_normal_top_left__p0.c",
+    "adv_assets_ui_cards_popup_normal_top_left__p0.h",
+    "adv_assets_ui_cards_popup_normal_top_left__p0.json",
+    "adv_assets_ui_cards_popup_normal_top_right__p0.c",
+    "adv_assets_ui_cards_popup_normal_top_right__p0.h",
+    "adv_assets_ui_cards_popup_normal_top_right__p0.json",
+    "adv_assets_ui_cover_background_bottom__p0.c",
+    "adv_assets_ui_cover_background_bottom__p0.h",
+    "adv_assets_ui_cover_background_bottom__p0.json",
+    "adv_assets_ui_cover_background_top__p0.c",
+    "adv_assets_ui_cover_background_top__p0.h",
+    "adv_assets_ui_cover_background_top__p0.json",
+    "adv_assets_ui_labels_boot_caption__p0.c",
+    "adv_assets_ui_labels_boot_caption__p0.h",
+    "adv_assets_ui_labels_boot_caption__p0.json",
+    "adv_assets_ui_labels_new_record__p0.c",
+    "adv_assets_ui_labels_new_record__p0.h",
+    "adv_assets_ui_labels_new_record__p0.json",
+    "adv_assets_ui_labels_placeholder__p0.c",
+    "adv_assets_ui_labels_placeholder__p0.h",
+    "adv_assets_ui_labels_placeholder__p0.json",
+    "adv_assets_ui_labels_press_start__p0.c",
+    "adv_assets_ui_labels_press_start__p0.h",
+    "adv_assets_ui_labels_press_start__p0.json",
+    "adv_assets_ui_labels_test_no_record__p0.c",
+    "adv_assets_ui_labels_test_no_record__p0.h",
+    "adv_assets_ui_labels_test_no_record__p0.json",
+    "adv_assets_ui_map_footprints_backward__p0.c",
+    "adv_assets_ui_map_footprints_backward__p0.h",
+    "adv_assets_ui_map_footprints_backward__p0.json",
+    "adv_assets_ui_map_footprints_forward__p0.c",
+    "adv_assets_ui_map_footprints_forward__p0.h",
+    "adv_assets_ui_map_footprints_forward__p0.json",
+    "adv_assets_ui_map_lock__p0.c",
+    "adv_assets_ui_map_lock__p0.h",
+    "adv_assets_ui_map_lock__p0.json",
+    "adv_assets_ui_map_stamp_bronze__p0.c",
+    "adv_assets_ui_map_stamp_bronze__p0.h",
+    "adv_assets_ui_map_stamp_bronze__p0.json",
+    "adv_assets_ui_map_stamp_empty__p0.c",
+    "adv_assets_ui_map_stamp_empty__p0.h",
+    "adv_assets_ui_map_stamp_empty__p0.json",
+    "adv_assets_ui_map_stamp_gold__p0.c",
+    "adv_assets_ui_map_stamp_gold__p0.h",
+    "adv_assets_ui_map_stamp_gold__p0.json",
+    "adv_assets_ui_map_stamp_silver__p0.c",
+    "adv_assets_ui_map_stamp_silver__p0.h",
+    "adv_assets_ui_map_stamp_silver__p0.json",
+    "adv_assets_ui_map_station_current__p0.c",
+    "adv_assets_ui_map_station_current__p0.h",
+    "adv_assets_ui_map_station_current__p0.json",
+    "adv_assets_ui_map_station_locked__p0.c",
+    "adv_assets_ui_map_station_locked__p0.h",
+    "adv_assets_ui_map_station_locked__p0.json",
+    "adv_assets_ui_map_station_unlocked__p0.c",
+    "adv_assets_ui_map_station_unlocked__p0.h",
+    "adv_assets_ui_map_station_unlocked__p0.json",
+    "adv_assets_ui_map_temporary_position_marker__p0.c",
+    "adv_assets_ui_map_temporary_position_marker__p0.h",
+    "adv_assets_ui_map_temporary_position_marker__p0.json",
+    "adv_assets_ui_numbers_20_0__p0.c",
+    "adv_assets_ui_numbers_20_0__p0.h",
+    "adv_assets_ui_numbers_20_0__p0.json",
+    "adv_assets_ui_numbers_20_1__p0.c",
+    "adv_assets_ui_numbers_20_1__p0.h",
+    "adv_assets_ui_numbers_20_1__p0.json",
+    "adv_assets_ui_numbers_20_2__p0.c",
+    "adv_assets_ui_numbers_20_2__p0.h",
+    "adv_assets_ui_numbers_20_2__p0.json",
+    "adv_assets_ui_numbers_20_3__p0.c",
+    "adv_assets_ui_numbers_20_3__p0.h",
+    "adv_assets_ui_numbers_20_3__p0.json",
+    "adv_assets_ui_numbers_20_4__p0.c",
+    "adv_assets_ui_numbers_20_4__p0.h",
+    "adv_assets_ui_numbers_20_4__p0.json",
+    "adv_assets_ui_numbers_20_5__p0.c",
+    "adv_assets_ui_numbers_20_5__p0.h",
+    "adv_assets_ui_numbers_20_5__p0.json",
+    "adv_assets_ui_numbers_20_6__p0.c",
+    "adv_assets_ui_numbers_20_6__p0.h",
+    "adv_assets_ui_numbers_20_6__p0.json",
+    "adv_assets_ui_numbers_20_7__p0.c",
+    "adv_assets_ui_numbers_20_7__p0.h",
+    "adv_assets_ui_numbers_20_7__p0.json",
+    "adv_assets_ui_numbers_20_8__p0.c",
+    "adv_assets_ui_numbers_20_8__p0.h",
+    "adv_assets_ui_numbers_20_8__p0.json",
+    "adv_assets_ui_numbers_20_9__p0.c",
+    "adv_assets_ui_numbers_20_9__p0.h",
+    "adv_assets_ui_numbers_20_9__p0.json",
+    "adv_assets_ui_numbers_20_m__p0.c",
+    "adv_assets_ui_numbers_20_m__p0.h",
+    "adv_assets_ui_numbers_20_m__p0.json",
+    "adv_assets_ui_numbers_20_plus__p0.c",
+    "adv_assets_ui_numbers_20_plus__p0.h",
+    "adv_assets_ui_numbers_20_plus__p0.json",
+    "adv_assets_ui_numbers_36_0__p0.c",
+    "adv_assets_ui_numbers_36_0__p0.h",
+    "adv_assets_ui_numbers_36_0__p0.json",
+    "adv_assets_ui_numbers_36_1__p0.c",
+    "adv_assets_ui_numbers_36_1__p0.h",
+    "adv_assets_ui_numbers_36_1__p0.json",
+    "adv_assets_ui_numbers_36_2__p0.c",
+    "adv_assets_ui_numbers_36_2__p0.h",
+    "adv_assets_ui_numbers_36_2__p0.json",
+    "adv_assets_ui_numbers_36_3__p0.c",
+    "adv_assets_ui_numbers_36_3__p0.h",
+    "adv_assets_ui_numbers_36_3__p0.json",
+    "adv_assets_ui_numbers_36_4__p0.c",
+    "adv_assets_ui_numbers_36_4__p0.h",
+    "adv_assets_ui_numbers_36_4__p0.json",
+    "adv_assets_ui_numbers_36_5__p0.c",
+    "adv_assets_ui_numbers_36_5__p0.h",
+    "adv_assets_ui_numbers_36_5__p0.json",
+    "adv_assets_ui_numbers_36_6__p0.c",
+    "adv_assets_ui_numbers_36_6__p0.h",
+    "adv_assets_ui_numbers_36_6__p0.json",
+    "adv_assets_ui_numbers_36_7__p0.c",
+    "adv_assets_ui_numbers_36_7__p0.h",
+    "adv_assets_ui_numbers_36_7__p0.json",
+    "adv_assets_ui_numbers_36_8__p0.c",
+    "adv_assets_ui_numbers_36_8__p0.h",
+    "adv_assets_ui_numbers_36_8__p0.json",
+    "adv_assets_ui_numbers_36_9__p0.c",
+    "adv_assets_ui_numbers_36_9__p0.h",
+    "adv_assets_ui_numbers_36_9__p0.json",
+    "adv_assets_ui_numbers_36_m__p0.c",
+    "adv_assets_ui_numbers_36_m__p0.h",
+    "adv_assets_ui_numbers_36_m__p0.json",
+    "adv_assets_ui_numbers_36_plus__p0.c",
+    "adv_assets_ui_numbers_36_plus__p0.h",
+    "adv_assets_ui_numbers_36_plus__p0.json",
+    "adv_assets_ui_passport_grid_current__p0.c",
+    "adv_assets_ui_passport_grid_current__p0.h",
+    "adv_assets_ui_passport_grid_current__p0.json",
+    "adv_assets_ui_passport_grid_normal__p0.c",
+    "adv_assets_ui_passport_grid_normal__p0.h",
+    "adv_assets_ui_passport_grid_normal__p0.json",
+    "adv_assets_ui_passport_header__p0.c",
+    "adv_assets_ui_passport_header__p0.h",
+    "adv_assets_ui_passport_header__p0.json",
+    "adv_assets_ui_passport_locked_mask__p0.c",
+    "adv_assets_ui_passport_locked_mask__p0.h",
+    "adv_assets_ui_passport_locked_mask__p0.json",
+    "adv_assets_ui_passport_page_tile__p0.c",
+    "adv_assets_ui_passport_page_tile__p0.h",
+    "adv_assets_ui_passport_page_tile__p0.json",
+    "adv_assets_ui_resources_bar_frame__p0.c",
+    "adv_assets_ui_resources_bar_frame__p0.h",
+    "adv_assets_ui_resources_bar_frame__p0.json",
+    "adv_assets_ui_resources_fill__p0.c",
+    "adv_assets_ui_resources_fill__p0.h",
+    "adv_assets_ui_resources_fill__p0.json",
+    "adv_assets_ui_resources_fill_left_cap__p0.c",
+    "adv_assets_ui_resources_fill_left_cap__p0.h",
+    "adv_assets_ui_resources_fill_left_cap__p0.json",
+    "adv_assets_ui_resources_fill_right_cap__p0.c",
+    "adv_assets_ui_resources_fill_right_cap__p0.h",
+    "adv_assets_ui_resources_fill_right_cap__p0.json",
+    "adv_assets_ui_resources_icons_fuel__p0.c",
+    "adv_assets_ui_resources_icons_fuel__p0.h",
+    "adv_assets_ui_resources_icons_fuel__p0.json",
+    "adv_assets_ui_resources_icons_hot_air__p0.c",
+    "adv_assets_ui_resources_icons_hot_air__p0.h",
+    "adv_assets_ui_resources_icons_hot_air__p0.json",
+    "adv_assets_ui_resources_icons_oxygen__p0.c",
+    "adv_assets_ui_resources_icons_oxygen__p0.h",
+    "adv_assets_ui_resources_icons_oxygen__p0.json",
+    "adv_assets_ui_resources_icons_spirit__p0.c",
+    "adv_assets_ui_resources_icons_spirit__p0.h",
+    "adv_assets_ui_resources_icons_spirit__p0.json",
+    "adv_assets_ui_resources_icons_stamina__p0.c",
+    "adv_assets_ui_resources_icons_stamina__p0.h",
+    "adv_assets_ui_resources_icons_stamina__p0.json",
+    "adv_assets_ui_resources_icons_steam__p0.c",
+    "adv_assets_ui_resources_icons_steam__p0.h",
+    "adv_assets_ui_resources_icons_steam__p0.json",
+    "adv_assets_ui_resources_icons_temperature__p0.c",
+    "adv_assets_ui_resources_icons_temperature__p0.h",
+    "adv_assets_ui_resources_icons_temperature__p0.json",
+    "adv_assets_ui_resources_low_fill__p0.c",
+    "adv_assets_ui_resources_low_fill__p0.h",
+    "adv_assets_ui_resources_low_fill__p0.json",
+    "adv_assets_ui_resources_low_fill_left_cap__p0.c",
+    "adv_assets_ui_resources_low_fill_left_cap__p0.h",
+    "adv_assets_ui_resources_low_fill_left_cap__p0.json",
+    "adv_assets_ui_resources_low_fill_right_cap__p0.c",
+    "adv_assets_ui_resources_low_fill_right_cap__p0.h",
+    "adv_assets_ui_resources_low_fill_right_cap__p0.json",
+    "adv_assets_ui_stamps_ink_pad__p0.c",
+    "adv_assets_ui_stamps_ink_pad__p0.h",
+    "adv_assets_ui_stamps_ink_pad__p0.json",
+    "adv_assets_ui_wordmarks_climb__p0.c",
+    "adv_assets_ui_wordmarks_climb__p0.h",
+    "adv_assets_ui_wordmarks_climb__p0.json",
+    "adv_assets_ui_wordmarks_collection__p0.c",
+    "adv_assets_ui_wordmarks_collection__p0.h",
+    "adv_assets_ui_wordmarks_collection__p0.json",
+    "adv_assets_ui_wordmarks_dive__p0.c",
+    "adv_assets_ui_wordmarks_dive__p0.h",
+    "adv_assets_ui_wordmarks_dive__p0.json",
+    "adv_assets_ui_wordmarks_jump__p0.c",
+    "adv_assets_ui_wordmarks_jump__p0.h",
+    "adv_assets_ui_wordmarks_jump__p0.json",
+    "adv_assets_ui_wordmarks_night__p0.c",
+    "adv_assets_ui_wordmarks_night__p0.h",
+    "adv_assets_ui_wordmarks_night__p0.json",
+    "adv_assets_ui_wordmarks_post__p0.c",
+    "adv_assets_ui_wordmarks_post__p0.h",
+    "adv_assets_ui_wordmarks_post__p0.json",
+    "adv_assets_ui_wordmarks_ski__p0.c",
+    "adv_assets_ui_wordmarks_ski__p0.h",
+    "adv_assets_ui_wordmarks_ski__p0.json",
+    "adv_assets_ui_wordmarks_sky__p0.c",
+    "adv_assets_ui_wordmarks_sky__p0.h",
+    "adv_assets_ui_wordmarks_sky__p0.json",
+    "adv_assets_ui_wordmarks_space__p0.c",
+    "adv_assets_ui_wordmarks_space__p0.h",
+    "adv_assets_ui_wordmarks_space__p0.json",
+    "adv_assets_generated.json"
+  ],
+  "source_manifests_sha256": {
+    "shared-static-manifest.json": "f48bb34259cd5f58eb04cdc94d1e95e130875b111888b85962955b9655a4c5c8",
+    "manifest.json": "e62681862e7f1c656c547f5324ac0f1d8a462609afcb19ad4157041f7de2d9af",
+    "ui/ui-manifest.json": "609bd4b7d481fb90f36d7a2e95c8163cfe9203dbdb16248b71af543726e53f3e",
+    "ui/palette.json": "937c2d09f1ee0ee124b7c13f562b5ea8208a7901a9aa1a0637c5d1310b8de457"
+  },
+  "source_frames": [
+    {
+      "id": "static/icon/fuel",
+      "sources": [
+        {
+          "path": "icons\\fuel.png",
+          "sha256": "1939d939fed173896c0c461c50022b00b63ad37196e6842edb4cb1563536a0eb"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        8
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_icon_fuel__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/icon/hot-air",
+      "sources": [
+        {
+          "path": "icons\\hot-air.png",
+          "sha256": "d7bdc4337cafe9c0b57702cd7b273aa7ca67e42bd2a9c9c460b73195f8dfd210"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        8
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_icon_hot_air__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/icon/oxygen",
+      "sources": [
+        {
+          "path": "icons\\oxygen.png",
+          "sha256": "151bc515d53f73278a797eea165d7c110afd593dfd728e321f252f8c11e93d05"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        8
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_icon_oxygen__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/icon/spirit",
+      "sources": [
+        {
+          "path": "icons\\spirit.png",
+          "sha256": "2f1a4e35393568cf45b38ee3b6a5fef8613fdd65e41baa5efbad87ecbf0bf45d"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        8
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_icon_spirit__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/icon/stamina",
+      "sources": [
+        {
+          "path": "icons\\stamina.png",
+          "sha256": "e0217a47fb71230d11e450493eca03c923f61fb74eed0a308e4a488088daeed0"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        8
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_icon_stamina__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/icon/steam",
+      "sources": [
+        {
+          "path": "icons\\steam.png",
+          "sha256": "9a64d567d86a690751741ca1eaff31f66dd1acdbb7f71fcd9caddc03c4e0848d"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        8
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_icon_steam__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/icon/warmth",
+      "sources": [
+        {
+          "path": "icons\\warmth.png",
+          "sha256": "026bc94edb20620b692cd9783999352b40a1911618e1d0fcc8d76b910a98793b"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        8
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_icon_warmth__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/landmark/climb",
+      "sources": [
+        {
+          "path": "map\\landmarks\\climb.png",
+          "sha256": "ac128f0afb2902bdc9418a51d87068c238690d326125d664fbebe84cd5729c94"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_landmark_climb__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/landmark/dive",
+      "sources": [
+        {
+          "path": "map\\landmarks\\dive.png",
+          "sha256": "d341b383c9798d8769e9d094f4b6c29e13667f7a8d155122036e4cd5d0f76809"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_landmark_dive__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/landmark/jump",
+      "sources": [
+        {
+          "path": "map\\landmarks\\jump.png",
+          "sha256": "af2889591d7a04240f1cfc1faba86c9aaad4a6d63375b56afebffe6f2a119ec3"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_landmark_jump__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/landmark/kiosk",
+      "sources": [
+        {
+          "path": "map\\landmarks\\kiosk.png",
+          "sha256": "053f4bba2f368f5f9003d574f53b45e6b822751f503dd58f85249f6f6107e5a1"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_landmark_kiosk__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/landmark/night",
+      "sources": [
+        {
+          "path": "map\\landmarks\\night.png",
+          "sha256": "5da7308a84004d0913c704e0fa887705992588adce23919e86715c1059464d1e"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_landmark_night__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/landmark/post",
+      "sources": [
+        {
+          "path": "map\\landmarks\\post.png",
+          "sha256": "7f91c03cc1d4c0faeb1990b7c91d7d927e74d192347d67c089a7dcf9ed107623"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_landmark_post__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/landmark/ski",
+      "sources": [
+        {
+          "path": "map\\landmarks\\ski.png",
+          "sha256": "a4d9f679d11503195225a51fd32af67fde6b7fa1316191cb40375ce8470efcfe"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_landmark_ski__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/landmark/sky",
+      "sources": [
+        {
+          "path": "map\\landmarks\\sky.png",
+          "sha256": "835e69ed79dc5212399a229b2a398dd627f726f545e9c28cefcd4778961943f0"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_landmark_sky__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/landmark/space",
+      "sources": [
+        {
+          "path": "map\\landmarks\\space.png",
+          "sha256": "6764b4f23eb63172419a6d00ab004dfffff02bf0e6f316481c00ac07bebb8bd1"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_landmark_space__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/stamp/climb",
+      "sources": [
+        {
+          "path": "stamps\\climb.png",
+          "sha256": "88cc990b806b516850cf9929ec8fe306d06d9accaa7b924a66f463e400595fa7"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_stamp_climb__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/stamp/dive",
+      "sources": [
+        {
+          "path": "stamps\\dive.png",
+          "sha256": "2f1456b213066289080946789804bc40fe255b3938bed9a1fc048a1d49b04068"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_stamp_dive__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/stamp/jump",
+      "sources": [
+        {
+          "path": "stamps\\jump.png",
+          "sha256": "d76db59ac0bdc7692a9a6b7c00c52be1f2afe8a562fb1762fda263b7a84f6f2c"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_stamp_jump__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/stamp/kiosk",
+      "sources": [
+        {
+          "path": "stamps\\kiosk.png",
+          "sha256": "2595b0a6a69d31a51b5750b443a7a7cc6188edd2b930a7b8c152991f5042fc12"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_stamp_kiosk__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/stamp/night",
+      "sources": [
+        {
+          "path": "stamps\\night.png",
+          "sha256": "9261d81b449d013889b61dec07ac638f4608f93719a1b4e7b9b6b2f3139bb011"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_stamp_night__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/stamp/post",
+      "sources": [
+        {
+          "path": "stamps\\post.png",
+          "sha256": "7bffc062959676414d6a193db220263e943383a54611d84cea3f147db6f3778c"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_stamp_post__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/stamp/ski",
+      "sources": [
+        {
+          "path": "stamps\\ski.png",
+          "sha256": "efb7f2f3fb4333e3e42e557d45f0580adcb3ae4ed94a59e89bdba5ff717fbdc6"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_stamp_ski__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/stamp/sky",
+      "sources": [
+        {
+          "path": "stamps\\sky.png",
+          "sha256": "ba53e36b53eee0b10dec41c65d346f902d6e530f12850697fe507d7aed6f1ad6"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_stamp_sky__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/stamp/space",
+      "sources": [
+        {
+          "path": "stamps\\space.png",
+          "sha256": "339fbdcadd076e696d2d2595f5e9a8e657c8d09cbc6552de1e63e55037d2f07b"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_stamp_space__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/deep-sea/bubble-chain",
+      "sources": [
+        {
+          "path": "map\\tiles\\deep-sea\\bubble-chain.png",
+          "sha256": "0d9e83cc68bc23bb7ff7dc5d367b9221314c70819b6bd9a448215eec7d249015"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_deep_sea_bubble_chain__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/deep-sea/coral-fan",
+      "sources": [
+        {
+          "path": "map\\tiles\\deep-sea\\coral-fan.png",
+          "sha256": "84e4d5dbb2b070c2af9748e8ba4acf96ee1449df8c8acd464d5b0ce840829625"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_deep_sea_coral_fan__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/deep-sea/current-wave",
+      "sources": [
+        {
+          "path": "map\\tiles\\deep-sea\\current-wave.png",
+          "sha256": "0172b53ebd01b076bf1d20f843114afe3b4faaf41be3d0b68243728da21fcada"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_deep_sea_current_wave__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/deep-sea/sea-rock",
+      "sources": [
+        {
+          "path": "map\\tiles\\deep-sea\\sea-rock.png",
+          "sha256": "22143e9c9b949b0393e9c0a1f90d1f8bbc92f786448fd79e4320e41e5769530f"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_deep_sea_sea_rock__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/deep-sea/seaweed",
+      "sources": [
+        {
+          "path": "map\\tiles\\deep-sea\\seaweed.png",
+          "sha256": "d1e6cf9c833a1784774782b4da638acc65c45777787231e7213676a0de557061"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_deep_sea_seaweed__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/deep-sea/shell",
+      "sources": [
+        {
+          "path": "map\\tiles\\deep-sea\\shell.png",
+          "sha256": "9f85cc928423214e0f275f59f793ac5f9e8ad6b3f64e9c382b9896f278307b60"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_deep_sea_shell__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/harbor/buoy",
+      "sources": [
+        {
+          "path": "map\\tiles\\harbor\\buoy.png",
+          "sha256": "8d526bdfdcb7680105726a7524e65fd70d075e6d45950361f1877b2b9561350b"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_harbor_buoy__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/harbor/dock-planks",
+      "sources": [
+        {
+          "path": "map\\tiles\\harbor\\dock-planks.png",
+          "sha256": "548732a6ff55f112ae2cd4b88deb800caf3792df66b0f330d77f868604d4cf43"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_harbor_dock_planks__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/harbor/mooring-post",
+      "sources": [
+        {
+          "path": "map\\tiles\\harbor\\mooring-post.png",
+          "sha256": "6d7202c4d584164ebe68373b2ab1c7bb039cd2e18265e0c29d8b0f1008b9c78a"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_harbor_mooring_post__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/harbor/rope-coil",
+      "sources": [
+        {
+          "path": "map\\tiles\\harbor\\rope-coil.png",
+          "sha256": "c2b03b03ac8f74252fc2c9056a6541bba8a2a012a9e96f793d03993b6b67f3b1"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_harbor_rope_coil__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/harbor/wave-crest",
+      "sources": [
+        {
+          "path": "map\\tiles\\harbor\\wave-crest.png",
+          "sha256": "aba54606bbc19471fdcbdcd209c42d7bea188a5e33f1db5d944106af4666d12d"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_harbor_wave_crest__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/harbor/wave-line",
+      "sources": [
+        {
+          "path": "map\\tiles\\harbor\\wave-line.png",
+          "sha256": "16297e2d826c2942b8ca05d504e486b3e7bd5830dd792db0c5b10c7f2c70d658"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_harbor_wave_line__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/mountain/ice-crystals",
+      "sources": [
+        {
+          "path": "map\\tiles\\mountain\\ice-crystals.png",
+          "sha256": "d4226c2f39ab5f08a5c4fd40e4165ccb72bbbae3fa5248f522584016b738b886"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_mountain_ice_crystals__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/mountain/ridge",
+      "sources": [
+        {
+          "path": "map\\tiles\\mountain\\ridge.png",
+          "sha256": "aa8e0aa5f24a1f352fb4b628a7a9157e654a9174044461d2f33682916e3141b7"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_mountain_ridge__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/mountain/rock-face",
+      "sources": [
+        {
+          "path": "map\\tiles\\mountain\\rock-face.png",
+          "sha256": "22143e9c9b949b0393e9c0a1f90d1f8bbc92f786448fd79e4320e41e5769530f"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_mountain_rock_face__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/mountain/snow-drift",
+      "sources": [
+        {
+          "path": "map\\tiles\\mountain\\snow-drift.png",
+          "sha256": "a0f7dbce9a93da1b7299e33c73b81745b4f1c37bd97c8781565009f2b3947033"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_mountain_snow_drift__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/mountain/snowcap-rock",
+      "sources": [
+        {
+          "path": "map\\tiles\\mountain\\snowcap-rock.png",
+          "sha256": "1b94744c19c7bb95a7faf3c53bb9b3d410cdbf932aa690722797fe997928264e"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_mountain_snowcap_rock__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/mountain/young-pine",
+      "sources": [
+        {
+          "path": "map\\tiles\\mountain\\young-pine.png",
+          "sha256": "b262291829ffa4226bdbe2f633b6d6455076861ea891f0b07072aae0bf266036"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_mountain_young_pine__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/night-forest/branch",
+      "sources": [
+        {
+          "path": "map\\tiles\\night-forest\\branch.png",
+          "sha256": "51059893db783042dd154b49336026d9b771f642d2b5fef1f88f70847d0aa03b"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_night_forest_branch__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/night-forest/fern",
+      "sources": [
+        {
+          "path": "map\\tiles\\night-forest\\fern.png",
+          "sha256": "cad1f67de897a4180f540a3e0240ccf13b6443efaeee65542bcfa53af48ea6bc"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_night_forest_fern__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/night-forest/fireflies",
+      "sources": [
+        {
+          "path": "map\\tiles\\night-forest\\fireflies.png",
+          "sha256": "e4f17f0b00d4a6c72e68a5db0ffdbba4e7b54a9150419604ddb6cd385203ceaf"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_night_forest_fireflies__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/night-forest/mushrooms",
+      "sources": [
+        {
+          "path": "map\\tiles\\night-forest\\mushrooms.png",
+          "sha256": "64d4cd3185035f67cc4ee697f7aa6b7be055175c9a3fdf03630af01b8732072e"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_night_forest_mushrooms__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/night-forest/shrub",
+      "sources": [
+        {
+          "path": "map\\tiles\\night-forest\\shrub.png",
+          "sha256": "a852d0c7ce9aa1c9b3d21132da4b4a6395bb6a4c897437cc19da2af6f3e9b236"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_night_forest_shrub__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/night-forest/tree-canopy",
+      "sources": [
+        {
+          "path": "map\\tiles\\night-forest\\tree-canopy.png",
+          "sha256": "1eabc966d94af1e137a567ab95f96da811e16a88a36af59c3521e5369ce6b6dc"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_night_forest_tree_canopy__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/rail/mail-sign",
+      "sources": [
+        {
+          "path": "map\\tiles\\rail\\mail-sign.png",
+          "sha256": "30e596a3c7f394e9402ae66f826fa94d57f52801736b48fd117afb7d2f25e2b1"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_rail_mail_sign__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/rail/rail-crossing",
+      "sources": [
+        {
+          "path": "map\\tiles\\rail\\rail-crossing.png",
+          "sha256": "dd963d89203896cbc102e4941b1b16cb9c373a13b44079cb8c898f0bea6721f6"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_rail_rail_crossing__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/rail/rail-straight",
+      "sources": [
+        {
+          "path": "map\\tiles\\rail\\rail-straight.png",
+          "sha256": "0579917e1b4a0d82544cfee4618f07ddfb8490acdfe54f787433253f0a3484c2"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_rail_rail_straight__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/rail/telegraph-pole",
+      "sources": [
+        {
+          "path": "map\\tiles\\rail\\telegraph-pole.png",
+          "sha256": "b68b63b27ecba2a4af139de37f3673495db544998a3f433e92ca58725a3e4dc6"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_rail_telegraph_pole__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/rail/trackside-grass",
+      "sources": [
+        {
+          "path": "map\\tiles\\rail\\trackside-grass.png",
+          "sha256": "cad1f67de897a4180f540a3e0240ccf13b6443efaeee65542bcfa53af48ea6bc"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_rail_trackside_grass__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/rail/wheat",
+      "sources": [
+        {
+          "path": "map\\tiles\\rail\\wheat.png",
+          "sha256": "04111181a053208b7090595dc21a5a429dbf3cd8e9a8ab3b803da190c967d6a8"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_rail_wheat__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/ski/gate-poles",
+      "sources": [
+        {
+          "path": "map\\tiles\\ski\\gate-poles.png",
+          "sha256": "f6786f666678472a52d8e93e6d0666cc7b443e3d710fed4ce1f019d3884acb26"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_ski_gate_poles__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/ski/small-spruce",
+      "sources": [
+        {
+          "path": "map\\tiles\\ski\\small-spruce.png",
+          "sha256": "63eb3ddf8e8865f24445732cc82f4fdd27fdd49de5360c3f1461b609e7c226cd"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_ski_small_spruce__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/ski/snow-mound",
+      "sources": [
+        {
+          "path": "map\\tiles\\ski\\snow-mound.png",
+          "sha256": "1b94744c19c7bb95a7faf3c53bb9b3d410cdbf932aa690722797fe997928264e"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_ski_snow_mound__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/ski/snow-pine",
+      "sources": [
+        {
+          "path": "map\\tiles\\ski\\snow-pine.png",
+          "sha256": "63eb3ddf8e8865f24445732cc82f4fdd27fdd49de5360c3f1461b609e7c226cd"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_ski_snow_pine__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/ski/snow-track",
+      "sources": [
+        {
+          "path": "map\\tiles\\ski\\snow-track.png",
+          "sha256": "9fc98cc1c143f19201eb40a9f409dc40265af600c24b02c0d562dc02d112c25a"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_ski_snow_track__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/sky/bird-silhouette",
+      "sources": [
+        {
+          "path": "map\\tiles\\sky\\bird-silhouette.png",
+          "sha256": "7212dde37b96452b1956083d0bc3b446875aafdb91587ed77763642ad6157e56"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_sky_bird_silhouette__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/sky/cloud-chain",
+      "sources": [
+        {
+          "path": "map\\tiles\\sky\\cloud-chain.png",
+          "sha256": "eaf72ff9705b239ec784438e262a9e2bd172872a7154b10fd2e3e4c2afaf8977"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_sky_cloud_chain__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/sky/cloud-large",
+      "sources": [
+        {
+          "path": "map\\tiles\\sky\\cloud-large.png",
+          "sha256": "74c102a22c030810de0679fb4c27899b5b6d5e68fcb74e0d8d988251f5a770d6"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_sky_cloud_large__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/sky/cloud-small",
+      "sources": [
+        {
+          "path": "map\\tiles\\sky\\cloud-small.png",
+          "sha256": "57dc9901ca3b70c464d6615664b235e7fd8525c43ac9c99cda2f4b142f4c0906"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_sky_cloud_small__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/sky/feather",
+      "sources": [
+        {
+          "path": "map\\tiles\\sky\\feather.png",
+          "sha256": "134505217c36ee5e1df4f873a1400f7bad1514448a5a280f990895e76df98412"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_sky_feather__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/sky/wind-ribbon",
+      "sources": [
+        {
+          "path": "map\\tiles\\sky\\wind-ribbon.png",
+          "sha256": "16297e2d826c2942b8ca05d504e486b3e7bd5830dd792db0c5b10c7f2c70d658"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_sky_wind_ribbon__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/space/asteroid",
+      "sources": [
+        {
+          "path": "map\\tiles\\space\\asteroid.png",
+          "sha256": "0c3fd7d7a9eedb33a746ed3272af55162e9e0d75950ff849a2c320e7ca6ffc24"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_space_asteroid__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/space/comet",
+      "sources": [
+        {
+          "path": "map\\tiles\\space\\comet.png",
+          "sha256": "ef10e490ecbb609f4bb008cffad1e5e16068ed70223ce19e7f7490d8ff38c024"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_space_comet__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/space/crater",
+      "sources": [
+        {
+          "path": "map\\tiles\\space\\crater.png",
+          "sha256": "0c3fd7d7a9eedb33a746ed3272af55162e9e0d75950ff849a2c320e7ca6ffc24"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_space_crater__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/space/orbit-dots",
+      "sources": [
+        {
+          "path": "map\\tiles\\space\\orbit-dots.png",
+          "sha256": "badfff4f569a2bef3e8c81321e2e3e0f585fe335eba14b5e2058c8c00706f99f"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_space_orbit_dots__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/space/ring-planet",
+      "sources": [
+        {
+          "path": "map\\tiles\\space\\ring-planet.png",
+          "sha256": "afc8a8d34165b0bebfc9d8557cd6b01dde9686c4b3377a58def77d4efcea6547"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_space_ring_planet__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/space/star-field",
+      "sources": [
+        {
+          "path": "map\\tiles\\space\\star-field.png",
+          "sha256": "13b53ccfabcb3bd9762942ace7426c4785ea6ffb2be1529caa0bf40452d92c9a"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_space_star_field__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/town/bunting",
+      "sources": [
+        {
+          "path": "map\\tiles\\town\\bunting.png",
+          "sha256": "6da0b8085c835b4f6c75c0d240cd468ecd73298967f96d813cbbcc40bfa103d7"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_town_bunting__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/town/cobble-path",
+      "sources": [
+        {
+          "path": "map\\tiles\\town\\cobble-path.png",
+          "sha256": "47bdc55799fdbbc0db59447b03834d9a72c3d322c5cbb69b3b7c2a8c5557503c"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_town_cobble_path__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/town/flowerbed",
+      "sources": [
+        {
+          "path": "map\\tiles\\town\\flowerbed.png",
+          "sha256": "a0e603e41fcf5289f38b4f28d8778cb1316ed42af415251d851da4e39a93e38d"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_town_flowerbed__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/town/red-roof",
+      "sources": [
+        {
+          "path": "map\\tiles\\town\\red-roof.png",
+          "sha256": "83e638db8c492c9768a696269cb33ca7a13707e725b2691ca44d5cdeea61915d"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_town_red_roof__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/town/street-lamp",
+      "sources": [
+        {
+          "path": "map\\tiles\\town\\street-lamp.png",
+          "sha256": "4e328bd10bac49cc41f49bd1f9cb40c818b343ff4f4325ba6db5a7ecbec555bc"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_town_street_lamp__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "static/tiles/town/window-box",
+      "sources": [
+        {
+          "path": "map\\tiles\\town\\window-box.png",
+          "sha256": "e744b9fc86bdcd2e1bee6d4080d5258a6d211dafb5bc5a30f87ee724b91ddd2c"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_static_tiles_town_window_box__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel/cheer",
+      "sources": [
+        {
+          "path": "frames\\travel\\runtime\\cheer\\000.png",
+          "sha256": "783f4e55369fc46d682eeb5e5bcb1c9c04c18ceca20b82ddaa650066408cf45c"
+        },
+        {
+          "path": "frames\\travel\\runtime\\cheer\\001.png",
+          "sha256": "bf0dadd87c46de44b69320bf9e22a7ac7559095958ac97e5559025c0e9d6d3e7"
+        },
+        {
+          "path": "frames\\travel\\runtime\\cheer\\002.png",
+          "sha256": "7fb7b3642c91c6215618d3bfb73477bf927ba64587d8d03dad79645f6681e3ab"
+        },
+        {
+          "path": "frames\\travel\\runtime\\cheer\\003.png",
+          "sha256": "a9d344d304086e16a62ade6b916c106f59d8f1945056266c0c4285ca345fc7c3"
+        },
+        {
+          "path": "frames\\travel\\runtime\\cheer\\004.png",
+          "sha256": "1d149e49a52ffb41b5c46e21fbc694f049e4086912e454dcffa43dd725ac9f45"
+        },
+        {
+          "path": "frames\\travel\\runtime\\cheer\\005.png",
+          "sha256": "69b4264592427960907efb49e7f4e23e738ca5084b7d8c19540bec8c54725ce0"
+        },
+        {
+          "path": "frames\\travel\\runtime\\cheer\\006.png",
+          "sha256": "fe1e249aa9afc60fe37e3700f71aaaf6ba3a75549ac28acd0e2fd24dd37438f4"
+        },
+        {
+          "path": "frames\\travel\\runtime\\cheer\\007.png",
+          "sha256": "783f4e55369fc46d682eeb5e5bcb1c9c04c18ceca20b82ddaa650066408cf45c"
+        }
+      ],
+      "canvas": [
+        43,
+        72
+      ],
+      "anchor": [
+        28,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_travel_cheer__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            43,
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel/idle",
+      "sources": [
+        {
+          "path": "frames\\travel\\runtime\\idle\\000.png",
+          "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
+        },
+        {
+          "path": "frames\\travel\\runtime\\idle\\001.png",
+          "sha256": "91b7c6c175296362168f4a26d496e09475c6ed91ec16cd58bc55eb115ac6411a"
+        },
+        {
+          "path": "frames\\travel\\runtime\\idle\\002.png",
+          "sha256": "5bd861faaf02e9b5f7ab207d979b12e3fe1426115b085cebbedde2b5e5c3f7fd"
+        },
+        {
+          "path": "frames\\travel\\runtime\\idle\\003.png",
+          "sha256": "670df0d2cc70675f343a77a091f3ad91eb71220e93a88b37938962f11151cb91"
+        },
+        {
+          "path": "frames\\travel\\runtime\\idle\\004.png",
+          "sha256": "0c609893e3822fda0ac381003aee25688d2d3fc08a3ad68def9ce36b34cdb322"
+        },
+        {
+          "path": "frames\\travel\\runtime\\idle\\005.png",
+          "sha256": "2858fbbfeb3b58e3929b8af1f3236194dc9f60990fb50ec6d9ea0cdbbb9e82ee"
+        },
+        {
+          "path": "frames\\travel\\runtime\\idle\\006.png",
+          "sha256": "cb9ebf4e3f408836befe093c3295b48e617b7bb3dd098d6deefe4e164531285e"
+        },
+        {
+          "path": "frames\\travel\\runtime\\idle\\007.png",
+          "sha256": "eaa1f9d16a52d10276122daea676a13ff2238dfdc8ec368c666a2f56caee6e31"
+        }
+      ],
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_travel_idle__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            22,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel/sad",
+      "sources": [
+        {
+          "path": "frames\\travel\\runtime\\sad\\000.png",
+          "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
+        },
+        {
+          "path": "frames\\travel\\runtime\\sad\\001.png",
+          "sha256": "9c0f9db90c19ccbfca918160a4bee0ed7f4702a2319d97d4c310ac9e8e463e91"
+        },
+        {
+          "path": "frames\\travel\\runtime\\sad\\002.png",
+          "sha256": "0755aeeae5a8ff672af04234f0d7fad2dc2351ab567af6b308d273fa66f4c4e5"
+        },
+        {
+          "path": "frames\\travel\\runtime\\sad\\003.png",
+          "sha256": "0cf6f526075272e12aac3689bba0d3dd8e8da789b631869f2f493471fe34f941"
+        },
+        {
+          "path": "frames\\travel\\runtime\\sad\\004.png",
+          "sha256": "847db55eeb1305255d1d09cf5a6b54a95134e1330886023f220ba20f6a317f99"
+        },
+        {
+          "path": "frames\\travel\\runtime\\sad\\005.png",
+          "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
+        }
+      ],
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_travel_sad__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            22,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel/turn_front_from_left",
+      "sources": [
+        {
+          "path": "frames\\travel\\runtime\\turn_front_from_left\\000.png",
+          "sha256": "b200061ceaf388c7785f7a8ba9f2b48d52de00afba76aabb1231f3681b6dc101"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_front_from_left\\001.png",
+          "sha256": "c9787d736b3ac94ec40d8633cf8f7f49c91af43326eab423906c3ba611dcfe77"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_front_from_left\\002.png",
+          "sha256": "204158b84680ac9646a178caefe3b0a40f003571db80705b70babae1edf10411"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_front_from_left\\003.png",
+          "sha256": "91c782a545237fa735dc65a1a802becd9fad053ae290eeaedc632a63610e95d5"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_front_from_left\\004.png",
+          "sha256": "b9b0c01144d7eef0a9f0b1499fb3ad02394cd76c68852c6c455ef85d39a85602"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_front_from_left\\005.png",
+          "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
+        }
+      ],
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_travel_turn_front_from_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            22,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel/turn_front_from_right",
+      "sources": [
+        {
+          "path": "frames\\travel\\runtime\\turn_front_from_right\\000.png",
+          "sha256": "b3ce32133dfa613776ea7bae89002287fe62b19f0c192d8ac3b969748514047d"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_front_from_right\\001.png",
+          "sha256": "40e705c8e6b55ddfadfabab7a4df0ee515359d51a53577f1c2321ee0f157da81"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_front_from_right\\002.png",
+          "sha256": "ccdd0f3ea45b412017afa929fceffd0f71127fd96a092417c5eb48cdb4d11196"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_front_from_right\\003.png",
+          "sha256": "34764bb8a40ea4f0d54e9bd130b2a86f9b25d5f3a1a9b12de0ebbe5a8ec16f55"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_front_from_right\\004.png",
+          "sha256": "e6d5538c7c10e122a082e8b2d7b12c0444c6150fd5c581a71eb6b1a782ea41eb"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_front_from_right\\005.png",
+          "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
+        }
+      ],
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_travel_turn_front_from_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            22,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel/turn_left",
+      "sources": [
+        {
+          "path": "frames\\travel\\runtime\\turn_left\\000.png",
+          "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_left\\001.png",
+          "sha256": "b9b0c01144d7eef0a9f0b1499fb3ad02394cd76c68852c6c455ef85d39a85602"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_left\\002.png",
+          "sha256": "91c782a545237fa735dc65a1a802becd9fad053ae290eeaedc632a63610e95d5"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_left\\003.png",
+          "sha256": "204158b84680ac9646a178caefe3b0a40f003571db80705b70babae1edf10411"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_left\\004.png",
+          "sha256": "c9787d736b3ac94ec40d8633cf8f7f49c91af43326eab423906c3ba611dcfe77"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_left\\005.png",
+          "sha256": "b200061ceaf388c7785f7a8ba9f2b48d52de00afba76aabb1231f3681b6dc101"
+        }
+      ],
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_travel_turn_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            22,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel/turn_right",
+      "sources": [
+        {
+          "path": "frames\\travel\\runtime\\turn_right\\000.png",
+          "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_right\\001.png",
+          "sha256": "e6d5538c7c10e122a082e8b2d7b12c0444c6150fd5c581a71eb6b1a782ea41eb"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_right\\002.png",
+          "sha256": "34764bb8a40ea4f0d54e9bd130b2a86f9b25d5f3a1a9b12de0ebbe5a8ec16f55"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_right\\003.png",
+          "sha256": "ccdd0f3ea45b412017afa929fceffd0f71127fd96a092417c5eb48cdb4d11196"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_right\\004.png",
+          "sha256": "40e705c8e6b55ddfadfabab7a4df0ee515359d51a53577f1c2321ee0f157da81"
+        },
+        {
+          "path": "frames\\travel\\runtime\\turn_right\\005.png",
+          "sha256": "b3ce32133dfa613776ea7bae89002287fe62b19f0c192d8ac3b969748514047d"
+        }
+      ],
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_travel_turn_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            22,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel/walk_left",
+      "sources": [
+        {
+          "path": "frames\\travel\\runtime\\walk_left\\000.png",
+          "sha256": "b200061ceaf388c7785f7a8ba9f2b48d52de00afba76aabb1231f3681b6dc101"
+        },
+        {
+          "path": "frames\\travel\\runtime\\walk_left\\001.png",
+          "sha256": "8c72c9862f2a5b1fdb9caf286b2edfc0b36e9db8e1bcc5666f1e72fca68512b5"
+        },
+        {
+          "path": "frames\\travel\\runtime\\walk_left\\002.png",
+          "sha256": "0917444e6a5e6bf864bad96335b7aad4a74bad518798ad7438ae535fcb2c73cb"
+        },
+        {
+          "path": "frames\\travel\\runtime\\walk_left\\003.png",
+          "sha256": "e9092c6998e9f4299ddbd33497cad5a0797a5e722f001b2f2d756dce04f14016"
+        },
+        {
+          "path": "frames\\travel\\runtime\\walk_left\\004.png",
+          "sha256": "17fc9545a9ea162987bfadef67e68151689f51e2e07fd78ca16f12948a5e325d"
+        },
+        {
+          "path": "frames\\travel\\runtime\\walk_left\\005.png",
+          "sha256": "0d62b6973f308cbf9e7ec2f420c7b1fceaaea970116455b975a9b35c7e9feb30"
+        },
+        {
+          "path": "frames\\travel\\runtime\\walk_left\\006.png",
+          "sha256": "aa485192d455343fb91840952ca540284fdd4b653f67e11f86ae97b739052e24"
+        },
+        {
+          "path": "frames\\travel\\runtime\\walk_left\\007.png",
+          "sha256": "c51384427e02050eef6aff8ce19b669b783873f7cdb9f2e3237faf2fad49f670"
+        }
+      ],
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_travel_walk_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            22,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel/walk_right",
+      "sources": [
+        {
+          "path": "frames\\travel\\runtime\\walk_right\\000.png",
+          "sha256": "b3ce32133dfa613776ea7bae89002287fe62b19f0c192d8ac3b969748514047d"
+        },
+        {
+          "path": "frames\\travel\\runtime\\walk_right\\001.png",
+          "sha256": "a587ab7c55160b87b4c2def53ccde79ba279b7ed5e57e1f12688ecc1fad09952"
+        },
+        {
+          "path": "frames\\travel\\runtime\\walk_right\\002.png",
+          "sha256": "842059518e11c4fe7701756cb115ff7476ec76973c15a464a5e321d869d672e3"
+        },
+        {
+          "path": "frames\\travel\\runtime\\walk_right\\003.png",
+          "sha256": "7b6fce88e99f413fbeeae29f04a2172554263f75b5819b42eb67f2ab5530ca21"
+        },
+        {
+          "path": "frames\\travel\\runtime\\walk_right\\004.png",
+          "sha256": "49f66f804f3af5651e30eaca5db259b8bafe273aa54b29990294efa17596c1c6"
+        },
+        {
+          "path": "frames\\travel\\runtime\\walk_right\\005.png",
+          "sha256": "212d504e1da15a5831061da4a4f9925c83ab348dfd077a95f387b09ed09ef20a"
+        },
+        {
+          "path": "frames\\travel\\runtime\\walk_right\\006.png",
+          "sha256": "1483048bcdac3fd0516a61075dbf20db6b7bb13b79ee9ee50cd780828ba7bf6b"
+        },
+        {
+          "path": "frames\\travel\\runtime\\walk_right\\007.png",
+          "sha256": "d3850df752288b70eeff4a04fadb24784fee4f607c8bcc74ad933bdcab7559f1"
+        }
+      ],
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_travel_walk_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            22,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel/welcome",
+      "sources": [
+        {
+          "path": "frames\\travel\\runtime\\welcome\\000.png",
+          "sha256": "54003cdebb7ff9f0b4185a2f1aa406fdbd0f71f60ec6416f6389b61d41fbf25b"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\001.png",
+          "sha256": "08d277a6893d4932611c561bc427ed75a718d2d40986f70120127fd00a7f06f3"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\002.png",
+          "sha256": "2a675813b885be1db314b966278c28760f3a693304a3abba2bc2564ce37274de"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\003.png",
+          "sha256": "0633c7224bf44b297f7976c62e4f47fcccd946173db52136adbab82e2ae24855"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\004.png",
+          "sha256": "7dbe28401ae10fd7f49bfe0be25582bbb8cf421493ac189ded8ab9be2905ade9"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\005.png",
+          "sha256": "b7e3f5fda7d04f281a313a6ef1f6675b7077b869c27b243d6b4f74b172f4b6e6"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\006.png",
+          "sha256": "55a07d56dc1e74bb53c5dc87ee30cccd64ab256b8f6295965a618a37e6b9f0f1"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\007.png",
+          "sha256": "5179a935cbb94f2d0152d651e640c695d1a97b4ed8692d96ec3bbb0a2e5d3c4d"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\008.png",
+          "sha256": "a744e01f682e93f814849cbf6d0c8ed9b4878c56af7dafd89eaf789d6c4b39c9"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\009.png",
+          "sha256": "52bd13f1dd8b0fde1597c2f8ac39219fb487e113e53deff33bde356afb002390"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\010.png",
+          "sha256": "97e5b59e240f19bc870ee1ab70fea64302efcc577aad2d035b2f11d166b28217"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\011.png",
+          "sha256": "cab2d07b0d53db275aff8e3270fd451ff89c6588685d6f96011799a7cf221cf8"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\012.png",
+          "sha256": "02404cb15c65370b5b9c4275a664e660ae427b8826c5448ba64a4f45095a84d3"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\013.png",
+          "sha256": "d3b65671f5d55694f7a0cac09fd4a805b96776475fcbbb8a0af9050b8d335161"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\014.png",
+          "sha256": "0eeb3afeb3e161cfec091b9e6aa26353d83ab158f2b75071f5d6c849cdc86687"
+        },
+        {
+          "path": "frames\\travel\\runtime\\welcome\\015.png",
+          "sha256": "180c494fe983f470ac36a6709729dacadd42b94d63b2656bfd48771060ba490f"
+        }
+      ],
+      "canvas": [
+        58,
+        120
+      ],
+      "anchor": [
+        31,
+        120
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_travel_welcome__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            58,
+            120
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/bars/bottom",
+      "sources": [
+        {
+          "path": "ui\\bars\\bottom.png",
+          "sha256": "686913a7ad3d22c48931bcf848ab13427101be0f7d4e2913bff0a68cf3b6b179"
+        }
+      ],
+      "canvas": [
+        240,
+        30
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_bars_bottom__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            240,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/bars/top",
+      "sources": [
+        {
+          "path": "ui\\bars\\top.png",
+          "sha256": "e1cf8fc0c82575cc4f0e6158f3729222c7049cb0ef8e5966e46bc70dab6d5b69"
+        }
+      ],
+      "canvas": [
+        240,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_bars_top__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            240,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/current/bottom",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\current\\bottom.png",
+          "sha256": "dcc0c3cfea32bce4c5a524271a854f514336ff315b831a84f3339fab40718017"
+        }
+      ],
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_current_bottom__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/current/bottom-left",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\current\\bottom-left.png",
+          "sha256": "5ebff4ecae598709ba8e22f9635319eed11425b94095d7cbbd91af5c211a0dfb"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_current_bottom_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/current/bottom-right",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\current\\bottom-right.png",
+          "sha256": "6282be5920c728f248c8c6d332cce79fa20345c6a67d9997e15fe2f6af60ec68"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_current_bottom_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/current/center",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\current\\center.png",
+          "sha256": "012e4aa21eb2ea19a72e08e167dd63d1da8b056c8f6414b6bb5af0da17d1970f"
+        }
+      ],
+      "canvas": [
+        8,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_current_center__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/current/left",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\current\\left.png",
+          "sha256": "d819bd12c38a0c36f59342c97e90c1de5d4931932f589c2864822cf9a4668f49"
+        }
+      ],
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_current_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/current/right",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\current\\right.png",
+          "sha256": "ac7ba2ff624b9982ceb0be8e2fa6e20cc0b5b885ede16ea35c8063560698b3d9"
+        }
+      ],
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_current_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/current/top",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\current\\top.png",
+          "sha256": "c20ca633554d0429c36d9ee498632ca4bd608e4473df75e5f748e819ce04a325"
+        }
+      ],
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_current_top__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/current/top-left",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\current\\top-left.png",
+          "sha256": "262d92591a6dcfa6bfc0c310de1eced53b59e03254c4ff46aab5028ae13862d4"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_current_top_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/current/top-right",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\current\\top-right.png",
+          "sha256": "8ebef04da87b96561a39733d5bb2aa8c4e02e23746c8c61ac36f36909b8d65a4"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_current_top_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/normal/bottom",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\normal\\bottom.png",
+          "sha256": "14834674124ca28b683d7b36070565c96f04aa5c97f6237f055c1f62faac25c7"
+        }
+      ],
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_normal_bottom__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/normal/bottom-left",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\normal\\bottom-left.png",
+          "sha256": "e00d625b93b3f1d4c4d79f52ebb586ea6995f91cf6e9511d0e1badd3c4888482"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_normal_bottom_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/normal/bottom-right",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\normal\\bottom-right.png",
+          "sha256": "72039f7a688ad80a14c7cf65643f9831064abba0488a90e2268be4f8ca83c393"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_normal_bottom_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/normal/center",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\normal\\center.png",
+          "sha256": "f5dc936c16ff7e98ad6138b1b917e80a462d184256f9c578544725b069ccb01b"
+        }
+      ],
+      "canvas": [
+        8,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_normal_center__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/normal/left",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\normal\\left.png",
+          "sha256": "b8b2a4c9159a38b1fd59703c9968b7912732ee6bf9129af545513126faf15682"
+        }
+      ],
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_normal_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/normal/right",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\normal\\right.png",
+          "sha256": "bd56843c1cf6493837547aeebfc5a6511b4a2cac4d6c1f2a973f2b340105ccec"
+        }
+      ],
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_normal_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/normal/top",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\normal\\top.png",
+          "sha256": "76f203136ba6afed2b5111651b33816b9c99194ea83373f108a7cfc26585daf2"
+        }
+      ],
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_normal_top__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/normal/top-left",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\normal\\top-left.png",
+          "sha256": "633860c0666e5ea01a07412e7a1fe85715ec6db49c14ff1b6fddccc9845344fb"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_normal_top_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/info/normal/top-right",
+      "sources": [
+        {
+          "path": "ui\\cards\\info\\normal\\top-right.png",
+          "sha256": "b60aa576540ce8c74859b408c70c627474858a0b29a359a827cad4c82cbcaaba"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_info_normal_top_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/disabled/bottom",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\disabled\\bottom.png",
+          "sha256": "fff5ce56dcd1b211a794b06c847ac3e92b768c32435167b7d68aa62c59a14dee"
+        }
+      ],
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_disabled_bottom__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/disabled/bottom-left",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\disabled\\bottom-left.png",
+          "sha256": "e14b7022c8d4b20b56f0ec0979979cbace6506e502174c72e3284bf5a5a756f9"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_disabled_bottom_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/disabled/bottom-right",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\disabled\\bottom-right.png",
+          "sha256": "b34122034b9581ba5cca8c6776ec5a329d03f3c4ac60e3010dd72e144cb3748a"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_disabled_bottom_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/disabled/center",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\disabled\\center.png",
+          "sha256": "21795790aac2d36ab224c84f61a9db1b4d8f61215869427361a55112765a2bec"
+        }
+      ],
+      "canvas": [
+        8,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_disabled_center__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/disabled/left",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\disabled\\left.png",
+          "sha256": "61cbd79a0c3394aca7075ee61a9ac2c471e2eac51ed95d2328480fe074c7fde4"
+        }
+      ],
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_disabled_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/disabled/right",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\disabled\\right.png",
+          "sha256": "3bf8be8855a1d8b788d72a5a19bba9edd88a1e41845d58c41dbb528ce82601c0"
+        }
+      ],
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_disabled_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/disabled/top",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\disabled\\top.png",
+          "sha256": "4c489f7921432c1edb6b47cad0abebf0533a008d37a65719ecf517c79118e06b"
+        }
+      ],
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_disabled_top__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/disabled/top-left",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\disabled\\top-left.png",
+          "sha256": "8a3316b4c1e1c5e5bc37c9e1358145d5984adbe4451c033057ea2bb62a117e76"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_disabled_top_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/disabled/top-right",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\disabled\\top-right.png",
+          "sha256": "4caaf9a19603b5cb06f16c13cdf6dec5b145f59a46af540e95ccfc6130a3d650"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_disabled_top_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/normal/bottom",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\normal\\bottom.png",
+          "sha256": "14834674124ca28b683d7b36070565c96f04aa5c97f6237f055c1f62faac25c7"
+        }
+      ],
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_normal_bottom__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/normal/bottom-left",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\normal\\bottom-left.png",
+          "sha256": "e00d625b93b3f1d4c4d79f52ebb586ea6995f91cf6e9511d0e1badd3c4888482"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_normal_bottom_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/normal/bottom-right",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\normal\\bottom-right.png",
+          "sha256": "72039f7a688ad80a14c7cf65643f9831064abba0488a90e2268be4f8ca83c393"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_normal_bottom_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/normal/center",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\normal\\center.png",
+          "sha256": "f5dc936c16ff7e98ad6138b1b917e80a462d184256f9c578544725b069ccb01b"
+        }
+      ],
+      "canvas": [
+        8,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_normal_center__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/normal/left",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\normal\\left.png",
+          "sha256": "b8b2a4c9159a38b1fd59703c9968b7912732ee6bf9129af545513126faf15682"
+        }
+      ],
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_normal_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/normal/right",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\normal\\right.png",
+          "sha256": "bd56843c1cf6493837547aeebfc5a6511b4a2cac4d6c1f2a973f2b340105ccec"
+        }
+      ],
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_normal_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/normal/top",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\normal\\top.png",
+          "sha256": "76f203136ba6afed2b5111651b33816b9c99194ea83373f108a7cfc26585daf2"
+        }
+      ],
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_normal_top__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/normal/top-left",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\normal\\top-left.png",
+          "sha256": "633860c0666e5ea01a07412e7a1fe85715ec6db49c14ff1b6fddccc9845344fb"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_normal_top_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/normal/top-right",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\normal\\top-right.png",
+          "sha256": "b60aa576540ce8c74859b408c70c627474858a0b29a359a827cad4c82cbcaaba"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_normal_top_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/selected/bottom",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\selected\\bottom.png",
+          "sha256": "dcc0c3cfea32bce4c5a524271a854f514336ff315b831a84f3339fab40718017"
+        }
+      ],
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_selected_bottom__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/selected/bottom-left",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\selected\\bottom-left.png",
+          "sha256": "5ebff4ecae598709ba8e22f9635319eed11425b94095d7cbbd91af5c211a0dfb"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_selected_bottom_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/selected/bottom-right",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\selected\\bottom-right.png",
+          "sha256": "6282be5920c728f248c8c6d332cce79fa20345c6a67d9997e15fe2f6af60ec68"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_selected_bottom_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/selected/center",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\selected\\center.png",
+          "sha256": "012e4aa21eb2ea19a72e08e167dd63d1da8b056c8f6414b6bb5af0da17d1970f"
+        }
+      ],
+      "canvas": [
+        8,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_selected_center__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/selected/left",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\selected\\left.png",
+          "sha256": "d819bd12c38a0c36f59342c97e90c1de5d4931932f589c2864822cf9a4668f49"
+        }
+      ],
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_selected_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/selected/right",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\selected\\right.png",
+          "sha256": "ac7ba2ff624b9982ceb0be8e2fa6e20cc0b5b885ede16ea35c8063560698b3d9"
+        }
+      ],
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_selected_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/selected/top",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\selected\\top.png",
+          "sha256": "c20ca633554d0429c36d9ee498632ca4bd608e4473df75e5f748e819ce04a325"
+        }
+      ],
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_selected_top__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/selected/top-left",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\selected\\top-left.png",
+          "sha256": "262d92591a6dcfa6bfc0c310de1eced53b59e03254c4ff46aab5028ae13862d4"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_selected_top_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/menu/selected/top-right",
+      "sources": [
+        {
+          "path": "ui\\cards\\menu\\selected\\top-right.png",
+          "sha256": "8ebef04da87b96561a39733d5bb2aa8c4e02e23746c8c61ac36f36909b8d65a4"
+        }
+      ],
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_menu_selected_top_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/popup/normal/bottom",
+      "sources": [
+        {
+          "path": "ui\\cards\\popup\\normal\\bottom.png",
+          "sha256": "d54fd5eb1726580e11b393715ebb2de10f00d7ac1cd42a2ef6bedbb1cdce6d8b"
+        }
+      ],
+      "canvas": [
+        8,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_popup_normal_bottom__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/popup/normal/bottom-left",
+      "sources": [
+        {
+          "path": "ui\\cards\\popup\\normal\\bottom-left.png",
+          "sha256": "f7468ff16bbc39985eda11be75a59f2d7cff2ca250926f698f4328f46b5c7334"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_popup_normal_bottom_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/popup/normal/bottom-right",
+      "sources": [
+        {
+          "path": "ui\\cards\\popup\\normal\\bottom-right.png",
+          "sha256": "b30fd5216339d9c6adb7bb76fc4f3c442bee5b424aa09e68f0606af6fb167d79"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_popup_normal_bottom_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/popup/normal/center",
+      "sources": [
+        {
+          "path": "ui\\cards\\popup\\normal\\center.png",
+          "sha256": "f5dc936c16ff7e98ad6138b1b917e80a462d184256f9c578544725b069ccb01b"
+        }
+      ],
+      "canvas": [
+        8,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_popup_normal_center__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/popup/normal/left",
+      "sources": [
+        {
+          "path": "ui\\cards\\popup\\normal\\left.png",
+          "sha256": "a0097f057f29063e83bf56f9d5222a19eaf7fabf8500e6566acf9e12f1b37099"
+        }
+      ],
+      "canvas": [
+        16,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_popup_normal_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/popup/normal/right",
+      "sources": [
+        {
+          "path": "ui\\cards\\popup\\normal\\right.png",
+          "sha256": "c9c11bc70180414f25ee761968c09668b5ecfc2bf3d277a9a7a9bfa4540c333a"
+        }
+      ],
+      "canvas": [
+        16,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_popup_normal_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/popup/normal/top",
+      "sources": [
+        {
+          "path": "ui\\cards\\popup\\normal\\top.png",
+          "sha256": "6f75dd9f8acd1a566c65d71f1a6eef1fb73a11baadab1b6e392d0eaa9e4f677d"
+        }
+      ],
+      "canvas": [
+        8,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_popup_normal_top__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/popup/normal/top-left",
+      "sources": [
+        {
+          "path": "ui\\cards\\popup\\normal\\top-left.png",
+          "sha256": "d80462dd413d1106fc9053d97b0c821e4f17dea8409f5f5f5a85c4a787f0330c"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_popup_normal_top_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cards/popup/normal/top-right",
+      "sources": [
+        {
+          "path": "ui\\cards\\popup\\normal\\top-right.png",
+          "sha256": "2d2a23bb3b1cdd9deb3eea9c797863c1aa501d5a3d4cae2db11f33c9622a1e67"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cards_popup_normal_top_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cover-background-bottom",
+      "sources": [
+        {
+          "path": "ui\\cover-background-bottom.png",
+          "sha256": "94d45e5915ecc1450c64f75173c8e724c8f6a7c98cad42a40d4dd9076629bebf"
+        }
+      ],
+      "canvas": [
+        240,
+        64
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cover_background_bottom__p0",
+          "offset": [
+            0,
+            256
+          ],
+          "size": [
+            240,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/cover-background-top",
+      "sources": [
+        {
+          "path": "ui\\cover-background-top.png",
+          "sha256": "62d9799d9ba0e63310dfd8a8832499a6423e27b90143e056e0893c904bc5398b"
+        }
+      ],
+      "canvas": [
+        240,
+        256
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_cover_background_top__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            240,
+            256
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/labels/boot-caption",
+      "sources": [
+        {
+          "path": "ui\\labels\\boot-caption.png",
+          "sha256": "34d99c5f2005a4447252cae415a8e5dbe2c08c63650da14e33eacda2bb354a7f"
+        }
+      ],
+      "canvas": [
+        220,
+        24
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_labels_boot_caption__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            220,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/labels/new-record",
+      "sources": [
+        {
+          "path": "ui\\labels\\new-record.png",
+          "sha256": "2392e19aba655abdad0637720cbf152aa91ea119822617f8096c97e5fac0ee28"
+        }
+      ],
+      "canvas": [
+        72,
+        24
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_labels_new_record__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            72,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/labels/placeholder",
+      "sources": [
+        {
+          "path": "ui\\labels\\placeholder.png",
+          "sha256": "38830fa775a685c3cf6cfcf0d4160bbddb3f3c1d86163bcd110bd8358f21212e"
+        }
+      ],
+      "canvas": [
+        88,
+        24
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_labels_placeholder__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            88,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/labels/press-start",
+      "sources": [
+        {
+          "path": "ui\\labels\\press-start.png",
+          "sha256": "b9053c3b86f083842c344895fe6f85a02fa0c709c391a82537e570fbcd23bd81"
+        }
+      ],
+      "canvas": [
+        168,
+        28
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_labels_press_start__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            168,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/labels/test-no-record",
+      "sources": [
+        {
+          "path": "ui\\labels\\test-no-record.png",
+          "sha256": "0ae4be25eceffead6fb79cf4cdee4e518ad24853e04b50f500d1174664910ae0"
+        }
+      ],
+      "canvas": [
+        96,
+        24
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_labels_test_no_record__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/map/footprints-backward",
+      "sources": [
+        {
+          "path": "ui\\map\\footprints-backward.png",
+          "sha256": "1b288ae6af50dffcbe1856a21dc550bff4e4551896751e2f1f7becfab9465f6a"
+        }
+      ],
+      "canvas": [
+        10,
+        10
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_map_footprints_backward__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            10,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/map/footprints-forward",
+      "sources": [
+        {
+          "path": "ui\\map\\footprints-forward.png",
+          "sha256": "37dd8aa8c0dedefccbe1c9c229bd52bc65ee1b98f320a684bf858f314be5d5fb"
+        }
+      ],
+      "canvas": [
+        10,
+        10
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_map_footprints_forward__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            10,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/map/lock",
+      "sources": [
+        {
+          "path": "ui\\map\\lock.png",
+          "sha256": "b8514b70be05d9678c2ff20e37beb23cbedae4ec66b631c1e03df853613117d4"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_map_lock__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/map/stamp-bronze",
+      "sources": [
+        {
+          "path": "ui\\map\\stamp-bronze.png",
+          "sha256": "9a7c98af42bc7df40a1266cfa5a73bd6f21078ffe645676ddbb3dd9350f1b1a3"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_map_stamp_bronze__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/map/stamp-empty",
+      "sources": [
+        {
+          "path": "ui\\map\\stamp-empty.png",
+          "sha256": "8258c407324e620ab7f6e84f718d71e0441625240b9f9de2272b092f4b663774"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_map_stamp_empty__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/map/stamp-gold",
+      "sources": [
+        {
+          "path": "ui\\map\\stamp-gold.png",
+          "sha256": "eae4ae327a6829b68d6239f676800b008f1fdf4443e90cdfa14053b004a348f1"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_map_stamp_gold__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/map/stamp-silver",
+      "sources": [
+        {
+          "path": "ui\\map\\stamp-silver.png",
+          "sha256": "da6046e7b6877d00831bafb235fdbd9a9e312aa64e38a0abdb1c38a1a32d3bba"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_map_stamp_silver__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/map/station-current",
+      "sources": [
+        {
+          "path": "ui\\map\\station-current.png",
+          "sha256": "a161e7004b57812e9c4654eea799a1d7e1e623a2ae7d2fdea8e47bf34d9338f4"
+        }
+      ],
+      "canvas": [
+        48,
+        40
+      ],
+      "anchor": [
+        24,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_map_station_current__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            48,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/map/station-locked",
+      "sources": [
+        {
+          "path": "ui\\map\\station-locked.png",
+          "sha256": "02da180e4b1898555f71a2a5df77a308fc188dbf3fe5860cc1231ce475e1093a"
+        }
+      ],
+      "canvas": [
+        48,
+        40
+      ],
+      "anchor": [
+        24,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_map_station_locked__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            48,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/map/station-unlocked",
+      "sources": [
+        {
+          "path": "ui\\map\\station-unlocked.png",
+          "sha256": "76fd80a94e7ae73fdafac63cc72046b8bfd791c919a92996ffbc9a04fd02f54c"
+        }
+      ],
+      "canvas": [
+        48,
+        40
+      ],
+      "anchor": [
+        24,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_map_station_unlocked__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            48,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/map/temporary-position-marker",
+      "sources": [
+        {
+          "path": "ui\\map\\temporary-position-marker.png",
+          "sha256": "b0e5b1efc5d6457ac040a0c22d13d3b3fdb76f4eb8aa664c6c26e96c8eb641bd"
+        }
+      ],
+      "canvas": [
+        32,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_map_temporary_position_marker__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/20/0",
+      "sources": [
+        {
+          "path": "ui\\numbers\\20\\0.png",
+          "sha256": "30cffe72cc7444e5550ecc479bd10433e50069df65dcfd2f45eeb1c3c2232a00"
+        }
+      ],
+      "canvas": [
+        18,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_20_0__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            18,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/20/1",
+      "sources": [
+        {
+          "path": "ui\\numbers\\20\\1.png",
+          "sha256": "5d30a6e2cf87000da9768e07893b197e400cb7deb64c051e6db522f78f5a4d31"
+        }
+      ],
+      "canvas": [
+        18,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_20_1__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            18,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/20/2",
+      "sources": [
+        {
+          "path": "ui\\numbers\\20\\2.png",
+          "sha256": "b9e886b71b65fd3f4427c104ef316da8cafa88430f68b7ad3065c18fe68eb5db"
+        }
+      ],
+      "canvas": [
+        18,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_20_2__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            18,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/20/3",
+      "sources": [
+        {
+          "path": "ui\\numbers\\20\\3.png",
+          "sha256": "691b873b4727bdc5a1098c0c5b0dd2eb83d6d4bac49ff10e4cd636e413c77b95"
+        }
+      ],
+      "canvas": [
+        18,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_20_3__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            18,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/20/4",
+      "sources": [
+        {
+          "path": "ui\\numbers\\20\\4.png",
+          "sha256": "c25ca328d4fbaf657dc6a3cc9bb2466994bdf2db0a689192030ed81f7c751ca1"
+        }
+      ],
+      "canvas": [
+        18,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_20_4__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            18,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/20/5",
+      "sources": [
+        {
+          "path": "ui\\numbers\\20\\5.png",
+          "sha256": "bf833c6b99e29976933c87763e03a25fe1cbaf69fcb59296f90d9bc8e4653fbc"
+        }
+      ],
+      "canvas": [
+        18,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_20_5__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            18,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/20/6",
+      "sources": [
+        {
+          "path": "ui\\numbers\\20\\6.png",
+          "sha256": "b4faaa326cd2e844f942bb7e580a2624e187e13dbaa0d9d5b8d81ac70b47babb"
+        }
+      ],
+      "canvas": [
+        18,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_20_6__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            18,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/20/7",
+      "sources": [
+        {
+          "path": "ui\\numbers\\20\\7.png",
+          "sha256": "36290b72cbf585ae0ad2dcfbc04108a9cf131994cbd2d6e8171f31964868ed96"
+        }
+      ],
+      "canvas": [
+        18,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_20_7__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            18,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/20/8",
+      "sources": [
+        {
+          "path": "ui\\numbers\\20\\8.png",
+          "sha256": "0dd3860fe49684cda6eb1f4634650dffb079a80d9aecac0ce3df374d0e1b3e25"
+        }
+      ],
+      "canvas": [
+        18,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_20_8__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            18,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/20/9",
+      "sources": [
+        {
+          "path": "ui\\numbers\\20\\9.png",
+          "sha256": "1a8ff73d9b3c718625ca1f2c1b9d5acd8cef84d88c55657e36d55496a1552f29"
+        }
+      ],
+      "canvas": [
+        18,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_20_9__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            18,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/20/m",
+      "sources": [
+        {
+          "path": "ui\\numbers\\20\\m.png",
+          "sha256": "17c0586db8f4f394a436749adeb02405d707b8526cf063603da81cf0cef1f9c6"
+        }
+      ],
+      "canvas": [
+        27,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_20_m__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            27,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/20/plus",
+      "sources": [
+        {
+          "path": "ui\\numbers\\20\\plus.png",
+          "sha256": "03ce10a1c1f90c2f6d02c466216304ade749329a48b4e01946469d303aed1d8b"
+        }
+      ],
+      "canvas": [
+        18,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_20_plus__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            18,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/36/0",
+      "sources": [
+        {
+          "path": "ui\\numbers\\36\\0.png",
+          "sha256": "8a7ea02f6220ad927be27e608efc9b684d3e8338227fddd525dc803a19553fee"
+        }
+      ],
+      "canvas": [
+        29,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_36_0__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            29,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/36/1",
+      "sources": [
+        {
+          "path": "ui\\numbers\\36\\1.png",
+          "sha256": "fa9ff1f28516ea297f878a0979efe3bee07bc42b85a062fdf33e999183b2c6c7"
+        }
+      ],
+      "canvas": [
+        29,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_36_1__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            29,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/36/2",
+      "sources": [
+        {
+          "path": "ui\\numbers\\36\\2.png",
+          "sha256": "be2a8a9a2c4c9067948e5743bcf61d112050586b2aba3ee5907421878cc2aa89"
+        }
+      ],
+      "canvas": [
+        29,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_36_2__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            29,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/36/3",
+      "sources": [
+        {
+          "path": "ui\\numbers\\36\\3.png",
+          "sha256": "9a541e98fd2e15cf95887c3a898b1bc09a8328355707376fbeb52af3f46a3a40"
+        }
+      ],
+      "canvas": [
+        29,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_36_3__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            29,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/36/4",
+      "sources": [
+        {
+          "path": "ui\\numbers\\36\\4.png",
+          "sha256": "b7783ed1863858ef6da98382af3302828e47425ff46d3dbc17039dfb30f8e0f8"
+        }
+      ],
+      "canvas": [
+        29,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_36_4__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            29,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/36/5",
+      "sources": [
+        {
+          "path": "ui\\numbers\\36\\5.png",
+          "sha256": "f986cfa7b35216e1fb372df6d4a93333a4f0e094758a87cb8337ada2aebf2899"
+        }
+      ],
+      "canvas": [
+        29,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_36_5__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            29,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/36/6",
+      "sources": [
+        {
+          "path": "ui\\numbers\\36\\6.png",
+          "sha256": "2dde530f8b627667b31627e04a65997f32e9f7a5c076e374c46d7117fba3a474"
+        }
+      ],
+      "canvas": [
+        29,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_36_6__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            29,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/36/7",
+      "sources": [
+        {
+          "path": "ui\\numbers\\36\\7.png",
+          "sha256": "8e807fd3d1657c4f0ea64c7388d99106a160eaf3ed56ea1dbb538cdb375a082a"
+        }
+      ],
+      "canvas": [
+        29,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_36_7__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            29,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/36/8",
+      "sources": [
+        {
+          "path": "ui\\numbers\\36\\8.png",
+          "sha256": "1b6b1cad4fc942e00f37a06f9538c9d7aefceef772c7b540ce119ba6ab61fce9"
+        }
+      ],
+      "canvas": [
+        29,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_36_8__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            29,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/36/9",
+      "sources": [
+        {
+          "path": "ui\\numbers\\36\\9.png",
+          "sha256": "71104f589e3ffc6bf5fea658cf440878ef73fbad74d350ef4063131158e3e6d1"
+        }
+      ],
+      "canvas": [
+        29,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_36_9__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            29,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/36/m",
+      "sources": [
+        {
+          "path": "ui\\numbers\\36\\m.png",
+          "sha256": "42ceddd5b35007205707d79446d528edbf80bffe1cc05d967b514e6099798a6a"
+        }
+      ],
+      "canvas": [
+        45,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_36_m__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            45,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/numbers/36/plus",
+      "sources": [
+        {
+          "path": "ui\\numbers\\36\\plus.png",
+          "sha256": "160c80b16325a12ab6483086d2e5454bf7838911273695af7eafa212216a219e"
+        }
+      ],
+      "canvas": [
+        29,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_numbers_36_plus__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            29,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/passport/grid-current",
+      "sources": [
+        {
+          "path": "ui\\passport\\grid-current.png",
+          "sha256": "067bbfdc7a4adbd3aebc3bc3eba1626ae76a8b0070850cd64a7cb00a90349d79"
+        }
+      ],
+      "canvas": [
+        104,
+        52
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_passport_grid_current__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            104,
+            52
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/passport/grid-normal",
+      "sources": [
+        {
+          "path": "ui\\passport\\grid-normal.png",
+          "sha256": "775bbc5a7dd6f5a7436a201ccfe8c19ab21ca342c33b35817542960200e4fabe"
+        }
+      ],
+      "canvas": [
+        104,
+        52
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_passport_grid_normal__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            104,
+            52
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/passport/header",
+      "sources": [
+        {
+          "path": "ui\\passport\\header.png",
+          "sha256": "d8ce1a0ae5edd14c0ccb0b8afc879ebd2040a40d4292f4022ce30d419285e800"
+        }
+      ],
+      "canvas": [
+        216,
+        24
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_passport_header__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            216,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/passport/locked-mask",
+      "sources": [
+        {
+          "path": "ui\\passport\\locked-mask.png",
+          "sha256": "7ee8724352e4959d77bfc4aa775a6f8aca22bd9d4e734bccd9bc944249d719bb"
+        }
+      ],
+      "canvas": [
+        104,
+        52
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_passport_locked_mask__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            104,
+            52
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/passport/page-tile",
+      "sources": [
+        {
+          "path": "ui\\passport\\page-tile.png",
+          "sha256": "deb54c751f18f878ed77d36748e39362cf0a41565a76a9b49cbad23dc608d3a9"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_passport_page_tile__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/resources/bar-frame",
+      "sources": [
+        {
+          "path": "ui\\resources\\bar-frame.png",
+          "sha256": "fcdf1d911cd1f372c79a4d6cd96a1884e74348fe61ba82ae3c6816b313985602"
+        }
+      ],
+      "canvas": [
+        128,
+        10
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_resources_bar_frame__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            128,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/resources/fill",
+      "sources": [
+        {
+          "path": "ui\\resources\\fill.png",
+          "sha256": "0e7812e442cab8ad2c0b3b13e2eaea23e9a9194846a2d5b00a3815204632c938"
+        }
+      ],
+      "canvas": [
+        8,
+        6
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_resources_fill__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/resources/fill-left-cap",
+      "sources": [
+        {
+          "path": "ui\\resources\\fill-left-cap.png",
+          "sha256": "efa46f4554cf59436b5b0eadbae69ff53297bc9d818c0f9f5f2637a8e3475332"
+        }
+      ],
+      "canvas": [
+        3,
+        10
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_resources_fill_left_cap__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            3,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/resources/fill-right-cap",
+      "sources": [
+        {
+          "path": "ui\\resources\\fill-right-cap.png",
+          "sha256": "deab853d0ed0a8936ffc39b86b0852601bf501da2f9628944ed9b0087d948db3"
+        }
+      ],
+      "canvas": [
+        3,
+        10
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_resources_fill_right_cap__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            3,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/resources/icons/fuel",
+      "sources": [
+        {
+          "path": "ui\\resources\\icons\\fuel.png",
+          "sha256": "c782c1caea1d961d80c14ce152bec284eb7a232948cf108bf89bd3e40ce8d078"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_resources_icons_fuel__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/resources/icons/hot-air",
+      "sources": [
+        {
+          "path": "ui\\resources\\icons\\hot-air.png",
+          "sha256": "b19f58b5370e766b3e5a170e1d077b28d04173d4afbd2eba2349579212678f79"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_resources_icons_hot_air__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/resources/icons/oxygen",
+      "sources": [
+        {
+          "path": "ui\\resources\\icons\\oxygen.png",
+          "sha256": "db2e5cde83c3a0afaa0a13ad5d0273161977f54bbe5d47e9512f8deb6ef0a038"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_resources_icons_oxygen__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/resources/icons/spirit",
+      "sources": [
+        {
+          "path": "ui\\resources\\icons\\spirit.png",
+          "sha256": "60c72ccb77938680166bc162a5a19be792c34036aced67fa34e66ae760533886"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_resources_icons_spirit__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/resources/icons/stamina",
+      "sources": [
+        {
+          "path": "ui\\resources\\icons\\stamina.png",
+          "sha256": "e965610417a670e0f0bb1ecc86c4bd623438f605d9b118c764cb6c468fc1953c"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_resources_icons_stamina__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/resources/icons/steam",
+      "sources": [
+        {
+          "path": "ui\\resources\\icons\\steam.png",
+          "sha256": "787a93ff6825eb9c151cec800f1de0b857a448c83246cd12864f182261322af3"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_resources_icons_steam__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/resources/icons/temperature",
+      "sources": [
+        {
+          "path": "ui\\resources\\icons\\temperature.png",
+          "sha256": "128e36fb7c0715dcd46043120333dabc83d58a1a1e47fd7a67b9b2c6517ba3e3"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_resources_icons_temperature__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/resources/low-fill",
+      "sources": [
+        {
+          "path": "ui\\resources\\low-fill.png",
+          "sha256": "c802a64e44cc3e9969549ef5c84e3e6ebb4a84ab8a7703f2cb08547a6fb13d7d"
+        }
+      ],
+      "canvas": [
+        8,
+        6
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_resources_low_fill__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            8,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/resources/low-fill-left-cap",
+      "sources": [
+        {
+          "path": "ui\\resources\\low-fill-left-cap.png",
+          "sha256": "efa46f4554cf59436b5b0eadbae69ff53297bc9d818c0f9f5f2637a8e3475332"
+        }
+      ],
+      "canvas": [
+        3,
+        10
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_resources_low_fill_left_cap__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            3,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/resources/low-fill-right-cap",
+      "sources": [
+        {
+          "path": "ui\\resources\\low-fill-right-cap.png",
+          "sha256": "deab853d0ed0a8936ffc39b86b0852601bf501da2f9628944ed9b0087d948db3"
+        }
+      ],
+      "canvas": [
+        3,
+        10
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_resources_low_fill_right_cap__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            3,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/stamps/ink-pad",
+      "sources": [
+        {
+          "path": "ui\\stamps\\ink-pad.png",
+          "sha256": "24a9028ec1a413b78495c138bcac9af748f8c65b6c8b04f87ed5ceffa51680a7"
+        }
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_stamps_ink_pad__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/wordmarks/climb",
+      "sources": [
+        {
+          "path": "ui\\wordmarks\\climb.png",
+          "sha256": "024e716e64bbdc6905f23bda403a056d6f9a54b9479adbd1ed2293a54cbf0578"
+        }
+      ],
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_wordmarks_climb__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            200,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/wordmarks/collection",
+      "sources": [
+        {
+          "path": "ui\\wordmarks\\collection.png",
+          "sha256": "c277e2fa7b91baf203238a460a92c5bfd111b2ba41b255a1b593a9b615924ca1"
+        }
+      ],
+      "canvas": [
+        220,
+        90
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_wordmarks_collection__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            220,
+            90
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/wordmarks/dive",
+      "sources": [
+        {
+          "path": "ui\\wordmarks\\dive.png",
+          "sha256": "c5ea475f5ad173fde9bc148dba6e24631b01fd3c9f62f78e70bd5e19938c8753"
+        }
+      ],
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_wordmarks_dive__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            200,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/wordmarks/jump",
+      "sources": [
+        {
+          "path": "ui\\wordmarks\\jump.png",
+          "sha256": "64a9f8d4ff4b6e2ad168b08dc9a5847731eb674307afed6d828bc9f70ead0aad"
+        }
+      ],
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_wordmarks_jump__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            200,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/wordmarks/night",
+      "sources": [
+        {
+          "path": "ui\\wordmarks\\night.png",
+          "sha256": "2dc0d27de86975e7d88f85acd28a0ffaaab0d990b124baf35c1c8b1e8f3b1320"
+        }
+      ],
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_wordmarks_night__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            200,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/wordmarks/post",
+      "sources": [
+        {
+          "path": "ui\\wordmarks\\post.png",
+          "sha256": "a34c9d8b9c1676b147b2a2fc8ea58e9cb2858bf3d6ee5357ade53ddaf1e59f36"
+        }
+      ],
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_wordmarks_post__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            200,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/wordmarks/ski",
+      "sources": [
+        {
+          "path": "ui\\wordmarks\\ski.png",
+          "sha256": "6a766c6bef724944fd745861dae097f5bc238e1a8a27e9a3fb4b69b7b87c2881"
+        }
+      ],
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_wordmarks_ski__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            200,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/wordmarks/sky",
+      "sources": [
+        {
+          "path": "ui\\wordmarks\\sky.png",
+          "sha256": "4d6dc5aafdc5d83cd746bbe8bf6a93e690309d9e3dc709f5a0e066dd8aadc05a"
+        }
+      ],
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_wordmarks_sky__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            200,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui/wordmarks/space",
+      "sources": [
+        {
+          "path": "ui\\wordmarks\\space.png",
+          "sha256": "e2b554dcb5eaa876e184ab2883509cdce67e75f00b4e229e8c78a216410dce62"
+        }
+      ],
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ui_wordmarks_space__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            200,
+            80
+          ]
+        }
+      ]
+    }
+  ],
+  "python_verified_frames": 283,
+  "production_c": {
+    "verified_frames": 283,
+    "verified_sprite_rows": 11822,
+    "verified_ninepatch_rows": 912,
+    "comparison": "generated C and production decoders vs indexed source"
+  },
+  "catalog": {
+    "patches": [
+      {
+        "name": "adv_assets_patch_menu_normal",
+        "id": "menu/normal",
+        "corner_px": 12
+      },
+      {
+        "name": "adv_assets_patch_menu_selected",
+        "id": "menu/selected",
+        "corner_px": 12
+      },
+      {
+        "name": "adv_assets_patch_menu_disabled",
+        "id": "menu/disabled",
+        "corner_px": 12
+      },
+      {
+        "name": "adv_assets_patch_info_normal",
+        "id": "info/normal",
+        "corner_px": 12
+      },
+      {
+        "name": "adv_assets_patch_info_current",
+        "id": "info/current",
+        "corner_px": 12
+      },
+      {
+        "name": "adv_assets_patch_popup_normal",
+        "id": "popup/normal",
+        "corner_px": 16
+      }
+    ],
+    "digit_tables": {
+      "36": "adv_assets_digits_36",
+      "20": "adv_assets_digits_20"
+    },
+    "shared_ui_palette_rgb565": [
+      8649,
+      15375,
+      17298,
+      29514,
+      40276,
+      44173,
+      45672,
+      48007,
+      50577,
+      54567,
+      56884,
+      59061,
+      63185,
+      65433,
+      65502
+    ]
+  },
+  "ui_limit_bytes": 163840,
+  "linker_alignment_and_final_elf_measurement": "pending; RLE/tables exact, C3 descriptor estimates exclude linker padding/deduplication",
+  "acceptance": "host packing validation only; no device/physical artwork acceptance implied"
+}

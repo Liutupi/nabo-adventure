@@ -1,0 +1,41 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_tiles_mountain_young_pine__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    15375,
+    48007
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 276,
+  "table_bytes": 142,
+  "frame_sha256": [
+    "e700e46bc8361b339409d3ff3420652320f87b6d803762478afdc8ce1acbf5e4"
+  ],
+  "source_sha256": [
+    "b262291829ffa4226bdbe2f633b6d6455076861ea891f0b07072aae0bf266036"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/tiles/mountain/young-pine",
+  "group": "static",
+  "symbol": "adv_assets_static_tiles_mountain_young_pine__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\mountain\\young-pine.png",
+      "sha256": "b262291829ffa4226bdbe2f633b6d6455076861ea891f0b07072aae0bf266036"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

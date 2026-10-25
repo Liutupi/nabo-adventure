@@ -1,0 +1,8 @@
+Use case: background-extraction / identity-preserve edit.
+Input image 1 is the approved NABO light-hiking three-view sheet and is the exact edit target.
+
+Change only its background: remove the warm off-white background and every cast shadow or ground shadow, producing genuinely transparent alpha around and between all three characters. Do not render a checkerboard or a white/black replacement background. Keep the three existing full-body figures and the same front, three-quarter-left, three-quarter-right order, equal scale, standing poses, spacing and aligned feet. Cap-to-shoe bodies must remain complete and separated by fully transparent gutters.
+
+The foreground is locked: preserve this exact approved NABO head and face, eyes, glasses, hair, white cap, forward-reading NABO wordmark plus heartbeat symbol, head/body proportions, expression, muted teal short jacket, navy inner layer and trousers, camel crossbody satchel, its strap and hardware, and the light walking shoes. Keep the same refined soft dimensional illustration and materials. No redesign, repainting of identity, pose change, costume change, extra items, thick outlines, flat vector conversion, or old rejected character. Preserve fine hair and cap edges without adding a pale halo. Lettering must stay forward-reading in every view, never mirrored.
+
+Deliver one clean high-resolution transparent three-view source image suitable for later manual skeletal layer separation. No captions, labels, frame borders, pixel previews, or watermark. No ground plane or contact shadow. This is a background-only edit of the already approved artwork, not a new drawing or an animation.

@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "counts": {
+    "worlds": 9,
+    "logical_tiles": 54,
+    "unique_tiles": 53,
+    "landmarks": 9,
+    "stamps": 9,
+    "icons": 7,
+    "unique_assets": 78
+  },
+  "world_tile_group_rgba_colors": {
+    "deep-sea": 11,
+    "harbor": 9,
+    "town": 12,
+    "rail": 10,
+    "night-forest": 8,
+    "mountain": 11,
+    "ski": 9,
+    "sky": 6,
+    "space": 9
+  },
+  "failures": []
+}

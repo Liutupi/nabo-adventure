@@ -1,0 +1,41 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_icon_hot_air__p0",
+  "width": 16,
+  "height": 16,
+  "palette_rgb565": [
+    0,
+    8649,
+    45672,
+    54567
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 164,
+  "table_bytes": 78,
+  "frame_sha256": [
+    "bec592dfd2b9805112f223473adbe0c4d1483081425ef661a950561051e262e2"
+  ],
+  "source_sha256": [
+    "d7bdc4337cafe9c0b57702cd7b273aa7ca67e42bd2a9c9c460b73195f8dfd210"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/icon/hot-air",
+  "group": "static",
+  "symbol": "adv_assets_static_icon_hot_air__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\icons\\hot-air.png",
+      "sha256": "d7bdc4337cafe9c0b57702cd7b273aa7ca67e42bd2a9c9c460b73195f8dfd210"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

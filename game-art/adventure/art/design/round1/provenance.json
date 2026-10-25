@@ -1,0 +1,23 @@
+{
+  "generated_by": "build_designs.py + bundled sharp/librsvg + Pillow",
+  "source_sha256": {
+    "game-art/dive/rig/common/front/eyes_closed.svg": "45d1f291497919e33e25981f7f3a4987898133656f7667bf3a30ac454f0ad3e2",
+    "game-art/dive/rig/common/front/eyes_neutral.svg": "f121e81805fbf2564a258a373f32bed0e7110dc0f583edb4a6752e5d13d289c2",
+    "game-art/dive/rig/common/front/head.svg": "e7ffff90fbf43aae851838357f36a6d2d0d416f25a5db2a19ecfd95138293056",
+    "game-art/dive/rig/common/front/mouth_neutral.svg": "08f4d0a5986d21e2161faab603f679b58ce35e8191487c6e995c31335be28588",
+    "game-art/dive/rig/common/front/neck.svg": "5eb6b01f9df51be1f5f8aae608b35dff11c228d5e57a00d6c496e9abcd02e2d6",
+    "game-art/dive/rig/common/head.svg": "eba0d36d57bd24490dfc7a2455ed595fd70ce906d5b951d9b14ecef804852907",
+    "game-art/dive/rig/common/eyes_neutral.svg": "d7d267fc2bbf256b4cb3f29eea02ea8261cba193b86d728d1392147b928dcf08",
+    "game-art/dive/rig/common/mouth_neutral.svg": "4eb5a69c9b4844ac093425da3e15beb36b5922c62b4cf5810d39f9537e3ebd70"
+  },
+  "head_group_sha256": {
+    "front": "4345008fa0f8d30a7d78f9437c9398d440920e772fbae1206511d319ccd4e7dc",
+    "three-quarter-left": "c534bdea891472d07d23e3589f019a2e520e1210b03155df8256288fab46951a",
+    "three-quarter-right": "b54c7813c6c4d5d807440e9f39c4a820d4613bbc76e0bbfa760417bf355330da"
+  },
+  "board_font": "Windows Microsoft YaHei; branding is outlined SVG geometry",
+  "head_policy": "Front exact source geometry; left uses original quarter head; right projects non-brand head geometry only, crown and NABO outlined lettering independently forward.",
+  "generations_used": false,
+  "selection": "awaiting user",
+  "scope": "round-one static studies only"
+}

@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-25",
+  "operation": "deterministic crop and resize only",
+  "runtime": "v24.19.0",
+  "sharp_version": "0.35.5",
+  "scope": "Only round1/v2 sources read; only previews/ and preview-generation.* written.",
+  "original_identity_reference": "../../../reference/nabo-idle-original.png",
+  "original_identity_reference_sha256": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243",
+  "identity_status": "The user explicitly selected V2 option 1, light hiking. This records only that human choice; options 2 and 3 are not approved. Technical animation and source-alpha validation remain separate.",
+  "user_selection": {
+    "option": 1,
+    "id": "01-hiker",
+    "name": "light hiking",
+    "date": "2026-10-25",
+    "authority": "explicit user selection reported by root agent",
+    "other_options_approved": false
+  },
+  "withdrawn_v1": "The earlier V1 automated identity pass was false and its simplified redrawn SVG designs were rejected. It is not evidence for V2 acceptance.",
+  "incomplete": [
+    "transparent sprites",
+    "dual-world background preview",
+    "64-color/RLE packing",
+    "animation validation"
+  ],
+  "unchanged": [
+    "source PNG pixels",
+    "clothing",
+    "face",
+    "hair",
+    "cap and logos"
+  ],
+  "records": [
+    {
+      "id": "01-hiker",
+      "source": "01-hiker-design-board.png",
+      "source_sha256": "3ed446475284c3d1b75ba78a41d75922935ee928bc91ba51fccbd7d8a13a1060",
+      "source_size": [
+        1774,
+        887
+      ],
+      "selected_view": "first figure",
+      "bbox": {
+        "left": 214,
+        "top": 20,
+        "width": 361,
+        "height": 815
+      },
+      "bbox_convention": "left/top inclusive; right=left+width and bottom=top+height exclusive",
+      "bbox_method": "Manually selected after viewing original design boards; y spans visible cap top through shoe sole, not ground shadow.",
+      "crop_preserves_original_pixels": true,
+      "background": "original opaque warm ivory retained; no extraction",
+      "target_subject_height": 48,
+      "target_dimensions": [
+        21,
+        48
+      ],
+      "scale_y": 0.05889570552147239,
+      "scale_x": 0.05817174515235457,
+      "aspect_rounding": "target width rounded to nearest integer; exact 48-pixel height",
+      "downsample_kernel": "lanczos3",
+      "nearest_preview_dimensions": [
+        63,
+        144
+      ],
+      "nearest_scale": 3,
+      "nearest_pixels_verified_exact": true,
+      "outputs": [
+        {
+          "file": "previews/01-hiker-front-crop.png",
+          "sha256": "77000e675f6fbd0c758ab4348ee03c0c48ffe01c6a05c977da0236459b9ddd4d"
+        },
+        {
+          "file": "previews/01-hiker-front-48px.png",
+          "sha256": "c2e6c5640b3fff98ff75497d7a73551f7b5a55aef286c20e9a13002b705ec047"
+        },
+        {
+          "file": "previews/01-hiker-front-48px-3x.png",
+          "sha256": "84fef047d36c933add49fe3d5eda518c52b3fa9cc48903191c8345705d521fb0"
+        }
+      ]
+    },
+    {
+      "id": "02-explorer",
+      "source": "02-explorer.png",
+      "source_sha256": "bb29f3282237d136f5d24d368bd4be6b3de578f895c6e91b53d4db163a358e90",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "selected_view": "center figure",
+      "bbox": {
+        "left": 555,
+        "top": 23,
+        "width": 420,
+        "height": 949
+      },
+      "bbox_convention": "left/top inclusive; right=left+width and bottom=top+height exclusive",
+      "bbox_method": "Manually selected after viewing original design boards; y spans visible cap top through shoe sole, not ground shadow.",
+      "crop_preserves_original_pixels": true,
+      "background": "original opaque warm ivory retained; no extraction",
+      "target_subject_height": 48,
+      "target_dimensions": [
+        21,
+        48
+      ],
+      "scale_y": 0.0505795574288725,
+      "scale_x": 0.05,
+      "aspect_rounding": "target width rounded to nearest integer; exact 48-pixel height",
+      "downsample_kernel": "lanczos3",
+      "nearest_preview_dimensions": [
+        63,
+        144
+      ],
+      "nearest_scale": 3,
+      "nearest_pixels_verified_exact": true,
+      "outputs": [
+        {
+          "file": "previews/02-explorer-front-crop.png",
+          "sha256": "e3c3595d15926a13ddd210c02b183300ff25338f1da117a0cd80e8222ac0673f"
+        },
+        {
+          "file": "previews/02-explorer-front-48px.png",
+          "sha256": "f53fd9c3233188768733c52a267e0478b3edfae1f9a0cb2af2932ef3d81d869f"
+        },
+        {
+          "file": "previews/02-explorer-front-48px-3x.png",
+          "sha256": "39f0afcce90b8b1ac346fe8e726db5919fe8d4a49bc406c24f2b026410cc513e"
+        }
+      ]
+    },
+    {
+      "id": "03-post-traveler",
+      "source": "03-post-traveler.png",
+      "source_sha256": "605f7bb06888f2da008f9a3f14108480e7b737b85542309d08fb11edc86b76b2",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "selected_view": "first figure",
+      "bbox": {
+        "left": 48,
+        "top": 31,
+        "width": 425,
+        "height": 933
+      },
+      "bbox_convention": "left/top inclusive; right=left+width and bottom=top+height exclusive",
+      "bbox_method": "Manually selected after viewing original design boards; y spans visible cap top through shoe sole, not ground shadow.",
+      "crop_preserves_original_pixels": true,
+      "background": "original opaque warm ivory retained; no extraction",
+      "target_subject_height": 48,
+      "target_dimensions": [
+        22,
+        48
+      ],
+      "scale_y": 0.05144694533762058,
+      "scale_x": 0.05176470588235294,
+      "aspect_rounding": "target width rounded to nearest integer; exact 48-pixel height",
+      "downsample_kernel": "lanczos3",
+      "nearest_preview_dimensions": [
+        66,
+        144
+      ],
+      "nearest_scale": 3,
+      "nearest_pixels_verified_exact": true,
+      "outputs": [
+        {
+          "file": "previews/03-post-traveler-front-crop.png",
+          "sha256": "8432da1b39250bb42b0a77f3757edeb4079ab1a12da24e0d4c4ee8f1e7ba04d9"
+        },
+        {
+          "file": "previews/03-post-traveler-front-48px.png",
+          "sha256": "39dd88f2d81ce3b6e6592799002c5244f9b2070a7bb909e678d14ca16ba42e8a"
+        },
+        {
+          "file": "previews/03-post-traveler-front-48px-3x.png",
+          "sha256": "d50b0471e1173b0e6016ff9e90dc34d0a7ed0594b25fa8363c2c2c04f25f405f"
+        }
+      ]
+    }
+  ],
+  "overview": {
+    "file": "previews/outfits-overview.png",
+    "dimensions": [
+      1200,
+      850
+    ],
+    "sha256": "19c3887926418a6cf57442964ec2d6d4048193425c83a035efb6ae52b62d50f9",
+    "large_subject_height": 600,
+    "small_subject_height": 48
+  },
+  "comparison": {
+    "file": "previews/48px-comparison.png",
+    "dimensions": [
+      600,
+      296
+    ],
+    "sha256": "97a60078b41f59ccabc01174b1545d04591d3ebabeedddd004060d6ab3d8e55e",
+    "rows": [
+      "48px actual pixels",
+      "exact 3x nearest-neighbor enlargement"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_tiles_harbor_wave_crest__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    17298,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 320,
+  "table_bytes": 142,
+  "frame_sha256": [
+    "694b3b0d36d37f46a3d7b7014e752e7eafb0b4c89204d2eddb263c53d7ce4018"
+  ],
+  "source_sha256": [
+    "aba54606bbc19471fdcbdcd209c42d7bea188a5e33f1db5d944106af4666d12d"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/tiles/harbor/wave-crest",
+  "group": "static",
+  "symbol": "adv_assets_static_tiles_harbor_wave_crest__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\harbor\\wave-crest.png",
+      "sha256": "aba54606bbc19471fdcbdcd209c42d7bea188a5e33f1db5d944106af4666d12d"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}

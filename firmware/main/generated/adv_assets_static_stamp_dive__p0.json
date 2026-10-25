@@ -1,0 +1,39 @@
+{
+  "format": "adv-row-rle-v1",
+  "name": "adv_assets_static_stamp_dive__p0",
+  "width": 96,
+  "height": 96,
+  "palette_rgb565": [
+    0,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 2088,
+  "table_bytes": 394,
+  "frame_sha256": [
+    "369429ed019ce7d949bd6fd7d16bef468db3405c7a731f4203ddf69c0af8e584"
+  ],
+  "source_sha256": [
+    "2f1456b213066289080946789804bc40fe255b3938bed9a1fc048a1d49b04068"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "static/stamp/dive",
+  "group": "static",
+  "symbol": "adv_assets_static_stamp_dive__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\stamps\\dive.png",
+      "sha256": "2f1456b213066289080946789804bc40fe255b3938bed9a1fc048a1d49b04068"
+    }
+  ],
+  "descriptor_bytes_c3": 32
+}
