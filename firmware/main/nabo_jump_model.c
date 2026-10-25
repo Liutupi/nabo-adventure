@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "nabo_jump_assets.h"
+#include "nabo_jump_codec.h"
 #include "nabo_jump_rig.h"
 
 static uint32_t random_next(nabo_jump_t* g) {
@@ -464,12 +465,13 @@ static void platform_row(uint16_t* out, int x0, int x1, int y, int cx, int cy, i
             return;
         int left = cx - 48 * SMALL_SCALE / 256, right = cx + 47 * SMALL_SCALE / 256;
         int start = x0 > left ? x0 : left, end = x1 < right ? x1 : right;
-        const unsigned char* row = jump_sprites + (skin % 6) * JUMP_PLATFORM_BYTES + sy * 96 * 2;
+        uint16_t row[96];
+        if(!nabo_jump_decode_platform(jump_sprites,JUMP_PACKED_SPRITES_BYTES,(unsigned)(skin%6),(unsigned)sy,row,96))return;
         for (int x = start; x <= end; ++x) {
             int sx = 48 + floor_div((x - cx) * 256, SMALL_SCALE);
             if ((unsigned)sx >= 96)
                 continue;
-            uint16_t pixel = row[sx * 2] | row[sx * 2 + 1] << 8;
+            uint16_t pixel = row[sx];
             if (pixel != color(0xdfe1eb))
                 out[x - x0] = pixel;
         }
@@ -482,10 +484,10 @@ static void platform_row(uint16_t* out, int x0, int x1, int y, int cx, int cy, i
     int end = x1 < left + 95 ? x1 : left + 95;
     if (start > end)
         return;
-    const unsigned char* p =
-        jump_sprites + (skin % 6) * JUMP_PLATFORM_BYTES + (sy * 96 + start - left) * 2;
-    for (int x = start; x <= end; ++x, p += 2) {
-        uint16_t pixel = p[0] | p[1] << 8;
+    uint16_t row[96];
+    if(!nabo_jump_decode_platform(jump_sprites,JUMP_PACKED_SPRITES_BYTES,(unsigned)(skin%6),(unsigned)sy,row,96))return;
+    for (int x = start; x <= end; ++x) {
+        uint16_t pixel = row[x-left];
         if (pixel != color(0xdfe1eb))
             out[x - x0] = pixel;
     }

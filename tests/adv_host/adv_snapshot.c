@@ -5,6 +5,7 @@
 #include "adv_demo.h"
 #include "adv_model.h"
 #include "adv_post_view.h"
+#include "adv_night_view.h"
 
 static adv_model_t model;
 
@@ -47,6 +48,12 @@ int host_snapshot(char *out, int size)
             int64_t values[POST_VALUES];post_values(m->game,values);
             n+=snprintf(out+n,size-n,"\"game\":[");
             for(int i=0;i<POST_VALUES;i++)n+=snprintf(out+n,size-n,"%s%lld",i?",":"",(long long)values[i]);
+            return n+snprintf(out+n,size-n,"]}");
+        }
+        if(m->station==4){
+            int64_t values[NIGHT_VALUES];night_values(m->game,values);
+            n+=snprintf(out+n,size-n,"\"game\":[");
+            for(int i=0;i<NIGHT_VALUES;i++)n+=snprintf(out+n,size-n,"%s%lld",i?",":"",(long long)values[i]);
             return n+snprintf(out+n,size-n,"]}");
         }
         const adv_demo_t *g = m->game;

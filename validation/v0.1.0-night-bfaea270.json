@@ -1,0 +1,29 @@
+{
+  "candidate_sha256": "bfaea27009661e268cb0f569ed3c3e0188fb1d60331d67a163d8d5843643fa2f",
+  "status": "HOST PASS; NOT FLASHED; DEVICE AND HUMAN CHECKS PENDING",
+  "app_bytes": 1651904,
+  "physical_factory_bytes": 2031616,
+  "physical_factory_free_bytes": 379712,
+  "reserve_bytes": 360448,
+  "remaining_after_reserve_bytes": 19264,
+  "host": {
+    "full_suite": {"tests": 203, "seconds": 86.441, "passed": true},
+    "subsequent_serial_tool_tests": {"tests": 3, "passed": true},
+    "night_model_actions": 25206,
+    "shell_traces": 12,
+    "night_renderer_cases": 14,
+    "idf_build_passed": true,
+    "asset_production_c_frames": 479,
+    "asset_production_c_sprite_rows": 23317,
+    "asset_production_c_ninepatch_rows": 912,
+    "all_six_independent_art_packages_refreshed": true,
+    "decoded_embedded_pixels_identical_to_accepted_5a": true,
+    "decoded_embedded_pcm_identical_to_accepted_5a": true,
+    "jump_scene_rgb_identical_pixels": 76800
+  },
+  "device": {"flashed": false, "automated_smoke": "pending", "human_acceptance": "pending"},
+  "scope": "NIGHT formal rules, sleepwear/jar A costume, common lifecycle; lossless jump sprite/PCM storage",
+  "not_implemented": ["B costume selector", "CLIMB formal game", "SKI formal game", "SKY formal game", "SPACE formal game"],
+  "previous_accepted_candidate_preserved": "5a2bc80336bddc25aed27f770810bfe0476bf283a7e660e6328415ddd33b7968",
+  "private_device_data_excluded": true
+}

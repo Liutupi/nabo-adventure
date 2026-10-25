@@ -1,0 +1,49 @@
+{
+  "format": "adv-row-rle-v2",
+  "name": "adv_assets_game_night_jar_glow__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 263,
+  "table_bytes": 138,
+  "frame_sha256": [
+    "97d224b9f100d565dec97111208989c98cf52e4998aea8eccf206007419eb3c7"
+  ],
+  "source_sha256": [
+    "0ff1ff51dd1b6eba99bdf27a5caae6c37a8b386378ec4d02c98987cbce0cbf57"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/night/jar_glow",
+  "group": "night",
+  "symbol": "adv_assets_game_night_jar_glow__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\night\\props\\jar_glow.png",
+      "sha256": "0ff1ff51dd1b6eba99bdf27a5caae6c37a8b386378ec4d02c98987cbce0cbf57"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/night/jar_glow",
+      "logical_symbol": "adv_assets_game_night_jar_glow__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

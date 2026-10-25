@@ -2,6 +2,8 @@
  * See game-art/original-sound-reference.json for provenance and checksums.
  * Stream directly from flash; no complete audio buffer or additional task. */
 #include "nabo_jump_sound.h"
+#include "nabo_jump_codec.h"
+#include "jump_codec_generated.h"
 #include <string.h>
 extern const unsigned char jump_sounds[] __asm__("_binary_jump_sounds_bin_start");
 
@@ -38,8 +40,19 @@ void nabo_jump_sound_start(nabo_jump_sound_t* s, int kind, unsigned combo) {
         s->length = 0;
     }
 }
+// One serialized audio worker consumes this immutable stream under the owner
+// lock. This512-byte cache is shared across cues and allocates no heap memory.
+static int16_t cached_pcm[JUMP_PCM_BLOCK_SAMPLES];
+static unsigned cached_block=UINT32_MAX;
 static int sample(unsigned index) {
-    return (int16_t)(jump_sounds[index * 2] | jump_sounds[index * 2 + 1] << 8);
+    if(index>=JUMP_PCM_SAMPLES)return 0;
+    unsigned block=index/JUMP_PCM_BLOCK_SAMPLES;
+    if(block!=cached_block){
+        if(!nabo_jump_decode_pcm_block(jump_sounds,JUMP_PACKED_SOUND_BYTES,block,cached_pcm,JUMP_PCM_BLOCK_SAMPLES))
+            memset(cached_pcm,0,sizeof(cached_pcm));
+        cached_block=block;
+    }
+    return cached_pcm[index%JUMP_PCM_BLOCK_SAMPLES];
 }
 void nabo_jump_sound_fill(nabo_jump_sound_t* s, int16_t* pcm, size_t frames) {
     memset(pcm, 0, frames * sizeof(*pcm));

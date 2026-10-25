@@ -1,0 +1,146 @@
+{
+  "format": "adv-row-rle-v2",
+  "name": "adv_assets_night_b_lift_jar__p0",
+  "width": 53,
+  "height": 56,
+  "palette_rgb565": [
+    0,
+    4161,
+    6307,
+    8420,
+    10566,
+    12548,
+    12613,
+    12679,
+    12713,
+    14660,
+    14726,
+    14791,
+    16708,
+    16773,
+    16839,
+    16905,
+    18853,
+    18985,
+    20934,
+    21065,
+    21098,
+    23178,
+    23210,
+    25127,
+    25323,
+    29288,
+    29450,
+    29547,
+    31401,
+    31660,
+    31760,
+    35594,
+    35724,
+    35853,
+    38033,
+    39950,
+    40014,
+    40180,
+    41868,
+    42160,
+    42392,
+    48272,
+    48435,
+    48566,
+    50746,
+    54448,
+    54709,
+    54939,
+    56626,
+    59033,
+    59165,
+    60852,
+    60917,
+    61245,
+    63030,
+    63325,
+    63358,
+    63390,
+    65143,
+    65208,
+    65241,
+    65439,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    2,
+    3,
+    4,
+    4
+  ],
+  "data_bytes": 9749,
+  "table_bytes": 1508,
+  "frame_sha256": [
+    "dfe1ce1790c68b6ee0de29cd93bd20d926756f3724c0bb16e2dd154df1ef32d6",
+    "dbcee7b14852759044ab7a03815f25dbd41eb4e67ab8167f3d81892aa27bca4a",
+    "a304ea986cabdc246213ef4f00f9d47891d482221e8d88d00f42365c6e007462",
+    "11bf74de03f48a88d2a3331226d95b4b46394791ca4191c6d800c21b27c8e67c",
+    "ed726e168629ce62da61f9e57b4a03ae09b1e4f26e0f800f95a9914f7c3f5822",
+    "dfe1ce1790c68b6ee0de29cd93bd20d926756f3724c0bb16e2dd154df1ef32d6"
+  ],
+  "source_sha256": [
+    "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4",
+    "834fc0020929c5f90ceb016338cd181be7d36f23a0d6880e3adaf77a6f9c8111",
+    "7e37512bcd6eb3cc8f42509d950567dbea6db81ef1c5ec5e8294fdddb8d22323",
+    "f604f16de7c937ce120c4aba8e7577f23804a75646b5886ec4ba5e702d9a3386",
+    "47f62bfc2b79b14052f740e8e225067b2b33bfe3a01cf68925c0175d64585ef5",
+    "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+  ],
+  "verified_frames": 6,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "night_b/lift_jar",
+  "group": "night",
+  "symbol": "adv_assets_night_b_lift_jar__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\lift_jar\\000.png",
+      "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\lift_jar\\001.png",
+      "sha256": "834fc0020929c5f90ceb016338cd181be7d36f23a0d6880e3adaf77a6f9c8111"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\lift_jar\\002.png",
+      "sha256": "7e37512bcd6eb3cc8f42509d950567dbea6db81ef1c5ec5e8294fdddb8d22323"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\lift_jar\\003.png",
+      "sha256": "f604f16de7c937ce120c4aba8e7577f23804a75646b5886ec4ba5e702d9a3386"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\lift_jar\\004.png",
+      "sha256": "47f62bfc2b79b14052f740e8e225067b2b33bfe3a01cf68925c0175d64585ef5"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\lift_jar\\005.png",
+      "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "night_b/lift_jar",
+      "logical_symbol": "adv_assets_night_b_lift_jar__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

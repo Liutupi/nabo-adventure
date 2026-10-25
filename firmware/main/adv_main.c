@@ -7,6 +7,7 @@
 #include "adv_boot.h"
 #include "adv_model.h"
 #include "adv_post.h"
+#include "adv_night_debug.h"
 #include "adv_persist.h"
 #include "adv_sound.h"
 #include "adv_ui.h"
@@ -276,11 +277,12 @@ static void diagnostic_open(const char *name)
     if (!s_test || s_owner != OWNER_SHELL || s_model.page != ADV_PAGE_MAP) {
         puts("@error open requires test mode and the map"); return;
     }
-    if(!strcmp(name,"post")) {
-        handle_fx(adv_test_open(&s_model,3));
+    if(!strcmp(name,"post")||!strcmp(name,"night")) {
+        int station=!strcmp(name,"post")?3:4;
+        handle_fx(adv_test_open(&s_model,station));
         s_draw_frames=s_draw_us=s_draw_max_us=0;
-        if(!s_model.in_session)puts("@error POST test entry failed");
-        else puts("@adv open=post");
+        if(!s_model.in_session)puts("@error game test entry failed");
+        else printf("@adv open=%s\n",name);
         s_last_input_us=s_step_us=esp_timer_get_time();return;
     }
     int station = !strcmp(name, "jump") ? STATION_JUMP : !strcmp(name, "dive") ? STATION_DIVE : -1;
@@ -299,6 +301,7 @@ static void command(const char *line)
 {
     if (!strcmp(line, ">adv.status")) status();
     else if(!strcmp(line,">post.status"))post_status();
+    else if(!strcmp(line,">night.status"))adv_night_debug(&s_model);
     else if(!strcmp(line,">adv.practice=post")) {
         handle_fx(adv_practice_open(&s_model));
         if(s_model.in_session&&s_model.station==3&&((adv_post_t *)s_model.game)->practice) {
@@ -462,8 +465,8 @@ static void adventure_task(void *arg)
                 steps++;
             }
             if (us - s_step_us >= STEP_US) s_step_us = us;
-            bool post=s_model.page==ADV_PAGE_SESSION&&s_model.station==3;
-            if (dirty&&(!post||ms-last_draw_ms>=33)) {
+            bool game=s_model.page==ADV_PAGE_SESSION&&(s_model.station==3||s_model.station==4);
+            if (dirty&&(!game||ms-last_draw_ms>=33)) {
                 int64_t draw_start=esp_timer_get_time();
                 adv_ui_draw(&s_model, ms, battery, mv);dirty=false;last_draw_ms=ms;
                 s_draw_us=(uint32_t)(esp_timer_get_time()-draw_start);s_draw_frames++;

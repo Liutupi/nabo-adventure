@@ -1,0 +1,23 @@
+{
+  "format_pixels": "JPS1",
+  "format_audio": "JPC1",
+  "lossless": true,
+  "pixels": {
+    "source_bytes": 117504,
+    "source_sha256": "6d361d6df49837c33a015421e27df1cf5215365131449b1d887f715a8cfbaf61",
+    "packed_bytes": 43534,
+    "packed_sha256": "d85473816607cb9308fd366a4aa35d4a8f2a52775da6e69329bc8304d7c5c7cd",
+    "character_offset": 36622,
+    "rows_verified": 576
+  },
+  "pcm": {
+    "source_bytes": 243096,
+    "source_sha256": "5f8613c19ec519ec38fed11e6ac8599a6dc3553a33136c3a79f89f1617f0cbde",
+    "packed_bytes": 149739,
+    "packed_sha256": "9b80dfc2ebce73486a3ed4896a2d371f7e95eb7c20d13cba300b0c22c0a54762",
+    "samples_verified": 121548,
+    "block_samples": 256,
+    "raw_blocks": 0
+  },
+  "data_bytes_saved": 167327
+}

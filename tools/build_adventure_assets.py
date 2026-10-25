@@ -15,7 +15,7 @@ DEFAULT_OUTPUT = ROOT/'firmware/main/generated'
 OWNERSHIP = 'adv_assets_generated.json'
 UI_LIMIT = 160*1024
 GAME_LIMIT = 260*1024
-INTEGRATED_GAMES = ('post',)
+INTEGRATED_GAMES = ('post','night')
 PROOF_SOURCES = ('tools/generate_adv_sprites.py', 'tools/build_adventure_assets.py',
                  'tools/adventure_assets_manifest.py', 'tools/adventure_assets_emit.py',
                  'tools/adventure_assets_verify.py', 'tools/generate_boot_presentation.py', 'firmware/main/adv_boot.h', 'firmware/main/adv_sprite.c',

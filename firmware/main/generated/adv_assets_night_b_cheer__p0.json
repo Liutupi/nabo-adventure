@@ -1,0 +1,158 @@
+{
+  "format": "adv-row-rle-v2",
+  "name": "adv_assets_night_b_cheer__p0",
+  "width": 52,
+  "height": 72,
+  "palette_rgb565": [
+    0,
+    2113,
+    6274,
+    6340,
+    8485,
+    10467,
+    12580,
+    12646,
+    12713,
+    14660,
+    14693,
+    14759,
+    16773,
+    16839,
+    16872,
+    16906,
+    18854,
+    20934,
+    20999,
+    21033,
+    21098,
+    23146,
+    23179,
+    23277,
+    27175,
+    27338,
+    29288,
+    29483,
+    29681,
+    31628,
+    33481,
+    35659,
+    35821,
+    38000,
+    39787,
+    39918,
+    40014,
+    40179,
+    42128,
+    42392,
+    48435,
+    50255,
+    50581,
+    52433,
+    52760,
+    52891,
+    56626,
+    57019,
+    60852,
+    61114,
+    61213,
+    61246,
+    62998,
+    63325,
+    63358,
+    63390,
+    65111,
+    65176,
+    65208,
+    65273,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "data_bytes": 19479,
+  "table_bytes": 2476,
+  "frame_sha256": [
+    "a443231430de0910d7f67f6c7c760615344f6866f5258958fab0d727e8909728",
+    "09f0d5f90365d42726571d9e169b3f5f2c642f019fcc9d64b8337870ddc86629",
+    "fe580dd72610d6eb19c4ae9f89bf46666817653fd2a4278136d2e30c53ab820b",
+    "f45e5ab6b8f9b3972352902b57899eea574ab7e6f788ed91bb597d779d41d1bc",
+    "da227a1141ece0494ddb347fa49ea6d185b55d3982648dd8b658d4f1d832ee59",
+    "adb50022afcafcc099f38be1373b6a1b799de26b26565066906d30493b9ef632",
+    "0989079313d7664d9c10925dba0e8e8dd11c94c10cdbcfe6ccf5b76a7d117d7e",
+    "a443231430de0910d7f67f6c7c760615344f6866f5258958fab0d727e8909728"
+  ],
+  "source_sha256": [
+    "92d0612ac16c19249141091b2949bb9c4233cb3dd124b755a804ea171099b2a6",
+    "7e475f8e2a5f0360262cb700ffb4a29bdebdd20ac503c59b4ded4ea8acc1c14a",
+    "61e03ab8af8f9b5fde4515ae4846a8b67a5458d7f698c41b480e8f096d942a55",
+    "af63e7c954e285b98dcf543152613d6f90355e5c73f3921d54fa9f0f686132ed",
+    "309f4d1390a89ec5040f00563a601c0c1bb4ec5af3ad6298a00fabc87dd5d664",
+    "8d2ba089cdfaa67d3c15f85a2759ea26110fdb07933cacf9f6dda161737f5b68",
+    "a9f7b755d757da9d16ab65f4aab9869887eb7bdf9147cf8388002cec47958ca1",
+    "92d0612ac16c19249141091b2949bb9c4233cb3dd124b755a804ea171099b2a6"
+  ],
+  "verified_frames": 8,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "night_b/cheer",
+  "group": "night",
+  "symbol": "adv_assets_night_b_cheer__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\000.png",
+      "sha256": "92d0612ac16c19249141091b2949bb9c4233cb3dd124b755a804ea171099b2a6"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\001.png",
+      "sha256": "7e475f8e2a5f0360262cb700ffb4a29bdebdd20ac503c59b4ded4ea8acc1c14a"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\002.png",
+      "sha256": "61e03ab8af8f9b5fde4515ae4846a8b67a5458d7f698c41b480e8f096d942a55"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\003.png",
+      "sha256": "af63e7c954e285b98dcf543152613d6f90355e5c73f3921d54fa9f0f686132ed"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\004.png",
+      "sha256": "309f4d1390a89ec5040f00563a601c0c1bb4ec5af3ad6298a00fabc87dd5d664"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\005.png",
+      "sha256": "8d2ba089cdfaa67d3c15f85a2759ea26110fdb07933cacf9f6dda161737f5b68"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\006.png",
+      "sha256": "a9f7b755d757da9d16ab65f4aab9869887eb7bdf9147cf8388002cec47958ca1"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\007.png",
+      "sha256": "92d0612ac16c19249141091b2949bb9c4233cb3dd124b755a804ea171099b2a6"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "night_b/cheer",
+      "logical_symbol": "adv_assets_night_b_cheer__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -5461,6 +5461,18 @@
   "production_c_evidence": {
     "common": {
       "groups": {
+        "night": {
+          "rle_bytes": 136460,
+          "table_bytes": 23858,
+          "descriptor_catalog_estimate_c3": 2069,
+          "resources": 25,
+          "pieces": 25,
+          "frames": 98,
+          "physical_sprites": 25,
+          "physical_frames": 98,
+          "interned_pieces": 0,
+          "static_bytes_estimate_c3": 162387
+        },
         "post": {
           "rle_bytes": 47971,
           "table_bytes": 18460,
@@ -5510,10 +5522,10 @@
           "static_bytes_estimate_c3": 57244
         }
       },
-      "python_verified_frames": 381,
+      "python_verified_frames": 479,
       "production_c": {
-        "verified_frames": 381,
-        "verified_sprite_rows": 17968,
+        "verified_frames": 479,
+        "verified_sprite_rows": 23317,
         "verified_ninepatch_rows": 912,
         "comparison": "generated C and production decoders vs indexed source"
       }
@@ -5658,9 +5670,10 @@
     }
   },
   "device": {
-    "common_candidate_sha256": "5a2bc80336bddc25aed27f770810bfe0476bf283a7e660e6328415ddd33b7968",
+    "common_candidate_sha256": "bfaea27009661e268cb0f569ed3c3e0188fb1d60331d67a163d8d5843643fa2f",
     "new_game_art_embedded_in_this_candidate": true,
     "integrated_game_groups": [
+      "night",
       "post"
     ],
     "reason": "Only explicitly integrated games are embedded; physical factory is 2,031,616 bytes."

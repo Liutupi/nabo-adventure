@@ -1,0 +1,132 @@
+{
+  "format": "adv-row-rle-v2",
+  "name": "adv_assets_night_a_move_left__p0",
+  "width": 54,
+  "height": 56,
+  "palette_rgb565": [
+    0,
+    4227,
+    8354,
+    8487,
+    8553,
+    10468,
+    10533,
+    10634,
+    10666,
+    12581,
+    12646,
+    12714,
+    12747,
+    14660,
+    14693,
+    14726,
+    14794,
+    14828,
+    16773,
+    16839,
+    16874,
+    16939,
+    18821,
+    19053,
+    20934,
+    21065,
+    23212,
+    25095,
+    25325,
+    27208,
+    29550,
+    31433,
+    33776,
+    33940,
+    35562,
+    37707,
+    40247,
+    41901,
+    44177,
+    44473,
+    46061,
+    50483,
+    50647,
+    52400,
+    52859,
+    54611,
+    56822,
+    57052,
+    59099,
+    59165,
+    60787,
+    61245,
+    61278,
+    62998,
+    63325,
+    63358,
+    63390,
+    65111,
+    65176,
+    65208,
+    65274,
+    65439,
+    65503,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    1,
+    1,
+    3
+  ],
+  "data_bytes": 6163,
+  "table_bytes": 1048,
+  "frame_sha256": [
+    "7817d2bcdb77960585275397a58ec260ddc571a87dad823667dfb57cf1ff89b0",
+    "53120626e313ec1ed1ad9fc165b2bb3a5b0914aa0a68c3f79d990238daa8ab6e",
+    "fc11c20e09c085cfb071e223d9fedad13581c18a799c5d08d60ef613e752618b",
+    "7817d2bcdb77960585275397a58ec260ddc571a87dad823667dfb57cf1ff89b0"
+  ],
+  "source_sha256": [
+    "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db",
+    "34a4f0d2273cdba9b116c3cba7a452f66fe9c9a6068c9c94dab7699b48f98f38",
+    "f641eb1ec439932276dcfa1fa0b386681d0632b076b6e415e5228d6aab5815e2",
+    "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+  ],
+  "verified_frames": 4,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "night_a/move_left",
+  "group": "night",
+  "symbol": "adv_assets_night_a_move_left__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_a\\move_left\\000.png",
+      "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_a\\move_left\\001.png",
+      "sha256": "34a4f0d2273cdba9b116c3cba7a452f66fe9c9a6068c9c94dab7699b48f98f38"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_a\\move_left\\002.png",
+      "sha256": "f641eb1ec439932276dcfa1fa0b386681d0632b076b6e415e5228d6aab5815e2"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_a\\move_left\\003.png",
+      "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "night_a/move_left",
+      "logical_symbol": "adv_assets_night_a_move_left__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

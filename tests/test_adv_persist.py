@@ -69,7 +69,7 @@ esp_err_t nvs_set_u8(nvs_handle_t h, const char *key, uint8_t v) { return nvs_se
 esp_err_t nvs_commit(nvs_handle_t h) { (void)h; commits++; return fail; }
 void host_reset(void) {
     adv_free(&model); count = writes = commits = opens = fail = 0;
-    put("jump_best", 12); put("dive_best", 2400); put("adv_b_post", 6); put("adv_seen", 1);
+    put("jump_best", 12); put("dive_best", 2400); put("adv_b_post", 6); put("adv_b_night", 35); put("adv_seen", 1);
     put("volume", 60); put("brightness", 80); put("sleep", 300); put("speaker", 1);
     adv_persist_set_test(false); adv_persist_restore(&model, 1);
 }
@@ -84,8 +84,9 @@ void host_settings(void) {
     adv_persist_settings(&model.cfg.settings);
 }
 void host_fake_progress(void) {
-    model.best[1] = 999; model.best[2] = 888; model.best[3] = 777; model.seen = 0xffffff;
+    model.best[1] = 999; model.best[2] = 888; model.best[3] = 777; model.best[4] = 555; model.seen = 0xffffff;
     adv_persist_u32("adv_seen", model.seen); adv_persist_u32("adv_b_post", model.best[3]);
+    adv_persist_u32("adv_b_night", model.best[4]);
 }
 void host_leave_test(void) {
     // Runtime keeps writes suppressed while closing games, restores durable state,
@@ -111,7 +112,7 @@ class Persistence(unittest.TestCase):
         (folder / 'esp_log.h').write_text('#define ESP_LOGE(...) ((void)0)\n', 'utf-8')
         (folder / 'harness.c').write_text(HARNESS, 'utf-8')
         library = folder / 'adv_persist.dll'
-        sources = ['adv_persist.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c',
+        sources = ['adv_persist.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c',
                    'collection_model.c', 'nabo_dive_model.c']
         subprocess.run([CC, '-std=gnu11', '-O2', '-shared', SHARED_EXPORT, '-Wall', '-Wextra',
                         '-Werror', '-Wno-unused-parameter', '-I', str(folder), '-I', str(BOARD),
@@ -171,12 +172,14 @@ class Persistence(unittest.TestCase):
         self.assertEqual(self.lib.host_writes(), 0)
         self.assertEqual(self.lib.host_model_best(1), 12)
         self.assertEqual(self.lib.host_model_best(3), 6)
+        self.assertEqual(self.lib.host_model_best(4), 35)
         self.assertEqual(self.lib.host_model_seen(), 1)
         self.assertEqual(self.lib.host_model_volume(), 60)
         self.lib.host_save_restored()
         self.assertEqual(self.lib.host_value(b'jump_best'), 12)
         self.assertEqual(self.lib.host_value(b'dive_best'), 2400)
         self.assertEqual(self.lib.host_value(b'adv_b_post'), 6)
+        self.assertEqual(self.lib.host_value(b'adv_b_night'), 35)
         self.assertEqual(self.lib.host_value(b'adv_seen'), 1)
         self.assertEqual(self.lib.host_value(b'volume'), 60)
 

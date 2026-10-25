@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BOARD = ROOT/'firmware/main'
 HOST = ROOT/'tests/adv_host'
 GOLDEN = ROOT/'tests/adv_golden'
-SOURCES = ['adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c', 'collection_model.c']
+SOURCES = ['adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c', 'collection_model.c']
 REDRAW = 1
 
 def build(folder, replace=None):

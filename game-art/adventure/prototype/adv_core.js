@@ -5,6 +5,7 @@
 (function (root) {
   'use strict';
   const Post=typeof module!=='undefined'&&module.exports?require('./adv_post.js'):root.AdvPost;
+  const Night=typeof module!=='undefined'&&module.exports?require('./adv_night.js'):root.AdvNight;
 
   // ---------- constants shared with adv_model.h ----------
   const BTN = { UP: 0, DOWN: 1, OK: 2 };
@@ -27,7 +28,7 @@
     { id: 'jump', cn: '跳一跳', en: 'JUMP', world: '小镇', res: '体力', kind: 1, th: [10, 25, 50], placeholder: false },
     { id: 'dive', cn: '深潜', en: 'DIVE', world: '深海', res: '氧气', kind: 1, th: [100, 300, 600], placeholder: false },
     { id: 'post', cn: '小火车', en: 'POST', world: '铁路平原', res: '蒸汽', kind: 2, th: [5, 12, 25], placeholder: false },
-    { id: 'night', cn: '萤火虫', en: 'NIGHT', world: '夜林', res: '精神', kind: 2, th: [15, 35, 60], placeholder: true },
+    { id: 'night', cn: '萤火虫', en: 'NIGHT', world: '夜林', res: '精神', kind: 2, th: [15, 35, 60], placeholder: false },
     { id: 'climb', cn: '登山', en: 'CLIMB', world: '雪山', res: '体力', kind: 2, th: [50, 150, 300], placeholder: true },
     { id: 'ski', cn: '滑雪', en: 'SKI', world: '雪坡', res: '体温', kind: 2, th: [10, 25, 45], placeholder: true },
     { id: 'sky', cn: '热气球', en: 'SKY', world: '云端', res: '热气', kind: 2, th: [200, 500, 1000], placeholder: true },
@@ -166,7 +167,7 @@
   function startRun(m, practice=false) {
     const s = m.session;
     s.seed = rand(m);
-    s.game = practice&&s.station===3?Post.startPractice(s.seed):(s.station===3?Post:Demo).start(s.seed);
+    s.game = practice&&s.station===3?Post.startPractice(s.seed):engine(s.station).start(s.seed);
     s.phase = PHASE.READY; s.t = READY_STEPS; s.record = 0;
     clearInput(m);
     cue(m, CUE.ENTER);
@@ -209,9 +210,10 @@
 
   function isBack(btn, ev) { return btn === BTN.UP && (ev === EV.LONG || ev === EV.DOUBLE); }
   function gameMapKey(btn, ev) { return btn === BTN.UP && ev === EV.DOUBLE; }
+  function engine(station){return station===3?Post:station===4?Night:Demo;}
 
   function recordResult(m) {
-    const s=m.session,score=(s.station===3?Post:Demo).status(s.game).score;
+    const s=m.session,score=engine(s.station).status(s.game).score;
     if(score>m.best[s.station]) {
       s.record=1;
       if(!m.test){m.best[s.station]=score;m.fx|=FX.SAVE_BEST;}
@@ -330,15 +332,15 @@
     } else if (s.phase === PHASE.PLAY) {
       const input = Object.assign({ ok_held: (m.held >> BTN.OK) & 1, down_held: (m.held >> BTN.DOWN) & 1 }, m.input);
       clearInput(m);
-      (s.station===3?Post:Demo).step(s.game, input);
+      engine(s.station).step(s.game, input);
       if (s.game.cue) cue(m, s.game.cue);
-      if ((s.station===3?Post:Demo).status(s.game).over) {
+      if (engine(s.station).status(s.game).over) {
         if(s.station===3&&s.game.practice){if(m.test||unlocked(m,3))startRun(m);else toMap(m);}
         else {s.phase = PHASE.END; s.t = END_STEPS;}
       }
       m.fx |= FX.REDRAW;
     } else if (s.phase === PHASE.END) {
-      (s.station===3?Post:Demo).step(s.game, { ok_down: 0, ok_up: 0, up_down: 0, down_down: 0, down_up: 0, ok_held: 0, down_held: 0 });
+      engine(s.station).step(s.game, { ok_down: 0, ok_up: 0, up_down: 0, down_down: 0, down_up: 0, ok_held: 0, down_held: 0 });
       if (--s.t === 0) {
         s.phase = PHASE.RESULT;
         recordResult(m);
@@ -356,13 +358,13 @@
       cfg: [m.cfg.page, m.cfg.cursor, m.cfg.editing, m.cfg.s.volume, m.cfg.s.brightness, m.cfg.s.sleep, m.cfg.s.speaker ? 1 : 0],
       best: m.best.slice(), seen: m.seen, stamp: m.stamp, held: m.held,
       session: s ? [s.station, s.phase, s.t, s.seed, s.record] : null,
-      game: g ? (s.station===3?Post.view(g):[g.p, g.v, g.zc, g.zh, g.score, g.res, g.over, g.hit, g.miss]) : null,
+      game: g ? (s.station===3?Post.view(g):s.station===4?Night.view(g):[g.p, g.v, g.zc, g.zh, g.score, g.res, g.over, g.hit, g.miss]) : null,
     };
   }
 
   const api = {
     BTN, EV, PAGE, PHASE, FX, CUE, CG, STATION, PATH, START_STATION, DEMO_THRESHOLDS, READY_STEPS, END_STEPS,
-    create, event, step, legacyDone, view, earned, unlocked, threshold, bit, rand, Demo, Post, testOpen,practiceOpen,gameMapKey,
+    create, event, step, legacyDone, view, earned, unlocked, threshold, bit, rand, Demo, Post,Night, testOpen,practiceOpen,gameMapKey,
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.AdvCore = api;

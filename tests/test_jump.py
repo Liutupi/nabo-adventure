@@ -10,6 +10,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT=Path(__file__).resolve().parents[1]
 BOARD=ROOT/'firmware/main'
+RAW_SOUND=ROOT/'game-art/jump/source/jump_sounds.pcm.bin'
 class Game(ctypes.Structure):
     _fields_=[('phase',ctypes.c_int)]+[(n,ctypes.c_uint32) for n in ['rng','score','best','combo','changed_at','charge_at']]+[(n,ctypes.c_int) for n in ['dir','gap','skin','next_skin','distance','player_x','player_y','lift','character','future_dir','future_gap','future_skin','fall_contact_ms','fall_ground_drop','fall_target_x']]+[('pending_at',ctypes.c_uint32),('pending_hold',ctypes.c_int)]+[(n,ctypes.c_bool) for n in ['landed','centered','sound','pending_charge','pending_released']]+[(n,ctypes.c_int) for n in ['size','next_size','future_size','steps']]
 
@@ -19,7 +20,7 @@ blob=(BOARD/'jump_sprites.bin').read_bytes()
 (folder/'blob.c').write_text('const unsigned char sprites[] __asm__("_binary_jump_sprites_bin_start")={'+','.join(map(str,blob))+'};','ascii')
 with (folder/'blob.c').open('a',encoding='ascii') as f:f.write('const unsigned char sounds[] __asm__("_binary_jump_sounds_bin_start")={'+','.join(map(str,(BOARD/'jump_sounds.bin').read_bytes()))+'};')
 library=folder/'jump.dll'
-subprocess.run([CC,'-std=gnu11','-O3','-shared',SHARED_EXPORT,'-Wall','-Wextra','-Werror','-I',str(BOARD),str(BOARD/'nabo_jump_model.c'),str(BOARD/'nabo_jump_rig.c'),str(BOARD/'nabo_jump_sound.c'),str(folder/'blob.c'),'-o',str(library)],capture_output=True,check=True)
+subprocess.run([CC,'-std=gnu11','-O3','-shared',SHARED_EXPORT,'-Wall','-Wextra','-Werror','-I',str(BOARD),str(BOARD/'nabo_jump_model.c'),str(BOARD/'nabo_jump_rig.c'),str(BOARD/'nabo_jump_sound.c'),str(BOARD/'nabo_jump_codec.c'),str(folder/'blob.c'),'-o',str(library)],capture_output=True,check=True)
 lib=ctypes.CDLL(str(library))
 for name in ['nabo_jump_reset','nabo_jump_press','nabo_jump_release','nabo_jump_tick','nabo_jump_draw_row']:
     getattr(lib,name).restype=None
@@ -52,7 +53,7 @@ lib.nabo_jump_sound_fill.argtypes=[ctypes.POINTER(Sound),ctypes.POINTER(ctypes.c
 class Tests(unittest.TestCase):
     def test_precomputed_edge_and_fall_stream_and_clear_tail(self):
         import struct
-        raw = (BOARD/'jump_sounds.bin').read_bytes()
+        raw = RAW_SOUND.read_bytes()
         for kind, offset, length in [(3, 76932, 1440), (4, 78372, 8000)]:
             expected = struct.unpack('<'+str(length)+'h', raw[offset*2:(offset+length)*2])
             sound = Sound();lib.nabo_jump_sound_start(ctypes.byref(sound),kind,1)
@@ -65,15 +66,34 @@ class Tests(unittest.TestCase):
 
     def test_original_jump_pcm_is_exact_across_chunk_boundaries(self):
         import struct
-        raw=(BOARD/'jump_sounds.bin').read_bytes();expected=struct.unpack('<16055h',raw[35176*2:(35176+16055)*2])
+        raw=RAW_SOUND.read_bytes();expected=struct.unpack('<16055h',raw[35176*2:(35176+16055)*2])
         sound=Sound();lib.nabo_jump_sound_start(ctypes.byref(sound),1,1);actual=[]
         for count in [1,319,37,511,7]*20:
             data=(ctypes.c_int16*count)();lib.nabo_jump_sound_fill(ctypes.byref(sound),data,count);actual.extend(data)
         self.assertEqual(actual[:16055],list(expected));self.assertTrue(all(v==0 for v in actual[16055:]))
 
+    def test_center_combo_pcm_interpolation_is_exact_at_every_pitch(self):
+        import struct
+        raw=struct.unpack('<25701h',RAW_SOUND.read_bytes()[51231*2:76932*2])
+        for combo in (0,1,2,3,4,5,6,7,20):
+            sound=Sound();lib.nabo_jump_sound_start(ctypes.byref(sound),2,combo)
+            step=65536+min(max(combo-1,0),6)*65536//10
+            self.assertEqual(sound.step,step)
+            expected=[];position=0
+            while position>>16<len(raw):
+                p=position>>16;a=raw[p];b=raw[min(p+1,len(raw)-1)]
+                delta=(b-a)*(position&65535)
+                expected.append(a+(abs(delta)//65536 if delta>=0 else -(abs(delta)//65536)))
+                position+=step
+            actual=[]
+            for i in range(0,len(expected)+400,319):
+                data=(ctypes.c_int16*319)();lib.nabo_jump_sound_fill(ctypes.byref(sound),data,319);actual.extend(data)
+            self.assertEqual(actual[:len(expected)],expected,combo)
+            self.assertTrue(all(v==0 for v in actual[len(expected):]),combo)
+
     def test_charge_loops_and_new_jump_replaces_old_audio(self):
         import struct
-        raw=(BOARD/'jump_sounds.bin').read_bytes();expected=[int(v*3/2) for v in struct.unpack('<35176h',raw[86372*2:(86372+35176)*2])[::3]]
+        raw=RAW_SOUND.read_bytes();expected=[int(v*3/2) for v in struct.unpack('<35176h',raw[86372*2:(86372+35176)*2])[::3]]
         sound=Sound();lib.nabo_jump_sound_start(ctypes.byref(sound),5,1)
         self.assertEqual(sound.step,3*65536)
         data=(ctypes.c_int16*(len(expected)+400))();lib.nabo_jump_sound_fill(ctypes.byref(sound),data,len(data))

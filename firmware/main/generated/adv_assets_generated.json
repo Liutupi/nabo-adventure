@@ -2,6 +2,18 @@
   "schema": "adventure-assets-package-v1",
   "format": "adv-row-rle-v2",
   "groups": {
+    "night": {
+      "rle_bytes": 136460,
+      "table_bytes": 23858,
+      "descriptor_catalog_estimate_c3": 2069,
+      "resources": 25,
+      "pieces": 25,
+      "frames": 98,
+      "physical_sprites": 25,
+      "physical_frames": 98,
+      "interned_pieces": 0,
+      "static_bytes_estimate_c3": 162387
+    },
     "post": {
       "rle_bytes": 47971,
       "table_bytes": 18460,
@@ -53,7 +65,7 @@
   },
   "tools_sha256": {
     "tools/generate_adv_sprites.py": "eff40de537378ceda49cb3327d3b063b6a00d18559be793660cc447456a3f56a",
-    "tools/build_adventure_assets.py": "ffc4bb74df231f45d769f5b34a7f7f0c0d23e694b7b81a48356ed88af31b19b0",
+    "tools/build_adventure_assets.py": "a94d302cec81be8a1f869979e53a12663a1722e481ad489bfb32fef7e8ead3b9",
     "tools/adventure_assets_manifest.py": "1e526efecb93f4b4c8cb01e03a85ca281cb6c910b6bee5faf6423a88d6d5a747",
     "tools/adventure_assets_emit.py": "59dbb6de5b6ad25006606cadfe6c9636ae6e4ca34eb058faa7d4223be34856cb",
     "tools/adventure_assets_verify.py": "46bc8a4727cb94f50afebfb99c3f7470e8260550384bb07ab04b2c6569e8e106",
@@ -65,8 +77,28 @@
     "firmware/main/adv_ninepatch.h": "438c7369f79703f2164bbc364a65532e135267f3e52cf5d1009b6af51cae79aa"
   },
   "generated_code_sha256": {
-    "adv_assets_catalog.c": "bdf42667e6fa7a2c7049ea52cf295764fff0a18009575f855bdd20476ddd0bb8",
+    "adv_assets_catalog.c": "e95df0a51b56b9cd5fb5978fbf26eb024b7d7d5ec7435e7fa20875f2ef0882fb",
     "adv_assets_catalog.h": "045bda6ae2668d6c708cbbcbe630f74e3d527ec186931ac34b657f23b6848193",
+    "adv_assets_game_night_glass_jar__p0.c": "f40ff10804ac1389ee8bc1f4557787732ca7aa4afb2f5bde73aacccd245b5a01",
+    "adv_assets_game_night_glass_jar__p0.h": "d7a297a30ead628705c7e01c0c859274f64388e9cda9e92de7504494a1305d23",
+    "adv_assets_game_night_grass_00__p0.c": "320a6a38e66e8b0755e0a0cbe33563f9ed75c6915d244693df4eab8390294d23",
+    "adv_assets_game_night_grass_00__p0.h": "80d846f6890accb7d4602702daaeacf6430cbcfe6bd3ea09a216a3e6e477c3f3",
+    "adv_assets_game_night_grass_01__p0.c": "02ae21bcb7261a5ea409883691a40ee3e17c8c957d9a30d10390e12eaeb8d971",
+    "adv_assets_game_night_grass_01__p0.h": "1c827505a1eede3ed7dfbbba52a839e9ad5231467a777977e743d3ab1d135635",
+    "adv_assets_game_night_grass_02__p0.c": "fcbebc55e3a439030de5226cbd74001258f55b48e3451f32bd9b0749fe2a6ec4",
+    "adv_assets_game_night_grass_02__p0.h": "ada9185b8062672df29ef41aefd582a06d499dcb31d710f17dba5e3ffd2458ec",
+    "adv_assets_game_night_grass_03__p0.c": "f2523d5e0d1f48614a57d415220c6d0ce168d216a21059657aceae4daa356203",
+    "adv_assets_game_night_grass_03__p0.h": "6efb00720dfd2e21ebffb3df0270626dc47254f0dcd0074304c4bb6785d9831d",
+    "adv_assets_game_night_jar_glow__p0.c": "9a13e854cc3da01be1f81d8146cc939d167fa0e306de38355e475a2487ba75b4",
+    "adv_assets_game_night_jar_glow__p0.h": "d873760301042331e3b20f28039d741b4e626bff24bb37407b4d33a392f69533",
+    "adv_assets_game_night_tree_shadow_00__p0.c": "ab85e5b91869b54a4a26fa702e31cfb1d366e1393d6ba1557ca3357548dbf37a",
+    "adv_assets_game_night_tree_shadow_00__p0.h": "b06cd335bf0b7bc19d68a9ca053383fe0f62f98e62a334e7c2f7d330eaa2e8ed",
+    "adv_assets_game_night_tree_shadow_01__p0.c": "4974e631c0e5df92b30e01c98f5e9f30a47e1338f2e874047aa3727d367cb025",
+    "adv_assets_game_night_tree_shadow_01__p0.h": "21800bd393796ccaf2dcc31616a572c49469ed279dc2198bf4f5f8a9eecfd7ef",
+    "adv_assets_game_night_tree_shadow_02__p0.c": "b8dcf02da4fb3c42fc40fac19bc9fb7cbde4383b11a28029614960cc386e4dd6",
+    "adv_assets_game_night_tree_shadow_02__p0.h": "11e6961125550a825ec95da881725002526e7c4d5fd8ce80becb4c553d04f740",
+    "adv_assets_game_night_tree_shadow_03__p0.c": "ec9b060bba4e000c8cda0b60e96447d46030eb352d54073a48d869346ad63e94",
+    "adv_assets_game_night_tree_shadow_03__p0.h": "c0a1b1de6b48f36b25b388a328ac7e316e89072e257b14a35aa7449f506ea665",
     "adv_assets_game_post_props_cab_foreground__p0.c": "0ef128aa72a5a1c745003375f3743a02a237171826c3a202a9971dbe24095f9c",
     "adv_assets_game_post_props_cab_foreground__p0.h": "4a79bd20874c64af7eb42c7ea37c35c86be435a37f983d4f41105d9a709fd3df",
     "adv_assets_game_post_props_carriage__p0.c": "cf97f6a83ebedc3eba7825ddf2f842e5f522cc04b79535ea468a2abe5c394e4c",
@@ -111,6 +143,36 @@
     "adv_assets_game_post_tiles_track_fork__p0.h": "4f6d5196cd5ed42d157488026d528e02f556cae813bd7e02fc574283d5d9cbc1",
     "adv_assets_game_post_tiles_track_straight__p0.c": "7db3748c08c9d4e15f5406ba5cc76b4275fe9488fa0bdc5d787f025fc1b3e811",
     "adv_assets_game_post_tiles_track_straight__p0.h": "d3d1b3c8628e855064e5700320c56622d67c209ae375f59c7b8fb69b9436ce16",
+    "adv_assets_night_a_catch__p0.c": "e20b2a366715a855949f37ad6a1092a546f20d79e4ce4b074baa16c7be80d679",
+    "adv_assets_night_a_catch__p0.h": "9242941db14a48f350eb1a0d3afe31b2dfc818cae9f3ced6828b3125eab2da6f",
+    "adv_assets_night_a_cheer__p0.c": "2cb600d333dfcbcd9a42670a481b654cf240c5b19a3fcbc989c45434db3f6d57",
+    "adv_assets_night_a_cheer__p0.h": "84dcbed8db26bda313b0acf59c15314f1bbf8c9b8c816700c13ae557073f54c6",
+    "adv_assets_night_a_lift_jar__p0.c": "778cb02ef3e9f5b6cca219b0188d4775d41ab49333e9e8337cbfc518ed4058d4",
+    "adv_assets_night_a_lift_jar__p0.h": "d4dc82f779b8c58484648df0549109a3c417427abe2468f2c2614a020389e454",
+    "adv_assets_night_a_move_left__p0.c": "924babc3b92f2503c0852e36e123591eb96712fbc215bc9ec694054a47e1a172",
+    "adv_assets_night_a_move_left__p0.h": "5a54143994cf7bcbf2b8e4f1061ff08c805d6d84c10fa5b07415abf379ff0cfe",
+    "adv_assets_night_a_move_right__p0.c": "691308bc40bbe4fc65895fa4c3c7db17905e318ae67b5ead99bb07d495e03b82",
+    "adv_assets_night_a_move_right__p0.h": "614f56d7a957bb0e80c7699e1a1b6166cc562f97ed08fb81771f20f0e80350a0",
+    "adv_assets_night_a_seat_idle__p0.c": "f9a0ed7a93af8d95741e59af6901c1ac517138172eef14d525025ea31325a3bd",
+    "adv_assets_night_a_seat_idle__p0.h": "654b16f6b79c94ef367c7d2c94011d3030409f90fa0808e1ded10949ee78c557",
+    "adv_assets_night_a_yawn__p0.c": "37602f3ec3e7c4cab3fea45ef17c2aa0582326ecc53837e131cbbfa5d065ee3d",
+    "adv_assets_night_a_yawn__p0.h": "015869d1340c29b4e3fb6d1ba302cd2fb41fa7b7e518f0bc5451b52a91ee2d97",
+    "adv_assets_night_b_catch__p0.c": "d5c15c2cbbb9eeff322568aca7479814b1388e1174ed31b50921eabef7300b04",
+    "adv_assets_night_b_catch__p0.h": "a69bdf17c2c97570446eab520431269608d987a17f8e1718e628816d88634e28",
+    "adv_assets_night_b_cheer__p0.c": "1bc4efbbe9de0e7121a29aa9c76fa0bf7c9f194f20f03276025a65d2efe649f2",
+    "adv_assets_night_b_cheer__p0.h": "28cccb93e9cab0face57d082957a417601712842b986ab0479a99b7230b33fb2",
+    "adv_assets_night_b_lift_jar__p0.c": "e39059f3f6f8a21080cf6beea9a202164960d174497d87325693a72333095455",
+    "adv_assets_night_b_lift_jar__p0.h": "1f50797406997dec3d3b331635fc0350ad3a9ab25fa4766473b04093a9f966b9",
+    "adv_assets_night_b_move_left__p0.c": "b84c0cb1ac918377c586d51e1041741f3e090d6cd668491692f3b16bf05d11fd",
+    "adv_assets_night_b_move_left__p0.h": "46a9afd64548ff394d8257ade994bc90245b547f5c3f2b6de8c99ba4b2e1ab5d",
+    "adv_assets_night_b_move_right__p0.c": "6c3e5066012ec0767362b72b9c1555d4b2e1932ce9d8c42cbbe51342f05122be",
+    "adv_assets_night_b_move_right__p0.h": "4ddd53b08df3e06e0dc7dccd125a98073e00b908812700ed3c473c05bc36312b",
+    "adv_assets_night_b_seat_idle__p0.c": "4c9081714c1055d98b0500d791337df5f3bb9407141bbb8dff085a7641e988b8",
+    "adv_assets_night_b_seat_idle__p0.h": "e9cb52a4e9bf5244b97b98d88195953582d28eacd8aa494a3892e15aca71b04e",
+    "adv_assets_night_b_yawn__p0.c": "dbab55649b3d9bd5b355f7b6876f97c08f235dd060a2ada854a4a9f0a629c852",
+    "adv_assets_night_b_yawn__p0.h": "8fcf625255394c878328b138b1aa521f0b339ec53d0e3f925f523ced0940f0ba",
+    "adv_assets_night_shared_moth__p0.c": "a1a8dbb18c7a8853d79faaf050df9b7f38e356a08ee891a55e6264c09a00a08b",
+    "adv_assets_night_shared_moth__p0.h": "fb35f7ff358e00dd8a608a9ac8c97723909e058cee16c20183fb03ad1c54746a",
     "adv_assets_post_a_delivered__p0.c": "3147c1c7612f8212dbbc6fb4df2e55ebb92a7c16976431ccd68afb664fca61e1",
     "adv_assets_post_a_delivered__p0.h": "773c9c8e97d8e5c82718cd2c95cad1d9f1077498079b75b05e174c53f707806a",
     "adv_assets_post_a_hit__p0.c": "98571e450875ec323ba8def4c4e022af485be97d74a92c68ac8c379a345d4a6a",
@@ -483,6 +545,36 @@
   "files": [
     "adv_assets_catalog.c",
     "adv_assets_catalog.h",
+    "adv_assets_game_night_glass_jar__p0.c",
+    "adv_assets_game_night_glass_jar__p0.h",
+    "adv_assets_game_night_glass_jar__p0.json",
+    "adv_assets_game_night_grass_00__p0.c",
+    "adv_assets_game_night_grass_00__p0.h",
+    "adv_assets_game_night_grass_00__p0.json",
+    "adv_assets_game_night_grass_01__p0.c",
+    "adv_assets_game_night_grass_01__p0.h",
+    "adv_assets_game_night_grass_01__p0.json",
+    "adv_assets_game_night_grass_02__p0.c",
+    "adv_assets_game_night_grass_02__p0.h",
+    "adv_assets_game_night_grass_02__p0.json",
+    "adv_assets_game_night_grass_03__p0.c",
+    "adv_assets_game_night_grass_03__p0.h",
+    "adv_assets_game_night_grass_03__p0.json",
+    "adv_assets_game_night_jar_glow__p0.c",
+    "adv_assets_game_night_jar_glow__p0.h",
+    "adv_assets_game_night_jar_glow__p0.json",
+    "adv_assets_game_night_tree_shadow_00__p0.c",
+    "adv_assets_game_night_tree_shadow_00__p0.h",
+    "adv_assets_game_night_tree_shadow_00__p0.json",
+    "adv_assets_game_night_tree_shadow_01__p0.c",
+    "adv_assets_game_night_tree_shadow_01__p0.h",
+    "adv_assets_game_night_tree_shadow_01__p0.json",
+    "adv_assets_game_night_tree_shadow_02__p0.c",
+    "adv_assets_game_night_tree_shadow_02__p0.h",
+    "adv_assets_game_night_tree_shadow_02__p0.json",
+    "adv_assets_game_night_tree_shadow_03__p0.c",
+    "adv_assets_game_night_tree_shadow_03__p0.h",
+    "adv_assets_game_night_tree_shadow_03__p0.json",
     "adv_assets_game_post_props_cab_foreground__p0.c",
     "adv_assets_game_post_props_cab_foreground__p0.h",
     "adv_assets_game_post_props_cab_foreground__p0.json",
@@ -549,6 +641,51 @@
     "adv_assets_game_post_tiles_track_straight__p0.c",
     "adv_assets_game_post_tiles_track_straight__p0.h",
     "adv_assets_game_post_tiles_track_straight__p0.json",
+    "adv_assets_night_a_catch__p0.c",
+    "adv_assets_night_a_catch__p0.h",
+    "adv_assets_night_a_catch__p0.json",
+    "adv_assets_night_a_cheer__p0.c",
+    "adv_assets_night_a_cheer__p0.h",
+    "adv_assets_night_a_cheer__p0.json",
+    "adv_assets_night_a_lift_jar__p0.c",
+    "adv_assets_night_a_lift_jar__p0.h",
+    "adv_assets_night_a_lift_jar__p0.json",
+    "adv_assets_night_a_move_left__p0.c",
+    "adv_assets_night_a_move_left__p0.h",
+    "adv_assets_night_a_move_left__p0.json",
+    "adv_assets_night_a_move_right__p0.c",
+    "adv_assets_night_a_move_right__p0.h",
+    "adv_assets_night_a_move_right__p0.json",
+    "adv_assets_night_a_seat_idle__p0.c",
+    "adv_assets_night_a_seat_idle__p0.h",
+    "adv_assets_night_a_seat_idle__p0.json",
+    "adv_assets_night_a_yawn__p0.c",
+    "adv_assets_night_a_yawn__p0.h",
+    "adv_assets_night_a_yawn__p0.json",
+    "adv_assets_night_b_catch__p0.c",
+    "adv_assets_night_b_catch__p0.h",
+    "adv_assets_night_b_catch__p0.json",
+    "adv_assets_night_b_cheer__p0.c",
+    "adv_assets_night_b_cheer__p0.h",
+    "adv_assets_night_b_cheer__p0.json",
+    "adv_assets_night_b_lift_jar__p0.c",
+    "adv_assets_night_b_lift_jar__p0.h",
+    "adv_assets_night_b_lift_jar__p0.json",
+    "adv_assets_night_b_move_left__p0.c",
+    "adv_assets_night_b_move_left__p0.h",
+    "adv_assets_night_b_move_left__p0.json",
+    "adv_assets_night_b_move_right__p0.c",
+    "adv_assets_night_b_move_right__p0.h",
+    "adv_assets_night_b_move_right__p0.json",
+    "adv_assets_night_b_seat_idle__p0.c",
+    "adv_assets_night_b_seat_idle__p0.h",
+    "adv_assets_night_b_seat_idle__p0.json",
+    "adv_assets_night_b_yawn__p0.c",
+    "adv_assets_night_b_yawn__p0.h",
+    "adv_assets_night_b_yawn__p0.json",
+    "adv_assets_night_shared_moth__p0.c",
+    "adv_assets_night_shared_moth__p0.h",
+    "adv_assets_night_shared_moth__p0.json",
     "adv_assets_post_a_delivered__p0.c",
     "adv_assets_post_a_delivered__p0.h",
     "adv_assets_post_a_delivered__p0.json",
@@ -1104,6 +1241,7 @@
     "adv_assets_generated.json"
   ],
   "source_manifests_sha256": {
+    "night-manifest.json": "d9d5b35ec4702fa5fd739b5224d1d5c0b933b72c5d272ade1f9c3a8e6679a0bb",
     "post-manifest.json": "42464721aae43aa0c7dc2aba7b55b4f6b4966f8ef61b2ecc23bcbce5a764636f",
     "shared-static-manifest.json": "f48bb34259cd5f58eb04cdc94d1e95e130875b111888b85962955b9655a4c5c8",
     "manifest.json": "e62681862e7f1c656c547f5324ac0f1d8a462609afcb19ad4157041f7de2d9af",
@@ -1114,6 +1252,326 @@
     "ui/palette.json": "3b3dc6d793ac4eff3af34fc01f0d969f7eb6a5c0b5a6b967e66795103949fce0"
   },
   "source_frames": [
+    {
+      "id": "game/night/glass_jar",
+      "sources": [
+        {
+          "path": "games/night/props/glass_jar.png",
+          "sha256": "bf3863697df2f5d763634c550964c1082ce2b1a93bb31c85e5f7c35372a63640"
+        }
+      ],
+      "canvas": [
+        19,
+        37
+      ],
+      "anchor": [
+        9,
+        37
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_night_glass_jar__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            19,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/night/grass_00",
+      "sources": [
+        {
+          "path": "games/night/tiles/grass_00.png",
+          "sha256": "f2dfcb99c5c2a501bf784611900de348dbc6e5b77dbb3a9d8ccc655263a3a6ba"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_night_grass_00__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/night/grass_01",
+      "sources": [
+        {
+          "path": "games/night/tiles/grass_01.png",
+          "sha256": "31db72f6f667f9fef7cf465a2f117412f5b0b4aafdc7d85fbfd2f01c351dc7a7"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_night_grass_01__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/night/grass_02",
+      "sources": [
+        {
+          "path": "games/night/tiles/grass_02.png",
+          "sha256": "6082c63af9d885dcf434e879a93d80054e98c95a4e85ec2f9df9c61198342d25"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_night_grass_02__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/night/grass_03",
+      "sources": [
+        {
+          "path": "games/night/tiles/grass_03.png",
+          "sha256": "05ee04f17b0964af227b2007acf74e7cbddf62f3ca706dc13e4471b8826b424e"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_night_grass_03__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/night/jar_glow",
+      "sources": [
+        {
+          "path": "games/night/props/jar_glow.png",
+          "sha256": "0ff1ff51dd1b6eba99bdf27a5caae6c37a8b386378ec4d02c98987cbce0cbf57"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_night_jar_glow__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/night/tree_shadow_00",
+      "sources": [
+        {
+          "path": "games/night/tiles/tree_shadow_00.png",
+          "sha256": "f2c1256abc58f1009ca28cdd096a1e6761182e36b62450cb1cc1af1234b04256"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_night_tree_shadow_00__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/night/tree_shadow_01",
+      "sources": [
+        {
+          "path": "games/night/tiles/tree_shadow_01.png",
+          "sha256": "386b269b6e2a6d05b1a5fc4233d7d458ded976ebc3293e484200219610f2bab7"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_night_tree_shadow_01__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/night/tree_shadow_02",
+      "sources": [
+        {
+          "path": "games/night/tiles/tree_shadow_02.png",
+          "sha256": "2a0712067782e1566241bd1bc37e477e39b704b3e69553dcb43038078ecae196"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_night_tree_shadow_02__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/night/tree_shadow_03",
+      "sources": [
+        {
+          "path": "games/night/tiles/tree_shadow_03.png",
+          "sha256": "eb258485aff0ecbcba170826d06a78cc28b0c0c2b6294f45948cc57b56ff9a72"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_night_tree_shadow_03__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
     {
       "id": "game/post/props/cab-foreground",
       "sources": [
@@ -1814,6 +2272,778 @@
           "size": [
             32,
             32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_a/catch",
+      "sources": [
+        {
+          "path": "frames/night/runtime/night_a/catch/000.png",
+          "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+        },
+        {
+          "path": "frames/night/runtime/night_a/catch/001.png",
+          "sha256": "24e54ad1e401ea1eb511247de6fda465d6433d7b864c62fa616234bc900d3cd2"
+        },
+        {
+          "path": "frames/night/runtime/night_a/catch/002.png",
+          "sha256": "4e807c81fdd0d8ae34972b749fc2ba5646e59dc5d82a0a613d079b24f1ad9bcb"
+        },
+        {
+          "path": "frames/night/runtime/night_a/catch/003.png",
+          "sha256": "46879c9eb27e5385d61f19636d7da9afe5299d64e5d78d7df7d862759bfa9e7f"
+        },
+        {
+          "path": "frames/night/runtime/night_a/catch/004.png",
+          "sha256": "ac5f7a91a0fca04c8c7601238ecb93967e5338dec0162ec2df954c0980fb5c80"
+        },
+        {
+          "path": "frames/night/runtime/night_a/catch/005.png",
+          "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+        }
+      ],
+      "canvas": [
+        54,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_a_catch__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            54,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_a/cheer",
+      "sources": [
+        {
+          "path": "frames/night/runtime/night_a/cheer/000.png",
+          "sha256": "36033fcffdca0532ad0ce64594cfa688fdf8f056be6f58ae1fc7bbaaea8d0fa8"
+        },
+        {
+          "path": "frames/night/runtime/night_a/cheer/001.png",
+          "sha256": "8e7d362a61d4b2863a28425be5592ccb04e65f1d78684c2b5744e84eee4e7926"
+        },
+        {
+          "path": "frames/night/runtime/night_a/cheer/002.png",
+          "sha256": "f0b630b2afbd1fd457d9301c4509845961346ab55e184928b201b105daee2f60"
+        },
+        {
+          "path": "frames/night/runtime/night_a/cheer/003.png",
+          "sha256": "b25bcb491455ffadd443cb7c0bde36896458b8cd7efecb14f96961fd03b19b72"
+        },
+        {
+          "path": "frames/night/runtime/night_a/cheer/004.png",
+          "sha256": "beedaf24d1b62ee84311128c066b8f2f01a4aed6754e00868b0e90308f5276a0"
+        },
+        {
+          "path": "frames/night/runtime/night_a/cheer/005.png",
+          "sha256": "425ad17489e9d8575d5d4c1ec20cfd872a39fdf71bfd11916314a69886d69ebc"
+        },
+        {
+          "path": "frames/night/runtime/night_a/cheer/006.png",
+          "sha256": "05a34be55cff1164694ab93197a110bcb46f1c7e71b8d15e476a321e7b772b16"
+        },
+        {
+          "path": "frames/night/runtime/night_a/cheer/007.png",
+          "sha256": "36033fcffdca0532ad0ce64594cfa688fdf8f056be6f58ae1fc7bbaaea8d0fa8"
+        }
+      ],
+      "canvas": [
+        56,
+        72
+      ],
+      "anchor": [
+        23,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_a_cheer__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            56,
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_a/lift_jar",
+      "sources": [
+        {
+          "path": "frames/night/runtime/night_a/lift_jar/000.png",
+          "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+        },
+        {
+          "path": "frames/night/runtime/night_a/lift_jar/001.png",
+          "sha256": "abd17010799c3f4f30a76362383bbe4f15168836a2a90d7d0e54a8f8b37e3469"
+        },
+        {
+          "path": "frames/night/runtime/night_a/lift_jar/002.png",
+          "sha256": "a93dee7b4371700ced374eefee5b655a95d3c3a9b16f56b013090c278e555131"
+        },
+        {
+          "path": "frames/night/runtime/night_a/lift_jar/003.png",
+          "sha256": "4e807c81fdd0d8ae34972b749fc2ba5646e59dc5d82a0a613d079b24f1ad9bcb"
+        },
+        {
+          "path": "frames/night/runtime/night_a/lift_jar/004.png",
+          "sha256": "0387cd503a3b52c106b204919753e2084f5d317750285a29a503bb7cd44d0a72"
+        },
+        {
+          "path": "frames/night/runtime/night_a/lift_jar/005.png",
+          "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+        }
+      ],
+      "canvas": [
+        54,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_a_lift_jar__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            54,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_a/move_left",
+      "sources": [
+        {
+          "path": "frames/night/runtime/night_a/move_left/000.png",
+          "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+        },
+        {
+          "path": "frames/night/runtime/night_a/move_left/001.png",
+          "sha256": "34a4f0d2273cdba9b116c3cba7a452f66fe9c9a6068c9c94dab7699b48f98f38"
+        },
+        {
+          "path": "frames/night/runtime/night_a/move_left/002.png",
+          "sha256": "f641eb1ec439932276dcfa1fa0b386681d0632b076b6e415e5228d6aab5815e2"
+        },
+        {
+          "path": "frames/night/runtime/night_a/move_left/003.png",
+          "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+        }
+      ],
+      "canvas": [
+        54,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_a_move_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            54,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_a/move_right",
+      "sources": [
+        {
+          "path": "frames/night/runtime/night_a/move_right/000.png",
+          "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+        },
+        {
+          "path": "frames/night/runtime/night_a/move_right/001.png",
+          "sha256": "b368b02e26c0516f41f156377be7e4f2ef08a0bea56aae0c5c1a51e7ec84f5ba"
+        },
+        {
+          "path": "frames/night/runtime/night_a/move_right/002.png",
+          "sha256": "7ad5c98214d8ce811d9c0c5cc559a0a32d42f6abb8057c8c270b1bfbf50bbef3"
+        },
+        {
+          "path": "frames/night/runtime/night_a/move_right/003.png",
+          "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+        }
+      ],
+      "canvas": [
+        54,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_a_move_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            54,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_a/seat_idle",
+      "sources": [
+        {
+          "path": "frames/night/runtime/night_a/seat_idle/000.png",
+          "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+        },
+        {
+          "path": "frames/night/runtime/night_a/seat_idle/001.png",
+          "sha256": "d67c5df4e4f5a38e91a39a8340ac20cc545a27fe2919445d32aa33876cf1b56b"
+        },
+        {
+          "path": "frames/night/runtime/night_a/seat_idle/002.png",
+          "sha256": "666e5d7263e3fa6da1c63c1ae9e19c5c83282032bbb1b4523d6e0ab44107d6e4"
+        },
+        {
+          "path": "frames/night/runtime/night_a/seat_idle/003.png",
+          "sha256": "d67c5df4e4f5a38e91a39a8340ac20cc545a27fe2919445d32aa33876cf1b56b"
+        },
+        {
+          "path": "frames/night/runtime/night_a/seat_idle/004.png",
+          "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+        },
+        {
+          "path": "frames/night/runtime/night_a/seat_idle/005.png",
+          "sha256": "9a53e402e60c309975b2f69ab69453bc574fc7728e594321b017ee1dc63a414d"
+        },
+        {
+          "path": "frames/night/runtime/night_a/seat_idle/006.png",
+          "sha256": "de7d032027b10eec81676d30e8f139d6cef2c9cbdd6a09bf21d38d9030dcde82"
+        },
+        {
+          "path": "frames/night/runtime/night_a/seat_idle/007.png",
+          "sha256": "9a53e402e60c309975b2f69ab69453bc574fc7728e594321b017ee1dc63a414d"
+        }
+      ],
+      "canvas": [
+        54,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_a_seat_idle__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            54,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_a/yawn",
+      "sources": [
+        {
+          "path": "frames/night/runtime/night_a/yawn/000.png",
+          "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+        },
+        {
+          "path": "frames/night/runtime/night_a/yawn/001.png",
+          "sha256": "29b7f1d444c58cd2b0d894723a997a4758c42dd27c7c0b3936582eadf8de9317"
+        },
+        {
+          "path": "frames/night/runtime/night_a/yawn/002.png",
+          "sha256": "2bc25c85d710eb6d475dadb0746442d3fb44b5e0a35a25881e933d5d1c932ad1"
+        },
+        {
+          "path": "frames/night/runtime/night_a/yawn/003.png",
+          "sha256": "1fa9924ccc294e55b01bfe059e26718cb8c6d3bf3c881cd1020cf61bb795f59c"
+        },
+        {
+          "path": "frames/night/runtime/night_a/yawn/004.png",
+          "sha256": "64eb9cfeebd2f3669ea98eea0501d1949c3b76d4b463c8276c4effee470da984"
+        },
+        {
+          "path": "frames/night/runtime/night_a/yawn/005.png",
+          "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
+        }
+      ],
+      "canvas": [
+        54,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_a_yawn__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            54,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_b/catch",
+      "sources": [
+        {
+          "path": "frames/night/runtime/night_b/catch/000.png",
+          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+        },
+        {
+          "path": "frames/night/runtime/night_b/catch/001.png",
+          "sha256": "a5b856901f972ab22decaf503cc05c4fd2948663ef1eee74e19bca4e8964c84b"
+        },
+        {
+          "path": "frames/night/runtime/night_b/catch/002.png",
+          "sha256": "f604f16de7c937ce120c4aba8e7577f23804a75646b5886ec4ba5e702d9a3386"
+        },
+        {
+          "path": "frames/night/runtime/night_b/catch/003.png",
+          "sha256": "71d22567e6c72b620f3d29fe263731d684962c43ff6017cfe027fd250c87e19e"
+        },
+        {
+          "path": "frames/night/runtime/night_b/catch/004.png",
+          "sha256": "b7a34393d819e4dad7f3375bce88777f3e10254d675550769f58438e7351edff"
+        },
+        {
+          "path": "frames/night/runtime/night_b/catch/005.png",
+          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+        }
+      ],
+      "canvas": [
+        53,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_b_catch__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            53,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_b/cheer",
+      "sources": [
+        {
+          "path": "frames/night/runtime/night_b/cheer/000.png",
+          "sha256": "92d0612ac16c19249141091b2949bb9c4233cb3dd124b755a804ea171099b2a6"
+        },
+        {
+          "path": "frames/night/runtime/night_b/cheer/001.png",
+          "sha256": "7e475f8e2a5f0360262cb700ffb4a29bdebdd20ac503c59b4ded4ea8acc1c14a"
+        },
+        {
+          "path": "frames/night/runtime/night_b/cheer/002.png",
+          "sha256": "61e03ab8af8f9b5fde4515ae4846a8b67a5458d7f698c41b480e8f096d942a55"
+        },
+        {
+          "path": "frames/night/runtime/night_b/cheer/003.png",
+          "sha256": "af63e7c954e285b98dcf543152613d6f90355e5c73f3921d54fa9f0f686132ed"
+        },
+        {
+          "path": "frames/night/runtime/night_b/cheer/004.png",
+          "sha256": "309f4d1390a89ec5040f00563a601c0c1bb4ec5af3ad6298a00fabc87dd5d664"
+        },
+        {
+          "path": "frames/night/runtime/night_b/cheer/005.png",
+          "sha256": "8d2ba089cdfaa67d3c15f85a2759ea26110fdb07933cacf9f6dda161737f5b68"
+        },
+        {
+          "path": "frames/night/runtime/night_b/cheer/006.png",
+          "sha256": "a9f7b755d757da9d16ab65f4aab9869887eb7bdf9147cf8388002cec47958ca1"
+        },
+        {
+          "path": "frames/night/runtime/night_b/cheer/007.png",
+          "sha256": "92d0612ac16c19249141091b2949bb9c4233cb3dd124b755a804ea171099b2a6"
+        }
+      ],
+      "canvas": [
+        52,
+        72
+      ],
+      "anchor": [
+        21,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_b_cheer__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            52,
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_b/lift_jar",
+      "sources": [
+        {
+          "path": "frames/night/runtime/night_b/lift_jar/000.png",
+          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+        },
+        {
+          "path": "frames/night/runtime/night_b/lift_jar/001.png",
+          "sha256": "834fc0020929c5f90ceb016338cd181be7d36f23a0d6880e3adaf77a6f9c8111"
+        },
+        {
+          "path": "frames/night/runtime/night_b/lift_jar/002.png",
+          "sha256": "7e37512bcd6eb3cc8f42509d950567dbea6db81ef1c5ec5e8294fdddb8d22323"
+        },
+        {
+          "path": "frames/night/runtime/night_b/lift_jar/003.png",
+          "sha256": "f604f16de7c937ce120c4aba8e7577f23804a75646b5886ec4ba5e702d9a3386"
+        },
+        {
+          "path": "frames/night/runtime/night_b/lift_jar/004.png",
+          "sha256": "47f62bfc2b79b14052f740e8e225067b2b33bfe3a01cf68925c0175d64585ef5"
+        },
+        {
+          "path": "frames/night/runtime/night_b/lift_jar/005.png",
+          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+        }
+      ],
+      "canvas": [
+        53,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_b_lift_jar__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            53,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_b/move_left",
+      "sources": [
+        {
+          "path": "frames/night/runtime/night_b/move_left/000.png",
+          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+        },
+        {
+          "path": "frames/night/runtime/night_b/move_left/001.png",
+          "sha256": "af7d072507f76cab874305443cf05ce4d440660a1bdd161eb85b1560bdbb4163"
+        },
+        {
+          "path": "frames/night/runtime/night_b/move_left/002.png",
+          "sha256": "757735455cdfb64083b7f40a600ebf9fd8f742cf505ec66491aa9f3cc145bba2"
+        },
+        {
+          "path": "frames/night/runtime/night_b/move_left/003.png",
+          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+        }
+      ],
+      "canvas": [
+        53,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_b_move_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            53,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_b/move_right",
+      "sources": [
+        {
+          "path": "frames/night/runtime/night_b/move_right/000.png",
+          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+        },
+        {
+          "path": "frames/night/runtime/night_b/move_right/001.png",
+          "sha256": "910631c5e83e4f8cd24babedecdc8d8e9279c686c55a506bd041c382015e83d0"
+        },
+        {
+          "path": "frames/night/runtime/night_b/move_right/002.png",
+          "sha256": "610ca57a9aa92369e7e3114176db3a802c1a14ffec84a25570b547d5dbb6bb87"
+        },
+        {
+          "path": "frames/night/runtime/night_b/move_right/003.png",
+          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+        }
+      ],
+      "canvas": [
+        53,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_b_move_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            53,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_b/seat_idle",
+      "sources": [
+        {
+          "path": "frames/night/runtime/night_b/seat_idle/000.png",
+          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+        },
+        {
+          "path": "frames/night/runtime/night_b/seat_idle/001.png",
+          "sha256": "dd3cf439c791f379079ecff9d10fdbbcd4d9e01aaf8523731031aead7f33796b"
+        },
+        {
+          "path": "frames/night/runtime/night_b/seat_idle/002.png",
+          "sha256": "535c91b2e93b365173448d897edc5b7124101c93edd21bdfd62a0b3b9fa63ece"
+        },
+        {
+          "path": "frames/night/runtime/night_b/seat_idle/003.png",
+          "sha256": "dd3cf439c791f379079ecff9d10fdbbcd4d9e01aaf8523731031aead7f33796b"
+        },
+        {
+          "path": "frames/night/runtime/night_b/seat_idle/004.png",
+          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+        },
+        {
+          "path": "frames/night/runtime/night_b/seat_idle/005.png",
+          "sha256": "4f42e663457eb2bb397638a88d5d34436b94ac6c0c42c02f5bc44a29a4b1bcc1"
+        },
+        {
+          "path": "frames/night/runtime/night_b/seat_idle/006.png",
+          "sha256": "cecbe729031fa63e6eebf9ff7a66ea4ed3902a7b165d17612c107be289b7d0e1"
+        },
+        {
+          "path": "frames/night/runtime/night_b/seat_idle/007.png",
+          "sha256": "4f42e663457eb2bb397638a88d5d34436b94ac6c0c42c02f5bc44a29a4b1bcc1"
+        }
+      ],
+      "canvas": [
+        53,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_b_seat_idle__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            53,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_b/yawn",
+      "sources": [
+        {
+          "path": "frames/night/runtime/night_b/yawn/000.png",
+          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+        },
+        {
+          "path": "frames/night/runtime/night_b/yawn/001.png",
+          "sha256": "ab4c49c1dbaaa601f13c40711fe6fcaa5237e8e7f9bd451de10e0b4d220deb77"
+        },
+        {
+          "path": "frames/night/runtime/night_b/yawn/002.png",
+          "sha256": "b2daaf812accfd5e845cd1847ad246f0797aeddfeebc96703716686904b672db"
+        },
+        {
+          "path": "frames/night/runtime/night_b/yawn/003.png",
+          "sha256": "9edc9be6406b2994e65f99fa01bc9520766088c3bec113db59c631496267f079"
+        },
+        {
+          "path": "frames/night/runtime/night_b/yawn/004.png",
+          "sha256": "c5188dc123d02050d00644cf1119907805083844e672c59df8ab833589c57201"
+        },
+        {
+          "path": "frames/night/runtime/night_b/yawn/005.png",
+          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+        }
+      ],
+      "canvas": [
+        53,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_b_yawn__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            53,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_shared/moth",
+      "sources": [
+        {
+          "path": "games/night/moth/000.png",
+          "sha256": "2d5b84b6e04443325a10f17cb2dc764a6556aa7a0fa53edbea04ed4c1e4ef897"
+        },
+        {
+          "path": "games/night/moth/001.png",
+          "sha256": "9f74aaacb985b955a258fc55abff3dd9aee89af6e3b8d9a0669e091fa430ba95"
+        },
+        {
+          "path": "games/night/moth/002.png",
+          "sha256": "2a677bf528f0682d037ec7601e8fff00745115bfbd701ca8b195eaabfa294999"
+        },
+        {
+          "path": "games/night/moth/003.png",
+          "sha256": "9f74aaacb985b955a258fc55abff3dd9aee89af6e3b8d9a0669e091fa430ba95"
+        }
+      ],
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        13
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_night_shared_moth__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            16
           ]
         }
       ]
@@ -9555,10 +10785,10 @@
       ]
     }
   ],
-  "python_verified_frames": 381,
+  "python_verified_frames": 479,
   "production_c": {
-    "verified_frames": 381,
-    "verified_sprite_rows": 17968,
+    "verified_frames": 479,
+    "verified_sprite_rows": 23317,
     "verified_ninepatch_rows": 912,
     "comparison": "generated C and production decoders vs indexed source"
   },
@@ -9622,8 +10852,8 @@
   "sprite_interning": {
     "scope": "within each group only",
     "comparison": "exact RGBA pixels, dimensions and ordered frame sequence",
-    "logical_pieces": 247,
-    "physical_sprites": 206,
+    "logical_pieces": 272,
+    "physical_sprites": 231,
     "accounting": "RLE/tables/sprite32 per physical object; piece8 and record/id per logical use"
   },
   "startup_composition": {

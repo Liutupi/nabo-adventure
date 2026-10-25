@@ -18,9 +18,9 @@ BOARD = ROOT/'firmware/main'
 HOST = ROOT/'tests/adv_host'
 UP, DOWN, OK = 0, 1, 2
 PRESS, CLICK, DOUBLE, LONG, RELEASE = 0, 1, 2, 3, 4
-SOURCES = ['adv_boot_motion.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c', 'adv_ui_post.c', 'adv_ui_post_session.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
+SOURCES = ['adv_boot_motion.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c','adv_ui_night.c', 'adv_ui_post.c', 'adv_ui_post_session.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
            'adv_text.c', 'adv_ui.c', 'adv_ui_animation.c', 'adv_ui_art.c', 'adv_ui_map.c', 'adv_ui_session.c', 'adv_ui_jump.c', 'collection_portrait.c',
-           'nabo_jump_model.c', 'nabo_jump_rig.c', 'nabo_dive_text.c', 'collection_font_12.c', 'collection_font_16.c',
+           'nabo_jump_model.c', 'nabo_jump_rig.c', 'nabo_jump_codec.c','nabo_dive_text.c', 'collection_font_12.c', 'collection_font_16.c',
            'collection_font_18.c', 'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c']
 
 def ui_color(name):
@@ -151,6 +151,19 @@ class Renderer(unittest.TestCase):
             self.save('post-practice-'+str(lesson)+'.png',True)
         self.lib.host_post_practice_case(2);self.check('POST waiting for a tap');self.steps(1200)
         self.assertEqual(self.lib.host_phase(),2)
+
+    def test_night_native_scenes_and_every_session_phase_are_incremental(self):
+        self.new([0,50,600,25,0,0,0,0,0],seen=0xffffff)
+        names=('idle','move','ready-to-catch','moth','empty','caught','bad','dense','title','ready','pause','end','result','max-record')
+        for case,name in enumerate(names):
+            self.lib.host_night_case(case);self.check('NIGHT '+name);self.save('night-'+name+'.png',True)
+            if name=='title':
+                self.assertGreater(len(self.view_image().crop((20,40,220,120)).getcolors(16001)),8,'The native wordmark must retain its lettering and paper colors')
+        self.lib.host_night_case(7);self.check('NIGHT fixed backdrop');before=self.view_image().crop((0,34,240,150)).tobytes()
+        for _ in range(20):self.steps(3)
+        self.assertEqual(before,self.view_image().crop((0,34,240,150)).tobytes())
+        self.assertLess(self.last_incremental_bytes,240*200*2,'Fixed-camera motion should not transmit the whole screen')
+        self.ev(UP,DOUBLE);self.assertEqual(self.lib.host_page(),1)
 
     def test_route_guidance_never_covers_ahead_station_or_its_mail(self):
         self.new([0,99,0,0,0,0,0,0,0],seen=7)

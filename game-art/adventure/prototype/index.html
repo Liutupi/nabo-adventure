@@ -84,6 +84,8 @@
 </main>
 <script src="adv_post.js"></script>
 <script src="adv_post_draw.js"></script>
+<script src="adv_night.js"></script>
+<script src="adv_night_draw.js"></script>
 <script src="adv_core.js"></script>
 <script src="adv_draw.js"></script>
 <script>
@@ -91,6 +93,7 @@
   'use strict';
   const A = window.AdvCore;
   window.AdvPostDraw.load().catch(error=>console.error('POST art failed',error));
+  window.AdvNightDraw.load().catch(error=>console.error('NIGHT art failed',error));
   const canvas = document.getElementById('screen');
   const ctx = canvas.getContext('2d');
   const SETTINGS = { volume: 70, brightness: 80, sleep: 300, speaker: true };

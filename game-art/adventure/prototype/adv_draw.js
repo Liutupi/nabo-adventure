@@ -230,6 +230,7 @@
   }
 
   function draw(ctx, m, A) {
+    if(m.page===A.PAGE.SESSION&&m.session.station===4&&root.AdvNightDraw){root.AdvNightDraw.session(ctx,m,A,performance.now());return;}
     c = ctx;
     c.clearRect(0, 0, c.canvas.width, c.canvas.height);
     [cover, map, kiosk, passport, settings, stamp, legacy, session][m.page](A, m);

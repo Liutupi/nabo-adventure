@@ -7,6 +7,7 @@ const path = require('path');
 const A = require('../../game-art/adventure/prototype/adv_core.js');
 
 const { BTN, EV, FX } = A;
+const {drive:driveNight}=require('../night_policy.js');
 const SETTINGS = { volume: 70, brightness: 80, sleep: 300, speaker: true };
 
 function recorder(seed, best, seen) {
@@ -33,6 +34,7 @@ function recorder(seed, best, seen) {
 // Plays the placeholder game: presses OK when the marker is inside the zone (or misses on purpose).
 function playDemo(r, hits, misses,waitResult=true) {
   if(r.m.session.station===3)return playPost(r,hits,misses,waitResult);
+  if(r.m.session.station===4)return playNight(r,hits,waitResult);
   const s = () => r.m.session;
   while (s() && s().phase === A.PHASE.READY) r.steps(30);
   let made = 0, missed = 0, guard = 0;
@@ -60,6 +62,23 @@ function playPost(r,hits,misses,waitResult=true) {
       if(g.score>=hits)errors++;
     }else r.steps(3);
   }
+  while(waitResult&&r.m.session.phase===A.PHASE.END)r.steps(20);
+}
+
+function playNight(r,hits,waitResult=true){
+  while(r.m.session.phase===A.PHASE.READY)r.steps(30);
+  let guard=0;
+  while(r.m.session.phase===A.PHASE.PLAY&&guard++<24000){
+    const g=r.m.session.game,input=g.score<hits?driveNight(g):{};
+    const buttons=[];
+    if(input.ok_down)buttons.push(BTN.OK);
+    if(input.up_down)buttons.push(BTN.UP);
+    if(input.down_down)buttons.push(BTN.DOWN);
+    for(const b of buttons)r.ev(b,EV.PRESS);
+    r.steps(1);
+    for(const b of buttons)r.ev(b,EV.RELEASE);
+  }
+  if(r.m.session.phase!==A.PHASE.END)throw Error('NIGHT did not end');
   while(waitResult&&r.m.session.phase===A.PHASE.END)r.steps(20);
 }
 
@@ -92,8 +111,8 @@ function journey() {
   r.double(BTN.UP);                    // result -> map (stamps)
   r.click(BTN.OK); r.click(BTN.OK);    // post bronze and silver
   r.click(BTN.UP); r.click(BTN.OK);    // night title
-  r.test(1); r.click(BTN.OK); playDemo(r, 5, 4); r.test(0);   // test mode never saves
-  r.click(BTN.OK); playDemo(r, 6, 4);   // exactly the silver line
+  r.test(1); r.click(BTN.OK); playDemo(r, 15, 4); r.test(0);   // test mode never saves
+  r.click(BTN.OK); playDemo(r, 35, 4);   // NIGHT's actual silver line
   r.double(BTN.UP); r.click(BTN.OK); r.click(BTN.OK);
   r.long(BTN.OK);                      // passport from the map
   for (let i = 0; i < 9; i++) r.click(BTN.UP);
@@ -184,6 +203,7 @@ const traces = {
   game_returns:gameReturns(),
   game_return_record:endedReturn(false),
   game_return_test:endedReturn(true),
+  demo_thresholds:(()=>{const r=recorder(81,[0,50,600,25,60,0,0,0,0],0xfff);r.click(BTN.OK);for(let i=0;i<3;i++)r.click(BTN.UP);r.click(BTN.OK);r.click(BTN.OK);playDemo(r,6,4);r.double(BTN.UP);r.click(BTN.OK);r.click(BTN.OK);return r.trace;})(),
   journey: journey(),
   kiosk_settings: kioskAndSettings(),
   fuzz_fresh: fuzz(7, [0, 0, 0, 0, 0, 0, 0, 0, 0], 0, 4000),
