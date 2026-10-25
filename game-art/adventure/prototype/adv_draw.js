@@ -57,14 +57,10 @@
   const stampCount = (A, m) => { let e = A.earned(m), n = 0; while (e) { n += e & 1; e >>>= 1; } return n; };
 
   function cover(A, m) {
-    band(0, 200, rgb(28, 36, 86), rgb(118, 120, 170)); band(200, 120, rgb(118, 120, 170), rgb(244, 196, 150));
-    glow(120, 196, 70, GOLD);
-    text('p28', 'NABO', 120, 58, 'center', WHITE); text('p28', 'ADVENTURE', 120, 90, 'center', GOLD);
-    text('f18', 'NABO 的冒险之旅', 120, 120, 'center', PAPER);
-    circle(120, 196, 54, PAPER, 255, INK, 3);
-    if (portrait.complete && portrait.naturalWidth) c.drawImage(portrait, 78, 154, 84, 84, 78, 154, 84, 84);
-    text('m12', `STAMPS ${stampCount(A, m)}/24`, 120, 276, 'center', INK);
-    rect(60, 284, 120, 26, 13, GOLD, 255, INK, 2); text('f16', '按 OK 出发', 120, 302, 'center', INK);
+    c.fillStyle='#fffaf0';c.fillRect(0,0,240,320);
+    // Production C exports its settled cover here; this prototype is a layout
+    // reference. The firmware owns the synchronized one-time voice/gesture.
+    if(portrait.complete&&portrait.naturalWidth)c.drawImage(portrait,0,0,240,320);
   }
 
   const MAP_TOP = 120, SLOT = 112, MAP_H = MAP_TOP + 8 * SLOT + 140;

@@ -127,7 +127,8 @@
   function bit(s, tier) { return 1 << ((s - 1) * 3 + tier); }
 
   function earned(m) {
-    let e = 0;
+    // Acknowledged awards survive later rule/threshold upgrades.
+    let e = m.seen & 0xffffff;
     for (let s = 1; s < STATIONS; s++)
       for (let tier = 0; tier < 3; tier++)
         if (m.best[s] >= threshold(s, tier)) e |= bit(s, tier);
@@ -136,6 +137,7 @@
 
   function unlocked(m, s) {
     if (s <= START_STATION) return true;
+    if (m.seen & bit(s - 1, 0)) return true;
     return m.best[s - 1] >= threshold(s - 1, 0);
   }
 
@@ -222,15 +224,18 @@
 
   function sessionEvent(m, btn, ev) {
     const s = m.session;
+    const confirm=s.station===4?BTN.DOWN:BTN.OK,restart=s.station===4?BTN.OK:BTN.DOWN;
     if(gameMapKey(btn,ev)) {
+      if(s.station===4&&s.phase===PHASE.PLAY&&s.game.shortTaps<2)return;
       if(s.phase===PHASE.END)recordResult(m);
       cue(m,CUE.BACK);toMap(m);return;
     }
     if (s.phase === PHASE.TITLE) {
-      if (btn === BTN.OK && ev === EV.CLICK) startRun(m);
+      if (btn === confirm && ev === EV.CLICK) startRun(m);
       else if (s.station===3&&btn===BTN.DOWN&&ev===EV.CLICK) startRun(m,true);
     } else if (s.phase === PHASE.PLAY) {
-      if (btn === BTN.UP && ev === EV.LONG) { s.phase = PHASE.PAUSE; cue(m, CUE.BACK); return; }
+      if(s.station===4&&btn===BTN.UP&&(ev===EV.PRESS||ev===EV.RELEASE))Night.upEvent(s.game,ev===EV.PRESS);
+      if (btn === (s.station===4?BTN.DOWN:BTN.UP) && ev === EV.LONG) { s.phase = PHASE.PAUSE; cue(m, CUE.BACK); return; }
       if (ev === EV.PRESS) {
         if (btn === BTN.OK) m.input.ok_down = 1;
         if (btn === BTN.UP) m.input.up_down = 1;
@@ -240,10 +245,10 @@
         if (btn === BTN.DOWN) m.input.down_up = 1;
       } else return;
     } else if (s.phase === PHASE.PAUSE) {
-      if (btn === BTN.OK && ev === EV.CLICK) { s.phase = PHASE.PLAY; clearInput(m); cue(m, CUE.GO); }
-      else if (btn === BTN.DOWN && ev === EV.CLICK) startRun(m,s.station===3&&s.game.practice);
+      if (btn === confirm && ev === EV.CLICK) { s.phase = PHASE.PLAY; clearInput(m); cue(m, CUE.GO); }
+      else if (btn === restart && ev === EV.CLICK) startRun(m,s.station===3&&s.game.practice);
     } else if (s.phase === PHASE.RESULT) {
-      if (btn === BTN.OK && ev === EV.CLICK) startRun(m);
+      if (btn === confirm && ev === EV.CLICK) startRun(m);
       else if (s.station===3&&btn===BTN.DOWN&&ev===EV.CLICK) startRun(m,true);
     }
   }
@@ -330,7 +335,7 @@
       if (--s.t === 0) { s.phase = PHASE.PLAY; cue(m, CUE.GO); }
       m.fx |= FX.REDRAW;
     } else if (s.phase === PHASE.PLAY) {
-      const input = Object.assign({ ok_held: (m.held >> BTN.OK) & 1, down_held: (m.held >> BTN.DOWN) & 1 }, m.input);
+      const input = Object.assign({ ok_held: (m.held >> BTN.OK) & 1, down_held: (m.held >> BTN.DOWN) & 1,up_held:(m.held>>BTN.UP)&1 }, m.input);
       clearInput(m);
       engine(s.station).step(s.game, input);
       if (s.game.cue) cue(m, s.game.cue);

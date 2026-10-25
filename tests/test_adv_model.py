@@ -102,6 +102,45 @@ class GoldenTraces(unittest.TestCase):
             self.assertEqual(trace['states'][-1]['view']['best'][4],want)
             self.assertEqual(any(s['fx']&8 for s in trace['states']),bool(want))
 
+    def test_awarded_stamps_survive_threshold_upgrade_without_fabricating_scores(self):
+        best=(ctypes.c_uint32*9)(0,0,0,0,12,0,0,0,0)
+        # Three NIGHT awards from the old rule set; upper invalid bits are ignored.
+        self.lib.host_new(12,best,0xff000e00,70,80,300,1)
+        self.assertEqual(self.lib.host_awards(),0xe00)
+        self.assertTrue(self.lib.host_is_unlocked(5))
+        self.assertFalse(self.lib.host_is_unlocked(6))
+        buf=ctypes.create_string_buffer(2048);self.lib.host_snapshot(buf,len(buf))
+        self.assertEqual(json.loads(buf.value)['best'][4],12)
+        self.lib.host_new(12,best,0,70,80,300,1)
+        self.assertEqual(self.lib.host_awards(),0)
+        self.assertFalse(self.lib.host_is_unlocked(5))
+
+    def test_night_uses_the_physical_middle_button_for_start_resume_and_replay(self):
+        self.lib.host_new(5,(ctypes.c_uint32*9)(*([0]*9)),0xffffff,70,80,300,1)
+        self.lib.host_event(2,1);self.lib.host_test(1);self.lib.host_test_open(4)
+        def state():
+            buf=ctypes.create_string_buffer(2048);self.lib.host_snapshot(buf,len(buf));return json.loads(buf.value)
+        self.lib.host_event(2,1);self.assertEqual(state()['session'][1],0,'Left OK must not start')
+        self.lib.host_event(1,1);self.assertEqual(state()['session'][1],1)
+        self.lib.host_steps(180);self.lib.host_event(1,3);self.assertEqual(state()['session'][1],3)
+        self.lib.host_event(1,1);self.assertEqual(state()['session'][1],2)
+        self.lib.host_steps(2600);self.assertEqual(state()['session'][1],5)
+        self.lib.host_event(2,1);self.assertEqual(state()['session'][1],5)
+        self.lib.host_event(1,1);self.assertEqual(state()['session'][1],1)
+
+    def test_night_movement_presses_are_not_counted_as_exit_taps(self):
+        for first,second in ((12,12),(12,0),(0,12)):
+            self.lib.host_new(5,(ctypes.c_uint32*9)(*([0]*9)),0xffffff,70,80,300,1)
+            self.lib.host_event(2,1);self.lib.host_test(1);self.lib.host_test_open(4);self.lib.host_event(1,1);self.lib.host_steps(180)
+            for length in (first,second):
+                self.lib.host_event(0,0);self.lib.host_steps(length);self.lib.host_event(0,4);self.lib.host_event(0,1)
+            self.lib.host_event(0,2)
+            buf=ctypes.create_string_buffer(2048);self.lib.host_snapshot(buf,len(buf));state=json.loads(buf.value)
+            self.assertEqual(state['page'],7,(first,second));self.assertGreater(state['game'][6],160)
+            self.lib.host_event(0,3);self.lib.host_snapshot(buf,len(buf));self.assertEqual(json.loads(buf.value)['session'][1],2,'Held right must not pause')
+            for _ in range(2):self.lib.host_event(0,0);self.lib.host_event(0,4);self.lib.host_event(0,1)
+            self.lib.host_event(0,2);self.lib.host_snapshot(buf,len(buf));self.assertEqual(json.loads(buf.value)['page'],1)
+
     def test_stamps_follow_bests(self):
         # A finished journey shows each stamp once and never takes one back.
         trace = self.traces['journey']
@@ -118,8 +157,8 @@ class Mutations(unittest.TestCase):
         ('adv_model.c', 'if (--m->t == 0) { m->phase = ADV_PLAY;', 'if (--m->t == 1) { m->phase = ADV_PLAY;'),
         ('adv_demo.c', 'g->res -= 250;', 'g->res -= 200;'),
         ('adv_demo.c', 'g->zh = g->zh - 10 < 60 ? 60 : g->zh - 10;', 'g->zh = g->zh - 9 < 60 ? 60 : g->zh - 9;'),
-        ('adv_model.c', 'return m->best[station - 1] >= adv_threshold(station - 1, 0);',
-         'return m->best[station - 1] > adv_threshold(station - 1, 0);'),
+        ('adv_model.c', 'if (m->seen & adv_stamp_bit(station - 1, 0)) return true;',
+         'if (false) return true;'),
         ('adv_model.c', 'm->passport = (m->passport + (b == ADV_BTN_UP ? 7 : 1)) % 8;',
          'm->passport = (m->passport + (b == ADV_BTN_UP ? 1 : 7)) % 8;'),
         ('adv_model.c', 'if (!m->test) {', 'if (true) {'),

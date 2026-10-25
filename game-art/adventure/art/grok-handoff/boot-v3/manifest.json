@@ -1,0 +1,74 @@
+{
+  "task": "BOOT-V3-01",
+  "status": "raw clip received; native preview/capacity QA in progress; not embedded",
+  "generator": "built-in image_gen for cover and isolated hero",
+  "input": [
+    {
+      "path": "input/01-identity.png",
+      "bytes": 808047,
+      "sha256": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243",
+      "image": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "input/02-hiker-outfit.png",
+      "bytes": 1868762,
+      "sha256": "3ed446475284c3d1b75ba78a41d75922935ee928bc91ba51fccbd7d8a13a1060",
+      "image": [
+        1774,
+        887
+      ]
+    },
+    {
+      "path": "input/03-cover-keyframe.png",
+      "bytes": 2403798,
+      "sha256": "ea684140d6f2ca93d9a059d24b4d5f0f2cbd26800af983a592451ece7eb23725",
+      "image": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "input/04-fortune-style.png",
+      "bytes": 23824,
+      "sha256": "6481fc4ce2b909991b8f7b600b41e334efd07cb9b07a865fd99caecbae5f29b3",
+      "image": [
+        240,
+        320
+      ]
+    },
+    {
+      "path": "input/05-soundlab-style.png",
+      "bytes": 691723,
+      "sha256": "4000b0117335bf2915702ceae94e535ec2ab30d1569389d0259d6ff0767ab67c",
+      "image": [
+        1080,
+        1440
+      ]
+    },
+    {
+      "path": "input/06-voice-reference.wav",
+      "bytes": 86178,
+      "sha256": "38b4eb8435d6a7915d17af2083a696acfa2660244be1bf7e65dc78251f0c468b",
+      "image": null
+    },
+    {
+      "path": "input/07-nabo-hero-start.png",
+      "bytes": 1681590,
+      "sha256": "13bbdb3c0819c8226abc43893b22cc88dedf10156a266a2781ff6613347e4ec4",
+      "image": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "output": {
+    "path": "output/BOOT-V3-01-welcome-master.mp4",
+    "bytes": 4197040,
+    "sha256": "e0458f49a90cfee5fc08bcde0fcca64180c361895850a3d4015a3d74d2558543",
+    "video": "960x960 H264, 24fps, 145 frames, 6.04sec",
+    "audio_policy": "Original AAC preserved only in master; discarded from all previews and firmware; approved original voice unchanged"
+  }
+}

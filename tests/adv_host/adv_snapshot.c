@@ -28,6 +28,8 @@ void host_test(int on) { model.test = on != 0; }
 int host_cue(void) { return model.cue; }
 int host_test_open(int station) {return adv_test_open(&model,station);}
 int host_practice_open(void) {return adv_practice_open(&model);}
+uint32_t host_awards(void) {return adv_earned(&model);}
+int host_is_unlocked(int station) {return adv_unlocked(&model,station);}
 
 int host_snapshot(char *out, int size)
 {

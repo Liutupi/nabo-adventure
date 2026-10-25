@@ -7,7 +7,7 @@ from pathlib import Path
 import time
 
 from smoke_adventure import Link,SmokeError,verify_candidate,analyse_memory
-from smoke_post import BufferedPort,restore,tap
+from smoke_post import BufferedPort,restore,tap,edge
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -17,7 +17,7 @@ def query(link):
         line=link.read()
         if line.startswith('@night '):
             state=json.loads(line[7:])
-            if not all(type(state.get(k)) is int for k in ('tick','score','res','over','lane','x','move','cooldown','target','speed')):
+            if not all(type(state.get(k)) is int for k in ('tick','score','res','over','lane','x','move','cooldown','target','interval')):
                 raise SmokeError('Invalid NIGHT status')
             if len(state.get('bugs',[]))!=8 or any(len(b)!=6 for b in state['bugs']):raise SmokeError('Invalid NIGHT objects')
             return state
@@ -27,19 +27,20 @@ def query(link):
 def drive(g):
     """Use the public HUD predicate and visible objects, as in night_policy.js."""
     target=g['target']
-    if target>=0 and g['bugs'][target][0]==1 and g['cooldown']<=1:return 2
-    if g['move']:return None
+    if target>=0 and g['bugs'][target][0]==1 and g['cooldown']<=1:return 1
     best=None
     for bug in g['bugs']:
         if bug[0]!=1:continue
-        for lane,x in enumerate((48,120,192)):
-            distance=(x+10)*60-bug[1]
-            if distance*bug[3]<0:continue
-            ticks=abs(distance)/g['speed'];travel=abs(lane-g['lane'])*20
-            if ticks<travel-8 or ticks>240:continue
-            cost=ticks+travel*.2
-            if best is None or cost<best[0]:best=(cost,lane)
-    return (0 if best[1]<g['lane'] else 1) if best and best[1]!=g['lane'] else None
+        lane=bug[3];travel=(abs((54,160,266)[lane]-g['x'])+4)//5+6
+        if 108-bug[5]<travel+2:continue
+        cost=108-bug[5]+travel*.2
+        if best is None or cost<best[0]:best=(cost,lane)
+    return (2 if (54,160,266)[best[1]]<g['x'] else 0) if best and abs((54,160,266)[best[1]]-g['x'])>8 else None
+
+def quick_return(link):
+    # Two genuinely short presses; movement presses must never satisfy this.
+    for _ in range(2):edge(link,0,True);edge(link,0,False)
+    link.key('double_up')
 
 def enter(link):
     state=link.status()
@@ -47,7 +48,7 @@ def enter(link):
     elif state['page']!=1:raise SmokeError('NIGHT entry expects cover or map')
     link.send('>adv.open=night');state=link.expect(7)
     if state['station']!=4 or state['phase']!=0:raise SmokeError('NIGHT title missing')
-    link.key('ok');deadline=time.monotonic()+12
+    link.key('down');deadline=time.monotonic()+12
     while time.monotonic()<deadline:
         state=link.expect(7)
         if state['phase']==2:return state
@@ -56,12 +57,13 @@ def enter(link):
     raise SmokeError('NIGHT countdown stalled')
 
 def play(link,target=15):
-    first=enter(link);start=time.monotonic();checked=start;last_score=-1;profile=[];phases=[]
+    first=enter(link);start=time.monotonic();checked=start;last_score=-1;profile=[];phases=[];held=None
     while time.monotonic()-start<220:
         p=query(link)
         if p['score']!=last_score:
             print(f'NIGHT score={p["score"]} spirit={p["res"]}',flush=True);last_score=p['score']
         if p['over']:
+            if held is not None:edge(link,held,False);held=None
             latest=link.expect(7);phases.append(latest['phase'])
             if latest['phase']==5:
                 if p['score']<target:raise SmokeError('NIGHT ended before target')
@@ -69,7 +71,12 @@ def play(link,target=15):
                         'profile':profile,'misses':p['misses']}
             time.sleep(.1);continue
         button=drive(p) if p['score']<target else None
-        if button is not None:tap(link,button)
+        desired=button if button in (0,2) else None
+        if held!=desired:
+            if held is not None:edge(link,held,False)
+            held=desired
+            if held is not None:edge(link,held,True)
+        if button==1:tap(link,1)
         now=time.monotonic()
         if now-checked>=1:
             state=link.expect(7)
@@ -103,19 +110,22 @@ def main():
                 enter(link)
                 link.key('up');state=link.expect(7)
                 if state['phase']!=2:raise SmokeError('Single UP left play')
-                tap(link,0);time.sleep(.4);p=query(link)
-                if p['lane']!=0 or p['x']!=48:raise SmokeError('UP did not finish left slide')
-                tap(link,1);time.sleep(.4);p=query(link)
-                if p['lane']!=1 or p['x']!=120:raise SmokeError('DOWN did not finish right slide')
-                link.key('long_up');state=link.expect(7)
-                if state['phase']!=3:raise SmokeError('Long UP did not pause')
+                edge(link,2,True);time.sleep(.55);edge(link,2,False);p=query(link)
+                if p['lane']!=0 or p['x']!=54:raise SmokeError('Physical left OK did not finish left slide')
+                for _ in range(2):edge(link,0,True);time.sleep(.22);edge(link,0,False);time.sleep(.04)
+                link.key('double_up');state=link.expect(7);p=query(link)
+                if state['phase']!=2 or p['x']<=54:raise SmokeError('Repeated held-right movement caused an exit')
+                edge(link,0,True);time.sleep(.85);link.key('long_up');edge(link,0,False);state=link.expect(7)
+                if state['phase']!=2 or query(link)['x']!=266:raise SmokeError('Held right stopped or paused before the edge')
+                link.key('long_down');state=link.expect(7)
+                if state['phase']!=3:raise SmokeError('Long middle DOWN did not pause')
                 tick=query(link)['tick'];time.sleep(.4)
                 if query(link)['tick']!=tick:raise SmokeError('Paused game advanced')
                 link.key('long_up');state=link.expect(7)
                 if state['phase']!=3:raise SmokeError('Long UP left pause')
-                link.key('ok');state=link.expect(7)
-                if state['phase']!=2:raise SmokeError('OK did not resume')
-                link.key('double_up');samples.append(link.map())
+                link.key('down');state=link.expect(7)
+                if state['phase']!=2:raise SmokeError('Middle DOWN did not resume')
+                quick_return(link);samples.append(link.map())
             result['memory']=analyse_memory(samples)
             restored=restore(link)
             if restored['test'] or (restored['best'],restored['seen'])!=before:raise SmokeError('Durable progress changed')

@@ -1,5 +1,6 @@
 #include "adv_model.h"
 #include "adv_post.h"
+#include "adv_night.h"
 #include <stdlib.h>
 #include <string.h>
 #include "adv_rng.h"
@@ -10,7 +11,8 @@ uint32_t adv_stamp_bit(int station, int tier) { return 1u << ((station - 1) * 3 
 
 uint32_t adv_earned(const adv_model_t *m)
 {
-    uint32_t e = 0;
+    // Acknowledged awards survive later rule/threshold upgrades.
+    uint32_t e = m->seen & 0x00ffffffu;
     for (int s = 1; s < ADV_STATIONS; s++)
         for (int tier = 0; tier < 3; tier++)
             if (m->best[s] >= adv_threshold(s, tier)) e |= adv_stamp_bit(s, tier);
@@ -20,6 +22,7 @@ uint32_t adv_earned(const adv_model_t *m)
 bool adv_unlocked(const adv_model_t *m, int station)
 {
     if (station <= ADV_START_STATION) return true;
+    if (m->seen & adv_stamp_bit(station - 1, 0)) return true;
     return m->best[station - 1] >= adv_threshold(station - 1, 0);
 }
 
@@ -161,7 +164,9 @@ static void record_result(adv_model_t *m)
 
 static void session_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
 {
+    adv_btn_t confirm=m->station==4?ADV_BTN_DOWN:ADV_BTN_OK,restart=m->station==4?ADV_BTN_OK:ADV_BTN_DOWN;
     if(adv_game_map_key(b,e)) {
+        if(m->station==4&&m->phase==ADV_PLAY&&((adv_night_t *)m->game)->short_taps<2)return;
         if(m->phase==ADV_END)record_result(m);
         cue(m,ADV_CUE_BACK);to_map(m);return;
     }
@@ -169,11 +174,12 @@ static void session_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
     switch (m->phase) {
     case ADV_TITLE:
     case ADV_RESULT:
-        if (b == ADV_BTN_OK && click) start_run(m);
+        if (b == confirm && click) start_run(m);
         else if(m->station==3&&b==ADV_BTN_DOWN&&click)start_practice(m);
         break;
     case ADV_PLAY:
-        if (b == ADV_BTN_UP && e == ADV_EV_LONG) { m->phase = ADV_PAUSE; cue(m, ADV_CUE_BACK); break; }
+        if(m->station==4&&b==ADV_BTN_UP&&(e==ADV_EV_PRESS||e==ADV_EV_RELEASE))adv_night_up_event(m->game,e==ADV_EV_PRESS);
+        if (b == (m->station==4?ADV_BTN_DOWN:ADV_BTN_UP) && e == ADV_EV_LONG) { m->phase = ADV_PAUSE; cue(m, ADV_CUE_BACK); break; }
         if (e == ADV_EV_PRESS) {
             if (b == ADV_BTN_OK) m->input.ok_down = 1;
             if (b == ADV_BTN_UP) m->input.up_down = 1;
@@ -184,11 +190,11 @@ static void session_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
         }
         break;
     case ADV_PAUSE:
-        if (b == ADV_BTN_OK && click) {
+        if (b == confirm && click) {
             m->phase = ADV_PLAY;
             memset(&m->input, 0, sizeof(m->input));
             cue(m, ADV_CUE_GO);
-        } else if (b == ADV_BTN_DOWN && click) {
+        } else if (b == restart && click) {
             if(m->station==3&&((adv_post_t *)m->game)->practice)start_practice(m);
             else start_run(m);
         }
@@ -295,6 +301,7 @@ int adv_step(adv_model_t *m)
         adv_input_t in = m->input;
         in.ok_held = (m->held >> ADV_BTN_OK) & 1;
         in.down_held = (m->held >> ADV_BTN_DOWN) & 1;
+        in.up_held = (m->held >> ADV_BTN_UP) & 1;
         memset(&m->input, 0, sizeof(m->input));
         game->step(m->game, &in);
         adv_status_t st = game->status(m->game);

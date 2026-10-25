@@ -5670,7 +5670,7 @@
     }
   },
   "device": {
-    "common_candidate_sha256": "bfaea27009661e268cb0f569ed3c3e0188fb1d60331d67a163d8d5843643fa2f",
+    "common_candidate_sha256": "99e71e9fa132c8b644aa30125663585b9fd92b2154697a84544d1cab86bcefd8",
     "new_game_art_embedded_in_this_candidate": true,
     "integrated_game_groups": [
       "night",

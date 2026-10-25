@@ -15,7 +15,7 @@ extern "C" {
 // Button edges since the previous step, plus what is held now.
 typedef struct {
     uint8_t ok_down, ok_up, up_down, down_down, down_up;
-    uint8_t ok_held, down_held;
+    uint8_t ok_held, down_held, up_held;
 } adv_input_t;
 
 typedef struct {

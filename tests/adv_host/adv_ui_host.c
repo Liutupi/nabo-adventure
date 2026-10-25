@@ -138,10 +138,10 @@ void host_night_case(int which)
     if(model.in_session&&model.station!=4)adv_event(&model,ADV_BTN_UP,ADV_EV_DOUBLE);
     if(!model.in_session){model.test=true;model.page=ADV_PAGE_MAP;adv_test_open(&model,4);}
     model.phase=ADV_PLAY;adv_night_t *p=model.game;adv_night_start(p,1234);p->next=10000;p->tick=10;
-    if(which==1){adv_input_t input={.up_down=1};adv_night_step(p,&input);}
+    if(which==1){adv_input_t input={.ok_held=1};for(int i=0;i<10;i++)adv_night_step(p,&input);}
     if(which==2||which==3)p->bugs[0]=(adv_night_bug_t){which==2?NIGHT_FIREFLY:NIGHT_MOTH,(p->x+ADV_NIGHT_JAR_DX)*60,ADV_NIGHT_JAR_Y,1,16,0};
-    if(which>=4&&which<=6){p->cast=20;p->feedback=60;p->message=which-3;p->score=6;p->caught_x=130;p->caught_y=227;if(which==5)p->good=60;if(which==6){p->bad=60;p->res=200;}}
-    if(which==7)for(int i=0;i<ADV_NIGHT_CAP;i++)p->bugs[i]=(adv_night_bug_t){i%2+1,(20+i*28)*60,217+i%3*10,1,i*7,i*3};
+    if(which>=4&&which<=6){p->cast=20;p->feedback=60;p->message=which-3;p->score=6;p->caught_x=170;p->caught_y=163;if(which==5)p->good=60;if(which==6){p->bad=60;p->res=200;}}
+    if(which==7)for(int i=0;i<ADV_NIGHT_CAP;i++)p->bugs[i]=(adv_night_bug_t){i%2+1,(30+i*36)*60,153+i%3*8,i%3,i*7,i*3};
     if(which==8)model.phase=ADV_TITLE;
     if(which==9){model.phase=ADV_READY;model.t=120;}
     if(which==10)model.phase=ADV_PAUSE;

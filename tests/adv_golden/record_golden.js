@@ -66,10 +66,14 @@ function playPost(r,hits,misses,waitResult=true) {
 }
 
 function playNight(r,hits,waitResult=true){
+  if(r.m.session.phase===A.PHASE.TITLE||r.m.session.phase===A.PHASE.RESULT)r.click(BTN.DOWN);
   while(r.m.session.phase===A.PHASE.READY)r.steps(30);
   let guard=0;
   while(r.m.session.phase===A.PHASE.PLAY&&guard++<24000){
     const g=r.m.session.game,input=g.score<hits?driveNight(g):{};
+    for(const [button,want] of [[BTN.OK,!!input.ok_held],[BTN.UP,!!input.up_held]]){
+      const was=!!(r.m.held&(1<<button));if(was!==want)r.ev(button,want?EV.PRESS:EV.RELEASE);
+    }
     const buttons=[];
     if(input.ok_down)buttons.push(BTN.OK);
     if(input.up_down)buttons.push(BTN.UP);
@@ -163,16 +167,16 @@ function gameReturns() {
   r.click(BTN.OK);r.test(1);
   for(let station=3;station<9;station++)for(const phase of Object.values(A.PHASE)) {
     r.open(station);
-    if(phase!==A.PHASE.TITLE)r.click(BTN.OK);
+    if(phase!==A.PHASE.TITLE)r.click(station===4?BTN.DOWN:BTN.OK);
     if(phase!==A.PHASE.TITLE&&phase!==A.PHASE.READY)r.steps(180);
-    if(phase===A.PHASE.PAUSE)r.long(BTN.UP);
+    if(phase===A.PHASE.PAUSE)r.long(station===4?BTN.DOWN:BTN.UP);
     if(phase===A.PHASE.END||phase===A.PHASE.RESULT) {
       let guard=0;
       while(r.m.session.phase===A.PHASE.PLAY&&guard++<60000)r.steps(1);
       if(r.m.session.phase!==A.PHASE.END)throw Error('Expected an ended round');
       if(phase===A.PHASE.RESULT)r.steps(A.END_STEPS);
     }
-    if(phase===A.PHASE.PLAY){r.click(BTN.UP);r.long(BTN.UP);r.click(BTN.OK);}
+    if(phase===A.PHASE.PLAY){r.click(BTN.UP);r.long(station===4?BTN.DOWN:BTN.UP);r.click(station===4?BTN.DOWN:BTN.OK);}
     else r.long(BTN.UP);
     if(r.m.page!==A.PAGE.SESSION||r.m.session.phase!==phase)throw Error('Single/long UP unexpectedly returned or changed a phase');
     r.double(BTN.UP);
@@ -198,8 +202,20 @@ function endedReturn(test) {
   return r.trace;
 }
 
+// Former placeholder medals remain awarded when a formal game raises targets.
+function legacyAwards(){
+  const r=recorder(1234,[0,132,5888,8,12,11,13,12,15],16776831);
+  r.click(BTN.OK);
+  for(let station=3;station<=8;station++){
+    r.click(BTN.UP);r.click(BTN.OK);
+    if(!r.m.session||r.m.session.station!==station)throw new Error('Historical award lost its unlocked entry');
+    r.double(BTN.UP);
+  }
+  return r.trace;
+}
 const out = __dirname;
 const traces = {
+  legacy_awards:legacyAwards(),
   game_returns:gameReturns(),
   game_return_record:endedReturn(false),
   game_return_test:endedReturn(true),

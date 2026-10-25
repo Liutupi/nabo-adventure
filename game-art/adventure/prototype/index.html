@@ -101,7 +101,7 @@
   let saved = { best: [0, 0, 0, 0, 0, 0, 0, 0, 0], seen: 0 };
   try { saved = JSON.parse(localStorage.getItem(SAVE_KEY)) || saved; } catch (e) { /* private window */ }
   let m = A.create((Math.random() * 2 ** 32) >>> 0, SETTINGS, saved.best, saved.seen);
-  if(new URLSearchParams(location.search).get('map')==='post'){m.page=A.PAGE.MAP;m.cursor=3;}
+  const returnMap=new URLSearchParams(location.search).get('map');if(returnMap==='post'||returnMap==='night'){m.page=A.PAGE.MAP;m.cursor=returnMap==='night'?4:3;}
 
   function persist() {
     try { localStorage.setItem(SAVE_KEY, JSON.stringify({ best: m.best, seen: m.seen })); } catch (e) { /* ignore */ }
@@ -160,11 +160,12 @@
     document.querySelector(`.key[data-btn="${b}"]`).classList.remove('down');
   }
   const KEYMAP = { ArrowUp: 0, ArrowDown: 1, Enter: 2, ' ': 2 };
+  const physicalKey=key=>m.page===A.PAGE.SESSION&&m.session.station===4?({ArrowLeft:2,ArrowRight:0,Enter:1,' ':1,ArrowUp:0,ArrowDown:1})[key]:KEYMAP[key];
   addEventListener('keydown', e => {
     if (e.target.tagName === 'INPUT' && e.target.type === 'number') return;
-    if (e.key in KEYMAP) { e.preventDefault(); if (!e.repeat) press(KEYMAP[e.key]); }
+    const b=physicalKey(e.key);if(b!==undefined){e.preventDefault();if(!e.repeat)press(b);}
   });
-  addEventListener('keyup', e => { if (e.key in KEYMAP) { e.preventDefault(); release(KEYMAP[e.key]); } });
+  addEventListener('keyup', e => { const b=physicalKey(e.key);if(b!==undefined){e.preventDefault();release(b);} });
   for (const el of document.querySelectorAll('.key')) {
     const b = +el.dataset.btn;
     el.addEventListener('pointerdown', e => { e.preventDefault(); el.setPointerCapture(e.pointerId); press(b); });
@@ -189,7 +190,7 @@
   function frame(now) {
     acc += Math.min(250, now - last); last = now;
     while (acc >= 1000 / 60) { handle(A.step(m)); acc -= 1000 / 60; }
-    const landscape=m.page===A.PAGE.SESSION&&m.session.station===3,w=landscape?320:240,h=landscape?240:320;
+    const landscape=m.page===A.PAGE.SESSION&&(m.session.station===3||m.session.station===4),w=landscape?320:240,h=landscape?240:320;
     if(canvas.width!==w){canvas.width=w;canvas.height=h;canvas.style.width=w+'px';canvas.style.height=h+'px';canvas.closest('.device').classList.toggle('landscape',landscape);}
     AdvDraw.draw(ctx, m, A);
     const text = JSON.stringify(A.view(m), null, 1);

@@ -1,24 +1,24 @@
 <!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>NABO 萤火虫 · 正式玩法原型</title>
-<style>body{margin:24px;background:#fffaf0;color:#203849;font:16px system-ui}main{display:flex;gap:28px;flex-wrap:wrap}canvas{width:auto;height:min(640px,calc(100vh - 160px));max-width:100%;aspect-ratio:3/4;border:8px solid #203849;border-radius:14px;image-rendering:pixelated}aside{max-width:420px}p{line-height:1.8}button{background:#203849;color:#fffaf0;border:0;border-radius:8px;padding:14px 22px;margin:4px;font:700 16px system-ui}pre{font-size:12px;white-space:pre-wrap}</style>
-<h1>NABO 萤火虫 · 睡衣与玻璃罐</h1><main><canvas id="game" width="240" height="320"></canvas><aside>
-<p>上键向左挪一格，下键向右挪一格。等萤火虫飞进罐口的椭圆光圈时，点 OK 举罐；圈变金色表示现在能抓。飞蛾出现红色提示，别抓它。</p>
+<style>body{margin:24px;background:#fffaf0;color:#203849;font:16px system-ui}main{display:flex;align-items:flex-start;gap:28px;flex-wrap:wrap}canvas{width:min(800px,calc((100vh - 180px)*4/3));height:auto;max-width:100%;aspect-ratio:4/3;border:8px solid #203849;border-radius:14px;image-rendering:pixelated}aside{max-width:420px}p{line-height:1.8}button{background:#203849;color:#fffaf0;border:0;border-radius:8px;padding:14px 22px;margin:4px;font:700 16px system-ui}pre{font-size:12px;white-space:pre-wrap}</style>
+<h1>NABO 萤火虫 · 横屏追光</h1><main><canvas id="game" width="320" height="240"></canvas><aside>
+<p>顺时针横拿、三键朝下：按住左侧 OK 左移，按住右侧上键右移，松开即停；中间下键举罐。两次短点上键才返回，移动用的按压不会计入退出。光点只在一簇停留1.8秒，去到那一侧、圈变金色时按中键抓。</p>
 <p>初始精神1000，每秒消耗25；抓到萤火虫加1分、补60精神，抓飞蛾扣250。精神耗尽结束，铜/银/金目标15/35/60只。</p>
-<p>长按上键暂停，双击上键返回冒险地图。此页为独立玩法原型，不写入工牌或合集存档；人物使用原尺寸睡衣素材，网页整体放大方便查看。</p>
+<p>长按中间下键暂停，快速双击上键返回冒险地图。此页为独立玩法原型，不写入工牌或合集存档；人物使用原尺寸睡衣素材，网页整体放大方便查看。</p>
 <button id="start">开始 / 重来</button><button id="pause">暂停 / 继续</button><p id="status">加载原尺寸素材…</p>
-<div><button data-key="up">上 · 左挪</button><button data-key="down">下 · 右挪</button><button data-key="ok">OK · 举罐</button></div><pre id="debug"></pre>
+<div><button data-key="ok">← 按住左移</button><button data-key="down">举罐</button><button data-key="up">按住右移 →</button></div><p>键盘：按住 ← / → 移动，空格或 Enter 举罐，长按空格暂停；快速双击 → 回地图。</p><pre id="debug"></pre>
 </aside></main><script src="adv_night.js"></script><script src="adv_night_draw.js"></script><script>
 (async()=>{'use strict';const N=AdvNight,D=AdvNightDraw;await D.load();const c=document.querySelector('canvas').getContext('2d');let g=N.start(1234),phase='TITLE',countdown=0,input={},held={},lastUp=-Infinity,last=performance.now(),acc=0,previousPhase='TITLE',phaseAt=performance.now(),best=0;
 function start(){g=N.start(1234);phase='READY';countdown=180;input={};}
-function down(key){if(held[key])return;const k=held[key]={at:performance.now(),timer:null};if(key==='up')k.timer=setTimeout(()=>{if(phase==='PLAY')phase='PAUSE';lastUp=-Infinity;},500);
- if(phase==='TITLE'||phase==='RESULT'){if(key==='ok')start();return;}if(phase==='PAUSE'){if(key==='ok')phase='PLAY';else if(key==='down')start();return;}if(phase==='PLAY')input[{up:'up_down',down:'down_down',ok:'ok_down'}[key]]=1;}
-function up(key){const k=held[key];if(!k)return;delete held[key];clearTimeout(k.timer);if(key==='up'){const now=performance.now();if(now-k.at>=500){lastUp=-Infinity;return;}if(now-lastUp<300)location.assign('index.html?map=post');else lastUp=now;}}
+function down(key){if(held[key])return;const k=held[key]={at:performance.now(),timer:null};if(key==='down')k.timer=setTimeout(()=>{if(phase==='PLAY')phase='PAUSE';lastUp=-Infinity;},500);
+ if(phase==='TITLE'||phase==='RESULT'){if(key==='down')start();return;}if(phase==='PAUSE'){if(key==='down'){phase='PLAY';input={};}else if(key==='ok')start();return;}if(phase==='PLAY'){if(key==='up')N.upEvent(g,true);input[{up:'up_down',down:'down_down',ok:'ok_down'}[key]]=1;}}
+function up(key){const k=held[key];if(!k)return;delete held[key];clearTimeout(k.timer);if(key==='up'){const now=performance.now();if(phase==='PLAY')N.upEvent(g,false);if(now-k.at>=500){lastUp=-Infinity;return;}if(now-lastUp<300&&(phase!=='PLAY'||g.shortTaps>=2))location.assign('index.html?map=night');else lastUp=now;}}
 document.querySelector('#start').onclick=start;document.querySelector('#pause').onclick=()=>{if(phase==='PLAY')phase='PAUSE';else if(phase==='PAUSE')phase='PLAY';};
 for(const b of document.querySelectorAll('[data-key]')){b.onpointerdown=e=>{b.setPointerCapture(e.pointerId);down(b.dataset.key);};b.onpointerup=()=>up(b.dataset.key);b.onpointercancel=()=>up(b.dataset.key);}
-const key=e=>({ArrowUp:'up',ArrowDown:'down',Enter:'ok',' ':'ok'}[e.key]);addEventListener('keydown',e=>{const k=key(e);if(k){e.preventDefault();if(!e.repeat)down(k);}});addEventListener('keyup',e=>{const k=key(e);if(k){e.preventDefault();up(k);}});
+const key=e=>({ArrowLeft:'ok',ArrowRight:'up',ArrowUp:'up',ArrowDown:'down',Enter:'down',' ':'down'}[e.key]);addEventListener('keydown',e=>{const k=key(e);if(k){e.preventDefault();if(!e.repeat)down(k);}});addEventListener('keyup',e=>{const k=key(e);if(k){e.preventDefault();up(k);}});
 addEventListener('blur',()=>{for(const h of Object.values(held))clearTimeout(h.timer);held={};input={};if(phase==='PLAY')phase='PAUSE';lastUp=-Infinity;});
-function frame(now){acc+=Math.min(100,now-last);last=now;while(acc>=1000/60){if(phase==='READY'){if(--countdown===0)phase='PLAY';}else if(phase==='PLAY'){N.step(g,input);input={};if(g.over)phase='RESULT';}acc-=1000/60;}
+function frame(now){acc+=Math.min(100,now-last);last=now;while(acc>=1000/60){if(phase==='READY'){if(--countdown===0)phase='PLAY';}else if(phase==='PLAY'){N.step(g,Object.assign({ok_held:!!held.ok,down_held:!!held.down,up_held:!!held.up},input));input={};if(g.over)phase='RESULT';}acc-=1000/60;}
 if(previousPhase!==phase){previousPhase=phase;phaseAt=now;if(phase==='RESULT')best=Math.max(best,g.score);}
 D.draw(c,g,phase,countdown,Math.floor(now*60/1000),Math.floor((now-phaseAt)*60/1000),best);document.querySelector('#status').textContent='状态 '+phase+' · 抓到 '+g.score+'只 · 精神 '+g.res;
-document.querySelector('#debug').textContent=JSON.stringify({seed:1234,tick:g.tick,lane:g.lane,actualX:g.x,canCatch:N.target(g)>=0,emptyCasts:g.misses,spawnBlocked:g.spawnBlocked});requestAnimationFrame(frame);}
+document.querySelector('#debug').textContent=JSON.stringify({seed:1234,tick:g.tick,lane:g.lane,actualX:g.x,canCatch:N.target(g)>=0,activeGrove:g.bugs.filter(e=>e.type===1).map(e=>e.lane),escaped:g.escaped,emptyCasts:g.misses,spawnBlocked:g.spawnBlocked});requestAnimationFrame(frame);}
 requestAnimationFrame(frame);})();
 </script></html>

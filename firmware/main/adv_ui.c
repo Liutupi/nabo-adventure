@@ -125,6 +125,8 @@ static void draw_cover(ag_t *g, const adv_model_t *m)
 {
     (void)m;
     uint32_t t = adv_ui_boot_initial() ? adv_ui_boot_elapsed(ui_millis()) : adv_boot_motion_duration();
+    // Existing cover stays as the device baseline until the new Grok foreground
+    // and complete V3 cover pass packing/visual/device checks together.
     ui_art(g, "ui/cover-background-top", 0, 0, 0);
     ui_art(g, "ui/cover-background-bottom", 0, 0, 0);
     ui_art(g, "ui/wordmarks/collection", 0, 10, 12);
@@ -209,7 +211,7 @@ void adv_ui_draw(const adv_model_t *m, uint32_t ms, int battery, int mv)
     s_millis = ms;
     if (!s_gfx) return;
     ag_t *g = s_gfx;
-    s_landscape=m->page==ADV_PAGE_SESSION&&m->station==3;
+    s_landscape=m->page==ADV_PAGE_SESSION&&(m->station==3||m->station==4);
     (void)ag_viewport(g,s_landscape?320:240,s_landscape?240:320);
     switch (m->page) {
     case ADV_PAGE_COVER: ag_begin(g, UI_SCENE_COVER); draw_cover(g, m); break;

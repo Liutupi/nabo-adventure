@@ -4,16 +4,23 @@
 #include <stdlib.h>
 #include <string.h>
 
-static const int POS[]={48,120,192};
+static const int POS[]={54,160,266};
 static int range(adv_night_t *g,int lo,int hi){return lo+(int)(adv_rand(&g->rng)%(unsigned)(hi-lo+1));}
-int adv_night_speed(const adv_night_t *g){return g->score>=62?110:48+(int)g->score;}
-static unsigned moth_percent(const adv_night_t *g){return g->score>=48?32:8+g->score/2;}
+int adv_night_interval(const adv_night_t *g){return g->score>=56?204:120+(int)g->score*3/2;}
+static unsigned moth_percent(const adv_night_t *g){return g->score>=60?20:8+g->score/5;}
 int adv_night_object_y(const adv_night_bug_t *e)
 {int q=(e->age+e->phase)%64,v=q<32?q:64-q;return e->base_y+v*16/32-8;}
+static int object_x(const adv_night_bug_t *e)
+{int q=(e->age+e->phase)%48,v=q<24?q:48-q;return (POS[e->lane]+ADV_NIGHT_JAR_DX+v*20/24-10)*60;}
 
 void adv_night_start(adv_night_t *g,uint32_t seed)
 {
-    memset(g,0,sizeof(*g));g->rng=seed;g->res=1000;g->lane=1;g->x=g->from_x=120;g->next=30;
+    memset(g,0,sizeof(*g));g->rng=seed;g->res=1000;g->lane=1;g->x=g->from_x=160;g->next=45;g->last_lane=-1;
+}
+void adv_night_up_event(adv_night_t *g,bool pressed)
+{
+    if(pressed)g->right_hold=0;
+    else {g->short_taps=g->right_hold<ADV_NIGHT_HOLD?(g->short_taps<2?g->short_taps+1:2):0;g->right_hold=0;}
 }
 
 int adv_night_target(const adv_night_t *g)
@@ -34,11 +41,21 @@ static void spawn(adv_night_t *g)
     adv_night_bug_t *e=NULL;
     for(int i=0;i<ADV_NIGHT_CAP;i++)if(!g->bugs[i].type){e=&g->bugs[i];break;}
     if(!e){g->spawn_blocked++;return;}
-    int type=adv_rand(&g->rng)%100<moth_percent(g)?NIGHT_MOTH:NIGHT_FIREFLY;
-    int dir=adv_rand(&g->rng)%2?1:-1;
-    int base_y=range(g,ADV_NIGHT_JAR_Y-10,ADV_NIGHT_JAR_Y+10);
-    int phase=(int)(adv_rand(&g->rng)%64);
-    *e=(adv_night_bug_t){type,(dir>0?-12:252)*60,base_y,dir,phase,0};
+    if(!g->bag_left){
+        static const int orders[]={36,24,33,9,18,6};g->bag=orders[adv_rand(&g->rng)%6];
+        if((g->bag&3)==g->last_lane)g->bag=(g->bag&48)|((g->bag&3)<<2)|((g->bag>>2)&3);
+        g->bag_left=3;
+    }
+    int lane=g->bag&3;g->bag>>=2;g->bag_left--;g->last_lane=lane;
+    int base_y=range(g,ADV_NIGHT_JAR_Y-8,ADV_NIGHT_JAR_Y+8),phase=(int)(adv_rand(&g->rng)%64);
+    *e=(adv_night_bug_t){NIGHT_FIREFLY,0,base_y,lane,phase,0};e->x=object_x(e);
+    if(adv_rand(&g->rng)%100<moth_percent(g)){
+        adv_night_bug_t *moth=NULL;for(int i=0;i<ADV_NIGHT_CAP;i++)if(!g->bugs[i].type){moth=&g->bugs[i];break;}
+        if(moth){
+            int y=range(g,ADV_NIGHT_JAR_Y-8,ADV_NIGHT_JAR_Y+8),other=(lane+1+adv_rand(&g->rng)%2)%3;
+            int p=(int)(adv_rand(&g->rng)%64);*moth=(adv_night_bug_t){NIGHT_MOTH,0,y,other,p,0};moth->x=object_x(moth);
+        }
+    }
 }
 
 void adv_night_step(adv_night_t *g,const adv_input_t *input)
@@ -47,19 +64,19 @@ void adv_night_step(adv_night_t *g,const adv_input_t *input)
     int32_t *timers[]={&g->cast,&g->cooldown,&g->good,&g->bad,&g->feedback};
     for(unsigned i=0;i<sizeof(timers)/sizeof(*timers);i++)if(*timers[i]>0)(*timers[i])--;
     if(g->over)return;
-    bool pressed=input->ok_down&&!g->cooldown;int hit=pressed?adv_night_target(g):-1;
+    bool pressed=input->down_down&&!g->cooldown;int hit=pressed?adv_night_target(g):-1;
     int caught_x=hit<0?0:g->bugs[hit].x/60,caught_y=hit<0?0:adv_night_object_y(&g->bugs[hit]);
-    if(!!input->up_down!=!!input->down_down){
-        int lane=g->lane+(input->up_down?-1:1);if(lane<0)lane=0;if(lane>2)lane=2;
-        if(lane!=g->lane){g->lane=lane;g->from_x=g->x;g->move=ADV_NIGHT_MOVE;g->move_dir=input->up_down?-1:1;g->cue=1;}
-    }
-    if(g->move){int elapsed=ADV_NIGHT_MOVE-g->move+1;g->x=g->from_x+(POS[g->lane]-g->from_x)*elapsed/ADV_NIGHT_MOVE;g->move--;if(!g->move)g->x=POS[g->lane];}
+    g->left_hold=input->ok_held?(g->left_hold<ADV_NIGHT_HOLD?g->left_hold+1:ADV_NIGHT_HOLD):0;
+    g->right_hold=input->up_held?(g->right_hold<ADV_NIGHT_HOLD?g->right_hold+1:ADV_NIGHT_HOLD):0;
+    int direction=(g->right_hold>=ADV_NIGHT_HOLD)-(g->left_hold>=ADV_NIGHT_HOLD),old_x=g->x;
+    g->from_x=g->x;g->x+=direction*ADV_NIGHT_WALK;if(g->x<POS[0])g->x=POS[0];if(g->x>POS[2])g->x=POS[2];
+    g->move=g->x!=old_x?ADV_NIGHT_MOVE-g->tick%ADV_NIGHT_MOVE:0;if(g->move)g->move_dir=direction;
+    g->lane=(g->x-POS[0]+53)/106;if(g->lane<0)g->lane=0;if(g->lane>2)g->lane=2;
     g->drain_acc+=25;while(g->drain_acc>=60){g->res--;g->drain_acc-=60;}
-    if(--g->next<=0){spawn(g);int delay=g->score>=128?180:(int)g->score*3/4;g->next=range(g,84,100)+delay;if(g->next>180)g->next=180;}
-    int velocity=adv_night_speed(g);
+    if(--g->next<=0){spawn(g);g->next=adv_night_interval(g)+range(g,0,12);}
     for(int i=0;i<ADV_NIGHT_CAP;i++){
         adv_night_bug_t *e=&g->bugs[i];if(!e->type)continue;
-        e->age++;e->x+=e->dir*velocity;if(e->x< -24*60||e->x>264*60)memset(e,0,sizeof(*e));
+        e->age++;e->x=object_x(e);if(e->age>=ADV_NIGHT_LIFE){if(e->type==NIGHT_FIREFLY)g->escaped++;memset(e,0,sizeof(*e));}
     }
     if(pressed){
         g->cast=ADV_NIGHT_CAST;g->cooldown=ADV_NIGHT_COOLDOWN;g->feedback=60;

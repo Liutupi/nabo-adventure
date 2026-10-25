@@ -1,0 +1,123 @@
+{
+  "candidate_sha256": "99e71e9fa132c8b644aa30125663585b9fd92b2154697a84544d1cab86bcefd8",
+  "status": "HOST AND AUTOMATED DEVICE PASS; HUMAN NIGHT CONTROLS PASS; SLEEP NOT RETESTED",
+  "app_bytes": 1655184,
+  "physical_factory_bytes": 2031616,
+  "physical_factory_free_bytes": 376432,
+  "reserve_bytes": 360448,
+  "remaining_after_reserve_bytes": 15984,
+  "host": {
+    "tests": 211,
+    "seconds": 95.627,
+    "passed": true,
+    "shell_traces": 13,
+    "night_model_actions": 28871,
+    "night_renderer_cases": 14,
+    "idf_build_passed": true,
+    "camping_cases_below_bronze": 24,
+    "grove_lifetime_ticks": 108,
+    "landscape_size": [
+      320,
+      240
+    ]
+  },
+  "storage": {
+    "lossless_embedded_pixels_and_pcm_verified": true,
+    "jump_scene_identical_pixels": 76800,
+    "partitions_unchanged": true
+  },
+  "device": {
+    "flashed": true,
+    "all_protected_bytes_verified": true,
+    "automated_smoke": "PASS",
+    "night": {
+      "caught": 15,
+      "rounds": 10,
+      "warmup_rounds": 1,
+      "memory": {
+        "heap": {
+          "before": 255316,
+          "after": 255316,
+          "minimum": 255316,
+          "maximum": 255316
+        },
+        "largest": {
+          "before": 114688,
+          "after": 114688,
+          "minimum": 114688,
+          "maximum": 114688
+        }
+      },
+      "quiet_fps": [
+        27.64288382521831,
+        27.836460792871854,
+        27.781222869817714
+      ]
+    },
+    "post": {
+      "delivered": 5,
+      "rounds": 10,
+      "warmup_rounds": 1,
+      "memory": {
+        "heap": {
+          "before": 255316,
+          "after": 255316,
+          "minimum": 255316,
+          "maximum": 255316
+        },
+        "largest": {
+          "before": 114688,
+          "after": 114688,
+          "minimum": 114688,
+          "maximum": 114688
+        }
+      },
+      "quiet_fps": [
+        26.842301478743636,
+        26.961827728032862,
+        27.09084130725052
+      ]
+    },
+    "legacy": {
+      "rounds_per_game": 10,
+      "warmup_rounds_per_game": 1
+    },
+    "nvs_bytes_unchanged_during_automated_tests": 24576,
+    "stamps_preserved": 22,
+    "bests_preserved": true,
+    "normal_mode_restored": true,
+    "human_acceptance": {
+      "night_held_left_right_no_false_exit": "PASS",
+      "night_middle_hold_pause": "PASS",
+      "night_two_short_up_return": "PASS",
+      "user_reply": "都正常，已回地图",
+      "audio": "not tested; speaker OFF at user request"
+    },
+    "sleep_wake_on_this_candidate": "pending",
+    "speaker_enabled": false,
+    "latest_real_bests": [
+      0,
+      132,
+      5888,
+      8,
+      51,
+      11,
+      13,
+      12,
+      15
+    ],
+    "nvs_comparison_baseline": "Fresh normal-progress snapshot after user-requested speaker OFF; matches after all automated tests"
+  },
+  "scope": "NIGHT landscape held left OK/right UP movement, middle DOWN capture/hold pause; only two short UP taps exit; lossless jump storage and awarded medals retained",
+  "boot_v3": "Grok raw clip received; new cover/animation QA and packing in progress, not embedded in this image",
+  "earlier_candidate": "de458f1e vertical rules rejected by user; serial caught15/result succeeded but one extra right slide failed stress, cause unproven. Subsequent automation refused an active normal user round and sent no input.",
+  "not_implemented": [
+    "B costume selector",
+    "CLIMB formal game",
+    "SKI formal game",
+    "SKY formal game",
+    "SPACE formal game"
+  ],
+  "previous_accepted_candidate_preserved": "5a2bc80336bddc25aed27f770810bfe0476bf283a7e660e6328415ddd33b7968",
+  "private_device_data_excluded": true
+}

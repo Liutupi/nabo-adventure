@@ -158,12 +158,17 @@ class Renderer(unittest.TestCase):
         for case,name in enumerate(names):
             self.lib.host_night_case(case);self.check('NIGHT '+name);self.save('night-'+name+'.png',True)
             if name=='title':
-                self.assertGreater(len(self.view_image().crop((20,40,220,120)).getcolors(16001)),8,'The native wordmark must retain its lettering and paper colors')
-        self.lib.host_night_case(7);self.check('NIGHT fixed backdrop');before=self.view_image().crop((0,34,240,150)).tobytes()
+                source=Image.open(ROOT/'game-art/adventure/art/ui/wordmarks/night.png').convert('RGB')
+                expected=[((r>>3)*255//31,(g>>2)*255//63,(b>>3)*255//31) for r,g,b in source.getdata()]
+                self.assertEqual(list(self.view_image().crop((16,36,216,116)).getdata()),expected,'Native wordmark lettering/paper must be preserved pixel for pixel')
+            self.assertEqual((self.lib.adv_ui_width(),self.lib.adv_ui_height()),(320,240))
+        self.lib.host_night_case(7);self.check('NIGHT fixed backdrop');before=self.view_image().crop((0,54,320,110)).tobytes()
         for _ in range(20):self.steps(3)
-        self.assertEqual(before,self.view_image().crop((0,34,240,150)).tobytes())
+        self.assertEqual(before,self.view_image().crop((0,54,320,110)).tobytes())
         self.assertLess(self.last_incremental_bytes,240*200*2,'Fixed-camera motion should not transmit the whole screen')
+        for _ in range(2):self.ev(UP,PRESS);self.ev(UP,RELEASE);self.ev(UP,CLICK)
         self.ev(UP,DOUBLE);self.assertEqual(self.lib.host_page(),1)
+        self.assertEqual((self.lib.adv_ui_width(),self.lib.adv_ui_height()),(240,320))
 
     def test_route_guidance_never_covers_ahead_station_or_its_mail(self):
         self.new([0,99,0,0,0,0,0,0,0],seen=7)
