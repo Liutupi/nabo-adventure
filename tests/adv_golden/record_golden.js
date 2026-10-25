@@ -9,6 +9,9 @@ const A = require('../../game-art/adventure/prototype/adv_core.js');
 const { BTN, EV, FX } = A;
 const {drive:driveNight}=require('../night_policy.js');
 const {driver:climbDriver}=require('../climb_policy.js');
+const LATE={6:require('../ski_policy.js').driver,7:require('../sky_policy.js').driver,8:require('../space_policy.js').driver};
+// The pause gesture of each shell game (NIGHT long DOWN, SKI long OK, SPACE two short DOWN taps, others long UP).
+function pause(r,station){if(station===4)r.long(BTN.DOWN);else if(station===6)r.long(BTN.OK);else if(station===8)r.double(BTN.DOWN);else r.long(BTN.UP);}
 const SETTINGS = { volume: 70, brightness: 80, sleep: 300, speaker: true };
 
 function recorder(seed, best, seen) {
@@ -37,6 +40,7 @@ function playDemo(r, hits, misses,waitResult=true) {
   if(r.m.session.station===3)return playPost(r,hits,misses,waitResult);
   if(r.m.session.station===4)return playNight(r,hits,waitResult);
   if(r.m.session.station===5)return playClimb(r,hits,waitResult);
+  if(r.m.session.station>=6)return playLate(r,hits,waitResult);
   const s = () => r.m.session;
   while (s() && s().phase === A.PHASE.READY) r.steps(30);
   let made = 0, missed = 0, guard = 0;
@@ -100,6 +104,42 @@ function playClimb(r,height,waitResult=true){
   }
   if(r.m.session.phase!==A.PHASE.END)throw Error('CLIMB did not end');
   while(waitResult&&r.m.session.phase===A.PHASE.END)r.steps(20);
+}
+
+// SKI/SKY/SPACE through held buttons: each button's wanted state becomes real PRESS/RELEASE events.
+function playLate(r,target,waitResult=true){
+  const station=r.m.session.station,next=LATE[station](station===8?'skilled':'expert',r.m.session.seed);
+  while(r.m.session.phase===A.PHASE.READY)r.steps(30);
+  let guard=0;
+  while(r.m.session.phase===A.PHASE.PLAY&&guard++<40000){
+    const g=r.m.session.game,input=g.score<target?next(g):{};
+    for(const [button,want] of [[BTN.OK,!!(input.ok_held||input.ok_down)&&!input.ok_up],[BTN.UP,!!input.up_held],[BTN.DOWN,!!input.down_held]]){
+      const was=!!(r.m.held&(1<<button));if(was!==want)r.ev(button,want?EV.PRESS:EV.RELEASE);
+    }
+    r.steps(1);
+  }
+  for(const button of [BTN.OK,BTN.UP,BTN.DOWN])if(r.m.held&(1<<button))r.ev(button,EV.RELEASE);
+  if(r.m.session.phase!==A.PHASE.END)throw Error('game did not end');
+  while(waitResult&&r.m.session.phase===A.PHASE.END)r.steps(20);
+}
+
+function lateGames(){
+  const r=recorder(64,[0,30,400,13,40,160,0,0,0],0x7fff);
+  r.click(BTN.OK);for(let i=0;i<4;i++)r.click(BTN.UP);
+  for(const [station,target] of [[6,10],[7,200],[8,300]]){
+    r.click(BTN.OK);if(!r.m.session||r.m.session.station!==station)throw Error('station '+station+' did not open');
+    r.click(BTN.OK);r.steps(200);r.click(BTN.UP);
+    if(station===6||station===8){   // a held move followed by one short tap is not a double-tap gesture
+      const b=station===6?BTN.UP:BTN.DOWN;r.ev(b,EV.PRESS);r.steps(20);r.ev(b,EV.RELEASE);r.ev(b,EV.PRESS);r.ev(b,EV.RELEASE);r.ev(b,EV.DOUBLE);
+      if(r.m.page!==A.PAGE.SESSION||r.m.session.phase!==A.PHASE.PLAY)throw Error('held move counted as a double tap at '+station);
+    }
+    pause(r,station);
+    if(r.m.session.phase!==A.PHASE.PAUSE)throw Error('pause gesture failed at '+station);
+    r.click(BTN.OK);playLate(r,target);
+    if(r.m.best[station]<target)throw Error('bronze not earned at '+station);
+    r.double(BTN.UP);r.click(BTN.OK);r.click(BTN.UP);
+  }
+  return r.trace;
 }
 
 function climbRound(){
@@ -197,14 +237,14 @@ function gameReturns() {
     r.open(station);
     if(phase!==A.PHASE.TITLE)r.click(station===4?BTN.DOWN:BTN.OK);
     if(phase!==A.PHASE.TITLE&&phase!==A.PHASE.READY)r.steps(180);
-    if(phase===A.PHASE.PAUSE)r.long(station===4?BTN.DOWN:BTN.UP);
+    if(phase===A.PHASE.PAUSE)pause(r,station);
     if(phase===A.PHASE.END||phase===A.PHASE.RESULT) {
       let guard=0;
       while(r.m.session.phase===A.PHASE.PLAY&&guard++<60000)r.steps(1);
       if(r.m.session.phase!==A.PHASE.END)throw Error('Expected an ended round');
       if(phase===A.PHASE.RESULT)r.steps(A.END_STEPS);
     }
-    if(phase===A.PHASE.PLAY){r.click(BTN.UP);r.long(station===4?BTN.DOWN:BTN.UP);r.click(station===4?BTN.DOWN:BTN.OK);}
+    if(phase===A.PHASE.PLAY){r.click(BTN.UP);pause(r,station);r.click(station===4?BTN.DOWN:BTN.OK);}
     else r.long(BTN.UP);
     if(r.m.page!==A.PAGE.SESSION||r.m.session.phase!==phase)throw Error('Single/long UP unexpectedly returned or changed a phase');
     r.double(BTN.UP);
@@ -248,7 +288,7 @@ const traces = {
   game_returns:gameReturns(),
   game_return_record:endedReturn(false),
   game_return_test:endedReturn(true),
-  demo_thresholds:(()=>{const r=recorder(81,[0,50,600,25,60,60,0,0,0],0x1fff);r.click(BTN.OK);for(let i=0;i<4;i++)r.click(BTN.UP);r.click(BTN.OK);r.click(BTN.OK);if(r.m.session.station!==6)throw Error('demo threshold trace must use a placeholder');playDemo(r,6,4);r.double(BTN.UP);r.click(BTN.OK);r.click(BTN.OK);return r.trace;})(),
+  late_games:lateGames(),
   journey: journey(),
   kiosk_settings: kioskAndSettings(),
   fuzz_fresh: fuzz(7, [0, 0, 0, 0, 0, 0, 0, 0, 0], 0, 4000),

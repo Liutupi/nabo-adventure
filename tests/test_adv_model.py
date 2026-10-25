@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BOARD = ROOT/'firmware/main'
 HOST = ROOT/'tests/adv_host'
 GOLDEN = ROOT/'tests/adv_golden'
-SOURCES = ['adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c', 'adv_climb.c', 'collection_model.c']
+SOURCES = ['adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c', 'adv_climb.c', 'adv_ski.c', 'adv_sky.c', 'adv_space.c', 'collection_model.c']
 REDRAW = 1
 
 def build(folder, replace=None):
@@ -155,15 +155,18 @@ class Mutations(unittest.TestCase):
     MUTANTS = [
         ('adv_model.c','return b == ADV_BTN_UP && e == ADV_EV_DOUBLE;','return b == ADV_BTN_UP && e == ADV_EV_LONG;'),
         ('adv_model.c', 'if (--m->t == 0) { m->phase = ADV_PLAY;', 'if (--m->t == 1) { m->phase = ADV_PLAY;'),
-        ('adv_demo.c', 'g->res -= 250;', 'g->res -= 200;'),
-        ('adv_demo.c', 'g->zh = g->zh - 10 < 60 ? 60 : g->zh - 10;', 'g->zh = g->zh - 9 < 60 ? 60 : g->zh - 9;'),
         ('adv_model.c', 'if (m->seen & adv_stamp_bit(station - 1, 0)) return true;',
          'if (false) return true;'),
         ('adv_model.c', 'm->passport = (m->passport + (b == ADV_BTN_UP ? 7 : 1)) % 8;',
          'm->passport = (m->passport + (b == ADV_BTN_UP ? 1 : 7)) % 8;'),
         ('adv_model.c', 'if (!m->test) {', 'if (true) {'),
-        ('adv_stations.c', 'const uint32_t adv_demo_thresholds[3] = {3, 6, 10};',
-         'const uint32_t adv_demo_thresholds[3] = {3, 7, 10};'),
+        # Every station now runs a formal game; the placeholder engine is no longer reachable, so its
+        # mutants were retired. The hold-to-move games guard their exits and pause gestures instead.
+        ('adv_model.c', 'static bool holds_up(int station) { return station == 4 || station == 6 || station == 8; }',
+         'static bool holds_up(int station) { return station == 4 || station == 6; }'),
+        ('adv_model.c', "if (m->station == 6) return b == ADV_BTN_OK && e == ADV_EV_LONG;",
+         "if (m->station == 6) return b == ADV_BTN_UP && e == ADV_EV_LONG;"),
+        ('adv_model.c', '((adv_space_t *)m->game)->down_taps >= 2', '((adv_space_t *)m->game)->down_taps >= 1'),
     ]
 
     def test_mutants_are_caught(self):

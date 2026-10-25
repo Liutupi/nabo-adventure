@@ -1,0 +1,52 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_sky_thundercloud__p0",
+  "width": 48,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    12875,
+    19246,
+    61073
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 250,
+  "table_bytes": 76,
+  "frame_sha256": [
+    "35fa8bfae175a60b7b22d094dbc19da1a260e1a70fa0ad1c3cfa74d3ce15c767"
+  ],
+  "source_sha256": [
+    "b380b7330d306491497bb6c4c1b381b98a46404443c5519a7d24db5ac8c8ecb0"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/sky/thundercloud",
+  "group": "sky",
+  "symbol": "adv_assets_game_sky_thundercloud__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/props/thundercloud.png",
+      "sha256": "c164b0b5ed215d08c19b0f2fe4611f6937430907a0a79aef2edd826a832e67d5"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/sky/thundercloud",
+      "logical_symbol": "adv_assets_game_sky_thundercloud__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

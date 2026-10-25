@@ -1,0 +1,55 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_props_landing_pad__p0",
+  "width": 96,
+  "height": 24,
+  "palette_rgb565": [
+    0,
+    8617,
+    21295,
+    23926,
+    36215,
+    52557,
+    63387
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 222,
+  "table_bytes": 66,
+  "frame_sha256": [
+    "d6e9099ec6e5680ea7820af0dfd6bc7339a55883a34ec79d93d105338a3e5934"
+  ],
+  "source_sha256": [
+    "b795a2197ce2ac254b0f3bd735f009f4aea454ed8204cd299869910fa41e8427"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space/props/landing-pad",
+  "group": "space",
+  "symbol": "adv_assets_game_space_props_landing_pad__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/space/props/landing-pad.png",
+      "sha256": "561e14aa31566beffdb790835560fbd7794b1bc9405609f86538177232c8c43c"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space/props/landing-pad",
+      "logical_symbol": "adv_assets_game_space_props_landing_pad__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

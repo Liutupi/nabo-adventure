@@ -43,3 +43,6 @@ void ui_draw_session(ag_t *g, const adv_model_t *m);
 void ui_draw_post_session(ag_t *g,const adv_model_t *m);
 void ui_draw_night_session(ag_t *g,const adv_model_t *m);
 void ui_draw_climb_session(ag_t *g,const adv_model_t *m);
+void ui_draw_ski_session(ag_t *g,const adv_model_t *m);
+void ui_draw_sky_session(ag_t *g,const adv_model_t *m);
+void ui_draw_space_session(ag_t *g,const adv_model_t *m);

@@ -1,0 +1,133 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_ski_a_lean_left__p0",
+  "width": 63,
+  "height": 68,
+  "palette_rgb565": [
+    0,
+    2113,
+    4425,
+    4521,
+    6306,
+    6406,
+    8617,
+    8650,
+    10566,
+    10665,
+    12548,
+    12613,
+    12746,
+    12812,
+    14693,
+    14726,
+    14924,
+    16741,
+    16774,
+    16905,
+    18887,
+    19051,
+    19311,
+    20934,
+    21000,
+    21163,
+    23471,
+    23569,
+    25062,
+    25160,
+    25323,
+    27273,
+    27697,
+    27763,
+    29224,
+    31564,
+    31958,
+    33481,
+    33742,
+    37740,
+    39982,
+    41998,
+    42262,
+    43559,
+    43721,
+    44208,
+    44473,
+    48140,
+    50416,
+    50681,
+    54675,
+    54873,
+    56589,
+    59197,
+    60918,
+    61278,
+    62925,
+    63226,
+    63326,
+    63390,
+    65111,
+    65208,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    1,
+    1,
+    1
+  ],
+  "frame_map": null,
+  "data_bytes": 6387,
+  "table_bytes": 688,
+  "frame_sha256": [
+    "71362d53f7d2d496969483eebf28314eb5ecd6a9a7ae3f82aadeb42a99c2e357",
+    "0d3f7499987355c9a6882792dedf392092f0766bda7c386657c707faf3210d20",
+    "2f5c8e7e2ebce57cc60a5f60d75f5cc4bd19baadc7635f645583323200f2af9b",
+    "71f460006f8442bcc15644489c2ab3373937c052f6e801524c1db54289cfcf6d"
+  ],
+  "source_sha256": [
+    "1640b3135af095ccbf597823f567e18d00053fd8ecc4146ecb2265069ee4f165",
+    "a28a258b706fd5697f5c417aa6408b5903e4beb502138e7ac492abc7120b3470",
+    "465140f9c0edcbacb8945bc10cd5a17c604e0f41b9250afb5955aa05bd74f7c8",
+    "819ad8c1d8b1484e9051e7bec116296c1d2d118c1f102994e1ba9ab037899d21"
+  ],
+  "verified_frames": 4,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ski_a/lean_left",
+  "group": "ski",
+  "symbol": "adv_assets_ski_a_lean_left__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/lean_left/000.png",
+      "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/lean_left/001.png",
+      "sha256": "c8d4e74124622a93b1063d68bfb0058c09fcd8f23e89f65a244c60bbd5d87fb9"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/lean_left/002.png",
+      "sha256": "bd736deffba2704a683736b89be4a707d503a8a206b0133f236f68b90f207f03"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/lean_left/003.png",
+      "sha256": "6d51c111d3573570a791103555a4503f1be5de34a3c3d2c214c3a57cd1f988b5"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ski_a/lean_left",
+      "logical_symbol": "adv_assets_ski_a_lean_left__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

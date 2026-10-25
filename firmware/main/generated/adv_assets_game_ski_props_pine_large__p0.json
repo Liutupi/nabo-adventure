@@ -1,0 +1,54 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_ski_props_pine_large__p0",
+  "width": 64,
+  "height": 64,
+  "palette_rgb565": [
+    0,
+    8649,
+    15375,
+    17298,
+    48007,
+    65502
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 812,
+  "table_bytes": 144,
+  "frame_sha256": [
+    "69359632f7eecb46381b274a8928a1b272568a9fc4b945f4a13a0e93f8d1addf"
+  ],
+  "source_sha256": [
+    "bd5ede14f28a241d7e249ff16d80dbef77b7abd6e057f58a9f3b12e3c27c7750"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/ski/props/pine-large",
+  "group": "ski",
+  "symbol": "adv_assets_game_ski_props_pine_large__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/ski/props/pine-large.png",
+      "sha256": "f3d641cf7afafea15894be6683ab2a304b8563ea1c8258988f9a6fc2b464bf97"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/ski/props/pine-large",
+      "logical_symbol": "adv_assets_game_ski_props_pine_large__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

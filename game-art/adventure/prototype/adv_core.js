@@ -7,6 +7,9 @@
   const Post=typeof module!=='undefined'&&module.exports?require('./adv_post.js'):root.AdvPost;
   const Night=typeof module!=='undefined'&&module.exports?require('./adv_night.js'):root.AdvNight;
   const Climb=typeof module!=='undefined'&&module.exports?require('./adv_climb.js'):root.AdvClimb;
+  const Ski=typeof module!=='undefined'&&module.exports?require('./adv_ski.js'):root.AdvSki;
+  const Sky=typeof module!=='undefined'&&module.exports?require('./adv_sky.js'):root.AdvSky;
+  const Space=typeof module!=='undefined'&&module.exports?require('./adv_space.js'):root.AdvSpace;
 
   // ---------- constants shared with adv_model.h ----------
   const BTN = { UP: 0, DOWN: 1, OK: 2 };
@@ -31,9 +34,9 @@
     { id: 'post', cn: '小火车', en: 'POST', world: '铁路平原', res: '蒸汽', kind: 2, th: [5, 12, 25], placeholder: false },
     { id: 'night', cn: '萤火虫', en: 'NIGHT', world: '夜林', res: '精神', kind: 2, th: [15, 35, 60], placeholder: false },
     { id: 'climb', cn: '登山', en: 'CLIMB', world: '雪山', res: '体力', kind: 2, th: [50, 150, 300], placeholder: false },
-    { id: 'ski', cn: '滑雪', en: 'SKI', world: '雪坡', res: '体温', kind: 2, th: [10, 25, 45], placeholder: true },
-    { id: 'sky', cn: '热气球', en: 'SKY', world: '云端', res: '热气', kind: 2, th: [200, 500, 1000], placeholder: true },
-    { id: 'space', cn: '太空', en: 'SPACE', world: '太空', res: '燃料', kind: 2, th: [300, 600, 900], placeholder: true },
+    { id: 'ski', cn: '滑雪', en: 'SKI', world: '雪坡', res: '体温', kind: 2, th: [10, 25, 45], placeholder: false },
+    { id: 'sky', cn: '热气球', en: 'SKY', world: '云端', res: '热气', kind: 2, th: [200, 500, 1000], placeholder: false },
+    { id: 'space', cn: '太空', en: 'SPACE', world: '太空', res: '燃料', kind: 2, th: [300, 600, 900], placeholder: false },
   ];
 
   function threshold(s, tier) { return STATION[s].placeholder ? DEMO_THRESHOLDS[tier] : STATION[s].th[tier]; }
@@ -213,7 +216,16 @@
 
   function isBack(btn, ev) { return btn === BTN.UP && (ev === EV.LONG || ev === EV.DOUBLE); }
   function gameMapKey(btn, ev) { return btn === BTN.UP && ev === EV.DOUBLE; }
-  function engine(station){return station===3?Post:station===4?Night:station===5?Climb:Demo;}
+  function engine(station){return [null,null,null,Post,Night,Climb,Ski,Sky,Space][station]||Demo;}
+  // Games where UP is held to move: only two genuinely short UP taps may leave for the map.
+  const holdsUp=station=>station===4||station===6||station===8;
+  // Pause: NIGHT long middle DOWN, SKI long OK, SPACE two short DOWN taps, everyone else long UP.
+  function pauseKey(s,btn,ev){
+    if(s.station===4)return btn===BTN.DOWN&&ev===EV.LONG;
+    if(s.station===6)return btn===BTN.OK&&ev===EV.LONG;
+    if(s.station===8)return btn===BTN.DOWN&&ev===EV.DOUBLE&&s.game.downTaps>=2;
+    return btn===BTN.UP&&ev===EV.LONG;
+  }
 
   function recordResult(m) {
     const s=m.session,score=engine(s.station).status(s.game).score;
@@ -227,7 +239,7 @@
     const s = m.session;
     const confirm=s.station===4?BTN.DOWN:BTN.OK,restart=s.station===4?BTN.OK:BTN.DOWN;
     if(gameMapKey(btn,ev)) {
-      if(s.station===4&&s.phase===PHASE.PLAY&&s.game.shortTaps<2)return;
+      if(holdsUp(s.station)&&s.phase===PHASE.PLAY&&s.game.shortTaps<2)return;
       if(s.phase===PHASE.END)recordResult(m);
       cue(m,CUE.BACK);toMap(m);return;
     }
@@ -235,8 +247,9 @@
       if (btn === confirm && ev === EV.CLICK) startRun(m);
       else if (s.station===3&&btn===BTN.DOWN&&ev===EV.CLICK) startRun(m,true);
     } else if (s.phase === PHASE.PLAY) {
-      if(s.station===4&&btn===BTN.UP&&(ev===EV.PRESS||ev===EV.RELEASE))Night.upEvent(s.game,ev===EV.PRESS);
-      if (btn === (s.station===4?BTN.DOWN:BTN.UP) && ev === EV.LONG) { s.phase = PHASE.PAUSE; cue(m, CUE.BACK); return; }
+      if(holdsUp(s.station)&&btn===BTN.UP&&(ev===EV.PRESS||ev===EV.RELEASE))engine(s.station).upEvent(s.game,ev===EV.PRESS);
+      if(s.station===8&&btn===BTN.DOWN&&(ev===EV.PRESS||ev===EV.RELEASE))Space.downEvent(s.game,ev===EV.PRESS);
+      if (pauseKey(s,btn,ev)) { s.phase = PHASE.PAUSE; cue(m, CUE.BACK); return; }
       if (ev === EV.PRESS) {
         if (btn === BTN.OK) m.input.ok_down = 1;
         if (btn === BTN.UP) m.input.up_down = 1;
@@ -364,13 +377,13 @@
       cfg: [m.cfg.page, m.cfg.cursor, m.cfg.editing, m.cfg.s.volume, m.cfg.s.brightness, m.cfg.s.sleep, m.cfg.s.speaker ? 1 : 0],
       best: m.best.slice(), seen: m.seen, stamp: m.stamp, held: m.held,
       session: s ? [s.station, s.phase, s.t, s.seed, s.record] : null,
-      game: g ? (s.station===3?Post.view(g):s.station===4?Night.view(g):s.station===5?Climb.view(g):[g.p, g.v, g.zc, g.zh, g.score, g.res, g.over, g.hit, g.miss]) : null,
+      game: g ? (s.station===3?Post.view(g):s.station===4?Night.view(g):s.station>=5?engine(s.station).view(g):[g.p, g.v, g.zc, g.zh, g.score, g.res, g.over, g.hit, g.miss]) : null,
     };
   }
 
   const api = {
     BTN, EV, PAGE, PHASE, FX, CUE, CG, STATION, PATH, START_STATION, DEMO_THRESHOLDS, READY_STEPS, END_STEPS,
-    create, event, step, legacyDone, view, earned, unlocked, threshold, bit, rand, Demo, Post,Night,Climb, testOpen,practiceOpen,gameMapKey,
+    create, event, step, legacyDone, view, earned, unlocked, threshold, bit, rand, Demo, Post,Night,Climb,Ski,Sky,Space, testOpen,practiceOpen,gameMapKey,
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.AdvCore = api;

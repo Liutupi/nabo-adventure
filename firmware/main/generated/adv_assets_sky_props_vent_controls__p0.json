@@ -1,0 +1,93 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_sky_props_vent_controls__p0",
+  "width": 43,
+  "height": 40,
+  "palette_rgb565": [
+    0,
+    12777,
+    17100,
+    29384
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    0
+  ],
+  "data_bytes": 1012,
+  "table_bytes": 440,
+  "frame_sha256": [
+    "91fd38b0c6564cbad45d1606ebd867d96fe3b99638130711a93f21b56376306b",
+    "628446ff88d28d8e5037cc5a4ba32227faa48b7908d10a71363a32557a3727d0",
+    "cdf096342f4cc157e122749cc8b3e88c870c68265206fab486fd612b1c93cc33",
+    "079c398a37ea329a107c47933cc3e1860c3bef73ed9060ecccc26a10e86c8b07",
+    "984256593ca573efb33e76c15f60f53e6a996000d2d6cc7c16763b2bee8b3969",
+    "91fd38b0c6564cbad45d1606ebd867d96fe3b99638130711a93f21b56376306b"
+  ],
+  "source_sha256": [
+    "d309d2367fbff94f5e4a535799ea7439ec58a05d619d35bf8237484e9119d7ee",
+    "18155cb7fcd825b44e1e7d777e43e5cafd07fdfe6bdbdec196044c0c26670a59",
+    "19178ab77430d9ccbe29003aae84f71c2aa8c209824034897a36db1d2837e2a0",
+    "b62e0fe612fa34ba22dbc7bd4f7923c8bb57094e6d16269c4669e9cfe1cea126",
+    "315b93c3d9a770f2046678c18ec09277052f54bc4c8bdd1e402aa94f83e6f8b1",
+    "d309d2367fbff94f5e4a535799ea7439ec58a05d619d35bf8237484e9119d7ee"
+  ],
+  "verified_frames": 6,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "sky_props/vent_controls",
+  "group": "sky",
+  "symbol": "adv_assets_sky_props_vent_controls__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/controls/vent/000.png",
+      "sha256": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/controls/vent/001.png",
+      "sha256": "35b844bb5316dc03f446c7c739ec36225a69f6ce42c4b598a2cbc0ec5cead9bb"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/controls/vent/002.png",
+      "sha256": "3aec911f188f14d8ff59f7f164f0fb7584072c9cfde94c22c4c2da69ef35a8ea"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/controls/vent/003.png",
+      "sha256": "154fc5d7fda369bb73de1ad06a762037d1650bd83a2cdf35badf94259ff44a45"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/controls/vent/004.png",
+      "sha256": "66a81e5ee83408f9a1fe90d6957350313d13b9da597be9be1887141a46d0a76e"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/controls/vent/005.png",
+      "sha256": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "sky_props/vent_controls",
+      "logical_symbol": "adv_assets_sky_props_vent_controls__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

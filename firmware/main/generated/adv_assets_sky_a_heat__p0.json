@@ -1,0 +1,151 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_sky_a_heat__p0",
+  "width": 43,
+  "height": 40,
+  "palette_rgb565": [
+    0,
+    2081,
+    8322,
+    8454,
+    8520,
+    12548,
+    12613,
+    14693,
+    14694,
+    14759,
+    16708,
+    16741,
+    16873,
+    18854,
+    20934,
+    20999,
+    21033,
+    22723,
+    23211,
+    27175,
+    29321,
+    32964,
+    33481,
+    33547,
+    33645,
+    35076,
+    35922,
+    36120,
+    37675,
+    39205,
+    41318,
+    41836,
+    41998,
+    43527,
+    44308,
+    46553,
+    48175,
+    48468,
+    48732,
+    50353,
+    54709,
+    54840,
+    54972,
+    56626,
+    58837,
+    59066,
+    59165,
+    60983,
+    61245,
+    62933,
+    63326,
+    63358,
+    63390,
+    63391,
+    65111,
+    65208,
+    65241,
+    65338,
+    65404,
+    65470,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    0
+  ],
+  "data_bytes": 2130,
+  "table_bytes": 556,
+  "frame_sha256": [
+    "ad58c330561f872e04d3e53936006f5c31ac91e107e166e00b38b04d6a1c61c5",
+    "c3f36f2dd8afc208adcfce71c22c03bcbda31a90462e5173f4d5cca96c57e969",
+    "5234875985351d5aceaa72c886d0e58b98690e494e1a84b1d2852191b79e56bc",
+    "9e31c802945305b1c752cd823b41a0ddc70b7c2ec3729737e29e49fb3a989f33",
+    "c66c7f313c2108ebc2d96b7c39b9eb0bf1624ed0128ddd75e08e7ed0fdef0dd3",
+    "ad58c330561f872e04d3e53936006f5c31ac91e107e166e00b38b04d6a1c61c5"
+  ],
+  "source_sha256": [
+    "50c43c5efb68fae28e08e4888336833ea96cd65967c713fbf213fd97bd61d3e3",
+    "a78a7ad97cd718b57db458d184c84d72f7f7f5f702648cbafd419ba77bef2d0d",
+    "464a93433700aa5abff85f78a8d025b0adc3134bb80a8d609ae48e27d87cf89f",
+    "3e3089d5925257c5837e0ceff4222e9e40ada741e079ba747398f0c093e21465",
+    "4bf455728d482ba8bd556473055a4bfbd4fe9c0acbc674cb17cc91853c549054",
+    "50c43c5efb68fae28e08e4888336833ea96cd65967c713fbf213fd97bd61d3e3"
+  ],
+  "verified_frames": 6,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "sky_a/heat",
+  "group": "sky",
+  "symbol": "adv_assets_sky_a_heat__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/heat/000.png",
+      "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/heat/001.png",
+      "sha256": "b0b896e7f94c29c1ce537b60ed4d29be5bb1e16c8ce80dc3a34ef824e76d2855"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/heat/002.png",
+      "sha256": "8789df5cbe8e75247862920d23967499520e7a04d3b424a43defb900c6692880"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/heat/003.png",
+      "sha256": "00630df1a725ec725205b3c09fee2292befa8298939a859b228d6a49e37bbeec"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/heat/004.png",
+      "sha256": "2e264f4c1f94c1273cc8570ebe1be1dfda71b64e837f94f27b3517bf075b74f9"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/heat/005.png",
+      "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "sky_a/heat",
+      "logical_symbol": "adv_assets_sky_a_heat__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

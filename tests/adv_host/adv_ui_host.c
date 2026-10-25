@@ -7,6 +7,9 @@
 #include "adv_post.h"
 #include "adv_night.h"
 #include "adv_climb.h"
+#include "adv_ski.h"
+#include "adv_sky.h"
+#include "adv_space.h"
 #include "adv_ui.h"
 #include "adv_ui_art.h"
 #include "adv_ui_animation.h"
@@ -199,6 +202,68 @@ void host_climb_case(int which)
     if(which==12||which==13){model.phase=ADV_RESULT;p->score=which==13?UINT32_MAX:186;model.best[5]=p->score;model.record=which==12;model.test=false;}
     if(which==14){p->row=50;p->score=50;p->cheer=30;p->feedback=60;p->message=CLIMB_MSG_MILESTONE;
         for(int r=40;r<=62;r++){p->gen_top=r;p->grid[r%ADV_CLIMB_RING]=CLIMB_NORMAL|(CLIMB_NORMAL<<2);}}
+}
+
+static void *late_open(int station)
+{
+    if(model.in_session&&model.station!=station)adv_event(&model,ADV_BTN_UP,ADV_EV_DOUBLE);
+    if(!model.in_session){model.test=true;model.page=ADV_PAGE_MAP;adv_test_open(&model,station);}
+    model.phase=ADV_PLAY;return model.game;
+}
+static void late_phase(int which,int station,uint32_t score,int *res,int *over,uint32_t *pscore)
+{
+    if(which==8)model.phase=ADV_TITLE;
+    if(which==9){model.phase=ADV_READY;model.t=120;}
+    if(which==10)model.phase=ADV_PAUSE;
+    if(which==11){model.phase=ADV_END;model.t=60;*res=0;*over=1;}
+    if(which==12||which==13){model.phase=ADV_RESULT;*pscore=which==13?UINT32_MAX:score;model.best[station]=*pscore;model.record=which==12;model.test=false;}
+}
+// SKI: 0 straight, 1 lean, 2 jump, 3 tree fall, 4 bump, 5 dense course, 6 gate pass, 7 cocoa, 8.. phases.
+void host_ski_case(int which)
+{
+    adv_ski_t *p=late_open(6);adv_ski_start(p,4321);
+    adv_input_t none={0},right={.down_held=1},jump={.ok_down=1,.ok_held=1};
+    for(int i=0;i<90;i++)adv_ski_step(p,&none);
+    if(which==1)for(int i=0;i<16;i++)adv_ski_step(p,&right);
+    if(which==2){adv_ski_step(p,&jump);for(int i=0;i<14;i++)adv_ski_step(p,&none);}
+    if(which==3||which==4){p->fall=which==3?30:12;p->message=which==3?SKI_MSG_TREE:SKI_MSG_BUMP;p->feedback=50;p->res=which==3?600:820;}
+    if(which==5)for(int i=0;i<ADV_SKI_CAP;i++)p->objs[i]=(adv_ski_obj_t){1+i%6,30+(i*53)%180,p->pos+10+i*22,0};
+    if(which==6){p->score=12;p->message=SKI_MSG_PASS;p->feedback=40;}
+    if(which==7){p->message=SKI_MSG_COCOA;p->feedback=40;p->objs[0]=(adv_ski_obj_t){SKI_CABIN,150,p->pos+60,0};}
+    late_phase(which,6,31,&p->res,&p->over,&p->score);
+}
+// SKY: 0 drifting, 1 heating, 2 venting, 3 hit, 4 stamp, 5 dense sky, 6 low over treetops, 7 warm current.
+void host_sky_case(int which)
+{
+    adv_sky_t *p=late_open(7);adv_sky_start(p,4321);
+    adv_input_t none={0},heat={.ok_held=1};
+    for(int i=0;i<60;i++)adv_sky_step(p,&none);
+    for(int i=0;i<ADV_SKY_CAP;i++)p->objs[i]=(adv_sky_obj_t){0};
+    int d=p->dist>>4,a=p->alt>>4;
+    if(which==1)for(int i=0;i<20;i++)adv_sky_step(p,&heat);
+    if(which==2)p->vy=-32;
+    if(which==3){p->invuln=ADV_SKY_INVULN-6;p->message=SKY_MSG_STORM;p->feedback=54;p->res=700;}
+    if(which==4){p->message=SKY_MSG_STAMP;p->feedback=50;p->bonus=10;}
+    if(which==5)for(int i=0;i<ADV_SKY_CAP;i++)p->objs[i]=(adv_sky_obj_t){1+i%4,d+40+i*24,a-100+(i*47)%260,i*9,0};
+    if(which==6){p->alt=20*16;}
+    if(which==7)p->objs[0]=(adv_sky_obj_t){SKY_WARM,d+110,a+20,0,0};
+    if(which==0){p->objs[0]=(adv_sky_obj_t){SKY_STORM,d+120,a+150,0,0};p->objs[1]=(adv_sky_obj_t){SKY_BIRD,d+90,a+40,8,0};}
+    late_phase(which,7,640,&p->res,&p->over,&p->score);
+}
+// SPACE: 0 falling, 1 main engine, 2 side thruster, 3 landed, 4 planting the flag, 5 crash, 6 fuel can + rock, 7 round 5.
+void host_space_case(int which)
+{
+    adv_space_t *p=late_open(8);adv_space_start(p,4321);
+    adv_input_t none={0},thrust={.ok_held=1},side={.down_held=1};
+    for(int i=0;i<40;i++)adv_space_step(p,&none);
+    if(which==1)for(int i=0;i<12;i++)adv_space_step(p,&thrust);
+    if(which==2)for(int i=0;i<12;i++)adv_space_step(p,&side);
+    if(which==3||which==4){p->x=p->pad*256;p->y=ADV_SPACE_GROUND*256;p->phase=SPACE_LANDED;p->timer=which==3?ADV_SPACE_LANDED-20:ADV_SPACE_LANDED-90;
+        p->score=242;p->last_bonus=242;p->message=SPACE_MSG_LANDED;p->feedback=60;}
+    if(which==5){p->y=ADV_SPACE_GROUND*256;p->phase=SPACE_CRASH;p->timer=40;p->message=SPACE_MSG_HARD;p->feedback=60;p->res=600;}
+    if(which==6){int lx=p->x/256,ly=p->y/256;p->objs[0]=(adv_space_obj_t){SPACE_FUEL,(lx+70)*256,(ly+20)*256,-220};p->objs[1]=(adv_space_obj_t){SPACE_ROCK,(lx-70)*256,(ly+40)*256,200};}
+    if(which==7){p->round=4;p->score=860;}
+    late_phase(which,8,1210,&p->res,&p->over,&p->score);
 }
 
 void host_post_station_at(int lane,int x)

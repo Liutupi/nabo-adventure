@@ -1,0 +1,52 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_sky_controls_idle__p0",
+  "width": 43,
+  "height": 40,
+  "palette_rgb565": [
+    0,
+    12777,
+    17100,
+    29384
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 358,
+  "table_bytes": 92,
+  "frame_sha256": [
+    "91fd38b0c6564cbad45d1606ebd867d96fe3b99638130711a93f21b56376306b"
+  ],
+  "source_sha256": [
+    "d309d2367fbff94f5e4a535799ea7439ec58a05d619d35bf8237484e9119d7ee"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/sky/controls_idle",
+  "group": "sky",
+  "symbol": "adv_assets_game_sky_controls_idle__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/props/controls_idle.png",
+      "sha256": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/sky/controls_idle",
+      "logical_symbol": "adv_assets_game_sky_controls_idle__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

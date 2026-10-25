@@ -1,0 +1,53 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_tiles_lunar_2__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8617,
+    21295,
+    29714,
+    36215
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 220,
+  "table_bytes": 78,
+  "frame_sha256": [
+    "e15b9886e6c554cf94440b8ff386f946e472ca61959ab3746ae6e05ec24d79e8"
+  ],
+  "source_sha256": [
+    "8ad816d9acc3e973314ed50fd4693f788a9cdf8ff6fc8efe25944412424b1901"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space/tiles/lunar-2",
+  "group": "space",
+  "symbol": "adv_assets_game_space_tiles_lunar_2__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/space/tiles/lunar-2.png",
+      "sha256": "07353ad30f0350c08718fa7e2a2f9de25e45afa6d310829954795ddbe2de2d95"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space/tiles/lunar-2",
+      "logical_symbol": "adv_assets_game_space_tiles_lunar_2__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

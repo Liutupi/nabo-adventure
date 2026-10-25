@@ -13,9 +13,6 @@
 #include "adv_assets_climb_a_summit_cheer_right__p0.h"
 #include "adv_assets_climb_a_switch_grab_left__p0.h"
 #include "adv_assets_climb_a_switch_grab_right__p0.h"
-#include "adv_assets_climb_b_grip_idle_left__p0.h"
-#include "adv_assets_climb_b_grip_idle_right__p0.h"
-#include "adv_assets_climb_b_settlement_cheer__p0.h"
 #include "adv_assets_game_climb_props_canteen__p0.h"
 #include "adv_assets_game_climb_props_falling_rock__p0.h"
 #include "adv_assets_game_climb_props_hold_fragile__p0.h"
@@ -61,6 +58,38 @@
 #include "adv_assets_game_post_tiles_sleepers__p0.h"
 #include "adv_assets_game_post_tiles_track_fork__p0.h"
 #include "adv_assets_game_post_tiles_track_straight__p0.h"
+#include "adv_assets_game_ski_props_finish_arch__p0.h"
+#include "adv_assets_game_ski_props_gate_blue__p0.h"
+#include "adv_assets_game_ski_props_gate_red__p0.h"
+#include "adv_assets_game_ski_props_hot_cocoa_cabin__p0.h"
+#include "adv_assets_game_ski_props_pine_large__p0.h"
+#include "adv_assets_game_ski_props_pole__p0.h"
+#include "adv_assets_game_ski_props_ski_left__p0.h"
+#include "adv_assets_game_ski_props_ski_right__p0.h"
+#include "adv_assets_game_ski_shared_pine_small__p0.h"
+#include "adv_assets_game_ski_shared_snow_drift__p0.h"
+#include "adv_assets_game_ski_shared_snow_ground__p0.h"
+#include "adv_assets_game_ski_shared_snow_mogul__p0.h"
+#include "adv_assets_game_sky_basket_back__p0.h"
+#include "adv_assets_game_sky_basket_front__p0.h"
+#include "adv_assets_game_sky_burner__p0.h"
+#include "adv_assets_game_sky_cloud_00__p0.h"
+#include "adv_assets_game_sky_cloud_01__p0.h"
+#include "adv_assets_game_sky_cloud_02__p0.h"
+#include "adv_assets_game_sky_cloud_03__p0.h"
+#include "adv_assets_game_sky_controls_idle__p0.h"
+#include "adv_assets_game_sky_envelope__p0.h"
+#include "adv_assets_game_sky_stamp__p0.h"
+#include "adv_assets_game_sky_thundercloud__p0.h"
+#include "adv_assets_game_space_lander_back__p0.h"
+#include "adv_assets_game_space_lander_front__p0.h"
+#include "adv_assets_game_space_props_asteroid__p0.h"
+#include "adv_assets_game_space_props_flag__p0.h"
+#include "adv_assets_game_space_props_fuel_can__p0.h"
+#include "adv_assets_game_space_props_landing_pad__p0.h"
+#include "adv_assets_game_space_tiles_lunar_0__p0.h"
+#include "adv_assets_game_space_tiles_lunar_1__p0.h"
+#include "adv_assets_game_space_tiles_lunar_2__p0.h"
 #include "adv_assets_night_a_catch__p0.h"
 #include "adv_assets_night_a_cheer__p0.h"
 #include "adv_assets_night_a_lift_jar__p0.h"
@@ -68,13 +97,6 @@
 #include "adv_assets_night_a_move_right__p0.h"
 #include "adv_assets_night_a_seat_idle__p0.h"
 #include "adv_assets_night_a_yawn__p0.h"
-#include "adv_assets_night_b_catch__p0.h"
-#include "adv_assets_night_b_cheer__p0.h"
-#include "adv_assets_night_b_lift_jar__p0.h"
-#include "adv_assets_night_b_move_left__p0.h"
-#include "adv_assets_night_b_move_right__p0.h"
-#include "adv_assets_night_b_seat_idle__p0.h"
-#include "adv_assets_night_b_yawn__p0.h"
 #include "adv_assets_night_shared_moth__p0.h"
 #include "adv_assets_post_a_delivered__p0.h"
 #include "adv_assets_post_a_hit__p0.h"
@@ -82,10 +104,30 @@
 #include "adv_assets_post_a_settlement_cheer__p0.h"
 #include "adv_assets_post_a_throw__p0.h"
 #include "adv_assets_post_a_whistle__p0.h"
-#include "adv_assets_post_b_delivered__p0.h"
-#include "adv_assets_post_b_idle__p0.h"
 #include "adv_assets_post_props_wheel_cycle__p0.h"
 #include "adv_assets_post_props_whistle_cord__p0.h"
+#include "adv_assets_ski_a_fall__p0.h"
+#include "adv_assets_ski_a_finish__p0.h"
+#include "adv_assets_ski_a_jump__p0.h"
+#include "adv_assets_ski_a_lean_left__p0.h"
+#include "adv_assets_ski_a_lean_right__p0.h"
+#include "adv_assets_ski_a_settlement_cheer__p0.h"
+#include "adv_assets_ski_a_straight__p0.h"
+#include "adv_assets_sky_a_heat__p0.h"
+#include "adv_assets_sky_a_hit__p0.h"
+#include "adv_assets_sky_a_idle__p0.h"
+#include "adv_assets_sky_a_receive_stamp__p0.h"
+#include "adv_assets_sky_a_settlement_cheer__p0.h"
+#include "adv_assets_sky_a_vent__p0.h"
+#include "adv_assets_sky_props_bird__p0.h"
+#include "adv_assets_sky_props_heat_controls__p0.h"
+#include "adv_assets_sky_props_vent_controls__p0.h"
+#include "adv_assets_space_a_cabin_idle__p0.h"
+#include "adv_assets_space_a_hard_land__p0.h"
+#include "adv_assets_space_a_jet__p0.h"
+#include "adv_assets_space_a_land__p0.h"
+#include "adv_assets_space_a_plant_flag__p0.h"
+#include "adv_assets_space_a_settlement_cheer__p0.h"
 #include "adv_assets_static_icon_fuel__p0.h"
 #include "adv_assets_static_icon_hot_air__p0.h"
 #include "adv_assets_static_icon_oxygen__p0.h"
@@ -293,15 +335,6 @@ static const adv_asset_piece_t adv_assets_climb_a_switch_grab_left__pieces[] = {
 static const adv_asset_piece_t adv_assets_climb_a_switch_grab_right__pieces[] = {
     {&adv_assets_climb_a_switch_grab_right__p0, 0, 0},
 };
-static const adv_asset_piece_t adv_assets_climb_b_grip_idle_left__pieces[] = {
-    {&adv_assets_climb_b_grip_idle_left__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_climb_b_grip_idle_right__pieces[] = {
-    {&adv_assets_climb_b_grip_idle_right__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_climb_b_settlement_cheer__pieces[] = {
-    {&adv_assets_climb_b_settlement_cheer__p0, 0, 0},
-};
 static const adv_asset_piece_t adv_assets_game_climb_props_canteen__pieces[] = {
     {&adv_assets_game_climb_props_canteen__p0, 0, 0},
 };
@@ -437,6 +470,102 @@ static const adv_asset_piece_t adv_assets_game_post_tiles_track_fork__pieces[] =
 static const adv_asset_piece_t adv_assets_game_post_tiles_track_straight__pieces[] = {
     {&adv_assets_game_post_tiles_track_straight__p0, 0, 0},
 };
+static const adv_asset_piece_t adv_assets_game_ski_props_finish_arch__pieces[] = {
+    {&adv_assets_game_ski_props_finish_arch__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_ski_props_gate_blue__pieces[] = {
+    {&adv_assets_game_ski_props_gate_blue__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_ski_props_gate_red__pieces[] = {
+    {&adv_assets_game_ski_props_gate_red__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_ski_props_hot_cocoa_cabin__pieces[] = {
+    {&adv_assets_game_ski_props_hot_cocoa_cabin__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_ski_props_pine_large__pieces[] = {
+    {&adv_assets_game_ski_props_pine_large__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_ski_props_pole__pieces[] = {
+    {&adv_assets_game_ski_props_pole__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_ski_props_ski_left__pieces[] = {
+    {&adv_assets_game_ski_props_ski_left__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_ski_props_ski_right__pieces[] = {
+    {&adv_assets_game_ski_props_ski_right__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_ski_shared_pine_small__pieces[] = {
+    {&adv_assets_game_ski_shared_pine_small__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_ski_shared_snow_drift__pieces[] = {
+    {&adv_assets_game_ski_shared_snow_drift__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_ski_shared_snow_ground__pieces[] = {
+    {&adv_assets_game_ski_shared_snow_ground__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_ski_shared_snow_mogul__pieces[] = {
+    {&adv_assets_game_ski_shared_snow_mogul__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_sky_basket_back__pieces[] = {
+    {&adv_assets_game_sky_basket_back__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_sky_basket_front__pieces[] = {
+    {&adv_assets_game_sky_basket_front__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_sky_burner__pieces[] = {
+    {&adv_assets_game_sky_burner__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_sky_cloud_00__pieces[] = {
+    {&adv_assets_game_sky_cloud_00__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_sky_cloud_01__pieces[] = {
+    {&adv_assets_game_sky_cloud_01__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_sky_cloud_02__pieces[] = {
+    {&adv_assets_game_sky_cloud_02__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_sky_cloud_03__pieces[] = {
+    {&adv_assets_game_sky_cloud_03__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_sky_controls_idle__pieces[] = {
+    {&adv_assets_game_sky_controls_idle__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_sky_envelope__pieces[] = {
+    {&adv_assets_game_sky_envelope__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_sky_stamp__pieces[] = {
+    {&adv_assets_game_sky_stamp__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_sky_thundercloud__pieces[] = {
+    {&adv_assets_game_sky_thundercloud__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_lander_back__pieces[] = {
+    {&adv_assets_game_space_lander_back__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_lander_front__pieces[] = {
+    {&adv_assets_game_space_lander_front__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_props_asteroid__pieces[] = {
+    {&adv_assets_game_space_props_asteroid__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_props_flag__pieces[] = {
+    {&adv_assets_game_space_props_flag__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_props_fuel_can__pieces[] = {
+    {&adv_assets_game_space_props_fuel_can__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_props_landing_pad__pieces[] = {
+    {&adv_assets_game_space_props_landing_pad__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_tiles_lunar_0__pieces[] = {
+    {&adv_assets_game_space_tiles_lunar_0__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_tiles_lunar_1__pieces[] = {
+    {&adv_assets_game_space_tiles_lunar_1__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_tiles_lunar_2__pieces[] = {
+    {&adv_assets_game_space_tiles_lunar_2__p0, 0, 0},
+};
 static const adv_asset_piece_t adv_assets_night_a_catch__pieces[] = {
     {&adv_assets_night_a_catch__p0, 0, 0},
 };
@@ -457,27 +586,6 @@ static const adv_asset_piece_t adv_assets_night_a_seat_idle__pieces[] = {
 };
 static const adv_asset_piece_t adv_assets_night_a_yawn__pieces[] = {
     {&adv_assets_night_a_yawn__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_b_catch__pieces[] = {
-    {&adv_assets_night_b_catch__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_b_cheer__pieces[] = {
-    {&adv_assets_night_b_cheer__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_b_lift_jar__pieces[] = {
-    {&adv_assets_night_b_lift_jar__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_b_move_left__pieces[] = {
-    {&adv_assets_night_b_move_left__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_b_move_right__pieces[] = {
-    {&adv_assets_night_b_move_right__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_b_seat_idle__pieces[] = {
-    {&adv_assets_night_b_seat_idle__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_b_yawn__pieces[] = {
-    {&adv_assets_night_b_yawn__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_night_shared_moth__pieces[] = {
     {&adv_assets_night_shared_moth__p0, 0, 0},
@@ -500,17 +608,77 @@ static const adv_asset_piece_t adv_assets_post_a_throw__pieces[] = {
 static const adv_asset_piece_t adv_assets_post_a_whistle__pieces[] = {
     {&adv_assets_post_a_whistle__p0, 0, 0},
 };
-static const adv_asset_piece_t adv_assets_post_b_delivered__pieces[] = {
-    {&adv_assets_post_b_delivered__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_post_b_idle__pieces[] = {
-    {&adv_assets_post_b_idle__p0, 0, 0},
-};
 static const adv_asset_piece_t adv_assets_post_props_wheel_cycle__pieces[] = {
     {&adv_assets_post_props_wheel_cycle__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_post_props_whistle_cord__pieces[] = {
     {&adv_assets_post_props_whistle_cord__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_ski_a_fall__pieces[] = {
+    {&adv_assets_ski_a_fall__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_ski_a_finish__pieces[] = {
+    {&adv_assets_ski_a_finish__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_ski_a_jump__pieces[] = {
+    {&adv_assets_ski_a_jump__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_ski_a_lean_left__pieces[] = {
+    {&adv_assets_ski_a_lean_left__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_ski_a_lean_right__pieces[] = {
+    {&adv_assets_ski_a_lean_right__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_ski_a_settlement_cheer__pieces[] = {
+    {&adv_assets_ski_a_settlement_cheer__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_ski_a_straight__pieces[] = {
+    {&adv_assets_ski_a_straight__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_sky_a_heat__pieces[] = {
+    {&adv_assets_sky_a_heat__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_sky_a_hit__pieces[] = {
+    {&adv_assets_sky_a_hit__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_sky_a_idle__pieces[] = {
+    {&adv_assets_sky_a_idle__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_sky_a_receive_stamp__pieces[] = {
+    {&adv_assets_sky_a_receive_stamp__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_sky_a_settlement_cheer__pieces[] = {
+    {&adv_assets_sky_a_settlement_cheer__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_sky_a_vent__pieces[] = {
+    {&adv_assets_sky_a_vent__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_sky_props_bird__pieces[] = {
+    {&adv_assets_sky_props_bird__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_sky_props_heat_controls__pieces[] = {
+    {&adv_assets_sky_props_heat_controls__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_sky_props_vent_controls__pieces[] = {
+    {&adv_assets_sky_props_vent_controls__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_space_a_cabin_idle__pieces[] = {
+    {&adv_assets_space_a_cabin_idle__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_space_a_hard_land__pieces[] = {
+    {&adv_assets_space_a_hard_land__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_space_a_jet__pieces[] = {
+    {&adv_assets_space_a_jet__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_space_a_land__pieces[] = {
+    {&adv_assets_space_a_land__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_space_a_plant_flag__pieces[] = {
+    {&adv_assets_space_a_plant_flag__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_space_a_settlement_cheer__pieces[] = {
+    {&adv_assets_space_a_settlement_cheer__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_static_icon_fuel__pieces[] = {
     {&adv_assets_static_icon_fuel__p0, 0, 0},
@@ -1153,9 +1321,6 @@ const adv_asset_record_t adv_assets_catalog[] = {
     {"climb_a/summit_cheer_right", adv_assets_climb_a_summit_cheer_right__pieces, 1, 60, 65, 30, 62, 12, false},
     {"climb_a/switch_grab_left", adv_assets_climb_a_switch_grab_left__pieces, 1, 60, 65, 30, 62, 12, false},
     {"climb_a/switch_grab_right", adv_assets_climb_a_switch_grab_right__pieces, 1, 60, 65, 30, 62, 12, false},
-    {"climb_b/grip_idle_left", adv_assets_climb_b_grip_idle_left__pieces, 1, 60, 65, 30, 62, 12, true},
-    {"climb_b/grip_idle_right", adv_assets_climb_b_grip_idle_right__pieces, 1, 60, 65, 30, 62, 12, true},
-    {"climb_b/settlement_cheer", adv_assets_climb_b_settlement_cheer__pieces, 1, 72, 78, 36, 75, 12, false},
     {"game/climb/props/canteen", adv_assets_game_climb_props_canteen__pieces, 1, 16, 24, 8, 24, 0, false},
     {"game/climb/props/falling-rock", adv_assets_game_climb_props_falling_rock__pieces, 1, 24, 24, 12, 24, 0, false},
     {"game/climb/props/hold-fragile", adv_assets_game_climb_props_hold_fragile__pieces, 1, 24, 20, 12, 9, 0, false},
@@ -1201,6 +1366,38 @@ const adv_asset_record_t adv_assets_catalog[] = {
     {"game/post/tiles/sleepers", adv_assets_game_post_tiles_sleepers__pieces, 1, 32, 32, 16, 32, 0, false},
     {"game/post/tiles/track-fork", adv_assets_game_post_tiles_track_fork__pieces, 1, 64, 56, 32, 36, 0, false},
     {"game/post/tiles/track-straight", adv_assets_game_post_tiles_track_straight__pieces, 1, 32, 32, 16, 32, 0, false},
+    {"game/ski/props/finish-arch", adv_assets_game_ski_props_finish_arch__pieces, 1, 96, 88, 48, 77, 0, false},
+    {"game/ski/props/gate-blue", adv_assets_game_ski_props_gate_blue__pieces, 1, 64, 56, 32, 52, 0, false},
+    {"game/ski/props/gate-red", adv_assets_game_ski_props_gate_red__pieces, 1, 64, 56, 32, 52, 0, false},
+    {"game/ski/props/hot-cocoa-cabin", adv_assets_game_ski_props_hot_cocoa_cabin__pieces, 1, 64, 64, 32, 58, 0, false},
+    {"game/ski/props/pine-large", adv_assets_game_ski_props_pine_large__pieces, 1, 64, 64, 32, 60, 0, false},
+    {"game/ski/props/pole", adv_assets_game_ski_props_pole__pieces, 1, 5, 24, 2, 3, 0, false},
+    {"game/ski/props/ski-left", adv_assets_game_ski_props_ski_left__pieces, 1, 32, 10, 25, 3, 0, false},
+    {"game/ski/props/ski-right", adv_assets_game_ski_props_ski_right__pieces, 1, 32, 10, 7, 3, 0, false},
+    {"game/ski/shared/pine-small", adv_assets_game_ski_shared_pine_small__pieces, 1, 32, 32, 16, 31, 0, false},
+    {"game/ski/shared/snow-drift", adv_assets_game_ski_shared_snow_drift__pieces, 1, 32, 32, 16, 31, 0, false},
+    {"game/ski/shared/snow-ground", adv_assets_game_ski_shared_snow_ground__pieces, 1, 32, 32, 16, 31, 0, false},
+    {"game/ski/shared/snow-mogul", adv_assets_game_ski_shared_snow_mogul__pieces, 1, 32, 32, 16, 31, 0, false},
+    {"game/sky/basket_back", adv_assets_game_sky_basket_back__pieces, 1, 64, 10, 32, 2, 0, false},
+    {"game/sky/basket_front", adv_assets_game_sky_basket_front__pieces, 1, 64, 28, 32, 2, 0, false},
+    {"game/sky/burner", adv_assets_game_sky_burner__pieces, 1, 16, 12, 8, 6, 0, false},
+    {"game/sky/cloud_00", adv_assets_game_sky_cloud_00__pieces, 1, 32, 32, 16, 26, 0, false},
+    {"game/sky/cloud_01", adv_assets_game_sky_cloud_01__pieces, 1, 32, 32, 16, 25, 0, false},
+    {"game/sky/cloud_02", adv_assets_game_sky_cloud_02__pieces, 1, 32, 32, 16, 24, 0, false},
+    {"game/sky/cloud_03", adv_assets_game_sky_cloud_03__pieces, 1, 32, 32, 16, 23, 0, false},
+    {"game/sky/controls_idle", adv_assets_game_sky_controls_idle__pieces, 1, 43, 40, 22, 40, 0, false},
+    {"game/sky/envelope", adv_assets_game_sky_envelope__pieces, 1, 96, 96, 48, 94, 0, false},
+    {"game/sky/stamp", adv_assets_game_sky_stamp__pieces, 1, 16, 20, 8, 10, 0, false},
+    {"game/sky/thundercloud", adv_assets_game_sky_thundercloud__pieces, 1, 48, 32, 24, 29, 0, false},
+    {"game/space/lander/back", adv_assets_game_space_lander_back__pieces, 1, 96, 96, 48, 92, 0, false},
+    {"game/space/lander/front", adv_assets_game_space_lander_front__pieces, 1, 96, 96, 48, 92, 0, false},
+    {"game/space/props/asteroid", adv_assets_game_space_props_asteroid__pieces, 1, 32, 28, 16, 28, 0, false},
+    {"game/space/props/flag", adv_assets_game_space_props_flag__pieces, 1, 16, 28, 2, 28, 0, false},
+    {"game/space/props/fuel-can", adv_assets_game_space_props_fuel_can__pieces, 1, 16, 24, 8, 24, 0, false},
+    {"game/space/props/landing-pad", adv_assets_game_space_props_landing_pad__pieces, 1, 96, 24, 48, 24, 0, false},
+    {"game/space/tiles/lunar-0", adv_assets_game_space_tiles_lunar_0__pieces, 1, 32, 32, 0, 0, 0, false},
+    {"game/space/tiles/lunar-1", adv_assets_game_space_tiles_lunar_1__pieces, 1, 32, 32, 0, 0, 0, false},
+    {"game/space/tiles/lunar-2", adv_assets_game_space_tiles_lunar_2__pieces, 1, 32, 32, 0, 0, 0, false},
     {"night_a/catch", adv_assets_night_a_catch__pieces, 1, 54, 56, 20, 56, 12, false},
     {"night_a/cheer", adv_assets_night_a_cheer__pieces, 1, 56, 72, 23, 72, 12, false},
     {"night_a/lift_jar", adv_assets_night_a_lift_jar__pieces, 1, 54, 56, 20, 56, 12, false},
@@ -1208,13 +1405,6 @@ const adv_asset_record_t adv_assets_catalog[] = {
     {"night_a/move_right", adv_assets_night_a_move_right__pieces, 1, 54, 56, 20, 56, 12, false},
     {"night_a/seat_idle", adv_assets_night_a_seat_idle__pieces, 1, 54, 56, 20, 56, 12, true},
     {"night_a/yawn", adv_assets_night_a_yawn__pieces, 1, 54, 56, 20, 56, 12, false},
-    {"night_b/catch", adv_assets_night_b_catch__pieces, 1, 53, 56, 20, 56, 12, false},
-    {"night_b/cheer", adv_assets_night_b_cheer__pieces, 1, 52, 72, 21, 72, 12, false},
-    {"night_b/lift_jar", adv_assets_night_b_lift_jar__pieces, 1, 53, 56, 20, 56, 12, false},
-    {"night_b/move_left", adv_assets_night_b_move_left__pieces, 1, 53, 56, 20, 56, 12, false},
-    {"night_b/move_right", adv_assets_night_b_move_right__pieces, 1, 53, 56, 20, 56, 12, false},
-    {"night_b/seat_idle", adv_assets_night_b_seat_idle__pieces, 1, 53, 56, 20, 56, 12, true},
-    {"night_b/yawn", adv_assets_night_b_yawn__pieces, 1, 53, 56, 20, 56, 12, false},
     {"night_shared/moth", adv_assets_night_shared_moth__pieces, 1, 16, 16, 8, 13, 12, true},
     {"post_a/delivered", adv_assets_post_a_delivered__pieces, 1, 36, 40, 22, 40, 12, false},
     {"post_a/hit", adv_assets_post_a_hit__pieces, 1, 36, 40, 22, 40, 12, false},
@@ -1222,10 +1412,30 @@ const adv_asset_record_t adv_assets_catalog[] = {
     {"post_a/settlement_cheer", adv_assets_post_a_settlement_cheer__pieces, 1, 49, 72, 27, 72, 12, false},
     {"post_a/throw", adv_assets_post_a_throw__pieces, 1, 36, 40, 22, 40, 12, false},
     {"post_a/whistle", adv_assets_post_a_whistle__pieces, 1, 36, 40, 22, 40, 12, false},
-    {"post_b/delivered", adv_assets_post_b_delivered__pieces, 1, 36, 40, 22, 40, 12, false},
-    {"post_b/idle", adv_assets_post_b_idle__pieces, 1, 36, 40, 22, 40, 12, true},
     {"post_props/wheel-cycle", adv_assets_post_props_wheel_cycle__pieces, 1, 96, 88, 48, 81, 12, true},
     {"post_props/whistle-cord", adv_assets_post_props_whistle_cord__pieces, 1, 96, 88, 48, 81, 12, false},
+    {"ski_a/fall", adv_assets_ski_a_fall__pieces, 1, 63, 68, 32, 60, 12, false},
+    {"ski_a/finish", adv_assets_ski_a_finish__pieces, 1, 63, 68, 32, 60, 12, false},
+    {"ski_a/jump", adv_assets_ski_a_jump__pieces, 1, 63, 68, 32, 60, 12, false},
+    {"ski_a/lean_left", adv_assets_ski_a_lean_left__pieces, 1, 63, 68, 32, 60, 12, false},
+    {"ski_a/lean_right", adv_assets_ski_a_lean_right__pieces, 1, 63, 68, 32, 60, 12, false},
+    {"ski_a/settlement_cheer", adv_assets_ski_a_settlement_cheer__pieces, 1, 45, 72, 30, 72, 12, false},
+    {"ski_a/straight", adv_assets_ski_a_straight__pieces, 1, 63, 68, 32, 60, 12, true},
+    {"sky_a/heat", adv_assets_sky_a_heat__pieces, 1, 43, 40, 22, 40, 12, false},
+    {"sky_a/hit", adv_assets_sky_a_hit__pieces, 1, 43, 40, 22, 40, 12, false},
+    {"sky_a/idle", adv_assets_sky_a_idle__pieces, 1, 43, 40, 22, 40, 12, true},
+    {"sky_a/receive_stamp", adv_assets_sky_a_receive_stamp__pieces, 1, 43, 40, 22, 40, 12, false},
+    {"sky_a/settlement_cheer", adv_assets_sky_a_settlement_cheer__pieces, 1, 51, 72, 27, 72, 12, false},
+    {"sky_a/vent", adv_assets_sky_a_vent__pieces, 1, 43, 40, 22, 40, 12, false},
+    {"sky_props/bird", adv_assets_sky_props_bird__pieces, 1, 24, 20, 12, 12, 12, true},
+    {"sky_props/heat_controls", adv_assets_sky_props_heat_controls__pieces, 1, 43, 40, 22, 40, 12, false},
+    {"sky_props/vent_controls", adv_assets_sky_props_vent_controls__pieces, 1, 43, 40, 22, 40, 12, false},
+    {"space_a/cabin_idle", adv_assets_space_a_cabin_idle__pieces, 1, 57, 57, 29, 56, 12, true},
+    {"space_a/hard_land", adv_assets_space_a_hard_land__pieces, 1, 57, 57, 29, 56, 12, false},
+    {"space_a/jet", adv_assets_space_a_jet__pieces, 1, 57, 57, 29, 56, 12, true},
+    {"space_a/land", adv_assets_space_a_land__pieces, 1, 57, 57, 29, 56, 12, false},
+    {"space_a/plant_flag", adv_assets_space_a_plant_flag__pieces, 1, 57, 57, 29, 56, 12, false},
+    {"space_a/settlement_cheer", adv_assets_space_a_settlement_cheer__pieces, 1, 73, 73, 37, 72, 12, false},
     {"static/icon/fuel", adv_assets_static_icon_fuel__pieces, 1, 16, 16, 8, 8, 0, false},
     {"static/icon/hot-air", adv_assets_static_icon_hot_air__pieces, 1, 16, 16, 8, 8, 0, false},
     {"static/icon/oxygen", adv_assets_static_icon_oxygen__pieces, 1, 16, 16, 8, 8, 0, false},
@@ -1450,32 +1660,32 @@ const adv_ninepatch_t adv_assets_patch_info_normal = {{&adv_assets_ui_cards_info
 const adv_ninepatch_t adv_assets_patch_info_current = {{&adv_assets_ui_cards_info_current_top_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_top_right__p0, &adv_assets_ui_cards_info_current_left__p0, &adv_assets_ui_cards_info_current_center__p0, &adv_assets_ui_cards_info_current_right__p0, &adv_assets_ui_cards_info_current_bottom_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_bottom_right__p0}};
 const adv_ninepatch_t adv_assets_patch_popup_normal = {{&adv_assets_ui_cards_popup_normal_top_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_top_right__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_info_normal_center__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_popup_normal_bottom_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_bottom_right__p0}};
 const adv_asset_digit_t adv_assets_digits_36[] = {
-    {48, &adv_assets_catalog[255], 36},
-    {49, &adv_assets_catalog[256], 22},
-    {50, &adv_assets_catalog[257], 31},
-    {51, &adv_assets_catalog[258], 32},
-    {52, &adv_assets_catalog[259], 36},
-    {53, &adv_assets_catalog[260], 31},
-    {54, &adv_assets_catalog[261], 34},
-    {55, &adv_assets_catalog[262], 33},
-    {56, &adv_assets_catalog[263], 35},
-    {57, &adv_assets_catalog[264], 33},
-    {109, &adv_assets_catalog[265], 53},
-    {43, &adv_assets_catalog[266], 31},
+    {48, &adv_assets_catalog[297], 36},
+    {49, &adv_assets_catalog[298], 22},
+    {50, &adv_assets_catalog[299], 31},
+    {51, &adv_assets_catalog[300], 32},
+    {52, &adv_assets_catalog[301], 36},
+    {53, &adv_assets_catalog[302], 31},
+    {54, &adv_assets_catalog[303], 34},
+    {55, &adv_assets_catalog[304], 33},
+    {56, &adv_assets_catalog[305], 35},
+    {57, &adv_assets_catalog[306], 33},
+    {109, &adv_assets_catalog[307], 53},
+    {43, &adv_assets_catalog[308], 31},
 };
 const adv_asset_digit_t adv_assets_digits_20[] = {
-    {48, &adv_assets_catalog[243], 22},
-    {49, &adv_assets_catalog[244], 15},
-    {50, &adv_assets_catalog[245], 20},
-    {51, &adv_assets_catalog[246], 19},
-    {52, &adv_assets_catalog[247], 22},
-    {53, &adv_assets_catalog[248], 20},
-    {54, &adv_assets_catalog[249], 21},
-    {55, &adv_assets_catalog[250], 20},
-    {56, &adv_assets_catalog[251], 21},
-    {57, &adv_assets_catalog[252], 21},
-    {109, &adv_assets_catalog[253], 32},
-    {43, &adv_assets_catalog[254], 20},
+    {48, &adv_assets_catalog[285], 22},
+    {49, &adv_assets_catalog[286], 15},
+    {50, &adv_assets_catalog[287], 20},
+    {51, &adv_assets_catalog[288], 19},
+    {52, &adv_assets_catalog[289], 22},
+    {53, &adv_assets_catalog[290], 20},
+    {54, &adv_assets_catalog[291], 21},
+    {55, &adv_assets_catalog[292], 20},
+    {56, &adv_assets_catalog[293], 21},
+    {57, &adv_assets_catalog[294], 21},
+    {109, &adv_assets_catalog[295], 32},
+    {43, &adv_assets_catalog[296], 20},
 };
 const uint16_t adv_assets_ui_palette[] = {8649, 15375, 17298, 25487, 35986, 38099, 40276, 44406, 45672, 46518, 48007, 54567, 56595, 57082, 63356, 65502};
 const size_t adv_assets_ui_palette_count = 16;

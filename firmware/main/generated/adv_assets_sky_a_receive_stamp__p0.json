@@ -1,0 +1,135 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_sky_a_receive_stamp__p0",
+  "width": 43,
+  "height": 40,
+  "palette_rgb565": [
+    0,
+    2081,
+    8322,
+    8454,
+    8520,
+    12548,
+    12613,
+    14693,
+    14694,
+    14759,
+    16708,
+    16741,
+    16873,
+    18854,
+    20934,
+    20999,
+    21033,
+    22723,
+    23211,
+    27175,
+    29321,
+    32964,
+    33481,
+    33547,
+    33645,
+    35076,
+    35922,
+    36120,
+    37675,
+    39205,
+    41318,
+    41836,
+    41998,
+    43527,
+    44308,
+    46553,
+    48175,
+    48468,
+    48732,
+    50353,
+    54709,
+    54840,
+    54972,
+    56626,
+    58837,
+    59066,
+    59165,
+    60983,
+    61245,
+    62933,
+    63326,
+    63358,
+    63390,
+    63391,
+    65111,
+    65208,
+    65241,
+    65338,
+    65404,
+    65470,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0
+  ],
+  "frame_map": [
+    0,
+    1,
+    2,
+    0
+  ],
+  "data_bytes": 1559,
+  "table_bytes": 384,
+  "frame_sha256": [
+    "ad58c330561f872e04d3e53936006f5c31ac91e107e166e00b38b04d6a1c61c5",
+    "fe6508658345814a43576c75294a7b4bb4b75fba6b08556e781c95674085581e",
+    "a2d5f453e3891f66869a0209583bea6c714405e9067330f3e67be75d51240ac0",
+    "ad58c330561f872e04d3e53936006f5c31ac91e107e166e00b38b04d6a1c61c5"
+  ],
+  "source_sha256": [
+    "50c43c5efb68fae28e08e4888336833ea96cd65967c713fbf213fd97bd61d3e3",
+    "3d9a095099df4dc8f46c7129c278ac0114a8bfa9aaa48d120a3f8faa54404543",
+    "290fa5284a712ca8140769d695a8fd73cff9d59d4bc1e154d29d42555593d460",
+    "50c43c5efb68fae28e08e4888336833ea96cd65967c713fbf213fd97bd61d3e3"
+  ],
+  "verified_frames": 4,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "sky_a/receive_stamp",
+  "group": "sky",
+  "symbol": "adv_assets_sky_a_receive_stamp__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/receive_stamp/000.png",
+      "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/receive_stamp/001.png",
+      "sha256": "c382538f9424e24cba8533fcf690c5f886af74a5f8f2e30aa1d6e33884839f17"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/receive_stamp/002.png",
+      "sha256": "30f3d65cdf289075d94456b7d6a011b8306b5a7fbaec1b92d1b27c602f8480e5"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/receive_stamp/003.png",
+      "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "sky_a/receive_stamp",
+      "logical_symbol": "adv_assets_sky_a_receive_stamp__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_ski_a_finish__p0",
+  "width": 63,
+  "height": 68,
+  "palette_rgb565": [
+    0,
+    2113,
+    4425,
+    4521,
+    6306,
+    6406,
+    8617,
+    8650,
+    10566,
+    10665,
+    12548,
+    12613,
+    12746,
+    12812,
+    14693,
+    14726,
+    14924,
+    16741,
+    16774,
+    16905,
+    18887,
+    19051,
+    19311,
+    20934,
+    21000,
+    21163,
+    23471,
+    23569,
+    25062,
+    25160,
+    25323,
+    27273,
+    27697,
+    27763,
+    29224,
+    31564,
+    31958,
+    33481,
+    33742,
+    37740,
+    39982,
+    41998,
+    42262,
+    43559,
+    43721,
+    44208,
+    44473,
+    48140,
+    50416,
+    50681,
+    54675,
+    54873,
+    56589,
+    59197,
+    60918,
+    61278,
+    62925,
+    63226,
+    63326,
+    63390,
+    65111,
+    65208,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    0
+  ],
+  "data_bytes": 4147,
+  "table_bytes": 840,
+  "frame_sha256": [
+    "71362d53f7d2d496969483eebf28314eb5ecd6a9a7ae3f82aadeb42a99c2e357",
+    "c16512a87f3a19606444d895bdd28b191f0731b4996187808164eb976367c1aa",
+    "240cd683cfd32fbc8e48aea42506341f17c360e611ddd5b035eed4d6d251ca40",
+    "7d68e07eeacc125e63dd2306facb95ed781f4ea3e84a71675eb6d0cc24d6865b",
+    "ebec291c881eaaa24b2e12deee0838f20fbccbd6257878135d70e5c443649459",
+    "71362d53f7d2d496969483eebf28314eb5ecd6a9a7ae3f82aadeb42a99c2e357"
+  ],
+  "source_sha256": [
+    "1640b3135af095ccbf597823f567e18d00053fd8ecc4146ecb2265069ee4f165",
+    "5d5155a6cf8698a671fee4acfeb0d5307cf51025a8ad9fab69ad35978c31905d",
+    "420ff75bff60c1e27a952a2bbbfcb90eb5ac0257ce6f2267f9bbebb47305ac2c",
+    "dae91c516dbe117adc4898ffc4124807e5ce732e192081eb68670b4d6df9fa91",
+    "f2fbb2c9fcfc4a98b51a45d5b801ba0e7e40c8e288d732c8c5461bb1c0219427",
+    "1640b3135af095ccbf597823f567e18d00053fd8ecc4146ecb2265069ee4f165"
+  ],
+  "verified_frames": 6,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ski_a/finish",
+  "group": "ski",
+  "symbol": "adv_assets_ski_a_finish__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/finish/000.png",
+      "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/finish/001.png",
+      "sha256": "d0abec8fee562756155e18d5be2a929690b0a503858bae0317db7033837536a6"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/finish/002.png",
+      "sha256": "fc8ad5c636b7a159047c760f3adf8a89ace98bccaba702f689928cd310f35245"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/finish/003.png",
+      "sha256": "7d03bc5c7e58bed406972b24c4bf3a55eb266d6d5b1f7d03b2368cf7906c236e"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/finish/004.png",
+      "sha256": "e93a88a9632023ae5d803e4970f84b6c8f1777b9f4ff10f06bc91f5899799220"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/finish/005.png",
+      "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ski_a/finish",
+      "logical_symbol": "adv_assets_ski_a_finish__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

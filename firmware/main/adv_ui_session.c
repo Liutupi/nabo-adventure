@@ -108,6 +108,9 @@ void ui_draw_session(ag_t *g, const adv_model_t *m)
 {
     if(m->station==4){ui_draw_night_session(g,m);return;}
     if(m->station==5){ui_draw_climb_session(g,m);return;}
+    if(m->station==6){ui_draw_ski_session(g,m);return;}
+    if(m->station==7){ui_draw_sky_session(g,m);return;}
+    if(m->station==8){ui_draw_space_session(g,m);return;}
     int s = m->station;
     if(s==3){ui_draw_post_session(g,m);return;}
     const adv_station_t *st = &adv_station[s];

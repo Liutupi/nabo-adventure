@@ -1,0 +1,54 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_ski_props_gate_red__p0",
+  "width": 64,
+  "height": 56,
+  "palette_rgb565": [
+    0,
+    8649,
+    40276,
+    45672,
+    65433,
+    65502
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 742,
+  "table_bytes": 128,
+  "frame_sha256": [
+    "8144bdb42e3f10dbcc8ab3a8ed5e6d5a0750a9a30af21b309fa76170fa434729"
+  ],
+  "source_sha256": [
+    "12349c0fd7481ec0e8f3330099d75ff226ec21f1b4a0b540ae90b84899003aa5"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/ski/props/gate-red",
+  "group": "ski",
+  "symbol": "adv_assets_game_ski_props_gate_red__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/ski/props/gate-red.png",
+      "sha256": "876c3c80125b09726a4b0ee76332ad3035dffa61e8d93708fb186b9ac1ad67f2"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/ski/props/gate-red",
+      "logical_symbol": "adv_assets_game_ski_props_gate_red__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

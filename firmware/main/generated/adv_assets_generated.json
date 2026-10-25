@@ -3,40 +3,76 @@
   "format": "adv-row-rle-v4",
   "groups": {
     "climb": {
-      "rle_bytes": 70956,
-      "table_bytes": 14156,
-      "descriptor_catalog_estimate_c3": 2563,
-      "resources": 29,
-      "pieces": 29,
-      "frames": 113,
-      "physical_sprites": 29,
-      "physical_frames": 113,
+      "rle_bytes": 61205,
+      "table_bytes": 11812,
+      "descriptor_catalog_estimate_c3": 2299,
+      "resources": 26,
+      "pieces": 26,
+      "frames": 93,
+      "physical_sprites": 26,
+      "physical_frames": 93,
       "interned_pieces": 0,
-      "static_bytes_estimate_c3": 87675
+      "static_bytes_estimate_c3": 75316
     },
     "night": {
-      "rle_bytes": 111861,
-      "table_bytes": 10952,
-      "descriptor_catalog_estimate_c3": 2069,
-      "resources": 25,
-      "pieces": 25,
-      "frames": 98,
-      "physical_sprites": 25,
-      "physical_frames": 98,
+      "rle_bytes": 57163,
+      "table_bytes": 5924,
+      "descriptor_catalog_estimate_c3": 1508,
+      "resources": 18,
+      "pieces": 18,
+      "frames": 56,
+      "physical_sprites": 18,
+      "physical_frames": 56,
       "interned_pieces": 0,
-      "static_bytes_estimate_c3": 124882
+      "static_bytes_estimate_c3": 64595
     },
     "post": {
-      "rle_bytes": 45187,
-      "table_bytes": 9332,
-      "descriptor_catalog_estimate_c3": 2833,
-      "resources": 32,
-      "pieces": 32,
-      "frames": 82,
-      "physical_sprites": 32,
-      "physical_frames": 82,
+      "rle_bytes": 41331,
+      "table_bytes": 8148,
+      "descriptor_catalog_estimate_c3": 2676,
+      "resources": 30,
+      "pieces": 30,
+      "frames": 70,
+      "physical_sprites": 30,
+      "physical_frames": 70,
       "interned_pieces": 0,
-      "static_bytes_estimate_c3": 57352
+      "static_bytes_estimate_c3": 52155
+    },
+    "ski": {
+      "rle_bytes": 51770,
+      "table_bytes": 7076,
+      "descriptor_catalog_estimate_c3": 1633,
+      "resources": 19,
+      "pieces": 19,
+      "frames": 54,
+      "physical_sprites": 19,
+      "physical_frames": 54,
+      "interned_pieces": 0,
+      "static_bytes_estimate_c3": 60479
+    },
+    "sky": {
+      "rle_bytes": 24553,
+      "table_bytes": 5810,
+      "descriptor_catalog_estimate_c3": 1638,
+      "resources": 20,
+      "pieces": 20,
+      "frames": 63,
+      "physical_sprites": 20,
+      "physical_frames": 63,
+      "interned_pieces": 0,
+      "static_bytes_estimate_c3": 32001
+    },
+    "space": {
+      "rle_bytes": 29615,
+      "table_bytes": 5880,
+      "descriptor_catalog_estimate_c3": 1291,
+      "resources": 15,
+      "pieces": 15,
+      "frames": 49,
+      "physical_sprites": 15,
+      "physical_frames": 49,
+      "interned_pieces": 0,
+      "static_bytes_estimate_c3": 36786
     },
     "static": {
       "rle_bytes": 49523,
@@ -77,8 +113,8 @@
   },
   "tools_sha256": {
     "tools/generate_adv_sprites.py": "91b7a530c8f5c56be690ba053f94892886a2e21cbae360cfef8192e03f90d6bf",
-    "tools/build_adventure_assets.py": "8a7f36dae1d5ed5775a572db2f24d28e3b14b16542355930fb560afbaf41eb57",
-    "tools/adventure_assets_manifest.py": "e8c87de4d139af6d85d2fcad2bc1a39308482821d28922bc2ba19d418255c949",
+    "tools/build_adventure_assets.py": "d21da1edb91ddad201c23d5b22ff50f871c521c1f3b9b80597e041d04f14c276",
+    "tools/adventure_assets_manifest.py": "e7cf951c1fa9def63a5c1e17a8d3450868001a98472205f4e15e359f45cf340f",
     "tools/adventure_assets_emit.py": "6698b23c132b9cf4387c4ab866bac7d04eed9f9637064ce1b52b11f58da2e4bc",
     "tools/adventure_assets_verify.py": "46bc8a4727cb94f50afebfb99c3f7470e8260550384bb07ab04b2c6569e8e106",
     "tools/generate_boot_presentation.py": "1a61eab768fbbaaf460ebd8245167b09eac8b42a2fae1fe3fec55585646452dc",
@@ -96,7 +132,7 @@
     "firmware/main/third_party/pl_mpeg/pl_mpeg.h": "f663908a6a0dbb08d3d540c39af971766d45a62b6f641f245fc0c270ac169d3e"
   },
   "generated_code_sha256": {
-    "adv_assets_catalog.c": "4e2eab3bdd35cf95d15bbba7006466059b9d48de6c2c517883bea67c6daecbd5",
+    "adv_assets_catalog.c": "1d50e52dad5a249405239527cede93e5d4d4bd99bf8ba41e4fabd49779e85f7c",
     "adv_assets_catalog.h": "045bda6ae2668d6c708cbbcbe630f74e3d527ec186931ac34b657f23b6848193",
     "adv_assets_climb_a_charge_left__p0.c": "6f36364909168f952783c9e8e6d1f88e27f024476a4d11a4fb97129442b48d90",
     "adv_assets_climb_a_charge_left__p0.h": "d124be9a3ae8451fed0efa6c431a48e48c2a8e7232206002431cabbd1494f5b2",
@@ -124,12 +160,6 @@
     "adv_assets_climb_a_switch_grab_left__p0.h": "4dd45c8ecaaf70bc2af3010302647ab8a8474e5549472e8811f4214df554b501",
     "adv_assets_climb_a_switch_grab_right__p0.c": "248b1af2fb478f21633234b0fe018b285452890773bdf13230fb9442da3eb790",
     "adv_assets_climb_a_switch_grab_right__p0.h": "f6ab7a12d98c7dbda2ec77070afe134aceb82c05c1835417e8c84d09ba5f0a57",
-    "adv_assets_climb_b_grip_idle_left__p0.c": "bdf2586928053f8b90d384d226ba16795e709c49c57422db36e5e47d6b0c9302",
-    "adv_assets_climb_b_grip_idle_left__p0.h": "59224987930fcd0f54d560944ea6a780a782e1453a993d16172a83d93d1f23ea",
-    "adv_assets_climb_b_grip_idle_right__p0.c": "aa2d2c36052a7c5f900b4bd4e92228138e6cf402b3b39d0767cdd621f14b8c90",
-    "adv_assets_climb_b_grip_idle_right__p0.h": "ab22e13f54d5c67e78140d675a5a3752a5bd174e0e0de063b1e7c869548380f2",
-    "adv_assets_climb_b_settlement_cheer__p0.c": "05fdcfabbeb31000ed771bed5c6c3256b57f6f1460fddcd7cc8b70318e7b74ba",
-    "adv_assets_climb_b_settlement_cheer__p0.h": "54893b86c44fcbf48d665465da4cc1ca97a33462c35273f3207efa950c308330",
     "adv_assets_game_climb_props_canteen__p0.c": "282a34673848019bbf04562b79c8e0194d1995695697d6c33010ea9f03848ef2",
     "adv_assets_game_climb_props_canteen__p0.h": "1c18bc342b6bbbf188c23e77a186a805aaf5fb47db11546c84b34cae4f8d96be",
     "adv_assets_game_climb_props_falling_rock__p0.c": "924dd9928c6854c0163b49c7a155580e1b0bb43afbd7f298916942bb5a8508c3",
@@ -220,6 +250,70 @@
     "adv_assets_game_post_tiles_track_fork__p0.h": "4f6d5196cd5ed42d157488026d528e02f556cae813bd7e02fc574283d5d9cbc1",
     "adv_assets_game_post_tiles_track_straight__p0.c": "726e2f25f9ce8d4cfa37837babe28119c13da8b21f35acb6b0174eec9ea9cef6",
     "adv_assets_game_post_tiles_track_straight__p0.h": "d3d1b3c8628e855064e5700320c56622d67c209ae375f59c7b8fb69b9436ce16",
+    "adv_assets_game_ski_props_finish_arch__p0.c": "e18cb0e8de8faf2865bde38ec9f0e3ba5ae9c0919cef8558ad9d7cd3434f249b",
+    "adv_assets_game_ski_props_finish_arch__p0.h": "7f6a46fa1b5167731f3c8203b3eea808af18bedf835e0b6a4819689f5959f282",
+    "adv_assets_game_ski_props_gate_blue__p0.c": "4e947df810b0f157cb2067c37f537a2304325603f509830c9f63cbc66714739c",
+    "adv_assets_game_ski_props_gate_blue__p0.h": "425c48f4eb11aa94d41726a5ef1f0d9b0cfa2f58078d3bbd1785df436a311659",
+    "adv_assets_game_ski_props_gate_red__p0.c": "9fba06cc6581b779067da34e36a345b179e41c9415762b692b20bc4439b695dc",
+    "adv_assets_game_ski_props_gate_red__p0.h": "1499725db9d030ccaf41a1972e3a7b1c8cf75bb22a825462687e7d166f68bcff",
+    "adv_assets_game_ski_props_hot_cocoa_cabin__p0.c": "adb8b69ff32d4f721fb08cb823c0c4d7ac7274ac0f63d60c4fac63940ae627d9",
+    "adv_assets_game_ski_props_hot_cocoa_cabin__p0.h": "ebff9a304921d0e30173e31de04c3fd141b704f036a406beaa7302e33df0a682",
+    "adv_assets_game_ski_props_pine_large__p0.c": "dde9c1e98f6db2ee5466150dfe4daf4a7a1c2fafac922eed6b9b8551a6885421",
+    "adv_assets_game_ski_props_pine_large__p0.h": "a92dff799fde8cf45c5dbd92f6b12990f3e646fd66d8f95a3195fd6f78a227cd",
+    "adv_assets_game_ski_props_pole__p0.c": "ee7b15c3f76c34eac39c8208a5077d4ab37c531e9dff8e37008ee4c05a8940ef",
+    "adv_assets_game_ski_props_pole__p0.h": "78d7738622de9d7b62be5d51abc7f0d153478002670b974ec8cf23eb6fb13d6c",
+    "adv_assets_game_ski_props_ski_left__p0.c": "0b3bdcbbb44f3fc12a992532de12bceb759a0c75603835486a946ff56ec695d5",
+    "adv_assets_game_ski_props_ski_left__p0.h": "c484990375346bd29bc0e8239d6cdd55d2aa2232560b4fc9ca7a171de591d075",
+    "adv_assets_game_ski_props_ski_right__p0.c": "f06f3af029b2b6089b5e7154f604680b8d523a1e97c14d814ffc3f7b94d2468a",
+    "adv_assets_game_ski_props_ski_right__p0.h": "13469f659f4e4434b6aa81893f69c49f4d0db814e07803ee31d235803c75e55a",
+    "adv_assets_game_ski_shared_pine_small__p0.c": "449a036c15ee71ac45731c0d1f33b842b9447d0cc22fb8c83499a2e7a76e25d6",
+    "adv_assets_game_ski_shared_pine_small__p0.h": "d4c85e335d962455be0207a93bb6726a4650305cd9e20b8e67ecbb2b2b65ec8f",
+    "adv_assets_game_ski_shared_snow_drift__p0.c": "0d037e65fd47e16b036e16f29213d3df103070eb09cf4dc1043a46b23132e488",
+    "adv_assets_game_ski_shared_snow_drift__p0.h": "2a02540fd9f329dc8de65b5485ecde1c3e1219f3227bb36c1d2b8394526ab85b",
+    "adv_assets_game_ski_shared_snow_ground__p0.c": "1331d3a2447e066bfab56e37ed0f329b036b61973c047e5043de68201815bf0f",
+    "adv_assets_game_ski_shared_snow_ground__p0.h": "6f45dd59e92aec665956f2f2a15cf3c7a08ddb05e3e5cfa9641a89bef4081e0a",
+    "adv_assets_game_ski_shared_snow_mogul__p0.c": "6f3f2ff45ce30ac9170d3ea8d6f37fb4b4861d5d4fb1af5df76ed3b9b7c008ed",
+    "adv_assets_game_ski_shared_snow_mogul__p0.h": "fed8aa2677bf89f752c36ba1d7d0471c9924cbcd8072609b32e4097dbaa630b9",
+    "adv_assets_game_sky_basket_back__p0.c": "499279400ebf78317bbb9784eb52b2971262d1c15ee4eab73830dcc6beafd4a5",
+    "adv_assets_game_sky_basket_back__p0.h": "2fe68e5e7ad375c1ab5a478db331f5524ca8b43358ba3c2efaba3f673e2091ed",
+    "adv_assets_game_sky_basket_front__p0.c": "0032c201edd51d5d766fe102950dbcee4fc08337ab54bb85aa3ca492ebecb2d2",
+    "adv_assets_game_sky_basket_front__p0.h": "3ab5399a52e42a93f14da428a40f6c08f9012fb09088060a01659ef619844a26",
+    "adv_assets_game_sky_burner__p0.c": "9295f3f637e3b5b6f1840dd1bbb0d3b63636083177cfbd01ce13c41062b8b4fd",
+    "adv_assets_game_sky_burner__p0.h": "9b9d2313e2fd92a0c90dec529b7f36a6972e5a00fec34af5127eb75ba76e44fb",
+    "adv_assets_game_sky_cloud_00__p0.c": "b637cecfa4214c2a8ff061acf44f53bd3e7a24831fc142c2eebc2bd3fb720610",
+    "adv_assets_game_sky_cloud_00__p0.h": "9c8228b01f37c7c65376e21f12b8d4ea24caddf843c90db3e4c86e21e225567b",
+    "adv_assets_game_sky_cloud_01__p0.c": "f211fbd4ff908552d53f2298a40a336ef18e3125ac979127384ac57791ed3f08",
+    "adv_assets_game_sky_cloud_01__p0.h": "0f632f70c93087f93bd9bd0ee39f8264e8d3014ea81249acaf06f543f477b4e6",
+    "adv_assets_game_sky_cloud_02__p0.c": "eddd556517f5911e770e5d7f95aa169945d5985ee9d125668b1aa4da31388fe6",
+    "adv_assets_game_sky_cloud_02__p0.h": "d9b4e6d7e0de628596b401817afe559c95cf3681d9e9825bfe929d91801778b1",
+    "adv_assets_game_sky_cloud_03__p0.c": "143b0927de3e2d5f691dbfb001de380e18afc5a2a47114ea67ed0f65075617b5",
+    "adv_assets_game_sky_cloud_03__p0.h": "4bc2d7b554e54309b37298f44d096856dec4ba984ca53211c77815162ee8225c",
+    "adv_assets_game_sky_controls_idle__p0.c": "fad2fea5a49a759592d26253a8f85f2280a37edd0fc8d721f8899e8451a1be7d",
+    "adv_assets_game_sky_controls_idle__p0.h": "c7323b61bc3df012bc90a5a280be5d7cdbe516e4bb8599f487d15ca96665d887",
+    "adv_assets_game_sky_envelope__p0.c": "33e6d71f5301dd1c7df387135212c6e7374a80c06eff98d6fdd6d476e84607d5",
+    "adv_assets_game_sky_envelope__p0.h": "1f63de304c315be66a311ff9b4e57e2492e3fac864c260d29a53e97db1f27871",
+    "adv_assets_game_sky_stamp__p0.c": "3863eff793c97b0f52cc0c33d33583bbc42056f7438d76b0ab5c82cc5dc39681",
+    "adv_assets_game_sky_stamp__p0.h": "2845b2b44ea7f487026f27ea1eb6dde32c34873562e6a718decec4aa2a8b552b",
+    "adv_assets_game_sky_thundercloud__p0.c": "7d958ce5c6c5de9e218edb1a3c23405eb81d90d79b2eb9c2118bd51f95f3f49e",
+    "adv_assets_game_sky_thundercloud__p0.h": "8e4feae1e0c8a233fcd090d5cbee4cc01c70649765d51eea66602cc583670f94",
+    "adv_assets_game_space_lander_back__p0.c": "c2ebf0d9f1d18992d86fd67f2d5fc731c76dbbc5d326ec12e011040b6c124210",
+    "adv_assets_game_space_lander_back__p0.h": "6869f4177d7b46ffa98dc2eaee9068f4b9e3dcdd6e7d603d280df345889052d2",
+    "adv_assets_game_space_lander_front__p0.c": "edb5be26d10a3c60cb6bdd490a06400e4c1bc9bd29221a80245db4dc4372dfef",
+    "adv_assets_game_space_lander_front__p0.h": "880d7f3dccb015315f663c9252b56702cd8e8f08169dda3237f0aefba126707e",
+    "adv_assets_game_space_props_asteroid__p0.c": "ca752d94a30eb532091690bf114532f887a1d3f40b2fcb0ba19c76221d117923",
+    "adv_assets_game_space_props_asteroid__p0.h": "a2f0282819061d84aed81a51f7710d1cb7897af798aab7895ecc70b58a845115",
+    "adv_assets_game_space_props_flag__p0.c": "c77f89e5f39bd954137ea619362337880f1c82f06f61735a295a87db8a56e02d",
+    "adv_assets_game_space_props_flag__p0.h": "7dae9f3582a056f6bc059e9c994ccd47230b8efbfed294ab8e4323b83be7214f",
+    "adv_assets_game_space_props_fuel_can__p0.c": "76b4e8be7213078de03993c2a8a40a4a7994756411fb9389a3e315f00e3a0075",
+    "adv_assets_game_space_props_fuel_can__p0.h": "b4f24ec72b5775e9cb2c7ae870b31ea4af55a1404946fe5168819910c2fc0560",
+    "adv_assets_game_space_props_landing_pad__p0.c": "c32984072fa31d3f88557c3380ce2f18e46caee7100592b1f6c894df24bf8a06",
+    "adv_assets_game_space_props_landing_pad__p0.h": "1d15ddf469397b899903bd07731780c09aac5f4523abb3433d3c7721010f2417",
+    "adv_assets_game_space_tiles_lunar_0__p0.c": "24fa3300a91197e5ca7713be7619485249539fa0447958daa14086a77eccb648",
+    "adv_assets_game_space_tiles_lunar_0__p0.h": "021f50da7d6ba294338992f651a1e51596a5ad17c5d2354260029f2d32c8b257",
+    "adv_assets_game_space_tiles_lunar_1__p0.c": "4c0bfd2ebb3a72178ea763898f25d264a6b4721e153d5049fb56558a4079879a",
+    "adv_assets_game_space_tiles_lunar_1__p0.h": "13ab2a38fe6fefd7e32c07a2a2ed6e9aede7838129faa2f7149f583410e75dd5",
+    "adv_assets_game_space_tiles_lunar_2__p0.c": "3bb72787987f20ecf214084f6546270ad99940c558caeaece258275ed0ae0d1d",
+    "adv_assets_game_space_tiles_lunar_2__p0.h": "57e5de0b16d867917c9bbd6764e4466eb43d11f3b9e344883bd60bf76f1e294f",
     "adv_assets_night_a_catch__p0.c": "0e66542df3bce8344db4057fffb2ebfb5c8397b47e0d00077f23afe191d3459d",
     "adv_assets_night_a_catch__p0.h": "9242941db14a48f350eb1a0d3afe31b2dfc818cae9f3ced6828b3125eab2da6f",
     "adv_assets_night_a_cheer__p0.c": "603fb9d1992c6db8935ac75516a8fe33c4e2a2cec717f72e8c23c3b0fb029fe8",
@@ -234,20 +328,6 @@
     "adv_assets_night_a_seat_idle__p0.h": "654b16f6b79c94ef367c7d2c94011d3030409f90fa0808e1ded10949ee78c557",
     "adv_assets_night_a_yawn__p0.c": "f45bab0a43ce089628e64969c38af9a259f2e8e6fda204de2b2339984999dfd0",
     "adv_assets_night_a_yawn__p0.h": "015869d1340c29b4e3fb6d1ba302cd2fb41fa7b7e518f0bc5451b52a91ee2d97",
-    "adv_assets_night_b_catch__p0.c": "d58506018b8cef066aa73292663409ad6b534b8aa012acbfc362b071ae4fb1c6",
-    "adv_assets_night_b_catch__p0.h": "a69bdf17c2c97570446eab520431269608d987a17f8e1718e628816d88634e28",
-    "adv_assets_night_b_cheer__p0.c": "9f16c7a552c430b0eb650d211b08c6b1f3d98451b0f6a8bb76ec734dcdbae5e3",
-    "adv_assets_night_b_cheer__p0.h": "28cccb93e9cab0face57d082957a417601712842b986ab0479a99b7230b33fb2",
-    "adv_assets_night_b_lift_jar__p0.c": "db5eef453ab5113e5d482c778363313c5ea9aa082e32e7599c85b30e3ed03cfb",
-    "adv_assets_night_b_lift_jar__p0.h": "1f50797406997dec3d3b331635fc0350ad3a9ab25fa4766473b04093a9f966b9",
-    "adv_assets_night_b_move_left__p0.c": "c4da779514016520319216034539ecac48468b31c973a5b60687a4e67ea1e87a",
-    "adv_assets_night_b_move_left__p0.h": "46a9afd64548ff394d8257ade994bc90245b547f5c3f2b6de8c99ba4b2e1ab5d",
-    "adv_assets_night_b_move_right__p0.c": "62d094e4737402c3e8ad7a395cc05225d301a150a7318c54b25cbc574504a5b8",
-    "adv_assets_night_b_move_right__p0.h": "4ddd53b08df3e06e0dc7dccd125a98073e00b908812700ed3c473c05bc36312b",
-    "adv_assets_night_b_seat_idle__p0.c": "05556ed0c104c3f53f04f3ff51d383c696712c31f5ee082840a20f54b9ee4503",
-    "adv_assets_night_b_seat_idle__p0.h": "e9cb52a4e9bf5244b97b98d88195953582d28eacd8aa494a3892e15aca71b04e",
-    "adv_assets_night_b_yawn__p0.c": "0dbd29ab06f6ee3f6f74f16118d41a35c7514ab3a42d8b626fca4956736f5050",
-    "adv_assets_night_b_yawn__p0.h": "8fcf625255394c878328b138b1aa521f0b339ec53d0e3f925f523ced0940f0ba",
     "adv_assets_night_shared_moth__p0.c": "fb6b44addc3585f95ce8b9ed137ffbc635835c82058fa577f4a59e5cc57af84a",
     "adv_assets_night_shared_moth__p0.h": "fb35f7ff358e00dd8a608a9ac8c97723909e058cee16c20183fb03ad1c54746a",
     "adv_assets_post_a_delivered__p0.c": "ca4b7121141c5e25c7af8f86e9497a9a6a926671eef3b8f41a05bac026429e4d",
@@ -262,14 +342,54 @@
     "adv_assets_post_a_throw__p0.h": "d167bbd70991aa07765d1da887ba3b21aa51f9cb8c79775b6efd6093ed819ef4",
     "adv_assets_post_a_whistle__p0.c": "b396d888ec9c12164fb41302223933bfc0ac96eb3c5b660b9c21ced3af7435bc",
     "adv_assets_post_a_whistle__p0.h": "1f153521e4fe3d3f6b893f6d5e64899f5429aebf695acae9a569d960fc482c90",
-    "adv_assets_post_b_delivered__p0.c": "91670d561b6dba72f152a1be1a77d46fb252caafcfdbd3ee5efd24d8b3fb7596",
-    "adv_assets_post_b_delivered__p0.h": "dde152e5ee510632c02dda90df7189640faeec17e819aaf24ad2ea8e143046c3",
-    "adv_assets_post_b_idle__p0.c": "e7179c4a7af2d4c9613f7ce87d11af882e385d60ae7f6e91dcb72aec0e08f3ab",
-    "adv_assets_post_b_idle__p0.h": "0a0471040601d098c7344cbef3b3c68ac2aac86a6ec7545ae2237f83f1411dd8",
     "adv_assets_post_props_wheel_cycle__p0.c": "f9a4ff9914122879723f701da4a9b3ca0397d7af1268002f9c34d9ddd8091a9c",
     "adv_assets_post_props_wheel_cycle__p0.h": "ecf1e40d54b41834c71445a4ee4409e575bc772d64715d8dd277f18b1a5b7e3a",
     "adv_assets_post_props_whistle_cord__p0.c": "ffda3fc74af4db925882d70cac3a16b6b8e7794adaefb7c77a9aced76f5f29cc",
     "adv_assets_post_props_whistle_cord__p0.h": "8221d6801d20d532069b3121bc24d4c89ee70f6297599f35bcef6249fe7bcb39",
+    "adv_assets_ski_a_fall__p0.c": "060a082f5144dff9274cd80dd4bf1fd989dffb5fb960f0dae5da483508a56665",
+    "adv_assets_ski_a_fall__p0.h": "c084b7fc8b17223912e0bb76f92b9a920a474696f50e2b85ac6b2b6750b0063c",
+    "adv_assets_ski_a_finish__p0.c": "fff6932580d3e503ff0dd3e2f66e958c89a715dbc676c180d96b514f0b578b8b",
+    "adv_assets_ski_a_finish__p0.h": "c6831a616d6626d2959ed2d22248b236bcc3c5ddf13926508cd94a66d9a65a59",
+    "adv_assets_ski_a_jump__p0.c": "18726f08b269a32135323501a6f738bbe129f87674ac32917902b5ce9984e70d",
+    "adv_assets_ski_a_jump__p0.h": "35bdfebd83269fdf7db3d9e09242cf9d5159c94fbf73942df2ea23835321174a",
+    "adv_assets_ski_a_lean_left__p0.c": "082caf8afc13abd614b30185e89a19a455c31b2ee1493a38176c5e5eb68b0bce",
+    "adv_assets_ski_a_lean_left__p0.h": "38368b775bc617312f83f254259edff3463c0c10842fe7509be7274fd5b75505",
+    "adv_assets_ski_a_lean_right__p0.c": "e34ff327126cc390b2645174fed328fc8d23992be67805e014ef217d53e7ef03",
+    "adv_assets_ski_a_lean_right__p0.h": "0ad2b40cef9a8a0d2ab5a8034d3b733ce4a7a14786068fac16d0ee8e23e95ecd",
+    "adv_assets_ski_a_settlement_cheer__p0.c": "926c8295c92faee2bf7fd8a7f6429ccd5f7eca451df4339ac58a7956635c964b",
+    "adv_assets_ski_a_settlement_cheer__p0.h": "4f8fe2dc7a3809fefcd8b8ac76de4ddf2a04d3dbb95c3c270f22f44867ff2976",
+    "adv_assets_ski_a_straight__p0.c": "f72741c296deb9e50ff98f68364a82ea88c67cd2bdf90cadf13bb8a27330d1c1",
+    "adv_assets_ski_a_straight__p0.h": "d19326fde3f8b8e19e86a3b3e4dee9b19e80cfea25c7aa4c4b3f8a33a13f3c27",
+    "adv_assets_sky_a_heat__p0.c": "97debf97caa9cd0d81839a4216750c6baecdacabb48851b3efee787848e9f20d",
+    "adv_assets_sky_a_heat__p0.h": "82ee4d24a7f32dfa1bb31893ff4cd49198b23a135addf7459ef491fe343a171f",
+    "adv_assets_sky_a_hit__p0.c": "5287af5f6d4f87d315020f372150785188e91e67a88e96aad553a9685f591214",
+    "adv_assets_sky_a_hit__p0.h": "dd805b7411214fe218cfeac0a86833b0e6413b8546fd435adad22ce80101c59b",
+    "adv_assets_sky_a_idle__p0.c": "8bea364a14a72fa05ad131fc897ca92b30dea084293d76d791f0657d456adcb2",
+    "adv_assets_sky_a_idle__p0.h": "8da1ac28a6ee3ecca476343289194a888e5d9e696784d481c42c7b7532c8bae7",
+    "adv_assets_sky_a_receive_stamp__p0.c": "8588de5450ff26025ffb9001c4a31640020631b8bf809164ee64880148a99f7e",
+    "adv_assets_sky_a_receive_stamp__p0.h": "308cdbc610d025425a2201679af3c815a9060025bdf21e5f662f4f357efff48a",
+    "adv_assets_sky_a_settlement_cheer__p0.c": "fd0892b5de55752576d74a7218fe19c853ef75c30f6a15866ca6b672537abfbe",
+    "adv_assets_sky_a_settlement_cheer__p0.h": "20d53743845e9cd2aae3e0c5568aa08010a6471ec55eee8dd6b6dcb6620f913a",
+    "adv_assets_sky_a_vent__p0.c": "7404844631483576075751792eb8f92037effb024385bbc6f5f82978f5d89f6d",
+    "adv_assets_sky_a_vent__p0.h": "36664b4d97940506c6954ff54ad929f7339d55881b948294819aa9522d382832",
+    "adv_assets_sky_props_bird__p0.c": "68f075d5beee12a1d3284ebff6a1d2aee857bc7c7ad4dfecb6986ee6de0d8574",
+    "adv_assets_sky_props_bird__p0.h": "c565a4de22b47557e309504343c01f813ef2db0b86d929cd676c1a13bdfde852",
+    "adv_assets_sky_props_heat_controls__p0.c": "4ce5522a9f857c3930a76aed8eaffb670ba3141f1b284f5b17190e190449095c",
+    "adv_assets_sky_props_heat_controls__p0.h": "3e8d0795e58c2444ba98a8a3d34a2e50404a6af362085cc14afc5ce502f3c17c",
+    "adv_assets_sky_props_vent_controls__p0.c": "f2b61b2414dc1d595e67fa77674cc969c54832cdb69d8508e0559cfe55693cef",
+    "adv_assets_sky_props_vent_controls__p0.h": "fa10d4400c1208cd9281d3c5af7c763f151bf9b3895da75de1ec173d16a7c428",
+    "adv_assets_space_a_cabin_idle__p0.c": "f421187f5fe39d575c7ffd1bc91ec2972428c7e903bc987d568179ad84555d74",
+    "adv_assets_space_a_cabin_idle__p0.h": "b5b224be1f099db858940b0d3c2e78fdf6bdb65c3f3e8254076d7dbda570247b",
+    "adv_assets_space_a_hard_land__p0.c": "5895d16f1f5d937931fe2ffeda0ef920417bb1bbb3ff7368f14fb8071de3dec7",
+    "adv_assets_space_a_hard_land__p0.h": "4cad9f1e113287456c6a582f7e05ec7d32043cb5af4d8ce475ac3b41112aa7c4",
+    "adv_assets_space_a_jet__p0.c": "fa86741518cfa078d0ac004ac066a5c252ec4b7dacd9b44749bf5c67786b56f2",
+    "adv_assets_space_a_jet__p0.h": "c86d1052b57b5c1e8d6819d36e41b5ee36fcb2e5a708166cf2ee7761d0701a36",
+    "adv_assets_space_a_land__p0.c": "ac8525c719d22fa28fd5e8974ea1d77ad0225b007acc97a813a847cc3b40ae13",
+    "adv_assets_space_a_land__p0.h": "ab5dcf542c8bfc63b5be319e6d0356bf155de7ca725085c2c7b3d0983c59ea2d",
+    "adv_assets_space_a_plant_flag__p0.c": "cafad2a398bcd775bab20a5fcc47f52865f44ee1076a062f7664236eed014a14",
+    "adv_assets_space_a_plant_flag__p0.h": "f751c86e01887464c1e16fbfef7442a652b14c6e7f154775b7e7080004d72fbe",
+    "adv_assets_space_a_settlement_cheer__p0.c": "18c73f3384d0b77e282648c69eb1f285e1f056f480ab652874e0074686ecc226",
+    "adv_assets_space_a_settlement_cheer__p0.h": "f0f8e3ac577f05ebd65d246a1c2aaa8e72a69515ec4dc07665d01510dad63bdc",
     "adv_assets_static_icon_fuel__p0.c": "da44bb7677110eb43917c8d7d51f428631f83200a75ab5df9fe8818c04c7febc",
     "adv_assets_static_icon_fuel__p0.h": "5ae4ac45c738116e951e8d39ab73f79ac39715633558182040651a1f8ed2915b",
     "adv_assets_static_icon_hot_air__p0.c": "e4b7835b0d9d3bfa0d8a1bddb2339bb41a8885dc7dd340f99f1ab570c2649ddf",
@@ -649,15 +769,6 @@
     "adv_assets_climb_a_switch_grab_right__p0.c",
     "adv_assets_climb_a_switch_grab_right__p0.h",
     "adv_assets_climb_a_switch_grab_right__p0.json",
-    "adv_assets_climb_b_grip_idle_left__p0.c",
-    "adv_assets_climb_b_grip_idle_left__p0.h",
-    "adv_assets_climb_b_grip_idle_left__p0.json",
-    "adv_assets_climb_b_grip_idle_right__p0.c",
-    "adv_assets_climb_b_grip_idle_right__p0.h",
-    "adv_assets_climb_b_grip_idle_right__p0.json",
-    "adv_assets_climb_b_settlement_cheer__p0.c",
-    "adv_assets_climb_b_settlement_cheer__p0.h",
-    "adv_assets_climb_b_settlement_cheer__p0.json",
     "adv_assets_game_climb_props_canteen__p0.c",
     "adv_assets_game_climb_props_canteen__p0.h",
     "adv_assets_game_climb_props_canteen__p0.json",
@@ -793,6 +904,102 @@
     "adv_assets_game_post_tiles_track_straight__p0.c",
     "adv_assets_game_post_tiles_track_straight__p0.h",
     "adv_assets_game_post_tiles_track_straight__p0.json",
+    "adv_assets_game_ski_props_finish_arch__p0.c",
+    "adv_assets_game_ski_props_finish_arch__p0.h",
+    "adv_assets_game_ski_props_finish_arch__p0.json",
+    "adv_assets_game_ski_props_gate_blue__p0.c",
+    "adv_assets_game_ski_props_gate_blue__p0.h",
+    "adv_assets_game_ski_props_gate_blue__p0.json",
+    "adv_assets_game_ski_props_gate_red__p0.c",
+    "adv_assets_game_ski_props_gate_red__p0.h",
+    "adv_assets_game_ski_props_gate_red__p0.json",
+    "adv_assets_game_ski_props_hot_cocoa_cabin__p0.c",
+    "adv_assets_game_ski_props_hot_cocoa_cabin__p0.h",
+    "adv_assets_game_ski_props_hot_cocoa_cabin__p0.json",
+    "adv_assets_game_ski_props_pine_large__p0.c",
+    "adv_assets_game_ski_props_pine_large__p0.h",
+    "adv_assets_game_ski_props_pine_large__p0.json",
+    "adv_assets_game_ski_props_pole__p0.c",
+    "adv_assets_game_ski_props_pole__p0.h",
+    "adv_assets_game_ski_props_pole__p0.json",
+    "adv_assets_game_ski_props_ski_left__p0.c",
+    "adv_assets_game_ski_props_ski_left__p0.h",
+    "adv_assets_game_ski_props_ski_left__p0.json",
+    "adv_assets_game_ski_props_ski_right__p0.c",
+    "adv_assets_game_ski_props_ski_right__p0.h",
+    "adv_assets_game_ski_props_ski_right__p0.json",
+    "adv_assets_game_ski_shared_pine_small__p0.c",
+    "adv_assets_game_ski_shared_pine_small__p0.h",
+    "adv_assets_game_ski_shared_pine_small__p0.json",
+    "adv_assets_game_ski_shared_snow_drift__p0.c",
+    "adv_assets_game_ski_shared_snow_drift__p0.h",
+    "adv_assets_game_ski_shared_snow_drift__p0.json",
+    "adv_assets_game_ski_shared_snow_ground__p0.c",
+    "adv_assets_game_ski_shared_snow_ground__p0.h",
+    "adv_assets_game_ski_shared_snow_ground__p0.json",
+    "adv_assets_game_ski_shared_snow_mogul__p0.c",
+    "adv_assets_game_ski_shared_snow_mogul__p0.h",
+    "adv_assets_game_ski_shared_snow_mogul__p0.json",
+    "adv_assets_game_sky_basket_back__p0.c",
+    "adv_assets_game_sky_basket_back__p0.h",
+    "adv_assets_game_sky_basket_back__p0.json",
+    "adv_assets_game_sky_basket_front__p0.c",
+    "adv_assets_game_sky_basket_front__p0.h",
+    "adv_assets_game_sky_basket_front__p0.json",
+    "adv_assets_game_sky_burner__p0.c",
+    "adv_assets_game_sky_burner__p0.h",
+    "adv_assets_game_sky_burner__p0.json",
+    "adv_assets_game_sky_cloud_00__p0.c",
+    "adv_assets_game_sky_cloud_00__p0.h",
+    "adv_assets_game_sky_cloud_00__p0.json",
+    "adv_assets_game_sky_cloud_01__p0.c",
+    "adv_assets_game_sky_cloud_01__p0.h",
+    "adv_assets_game_sky_cloud_01__p0.json",
+    "adv_assets_game_sky_cloud_02__p0.c",
+    "adv_assets_game_sky_cloud_02__p0.h",
+    "adv_assets_game_sky_cloud_02__p0.json",
+    "adv_assets_game_sky_cloud_03__p0.c",
+    "adv_assets_game_sky_cloud_03__p0.h",
+    "adv_assets_game_sky_cloud_03__p0.json",
+    "adv_assets_game_sky_controls_idle__p0.c",
+    "adv_assets_game_sky_controls_idle__p0.h",
+    "adv_assets_game_sky_controls_idle__p0.json",
+    "adv_assets_game_sky_envelope__p0.c",
+    "adv_assets_game_sky_envelope__p0.h",
+    "adv_assets_game_sky_envelope__p0.json",
+    "adv_assets_game_sky_stamp__p0.c",
+    "adv_assets_game_sky_stamp__p0.h",
+    "adv_assets_game_sky_stamp__p0.json",
+    "adv_assets_game_sky_thundercloud__p0.c",
+    "adv_assets_game_sky_thundercloud__p0.h",
+    "adv_assets_game_sky_thundercloud__p0.json",
+    "adv_assets_game_space_lander_back__p0.c",
+    "adv_assets_game_space_lander_back__p0.h",
+    "adv_assets_game_space_lander_back__p0.json",
+    "adv_assets_game_space_lander_front__p0.c",
+    "adv_assets_game_space_lander_front__p0.h",
+    "adv_assets_game_space_lander_front__p0.json",
+    "adv_assets_game_space_props_asteroid__p0.c",
+    "adv_assets_game_space_props_asteroid__p0.h",
+    "adv_assets_game_space_props_asteroid__p0.json",
+    "adv_assets_game_space_props_flag__p0.c",
+    "adv_assets_game_space_props_flag__p0.h",
+    "adv_assets_game_space_props_flag__p0.json",
+    "adv_assets_game_space_props_fuel_can__p0.c",
+    "adv_assets_game_space_props_fuel_can__p0.h",
+    "adv_assets_game_space_props_fuel_can__p0.json",
+    "adv_assets_game_space_props_landing_pad__p0.c",
+    "adv_assets_game_space_props_landing_pad__p0.h",
+    "adv_assets_game_space_props_landing_pad__p0.json",
+    "adv_assets_game_space_tiles_lunar_0__p0.c",
+    "adv_assets_game_space_tiles_lunar_0__p0.h",
+    "adv_assets_game_space_tiles_lunar_0__p0.json",
+    "adv_assets_game_space_tiles_lunar_1__p0.c",
+    "adv_assets_game_space_tiles_lunar_1__p0.h",
+    "adv_assets_game_space_tiles_lunar_1__p0.json",
+    "adv_assets_game_space_tiles_lunar_2__p0.c",
+    "adv_assets_game_space_tiles_lunar_2__p0.h",
+    "adv_assets_game_space_tiles_lunar_2__p0.json",
     "adv_assets_night_a_catch__p0.c",
     "adv_assets_night_a_catch__p0.h",
     "adv_assets_night_a_catch__p0.json",
@@ -814,27 +1021,6 @@
     "adv_assets_night_a_yawn__p0.c",
     "adv_assets_night_a_yawn__p0.h",
     "adv_assets_night_a_yawn__p0.json",
-    "adv_assets_night_b_catch__p0.c",
-    "adv_assets_night_b_catch__p0.h",
-    "adv_assets_night_b_catch__p0.json",
-    "adv_assets_night_b_cheer__p0.c",
-    "adv_assets_night_b_cheer__p0.h",
-    "adv_assets_night_b_cheer__p0.json",
-    "adv_assets_night_b_lift_jar__p0.c",
-    "adv_assets_night_b_lift_jar__p0.h",
-    "adv_assets_night_b_lift_jar__p0.json",
-    "adv_assets_night_b_move_left__p0.c",
-    "adv_assets_night_b_move_left__p0.h",
-    "adv_assets_night_b_move_left__p0.json",
-    "adv_assets_night_b_move_right__p0.c",
-    "adv_assets_night_b_move_right__p0.h",
-    "adv_assets_night_b_move_right__p0.json",
-    "adv_assets_night_b_seat_idle__p0.c",
-    "adv_assets_night_b_seat_idle__p0.h",
-    "adv_assets_night_b_seat_idle__p0.json",
-    "adv_assets_night_b_yawn__p0.c",
-    "adv_assets_night_b_yawn__p0.h",
-    "adv_assets_night_b_yawn__p0.json",
     "adv_assets_night_shared_moth__p0.c",
     "adv_assets_night_shared_moth__p0.h",
     "adv_assets_night_shared_moth__p0.json",
@@ -856,18 +1042,78 @@
     "adv_assets_post_a_whistle__p0.c",
     "adv_assets_post_a_whistle__p0.h",
     "adv_assets_post_a_whistle__p0.json",
-    "adv_assets_post_b_delivered__p0.c",
-    "adv_assets_post_b_delivered__p0.h",
-    "adv_assets_post_b_delivered__p0.json",
-    "adv_assets_post_b_idle__p0.c",
-    "adv_assets_post_b_idle__p0.h",
-    "adv_assets_post_b_idle__p0.json",
     "adv_assets_post_props_wheel_cycle__p0.c",
     "adv_assets_post_props_wheel_cycle__p0.h",
     "adv_assets_post_props_wheel_cycle__p0.json",
     "adv_assets_post_props_whistle_cord__p0.c",
     "adv_assets_post_props_whistle_cord__p0.h",
     "adv_assets_post_props_whistle_cord__p0.json",
+    "adv_assets_ski_a_fall__p0.c",
+    "adv_assets_ski_a_fall__p0.h",
+    "adv_assets_ski_a_fall__p0.json",
+    "adv_assets_ski_a_finish__p0.c",
+    "adv_assets_ski_a_finish__p0.h",
+    "adv_assets_ski_a_finish__p0.json",
+    "adv_assets_ski_a_jump__p0.c",
+    "adv_assets_ski_a_jump__p0.h",
+    "adv_assets_ski_a_jump__p0.json",
+    "adv_assets_ski_a_lean_left__p0.c",
+    "adv_assets_ski_a_lean_left__p0.h",
+    "adv_assets_ski_a_lean_left__p0.json",
+    "adv_assets_ski_a_lean_right__p0.c",
+    "adv_assets_ski_a_lean_right__p0.h",
+    "adv_assets_ski_a_lean_right__p0.json",
+    "adv_assets_ski_a_settlement_cheer__p0.c",
+    "adv_assets_ski_a_settlement_cheer__p0.h",
+    "adv_assets_ski_a_settlement_cheer__p0.json",
+    "adv_assets_ski_a_straight__p0.c",
+    "adv_assets_ski_a_straight__p0.h",
+    "adv_assets_ski_a_straight__p0.json",
+    "adv_assets_sky_a_heat__p0.c",
+    "adv_assets_sky_a_heat__p0.h",
+    "adv_assets_sky_a_heat__p0.json",
+    "adv_assets_sky_a_hit__p0.c",
+    "adv_assets_sky_a_hit__p0.h",
+    "adv_assets_sky_a_hit__p0.json",
+    "adv_assets_sky_a_idle__p0.c",
+    "adv_assets_sky_a_idle__p0.h",
+    "adv_assets_sky_a_idle__p0.json",
+    "adv_assets_sky_a_receive_stamp__p0.c",
+    "adv_assets_sky_a_receive_stamp__p0.h",
+    "adv_assets_sky_a_receive_stamp__p0.json",
+    "adv_assets_sky_a_settlement_cheer__p0.c",
+    "adv_assets_sky_a_settlement_cheer__p0.h",
+    "adv_assets_sky_a_settlement_cheer__p0.json",
+    "adv_assets_sky_a_vent__p0.c",
+    "adv_assets_sky_a_vent__p0.h",
+    "adv_assets_sky_a_vent__p0.json",
+    "adv_assets_sky_props_bird__p0.c",
+    "adv_assets_sky_props_bird__p0.h",
+    "adv_assets_sky_props_bird__p0.json",
+    "adv_assets_sky_props_heat_controls__p0.c",
+    "adv_assets_sky_props_heat_controls__p0.h",
+    "adv_assets_sky_props_heat_controls__p0.json",
+    "adv_assets_sky_props_vent_controls__p0.c",
+    "adv_assets_sky_props_vent_controls__p0.h",
+    "adv_assets_sky_props_vent_controls__p0.json",
+    "adv_assets_space_a_cabin_idle__p0.c",
+    "adv_assets_space_a_cabin_idle__p0.h",
+    "adv_assets_space_a_cabin_idle__p0.json",
+    "adv_assets_space_a_hard_land__p0.c",
+    "adv_assets_space_a_hard_land__p0.h",
+    "adv_assets_space_a_hard_land__p0.json",
+    "adv_assets_space_a_jet__p0.c",
+    "adv_assets_space_a_jet__p0.h",
+    "adv_assets_space_a_jet__p0.json",
+    "adv_assets_space_a_land__p0.c",
+    "adv_assets_space_a_land__p0.h",
+    "adv_assets_space_a_land__p0.json",
+    "adv_assets_space_a_plant_flag__p0.c",
+    "adv_assets_space_a_plant_flag__p0.h",
+    "adv_assets_space_a_plant_flag__p0.json",
+    "adv_assets_space_a_settlement_cheer__p0.c",
+    "adv_assets_space_a_settlement_cheer__p0.h",
+    "adv_assets_space_a_settlement_cheer__p0.json",
     "adv_assets_static_icon_fuel__p0.c",
     "adv_assets_static_icon_fuel__p0.h",
     "adv_assets_static_icon_fuel__p0.json",
@@ -1378,6 +1624,9 @@
     "climb-manifest.json": "d2eecac332e1f45e02bdba1591f5ef1474562cbc11978a7cf2c49b94e8cc3b71",
     "night-manifest.json": "d9d5b35ec4702fa5fd739b5224d1d5c0b933b72c5d272ade1f9c3a8e6679a0bb",
     "post-manifest.json": "42464721aae43aa0c7dc2aba7b55b4f6b4966f8ef61b2ecc23bcbce5a764636f",
+    "ski-manifest.json": "ce917671979911b3aa2d645ab99a30bd605677497a4cb5e13649a51ab35c84fb",
+    "sky-manifest.json": "abfbc0ffd9e3e97e61295911ea5c65b3c65f988bcc2af9021247590b07b3ee98",
+    "space-manifest.json": "168d04124ab06e8d7e181a41c51e3eec91ba3e9f7dd5911fa8690a25e96fe789",
     "shared-static-manifest.json": "f48bb34259cd5f58eb04cdc94d1e95e130875b111888b85962955b9655a4c5c8",
     "manifest.json": "e62681862e7f1c656c547f5324ac0f1d8a462609afcb19ad4157041f7de2d9af",
     "ui/ui-manifest.json": "093a972bcd5fd12ab2a12281216e06d861fc63222b3c98551630d6791c95e0d0",
@@ -2073,170 +2322,6 @@
           "size": [
             60,
             65
-          ]
-        }
-      ]
-    },
-    {
-      "id": "climb_b/grip_idle_left",
-      "sources": [
-        {
-          "path": "frames/climb/runtime/climb_b/grip_idle_left/000.png",
-          "sha256": "cfc2e5e93e73d6d1c9b65f4fda01971b901b0e9e810f24edec802820e9fb0514"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/grip_idle_left/001.png",
-          "sha256": "eab392a3f285609fb13b81fec3cb860e807dda5fa57105aa84373422696622c7"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/grip_idle_left/002.png",
-          "sha256": "eab392a3f285609fb13b81fec3cb860e807dda5fa57105aa84373422696622c7"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/grip_idle_left/003.png",
-          "sha256": "cfc2e5e93e73d6d1c9b65f4fda01971b901b0e9e810f24edec802820e9fb0514"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/grip_idle_left/004.png",
-          "sha256": "6f97407aa580abe50512bb2c76c26542a1ea8adfc8561c96b68fe913c0b42861"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/grip_idle_left/005.png",
-          "sha256": "6f97407aa580abe50512bb2c76c26542a1ea8adfc8561c96b68fe913c0b42861"
-        }
-      ],
-      "canvas": [
-        60,
-        65
-      ],
-      "anchor": [
-        30,
-        62
-      ],
-      "fps": 12,
-      "loop": true,
-      "pieces": [
-        {
-          "symbol": "adv_assets_climb_b_grip_idle_left__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            60,
-            65
-          ]
-        }
-      ]
-    },
-    {
-      "id": "climb_b/grip_idle_right",
-      "sources": [
-        {
-          "path": "frames/climb/runtime/climb_b/grip_idle_right/000.png",
-          "sha256": "f4820f14e4d05ffec86609a13811e28acd0f1de4caabe170ee102b736831445c"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/grip_idle_right/001.png",
-          "sha256": "2a920fe117589552c03339ffc19c495fd589932b217c801883858906e91843f9"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/grip_idle_right/002.png",
-          "sha256": "2a920fe117589552c03339ffc19c495fd589932b217c801883858906e91843f9"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/grip_idle_right/003.png",
-          "sha256": "f4820f14e4d05ffec86609a13811e28acd0f1de4caabe170ee102b736831445c"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/grip_idle_right/004.png",
-          "sha256": "21b44026b46174f5d09e8b8b1778676def58a90f4fc8c30a92ff44173a2ddace"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/grip_idle_right/005.png",
-          "sha256": "21b44026b46174f5d09e8b8b1778676def58a90f4fc8c30a92ff44173a2ddace"
-        }
-      ],
-      "canvas": [
-        60,
-        65
-      ],
-      "anchor": [
-        30,
-        62
-      ],
-      "fps": 12,
-      "loop": true,
-      "pieces": [
-        {
-          "symbol": "adv_assets_climb_b_grip_idle_right__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            60,
-            65
-          ]
-        }
-      ]
-    },
-    {
-      "id": "climb_b/settlement_cheer",
-      "sources": [
-        {
-          "path": "frames/climb/runtime/climb_b/settlement_cheer/000.png",
-          "sha256": "3b19c57be7e7fb055c12ac327cae77867ab5a95612cc9d256224b4da133790f9"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/settlement_cheer/001.png",
-          "sha256": "d6129b234b50d04af9822edaede72b0531935b563ba759669a0e4085d1cbb0c5"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/settlement_cheer/002.png",
-          "sha256": "70e5daadb1e63601f67a455972d9cec5dc47712dd8808ed011bc7ff212e18ff5"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/settlement_cheer/003.png",
-          "sha256": "86a6fd445fcf3bd24e5d30891d1ad6b69ad6b864d5d5a727a758f4be359fbf4d"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/settlement_cheer/004.png",
-          "sha256": "467e10afa9a8919dd470a16a60f344402e38305de0a1a81b12414634f1c31d62"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/settlement_cheer/005.png",
-          "sha256": "a64bebd94d3aba5437c019ebe6190bcf7ab119fb9b569a58209a265c1041fd6a"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/settlement_cheer/006.png",
-          "sha256": "3dfdf43836af6bfe947ff2cf7750dd1cc684325205f2d92355a002abe8bc6663"
-        },
-        {
-          "path": "frames/climb/runtime/climb_b/settlement_cheer/007.png",
-          "sha256": "3b19c57be7e7fb055c12ac327cae77867ab5a95612cc9d256224b4da133790f9"
-        }
-      ],
-      "canvas": [
-        72,
-        78
-      ],
-      "anchor": [
-        36,
-        75
-      ],
-      "fps": 12,
-      "loop": false,
-      "pieces": [
-        {
-          "symbol": "adv_assets_climb_b_settlement_cheer__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            72,
-            78
           ]
         }
       ]
@@ -3682,6 +3767,1030 @@
       ]
     },
     {
+      "id": "game/ski/props/finish-arch",
+      "sources": [
+        {
+          "path": "games/ski/props/finish-arch.png",
+          "sha256": "4a318137d72fe50ba224e4802e59cd3b0a6c8d8ebf234a4f1124041c21f78491"
+        }
+      ],
+      "canvas": [
+        96,
+        88
+      ],
+      "anchor": [
+        48,
+        77
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_ski_props_finish_arch__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            88
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/ski/props/gate-blue",
+      "sources": [
+        {
+          "path": "games/ski/props/gate-blue.png",
+          "sha256": "31df29a0c3cc6f94db21a760f32c84b766a21952e8368abfa8e98b133d1eae8d"
+        }
+      ],
+      "canvas": [
+        64,
+        56
+      ],
+      "anchor": [
+        32,
+        52
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_ski_props_gate_blue__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            64,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/ski/props/gate-red",
+      "sources": [
+        {
+          "path": "games/ski/props/gate-red.png",
+          "sha256": "876c3c80125b09726a4b0ee76332ad3035dffa61e8d93708fb186b9ac1ad67f2"
+        }
+      ],
+      "canvas": [
+        64,
+        56
+      ],
+      "anchor": [
+        32,
+        52
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_ski_props_gate_red__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            64,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/ski/props/hot-cocoa-cabin",
+      "sources": [
+        {
+          "path": "games/ski/props/hot-cocoa-cabin.png",
+          "sha256": "b2084cf4b32ff96a81b0a00b00735320511ff585d7bc8b6576ad506487f4d7cf"
+        }
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        58
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_ski_props_hot_cocoa_cabin__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/ski/props/pine-large",
+      "sources": [
+        {
+          "path": "games/ski/props/pine-large.png",
+          "sha256": "f3d641cf7afafea15894be6683ab2a304b8563ea1c8258988f9a6fc2b464bf97"
+        }
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_ski_props_pine_large__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/ski/props/pole",
+      "sources": [
+        {
+          "path": "games/ski/props/pole.png",
+          "sha256": "77ac93fb867cb3a885c6489066c3a3446d579ac485649ea5eb84f12b68404e5d"
+        }
+      ],
+      "canvas": [
+        5,
+        24
+      ],
+      "anchor": [
+        2,
+        3
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_ski_props_pole__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            5,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/ski/props/ski-left",
+      "sources": [
+        {
+          "path": "games/ski/props/ski-left.png",
+          "sha256": "f6653f5cccb67ab54ef5108ed5d03f428260d3807c19a874c48d4bbcc76d2e3f"
+        }
+      ],
+      "canvas": [
+        32,
+        10
+      ],
+      "anchor": [
+        25,
+        3
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_ski_props_ski_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/ski/props/ski-right",
+      "sources": [
+        {
+          "path": "games/ski/props/ski-right.png",
+          "sha256": "b320484a07b0531ec1ad23b518e38c1e5afe44dfb3a8ccca7e7243c4626145f0"
+        }
+      ],
+      "canvas": [
+        32,
+        10
+      ],
+      "anchor": [
+        7,
+        3
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_ski_props_ski_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/ski/shared/pine-small",
+      "sources": [
+        {
+          "path": "map/tiles/ski/snow-pine.png",
+          "sha256": "63eb3ddf8e8865f24445732cc82f4fdd27fdd49de5360c3f1461b609e7c226cd"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_ski_shared_pine_small__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/ski/shared/snow-drift",
+      "sources": [
+        {
+          "path": "map/tiles/mountain/snow-drift.png",
+          "sha256": "a0f7dbce9a93da1b7299e33c73b81745b4f1c37bd97c8781565009f2b3947033"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_ski_shared_snow_drift__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/ski/shared/snow-ground",
+      "sources": [
+        {
+          "path": "map/tiles/mountain/ice-crystals.png",
+          "sha256": "d4226c2f39ab5f08a5c4fd40e4165ccb72bbbae3fa5248f522584016b738b886"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_ski_shared_snow_ground__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/ski/shared/snow-mogul",
+      "sources": [
+        {
+          "path": "map/tiles/ski/snow-mound.png",
+          "sha256": "1b94744c19c7bb95a7faf3c53bb9b3d410cdbf932aa690722797fe997928264e"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_ski_shared_snow_mogul__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/sky/basket_back",
+      "sources": [
+        {
+          "path": "games/sky/props/basket_back.png",
+          "sha256": "980df5635f2987a40c765f075b52bb1e3577f2a9935bb09de0c8ba953d40d4cd"
+        }
+      ],
+      "canvas": [
+        64,
+        10
+      ],
+      "anchor": [
+        32,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_sky_basket_back__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            64,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/sky/basket_front",
+      "sources": [
+        {
+          "path": "games/sky/props/basket_front.png",
+          "sha256": "711c10341677d84d6df2b80910c2bb6940d0a6dfd31632801e1135447c550af2"
+        }
+      ],
+      "canvas": [
+        64,
+        28
+      ],
+      "anchor": [
+        32,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_sky_basket_front__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            64,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/sky/burner",
+      "sources": [
+        {
+          "path": "games/sky/props/burner.png",
+          "sha256": "a41126c580a93568677340ac730a1c96abdf7414b08a8020eb5e4c5895f617bb"
+        }
+      ],
+      "canvas": [
+        16,
+        12
+      ],
+      "anchor": [
+        8,
+        6
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_sky_burner__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/sky/cloud_00",
+      "sources": [
+        {
+          "path": "games/sky/tiles/cloud_00.png",
+          "sha256": "e1b142421d1d00bb36e59f1be5ac72f763c4c59a8bc9731d5123e68a99baaafb"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        26
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_sky_cloud_00__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/sky/cloud_01",
+      "sources": [
+        {
+          "path": "games/sky/tiles/cloud_01.png",
+          "sha256": "f21466f9e0cf425ebb8a9af635b3ac6688bca29d4400d1d0c9514f5c5454e183"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_sky_cloud_01__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/sky/cloud_02",
+      "sources": [
+        {
+          "path": "games/sky/tiles/cloud_02.png",
+          "sha256": "0219df6a5658ea813ccbcce9477fcd72c84c50a0d128f25095162cdc729408e9"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_sky_cloud_02__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/sky/cloud_03",
+      "sources": [
+        {
+          "path": "games/sky/tiles/cloud_03.png",
+          "sha256": "410f1784f867f368ba0d40d7b2f81ca4aa71551b91e0f291ac61604330d50166"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        23
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_sky_cloud_03__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/sky/controls_idle",
+      "sources": [
+        {
+          "path": "games/sky/props/controls_idle.png",
+          "sha256": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212"
+        }
+      ],
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_sky_controls_idle__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            43,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/sky/envelope",
+      "sources": [
+        {
+          "path": "games/sky/props/envelope.png",
+          "sha256": "4e2e3719faa7bcf8c53cdb155503c29b385ed7ff624585b82266bf9d8c92e4e1"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        94
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_sky_envelope__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/sky/stamp",
+      "sources": [
+        {
+          "path": "games/sky/props/stamp.png",
+          "sha256": "55475e6fbb5c1b404192ffa80b7341bc236a62674a4684b1a8521d7ed4ca9c3f"
+        }
+      ],
+      "canvas": [
+        16,
+        20
+      ],
+      "anchor": [
+        8,
+        10
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_sky_stamp__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/sky/thundercloud",
+      "sources": [
+        {
+          "path": "games/sky/props/thundercloud.png",
+          "sha256": "c164b0b5ed215d08c19b0f2fe4611f6937430907a0a79aef2edd826a832e67d5"
+        }
+      ],
+      "canvas": [
+        48,
+        32
+      ],
+      "anchor": [
+        24,
+        29
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_sky_thundercloud__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            48,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/lander/back",
+      "sources": [
+        {
+          "path": "games/space/lander/back.png",
+          "sha256": "d3e488ea51168861a928c4c53708aec2dcdd397afe417a07424ffdf3c4590ed4"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        92
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_lander_back__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/lander/front",
+      "sources": [
+        {
+          "path": "games/space/lander/front.png",
+          "sha256": "b6a69822623b186653a353ab269a3b951bbd4f918b7d30415d44981dbbe055ea"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        92
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_lander_front__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/props/asteroid",
+      "sources": [
+        {
+          "path": "games/space/props/asteroid.png",
+          "sha256": "7341819b7dcbbc92c2c4332a25e1396f3321b820c470c3b560ffe51db9cd6b0c"
+        }
+      ],
+      "canvas": [
+        32,
+        28
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_props_asteroid__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/props/flag",
+      "sources": [
+        {
+          "path": "games/space/props/flag.png",
+          "sha256": "0a2d7e6c579e7936c8c3d22e2dbe33721ba5823082d9c42029097994e4d5ed4c"
+        }
+      ],
+      "canvas": [
+        16,
+        28
+      ],
+      "anchor": [
+        2,
+        28
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_props_flag__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/props/fuel-can",
+      "sources": [
+        {
+          "path": "games/space/props/fuel-can.png",
+          "sha256": "aff19cae1f384f71ca348cfc20ef6b9837f4269896a23c42d80f5ae2a4ac89c6"
+        }
+      ],
+      "canvas": [
+        16,
+        24
+      ],
+      "anchor": [
+        8,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_props_fuel_can__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/props/landing-pad",
+      "sources": [
+        {
+          "path": "games/space/props/landing-pad.png",
+          "sha256": "561e14aa31566beffdb790835560fbd7794b1bc9405609f86538177232c8c43c"
+        }
+      ],
+      "canvas": [
+        96,
+        24
+      ],
+      "anchor": [
+        48,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_props_landing_pad__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/tiles/lunar-0",
+      "sources": [
+        {
+          "path": "games/space/tiles/lunar-0.png",
+          "sha256": "33e30cb4c1c6387b5d498b54a7d0fc28ba0b4ee4acf5bdf00a86e15a80d706fc"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_tiles_lunar_0__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/tiles/lunar-1",
+      "sources": [
+        {
+          "path": "games/space/tiles/lunar-1.png",
+          "sha256": "d9160bc6873060915d6bd9340ad31211bdcc8e08b8539bc395e57d4ca4cc3476"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_tiles_lunar_1__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/tiles/lunar-2",
+      "sources": [
+        {
+          "path": "games/space/tiles/lunar-2.png",
+          "sha256": "07353ad30f0350c08718fa7e2a2f9de25e45afa6d310829954795ddbe2de2d95"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_tiles_lunar_2__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
       "id": "night_a/catch",
       "sources": [
         {
@@ -4040,370 +5149,6 @@
           ],
           "size": [
             54,
-            56
-          ]
-        }
-      ]
-    },
-    {
-      "id": "night_b/catch",
-      "sources": [
-        {
-          "path": "frames/night/runtime/night_b/catch/000.png",
-          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
-        },
-        {
-          "path": "frames/night/runtime/night_b/catch/001.png",
-          "sha256": "a5b856901f972ab22decaf503cc05c4fd2948663ef1eee74e19bca4e8964c84b"
-        },
-        {
-          "path": "frames/night/runtime/night_b/catch/002.png",
-          "sha256": "f604f16de7c937ce120c4aba8e7577f23804a75646b5886ec4ba5e702d9a3386"
-        },
-        {
-          "path": "frames/night/runtime/night_b/catch/003.png",
-          "sha256": "71d22567e6c72b620f3d29fe263731d684962c43ff6017cfe027fd250c87e19e"
-        },
-        {
-          "path": "frames/night/runtime/night_b/catch/004.png",
-          "sha256": "b7a34393d819e4dad7f3375bce88777f3e10254d675550769f58438e7351edff"
-        },
-        {
-          "path": "frames/night/runtime/night_b/catch/005.png",
-          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
-        }
-      ],
-      "canvas": [
-        53,
-        56
-      ],
-      "anchor": [
-        20,
-        56
-      ],
-      "fps": 12,
-      "loop": false,
-      "pieces": [
-        {
-          "symbol": "adv_assets_night_b_catch__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            53,
-            56
-          ]
-        }
-      ]
-    },
-    {
-      "id": "night_b/cheer",
-      "sources": [
-        {
-          "path": "frames/night/runtime/night_b/cheer/000.png",
-          "sha256": "92d0612ac16c19249141091b2949bb9c4233cb3dd124b755a804ea171099b2a6"
-        },
-        {
-          "path": "frames/night/runtime/night_b/cheer/001.png",
-          "sha256": "7e475f8e2a5f0360262cb700ffb4a29bdebdd20ac503c59b4ded4ea8acc1c14a"
-        },
-        {
-          "path": "frames/night/runtime/night_b/cheer/002.png",
-          "sha256": "61e03ab8af8f9b5fde4515ae4846a8b67a5458d7f698c41b480e8f096d942a55"
-        },
-        {
-          "path": "frames/night/runtime/night_b/cheer/003.png",
-          "sha256": "af63e7c954e285b98dcf543152613d6f90355e5c73f3921d54fa9f0f686132ed"
-        },
-        {
-          "path": "frames/night/runtime/night_b/cheer/004.png",
-          "sha256": "309f4d1390a89ec5040f00563a601c0c1bb4ec5af3ad6298a00fabc87dd5d664"
-        },
-        {
-          "path": "frames/night/runtime/night_b/cheer/005.png",
-          "sha256": "8d2ba089cdfaa67d3c15f85a2759ea26110fdb07933cacf9f6dda161737f5b68"
-        },
-        {
-          "path": "frames/night/runtime/night_b/cheer/006.png",
-          "sha256": "a9f7b755d757da9d16ab65f4aab9869887eb7bdf9147cf8388002cec47958ca1"
-        },
-        {
-          "path": "frames/night/runtime/night_b/cheer/007.png",
-          "sha256": "92d0612ac16c19249141091b2949bb9c4233cb3dd124b755a804ea171099b2a6"
-        }
-      ],
-      "canvas": [
-        52,
-        72
-      ],
-      "anchor": [
-        21,
-        72
-      ],
-      "fps": 12,
-      "loop": false,
-      "pieces": [
-        {
-          "symbol": "adv_assets_night_b_cheer__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            52,
-            72
-          ]
-        }
-      ]
-    },
-    {
-      "id": "night_b/lift_jar",
-      "sources": [
-        {
-          "path": "frames/night/runtime/night_b/lift_jar/000.png",
-          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
-        },
-        {
-          "path": "frames/night/runtime/night_b/lift_jar/001.png",
-          "sha256": "834fc0020929c5f90ceb016338cd181be7d36f23a0d6880e3adaf77a6f9c8111"
-        },
-        {
-          "path": "frames/night/runtime/night_b/lift_jar/002.png",
-          "sha256": "7e37512bcd6eb3cc8f42509d950567dbea6db81ef1c5ec5e8294fdddb8d22323"
-        },
-        {
-          "path": "frames/night/runtime/night_b/lift_jar/003.png",
-          "sha256": "f604f16de7c937ce120c4aba8e7577f23804a75646b5886ec4ba5e702d9a3386"
-        },
-        {
-          "path": "frames/night/runtime/night_b/lift_jar/004.png",
-          "sha256": "47f62bfc2b79b14052f740e8e225067b2b33bfe3a01cf68925c0175d64585ef5"
-        },
-        {
-          "path": "frames/night/runtime/night_b/lift_jar/005.png",
-          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
-        }
-      ],
-      "canvas": [
-        53,
-        56
-      ],
-      "anchor": [
-        20,
-        56
-      ],
-      "fps": 12,
-      "loop": false,
-      "pieces": [
-        {
-          "symbol": "adv_assets_night_b_lift_jar__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            53,
-            56
-          ]
-        }
-      ]
-    },
-    {
-      "id": "night_b/move_left",
-      "sources": [
-        {
-          "path": "frames/night/runtime/night_b/move_left/000.png",
-          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
-        },
-        {
-          "path": "frames/night/runtime/night_b/move_left/001.png",
-          "sha256": "af7d072507f76cab874305443cf05ce4d440660a1bdd161eb85b1560bdbb4163"
-        },
-        {
-          "path": "frames/night/runtime/night_b/move_left/002.png",
-          "sha256": "757735455cdfb64083b7f40a600ebf9fd8f742cf505ec66491aa9f3cc145bba2"
-        },
-        {
-          "path": "frames/night/runtime/night_b/move_left/003.png",
-          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
-        }
-      ],
-      "canvas": [
-        53,
-        56
-      ],
-      "anchor": [
-        20,
-        56
-      ],
-      "fps": 12,
-      "loop": false,
-      "pieces": [
-        {
-          "symbol": "adv_assets_night_b_move_left__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            53,
-            56
-          ]
-        }
-      ]
-    },
-    {
-      "id": "night_b/move_right",
-      "sources": [
-        {
-          "path": "frames/night/runtime/night_b/move_right/000.png",
-          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
-        },
-        {
-          "path": "frames/night/runtime/night_b/move_right/001.png",
-          "sha256": "910631c5e83e4f8cd24babedecdc8d8e9279c686c55a506bd041c382015e83d0"
-        },
-        {
-          "path": "frames/night/runtime/night_b/move_right/002.png",
-          "sha256": "610ca57a9aa92369e7e3114176db3a802c1a14ffec84a25570b547d5dbb6bb87"
-        },
-        {
-          "path": "frames/night/runtime/night_b/move_right/003.png",
-          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
-        }
-      ],
-      "canvas": [
-        53,
-        56
-      ],
-      "anchor": [
-        20,
-        56
-      ],
-      "fps": 12,
-      "loop": false,
-      "pieces": [
-        {
-          "symbol": "adv_assets_night_b_move_right__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            53,
-            56
-          ]
-        }
-      ]
-    },
-    {
-      "id": "night_b/seat_idle",
-      "sources": [
-        {
-          "path": "frames/night/runtime/night_b/seat_idle/000.png",
-          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
-        },
-        {
-          "path": "frames/night/runtime/night_b/seat_idle/001.png",
-          "sha256": "dd3cf439c791f379079ecff9d10fdbbcd4d9e01aaf8523731031aead7f33796b"
-        },
-        {
-          "path": "frames/night/runtime/night_b/seat_idle/002.png",
-          "sha256": "535c91b2e93b365173448d897edc5b7124101c93edd21bdfd62a0b3b9fa63ece"
-        },
-        {
-          "path": "frames/night/runtime/night_b/seat_idle/003.png",
-          "sha256": "dd3cf439c791f379079ecff9d10fdbbcd4d9e01aaf8523731031aead7f33796b"
-        },
-        {
-          "path": "frames/night/runtime/night_b/seat_idle/004.png",
-          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
-        },
-        {
-          "path": "frames/night/runtime/night_b/seat_idle/005.png",
-          "sha256": "4f42e663457eb2bb397638a88d5d34436b94ac6c0c42c02f5bc44a29a4b1bcc1"
-        },
-        {
-          "path": "frames/night/runtime/night_b/seat_idle/006.png",
-          "sha256": "cecbe729031fa63e6eebf9ff7a66ea4ed3902a7b165d17612c107be289b7d0e1"
-        },
-        {
-          "path": "frames/night/runtime/night_b/seat_idle/007.png",
-          "sha256": "4f42e663457eb2bb397638a88d5d34436b94ac6c0c42c02f5bc44a29a4b1bcc1"
-        }
-      ],
-      "canvas": [
-        53,
-        56
-      ],
-      "anchor": [
-        20,
-        56
-      ],
-      "fps": 12,
-      "loop": true,
-      "pieces": [
-        {
-          "symbol": "adv_assets_night_b_seat_idle__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            53,
-            56
-          ]
-        }
-      ]
-    },
-    {
-      "id": "night_b/yawn",
-      "sources": [
-        {
-          "path": "frames/night/runtime/night_b/yawn/000.png",
-          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
-        },
-        {
-          "path": "frames/night/runtime/night_b/yawn/001.png",
-          "sha256": "ab4c49c1dbaaa601f13c40711fe6fcaa5237e8e7f9bd451de10e0b4d220deb77"
-        },
-        {
-          "path": "frames/night/runtime/night_b/yawn/002.png",
-          "sha256": "b2daaf812accfd5e845cd1847ad246f0797aeddfeebc96703716686904b672db"
-        },
-        {
-          "path": "frames/night/runtime/night_b/yawn/003.png",
-          "sha256": "9edc9be6406b2994e65f99fa01bc9520766088c3bec113db59c631496267f079"
-        },
-        {
-          "path": "frames/night/runtime/night_b/yawn/004.png",
-          "sha256": "c5188dc123d02050d00644cf1119907805083844e672c59df8ab833589c57201"
-        },
-        {
-          "path": "frames/night/runtime/night_b/yawn/005.png",
-          "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
-        }
-      ],
-      "canvas": [
-        53,
-        56
-      ],
-      "anchor": [
-        20,
-        56
-      ],
-      "fps": 12,
-      "loop": false,
-      "pieces": [
-        {
-          "symbol": "adv_assets_night_b_yawn__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            53,
             56
           ]
         }
@@ -4774,110 +5519,6 @@
       ]
     },
     {
-      "id": "post_b/delivered",
-      "sources": [
-        {
-          "path": "frames/post/runtime/post_b/delivered/000.png",
-          "sha256": "74a1dabc62b05ea29a5f6102a3c11ad8942e041d60930532e8a729f9eb6aaa58"
-        },
-        {
-          "path": "frames/post/runtime/post_b/delivered/001.png",
-          "sha256": "2305d9401b0e056e8fe7aac8993c325eaee31f7f58b4a22f4fefe5d966cef2a0"
-        },
-        {
-          "path": "frames/post/runtime/post_b/delivered/002.png",
-          "sha256": "3d1b4247ac8c134e387cb5282b743e35887b3976eee4be77f58c9fe29f903419"
-        },
-        {
-          "path": "frames/post/runtime/post_b/delivered/003.png",
-          "sha256": "0a50965f9263199ef1b4c99bdda2454650aaba2e7a8147fd53a8b57b8e63de71"
-        },
-        {
-          "path": "frames/post/runtime/post_b/delivered/004.png",
-          "sha256": "f52676944ae55ae1580939f0e550d75227124e824d310f41e75563393449c1a2"
-        },
-        {
-          "path": "frames/post/runtime/post_b/delivered/005.png",
-          "sha256": "74a1dabc62b05ea29a5f6102a3c11ad8942e041d60930532e8a729f9eb6aaa58"
-        }
-      ],
-      "canvas": [
-        36,
-        40
-      ],
-      "anchor": [
-        22,
-        40
-      ],
-      "fps": 12,
-      "loop": false,
-      "pieces": [
-        {
-          "symbol": "adv_assets_post_b_delivered__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            36,
-            40
-          ]
-        }
-      ]
-    },
-    {
-      "id": "post_b/idle",
-      "sources": [
-        {
-          "path": "frames/post/runtime/post_b/idle/000.png",
-          "sha256": "74a1dabc62b05ea29a5f6102a3c11ad8942e041d60930532e8a729f9eb6aaa58"
-        },
-        {
-          "path": "frames/post/runtime/post_b/idle/001.png",
-          "sha256": "24073cb935a472fdd7a0b77cedf1af671918fba531cdbfaaad1d66dd657e00df"
-        },
-        {
-          "path": "frames/post/runtime/post_b/idle/002.png",
-          "sha256": "acd992f8498ef831939e95bce19afc0cee192b08c1b1127a8df527108191fcd7"
-        },
-        {
-          "path": "frames/post/runtime/post_b/idle/003.png",
-          "sha256": "b5454b03e76146d7bc99113992340cda404ea7773486a87e151969c55a763226"
-        },
-        {
-          "path": "frames/post/runtime/post_b/idle/004.png",
-          "sha256": "41e026fa2b4dda3da22146823ab1e94788f8e44422176854d47e210308b72306"
-        },
-        {
-          "path": "frames/post/runtime/post_b/idle/005.png",
-          "sha256": "2919cf0db043eedb42833e05e33f54597d868d77c1957fe85e18269bcda199b2"
-        }
-      ],
-      "canvas": [
-        36,
-        40
-      ],
-      "anchor": [
-        22,
-        40
-      ],
-      "fps": 12,
-      "loop": true,
-      "pieces": [
-        {
-          "symbol": "adv_assets_post_b_idle__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            36,
-            40
-          ]
-        }
-      ]
-    },
-    {
       "id": "post_props/wheel-cycle",
       "sources": [
         {
@@ -4969,6 +5610,1158 @@
           "size": [
             96,
             88
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ski_a/fall",
+      "sources": [
+        {
+          "path": "frames/ski/runtime/ski_a/fall/000.png",
+          "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/fall/001.png",
+          "sha256": "ea6b52fab6f283e5d642b0057212825f2830b2f10928f7052121412b722f544f"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/fall/002.png",
+          "sha256": "792ce958a23e4bbeabecd1af49843f181ed93a70a14df5b3c8a19cf7168c488b"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/fall/003.png",
+          "sha256": "47d469bb49854b6ba6ee06844d19b743720bfafaff6c51d62020aa1b3a3bdcf0"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/fall/004.png",
+          "sha256": "47d469bb49854b6ba6ee06844d19b743720bfafaff6c51d62020aa1b3a3bdcf0"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/fall/005.png",
+          "sha256": "792ce958a23e4bbeabecd1af49843f181ed93a70a14df5b3c8a19cf7168c488b"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/fall/006.png",
+          "sha256": "ea6b52fab6f283e5d642b0057212825f2830b2f10928f7052121412b722f544f"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/fall/007.png",
+          "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
+        }
+      ],
+      "canvas": [
+        63,
+        68
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ski_a_fall__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            63,
+            68
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ski_a/finish",
+      "sources": [
+        {
+          "path": "frames/ski/runtime/ski_a/finish/000.png",
+          "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/finish/001.png",
+          "sha256": "d0abec8fee562756155e18d5be2a929690b0a503858bae0317db7033837536a6"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/finish/002.png",
+          "sha256": "fc8ad5c636b7a159047c760f3adf8a89ace98bccaba702f689928cd310f35245"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/finish/003.png",
+          "sha256": "7d03bc5c7e58bed406972b24c4bf3a55eb266d6d5b1f7d03b2368cf7906c236e"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/finish/004.png",
+          "sha256": "e93a88a9632023ae5d803e4970f84b6c8f1777b9f4ff10f06bc91f5899799220"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/finish/005.png",
+          "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
+        }
+      ],
+      "canvas": [
+        63,
+        68
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ski_a_finish__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            63,
+            68
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ski_a/jump",
+      "sources": [
+        {
+          "path": "frames/ski/runtime/ski_a/jump/000.png",
+          "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/jump/001.png",
+          "sha256": "f1e3c46b28ade9a99f8d9661c93911fcb3323f45bc4a545b18a6f2b5c10c5990"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/jump/002.png",
+          "sha256": "283890e600ac303cb94ddc93f8d146a8aa7ee5a903c1c705e482da74205ebcba"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/jump/003.png",
+          "sha256": "6a225ba0b5e98dd6233a4b1707acd3c8081667ca1897dcf3bc6b6f3105473aba"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/jump/004.png",
+          "sha256": "9961fdc7d734ca0a08e4c7b9a156152067885ccf5fb267b769ea8cf49ae54c00"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/jump/005.png",
+          "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
+        }
+      ],
+      "canvas": [
+        63,
+        68
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ski_a_jump__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            63,
+            68
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ski_a/lean_left",
+      "sources": [
+        {
+          "path": "frames/ski/runtime/ski_a/lean_left/000.png",
+          "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/lean_left/001.png",
+          "sha256": "c8d4e74124622a93b1063d68bfb0058c09fcd8f23e89f65a244c60bbd5d87fb9"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/lean_left/002.png",
+          "sha256": "bd736deffba2704a683736b89be4a707d503a8a206b0133f236f68b90f207f03"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/lean_left/003.png",
+          "sha256": "6d51c111d3573570a791103555a4503f1be5de34a3c3d2c214c3a57cd1f988b5"
+        }
+      ],
+      "canvas": [
+        63,
+        68
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ski_a_lean_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            63,
+            68
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ski_a/lean_right",
+      "sources": [
+        {
+          "path": "frames/ski/runtime/ski_a/lean_right/000.png",
+          "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/lean_right/001.png",
+          "sha256": "acb0cc8dd0cf7e5c141974a0635fc8a5463d0efdfd5faa41e052c76d07d33638"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/lean_right/002.png",
+          "sha256": "7bf8863536d9e1b5b87ff421038384860d7fa3852043ae31f9fe503810792267"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/lean_right/003.png",
+          "sha256": "ebf7d3fbd9b3749787fc6e832a73166536a07a401580d2155f240318dfdaac80"
+        }
+      ],
+      "canvas": [
+        63,
+        68
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ski_a_lean_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            63,
+            68
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ski_a/settlement_cheer",
+      "sources": [
+        {
+          "path": "frames/ski/runtime/ski_a/settlement_cheer/000.png",
+          "sha256": "9b163bb3ee304f2d7e2cb51283b43953b72e43960ed9174f5fa66b4edbbb7c1c"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/settlement_cheer/001.png",
+          "sha256": "abe1031b388d800b5a40d3495ba25b89328935006aa236fd8d1829b46976f46a"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/settlement_cheer/002.png",
+          "sha256": "a3c0b0c956f025b63e8ebebda608abb795adeeca21359967a2062de2515173b1"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/settlement_cheer/003.png",
+          "sha256": "e787e65285e830ac9228a3d17956c05e37c7cd0a3296c43130c8ddcf4a880126"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/settlement_cheer/004.png",
+          "sha256": "0d528ad83c3f133e853a93431cdcff149bfe2fee6a93d120fc991cb3858e3695"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/settlement_cheer/005.png",
+          "sha256": "8cfe392c2e5c86fc81b882db6e45b808e43bc5fcf47e324d4edb43e41ed0af19"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/settlement_cheer/006.png",
+          "sha256": "63751b7e897def4d590bf35d50f7d042017b74795e6c3bc76d4722e756a41594"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/settlement_cheer/007.png",
+          "sha256": "9b163bb3ee304f2d7e2cb51283b43953b72e43960ed9174f5fa66b4edbbb7c1c"
+        }
+      ],
+      "canvas": [
+        45,
+        72
+      ],
+      "anchor": [
+        30,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ski_a_settlement_cheer__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            45,
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ski_a/straight",
+      "sources": [
+        {
+          "path": "frames/ski/runtime/ski_a/straight/000.png",
+          "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/straight/001.png",
+          "sha256": "cc6e95b6aca21db1cde7de73fbb3e8a4e20e65fb9772c9d3195410e8a0b2db37"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/straight/002.png",
+          "sha256": "aacdf1a3803853a9f3e3164553f2a322f6c8ee9e66e20d3d895b4f16eef5fc43"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/straight/003.png",
+          "sha256": "8287dd4ff2bfe105794fb342aef94afa9823b02741119eb2857101f5886d4098"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/straight/004.png",
+          "sha256": "9f1913f40da13e0441e320954c39b83756490e2411d219d93f2b9b16d7ee5bad"
+        },
+        {
+          "path": "frames/ski/runtime/ski_a/straight/005.png",
+          "sha256": "87161746610a811034fb8ec1d35b3f87b9eee0217cc41a90a796c56130eeb949"
+        }
+      ],
+      "canvas": [
+        63,
+        68
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_ski_a_straight__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            63,
+            68
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sky_a/heat",
+      "sources": [
+        {
+          "path": "frames/sky/runtime/sky_a/heat/000.png",
+          "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/heat/001.png",
+          "sha256": "b0b896e7f94c29c1ce537b60ed4d29be5bb1e16c8ce80dc3a34ef824e76d2855"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/heat/002.png",
+          "sha256": "8789df5cbe8e75247862920d23967499520e7a04d3b424a43defb900c6692880"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/heat/003.png",
+          "sha256": "00630df1a725ec725205b3c09fee2292befa8298939a859b228d6a49e37bbeec"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/heat/004.png",
+          "sha256": "2e264f4c1f94c1273cc8570ebe1be1dfda71b64e837f94f27b3517bf075b74f9"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/heat/005.png",
+          "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
+        }
+      ],
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_sky_a_heat__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            43,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sky_a/hit",
+      "sources": [
+        {
+          "path": "frames/sky/runtime/sky_a/hit/000.png",
+          "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/hit/001.png",
+          "sha256": "1e7603d4391801c4d6a893008952a2be4b9e43223fb74a74ff2fd4181d602c72"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/hit/002.png",
+          "sha256": "9cbcf54b4ecd7aa969fecac6e4fbd6102beccb7541843d9b329d323c5140b9e3"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/hit/003.png",
+          "sha256": "6a3760e5fb43b316db49e0e4f48c52633319341ece934de5c9c570537cc13c43"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/hit/004.png",
+          "sha256": "11d44240e59c99fc1267d8363e2b006a9522c19c90c6d9f37a152018a2467de5"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/hit/005.png",
+          "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
+        }
+      ],
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_sky_a_hit__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            43,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sky_a/idle",
+      "sources": [
+        {
+          "path": "frames/sky/runtime/sky_a/idle/000.png",
+          "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/idle/001.png",
+          "sha256": "8729cda660f77642cbc89f403c2e756410b02af94a14a9fbb0b6c800da257a8b"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/idle/002.png",
+          "sha256": "ca1bda1f9329935f3fe8efbb5e9740ca2d515100e0e16965221494703b5e42f6"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/idle/003.png",
+          "sha256": "857710cf775cc272c8a7e064e558aff716822c678ad44d9bd6201a2fb94e837c"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/idle/004.png",
+          "sha256": "1541144d1a0664eefb7be70a5475be60b63840ea6606b51fc024f98ebe5a934c"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/idle/005.png",
+          "sha256": "fd8efebb9a96dad0cb2cc7452b4c7a6e5060f0ce1124bff7bb8d61203e159a02"
+        }
+      ],
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_sky_a_idle__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            43,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sky_a/receive_stamp",
+      "sources": [
+        {
+          "path": "frames/sky/runtime/sky_a/receive_stamp/000.png",
+          "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/receive_stamp/001.png",
+          "sha256": "c382538f9424e24cba8533fcf690c5f886af74a5f8f2e30aa1d6e33884839f17"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/receive_stamp/002.png",
+          "sha256": "30f3d65cdf289075d94456b7d6a011b8306b5a7fbaec1b92d1b27c602f8480e5"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/receive_stamp/003.png",
+          "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
+        }
+      ],
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_sky_a_receive_stamp__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            43,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sky_a/settlement_cheer",
+      "sources": [
+        {
+          "path": "frames/sky/runtime/sky_a/settlement_cheer/000.png",
+          "sha256": "0a9bfd56511d68a43c9884b17bce76fa11b8290b69063419e1fae0270f5e7a24"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/settlement_cheer/001.png",
+          "sha256": "a1a82fc378bd9f501425a8e5e7cde9f6b7ad09de2ab0760f856ceef7d3485fd3"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/settlement_cheer/002.png",
+          "sha256": "e64eb01ddb8651581ec36124520a83522fd210e9f6d21df5b9c687ab2e2095a2"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/settlement_cheer/003.png",
+          "sha256": "5c6ee047328af5083e325d0c57343de25a7c209ec8c24b2b709d3ebf435f2004"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/settlement_cheer/004.png",
+          "sha256": "e088ab57732dd9227c5b744242995456107e73ea6c33f902cd7e362180cd4e76"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/settlement_cheer/005.png",
+          "sha256": "aeec8584f731674b45bf738986af8cf5d1eae8816390986838efad806bb22b50"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/settlement_cheer/006.png",
+          "sha256": "5f73121a46a259e7f8638ae8ea41223368d6c7153a1609d390e6b944513903ee"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/settlement_cheer/007.png",
+          "sha256": "0a9bfd56511d68a43c9884b17bce76fa11b8290b69063419e1fae0270f5e7a24"
+        }
+      ],
+      "canvas": [
+        51,
+        72
+      ],
+      "anchor": [
+        27,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_sky_a_settlement_cheer__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            51,
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sky_a/vent",
+      "sources": [
+        {
+          "path": "frames/sky/runtime/sky_a/vent/000.png",
+          "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/vent/001.png",
+          "sha256": "680896338def20815f7c7930e2d9cbdf5d767e13ec0dd08b37951437e96ac730"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/vent/002.png",
+          "sha256": "656fad9f01a712abce309c477db815f720115708c8517077281cb0b9be884e75"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/vent/003.png",
+          "sha256": "b45b1bee620fbc139125f4c5cacad62dc8ce1a2a77105b3a1ccc01dc765c50f1"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/vent/004.png",
+          "sha256": "6e067b6555884e1803e497df989899ae14dda1c4059d5c2af01a9ba5845c982a"
+        },
+        {
+          "path": "frames/sky/runtime/sky_a/vent/005.png",
+          "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
+        }
+      ],
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_sky_a_vent__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            43,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sky_props/bird",
+      "sources": [
+        {
+          "path": "games/sky/bird/000.png",
+          "sha256": "86f8cc02a3f7d06e4d76878c44f2df68b5f197f08c772b5e84bfcd4be52089e0"
+        },
+        {
+          "path": "games/sky/bird/001.png",
+          "sha256": "5f2d6de4ae31821f69ff242ede40281dd824c9a05f138db235cbe4a7fc1123b0"
+        },
+        {
+          "path": "games/sky/bird/002.png",
+          "sha256": "1535e6d655a914b353cbabece243ea2884beab81d4d84f800db920df4e717a1b"
+        },
+        {
+          "path": "games/sky/bird/003.png",
+          "sha256": "4b29322b94ad99763bdcc2e97a1c998f01692b17caa822995b447e93729d9195"
+        }
+      ],
+      "canvas": [
+        24,
+        20
+      ],
+      "anchor": [
+        12,
+        12
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_sky_props_bird__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            24,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sky_props/heat_controls",
+      "sources": [
+        {
+          "path": "games/sky/controls/heat/000.png",
+          "sha256": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212"
+        },
+        {
+          "path": "games/sky/controls/heat/001.png",
+          "sha256": "9ce09ba23d67a9fd973de54d1375ae3e500f9a86cdfea279beffe959031df46d"
+        },
+        {
+          "path": "games/sky/controls/heat/002.png",
+          "sha256": "80b08151e4f3e1746589009cecb487de2e5cf4b2764fc59ec1a7e1c705e64bf5"
+        },
+        {
+          "path": "games/sky/controls/heat/003.png",
+          "sha256": "57aecc9ea9b33819b673011ee81e5cd542b0b647d7112f062ffe3ee0e40f4f0a"
+        },
+        {
+          "path": "games/sky/controls/heat/004.png",
+          "sha256": "6ee3a7e5515de2859c3c174d431df8ce3c989119d27877e15dc56cd2c20a92b5"
+        },
+        {
+          "path": "games/sky/controls/heat/005.png",
+          "sha256": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212"
+        }
+      ],
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_sky_props_heat_controls__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            43,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sky_props/vent_controls",
+      "sources": [
+        {
+          "path": "games/sky/controls/vent/000.png",
+          "sha256": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212"
+        },
+        {
+          "path": "games/sky/controls/vent/001.png",
+          "sha256": "35b844bb5316dc03f446c7c739ec36225a69f6ce42c4b598a2cbc0ec5cead9bb"
+        },
+        {
+          "path": "games/sky/controls/vent/002.png",
+          "sha256": "3aec911f188f14d8ff59f7f164f0fb7584072c9cfde94c22c4c2da69ef35a8ea"
+        },
+        {
+          "path": "games/sky/controls/vent/003.png",
+          "sha256": "154fc5d7fda369bb73de1ad06a762037d1650bd83a2cdf35badf94259ff44a45"
+        },
+        {
+          "path": "games/sky/controls/vent/004.png",
+          "sha256": "66a81e5ee83408f9a1fe90d6957350313d13b9da597be9be1887141a46d0a76e"
+        },
+        {
+          "path": "games/sky/controls/vent/005.png",
+          "sha256": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212"
+        }
+      ],
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_sky_props_vent_controls__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            43,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_a/cabin_idle",
+      "sources": [
+        {
+          "path": "frames/space/runtime/space_a/cabin_idle/000.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        },
+        {
+          "path": "frames/space/runtime/space_a/cabin_idle/001.png",
+          "sha256": "6cd2267e3bcfaf7535c82bacaaa7a31ea7b5d288b55142e313f76f17def3ca3f"
+        },
+        {
+          "path": "frames/space/runtime/space_a/cabin_idle/002.png",
+          "sha256": "b28a5043577a72c156cbce6bbe9710aa2224ad732dbe439c2498021bc50223be"
+        },
+        {
+          "path": "frames/space/runtime/space_a/cabin_idle/003.png",
+          "sha256": "dbece9d87809f4e61dbab4392bdbd8615b271cd0e8d1a7dfde7bc5f3082a0b25"
+        },
+        {
+          "path": "frames/space/runtime/space_a/cabin_idle/004.png",
+          "sha256": "8db2d2d53447a0f7380e2b1c8de4691465ef6dfaf472187be61ff293fd081456"
+        },
+        {
+          "path": "frames/space/runtime/space_a/cabin_idle/005.png",
+          "sha256": "25cd1d507e5069bc9bcc1841ee00d9f7e54974063eae165704c6b4dc81af4b74"
+        }
+      ],
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_a_cabin_idle__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            57,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_a/hard_land",
+      "sources": [
+        {
+          "path": "frames/space/runtime/space_a/hard_land/000.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        },
+        {
+          "path": "frames/space/runtime/space_a/hard_land/001.png",
+          "sha256": "104aaf2d35d37d25f04ab1e8a21877dd5089d5a3c4997a6b40ea9359d69eed79"
+        },
+        {
+          "path": "frames/space/runtime/space_a/hard_land/002.png",
+          "sha256": "0163bd8a953c0116f5e2a54b4bd0d03fd84e8a1aca90404b7013d1b24848084f"
+        },
+        {
+          "path": "frames/space/runtime/space_a/hard_land/003.png",
+          "sha256": "c5a63ce37a6aecbe6ff0bbfc546d9e63a549456611aed33ace0571b39c551f21"
+        },
+        {
+          "path": "frames/space/runtime/space_a/hard_land/004.png",
+          "sha256": "161de056fbd61d2526b59a1b5dea678a83b18e4e7909935a99c1d84a86ce2ad1"
+        },
+        {
+          "path": "frames/space/runtime/space_a/hard_land/005.png",
+          "sha256": "0cdeba62497446e19b28565c35145a899e9fa1f68474ddd92d4d88ea71b265f1"
+        },
+        {
+          "path": "frames/space/runtime/space_a/hard_land/006.png",
+          "sha256": "925dcc200d7f1f10c0e9975de9a7a73e187c5409ebf46fd47873a2bba95de2b4"
+        },
+        {
+          "path": "frames/space/runtime/space_a/hard_land/007.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        }
+      ],
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_a_hard_land__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            57,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_a/jet",
+      "sources": [
+        {
+          "path": "frames/space/runtime/space_a/jet/000.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        },
+        {
+          "path": "frames/space/runtime/space_a/jet/001.png",
+          "sha256": "b9ca76873c6fc457bcae768e4756f43ffc55212a953de01f5c2e6f2bf2e195f2"
+        },
+        {
+          "path": "frames/space/runtime/space_a/jet/002.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        },
+        {
+          "path": "frames/space/runtime/space_a/jet/003.png",
+          "sha256": "641579177b67aae54dee5bb03b0838059fb0055cf1f6cbc1ecbba28ba5eef858"
+        }
+      ],
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_a_jet__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            57,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_a/land",
+      "sources": [
+        {
+          "path": "frames/space/runtime/space_a/land/000.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        },
+        {
+          "path": "frames/space/runtime/space_a/land/001.png",
+          "sha256": "cba08eebedefa0017244d71a5745f04cc2765b83040014357e537ea44e362769"
+        },
+        {
+          "path": "frames/space/runtime/space_a/land/002.png",
+          "sha256": "da9bc68dbb24e9277c092bd1c54c750dac18ee4e55a4a3a1c3e5fed348b8e95d"
+        },
+        {
+          "path": "frames/space/runtime/space_a/land/003.png",
+          "sha256": "da9bc68dbb24e9277c092bd1c54c750dac18ee4e55a4a3a1c3e5fed348b8e95d"
+        },
+        {
+          "path": "frames/space/runtime/space_a/land/004.png",
+          "sha256": "cba08eebedefa0017244d71a5745f04cc2765b83040014357e537ea44e362769"
+        },
+        {
+          "path": "frames/space/runtime/space_a/land/005.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        }
+      ],
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_a_land__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            57,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_a/plant_flag",
+      "sources": [
+        {
+          "path": "frames/space/runtime/space_a/plant_flag/000.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        },
+        {
+          "path": "frames/space/runtime/space_a/plant_flag/001.png",
+          "sha256": "58af3dda92944f3ffa48ee7f9d09e1b638ee53220f0f0503561db0eeae6d02a0"
+        },
+        {
+          "path": "frames/space/runtime/space_a/plant_flag/002.png",
+          "sha256": "c97a85bbcc17d576b75ddfd0221b197a076a9126c73f9b77481f4082648de1d1"
+        },
+        {
+          "path": "frames/space/runtime/space_a/plant_flag/003.png",
+          "sha256": "3005cd2412881f6baafac48536ef4c3423b217d47fe4286d9f74a61e5dd3a8b3"
+        },
+        {
+          "path": "frames/space/runtime/space_a/plant_flag/004.png",
+          "sha256": "55e6cf36aa624fe80c4e760c1b8c7b4e3d04b9463a5a8320e6707a3e5376059c"
+        },
+        {
+          "path": "frames/space/runtime/space_a/plant_flag/005.png",
+          "sha256": "fd84f4ee1d3b263eeb21a1df95283d8399542caa6a5fdd7c18052ad0a364e045"
+        },
+        {
+          "path": "frames/space/runtime/space_a/plant_flag/006.png",
+          "sha256": "9ca9f94c1d4cb0e931c3fb6102bc5f0daaa4690cc4096a89609b4004941bd2ec"
+        },
+        {
+          "path": "frames/space/runtime/space_a/plant_flag/007.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        }
+      ],
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_a_plant_flag__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            57,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_a/settlement_cheer",
+      "sources": [
+        {
+          "path": "frames/space/runtime/space_a/settlement_cheer/000.png",
+          "sha256": "bfcf82dfb8a68035dfeb8a3ab8308f65771707b3b09c19bb68ed9592b7d8f4a0"
+        },
+        {
+          "path": "frames/space/runtime/space_a/settlement_cheer/001.png",
+          "sha256": "8291a573644c98c736f173f84743cfda420c8aaab3eba332091754bde1a97c9b"
+        },
+        {
+          "path": "frames/space/runtime/space_a/settlement_cheer/002.png",
+          "sha256": "e20deaf244bda2b691ba4b064e73db2764ebbbc955bf860922cfe7f4a8bca45f"
+        },
+        {
+          "path": "frames/space/runtime/space_a/settlement_cheer/003.png",
+          "sha256": "f13d17c9a9811cb44d27e3ec2821047aca7b5eacb8e8f862ebe3bac700c73f16"
+        },
+        {
+          "path": "frames/space/runtime/space_a/settlement_cheer/004.png",
+          "sha256": "39c7f3901181be5edd2e4d74e602156a5a7e6059b5172a03065e88fe43eba295"
+        },
+        {
+          "path": "frames/space/runtime/space_a/settlement_cheer/005.png",
+          "sha256": "667ddf7530d7a06eb81c44f8bdb735dfa5c6dc7b7d1d9ed149c84dfd397c7327"
+        },
+        {
+          "path": "frames/space/runtime/space_a/settlement_cheer/006.png",
+          "sha256": "24bae8eb87dbfd4783b178c64d1a9adb695ae24bd83af7b7116e8758ab611471"
+        },
+        {
+          "path": "frames/space/runtime/space_a/settlement_cheer/007.png",
+          "sha256": "bfcf82dfb8a68035dfeb8a3ab8308f65771707b3b09c19bb68ed9592b7d8f4a0"
+        }
+      ],
+      "canvas": [
+        73,
+        73
+      ],
+      "anchor": [
+        37,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_a_settlement_cheer__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            73,
+            73
           ]
         }
       ]
@@ -11874,10 +13667,10 @@
       ]
     }
   ],
-  "python_verified_frames": 555,
+  "python_verified_frames": 647,
   "production_c": {
-    "verified_frames": 555,
-    "verified_sprite_rows": 26049,
+    "verified_frames": 647,
+    "verified_sprite_rows": 30495,
     "verified_ninepatch_rows": 912,
     "comparison": "generated C and production decoders vs indexed source"
   },
@@ -11941,8 +13734,8 @@
   "sprite_interning": {
     "scope": "within each group only",
     "comparison": "exact RGBA pixels, dimensions and ordered frame sequence",
-    "logical_pieces": 295,
-    "physical_sprites": 254,
+    "logical_pieces": 337,
+    "physical_sprites": 296,
     "accounting": "RLE/tables/sprite32 per physical object; piece8 and record/id per logical use"
   },
   "startup_composition": {

@@ -1,0 +1,147 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_space_a_cabin_idle__p0",
+  "width": 57,
+  "height": 57,
+  "palette_rgb565": [
+    0,
+    4193,
+    8419,
+    10533,
+    12580,
+    12646,
+    14693,
+    14760,
+    16741,
+    16773,
+    16839,
+    16873,
+    16971,
+    19345,
+    21230,
+    21425,
+    22982,
+    23047,
+    23146,
+    23538,
+    25488,
+    27405,
+    27764,
+    29288,
+    31990,
+    33514,
+    33711,
+    35857,
+    35954,
+    37674,
+    38200,
+    39820,
+    40082,
+    40344,
+    42196,
+    44276,
+    46421,
+    46487,
+    46618,
+    48239,
+    50615,
+    52498,
+    52596,
+    52793,
+    52923,
+    54742,
+    54840,
+    54906,
+    59000,
+    59066,
+    59132,
+    60787,
+    60918,
+    61211,
+    61245,
+    61278,
+    63193,
+    63292,
+    63326,
+    63358,
+    65143,
+    65438,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 3010,
+  "table_bytes": 836,
+  "frame_sha256": [
+    "94bbda518624fd985d0f6184a8e7ced569991971b3c5c1c00952b6a702e7ec87",
+    "6f2c3a52a40c1f7a93da6ff06357f3d006830c2d2c9d3a64fa6c223a5d27adfb",
+    "46ae3eb32eb7ece07c7690702de3f93b925336e8075b116ca7ba13e777779d6e",
+    "cb14e31a1eefdd7a85b78213a147e0622ac9a39cab20d3f31ec2b744ac68195a",
+    "91a2987e80f398d24f6b631aac708f8d1a4d85e9c61318cbf61099a7c50a4350",
+    "85768b5e5646e0bc41479d4da0c7e63e98e9de3b273563b7d51f65b22732ea54"
+  ],
+  "source_sha256": [
+    "3666fe396511a33b10ae869176380ba2c85448eadc48d2713925fa16c1097639",
+    "ac216984bdc127199eb8a095de5f3578544cd5842fdac358979e6bd63602ba2e",
+    "44f902f0d00286886c36104a4d4ab028e503332b90dbd0e611eaa0bf72f2882f",
+    "3defd18279f1f72c3c33103921c281b5f657c58ba4f7f5753cd8fe11bf0edf07",
+    "cbddc855023bad8f7aa2dd9d7c4460b93124ba2a68bed0e8deeabef900ffaac8",
+    "f3969371cef0015f1a8b54dd4babcb8b59e6141315ed08f8fb12c4e119daf276"
+  ],
+  "verified_frames": 6,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "space_a/cabin_idle",
+  "group": "space",
+  "symbol": "adv_assets_space_a_cabin_idle__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/cabin_idle/000.png",
+      "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/cabin_idle/001.png",
+      "sha256": "6cd2267e3bcfaf7535c82bacaaa7a31ea7b5d288b55142e313f76f17def3ca3f"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/cabin_idle/002.png",
+      "sha256": "b28a5043577a72c156cbce6bbe9710aa2224ad732dbe439c2498021bc50223be"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/cabin_idle/003.png",
+      "sha256": "dbece9d87809f4e61dbab4392bdbd8615b271cd0e8d1a7dfde7bc5f3082a0b25"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/cabin_idle/004.png",
+      "sha256": "8db2d2d53447a0f7380e2b1c8de4691465ef6dfaf472187be61ff293fd081456"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/cabin_idle/005.png",
+      "sha256": "25cd1d507e5069bc9bcc1841ee00d9f7e54974063eae165704c6b4dc81af4b74"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "space_a/cabin_idle",
+      "logical_symbol": "adv_assets_space_a_cabin_idle__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

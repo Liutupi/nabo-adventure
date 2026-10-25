@@ -1,0 +1,169 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_ski_a_settlement_cheer__p0",
+  "width": 45,
+  "height": 72,
+  "palette_rgb565": [
+    0,
+    2113,
+    6405,
+    6440,
+    8322,
+    8553,
+    10500,
+    10534,
+    10633,
+    10667,
+    12581,
+    12612,
+    12678,
+    12745,
+    12779,
+    14693,
+    14893,
+    16741,
+    16806,
+    16872,
+    18854,
+    18919,
+    18986,
+    19084,
+    21392,
+    23014,
+    25128,
+    25226,
+    25324,
+    25650,
+    27175,
+    27502,
+    31401,
+    31826,
+    31891,
+    35659,
+    35758,
+    36119,
+    37609,
+    41414,
+    41933,
+    44177,
+    46356,
+    46520,
+    48107,
+    50779,
+    52366,
+    56623,
+    56986,
+    58771,
+    59165,
+    60983,
+    61245,
+    61278,
+    63325,
+    63326,
+    63358,
+    63391,
+    65078,
+    65144,
+    65208,
+    65273,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    0
+  ],
+  "data_bytes": 11026,
+  "table_bytes": 1180,
+  "frame_sha256": [
+    "f7599e5e6c0947f41ca57a3f47185d4947f2b41f0ab7bd10dcf966dcf9507eb9",
+    "3ab6175c5aa8e2fecdc81c17f7694dc3078977bb49c452bac9b05156aa5185b2",
+    "3ff5268a951a1dc46a28ce64225f1e537e7505dcb4cc0fe3deced49f32d9bca1",
+    "b6c84cbc0d4b00c9bca308537744231881e5c1b9f07d137ada32f1cc76650eb5",
+    "6c3b317169be193da24cf7e07247b81777691c08394780eac7c057fd7c9898ed",
+    "8f273d9ebdbae68cbf1bc9f6589f516f03749d4340a7daa646a07404a669388f",
+    "76259b57825dace94e49063977897e8f608609bf186c16f720560474f25d1c32",
+    "f7599e5e6c0947f41ca57a3f47185d4947f2b41f0ab7bd10dcf966dcf9507eb9"
+  ],
+  "source_sha256": [
+    "115fdab8ec42451a7caeff431b6d6927cfafab373a34d6ed5471c427f395094d",
+    "b9967b9fefb6670bcf62b542e09a53f1e644874426ef4f2fdcf1570661c02601",
+    "0b8e0dd6399419727d139882ba808af1092c682d9a32d8ff1fedf0703dd74cea",
+    "13479a373e8c567f2f9a4060f0ec5bd89864999db2d524178e3ecbd921601e2b",
+    "27021effe0d8d7514eeb07927ca0b639e9a57219712b8d3fbf2f6ee2f2570f79",
+    "5dcf1af4310241700030d026003f5fca6a6142726974be867ed6215078992a3f",
+    "2333660d1e802b281e4ffd8b90642b923e11cbe5c4200dbcfe047c357e11927f",
+    "115fdab8ec42451a7caeff431b6d6927cfafab373a34d6ed5471c427f395094d"
+  ],
+  "verified_frames": 8,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ski_a/settlement_cheer",
+  "group": "ski",
+  "symbol": "adv_assets_ski_a_settlement_cheer__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/000.png",
+      "sha256": "9b163bb3ee304f2d7e2cb51283b43953b72e43960ed9174f5fa66b4edbbb7c1c"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/001.png",
+      "sha256": "abe1031b388d800b5a40d3495ba25b89328935006aa236fd8d1829b46976f46a"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/002.png",
+      "sha256": "a3c0b0c956f025b63e8ebebda608abb795adeeca21359967a2062de2515173b1"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/003.png",
+      "sha256": "e787e65285e830ac9228a3d17956c05e37c7cd0a3296c43130c8ddcf4a880126"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/004.png",
+      "sha256": "0d528ad83c3f133e853a93431cdcff149bfe2fee6a93d120fc991cb3858e3695"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/005.png",
+      "sha256": "8cfe392c2e5c86fc81b882db6e45b808e43bc5fcf47e324d4edb43e41ed0af19"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/006.png",
+      "sha256": "63751b7e897def4d590bf35d50f7d042017b74795e6c3bc76d4722e756a41594"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/007.png",
+      "sha256": "9b163bb3ee304f2d7e2cb51283b43953b72e43960ed9174f5fa66b4edbbb7c1c"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ski_a/settlement_cheer",
+      "logical_symbol": "adv_assets_ski_a_settlement_cheer__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

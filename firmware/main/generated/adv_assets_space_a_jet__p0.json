@@ -1,0 +1,137 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_space_a_jet__p0",
+  "width": 57,
+  "height": 57,
+  "palette_rgb565": [
+    0,
+    4193,
+    8419,
+    10533,
+    12580,
+    12646,
+    14693,
+    14760,
+    16741,
+    16773,
+    16839,
+    16873,
+    16971,
+    19345,
+    21230,
+    21425,
+    22982,
+    23047,
+    23146,
+    23538,
+    25488,
+    27405,
+    27764,
+    29288,
+    31990,
+    33514,
+    33711,
+    35857,
+    35954,
+    37674,
+    38200,
+    39820,
+    40082,
+    40344,
+    42196,
+    44276,
+    46421,
+    46487,
+    46618,
+    48239,
+    50615,
+    52498,
+    52596,
+    52793,
+    52923,
+    54742,
+    54840,
+    54906,
+    59000,
+    59066,
+    59132,
+    60787,
+    60918,
+    61211,
+    61245,
+    61278,
+    63193,
+    63292,
+    63326,
+    63358,
+    65143,
+    65438,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0
+  ],
+  "frame_map": [
+    0,
+    1,
+    0,
+    2
+  ],
+  "data_bytes": 2488,
+  "table_bytes": 490,
+  "frame_sha256": [
+    "94bbda518624fd985d0f6184a8e7ced569991971b3c5c1c00952b6a702e7ec87",
+    "e04ab57dc37fe896b604fbbe14be5c2c7483c5bd72e8aecc8cf3b7d9691167b9",
+    "94bbda518624fd985d0f6184a8e7ced569991971b3c5c1c00952b6a702e7ec87",
+    "357c1327fd1f6fc3a52d98414e60a9836f96b1dd7d22411539713db2a8038ec0"
+  ],
+  "source_sha256": [
+    "3666fe396511a33b10ae869176380ba2c85448eadc48d2713925fa16c1097639",
+    "2642c068e77a754710ca5d3996b867ccc543e2ec3d8f6f5daa3859b616cc4a6f",
+    "3666fe396511a33b10ae869176380ba2c85448eadc48d2713925fa16c1097639",
+    "9ca59136d4884b70d227ab61eea450f74378442ed5df91af89b3896010169578"
+  ],
+  "verified_frames": 4,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "space_a/jet",
+  "group": "space",
+  "symbol": "adv_assets_space_a_jet__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/jet/000.png",
+      "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/jet/001.png",
+      "sha256": "b9ca76873c6fc457bcae768e4756f43ffc55212a953de01f5c2e6f2bf2e195f2"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/jet/002.png",
+      "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/jet/003.png",
+      "sha256": "641579177b67aae54dee5bb03b0838059fb0055cf1f6cbc1ecbba28ba5eef858"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "space_a/jet",
+      "logical_symbol": "adv_assets_space_a_jet__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

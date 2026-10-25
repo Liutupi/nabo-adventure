@@ -1,0 +1,52 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_sky_cloud_01__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    46780,
+    61341,
+    63421
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 172,
+  "table_bytes": 76,
+  "frame_sha256": [
+    "f689f9982b15cccfda2c0728a1eca444d3eca6ce620c0b1d3de2baa7ca068efb"
+  ],
+  "source_sha256": [
+    "aaec27efa897bce65bdc1e58573475af07171f1c3a26946fe09b7d44fd456fb7"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/sky/cloud_01",
+  "group": "sky",
+  "symbol": "adv_assets_game_sky_cloud_01__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/tiles/cloud_01.png",
+      "sha256": "f21466f9e0cf425ebb8a9af635b3ac6688bca29d4400d1d0c9514f5c5454e183"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/sky/cloud_01",
+      "logical_symbol": "adv_assets_game_sky_cloud_01__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

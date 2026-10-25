@@ -1,0 +1,56 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_ski_props_hot_cocoa_cabin__p0",
+  "width": 64,
+  "height": 64,
+  "palette_rgb565": [
+    0,
+    8649,
+    44173,
+    45672,
+    48007,
+    54567,
+    65433,
+    65502
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 964,
+  "table_bytes": 148,
+  "frame_sha256": [
+    "7c60e6b1484e749ad6a619e338063e08465ab2517d94daaba194eb1f581838b0"
+  ],
+  "source_sha256": [
+    "3cf59ff27138571f96e6ae97ed5744cc541817ee7cdb31f6b36f52d51ff0ebee"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/ski/props/hot-cocoa-cabin",
+  "group": "ski",
+  "symbol": "adv_assets_game_ski_props_hot_cocoa_cabin__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/ski/props/hot-cocoa-cabin.png",
+      "sha256": "b2084cf4b32ff96a81b0a00b00735320511ff585d7bc8b6576ad506487f4d7cf"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/ski/props/hot-cocoa-cabin",
+      "logical_symbol": "adv_assets_game_ski_props_hot_cocoa_cabin__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

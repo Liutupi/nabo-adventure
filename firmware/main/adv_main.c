@@ -278,15 +278,16 @@ static void diagnostic_open(const char *name)
     if (!s_test || s_owner != OWNER_SHELL || s_model.page != ADV_PAGE_MAP) {
         puts("@error open requires test mode and the map"); return;
     }
-    if(!strcmp(name,"post")||!strcmp(name,"night")||!strcmp(name,"climb")) {
-        int station=!strcmp(name,"post")?3:!strcmp(name,"night")?4:5;
+    static const char *const shell[]={"post","night","climb","ski","sky","space"};int station=-1;
+    for(int i=0;i<6;i++)if(!strcmp(name,shell[i]))station=3+i;
+    if(station>=3) {
         handle_fx(adv_test_open(&s_model,station));
         s_draw_frames=s_draw_us=s_draw_max_us=0;
         if(!s_model.in_session)puts("@error game test entry failed");
         else printf("@adv open=%s\n",name);
         s_last_input_us=s_step_us=esp_timer_get_time();return;
     }
-    int station = !strcmp(name, "jump") ? STATION_JUMP : !strcmp(name, "dive") ? STATION_DIVE : -1;
+    station = !strcmp(name, "jump") ? STATION_JUMP : !strcmp(name, "dive") ? STATION_DIVE : -1;
     if (station < 0) { puts("@error unknown game"); return; }
     // This diagnostic bypasses the map unlock check without touching model rules
     // or adding fake records. The ordinary owner/return lifecycle stays in use.

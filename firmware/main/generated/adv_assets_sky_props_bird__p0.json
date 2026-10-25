@@ -1,0 +1,75 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_sky_props_bird__p0",
+  "width": 24,
+  "height": 20,
+  "palette_rgb565": [
+    0,
+    10729,
+    17100,
+    31891,
+    46090,
+    56983
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    1,
+    1,
+    1
+  ],
+  "frame_map": null,
+  "data_bytes": 504,
+  "table_bytes": 188,
+  "frame_sha256": [
+    "af531406e0c1313f24c220db9cc1a55c6f1f1a084b923edebd52fe6da5d3cbfd",
+    "6e5f3a651ee8f92d52990df021ca09705456990d5afa6ac57d265e2374116b20",
+    "6ede73765ee8debb387d89aa32d6e83f54d291e17f3bee9d2ec5b6fdf04d3c24",
+    "fc55e145406682e38c6b7504c7ad70a06bb5c072e22d7718b63fb0e4591d6ccc"
+  ],
+  "source_sha256": [
+    "e2744c0fe96897838f5dd7111f55eb3b1f38226a850b20e05721a68ec8953657",
+    "dbe5a4081d91520f2ba1b176b2244cc05b55edc893ccd370eff27d024c819de2",
+    "649053d7c9d3bb4d2396f298ac81ae7265fb96c157f8021e0e004e72deb801a0",
+    "bd1f16f78ecba117386002448c79e53980948ef53cfdffe30205d88329c6363f"
+  ],
+  "verified_frames": 4,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "sky_props/bird",
+  "group": "sky",
+  "symbol": "adv_assets_sky_props_bird__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/bird/000.png",
+      "sha256": "86f8cc02a3f7d06e4d76878c44f2df68b5f197f08c772b5e84bfcd4be52089e0"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/bird/001.png",
+      "sha256": "5f2d6de4ae31821f69ff242ede40281dd824c9a05f138db235cbe4a7fc1123b0"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/bird/002.png",
+      "sha256": "1535e6d655a914b353cbabece243ea2884beab81d4d84f800db920df4e717a1b"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/bird/003.png",
+      "sha256": "4b29322b94ad99763bdcc2e97a1c998f01692b17caa822995b447e93729d9195"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "sky_props/bird",
+      "logical_symbol": "adv_assets_sky_props_bird__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

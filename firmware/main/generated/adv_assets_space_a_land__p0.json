@@ -1,0 +1,151 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_space_a_land__p0",
+  "width": 57,
+  "height": 57,
+  "palette_rgb565": [
+    0,
+    4193,
+    8419,
+    10533,
+    12580,
+    12646,
+    14693,
+    14760,
+    16741,
+    16773,
+    16839,
+    16873,
+    16971,
+    19345,
+    21230,
+    21425,
+    22982,
+    23047,
+    23146,
+    23538,
+    25488,
+    27405,
+    27764,
+    29288,
+    31990,
+    33514,
+    33711,
+    35857,
+    35954,
+    37674,
+    38200,
+    39820,
+    40082,
+    40344,
+    42196,
+    44276,
+    46421,
+    46487,
+    46618,
+    48239,
+    50615,
+    52498,
+    52596,
+    52793,
+    52923,
+    54742,
+    54840,
+    54906,
+    59000,
+    59066,
+    59132,
+    60787,
+    60918,
+    61211,
+    61245,
+    61278,
+    63193,
+    63292,
+    63326,
+    63358,
+    65143,
+    65438,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0
+  ],
+  "frame_map": [
+    0,
+    1,
+    2,
+    2,
+    1,
+    0
+  ],
+  "data_bytes": 3005,
+  "table_bytes": 494,
+  "frame_sha256": [
+    "94bbda518624fd985d0f6184a8e7ced569991971b3c5c1c00952b6a702e7ec87",
+    "8241afb3970ab1b8409cf804de1c17e6f82bc3fd7069b4b636f230d599fd5887",
+    "7a735d16931a40e743324daea104ada9e65ef826dd4dbd808a9548e6413c34d9",
+    "7a735d16931a40e743324daea104ada9e65ef826dd4dbd808a9548e6413c34d9",
+    "8241afb3970ab1b8409cf804de1c17e6f82bc3fd7069b4b636f230d599fd5887",
+    "94bbda518624fd985d0f6184a8e7ced569991971b3c5c1c00952b6a702e7ec87"
+  ],
+  "source_sha256": [
+    "3666fe396511a33b10ae869176380ba2c85448eadc48d2713925fa16c1097639",
+    "0a889560f4a7498779c64d06d0a4b4120850d00ebf44f35bf43418d0c0c8beac",
+    "895b5b4ad99ba5079110cb764785c2b10166ddfb0e91c5b33b233743b7ca6a5f",
+    "895b5b4ad99ba5079110cb764785c2b10166ddfb0e91c5b33b233743b7ca6a5f",
+    "0a889560f4a7498779c64d06d0a4b4120850d00ebf44f35bf43418d0c0c8beac",
+    "3666fe396511a33b10ae869176380ba2c85448eadc48d2713925fa16c1097639"
+  ],
+  "verified_frames": 6,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "space_a/land",
+  "group": "space",
+  "symbol": "adv_assets_space_a_land__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/land/000.png",
+      "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/land/001.png",
+      "sha256": "cba08eebedefa0017244d71a5745f04cc2765b83040014357e537ea44e362769"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/land/002.png",
+      "sha256": "da9bc68dbb24e9277c092bd1c54c750dac18ee4e55a4a3a1c3e5fed348b8e95d"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/land/003.png",
+      "sha256": "da9bc68dbb24e9277c092bd1c54c750dac18ee4e55a4a3a1c3e5fed348b8e95d"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/land/004.png",
+      "sha256": "cba08eebedefa0017244d71a5745f04cc2765b83040014357e537ea44e362769"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/land/005.png",
+      "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "space_a/land",
+      "logical_symbol": "adv_assets_space_a_land__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

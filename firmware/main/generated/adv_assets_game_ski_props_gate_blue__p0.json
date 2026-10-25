@@ -1,0 +1,54 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_ski_props_gate_blue__p0",
+  "width": 64,
+  "height": 56,
+  "palette_rgb565": [
+    0,
+    8649,
+    17298,
+    40276,
+    65433,
+    65502
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 742,
+  "table_bytes": 128,
+  "frame_sha256": [
+    "ded4205f7ee024ceb31caabd7cd66af8aa1145607335f6435c4e1081edc536e7"
+  ],
+  "source_sha256": [
+    "07cd4b1bf7a95ffa3702c717585e1043ecc2c0a0a01b3499b2b1f04ca5c3a310"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/ski/props/gate-blue",
+  "group": "ski",
+  "symbol": "adv_assets_game_ski_props_gate_blue__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/ski/props/gate-blue.png",
+      "sha256": "31df29a0c3cc6f94db21a760f32c84b766a21952e8368abfa8e98b133d1eae8d"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/ski/props/gate-blue",
+      "logical_symbol": "adv_assets_game_ski_props_gate_blue__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

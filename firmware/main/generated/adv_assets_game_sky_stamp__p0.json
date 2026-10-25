@@ -1,0 +1,53 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_sky_stamp__p0",
+  "width": 16,
+  "height": 20,
+  "palette_rgb565": [
+    0,
+    17327,
+    25191,
+    39722,
+    61142
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 292,
+  "table_bytes": 54,
+  "frame_sha256": [
+    "dbbb8bb408e4ce1193b912e8e8e18357686353be1a2a9e8098d01b22ae2a4626"
+  ],
+  "source_sha256": [
+    "89e7d8e9f2d810d6d695a72dc15773682f8e362b670e45a6af00d1c4a57218d5"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/sky/stamp",
+  "group": "sky",
+  "symbol": "adv_assets_game_sky_stamp__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/props/stamp.png",
+      "sha256": "55475e6fbb5c1b404192ffa80b7341bc236a62674a4684b1a8521d7ed4ca9c3f"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/sky/stamp",
+      "logical_symbol": "adv_assets_game_sky_stamp__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

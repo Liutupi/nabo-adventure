@@ -1,0 +1,145 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_sky_a_idle__p0",
+  "width": 43,
+  "height": 40,
+  "palette_rgb565": [
+    0,
+    2081,
+    8322,
+    8454,
+    8520,
+    12548,
+    12613,
+    14693,
+    14694,
+    14759,
+    16708,
+    16741,
+    16873,
+    18854,
+    20934,
+    20999,
+    21033,
+    22723,
+    23211,
+    27175,
+    29321,
+    32964,
+    33481,
+    33547,
+    33645,
+    35076,
+    35922,
+    36120,
+    37675,
+    39205,
+    41318,
+    41836,
+    41998,
+    43527,
+    44308,
+    46553,
+    48175,
+    48468,
+    48732,
+    50353,
+    54709,
+    54840,
+    54972,
+    56626,
+    58837,
+    59066,
+    59165,
+    60983,
+    61245,
+    62933,
+    63326,
+    63358,
+    63390,
+    63391,
+    65111,
+    65208,
+    65241,
+    65338,
+    65404,
+    65470,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 1994,
+  "table_bytes": 628,
+  "frame_sha256": [
+    "ad58c330561f872e04d3e53936006f5c31ac91e107e166e00b38b04d6a1c61c5",
+    "753fdd4c7c2e4a56f3cc9832ebc060ec26acce9cd3e2c2d40cb149dba4ac6f08",
+    "8b54f579ee6dbdc0a6df14729b8c27deb84a5919a7c32ede708299cdce2bafd4",
+    "0bab2930c42755736a53bff0949146445e27c8b65698e1292db93c8b56ee6d29",
+    "5920080b826c865956daa04b7d9f3a63148b5982e816cfa5d7eb9c5f8223f0ef",
+    "6e28219db0642e954764ee08a4071d4304b5116f8b6d1d073d3b6b4ac6f16600"
+  ],
+  "source_sha256": [
+    "50c43c5efb68fae28e08e4888336833ea96cd65967c713fbf213fd97bd61d3e3",
+    "ed0a785239f12804962d094b229b1f950ab1b3097e056bf5b5a3ce0c4b8e516e",
+    "b77b2e9541050bb65bea674bb3396cd5540a01719fad59ba20d675855d4c7162",
+    "de8b2c667c8541c9bb6bb3c93a1de51803b83a894f432b6e9d61fa85fd376cd8",
+    "46c6a9131930254011455888081f8fc282a6ad11c92c964688204357266c5b57",
+    "f99303760c4cc4acf95c632fe26d33cb17306401cef1d73333cdd1ca62d2bca5"
+  ],
+  "verified_frames": 6,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "sky_a/idle",
+  "group": "sky",
+  "symbol": "adv_assets_sky_a_idle__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/idle/000.png",
+      "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/idle/001.png",
+      "sha256": "8729cda660f77642cbc89f403c2e756410b02af94a14a9fbb0b6c800da257a8b"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/idle/002.png",
+      "sha256": "ca1bda1f9329935f3fe8efbb5e9740ca2d515100e0e16965221494703b5e42f6"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/idle/003.png",
+      "sha256": "857710cf775cc272c8a7e064e558aff716822c678ad44d9bd6201a2fb94e837c"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/idle/004.png",
+      "sha256": "1541144d1a0664eefb7be70a5475be60b63840ea6606b51fc024f98ebe5a934c"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/idle/005.png",
+      "sha256": "fd8efebb9a96dad0cb2cc7452b4c7a6e5060f0ce1124bff7bb8d61203e159a02"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "sky_a/idle",
+      "logical_symbol": "adv_assets_sky_a_idle__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

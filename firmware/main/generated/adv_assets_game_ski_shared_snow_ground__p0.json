@@ -1,0 +1,51 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_ski_shared_snow_ground__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    40276,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 316,
+  "table_bytes": 74,
+  "frame_sha256": [
+    "0dc465801677c716051d8442eede0b1af014d1aea2a0e9c571d538e6f9b31f8e"
+  ],
+  "source_sha256": [
+    "e7361ff7edb63f40e740d20ac27f3fcee781552e380630ddd3b8339c7c5e9144"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/ski/shared/snow-ground",
+  "group": "ski",
+  "symbol": "adv_assets_game_ski_shared_snow_ground__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/mountain/ice-crystals.png",
+      "sha256": "d4226c2f39ab5f08a5c4fd40e4165ccb72bbbae3fa5248f522584016b738b886"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/ski/shared/snow-ground",
+      "logical_symbol": "adv_assets_game_ski_shared_snow_ground__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_sky_burner__p0",
+  "width": 16,
+  "height": 12,
+  "palette_rgb565": [
+    0,
+    10728,
+    17067,
+    46155,
+    54704
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 88,
+  "table_bytes": 38,
+  "frame_sha256": [
+    "b097432cafccd5a9ed5dbac0a7142d7b26978043ad3ca9782cac1971964cd2b0"
+  ],
+  "source_sha256": [
+    "e00374a6a5c4e0ef2550f9e5098c135ba139ca6ff7b56c4d6c5fbb9372527405"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/sky/burner",
+  "group": "sky",
+  "symbol": "adv_assets_game_sky_burner__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/props/burner.png",
+      "sha256": "a41126c580a93568677340ac730a1c96abdf7414b08a8020eb5e4c5895f617bb"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/sky/burner",
+      "logical_symbol": "adv_assets_game_sky_burner__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

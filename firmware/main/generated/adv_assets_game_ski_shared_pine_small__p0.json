@@ -1,0 +1,53 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_ski_shared_pine_small__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    15375,
+    48007,
+    65502
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 287,
+  "table_bytes": 78,
+  "frame_sha256": [
+    "8188e36a3dfd0e8ff135e7d7142500ba62fcbb7f27e9401d5487bdd8673dba6d"
+  ],
+  "source_sha256": [
+    "2d01aee90978ee99bc4f169e2e59e2a12c578b770a1affab43f694ff50a89710"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/ski/shared/pine-small",
+  "group": "ski",
+  "symbol": "adv_assets_game_ski_shared_pine_small__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/ski/snow-pine.png",
+      "sha256": "63eb3ddf8e8865f24445732cc82f4fdd27fdd49de5360c3f1461b609e7c226cd"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/ski/shared/pine-small",
+      "logical_symbol": "adv_assets_game_ski_shared_pine_small__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

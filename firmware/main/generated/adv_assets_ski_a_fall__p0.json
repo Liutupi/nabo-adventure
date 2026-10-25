@@ -1,0 +1,166 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_ski_a_fall__p0",
+  "width": 63,
+  "height": 68,
+  "palette_rgb565": [
+    0,
+    2113,
+    4425,
+    4521,
+    6306,
+    6406,
+    8617,
+    8650,
+    10566,
+    10665,
+    12548,
+    12613,
+    12746,
+    12812,
+    14693,
+    14726,
+    14924,
+    16741,
+    16774,
+    16905,
+    18887,
+    19051,
+    19311,
+    20934,
+    21000,
+    21163,
+    23471,
+    23569,
+    25062,
+    25160,
+    25323,
+    27273,
+    27697,
+    27763,
+    29224,
+    31564,
+    31958,
+    33481,
+    33742,
+    37740,
+    39982,
+    41998,
+    42262,
+    43559,
+    43721,
+    44208,
+    44473,
+    48140,
+    50416,
+    50681,
+    54675,
+    54873,
+    56589,
+    59197,
+    60918,
+    61278,
+    62925,
+    63226,
+    63326,
+    63390,
+    65111,
+    65208,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    3,
+    2,
+    1,
+    0
+  ],
+  "data_bytes": 6052,
+  "table_bytes": 704,
+  "frame_sha256": [
+    "71362d53f7d2d496969483eebf28314eb5ecd6a9a7ae3f82aadeb42a99c2e357",
+    "7d0e998d012ee2a7d656971769a8a646fbc0a91e2bcf71cba571e7d521c16930",
+    "9982e4e3ddcc9dc3729dc1784c48de3377a280051a6f91e10014ea1e2225adcd",
+    "a2c9e08e9eda7847e5729fd736192025ee4d45fb01ea0f9a51e756c5ecf36d16",
+    "a2c9e08e9eda7847e5729fd736192025ee4d45fb01ea0f9a51e756c5ecf36d16",
+    "9982e4e3ddcc9dc3729dc1784c48de3377a280051a6f91e10014ea1e2225adcd",
+    "7d0e998d012ee2a7d656971769a8a646fbc0a91e2bcf71cba571e7d521c16930",
+    "71362d53f7d2d496969483eebf28314eb5ecd6a9a7ae3f82aadeb42a99c2e357"
+  ],
+  "source_sha256": [
+    "1640b3135af095ccbf597823f567e18d00053fd8ecc4146ecb2265069ee4f165",
+    "bbbf8ab0cfb5f8757dd9b91f7a49ff8f3e5b921b9523dd2323fe6aee6fc4efaf",
+    "308e9a6c1b6961a11a57530ce1a3de934230e5057b7f1639916b1a9d515ca5ca",
+    "1823132dffe66e3f6d9798e73cca5707feddedfe6ba440aac17b0799b0420963",
+    "1823132dffe66e3f6d9798e73cca5707feddedfe6ba440aac17b0799b0420963",
+    "308e9a6c1b6961a11a57530ce1a3de934230e5057b7f1639916b1a9d515ca5ca",
+    "bbbf8ab0cfb5f8757dd9b91f7a49ff8f3e5b921b9523dd2323fe6aee6fc4efaf",
+    "1640b3135af095ccbf597823f567e18d00053fd8ecc4146ecb2265069ee4f165"
+  ],
+  "verified_frames": 8,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "ski_a/fall",
+  "group": "ski",
+  "symbol": "adv_assets_ski_a_fall__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/000.png",
+      "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/001.png",
+      "sha256": "ea6b52fab6f283e5d642b0057212825f2830b2f10928f7052121412b722f544f"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/002.png",
+      "sha256": "792ce958a23e4bbeabecd1af49843f181ed93a70a14df5b3c8a19cf7168c488b"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/003.png",
+      "sha256": "47d469bb49854b6ba6ee06844d19b743720bfafaff6c51d62020aa1b3a3bdcf0"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/004.png",
+      "sha256": "47d469bb49854b6ba6ee06844d19b743720bfafaff6c51d62020aa1b3a3bdcf0"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/005.png",
+      "sha256": "792ce958a23e4bbeabecd1af49843f181ed93a70a14df5b3c8a19cf7168c488b"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/006.png",
+      "sha256": "ea6b52fab6f283e5d642b0057212825f2830b2f10928f7052121412b722f544f"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/007.png",
+      "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ski_a/fall",
+      "logical_symbol": "adv_assets_ski_a_fall__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_ski_props_ski_left__p0",
+  "width": 32,
+  "height": 10,
+  "palette_rgb565": [
+    0,
+    8649,
+    45672,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 92,
+  "table_bytes": 32,
+  "frame_sha256": [
+    "03f1ee5a5469945bdf49574c64e0c8edfa7d2f6d1b91021fb5cab8a00a39fecd"
+  ],
+  "source_sha256": [
+    "957e12fee25c90d2c62c04240863c20f33b7a1afba5a8c14b74338812434f3ea"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/ski/props/ski-left",
+  "group": "ski",
+  "symbol": "adv_assets_game_ski_props_ski_left__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/ski/props/ski-left.png",
+      "sha256": "f6653f5cccb67ab54ef5108ed5d03f428260d3807c19a874c48d4bbcc76d2e3f"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/ski/props/ski-left",
+      "logical_symbol": "adv_assets_game_ski_props_ski_left__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

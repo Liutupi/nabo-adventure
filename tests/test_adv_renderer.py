@@ -18,7 +18,7 @@ BOARD = ROOT/'firmware/main'
 HOST = ROOT/'tests/adv_host'
 UP, DOWN, OK = 0, 1, 2
 PRESS, CLICK, DOUBLE, LONG, RELEASE = 0, 1, 2, 3, 4
-SOURCES = ['adv_boot_motion.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c','adv_ui_night.c','adv_climb.c','adv_ui_climb.c', 'adv_ui_post.c', 'adv_ui_post_session.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
+SOURCES = ['adv_boot_motion.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c','adv_ui_night.c','adv_climb.c','adv_ui_climb.c','adv_ski.c','adv_ui_ski.c','adv_sky.c','adv_ui_sky.c','adv_space.c','adv_ui_space.c', 'adv_ui_post.c', 'adv_ui_post_session.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
            'adv_text.c', 'adv_ui.c', 'adv_ui_animation.c', 'adv_ui_art.c', 'adv_ui_map.c', 'adv_ui_session.c', 'adv_ui_jump.c', 'collection_portrait.c',
            'nabo_jump_model.c', 'nabo_jump_rig.c', 'nabo_jump_codec.c','nabo_dive_text.c', 'collection_font_12.c', 'collection_font_16.c',
            'collection_font_18.c', 'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c','adv_video.c','adv_ui_boot_video.c']
@@ -173,6 +173,24 @@ class Renderer(unittest.TestCase):
         self.ev(UP,LONG);self.assertEqual(self.lib.host_phase(),3)
         for _ in range(2):self.ev(UP,PRESS);self.ev(UP,RELEASE);self.ev(UP,CLICK)
         self.ev(UP,DOUBLE);self.assertIn(self.lib.host_page(),(1,5))   # map, or the stamp ceremony first
+
+    def test_ski_sky_space_scenes_and_phases_are_incremental(self):
+        self.new([0,50,600,25,60,300,45,1000,0],seen=0x7fffff)
+        games={'ski':('straight','lean','jump','tree','bump','dense','gate','cocoa'),
+               'sky':('drift','heat','vent','hit','stamp','dense','low','warm'),
+               'space':('fall','engine','side','landed','flag','crash','objects','round5')}
+        phases=('title','ready','pause','end','result','max-record')
+        for game,names in games.items():
+            case=getattr(self.lib,'host_'+game+'_case')
+            for which,name in enumerate(names+phases):
+                case(which);self.check(game+' '+name);self.save(game+'-'+name+'.png',True)
+                self.assertEqual((self.lib.adv_ui_width(),self.lib.adv_ui_height()),(240,320))
+            case(0)
+            for _ in range(6):self.ev(OK,PRESS);self.steps(4);self.ev(OK,RELEASE);self.steps(10)
+            for button in (UP,DOWN):
+                self.ev(button,PRESS);self.steps(12);self.ev(button,RELEASE)
+            for _ in range(2):self.ev(UP,PRESS);self.ev(UP,RELEASE);self.ev(UP,CLICK)
+            self.ev(UP,DOUBLE);self.assertIn(self.lib.host_page(),(1,5))
 
     def test_night_native_scenes_and_every_session_phase_are_incremental(self):
         self.new([0,50,600,25,0,0,0,0,0],seen=0xffffff)

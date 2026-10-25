@@ -1,0 +1,58 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_sky_envelope__p0",
+  "width": 96,
+  "height": 96,
+  "palette_rgb565": [
+    0,
+    12841,
+    12906,
+    13036,
+    19408,
+    47978,
+    52300,
+    54803,
+    61142,
+    63190
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 1804,
+  "table_bytes": 216,
+  "frame_sha256": [
+    "db793c9f2d4211baa4934a63d04b5b4f09582b5c04744730f76ed86d054b58da"
+  ],
+  "source_sha256": [
+    "c517820e591a01729d222e415d7506203168d2540ea4487c8cff8fa49ccb9a4b"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/sky/envelope",
+  "group": "sky",
+  "symbol": "adv_assets_game_sky_envelope__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/props/envelope.png",
+      "sha256": "4e2e3719faa7bcf8c53cdb155503c29b385ed7ff624585b82266bf9d8c92e4e1"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/sky/envelope",
+      "logical_symbol": "adv_assets_game_sky_envelope__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

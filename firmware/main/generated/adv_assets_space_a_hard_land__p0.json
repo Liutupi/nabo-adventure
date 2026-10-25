@@ -1,0 +1,169 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_space_a_hard_land__p0",
+  "width": 57,
+  "height": 57,
+  "palette_rgb565": [
+    0,
+    4193,
+    8419,
+    10533,
+    12580,
+    12646,
+    14693,
+    14760,
+    16741,
+    16773,
+    16839,
+    16873,
+    16971,
+    19345,
+    21230,
+    21425,
+    22982,
+    23047,
+    23146,
+    23538,
+    25488,
+    27405,
+    27764,
+    29288,
+    31990,
+    33514,
+    33711,
+    35857,
+    35954,
+    37674,
+    38200,
+    39820,
+    40082,
+    40344,
+    42196,
+    44276,
+    46421,
+    46487,
+    46618,
+    48239,
+    50615,
+    52498,
+    52596,
+    52793,
+    52923,
+    54742,
+    54840,
+    54906,
+    59000,
+    59066,
+    59132,
+    60787,
+    60918,
+    61211,
+    61245,
+    61278,
+    63193,
+    63292,
+    63326,
+    63358,
+    65143,
+    65438,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    0
+  ],
+  "data_bytes": 6593,
+  "table_bytes": 970,
+  "frame_sha256": [
+    "94bbda518624fd985d0f6184a8e7ced569991971b3c5c1c00952b6a702e7ec87",
+    "9909aecc2c0bd9372e9fa875467b46a690ea31ec3e996161522c5c1cc9a0f3f6",
+    "6654a858ce337573a2e7b5b4b5919e0b121242eb1e2dbea56676cff47286362b",
+    "a60eb12118559f483d2bd038776b188542f7d229b4a2b5fe99a8d8a7e8136238",
+    "d805e8e0d8cfcfd1e48c62650c8e571a4fcac5b162562f6e18a286188d5e789b",
+    "b57e369dcb07cfd7af2991ec6427f775ecac626f3e811bf113458af1486dc8e2",
+    "d1af23d6990909d1e86cddacd5a83732ea81d621f097d944553317c7f5ebf698",
+    "94bbda518624fd985d0f6184a8e7ced569991971b3c5c1c00952b6a702e7ec87"
+  ],
+  "source_sha256": [
+    "3666fe396511a33b10ae869176380ba2c85448eadc48d2713925fa16c1097639",
+    "e22b0d83d870691fc8ec41c7a8dfed670686cbb21944ab120bbdc9c11eaf973f",
+    "db68ce032a00f3e55a60efd52a3c3c39ea5e2e66c4c47ab79ce896c95785c484",
+    "5771da39fccc23e360abe23c341fdfbaf5a4ff7b710f2fa3a40b87d3d533c63b",
+    "07ea78fca0ddb581e31acec9e797234f29c7b06517b4dcfb801aa60338b673f6",
+    "2a3db0829687d54045bde8afb5eadf8b5b4d3aacc2bce75d8092cc932179f845",
+    "0c61d93045787555a1fe2fb878f4d818f3c3ffe7ce1c6a91f665488de2a252ce",
+    "3666fe396511a33b10ae869176380ba2c85448eadc48d2713925fa16c1097639"
+  ],
+  "verified_frames": 8,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "space_a/hard_land",
+  "group": "space",
+  "symbol": "adv_assets_space_a_hard_land__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/hard_land/000.png",
+      "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/hard_land/001.png",
+      "sha256": "104aaf2d35d37d25f04ab1e8a21877dd5089d5a3c4997a6b40ea9359d69eed79"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/hard_land/002.png",
+      "sha256": "0163bd8a953c0116f5e2a54b4bd0d03fd84e8a1aca90404b7013d1b24848084f"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/hard_land/003.png",
+      "sha256": "c5a63ce37a6aecbe6ff0bbfc546d9e63a549456611aed33ace0571b39c551f21"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/hard_land/004.png",
+      "sha256": "161de056fbd61d2526b59a1b5dea678a83b18e4e7909935a99c1d84a86ce2ad1"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/hard_land/005.png",
+      "sha256": "0cdeba62497446e19b28565c35145a899e9fa1f68474ddd92d4d88ea71b265f1"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/hard_land/006.png",
+      "sha256": "925dcc200d7f1f10c0e9975de9a7a73e187c5409ebf46fd47873a2bba95de2b4"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/hard_land/007.png",
+      "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "space_a/hard_land",
+      "logical_symbol": "adv_assets_space_a_hard_land__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

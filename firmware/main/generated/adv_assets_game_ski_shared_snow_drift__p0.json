@@ -1,0 +1,52 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_ski_shared_snow_drift__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    40276,
+    65502
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 216,
+  "table_bytes": 76,
+  "frame_sha256": [
+    "54bf3866a4f0f0601a0293cb0f0ed9ac86d10683f9716e0b5a0953cf9631aad6"
+  ],
+  "source_sha256": [
+    "7ab1fe85c3e518dfd00641ca56cfc46c450a5633045bc5fe8531ca4713c11232"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/ski/shared/snow-drift",
+  "group": "ski",
+  "symbol": "adv_assets_game_ski_shared_snow_drift__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/mountain/snow-drift.png",
+      "sha256": "a0f7dbce9a93da1b7299e33c73b81745b4f1c37bd97c8781565009f2b3947033"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/ski/shared/snow-drift",
+      "logical_symbol": "adv_assets_game_ski_shared_snow_drift__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

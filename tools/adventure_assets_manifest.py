@@ -81,7 +81,7 @@ def validate(resource):
     return visible
 
 
-def load_resources(art, groups):
+def load_resources(art, groups, include_b_skins=False):
     art = Path(art).resolve()
     resources, manifests, ui = [], {}, None
     for group in groups:
@@ -92,6 +92,9 @@ def load_resources(art, groups):
         manifests[relative] = digest(path)
         if group == 'travel' or group in GAME_GROUPS:
             for animation in manifest['animations']:
+                # Second (silver) skins stay in the repo but are packed only once their switch exists.
+                if group in GAME_GROUPS and not include_b_skins and str(animation['skin']).endswith('_b'):
+                    continue
                 # Deliberately no fallback to 256px delivery/masters or guessed paths.
                 paths = [scoped(art, p) for p in animation['runtime_frames']]
                 size = pair(animation['runtime_canvas'], 'runtime_canvas', positive=True)

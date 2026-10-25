@@ -1,0 +1,169 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_space_a_settlement_cheer__p0",
+  "width": 73,
+  "height": 73,
+  "palette_rgb565": [
+    0,
+    4193,
+    8419,
+    10501,
+    10599,
+    12712,
+    14628,
+    14693,
+    16741,
+    16773,
+    16807,
+    16873,
+    16972,
+    19313,
+    19377,
+    20934,
+    21197,
+    21425,
+    21458,
+    23080,
+    23146,
+    25684,
+    27373,
+    27503,
+    29288,
+    33481,
+    33743,
+    34071,
+    35626,
+    35889,
+    35987,
+    38231,
+    39852,
+    40082,
+    42228,
+    44440,
+    48239,
+    48403,
+    48501,
+    48566,
+    48666,
+    52564,
+    52694,
+    52760,
+    54873,
+    54939,
+    56921,
+    58707,
+    59066,
+    59131,
+    59197,
+    60885,
+    61212,
+    61278,
+    63031,
+    63193,
+    63259,
+    63292,
+    63357,
+    63358,
+    63390,
+    65208,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    0
+  ],
+  "data_bytes": 6661,
+  "table_bytes": 1194,
+  "frame_sha256": [
+    "0e3672dfd74e83697cdda1fd27afd145033cbb0ebee462c7bf21d623e2f74173",
+    "d083c0e09260a6f2bffb4ba6773203031b1fcd25b927b48dd05fbc801b73ed3d",
+    "1504df1d987bcc98821d405f15414ce3b3c258d1146d8a6392e44bec8077960c",
+    "9b6fd4fdcda7123c395c8611d0112e602e75f440772ab18619133666deca4ecd",
+    "4865ed795958d29557a363b269786d15fcf6a6bd973aaaedb5ed027d4453f2c3",
+    "c177bf349ea0c35102a39bb39b4de99927e8f7f118f7999e4e2f9324fcc335cc",
+    "ac70acb87b6c8ac2e5fbd823ce87e3384986bc39d4a48af91e70f0d55de11bf9",
+    "0e3672dfd74e83697cdda1fd27afd145033cbb0ebee462c7bf21d623e2f74173"
+  ],
+  "source_sha256": [
+    "08f4b22d8ddea57b5cf548bbc8a454419100f64b4e89be67ef20c6bb3aa79b7e",
+    "4f5ced7552c08336cd670aa67147dd26fb10f8118b36f47fde43ef3e1be75db2",
+    "f5cea5d55a7f63f22fd0fa7b38c34b1ca9a6f1dffc735e1d48049ec229960455",
+    "03ba31876ed79016e9120b6614403f197f58e64b8268175301b0af720a95a358",
+    "3f5b42025feda02eaea5f0ebf0a52b311180f152f177cbc0ba20682d193e8e48",
+    "b2ff0f41c8b3c9ce430614d70097a4d0510ec3f6487e0b35cfc51dde02d80e7e",
+    "5b5a9cfab571a486a8bd5e63969ed2d99bcf14c637be491b0f29fe34ef519439",
+    "08f4b22d8ddea57b5cf548bbc8a454419100f64b4e89be67ef20c6bb3aa79b7e"
+  ],
+  "verified_frames": 8,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "space_a/settlement_cheer",
+  "group": "space",
+  "symbol": "adv_assets_space_a_settlement_cheer__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/settlement_cheer/000.png",
+      "sha256": "bfcf82dfb8a68035dfeb8a3ab8308f65771707b3b09c19bb68ed9592b7d8f4a0"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/settlement_cheer/001.png",
+      "sha256": "8291a573644c98c736f173f84743cfda420c8aaab3eba332091754bde1a97c9b"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/settlement_cheer/002.png",
+      "sha256": "e20deaf244bda2b691ba4b064e73db2764ebbbc955bf860922cfe7f4a8bca45f"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/settlement_cheer/003.png",
+      "sha256": "f13d17c9a9811cb44d27e3ec2821047aca7b5eacb8e8f862ebe3bac700c73f16"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/settlement_cheer/004.png",
+      "sha256": "39c7f3901181be5edd2e4d74e602156a5a7e6059b5172a03065e88fe43eba295"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/settlement_cheer/005.png",
+      "sha256": "667ddf7530d7a06eb81c44f8bdb735dfa5c6dc7b7d1d9ed149c84dfd397c7327"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/settlement_cheer/006.png",
+      "sha256": "24bae8eb87dbfd4783b178c64d1a9adb695ae24bd83af7b7116e8758ab611471"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/settlement_cheer/007.png",
+      "sha256": "bfcf82dfb8a68035dfeb8a3ab8308f65771707b3b09c19bb68ed9592b7d8f4a0"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "space_a/settlement_cheer",
+      "logical_symbol": "adv_assets_space_a_settlement_cheer__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

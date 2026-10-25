@@ -15,7 +15,7 @@ DEFAULT_OUTPUT = ROOT/'firmware/main/generated'
 OWNERSHIP = 'adv_assets_generated.json'
 UI_LIMIT = 160*1024
 GAME_LIMIT = 260*1024
-INTEGRATED_GAMES = ('post','night','climb')
+INTEGRATED_GAMES = ('post','night','climb','ski','sky','space')
 PROOF_SOURCES = ('tools/generate_adv_sprites.py', 'tools/build_adventure_assets.py',
                  'tools/adventure_assets_manifest.py', 'tools/adventure_assets_emit.py',
                  'tools/adventure_assets_verify.py', 'tools/generate_boot_presentation.py', 'firmware/main/adv_boot.h', 'firmware/main/adv_sprite.c',
@@ -89,7 +89,7 @@ def startup_budget(resources, pieces, totals):
             'complete_ui_group_present': 'ui' in totals}
 
 
-def build(art=DEFAULT_ART, output=DEFAULT_OUTPUT, groups=('travel', 'ui', 'static'), check_c=False, ui_limit=UI_LIMIT):
+def build(art=DEFAULT_ART, output=DEFAULT_OUTPUT, groups=('travel', 'ui', 'static'), check_c=False, ui_limit=UI_LIMIT, include_b_skins=False):
     if not 0 < ui_limit <= UI_LIMIT: raise ValueError('UI limit may not exceed the required 160 KiB')
     art, output = Path(art).resolve(), Path(output).resolve()
     groups = tuple(sorted(set(groups)))
@@ -97,7 +97,7 @@ def build(art=DEFAULT_ART, output=DEFAULT_OUTPUT, groups=('travel', 'ui', 'stati
         raise ValueError('Unknown/empty asset group selection')
     # Complete source/header/hash/dimension/alpha/palette validation precedes writes.
     tool_hashes = proof_tools()
-    resources, manifests, ui = load_resources(art, groups)
+    resources, manifests, ui = load_resources(art, groups, include_b_skins)
     if not resources: raise ValueError('No explicitly declared resources to pack')
     previous = owned_files(output)
     output.mkdir(parents=True, exist_ok=True)
@@ -165,12 +165,13 @@ def main():
     parser.add_argument('--output', type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument('--group', choices=('travel', 'ui', 'static', *GAME_GROUPS), action='append')
     parser.add_argument('--verify-c', action='store_true')
+    parser.add_argument('--include-b-skins', action='store_true', help='Also pack second (silver) skins; off until the costume switch exists')
     parser.add_argument('--integrated-game',choices=INTEGRATED_GAMES,action='append',default=[],help='Explicitly include a game whose formal engine is integrated')
     args = parser.parse_args()
     if any(group in GAME_GROUPS and group not in args.integrated_game for group in args.group or ()) and args.output.resolve() == DEFAULT_OUTPUT.resolve():
         parser.error('New game art requires --output to a separate delivery directory until gameplay integration')
     try:
-        report = build(args.art, args.output, args.group or ('travel', 'ui', 'static'), args.verify_c)
+        report = build(args.art, args.output, args.group or ('travel', 'ui', 'static'), args.verify_c, include_b_skins=args.include_b_skins)
     except (ValueError, KeyError, OSError) as error:
         parser.error(str(error))
     print(json.dumps({'groups': report['groups'], 'python_verified_frames': report['python_verified_frames'],
