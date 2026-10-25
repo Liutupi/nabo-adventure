@@ -29,13 +29,19 @@ static void draw_demo(ag_t *g, const adv_demo_t *d, const adv_station_t *st)
 static void draw_hud(ag_t *g, const adv_model_t *m)
 {
     adv_status_t status = adv_game_status(m);
+    const adv_post_t *post=m->station==3?m->game:NULL;
     ui_art(g, "ui/bars/top", 0, 0, 0);
     static const char *const icons[] = {"", "stamina", "oxygen", "steam", "spirit", "stamina", "temperature", "hot-air", "fuel"};
     char icon[64]; snprintf(icon, sizeof(icon), "ui/resources/icons/%s", icons[m->station]);
-    ui_art(g, icon, 0, 10, 8);
+    if(!post||!post->practice)ui_art(g, icon, 0, 10, 8);
     ui_art(g, "ui/resources/bar-frame", 0, 36, 11);
     int w = status.resource * 124 / ADV_RESOURCE_MAX;
     if (w > 0) ag_rect(g, 38, 13, w, 6, 0, status.resource < ADV_RESOURCE_MAX / 4 ? UI_RED : ADV_ASSETS_UI_TEAL, 255, 0, 0);
+    if(post&&post->practice) {
+        ag_text_top(g,&collection_font_12,"练习",8,8,NT_ALIGN_LEFT,UI_WHITE);
+        ag_text_top(g,&collection_font_16,post->lesson<2?"1/3":post->lesson<3?"2/3":"3/3",230,7,NT_ALIGN_RIGHT,UI_WHITE);
+        return;
+    }
     char score[16];
     if (status.score > 9999) snprintf(score, sizeof(score), "9999+");
     else snprintf(score, sizeof(score), "%u", (unsigned)status.score);
@@ -52,23 +58,26 @@ static void draw_title(ag_t *g, const adv_model_t *m, const adv_station_t *st, i
         ui_art(g, "ui/labels/placeholder", 0, 76, 128);
     }
     if(s==3) {
-        ag_text_top(g,&collection_font_12,"上下选轨 岔口切换",120,118,NT_ALIGN_CENTER,UI_INK);
-        ag_text_top(g,&collection_font_12,"点OK卸信 按住OK鸣笛",120,138,NT_ALIGN_CENTER,UI_INK);
-        ag_text_top(g,&collection_font_12,"同色同轨送信 煤堆补汽",120,158,NT_ALIGN_CENTER,UI_INK);
+        ag_text_top(g,&collection_font_12,"先看待送的第一封信",120,118,NT_ALIGN_CENTER,UI_INK);
+        ag_text_top(g,&collection_font_12,"同色站前点OK送信",120,135,NT_ALIGN_CENTER,UI_INK);
+        ag_text_top(g,&collection_font_12,"上下选轨 按住OK鸣笛",120,152,NT_ALIGN_CENTER,UI_INK);
+        ag_text_top(g,&collection_font_12,"蒸汽空了结束 煤堆补汽",120,169,NT_ALIGN_CENTER,UI_INK);
+        ag_rect(g,40,190,160,28,5,UI_INK,255,0,0);
+        ag_text_top(g,&collection_font_16,"下键 分步练习",120,195,NT_ALIGN_CENTER,UI_WHITE);
     }
     uint32_t earned = adv_earned(m);
     for (int tier = 0; tier < 3; tier++) {
         int x = 60 + tier * 60;
         bool on = earned & adv_stamp_bit(s, tier);
-        ag_circle(g, x, s==3?208:182, s==3?12:18, ui_tier_color(tier), on ? 255 : 40, on ? UI_INK : ui_tier_color(tier), 2);
+        ag_circle(g, x, s==3?236:182, s==3?9:18, ui_tier_color(tier), on ? 255 : 40, on ? UI_INK : ui_tier_color(tier), 2);
         char th[16];
         snprintf(th, sizeof(th), "%u", (unsigned)adv_threshold(s, tier));
-        ag_text(g, &nabo_mono_font_12, th, x, s==3?240:218, NT_ALIGN_CENTER, UI_INK);
+        ag_text(g, &nabo_mono_font_12, th, x, s==3?258:218, NT_ALIGN_CENTER, UI_INK);
     }
     char best[32];
     snprintf(best, sizeof(best), "最佳 %u", (unsigned)m->best[s]);
-    ag_text(g, &collection_font_18, best, 120, s==3?274:254, NT_ALIGN_CENTER, UI_INK);
-    ui_footer(g, "OK 开始 · 长按上 回地图");
+    ag_text(g, s==3?&collection_font_16:&collection_font_18, best, 120, s==3?282:254, NT_ALIGN_CENTER, UI_INK);
+    ui_footer(g, s==3?"OK直接开始 · 长按上回地图":"OK 开始 · 长按上 回地图");
 }
 
 static void draw_card(ag_t *g, int y, int h)
@@ -117,8 +126,8 @@ void ui_draw_session(ag_t *g, const adv_model_t *m)
         ui_number(g, n, 36, 120, 132, NT_ALIGN_CENTER);
         ag_text(g, &collection_font_18, "准备", 120, 270, NT_ALIGN_CENTER, UI_INK);
     } else if (m->phase == ADV_END) {
-        ag_rect(g, 70, 136, 100, 40, 12, UI_INK, 230, UI_RED, 2);
-        ag_text(g, &collection_font_18, "结束", 120, 163, NT_ALIGN_CENTER, UI_PAPER);
+        ag_rect(g, s==3?44:70, 136, s==3?152:100, 40, 12, UI_INK, 230, UI_RED, 2);
+        ag_text(g, &collection_font_18, s==3?"蒸汽耗尽":"结束", 120, 163, NT_ALIGN_CENTER, UI_PAPER);
     } else if (m->phase == ADV_PAUSE) {
         draw_card(g, 80, 160);
         ag_text(g, &collection_font_18, "暂停", 120, 112, NT_ALIGN_CENTER, UI_INK);

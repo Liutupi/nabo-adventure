@@ -1,4 +1,4 @@
-/* Community jump/center PCM and a quieter, faded variant of its charge sweep.
+/* Community jump/center PCM and a faded charge sweep with independent gain.
  * See game-art/original-sound-reference.json for provenance and checksums.
  * Stream directly from flash; no complete audio buffer or additional task. */
 #include "nabo_jump_sound.h"
@@ -56,6 +56,7 @@ void nabo_jump_sound_fill(nabo_jump_sound_t* s, int16_t* pcm, size_t frames) {
             int b = sample(s->offset + (p + 1 < s->length ? p + 1 : p));
             pcm[i] = (int16_t)(a + (b - a) * (int64_t)(s->position & 65535) / 65536);
         }
+        if (s->kind == 5) pcm[i] = (int16_t)((int)pcm[i] * 3 / 2);
         if (s->fade_remaining) {
             unsigned remaining = s->fade_remaining--;
             pcm[i] =

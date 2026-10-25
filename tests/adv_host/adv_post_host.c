@@ -1,6 +1,8 @@
 #include "adv_post_view.h"
 static adv_post_t game;
 void host_post_new(uint32_t seed) {adv_post_start(&game,seed);}
+void host_post_practice(uint32_t seed) {adv_post_start_practice(&game,seed);}
+int host_post_score(void) {return (int)adv_post_game.status(&game).score;}
 void host_post_step(unsigned mask)
 {
     adv_input_t in={0};uint8_t *p=(uint8_t *)&in;

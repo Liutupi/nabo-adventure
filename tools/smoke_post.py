@@ -9,6 +9,8 @@ import time
 from smoke_adventure import Link,SmokeError,verify_candidate,analyse_memory
 
 ROOT=Path(__file__).resolve().parents[1]
+MAIL_X=156*60
+MAIL_WINDOW=32*60
 
 class BufferedPort:
     def __init__(self,port):self.port=port;self.pending=b''
@@ -80,19 +82,19 @@ def play(link,target=5):
                 if p['score']<target:raise SmokeError('POST ended before reaching the target')
                 return {'score':p['score'],'laps':p['lap'],'seconds':time.monotonic()-start,'profile':profile,'end_phases':phases}
             time.sleep(.1);continue
-        stations=sorted((e for e in p['events'] if e[0]==2 and not e[4] and e[1]>=6600-1440),key=lambda e:e[1])
+        stations=sorted((e for e in p['events'] if e[0]==2 and not e[4] and e[1]>=MAIL_X-MAIL_WINDOW),key=lambda e:e[1])
         station=stations[0] if stations else None
         fork=any(e[0]==1 and not e[4] for e in p['events'])
         if fork and station and p['choice']!=station[2]:tap(link,station[2])
         animal=any(e[0]==4 and not e[4] and e[2]==p['lane'] and 6600<e[1]<6600+p['speed']*90 for e in p['events'])
         if p['score']>=target:
             if held:edge(link,2,False);held=False
-            if not station or abs(station[1]-6600)>1440:tap(link)
+            if not station or abs(station[1]-MAIL_X)>MAIL_WINDOW:tap(link)
         elif animal:
             if not held:edge(link,2,True);held=True
         else:
             if held:edge(link,2,False);held=False
-            elif station and station[2]==p['lane'] and station[3]==p['mail'][0] and abs(station[1]-6600)<900:tap(link)
+            elif station and abs(p['y']-(264 if station[2] else 184))<=20 and station[3]==p['mail'][0] and abs(station[1]-MAIL_X)<900:tap(link)
         now=time.monotonic()
         if now-checked>=1:
             latest=link.expect(7)
@@ -123,7 +125,9 @@ def main():
             for count in range(args.rounds+1):
                 enter(link)
                 # Exercise hold/release and pause/back in a running session.
-                edge(link,2,True);time.sleep(.35);edge(link,2,False)
+                edge(link,2,True);time.sleep(.7)
+                if not query(link)['whistle']:raise SmokeError('POST held OK did not activate the horn')
+                edge(link,2,False)
                 link.key('long_up');state=link.expect(7)
                 if state['phase']!=3:raise SmokeError('POST did not pause')
                 link.key('long_up');state=link.map();samples.append(state)

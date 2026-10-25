@@ -163,10 +163,10 @@
 
   function clearInput(m) { m.input = { ok_down: 0, ok_up: 0, up_down: 0, down_down: 0, down_up: 0 }; }
 
-  function startRun(m) {
+  function startRun(m, practice=false) {
     const s = m.session;
     s.seed = rand(m);
-    s.game = (s.station===3?Post:Demo).start(s.seed);
+    s.game = practice&&s.station===3?Post.startPractice(s.seed):(s.station===3?Post:Demo).start(s.seed);
     s.phase = PHASE.READY; s.t = READY_STEPS; s.record = 0;
     clearInput(m);
     cue(m, CUE.ENTER);
@@ -201,12 +201,19 @@
 
   function openPassport(m, from) { m.page = PAGE.PASSPORT; m.passport = 0; m.passportFrom = from; cue(m, CUE.ENTER); }
 
+  function practiceOpen(m) {
+    m.fx=0;m.cue=CUE.NONE;
+    if((m.page!==PAGE.MAP&&m.page!==PAGE.COVER)||m.session)return 0;
+    m.fx=FX.REDRAW;openSession(m,3);startRun(m,true);return m.fx;
+  }
+
   function isBack(btn, ev) { return btn === BTN.UP && (ev === EV.LONG || ev === EV.DOUBLE); }
 
   function sessionEvent(m, btn, ev) {
     const s = m.session;
     if (s.phase === PHASE.TITLE) {
       if (btn === BTN.OK && ev === EV.CLICK) startRun(m);
+      else if (s.station===3&&btn===BTN.DOWN&&ev===EV.CLICK) startRun(m,true);
       else if (isBack(btn, ev)) { cue(m, CUE.BACK); toMap(m); }
     } else if (s.phase === PHASE.PLAY) {
       if (btn === BTN.UP && ev === EV.LONG) { s.phase = PHASE.PAUSE; cue(m, CUE.BACK); return; }
@@ -220,10 +227,11 @@
       } else return;
     } else if (s.phase === PHASE.PAUSE) {
       if (btn === BTN.OK && ev === EV.CLICK) { s.phase = PHASE.PLAY; clearInput(m); cue(m, CUE.GO); }
-      else if (btn === BTN.DOWN && ev === EV.CLICK) startRun(m);
+      else if (btn === BTN.DOWN && ev === EV.CLICK) startRun(m,s.station===3&&s.game.practice);
       else if (isBack(btn, ev)) { cue(m, CUE.BACK); toMap(m); }
     } else if (s.phase === PHASE.RESULT) {
       if (btn === BTN.OK && ev === EV.CLICK) startRun(m);
+      else if (s.station===3&&btn===BTN.DOWN&&ev===EV.CLICK) startRun(m,true);
       else if (isBack(btn, ev)) { cue(m, CUE.BACK); toMap(m); }
     }
   }
@@ -311,7 +319,10 @@
       clearInput(m);
       (s.station===3?Post:Demo).step(s.game, input);
       if (s.game.cue) cue(m, s.game.cue);
-      if ((s.station===3?Post:Demo).status(s.game).over) { s.phase = PHASE.END; s.t = END_STEPS; }
+      if ((s.station===3?Post:Demo).status(s.game).over) {
+        if(s.station===3&&s.game.practice){if(m.test||unlocked(m,3))startRun(m);else toMap(m);}
+        else {s.phase = PHASE.END; s.t = END_STEPS;}
+      }
       m.fx |= FX.REDRAW;
     } else if (s.phase === PHASE.END) {
       (s.station===3?Post:Demo).step(s.game, { ok_down: 0, ok_up: 0, up_down: 0, down_down: 0, down_up: 0, ok_held: 0, down_held: 0 });
@@ -342,7 +353,7 @@
 
   const api = {
     BTN, EV, PAGE, PHASE, FX, CUE, CG, STATION, PATH, START_STATION, DEMO_THRESHOLDS, READY_STEPS, END_STEPS,
-    create, event, step, legacyDone, view, earned, unlocked, threshold, bit, rand, Demo, Post, testOpen,
+    create, event, step, legacyDone, view, earned, unlocked, threshold, bit, rand, Demo, Post, testOpen,practiceOpen,
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.AdvCore = api;

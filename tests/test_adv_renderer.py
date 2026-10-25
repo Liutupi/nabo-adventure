@@ -130,7 +130,7 @@ class Renderer(unittest.TestCase):
 
     def test_post_native_playfield_reactions_and_dense_scene(self):
         self.new([0,99,0,0,0,0,0,0,0],seen=7)
-        names=('idle','whistle','hit','throw','delivered','switch','dense')
+        names=('idle','whistle','hit','throw','delivered','switch','dense','ready-to-send','wrong-track')
         for case,name in enumerate(names):
             self.lib.host_post_case(case);self.check('POST '+name);self.save('post-'+name+'.png',True)
         self.lib.host_post_case(0);self.check('POST fixed upper backdrop')
@@ -138,6 +138,14 @@ class Renderer(unittest.TestCase):
         for _ in range(20):self.steps(3)
         self.assertEqual(before[84*240:100*240],self.snapshot()[84*240:100*240])
         self.assertLess(self.last_incremental_bytes,240*200*2,'H redraw should stay below a full screen')
+
+    def test_post_practice_steps_remain_visible_and_incremental(self):
+        self.new([0,99,0,0,0,0,0,0,0],seen=7)
+        for lesson in range(6):
+            self.lib.host_post_practice_case(lesson);self.check('POST practice '+str(lesson))
+            self.save('post-practice-'+str(lesson)+'.png',True)
+        self.lib.host_post_practice_case(2);self.check('POST waiting for a tap');self.steps(1200)
+        self.assertEqual(self.lib.host_phase(),2)
 
     def test_post_alpha_trims_cover_every_original_opaque_pixel(self):
         import re

@@ -234,7 +234,8 @@ static void post_status(void)
            (unsigned)g->tick,(unsigned)g->score,(int)g->res,(int)g->lane,(int)g->choice,
            (int)g->remaining,(int)g->lap,(int)g->speed,(int)g->hold,(int)g->over);
     for(int i=0;i<5;i++)printf("%s%d",i?",":"",(int)g->mail[i]);
-    printf("],\"events\":[");
+    printf("],\"y\":%d,\"whistle\":%d,\"practice\":%d,\"lesson\":%d,\"presses\":%u,\"taps\":%u,\"miss_reason\":%d,\"events\":[",
+           (int)g->y,(int)g->whistle,(int)g->practice,(int)g->lesson,(unsigned)g->presses,(unsigned)g->taps,(int)g->miss_reason);
     for(int i=0;i<ADV_POST_CAP;i++){
         const adv_post_event_t *e=&g->events[i];
         printf("%s[%d,%d,%d,%d,%d,%d]",i?",":"",(int)e->type,(int)e->x,(int)e->lane,(int)e->color,(int)e->done,(int)e->horn);
@@ -299,6 +300,13 @@ static void command(const char *line)
 {
     if (!strcmp(line, ">adv.status")) status();
     else if(!strcmp(line,">post.status"))post_status();
+    else if(!strcmp(line,">adv.practice=post")) {
+        handle_fx(adv_practice_open(&s_model));
+        if(s_model.in_session&&s_model.station==3&&((adv_post_t *)s_model.game)->practice) {
+            s_draw_frames=s_draw_us=s_draw_max_us=0;s_last_input_us=s_step_us=esp_timer_get_time();
+            puts("@adv practice=post");
+        } else puts("@error practice requires cover or map");
+    }
     else if (!strncmp(line, ">adv.open=", 10)) diagnostic_open(line + 10);
     else if (!strncmp(line, ">adv.key=", 9)) {
         static const struct { const char *name; int button, event; } keys[] = {

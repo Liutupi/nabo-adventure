@@ -68,6 +68,7 @@ int adv_event(adv_model_t *m, adv_btn_t button, adv_ev_t event);
 int adv_step(adv_model_t *m);
 // Test-only entry bypasses unlock, never changes any score or earned/seen stamp.
 int adv_test_open(adv_model_t *m,int station);
+int adv_practice_open(adv_model_t *m);
 // The legacy game on the cursor closed; best is its best score in game units.
 int adv_legacy_done(adv_model_t *m, uint32_t best);
 

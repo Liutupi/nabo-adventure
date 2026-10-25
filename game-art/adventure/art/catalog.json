@@ -5658,7 +5658,7 @@
     }
   },
   "device": {
-    "common_candidate_sha256": "5d0f6d69c37c0b2993e67a816db31823eb25ede82ad0aa553bf2abc590c7a526",
+    "common_candidate_sha256": "b0727df1d2cad120cbe86757e7fa03e0f822da549b0b9e5528b33706be9cae02",
     "new_game_art_embedded_in_this_candidate": true,
     "integrated_game_groups": [
       "post"

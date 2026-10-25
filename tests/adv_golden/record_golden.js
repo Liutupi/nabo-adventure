@@ -26,6 +26,7 @@ function recorder(seed, best, seen) {
     legacy(best) { push(['l', best], A.legacyDone(m, best)); },
     test(on) { m.test = !!on; push(['t', on ? 1 : 0], 0); },
     open(s) {push(['o',s],A.testOpen(m,s));},
+    practice() {push(['p'],A.practiceOpen(m));},
   };
 }
 
@@ -50,10 +51,10 @@ function playPost(r,hits,misses) {
   let errors=0,guard=0;
   while(r.m.session.phase===A.PHASE.PLAY&&guard++<12000){
     const g=r.m.session.game;
-    const station=g.events.filter(e=>e.type===2&&!e.done&&e.x>=A.Post.X-A.Post.WINDOW).sort((a,b)=>a.x-b.x)[0];
+    const station=g.events.filter(e=>e.type===2&&!e.done&&e.x>=A.Post.MAIL_X-A.Post.WINDOW).sort((a,b)=>a.x-b.x)[0];
     const fork=g.events.find(e=>e.type===1&&!e.done);
     if(fork&&station&&g.choice!==station.lane)r.ev(station.lane===0?BTN.UP:BTN.DOWN,EV.PRESS);
-    if((g.score<hits&&station&&station.lane===g.lane&&Math.abs(station.x-A.Post.X)<500)||
+    if((g.score<hits&&station&&A.Post.canDeliver(g)&&Math.abs(station.x-A.Post.MAIL_X)<500)||
        (g.score>=hits&&errors<misses&&!station)){
       r.ev(BTN.OK,EV.PRESS);r.steps(1);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
       if(g.score>=hits)errors++;
@@ -146,6 +147,31 @@ const traces = {
   fuzz_open: fuzz(2024, [0, 60, 650, 11, 11, 11, 11, 11, 2], 0, 4000),
   post_test_entry:(()=>{const r=recorder(42,[0,99,0,0,0,0,0,0,0],7);r.click(BTN.OK);r.open(3);r.test(1);r.open(3);r.click(BTN.OK);playPost(r,6,4);r.long(BTN.UP);return r.trace;})(),
   threshold_edges:(()=>{const r=recorder(99,[0,10,100,5,3,3,3,3,0],0xffffff);r.click(BTN.OK);r.click(BTN.DOWN);r.click(BTN.DOWN);r.click(BTN.OK);r.legacy(100);r.click(BTN.UP);r.click(BTN.UP);for(let s=3;s<9;s++){r.click(BTN.UP);r.click(BTN.OK);r.long(BTN.UP);}return r.trace;})(),
+  post_practice:(()=>{
+    const r=recorder(23,[0,99,300,0,0,0,0,0,0],0xffffff);
+    r.click(BTN.OK);r.click(BTN.UP);r.click(BTN.OK);r.click(BTN.DOWN);r.steps(180);r.steps(600);
+    r.click(BTN.DOWN);r.click(BTN.OK);r.steps(60);r.click(BTN.UP);r.steps(240);
+    r.ev(BTN.OK,EV.PRESS);r.steps(15);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
+    r.long(BTN.UP);r.click(BTN.OK);
+    r.ev(BTN.OK,EV.PRESS);r.steps(A.Post.HOLD+38);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
+    r.ev(BTN.OK,EV.PRESS);r.steps(1);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
+    if(r.m.session.phase!==A.PHASE.READY||r.m.session.game.practice)throw Error('Practice did not enter the normal countdown');
+    if(r.trace.states.some(s=>s.fx&FX.SAVE_BEST)||r.m.best[3])throw Error('Practice changed a real record');
+    r.steps(180);r.long(BTN.UP);r.long(BTN.UP);r.click(BTN.OK);r.click(BTN.DOWN);r.steps(180);
+    r.click(BTN.UP);r.steps(60);r.long(BTN.UP);r.click(BTN.DOWN);r.steps(180);
+    if(!r.m.session.game.practice||r.m.session.game.lesson)throw Error('Practice pause restart lost its mode');
+    r.long(BTN.UP);r.long(BTN.UP);return r.trace;
+  })(),
+  post_practice_locked:(()=>{
+    const r=recorder(32,[0,99,0,0,0,0,0,0,0],7);
+    r.practice();r.practice();r.steps(180);r.steps(600);r.click(BTN.UP);r.steps(240);
+    r.ev(BTN.OK,EV.PRESS);r.steps(15);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
+    r.ev(BTN.OK,EV.PRESS);r.steps(A.Post.HOLD+38);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
+    r.ev(BTN.OK,EV.PRESS);r.steps(1);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
+    if(r.m.page!==A.PAGE.MAP||r.m.best[3]||r.m.test||r.m.seen!==7)throw Error('Normal practice changed progress or bypassed unlock');
+    if(r.trace.states.some(s=>s.fx&(FX.SAVE_BEST|FX.SAVE_PROGRESS)))throw Error('Normal practice attempted a save');
+    return r.trace;
+  })(),
 };
 for (const [name, trace] of Object.entries(traces)) {
   fs.writeFileSync(path.join(out, name + '.json'), JSON.stringify(trace) + '\n');

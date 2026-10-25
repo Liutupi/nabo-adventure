@@ -1,4 +1,5 @@
 #include "adv_model.h"
+#include "adv_post.h"
 #include <stdlib.h>
 #include <string.h>
 #include "adv_rng.h"
@@ -80,6 +81,12 @@ static void start_run(adv_model_t *m)
     cue(m, ADV_CUE_ENTER);
 }
 
+static void start_practice(adv_model_t *m)
+{
+    start_run(m);
+    adv_post_start_practice(m->game,m->seed);
+}
+
 static void move_cursor(adv_model_t *m, int dir)
 {
     // NABO may step onto the first locked station to look at it, but never past it.
@@ -125,6 +132,13 @@ int adv_test_open(adv_model_t *m,int station)
     return m->fx;
 }
 
+int adv_practice_open(adv_model_t *m)
+{
+    m->fx=0;m->cue=ADV_CUE_NONE;
+    if((m->page!=ADV_PAGE_MAP&&m->page!=ADV_PAGE_COVER)||m->in_session)return 0;
+    m->fx=ADV_FX_REDRAW;begin_session(m,3);if(m->in_session)start_practice(m);return m->fx;
+}
+
 static void open_passport(adv_model_t *m, adv_page_t from)
 {
     m->page = ADV_PAGE_PASSPORT;
@@ -142,6 +156,7 @@ static void session_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
     case ADV_TITLE:
     case ADV_RESULT:
         if (b == ADV_BTN_OK && click) start_run(m);
+        else if(m->station==3&&b==ADV_BTN_DOWN&&click)start_practice(m);
         else if (is_back(b, e)) { cue(m, ADV_CUE_BACK); to_map(m); }
         break;
     case ADV_PLAY:
@@ -160,7 +175,10 @@ static void session_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
             m->phase = ADV_PLAY;
             memset(&m->input, 0, sizeof(m->input));
             cue(m, ADV_CUE_GO);
-        } else if (b == ADV_BTN_DOWN && click) start_run(m);
+        } else if (b == ADV_BTN_DOWN && click) {
+            if(m->station==3&&((adv_post_t *)m->game)->practice)start_practice(m);
+            else start_run(m);
+        }
         else if (is_back(b, e)) { cue(m, ADV_CUE_BACK); to_map(m); }
         break;
     default: break;   // READY and END ignore buttons
@@ -266,7 +284,12 @@ int adv_step(adv_model_t *m)
         game->step(m->game, &in);
         adv_status_t st = game->status(m->game);
         if (st.cue) cue(m, (adv_cue_t)st.cue);
-        if (st.over) { m->phase = ADV_END; m->t = ADV_END_STEPS; }
+        if (st.over) {
+            if(m->station==3&&((adv_post_t *)m->game)->practice) {
+                if(m->test||adv_unlocked(m,3))start_run(m);else to_map(m);
+            }
+            else {m->phase = ADV_END; m->t = ADV_END_STEPS;}
+        }
         m->fx |= ADV_FX_REDRAW;
     } else if (m->phase == ADV_END) {
         adv_input_t none = {0};

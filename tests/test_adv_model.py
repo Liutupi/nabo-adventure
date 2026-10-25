@@ -44,6 +44,7 @@ def replay(lib, trace):
         elif kind == 's': fx = lib.host_steps(action[1])
         elif kind == 'l': fx = lib.host_legacy(action[1])
         elif kind == 'o': fx = lib.host_test_open(action[1])
+        elif kind == 'p': fx = lib.host_practice_open()
         else: lib.host_test(action[1]); fx = 0
         lib.host_snapshot(buf, len(buf))
         got = {'view': json.loads(buf.value), 'fx': fx & ~REDRAW, 'cue': lib.host_cue()}

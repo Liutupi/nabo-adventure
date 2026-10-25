@@ -179,6 +179,11 @@
       text('f12', st.world, 120, 44, 'center', PAPER); text('p28', st.en, 120, 80, 'center', WHITE);
       text('f18', st.cn, 120, 108, 'center', GOLD);
       if (st.placeholder) { rect(80, 120, 80, 20, 10, GOLD, 255, INK, 1); text('f12', '占位关卡', 120, 135, 'center', INK); }
+      if(s.station===3){
+        text('f12','先看待送的第一封信',120,132,'center',PAPER);
+        text('f12','蒸汽空了结束',120,150,'center',PAPER);
+        text('f12','下键 分步练习',120,173,'center',GOLD);
+      }
       const e = A.earned(m);
       for (let t = 0; t < 3; t++) {
         const x = 60 + t * 60, on = e & A.bit(s.station, t);

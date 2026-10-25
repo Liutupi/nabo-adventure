@@ -69,7 +69,7 @@ void host_post_case(int which)
     if(!model.in_session){model.test=true;model.page=ADV_PAGE_MAP;adv_test_open(&model,3);}
     model.phase=ADV_PLAY;adv_post_t *p=model.game;adv_post_start(p,1234);
     p->tick=10;p->distance=600;p->next_fork=p->next_coal=p->next_animal=10000;
-    if(which==1){p->whistle=1;p->hold=22;}
+    if(which==1){p->whistle=1;p->hold=ADV_POST_HOLD+10;}
     if(which==2){p->lane=0;p->y=184;p->hit=24;}
     if(which==3)p->delivered=50;
     if(which==4)p->delivered=20;
@@ -85,6 +85,19 @@ void host_post_case(int which)
             {POST_STATION,-10*60,0,1,1,0},{POST_ANIMAL,250*60,0,0,2,36}};
         memcpy(p->events,events,sizeof(events));
     }
+    if(which==7)p->events[0]=(adv_post_event_t){POST_STATION,ADV_POST_MAIL_X,p->lane,p->mail[0],0,0};
+    if(which==8){p->miss_reason=2;p->feedback=90;}
+}
+
+void host_post_practice_case(int lesson)
+{
+    host_post_case(0);adv_post_t *p=model.game;adv_post_start_practice(p,42);
+    adv_input_t in={.up_down=1};
+    if(lesson>0)adv_post_step(p,&in);
+    if(lesson>1){in=(adv_input_t){0};for(int i=0;i<240;i++)adv_post_step(p,&in);}
+    if(lesson>2){in=(adv_input_t){.ok_down=1,.ok_held=1};adv_post_step(p,&in);in=(adv_input_t){.ok_up=1};adv_post_step(p,&in);}
+    if(lesson>3){in=(adv_input_t){.ok_down=1,.ok_held=1};adv_post_step(p,&in);in=(adv_input_t){.ok_held=1};for(int i=0;i<60;i++)adv_post_step(p,&in);}
+    if(lesson>4){in=(adv_input_t){.ok_up=1};adv_post_step(p,&in);}
 }
 
 // ---------- legacy jump ----------

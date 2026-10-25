@@ -73,7 +73,7 @@ class Tests(unittest.TestCase):
 
     def test_charge_loops_and_new_jump_replaces_old_audio(self):
         import struct
-        raw=(BOARD/'jump_sounds.bin').read_bytes();expected=struct.unpack('<35176h',raw[86372*2:(86372+35176)*2])
+        raw=(BOARD/'jump_sounds.bin').read_bytes();expected=[int(v*3/2) for v in struct.unpack('<35176h',raw[86372*2:(86372+35176)*2])]
         sound=Sound();lib.nabo_jump_sound_start(ctypes.byref(sound),5,1)
         data=(ctypes.c_int16*(35176+400))();lib.nabo_jump_sound_fill(ctypes.byref(sound),data,len(data))
         self.assertEqual(list(data[:35176]),list(expected));self.assertEqual(list(data[35176:]),list(expected[:400]))
@@ -81,7 +81,7 @@ class Tests(unittest.TestCase):
         data=(ctypes.c_int16*320)();lib.nabo_jump_sound_fill(ctypes.byref(sound),data,320)
         self.assertEqual(data[0],expected[399])
         self.assertEqual(list(data[128:]),list(struct.unpack('<192h',raw[(35176+128)*2:(35176+320)*2])))
-        self.assertLess(max(abs(v) for v in expected),20000)
+        self.assertEqual(max(abs(v) for v in expected),28473)
         self.assertEqual(expected[0],0);self.assertEqual(expected[-1],0)
 
     def test_dirty_region_covers_every_changed_pixel(self):
