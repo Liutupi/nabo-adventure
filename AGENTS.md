@@ -22,4 +22,6 @@
 
 - 2026-10-26 开机V3为显式MPEG1 I/P档：完整开机+全部UI上限224KiB（含电影和返回海报），由旧字库未用字形无损回收支出；旧RLE档160KiB和永久352KiB余量不变。构建必须通过`tools/check_adventure_budget.py`。视频目标12fps与最低堆/最大块需真机另测，离开封面必须释放两份YCbCr引用图。
 
+- 2026-10-26 云端续作（用户要求“继续在云端优化”）：CLIMB 正式玩法与精灵 v4 无损压缩在分支 `claude/climb-cloud`，未上机。精灵包须用 `tools/build_adventure_assets.py` 重新生成（CRLF 输出、uint16 行表、相同帧去重），不要手改 generated。云端构建只用于测大小，上机一律 Windows `build.ps1` 重建。16/18 px 字库可用 Google Fonts 2022 `NotoSansSC-Bold.otf`（逐字节重现旧输出）。
+
 - 2026-10-26 用户要求睡前固定成功、上传GitHub并写好交接本后停止。以HANDOFF最上方封存段为准，未经用户明确继续，不自动续跑、安排定时任务或再要求操作工牌。预构建见`firmware/checkpoints/2026-10-26/`；225项宿主检查和有限真机通过不能替代未做的实体观感/睡醒/整套游戏回归。

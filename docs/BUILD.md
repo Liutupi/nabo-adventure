@@ -24,6 +24,10 @@ python3 firmware/tools/generate_collection_fonts.py \
   --font <SourceHanSansCN-Medium.otf>
 ```
 
+字体来源：12 px 为 SourceHanSansCN-Medium.otf（adobe-fonts/source-han-sans release 分支 `SubsetOTF/CN/`，SHA256 与 `collection-fonts.json` 一致）；16/18 px 用 google/fonts 提交 `111c44387` 之前的 `ofl/notosanssc/NotoSansSC-Bold.otf`（SHA256 `5ed69f3e…`），它对此前 306 字逐字节重现旧的 16/18 px 输出，与 Windows 记录的 `Noto Sans SC Bold (TrueType).otf` 字形一致。加 `--heading-font` 传入。
+
+云端（无组件注册表）只能测大小：五个托管组件按 `dependencies.lock` 版本从 GitHub 取源码，`IDF_COMPONENT_MANAGER=0`、`EXTRA_COMPONENT_DIRS` 构建，app 大小与 Windows 一致但 SHA 不同，不可刷写。
+
 宿主测试：`python3 -m pip install -r requirements-dev.txt`，然后 `python3 tools/run_tests.py`（需要 C 编译器：macOS 自带 cc，Windows 用 MinGW gcc）。
 
 Windows 上建议显式指定同一套宿主工具链，避免 PATH 中的其他工具改变 gcc 子进程搜索路径：
