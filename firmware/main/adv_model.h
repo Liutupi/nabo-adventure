@@ -65,6 +65,7 @@ void adv_init(adv_model_t *m, uint32_t seed, const cg_settings_t *settings, cons
               uint32_t seen);
 void adv_free(adv_model_t *m);
 int adv_event(adv_model_t *m, adv_btn_t button, adv_ev_t event);
+bool adv_game_map_key(adv_btn_t button,adv_ev_t event); // all games: double UP only
 int adv_step(adv_model_t *m);
 // Test-only entry bypasses unlock, never changes any score or earned/seen stamp.
 int adv_test_open(adv_model_t *m,int station);

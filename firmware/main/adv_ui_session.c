@@ -77,7 +77,7 @@ static void draw_title(ag_t *g, const adv_model_t *m, const adv_station_t *st, i
     char best[32];
     snprintf(best, sizeof(best), "最佳 %u", (unsigned)m->best[s]);
     ag_text(g, s==3?&collection_font_16:&collection_font_18, best, 120, s==3?282:254, NT_ALIGN_CENTER, UI_INK);
-    ui_footer(g, s==3?"OK直接开始 · 长按上回地图":"OK 开始 · 长按上 回地图");
+    ui_footer(g, s==3?"OK直接开始 · 双击上回地图":"OK 开始 · 双击上 回地图");
 }
 
 static void draw_card(ag_t *g, int y, int h)
@@ -101,7 +101,7 @@ static void draw_result(ag_t *g, const adv_model_t *m, int s)
     snprintf(line, sizeof(line), "最佳 %u", (unsigned)m->best[s]);
     ag_text(g, &collection_font_16, line, 120, 194, NT_ALIGN_CENTER, UI_INK);
     ui_stamps(g, m, s, 92, 226, 9, 28);
-    ui_footer(g, "OK 再来一局 · 长按上 回地图");
+    ui_footer(g, "OK 再来一局 · 双击上 回地图");
 }
 
 void ui_draw_session(ag_t *g, const adv_model_t *m)
@@ -120,6 +120,7 @@ void ui_draw_session(ag_t *g, const adv_model_t *m)
     if (st->game == &adv_demo_game) draw_demo(g, m->game, st);
     else if(st->game==&adv_post_game)ui_draw_post(g,m->game);
     draw_hud(g, m);
+    if(m->phase==ADV_PLAY)ui_footer(g,"双击上回地图 · 长按上暂停");
     if (m->phase == ADV_READY) {
         char n[12];
         snprintf(n, sizeof(n), "%d", (m->t + 59) / 60);
@@ -134,6 +135,6 @@ void ui_draw_session(ag_t *g, const adv_model_t *m)
         ag_text(g, &collection_font_18, "暂停", 120, 112, NT_ALIGN_CENTER, UI_INK);
         ag_text(g, &collection_font_16, "OK 继续", 120, 148, NT_ALIGN_CENTER, UI_INK);
         ag_text(g, &collection_font_16, "下 重新开始", 120, 178, NT_ALIGN_CENTER, UI_INK);
-        ag_text(g, &collection_font_16, "长按上 回地图", 120, 208, NT_ALIGN_CENTER, UI_INK);
+        ag_text(g, &collection_font_16, "双击上 回地图", 120, 208, NT_ALIGN_CENTER, UI_INK);
     } else if (m->phase == ADV_RESULT) draw_result(g, m, s);
 }

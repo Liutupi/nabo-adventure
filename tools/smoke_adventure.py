@@ -218,7 +218,7 @@ def check_shell(link):
     link.move(1)
     link.key('ok')
     link.expect(6, 1)  # Also verify the real, normally unlocked map entrance.
-    link.key('up')
+    link.key('double_up')
     return link.map()
 
 
@@ -240,7 +240,9 @@ def cycle_game(link, game, rounds):
             link.sleep(.35)
             link.edge(1, False)
         active = link.expect(6, owner)
-        link.key('up' if owner == 1 else 'long_up')
+        link.key('up');link.expect(6,owner)
+        link.key('long_up');link.expect(6,owner)
+        link.key('double_up')
         link.sleep(.35)
         returned = link.map()
         if iteration == 0:

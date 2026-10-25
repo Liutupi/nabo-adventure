@@ -54,7 +54,7 @@ void adv_jump_draw(const nabo_jump_t *game, uint32_t ms, bool full) {
     dive_text_layout(&labels[2], &collection_font_16, station, 120, 77, DIVE_ALIGN_CENTER, 0, UI_INK, 255);
     dive_text_layout(&labels[3], &collection_font_16, game->phase == JUMP_OVER ? "游戏结束 · OK再来一局" : "按住OK蓄力，松开起跳",
                      120, 303, DIVE_ALIGN_CENTER, 0, UI_INK, 255);
-    dive_text_layout(&labels[4], &collection_font_12, "上返回 · 下换角色", 120, 316, DIVE_ALIGN_CENTER, 0, UI_INK, 255);
+    dive_text_layout(&labels[4], &collection_font_12, "双击上回地图 · 下换角色", 120, 316, DIVE_ALIGN_CENTER, 0, UI_INK, 255);
     full |= !s_jump_valid || adv_ui_capturing() || game->character != s_previous.character;
     if (full) jump_rect(game, ms, 0, 0, 239, 319, labels, 5);
     else {

@@ -126,7 +126,7 @@ def main():
             if initial['page']==0:link.key('ok');link.map()
             if initial['page']!=0 and initial['page']!=1:raise SmokeError('Reset to cover/map first')
             result['play']=play(link)
-            link.key('long_up');link.map();samples=[]
+            link.key('double_up');link.map();samples=[]
             for count in range(args.rounds+1):
                 enter(link)
                 # Exercise hold/release and pause/back in a running session.
@@ -135,7 +135,9 @@ def main():
                 edge(link,2,False)
                 link.key('long_up');state=link.expect(7)
                 if state['phase']!=3:raise SmokeError('POST did not pause')
-                link.key('long_up');state=link.map();samples.append(state)
+                link.key('long_up');state=link.expect(7)
+                if state['phase']!=3:raise SmokeError('Long UP unexpectedly exited the paused game')
+                link.key('double_up');state=link.map();samples.append(state)
             result['memory']=analyse_memory(samples)
             after=link.status()
             if (after['best'],after['seen'])!=before:raise SmokeError('Test changed bests/stamps')

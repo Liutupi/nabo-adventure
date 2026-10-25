@@ -83,6 +83,25 @@ class GoldenTraces(unittest.TestCase):
                 if action[0] == 't': test = bool(action[1])
                 if test: self.assertFalse(state['fx'] & 8)
 
+    def test_only_double_up_is_the_common_game_return_key(self):
+        self.lib.adv_game_map_key.argtypes=[ctypes.c_int,ctypes.c_int]
+        self.lib.adv_game_map_key.restype=ctypes.c_bool
+        for button in range(3):
+            for event in range(5):
+                self.assertEqual(self.lib.adv_game_map_key(button,event),button==0 and event==2)
+
+    def test_return_traces_cover_every_game_phase_and_both_legacy_entries(self):
+        views=[s['view'] for s in self.traces['game_returns']['states']]
+        for station in range(3,9):
+            self.assertEqual({v['session'][1] for v in views if v['session'] and v['session'][0]==station},set(range(6)))
+        self.assertEqual({v['cursor'] for v in views if v['page']==6},{1,2})
+
+    def test_return_during_finished_animation_keeps_record_and_test_suppression(self):
+        for name,want in [('game_return_record',4),('game_return_test',0)]:
+            trace=self.traces[name]
+            self.assertEqual(trace['states'][-1]['view']['best'][4],want)
+            self.assertEqual(any(s['fx']&8 for s in trace['states']),bool(want))
+
     def test_stamps_follow_bests(self):
         # A finished journey shows each stamp once and never takes one back.
         trace = self.traces['journey']
@@ -95,6 +114,7 @@ class GoldenTraces(unittest.TestCase):
 class Mutations(unittest.TestCase):
     """Deliberately broken rules must fail the goldens (the traces are strong enough)."""
     MUTANTS = [
+        ('adv_model.c','return b == ADV_BTN_UP && e == ADV_EV_DOUBLE;','return b == ADV_BTN_UP && e == ADV_EV_LONG;'),
         ('adv_model.c', 'if (--m->t == 0) { m->phase = ADV_PLAY;', 'if (--m->t == 1) { m->phase = ADV_PLAY;'),
         ('adv_demo.c', 'g->res -= 250;', 'g->res -= 200;'),
         ('adv_demo.c', 'g->zh = g->zh - 10 < 60 ? 60 : g->zh - 10;', 'g->zh = g->zh - 9 < 60 ? 60 : g->zh - 9;'),

@@ -59,7 +59,7 @@
     const reasons=['','未到送信位置','这站在另一轨','信封颜色不同','没有待送的信','错过站台 蒸汽-250','撞到牲畜 蒸汽-250'];
     const animal=g.events.some(e=>e.type===4&&!e.done&&e.lane===g.lane&&e.x>P.X&&e.x<P.X+g.speed*90);
     const pending=g.hold>0&&g.hold<P.HOLD&&g.tapTarget>=0&&!g.tapReason;
-    const hint=g.practice?'练习不耗汽 · 长按上暂停':g.feedback?reasons[g.missReason]:g.delivered?'送达 +1':pending?'松开OK，送出这封信':P.canDeliver(g)?'现在点OK，送出同色信':g.whistle?'鸣笛中，松开停止':animal?'前方牲畜，按住OK鸣笛':'OK送信/鸣笛 · 下键下轨 · 上键上轨';
+    const hint=g.practice?'练习不耗汽 · 双击上返回':g.feedback?reasons[g.missReason]:g.delivered?'送达 +1':pending?'松开OK，送出这封信':P.canDeliver(g)?'现在点OK，送出同色信':g.whistle?'鸣笛中，松开停止':animal?'前方牲畜，按住OK鸣笛':'双击上返回 · 长按上暂停 · OK送信/鸣笛';
     text(hint,160,224,12,'#fffaf0','center');
   }
   function session(c,m,A){
@@ -71,15 +71,15 @@
       text('先看第一封信的颜色',88,108,12);text('同色站前点OK送信',88,127,12);text('蒸汽空了结束，煤补汽',88,146,12);
       c.fillStyle='#203849';c.fillRect(184,108,120,42);text('下键 分步练习',244,120,16,'#fffaf0');
       text('上下键选轨',244,158,12);text('按住OK鸣笛',244,176,12);text('门槛 5 / 12 / 25',90,201,12);text('最佳 '+m.best[3],252,201,16);
-      text('OK直接开始 · 下键练习 · 长按上返回',160,224,12,'#fffaf0');return;
+      text('OK直接开始 · 下键练习 · 双击上返回',160,224,12,'#fffaf0');return;
     }
     draw(c,s.game);
     if(s.phase===A.PHASE.READY)text(String(Math.ceil(s.t/60)),160,106,36);
     if(s.phase===A.PHASE.END){c.fillStyle='#203849';c.fillRect(80,99,160,44);text('蒸汽耗尽',160,110,18,'#fffaf0');}
     if(s.phase===A.PHASE.PAUSE||s.phase===A.PHASE.RESULT){
       c.fillStyle='rgba(32,56,73,.6)';c.fillRect(0,0,320,240);c.fillStyle='#fffaf0';c.fillRect(48,36,224,172);
-      if(s.phase===A.PHASE.PAUSE){text('暂停',160,60,18);text('OK继续',160,99);text('下键重新开始',160,132);text('长按上回地图',160,165);}
-      else{text('本局送达',160,47);text(s.game.score,160,82,36);text('最佳 '+m.best[3],160,147);text('OK重玩 · 下键练习 · 长按上返回',160,183,12);}
+      if(s.phase===A.PHASE.PAUSE){text('暂停',160,60,18);text('OK继续',160,99);text('下键重新开始',160,132);text('双击上回地图',160,165);}
+      else{text('本局送达',160,47);text(s.game.score,160,82,36);text('最佳 '+m.best[3],160,147);text('OK重玩 · 下键练习 · 双击上返回',160,183,12);}
     }
   }
   root.AdvPostDraw={load,draw,session};

@@ -208,13 +208,25 @@
   }
 
   function isBack(btn, ev) { return btn === BTN.UP && (ev === EV.LONG || ev === EV.DOUBLE); }
+  function gameMapKey(btn, ev) { return btn === BTN.UP && ev === EV.DOUBLE; }
+
+  function recordResult(m) {
+    const s=m.session,score=(s.station===3?Post:Demo).status(s.game).score;
+    if(score>m.best[s.station]) {
+      s.record=1;
+      if(!m.test){m.best[s.station]=score;m.fx|=FX.SAVE_BEST;}
+    }
+  }
 
   function sessionEvent(m, btn, ev) {
     const s = m.session;
+    if(gameMapKey(btn,ev)) {
+      if(s.phase===PHASE.END)recordResult(m);
+      cue(m,CUE.BACK);toMap(m);return;
+    }
     if (s.phase === PHASE.TITLE) {
       if (btn === BTN.OK && ev === EV.CLICK) startRun(m);
       else if (s.station===3&&btn===BTN.DOWN&&ev===EV.CLICK) startRun(m,true);
-      else if (isBack(btn, ev)) { cue(m, CUE.BACK); toMap(m); }
     } else if (s.phase === PHASE.PLAY) {
       if (btn === BTN.UP && ev === EV.LONG) { s.phase = PHASE.PAUSE; cue(m, CUE.BACK); return; }
       if (ev === EV.PRESS) {
@@ -228,11 +240,9 @@
     } else if (s.phase === PHASE.PAUSE) {
       if (btn === BTN.OK && ev === EV.CLICK) { s.phase = PHASE.PLAY; clearInput(m); cue(m, CUE.GO); }
       else if (btn === BTN.DOWN && ev === EV.CLICK) startRun(m,s.station===3&&s.game.practice);
-      else if (isBack(btn, ev)) { cue(m, CUE.BACK); toMap(m); }
     } else if (s.phase === PHASE.RESULT) {
       if (btn === BTN.OK && ev === EV.CLICK) startRun(m);
       else if (s.station===3&&btn===BTN.DOWN&&ev===EV.CLICK) startRun(m,true);
-      else if (isBack(btn, ev)) { cue(m, CUE.BACK); toMap(m); }
     }
   }
 
@@ -290,6 +300,9 @@
         }
         break;
       case PAGE.SESSION: sessionEvent(m, btn, ev); break;
+      case PAGE.LEGACY:
+        if(gameMapKey(btn,ev)){cue(m,CUE.BACK);toMap(m);}
+        break;
       default: break;   // LEGACY: the platform routes buttons to the legacy game
     }
     if (JSON.stringify(view(m)) !== before) m.fx |= FX.REDRAW;
@@ -328,11 +341,7 @@
       (s.station===3?Post:Demo).step(s.game, { ok_down: 0, ok_up: 0, up_down: 0, down_down: 0, down_up: 0, ok_held: 0, down_held: 0 });
       if (--s.t === 0) {
         s.phase = PHASE.RESULT;
-        const score = (s.station===3?Post:Demo).status(s.game).score;
-        if (score > m.best[s.station]) {
-          s.record = 1;
-          if (!m.test) { m.best[s.station] = score; m.fx |= FX.SAVE_BEST; }
-        }
+        recordResult(m);
       }
       m.fx |= FX.REDRAW;
     }
@@ -353,7 +362,7 @@
 
   const api = {
     BTN, EV, PAGE, PHASE, FX, CUE, CG, STATION, PATH, START_STATION, DEMO_THRESHOLDS, READY_STEPS, END_STEPS,
-    create, event, step, legacyDone, view, earned, unlocked, threshold, bit, rand, Demo, Post, testOpen,practiceOpen,
+    create, event, step, legacyDone, view, earned, unlocked, threshold, bit, rand, Demo, Post, testOpen,practiceOpen,gameMapKey,
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.AdvCore = api;

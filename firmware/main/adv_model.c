@@ -148,16 +148,29 @@ static void open_passport(adv_model_t *m, adv_page_t from)
 }
 
 static bool is_back(adv_btn_t b, adv_ev_t e) { return b == ADV_BTN_UP && (e == ADV_EV_LONG || e == ADV_EV_DOUBLE); }
+bool adv_game_map_key(adv_btn_t b,adv_ev_t e) { return b == ADV_BTN_UP && e == ADV_EV_DOUBLE; }
+
+static void record_result(adv_model_t *m)
+{
+    uint32_t score=adv_game_status(m).score;
+    if(score>m->best[m->station]) {
+        m->record=true;
+        if (!m->test) { m->best[m->station]=score;m->fx|=ADV_FX_SAVE_BEST; }
+    }
+}
 
 static void session_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
 {
+    if(adv_game_map_key(b,e)) {
+        if(m->phase==ADV_END)record_result(m);
+        cue(m,ADV_CUE_BACK);to_map(m);return;
+    }
     bool click = e == ADV_EV_CLICK;
     switch (m->phase) {
     case ADV_TITLE:
     case ADV_RESULT:
         if (b == ADV_BTN_OK && click) start_run(m);
         else if(m->station==3&&b==ADV_BTN_DOWN&&click)start_practice(m);
-        else if (is_back(b, e)) { cue(m, ADV_CUE_BACK); to_map(m); }
         break;
     case ADV_PLAY:
         if (b == ADV_BTN_UP && e == ADV_EV_LONG) { m->phase = ADV_PAUSE; cue(m, ADV_CUE_BACK); break; }
@@ -179,9 +192,8 @@ static void session_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
             if(m->station==3&&((adv_post_t *)m->game)->practice)start_practice(m);
             else start_run(m);
         }
-        else if (is_back(b, e)) { cue(m, ADV_CUE_BACK); to_map(m); }
         break;
-    default: break;   // READY and END ignore buttons
+    default: break;   // READY and END accept only the common double-UP return
     }
 }
 
@@ -251,6 +263,9 @@ int adv_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
         }
         break;
     case ADV_PAGE_SESSION: session_event(m, b, e); break;
+    case ADV_PAGE_LEGACY:
+        if(adv_game_map_key(b,e)){cue(m,ADV_CUE_BACK);to_map(m);}
+        break;
     default: break;   // LEGACY: the platform routes buttons to the legacy game
     }
     return m->fx;
@@ -296,11 +311,7 @@ int adv_step(adv_model_t *m)
         game->step(m->game, &none);
         if (--m->t == 0) {
             m->phase = ADV_RESULT;
-            uint32_t score = game->status(m->game).score;
-            if (score > m->best[m->station]) {
-                m->record = true;
-                if (!m->test) { m->best[m->station] = score; m->fx |= ADV_FX_SAVE_BEST; }
-            }
+            record_result(m);
         }
         m->fx |= ADV_FX_REDRAW;
     }

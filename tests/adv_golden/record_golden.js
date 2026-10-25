@@ -31,8 +31,8 @@ function recorder(seed, best, seen) {
 }
 
 // Plays the placeholder game: presses OK when the marker is inside the zone (or misses on purpose).
-function playDemo(r, hits, misses) {
-  if(r.m.session.station===3)return playPost(r,hits,misses);
+function playDemo(r, hits, misses,waitResult=true) {
+  if(r.m.session.station===3)return playPost(r,hits,misses,waitResult);
   const s = () => r.m.session;
   while (s() && s().phase === A.PHASE.READY) r.steps(30);
   let made = 0, missed = 0, guard = 0;
@@ -43,10 +43,10 @@ function playDemo(r, hits, misses) {
     else if (made >= hits && missed < misses && outside) { r.ev(BTN.OK, EV.PRESS); r.steps(1); r.ev(BTN.OK, EV.RELEASE); missed++; }
     else r.steps(1);
   }
-  while (s() && s().phase === A.PHASE.END) r.steps(20);
+  while (waitResult && s() && s().phase === A.PHASE.END) r.steps(20);
 }
 
-function playPost(r,hits,misses) {
+function playPost(r,hits,misses,waitResult=true) {
   while(r.m.session.phase===A.PHASE.READY)r.steps(30);
   let errors=0,guard=0;
   while(r.m.session.phase===A.PHASE.PLAY&&guard++<12000){
@@ -60,7 +60,7 @@ function playPost(r,hits,misses) {
       if(g.score>=hits)errors++;
     }else r.steps(3);
   }
-  while(r.m.session.phase===A.PHASE.END)r.steps(20);
+  while(waitResult&&r.m.session.phase===A.PHASE.END)r.steps(20);
 }
 
 function journey() {
@@ -89,7 +89,7 @@ function journey() {
   r.steps(50);
   r.long(BTN.UP); r.click(BTN.DOWN);   // pause, restart
   playDemo(r, 13, 4);
-  r.long(BTN.UP);                      // result -> map (stamps)
+  r.double(BTN.UP);                    // result -> map (stamps)
   r.click(BTN.OK); r.click(BTN.OK);    // post bronze and silver
   r.click(BTN.UP); r.click(BTN.OK);    // night title
   r.test(1); r.click(BTN.OK); playDemo(r, 5, 4); r.test(0);   // test mode never saves
@@ -120,7 +120,7 @@ function kioskAndSettings() {
   r.click(BTN.DOWN); r.click(BTN.OK);  // settings -> 返回 -> kiosk
   r.click(BTN.DOWN); r.click(BTN.OK);  // kiosk 返回地图
   for (let i = 0; i < 10; i++) r.click(BTN.UP);   // walk to the top
-  r.click(BTN.OK); r.long(BTN.UP);
+  r.click(BTN.OK); r.double(BTN.UP);
   return r.trace;
 }
 
@@ -139,14 +139,57 @@ function fuzz(seed, best, seen, count) {
   return r.trace;
 }
 
+function gameReturns() {
+  const r=recorder(71,[0,50,600,25,60,300,45,1000,900],0xffffff);
+  r.click(BTN.OK);r.test(1);
+  for(let station=3;station<9;station++)for(const phase of Object.values(A.PHASE)) {
+    r.open(station);
+    if(phase!==A.PHASE.TITLE)r.click(BTN.OK);
+    if(phase!==A.PHASE.TITLE&&phase!==A.PHASE.READY)r.steps(180);
+    if(phase===A.PHASE.PAUSE)r.long(BTN.UP);
+    if(phase===A.PHASE.END||phase===A.PHASE.RESULT) {
+      let guard=0;
+      while(r.m.session.phase===A.PHASE.PLAY&&guard++<60000)r.steps(1);
+      if(r.m.session.phase!==A.PHASE.END)throw Error('Expected an ended round');
+      if(phase===A.PHASE.RESULT)r.steps(A.END_STEPS);
+    }
+    if(phase===A.PHASE.PLAY){r.click(BTN.UP);r.long(BTN.UP);r.click(BTN.OK);}
+    else r.long(BTN.UP);
+    if(r.m.page!==A.PAGE.SESSION||r.m.session.phase!==phase)throw Error('Single/long UP unexpectedly returned or changed a phase');
+    r.double(BTN.UP);
+    if(r.m.page!==A.PAGE.MAP||r.m.session)throw Error('Double UP did not close the game');
+  }
+  for(const station of [1,2]) {
+    while(r.m.cursor!==station)r.click(BTN.DOWN);
+    r.click(BTN.OK);r.click(BTN.UP);r.long(BTN.UP);
+    if(r.m.page!==A.PAGE.LEGACY)throw Error('Legacy single/long UP escaped');
+    r.double(BTN.UP);
+    if(r.m.page!==A.PAGE.MAP)throw Error('Legacy double UP did not return');
+  }
+  return r.trace;
+}
+
+function endedReturn(test) {
+  const r=recorder(82,[0,10,100,5,0,0,0,0,0],0xffffff);
+  r.click(BTN.OK);r.click(BTN.UP);r.click(BTN.UP);r.click(BTN.OK);r.test(test);r.click(BTN.OK);
+  playDemo(r,4,4,false);
+  if(r.m.session.phase!==A.PHASE.END)throw Error('Expected finished game before result');
+  r.double(BTN.UP);
+  if(r.m.best[4]!== (test?0:4))throw Error('Ended return saved incorrectly');
+  return r.trace;
+}
+
 const out = __dirname;
 const traces = {
+  game_returns:gameReturns(),
+  game_return_record:endedReturn(false),
+  game_return_test:endedReturn(true),
   journey: journey(),
   kiosk_settings: kioskAndSettings(),
   fuzz_fresh: fuzz(7, [0, 0, 0, 0, 0, 0, 0, 0, 0], 0, 4000),
   fuzz_open: fuzz(2024, [0, 60, 650, 11, 11, 11, 11, 11, 2], 0, 4000),
-  post_test_entry:(()=>{const r=recorder(42,[0,99,0,0,0,0,0,0,0],7);r.click(BTN.OK);r.open(3);r.test(1);r.open(3);r.click(BTN.OK);playPost(r,6,4);r.long(BTN.UP);return r.trace;})(),
-  threshold_edges:(()=>{const r=recorder(99,[0,10,100,5,3,3,3,3,0],0xffffff);r.click(BTN.OK);r.click(BTN.DOWN);r.click(BTN.DOWN);r.click(BTN.OK);r.legacy(100);r.click(BTN.UP);r.click(BTN.UP);for(let s=3;s<9;s++){r.click(BTN.UP);r.click(BTN.OK);r.long(BTN.UP);}return r.trace;})(),
+  post_test_entry:(()=>{const r=recorder(42,[0,99,0,0,0,0,0,0,0],7);r.click(BTN.OK);r.open(3);r.test(1);r.open(3);r.click(BTN.OK);playPost(r,6,4);r.double(BTN.UP);return r.trace;})(),
+  threshold_edges:(()=>{const r=recorder(99,[0,10,100,5,3,3,3,3,0],0xffffff);r.click(BTN.OK);r.click(BTN.DOWN);r.click(BTN.DOWN);r.click(BTN.OK);r.legacy(100);r.click(BTN.UP);r.click(BTN.UP);for(let s=3;s<9;s++){r.click(BTN.UP);r.click(BTN.OK);r.double(BTN.UP);}return r.trace;})(),
   post_practice:(()=>{
     const r=recorder(23,[0,99,300,0,0,0,0,0,0],0xffffff);
     r.click(BTN.OK);r.click(BTN.UP);r.click(BTN.OK);r.click(BTN.DOWN);r.steps(180);r.steps(600);
@@ -157,10 +200,10 @@ const traces = {
     r.ev(BTN.OK,EV.PRESS);r.steps(1);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
     if(r.m.session.phase!==A.PHASE.READY||r.m.session.game.practice)throw Error('Practice did not enter the normal countdown');
     if(r.trace.states.some(s=>s.fx&FX.SAVE_BEST)||r.m.best[3])throw Error('Practice changed a real record');
-    r.steps(180);r.long(BTN.UP);r.long(BTN.UP);r.click(BTN.OK);r.click(BTN.DOWN);r.steps(180);
+    r.steps(180);r.long(BTN.UP);r.double(BTN.UP);r.click(BTN.OK);r.click(BTN.DOWN);r.steps(180);
     r.click(BTN.UP);r.steps(60);r.long(BTN.UP);r.click(BTN.DOWN);r.steps(180);
     if(!r.m.session.game.practice||r.m.session.game.lesson)throw Error('Practice pause restart lost its mode');
-    r.long(BTN.UP);r.long(BTN.UP);return r.trace;
+    r.long(BTN.UP);r.double(BTN.UP);return r.trace;
   })(),
   post_practice_locked:(()=>{
     const r=recorder(32,[0,99,0,0,0,0,0,0,0],7);

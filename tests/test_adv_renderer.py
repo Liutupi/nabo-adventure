@@ -124,7 +124,7 @@ class Renderer(unittest.TestCase):
             if self.lib.host_phase() == 4: break
         self.check('end'); self.save('end.png', True)
         self.steps(120); self.assertEqual(self.lib.host_phase(), 5); self.save('result.png', True)
-        self.ev(UP, LONG)
+        self.ev(UP, DOUBLE)
         self.click(DOWN); self.click(DOWN); self.click(OK); self.save('kiosk.png', True)
         self.click(OK); self.click(DOWN); self.save('passport.png', True)
         self.click(OK); self.click(DOWN); self.click(OK); self.save('settings.png', True)
@@ -173,7 +173,7 @@ class Renderer(unittest.TestCase):
         image=self.snapshot()
         self.assertEqual([image[y*240+x] for y in (311,312) for x in (9,10,11)],
                          [0x1002,0x1004,0x1006,0x1001,0x1003,0x1005])
-        self.lib.host_full();self.ev(UP,LONG);self.ev(UP,LONG)
+        self.lib.host_full();self.ev(UP,DOUBLE)
         self.assertEqual((self.lib.host_page(),self.lib.adv_ui_width(),self.lib.adv_ui_height()),(1,240,320))
 
     def test_viewport_clips_landscape_edges_and_forces_full_orientation_change(self):

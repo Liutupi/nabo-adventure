@@ -3,6 +3,7 @@
 <h1>NABO 小火车送信 · 横屏</h1><main><canvas width="320" height="240" id="game"></canvas><aside>
 <p><strong>工牌顺时针横拿，三颗按键在下沿。</strong>右上指示牌会告诉你下一站在哪条轨道、该按哪个键；左侧分别显示当前轨道和预选轨道。</p>
 <p>上/下选下一岔口的轨道。站牌与队首信封颜色相同、同轨时点 OK 卸信；按住 OK 鸣笛驱赶羊牛。煤堆补蒸汽，送完回车库补信。</p>
+<p>双击上键返回冒险地图；长按上键暂停。本页是独立调参原型，不写入合集成绩。</p>
 <p>先看“待送”最左边的信。车头到同色站牌旁时轻点 OK；按住约0.4秒才鸣笛。蒸汽会慢慢减少，漏送/送错扣四分之一，蒸汽空了就结束。第一次可从下方分步练习开始，练习会等你操作，也不耗蒸汽。</p>
 <p id="state">加载原尺寸美术…</p><button id="practice">分步练习</button><button id="restart">正式一局</button><button id="pause">暂停</button>
 <label>原型初速 <input id="speed" type="range" min="60" max="140" value="90"><output id="speed-value">90</output></label>
@@ -12,16 +13,17 @@
 <pre id="debug"></pre></aside></main>
 <script src="adv_post.js"></script><script src="adv_post_draw.js"></script><script>
 (async()=>{'use strict';await AdvPostDraw.load();const c=document.querySelector('canvas').getContext('2d');
-let g,paused=false,held=false,input={},last=performance.now(),acc=0;
+let g,paused=false,held=false,input={},last=performance.now(),acc=0,upAt=0,lastUp=-Infinity,upTimer;
 function restart(practice=false){g=practice?AdvPost.startPractice(1234):AdvPost.start(1234,{speed:+document.querySelector('#speed').value,drain:+document.querySelector('#drain').value});input={};held=false;paused=false;}
 for(const name of ['speed','drain'])document.querySelector('#'+name).oninput=e=>document.querySelector('#'+name+'-value').value=e.target.value;
-function press(key){if(key==='ok'){if(!held)input.ok_down=1;held=true;}else input[key]=1;}
+function press(key){if(key==='ok'){if(!held)input.ok_down=1;held=true;}else {input[key]=1;if(key==='up_down'){upAt=performance.now();clearTimeout(upTimer);upTimer=setTimeout(()=>{paused=true;lastUp=-Infinity;},500);}}}
+function upRelease(){clearTimeout(upTimer);const now=performance.now();if(now-upAt>=500){lastUp=-Infinity;return;}if(now-lastUp<300)location.assign('index.html?map=post');else lastUp=now;}
 function release(){input.ok_up=1;held=false;}
 document.querySelector('#restart').onclick=()=>restart();document.querySelector('#practice').onclick=()=>restart(true);document.querySelector('#pause').onclick=()=>paused=!paused;
 addEventListener('keydown',e=>{const key={ArrowUp:'up_down',ArrowDown:'down_down',Enter:'ok',' ':'ok'}[e.key];if(key){e.preventDefault();if(!e.repeat)press(key);}});
-addEventListener('keyup',e=>{if(['Enter',' '].includes(e.key)){e.preventDefault();release();}});
-addEventListener('blur',()=>{held=false;input={};paused=true;});
-for(const b of document.querySelectorAll('[data-key]'))b.onpointerdown=()=>press(b.dataset.key);
+addEventListener('keyup',e=>{if(['Enter',' '].includes(e.key)){e.preventDefault();release();}else if(e.key==='ArrowUp')upRelease();});
+addEventListener('blur',()=>{held=false;input={};paused=true;clearTimeout(upTimer);lastUp=-Infinity;});
+for(const b of document.querySelectorAll('[data-key]')){b.onpointerdown=e=>{b.setPointerCapture(e.pointerId);press(b.dataset.key);};if(b.dataset.key==='up_down'){b.onpointerup=upRelease;b.onpointercancel=()=>{clearTimeout(upTimer);lastUp=-Infinity;};}}
 const ok=document.querySelector('#ok');ok.onpointerdown=e=>{ok.setPointerCapture(e.pointerId);press('ok');};ok.onpointerup=release;ok.onpointercancel=release;
 restart(true);rootAccess();function rootAccess(){window.postPrototype={get state(){return g;},step(i){AdvPost.step(g,i);},restart};}
 function frame(now){acc+=Math.min(100,now-last);last=now;while(acc>=1000/60){if(!paused&&!g.over){AdvPost.step(g,Object.assign({ok_held:+held},input));input={};if(g.practice&&g.over)restart();}acc-=1000/60;}

@@ -78,7 +78,7 @@ class BadgeSerial(FakeSerial):
                 elif key == 'long_up': s['page'] = 1
             elif page == 3 and key == 'ok': s['page'] = self.from_page
             elif page == 4 and key == 'long_up': s['page'] = 2
-            elif page == 6 and key == ('up' if s['owner'] == 1 else 'long_up'):
+            elif page == 6 and key == 'double_up':
                 s['page'], s['owner'] = 1, 0
 
 

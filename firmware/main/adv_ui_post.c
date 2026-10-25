@@ -100,9 +100,9 @@ static void guidance(ag_t *g,const adv_post_t *p)
         if(e->type==POST_ANIMAL&&!e->done&&e->lane==p->lane&&e->x>ADV_POST_X&&e->x<ADV_POST_X+p->speed*90)animal=true;
     }
     bool pending=p->hold>0&&p->hold<ADV_POST_HOLD&&p->tap_target>=0&&!p->tap_reason;
-    const char *hint=p->practice?"练习不耗汽 · 长按上暂停":p->feedback?reasons[p->miss_reason>=0&&p->miss_reason<7?p->miss_reason:1]:
+    const char *hint=p->practice?"练习不耗汽 · 双击上返回":p->feedback?reasons[p->miss_reason>=0&&p->miss_reason<7?p->miss_reason:1]:
         p->delivered?"送达 +1":pending?"松开OK，送出这封信":adv_post_can_deliver(p)?"现在点OK，送出同色信":
-        p->whistle?"鸣笛中，松开停止":animal?"前方牲畜，按住OK鸣笛":"OK送信/鸣笛 · 下键下轨 · 上键上轨";
+        p->whistle?"鸣笛中，松开停止":animal?"前方牲畜，按住OK鸣笛":"双击上返回 · 长按上暂停 · OK送信/鸣笛";
     ag_rect(g,0,220,320,20,0,UI_INK,255,0,0);text(g,hint,160,224,12,NT_ALIGN_CENTER,UI_WHITE);
 }
 

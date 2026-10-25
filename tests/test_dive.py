@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BOARD = ROOT / 'firmware/main'
 SOURCES = ['nabo_dive_model.c', 'nabo_dive_anim.c', 'nabo_dive_render.c', 'nabo_dive_draw.c', 'nabo_dive_text.c',
            'nabo_dive_sound.c', 'nabo_dive_sprites.c', 'nabo_menu_font_16.c', 'nabo_ui_font_18.c',
-           'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c']
+           'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c','collection_font_12.c']
 TITLE, PLAY, PAUSE, OVER = 0, 1, 2, 3
 X, Y, O2, VY, PHASE, CAM, LB, ZONE, HITS, INV = range(10)
 
@@ -137,7 +137,12 @@ class Assets(unittest.TestCase):
     def test_ui_strings_have_glyphs(self):
         used = set()
         for name in ('nabo_dive_render.c',):
-            for literal in re.findall(r'"((?:[^"\\]|\\.)*)"', (BOARD / name).read_text('utf-8')):
+            source=(BOARD/name).read_text('utf-8')
+            collection_used=set(''.join(re.findall(r'add_text\(g, &collection_font_12, "([^"]*)"',source)))
+            have={chr(int(h,16)) for h in re.findall(r'/\* U\+([0-9A-F]+) ',(BOARD/'collection_font_12.c').read_text('utf-8'))}
+            self.assertEqual(sorted(c for c in collection_used if ord(c)>0x7e and c not in have),[],'collection_font_12.c')
+            source=re.sub(r'add_text\(g, &collection_font_12,[\s\S]*?\);','',source)
+            for literal in re.findall(r'"((?:[^"\\]|\\.)*)"', source):
                 used |= {c for c in literal if ord(c) > 0x7e and c != '·'}
         for font in ('nabo_menu_font_16.c', 'nabo_ui_font_18.c'):
             have = {chr(int(h, 16)) for h in re.findall(r'/\* U\+([0-9A-F]+) ', (BOARD / font).read_text('utf-8'))}

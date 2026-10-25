@@ -33,7 +33,7 @@ static void title(ag_t *g,const adv_model_t *m)
     }
     char best[32];if(m->best[3]>9999)snprintf(best,sizeof(best),"最佳9999+");else snprintf(best,sizeof(best),"最佳 %u",(unsigned)m->best[3]);
     text(g,best,304,201,16,NT_ALIGN_RIGHT,UI_INK);
-    footer(g,"OK直接开始 · 下键练习 · 长按上返回");
+    footer(g,"OK直接开始 · 下键练习 · 双击上返回");
 }
 
 static void card(ag_t *g,int x,int y,int w,int h)
@@ -53,7 +53,7 @@ void ui_draw_post_session(ag_t *g,const adv_model_t *m)
         card(g,64,44,192,156);text(g,"暂停",160,60,18,NT_ALIGN_CENTER,UI_INK);
         text(g,"OK继续",160,99,16,NT_ALIGN_CENTER,UI_INK);
         text(g,"下键重新开始",160,132,16,NT_ALIGN_CENTER,UI_INK);
-        text(g,"长按上回地图",160,165,16,NT_ALIGN_CENTER,UI_INK);
+        text(g,"双击上回地图",160,165,16,NT_ALIGN_CENTER,UI_INK);
     } else if(m->phase==ADV_END) {
         ag_rect(g,80,99,160,44,8,UI_INK,240,UI_RED,2);
         text(g,"蒸汽耗尽",160,110,18,NT_ALIGN_CENTER,UI_WHITE);
@@ -65,6 +65,6 @@ void ui_draw_post_session(ag_t *g,const adv_model_t *m)
         if(m->best[3]>9999)snprintf(n,sizeof(n),"最佳9999+");else snprintf(n,sizeof(n),"最佳 %u",(unsigned)m->best[3]);
         text(g,n,160,147,16,NT_ALIGN_CENTER,UI_INK);
         ui_stamps(g,m,3,132,184,8,28);
-        footer(g,"OK重玩 · 下键练习 · 长按上返回");
+        footer(g,"OK重玩 · 下键练习 · 双击上返回");
     }
 }

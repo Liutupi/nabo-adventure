@@ -67,7 +67,7 @@
   <section class="stack">
     <div class="panel">
       <h2>操作</h2>
-      <p class="sub" style="margin:0">键盘 <kbd>↑</kbd> <kbd>↓</kbd> <kbd>Enter</kbd>/<kbd>空格</kbd>；按住 500 ms 为长按，两次单击间隔不到 300 ms 为双击。</p>
+      <p class="sub" style="margin:0">键盘 <kbd>↑</kbd> <kbd>↓</kbd> <kbd>Enter</kbd>/<kbd>空格</kbd>；所有游戏双击上键回地图。按住 500 ms 为长按，两次单击间隔不到 300 ms 为双击。</p>
       <div class="row">
         <button id="reset">清空进度</button>
         <button id="unlock">全部解锁</button>
@@ -98,6 +98,7 @@
   let saved = { best: [0, 0, 0, 0, 0, 0, 0, 0, 0], seen: 0 };
   try { saved = JSON.parse(localStorage.getItem(SAVE_KEY)) || saved; } catch (e) { /* private window */ }
   let m = A.create((Math.random() * 2 ** 32) >>> 0, SETTINGS, saved.best, saved.seen);
+  if(new URLSearchParams(location.search).get('map')==='post'){m.page=A.PAGE.MAP;m.cursor=3;}
 
   function persist() {
     try { localStorage.setItem(SAVE_KEY, JSON.stringify({ best: m.best, seen: m.seen })); } catch (e) { /* ignore */ }

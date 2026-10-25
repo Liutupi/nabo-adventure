@@ -191,7 +191,7 @@
         circle(x, 182, 18, TIER[t], on ? 255 : 40, on ? INK : TIER[t], 2);
         text('m12', String(A.threshold(s.station, t)), x, 218, 'center', PAPER);
       }
-      text('f18', `最佳 ${m.best[s.station]}`, 120, 254, 'center', PAPER); footer('OK 开始 · 长按上 回地图');
+      text('f18', `最佳 ${m.best[s.station]}`, 120, 254, 'center', PAPER); footer('OK 开始 · 双击上 回地图');
       return;
     }
     const d = s.game;
@@ -212,6 +212,7 @@
     if (w > 0) rect(42, 14, w, 6, 3, d.res < 250 ? RED : rgb(r, g, b), 255);
     text('p28', String(d.score), 230, 29, 'right', WHITE);
     const card = (y, h) => { rect(0, 34, 240, 286, 0, INK, 150); rect(24, y, 192, h, 14, PAPER, 250, INK, 2); };
+    if(s.phase===A.PHASE.PLAY)footer('双击上回地图 · 长按上暂停');
     if (s.phase === A.PHASE.READY) {
       glow(120, 150, 50, GOLD); text('p48', String(Math.ceil(s.t / 60)), 120, 168, 'center', WHITE);
       text('f18', '准备', 120, 270, 'center', PAPER);
@@ -219,12 +220,12 @@
       rect(70, 136, 100, 40, 12, INK, 230, RED, 2); text('f18', '结束', 120, 163, 'center', PAPER);
     } else if (s.phase === A.PHASE.PAUSE) {
       card(80, 160); text('f18', '暂停', 120, 112, 'center', INK); text('f16', 'OK 继续', 120, 148, 'center', INK);
-      text('f16', '下 重新开始', 120, 178, 'center', INK); text('f16', '长按上 回地图', 120, 208, 'center', INK);
+      text('f16', '下 重新开始', 120, 178, 'center', INK); text('f16', '双击上 回地图', 120, 208, 'center', INK);
     } else if (s.phase === A.PHASE.RESULT) {
       card(60, 200); text('f16', '本局成绩', 120, 88, 'center', INK); text('p48', String(d.score), 120, 142, 'center', INK);
       if (s.record) { rect(82, 152, 76, 20, 10, GOLD, 255, INK, 1); text('f12', m.test ? '测试不记录' : '新纪录', 120, 167, 'center', INK); }
       text('f16', `最佳 ${m.best[s.station]}`, 120, 194, 'center', INK);
-      stamps(A, m, s.station, 92, 226, 9, 28); footer('OK 再来一局 · 长按上 回地图');
+      stamps(A, m, s.station, 92, 226, 9, 28); footer('OK 再来一局 · 双击上 回地图');
     }
   }
 

@@ -172,8 +172,7 @@ static void jump_button(const input_t *in)
             nabo_jump_release(&s_jump, in->ms);
             atomic_store(&s_jump_cue, s_jump.phase == JUMP_FLYING ? 1 : 0);
         }
-    } else if (in->event == BSP_BTN_CLICK && in->button == BSP_BTN_UP) legacy_back();
-    else if (in->event == BSP_BTN_CLICK && in->button == BSP_BTN_DOWN) s_jump.character = 1 - s_jump.character;
+    } else if (in->event == BSP_BTN_CLICK && in->button == BSP_BTN_DOWN) s_jump.character = 1 - s_jump.character;
     else if (in->event == BSP_BTN_LONG && in->button == BSP_BTN_DOWN) {
         adv_persist_jump(s_jump.best);
         nabo_jump_reset(&s_jump, esp_random(), s_jump.best);
@@ -183,7 +182,6 @@ static void jump_button(const input_t *in)
 
 static void dive_button(const input_t *in)
 {
-    if (in->button == BSP_BTN_UP && in->event == BSP_BTN_LONG) { legacy_back(); return; }
     if (in->button == BSP_BTN_UP && in->event == BSP_BTN_CLICK) nabo_dive_key(MUSE_MENU_UP);
     else if ((in->button == BSP_BTN_OK || in->button == BSP_BTN_DOWN) &&
              (in->event == BSP_BTN_PRESS || in->event == BSP_BTN_RELEASE))
@@ -202,6 +200,7 @@ static void handle_button(const input_t *in)
         if (in->event == BSP_BTN_RELEASE) s_model.held &= ~bit;
         return;
     }
+    if(s_owner!=OWNER_SHELL&&adv_game_map_key((adv_btn_t)in->button,(adv_ev_t)in->event)) {legacy_back();return;}
     if (s_owner == OWNER_JUMP) jump_button(in);
     else if (s_owner == OWNER_DIVE) dive_button(in);
     else handle_fx(adv_event(&s_model, (adv_btn_t)in->button, (adv_ev_t)in->event));

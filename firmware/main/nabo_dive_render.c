@@ -19,6 +19,7 @@ LV_FONT_DECLARE(nabo_ui_font_18);
 LV_FONT_DECLARE(nabo_poster_font_28);
 LV_FONT_DECLARE(nabo_poster_font_48);
 LV_FONT_DECLARE(nabo_mono_font_12);
+LV_FONT_DECLARE(collection_font_12);
 
 #define STRIP_PX (DIVE_W * 5)
 #define TITLE_SURF 104
@@ -439,7 +440,7 @@ static void over_ops(dive_gfx_t* g) {
         add_rect(g, 24, 283, 24 + pw, 307, 0xFFFF, pulse, 12, 1, true, LAYER_UI);
         add_text(g, &nabo_menu_font_16, "OK 再来一次", 24 + pw / 2, 301, DIVE_ALIGN_CENTER, 1, 0xFFFF, pulse, false,
                  true, LAYER_UI);
-        add_text(g, &nabo_menu_font_16, "上键 标题", DIVE_W - 24, 301, DIVE_ALIGN_RIGHT, 0, rgb565(200, 230, 245), 0.5f,
+        add_text(g, &collection_font_12, "双击上回地图", DIVE_W - 16, 301, DIVE_ALIGN_RIGHT, 0, rgb565(200, 230, 245), 0.8f,
                  false, false, LAYER_UI);
     }
 }
@@ -477,6 +478,7 @@ static void title_ops(dive_gfx_t* g) {
         snprintf(s, sizeof(s), "还没有纪录");
     add_text(g, &nabo_menu_font_16, s, 20, 294, DIVE_ALIGN_LEFT, 0, rgb565(225, 245, 255), 0.8f, false, false,
              LAYER_UI);
+    add_text(g, &collection_font_12, "双击上回地图", DIVE_W/2, 316, DIVE_ALIGN_CENTER, 0, rgb565(225,245,255), 0.9f, false, false, LAYER_UI);
     add_nabo(g, g->d->x, g->d->y - g->d->cam_y, true);
 }
 
@@ -485,6 +487,7 @@ static void pause_ops(dive_gfx_t* g) {
     add_text(g, &nabo_ui_font_18, "暂停", DIVE_W / 2 + 4, 158, DIVE_ALIGN_CENTER, 8, 0xFFFF, 1, false, false, LAYER_UI);
     add_text(g, &nabo_menu_font_16, "上键或 OK 继续", DIVE_W / 2, 182, DIVE_ALIGN_CENTER, 0, rgb565(200, 230, 245),
              0.6f, false, false, LAYER_UI);
+    add_text(g, &collection_font_12, "双击上回地图", DIVE_W/2, 214, DIVE_ALIGN_CENTER, 0, rgb565(200,230,245), 0.85f, false, false, LAYER_UI);
 }
 
 /* ---------- dirty rectangles ---------- */
