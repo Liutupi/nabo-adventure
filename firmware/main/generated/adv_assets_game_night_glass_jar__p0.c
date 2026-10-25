@@ -6,7 +6,7 @@ static const uint16_t adv_assets_game_night_glass_jar__p0_palette[] = {
 static const uint16_t adv_assets_game_night_glass_jar__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_game_night_glass_jar__p0_rows[] = {
+static const uint16_t adv_assets_game_night_glass_jar__p0_rows[] = {
     0, 6, 12, 22, 28, 38, 44, 56, 64, 72, 80, 88, 96, 108, 120, 132, 144, 156, 168, 180,
     192, 204, 216, 228, 240, 252, 264, 276, 288, 300, 312, 322, 328, 334, 344, 357, 371, 381,
 };

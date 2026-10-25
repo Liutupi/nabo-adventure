@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_rail_wheat__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_rail_wheat__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_rail_wheat__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_rail_wheat__p0_rows[] = {
     0, 2, 4, 6, 8, 18, 26, 36, 44, 52, 62, 72, 88, 108, 128, 149, 167, 188, 208, 228,
     249, 267, 289, 311, 333, 353, 371, 391, 411, 431, 449, 451, 453,
 };

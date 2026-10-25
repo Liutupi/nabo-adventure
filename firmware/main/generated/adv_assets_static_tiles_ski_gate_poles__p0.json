@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_ski_gate_poles__p0",
   "width": 32,
   "height": 32,
@@ -15,12 +15,12 @@
     0
   ],
   "data_bytes": 300,
-  "table_bytes": 142,
+  "table_bytes": 76,
   "frame_sha256": [
     "48523f38e96888c47c9b831dc56f92518353559662988ab503cf852bc04c218b"
   ],
   "source_sha256": [
-    "f6786f666678472a52d8e93e6d0666cc7b443e3d710fed4ce1f019d3884acb26"
+    "86a6498944776082361c595a74cb5336e8fa5b19a00a05297907861a147f8112"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\ski\\gate-poles.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/ski/gate-poles.png",
       "sha256": "f6786f666678472a52d8e93e6d0666cc7b443e3d710fed4ce1f019d3884acb26"
     }
   ],

@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_stamp_sky__p0_palette[] = {
 static const uint16_t adv_assets_static_stamp_sky__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_stamp_sky__p0_rows[] = {
+static const uint16_t adv_assets_static_stamp_sky__p0_rows[] = {
     0, 2, 4, 6, 12, 18, 28, 38, 52, 70, 88, 106, 124, 142, 160, 178, 196, 214, 232, 250,
     268, 286, 304, 322, 340, 362, 384, 414, 452, 490, 528, 566, 604, 642, 680, 718, 756, 794, 832, 870,
     908, 946, 984, 1022, 1060, 1098, 1136, 1182, 1228, 1274, 1320, 1366, 1404, 1442, 1480, 1518, 1556, 1594, 1632, 1670,

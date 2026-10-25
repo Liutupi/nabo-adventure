@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_harbor_buoy__p0",
   "width": 32,
   "height": 32,
@@ -16,12 +16,12 @@
     0
   ],
   "data_bytes": 252,
-  "table_bytes": 144,
+  "table_bytes": 78,
   "frame_sha256": [
     "de84b994fdb6326fe14a42f85bb19b19ced24dc141db1c424d4b5d2aa0099830"
   ],
   "source_sha256": [
-    "8d526bdfdcb7680105726a7524e65fd70d075e6d45950361f1877b2b9561350b"
+    "79777559fa44a6fb74d2a86cde47e493ef0ad6d209b977d1292a4a72cbf2fc50"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\harbor\\buoy.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/harbor/buoy.png",
       "sha256": "8d526bdfdcb7680105726a7524e65fd70d075e6d45950361f1877b2b9561350b"
     }
   ],

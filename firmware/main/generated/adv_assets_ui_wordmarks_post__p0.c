@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_wordmarks_post__p0_palette[] = {
 static const uint16_t adv_assets_ui_wordmarks_post__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_wordmarks_post__p0_rows[] = {
+static const uint16_t adv_assets_ui_wordmarks_post__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 26, 48, 74, 96, 118, 140, 178, 227, 277, 331, 389,
     441, 497, 547, 593, 631, 673, 715, 764, 800, 832, 864, 896, 922, 949, 959, 961, 963, 965, 967, 969,
     971, 973, 975, 977, 979, 981, 983, 985, 987, 989, 991, 993, 1021, 1049, 1094, 1134, 1174, 1208, 1242, 1281,

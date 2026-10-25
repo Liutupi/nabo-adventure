@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_stamp_ski__p0",
   "width": 96,
   "height": 96,
@@ -13,12 +13,12 @@
     0
   ],
   "data_bytes": 2100,
-  "table_bytes": 394,
+  "table_bytes": 200,
   "frame_sha256": [
     "1931bb0f648c44ca0473897dff3655fd6b1dd38f77123c861e18f3c63a436560"
   ],
   "source_sha256": [
-    "efb7f2f3fb4333e3e42e557d45f0580adcb3ae4ed94a59e89bdba5ff717fbdc6"
+    "e23c8b32614843a95e3c04113d00e1a00a4b010d8ab0ba98d5561d3713dbef62"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -31,7 +31,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\stamps\\ski.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/stamps/ski.png",
       "sha256": "efb7f2f3fb4333e3e42e557d45f0580adcb3ae4ed94a59e89bdba5ff717fbdc6"
     }
   ],

@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_mountain_young_pine__p0_palette[] 
 static const uint16_t adv_assets_static_tiles_mountain_young_pine__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_mountain_young_pine__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_mountain_young_pine__p0_rows[] = {
     0, 2, 4, 6, 12, 21, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160,
     170, 180, 190, 200, 210, 216, 226, 236, 246, 256, 266, 272, 274,
 };

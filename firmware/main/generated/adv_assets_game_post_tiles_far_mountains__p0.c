@@ -6,7 +6,7 @@ static const uint16_t adv_assets_game_post_tiles_far_mountains__p0_palette[] = {
 static const uint16_t adv_assets_game_post_tiles_far_mountains__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_game_post_tiles_far_mountains__p0_rows[] = {
+static const uint16_t adv_assets_game_post_tiles_far_mountains__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 16, 22, 28, 34, 40, 46, 56, 66, 76, 86, 100, 114, 128, 146,
     160, 174, 188, 198, 208, 218, 224, 230, 236, 242, 248, 250, 252,
 };

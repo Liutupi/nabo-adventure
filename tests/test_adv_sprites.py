@@ -27,12 +27,12 @@ class Asset(C.Structure):
     _fields_ = [('width', C.c_uint16), ('height', C.c_uint16), ('frame_count', C.c_uint16),
                 ('palette_size', C.c_uint16), ('row_count', C.c_uint32), ('data_size', C.c_uint32),
                 ('palette', C.POINTER(C.c_uint16)), ('keys', C.POINTER(C.c_uint16)),
-                ('rows', C.POINTER(C.c_uint32)), ('data', C.POINTER(C.c_uint8))]
+                ('rows', C.POINTER(C.c_uint16)), ('data', C.POINTER(C.c_uint8))]
 
 
 def asset_for(palette, packed):
     arrays = [(t * len(v))(*v) for t, v in [(C.c_uint16, palette), (C.c_uint16, packed['keys']),
-              (C.c_uint32, packed['rows']), (C.c_uint8, packed['data'])]]
+              (C.c_uint16, packed['rows']), (C.c_uint8, packed['data'])]]
     asset = Asset(packed['width'], packed['height'], len(packed['keys']), len(palette),
                   len(packed['rows']), len(packed['data']), *arrays)
     asset.keepalive = arrays

@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_deep_sea_current_wave__p0_palette[
 static const uint16_t adv_assets_static_tiles_deep_sea_current_wave__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_deep_sea_current_wave__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_deep_sea_current_wave__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 26, 36, 54, 72, 90, 104, 114, 124, 126, 128, 138,
     148, 166, 184, 202, 216, 226, 236, 238, 240, 242, 244, 246, 248,
 };

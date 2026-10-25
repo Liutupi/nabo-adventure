@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_icon_oxygen__p0",
   "width": 16,
   "height": 16,
@@ -17,12 +17,12 @@
     0
   ],
   "data_bytes": 157,
-  "table_bytes": 82,
+  "table_bytes": 48,
   "frame_sha256": [
     "2b6654c4cd55c5e3e2f45705f5afaab33b749c774ee3dc70e1a74d31411981bb"
   ],
   "source_sha256": [
-    "151bc515d53f73278a797eea165d7c110afd593dfd728e321f252f8c11e93d05"
+    "0e59d32c4f9ef99da4935bf84bfe815db04e8009f957eb91aa1700dbc7d5bffe"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\icons\\oxygen.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/icons/oxygen.png",
       "sha256": "151bc515d53f73278a797eea165d7c110afd593dfd728e321f252f8c11e93d05"
     }
   ],

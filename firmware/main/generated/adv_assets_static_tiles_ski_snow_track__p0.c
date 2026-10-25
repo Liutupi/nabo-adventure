@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_ski_snow_track__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_ski_snow_track__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_ski_snow_track__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_ski_snow_track__p0_rows[] = {
     0, 14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 182, 196, 210, 224, 238, 252, 266,
     280, 294, 308, 322, 336, 350, 364, 378, 392, 406, 420, 434, 448,
 };

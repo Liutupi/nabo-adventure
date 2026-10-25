@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_harbor_buoy__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_harbor_buoy__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_harbor_buoy__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_harbor_buoy__p0_rows[] = {
     0, 2, 4, 6, 12, 22, 32, 42, 52, 62, 68, 74, 80, 90, 100, 110, 120, 130, 140, 150,
     160, 170, 188, 198, 208, 218, 228, 238, 244, 246, 248, 250, 252,
 };

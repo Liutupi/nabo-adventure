@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_icon_fuel__p0_palette[] = {
 static const uint16_t adv_assets_static_icon_fuel__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_icon_fuel__p0_rows[] = {
+static const uint16_t adv_assets_static_icon_fuel__p0_rows[] = {
     0, 2, 8, 23, 33, 45, 57, 67, 83, 99, 113, 127, 143, 159, 169, 175, 177,
 };
 static const uint8_t adv_assets_static_icon_fuel__p0_data[] = {

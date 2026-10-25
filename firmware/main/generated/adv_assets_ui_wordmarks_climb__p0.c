@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_wordmarks_climb__p0_palette[] = {
 static const uint16_t adv_assets_ui_wordmarks_climb__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_wordmarks_climb__p0_rows[] = {
+static const uint16_t adv_assets_ui_wordmarks_climb__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 26, 51, 77, 99, 129, 166, 216, 252, 286, 328, 368,
     408, 450, 490, 526, 566, 602, 634, 666, 704, 730, 752, 774, 792, 810, 816, 818, 820, 822, 824, 826,
     828, 830, 832, 834, 836, 838, 840, 842, 844, 846, 848, 850, 890, 926, 977, 1018, 1059, 1100, 1145, 1198,

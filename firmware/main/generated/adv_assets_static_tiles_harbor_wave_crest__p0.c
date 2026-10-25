@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_harbor_wave_crest__p0_palette[] = 
 static const uint16_t adv_assets_static_tiles_harbor_wave_crest__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_harbor_wave_crest__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_harbor_wave_crest__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 18, 28, 42, 56, 70, 84, 101, 123, 147, 165, 183, 201, 217,
     227, 237, 247, 257, 267, 277, 287, 297, 307, 313, 315, 317, 319,
 };

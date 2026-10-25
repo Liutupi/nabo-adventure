@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_travel_cheer__p0",
   "width": 43,
   "height": 72,
@@ -82,7 +82,7 @@
     5
   ],
   "data_bytes": 13587,
-  "table_bytes": 2480,
+  "table_bytes": 1312,
   "frame_sha256": [
     "6d5974b33ed8e4ea32d53dd644975b3153bbadca77c0e25023090caee9c390d1",
     "d5c0a86ddfce6eaabb30916097c7a9ae8b71ba45b788cc71632e36b57476ee1f",
@@ -94,14 +94,14 @@
     "6d5974b33ed8e4ea32d53dd644975b3153bbadca77c0e25023090caee9c390d1"
   ],
   "source_sha256": [
-    "783f4e55369fc46d682eeb5e5bcb1c9c04c18ceca20b82ddaa650066408cf45c",
-    "bf0dadd87c46de44b69320bf9e22a7ac7559095958ac97e5559025c0e9d6d3e7",
-    "7fb7b3642c91c6215618d3bfb73477bf927ba64587d8d03dad79645f6681e3ab",
-    "a9d344d304086e16a62ade6b916c106f59d8f1945056266c0c4285ca345fc7c3",
-    "1d149e49a52ffb41b5c46e21fbc694f049e4086912e454dcffa43dd725ac9f45",
-    "69b4264592427960907efb49e7f4e23e738ca5084b7d8c19540bec8c54725ce0",
-    "fe1e249aa9afc60fe37e3700f71aaaf6ba3a75549ac28acd0e2fd24dd37438f4",
-    "783f4e55369fc46d682eeb5e5bcb1c9c04c18ceca20b82ddaa650066408cf45c"
+    "c89c2ab33757ac8867529ca6cae191511e9f1a8e1901f9386c42e51cd632f74e",
+    "b5e240a0954f2f94eebf573d48f82589c5cd6cf15ce2f515bb8480990b2af4a8",
+    "0134aeadeb762690154eb0e5212332f82866507cae55a966f05235b831064db9",
+    "bed686138cf6de1e66003a967ab9b74c68bd14af65640cd733db901d14a19523",
+    "155fc6f4ffbd5a4eec90122f5a609424f8e0fa0491171c9855deaa6dcfed7d19",
+    "78ee5d836f1cb16f1ddc759cc755027328602fcee2b6cb6180a063e35f47a93a",
+    "fc051d9b1b719ad3c27988982a85249513ed17e646a608cba18a59be888e80bb",
+    "c89c2ab33757ac8867529ca6cae191511e9f1a8e1901f9386c42e51cd632f74e"
   ],
   "verified_frames": 8,
   "comparison": "lossless after shared RGB565 quantization",
@@ -114,35 +114,35 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\000.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/cheer/000.png",
       "sha256": "783f4e55369fc46d682eeb5e5bcb1c9c04c18ceca20b82ddaa650066408cf45c"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\001.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/cheer/001.png",
       "sha256": "bf0dadd87c46de44b69320bf9e22a7ac7559095958ac97e5559025c0e9d6d3e7"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\002.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/cheer/002.png",
       "sha256": "7fb7b3642c91c6215618d3bfb73477bf927ba64587d8d03dad79645f6681e3ab"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\003.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/cheer/003.png",
       "sha256": "a9d344d304086e16a62ade6b916c106f59d8f1945056266c0c4285ca345fc7c3"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\004.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/cheer/004.png",
       "sha256": "1d149e49a52ffb41b5c46e21fbc694f049e4086912e454dcffa43dd725ac9f45"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\005.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/cheer/005.png",
       "sha256": "69b4264592427960907efb49e7f4e23e738ca5084b7d8c19540bec8c54725ce0"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\006.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/cheer/006.png",
       "sha256": "fe1e249aa9afc60fe37e3700f71aaaf6ba3a75549ac28acd0e2fd24dd37438f4"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\cheer\\007.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/cheer/007.png",
       "sha256": "783f4e55369fc46d682eeb5e5bcb1c9c04c18ceca20b82ddaa650066408cf45c"
     }
   ],

@@ -6,7 +6,7 @@ static const uint16_t adv_assets_game_post_props_coal_pile__p0_palette[] = {
 static const uint16_t adv_assets_game_post_props_coal_pile__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_game_post_props_coal_pile__p0_rows[] = {
+static const uint16_t adv_assets_game_post_props_coal_pile__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 18, 28, 38, 48, 62, 78, 90, 102, 114, 126, 138, 154, 170,
     185, 200, 212, 228, 230,
 };

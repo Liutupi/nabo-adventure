@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_ski_small_spruce__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_ski_small_spruce__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_ski_small_spruce__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_ski_small_spruce__p0_rows[] = {
     0, 2, 4, 6, 12, 21, 27, 37, 47, 53, 63, 73, 87, 97, 111, 129, 143, 153, 163, 173,
     183, 193, 203, 213, 223, 229, 239, 249, 259, 269, 279, 285, 287,
 };

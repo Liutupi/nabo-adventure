@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_passport_locked_mask__p0_palette[] = {
 static const uint16_t adv_assets_ui_passport_locked_mask__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_passport_locked_mask__p0_rows[] = {
+static const uint16_t adv_assets_ui_passport_locked_mask__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38,
     40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 64, 70, 80, 90, 100, 110, 116, 122, 128, 134,
     144, 154, 164, 174, 180, 186, 188, 190, 192, 194, 196, 198, 200,

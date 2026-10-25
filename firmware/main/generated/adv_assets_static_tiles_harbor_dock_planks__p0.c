@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_harbor_dock_planks__p0_palette[] =
 static const uint16_t adv_assets_static_tiles_harbor_dock_planks__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_harbor_dock_planks__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_harbor_dock_planks__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 20, 30, 40, 54, 64, 70, 72, 78, 88, 98, 110, 120,
     126, 128, 134, 144, 154, 168, 178, 180, 182, 184, 186, 188, 190,
 };

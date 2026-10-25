@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_stamp_jump__p0_palette[] = {
 static const uint16_t adv_assets_static_stamp_jump__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_stamp_jump__p0_rows[] = {
+static const uint16_t adv_assets_static_stamp_jump__p0_rows[] = {
     0, 2, 4, 6, 12, 18, 28, 38, 52, 70, 88, 106, 124, 142, 160, 178, 196, 214, 232, 250,
     268, 286, 304, 322, 340, 358, 376, 394, 412, 430, 452, 474, 496, 526, 556, 582, 608, 638, 668, 698,
     728, 758, 788, 818, 844, 866, 892, 930, 964, 998, 1036, 1074, 1104, 1134, 1164, 1194, 1224, 1250, 1272, 1298,

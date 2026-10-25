@@ -6,7 +6,7 @@ static const uint16_t adv_assets_game_night_grass_02__p0_palette[] = {
 static const uint16_t adv_assets_game_night_grass_02__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_game_night_grass_02__p0_rows[] = {
+static const uint16_t adv_assets_game_night_grass_02__p0_rows[] = {
     0, 2, 4, 6, 8, 14, 20, 26, 36, 46, 56, 66, 80, 94, 104, 118, 136, 156, 174, 192,
     214, 232, 252, 272, 292, 308, 326, 342, 360, 374, 388, 402, 416,
 };

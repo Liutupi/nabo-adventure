@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_icon_spirit__p0_palette[] = {
 static const uint16_t adv_assets_static_icon_spirit__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_icon_spirit__p0_rows[] = {
+static const uint16_t adv_assets_static_icon_spirit__p0_rows[] = {
     0, 2, 4, 16, 30, 42, 52, 64, 78, 92, 102, 112, 122, 134, 140, 142, 144,
 };
 static const uint8_t adv_assets_static_icon_spirit__p0_data[] = {

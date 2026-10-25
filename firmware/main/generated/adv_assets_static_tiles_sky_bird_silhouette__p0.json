@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_sky_bird_silhouette__p0",
   "width": 32,
   "height": 32,
@@ -13,12 +13,12 @@
     0
   ],
   "data_bytes": 156,
-  "table_bytes": 138,
+  "table_bytes": 72,
   "frame_sha256": [
     "e8291e963e7cdbfa376c517b18d47a7da9484ca4ce964a420f03eb7ee557d68e"
   ],
   "source_sha256": [
-    "7212dde37b96452b1956083d0bc3b446875aafdb91587ed77763642ad6157e56"
+    "730e3c16c38bf612c82ba039e68bb7d18486f593ff1549285b9b498d04f245bd"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -31,7 +31,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\sky\\bird-silhouette.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/sky/bird-silhouette.png",
       "sha256": "7212dde37b96452b1956083d0bc3b446875aafdb91587ed77763642ad6157e56"
     }
   ],

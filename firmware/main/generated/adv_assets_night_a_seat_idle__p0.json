@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_night_a_seat_idle__p0",
   "width": 54,
   "height": 56,
@@ -82,7 +82,7 @@
     0
   ],
   "data_bytes": 7394,
-  "table_bytes": 1968,
+  "table_bytes": 1056,
   "frame_sha256": [
     "7817d2bcdb77960585275397a58ec260ddc571a87dad823667dfb57cf1ff89b0",
     "0d3ad4043a1eaeb4a3cf8c1610a1d4453269e549021ce337d68439014852a10c",
@@ -94,14 +94,14 @@
     "75652f2edf4cbb447de73da78ccacab614b0125700c0a176cd9209ccac73a6bc"
   ],
   "source_sha256": [
-    "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db",
-    "d67c5df4e4f5a38e91a39a8340ac20cc545a27fe2919445d32aa33876cf1b56b",
-    "666e5d7263e3fa6da1c63c1ae9e19c5c83282032bbb1b4523d6e0ab44107d6e4",
-    "d67c5df4e4f5a38e91a39a8340ac20cc545a27fe2919445d32aa33876cf1b56b",
-    "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db",
-    "9a53e402e60c309975b2f69ab69453bc574fc7728e594321b017ee1dc63a414d",
-    "de7d032027b10eec81676d30e8f139d6cef2c9cbdd6a09bf21d38d9030dcde82",
-    "9a53e402e60c309975b2f69ab69453bc574fc7728e594321b017ee1dc63a414d"
+    "a9011f4699304435e99c8ddcfe997d130a1438d6bdf1617ea4605e156fbcb5da",
+    "ded4a2179a5091f6c7f04c006677e871931ea3450d044595cd2720ee973e8d31",
+    "631f1615b0d4467251da892df364097461e607a04df4d7605e0be46087f3fa23",
+    "ded4a2179a5091f6c7f04c006677e871931ea3450d044595cd2720ee973e8d31",
+    "a9011f4699304435e99c8ddcfe997d130a1438d6bdf1617ea4605e156fbcb5da",
+    "fa29a8253f598727639e3a529d79e731d31cac7bb15d4e268ef4fb546571bbb8",
+    "9f79fb63bb4a46e67f672e97ee195fbe0a176eb3a88a449fa547fb9dcf7821fc",
+    "fa29a8253f598727639e3a529d79e731d31cac7bb15d4e268ef4fb546571bbb8"
   ],
   "verified_frames": 8,
   "comparison": "lossless after shared RGB565 quantization",
@@ -114,35 +114,35 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_a\\seat_idle\\000.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_a/seat_idle/000.png",
       "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_a\\seat_idle\\001.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_a/seat_idle/001.png",
       "sha256": "d67c5df4e4f5a38e91a39a8340ac20cc545a27fe2919445d32aa33876cf1b56b"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_a\\seat_idle\\002.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_a/seat_idle/002.png",
       "sha256": "666e5d7263e3fa6da1c63c1ae9e19c5c83282032bbb1b4523d6e0ab44107d6e4"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_a\\seat_idle\\003.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_a/seat_idle/003.png",
       "sha256": "d67c5df4e4f5a38e91a39a8340ac20cc545a27fe2919445d32aa33876cf1b56b"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_a\\seat_idle\\004.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_a/seat_idle/004.png",
       "sha256": "3e134f3dc245ddac7161969ed34ffe9399eafff807040b315b07170c055044db"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_a\\seat_idle\\005.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_a/seat_idle/005.png",
       "sha256": "9a53e402e60c309975b2f69ab69453bc574fc7728e594321b017ee1dc63a414d"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_a\\seat_idle\\006.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_a/seat_idle/006.png",
       "sha256": "de7d032027b10eec81676d30e8f139d6cef2c9cbdd6a09bf21d38d9030dcde82"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_a\\seat_idle\\007.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_a/seat_idle/007.png",
       "sha256": "9a53e402e60c309975b2f69ab69453bc574fc7728e594321b017ee1dc63a414d"
     }
   ],

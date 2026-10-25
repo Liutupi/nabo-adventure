@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_mountain_ridge__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_mountain_ridge__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_mountain_ridge__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_mountain_ridge__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 16, 24, 30, 38, 44, 56, 68, 82, 98, 116, 134, 154, 174, 184,
     194, 204, 214, 224, 234, 244, 254, 264, 270, 272, 274, 276, 278,
 };

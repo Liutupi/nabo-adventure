@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_space_asteroid__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_space_asteroid__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_space_asteroid__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_space_asteroid__p0_rows[] = {
     0, 2, 4, 6, 8, 14, 24, 34, 48, 62, 80, 98, 116, 134, 152, 170, 188, 202, 212, 226,
     244, 261, 278, 299, 325, 346, 360, 370, 380, 390, 396, 398, 400,
 };

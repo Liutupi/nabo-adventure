@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_harbor_mooring_post__p0_palette[] 
 static const uint16_t adv_assets_static_tiles_harbor_mooring_post__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_harbor_mooring_post__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_harbor_mooring_post__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 16, 26, 36, 46, 56, 66, 80, 90, 100, 114, 124, 141, 151, 168,
     178, 191, 201, 211, 225, 239, 253, 263, 273, 283, 289, 291, 293,
 };

@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_game_post_props_carriage__p0",
   "width": 64,
   "height": 48,
@@ -16,12 +16,12 @@
     0
   ],
   "data_bytes": 592,
-  "table_bytes": 208,
+  "table_bytes": 110,
   "frame_sha256": [
     "a23403a1bc34d31c14a6ee29f80441587f50d1c9c42a89407df39e319b6d9151"
   ],
   "source_sha256": [
-    "2f2290fa8c044a1a41401e9edf3707b56351966fe4f058fa1151a073bf9e37a0"
+    "112bdf1e13db1faf353309e4ae39291ff24ad11739cc64493a7b264dcc0a04c7"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\carriage.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/carriage.png",
       "sha256": "2f2290fa8c044a1a41401e9edf3707b56351966fe4f058fa1151a073bf9e37a0"
     }
   ],

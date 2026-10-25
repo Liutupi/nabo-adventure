@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_night_forest_branch__p0",
   "width": 32,
   "height": 32,
@@ -15,12 +15,12 @@
     0
   ],
   "data_bytes": 315,
-  "table_bytes": 142,
+  "table_bytes": 76,
   "frame_sha256": [
     "09588652b1c489fca7a020b69e077e6a96b52914d24480f8a2dbdb4319151910"
   ],
   "source_sha256": [
-    "51059893db783042dd154b49336026d9b771f642d2b5fef1f88f70847d0aa03b"
+    "90ccbdde979d92d9a08815afa0c6b8f91d116ebce79a3cad1bc3cbd153eebb79"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\night-forest\\branch.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/night-forest/branch.png",
       "sha256": "51059893db783042dd154b49336026d9b771f642d2b5fef1f88f70847d0aa03b"
     }
   ],

@@ -9,7 +9,7 @@ static const uint16_t adv_assets_post_b_idle__p0_palette[] = {
 static const uint16_t adv_assets_post_b_idle__p0_keys[] = {
     0, 0, 0, 0, 0, 0,
 };
-static const uint32_t adv_assets_post_b_idle__p0_rows[] = {
+static const uint16_t adv_assets_post_b_idle__p0_rows[] = {
     0, 9, 23, 41, 62, 84, 108, 133, 158, 185, 212, 240, 268, 297, 327, 356, 385, 413, 440, 466,
     490, 511, 529, 539, 553, 566, 583, 601, 621, 642, 664, 687, 710, 734, 759, 785, 810, 837, 863, 888,
     910, 910, 912, 914, 916, 918, 920, 922, 924, 926, 928, 930, 932, 934, 936, 938, 940, 942, 944, 946,

@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_night_b_cheer__p0",
   "width": 52,
   "height": 72,
@@ -80,7 +80,7 @@
     2
   ],
   "data_bytes": 19479,
-  "table_bytes": 2476,
+  "table_bytes": 1308,
   "frame_sha256": [
     "a443231430de0910d7f67f6c7c760615344f6866f5258958fab0d727e8909728",
     "09f0d5f90365d42726571d9e169b3f5f2c642f019fcc9d64b8337870ddc86629",
@@ -92,14 +92,14 @@
     "a443231430de0910d7f67f6c7c760615344f6866f5258958fab0d727e8909728"
   ],
   "source_sha256": [
-    "92d0612ac16c19249141091b2949bb9c4233cb3dd124b755a804ea171099b2a6",
-    "7e475f8e2a5f0360262cb700ffb4a29bdebdd20ac503c59b4ded4ea8acc1c14a",
-    "61e03ab8af8f9b5fde4515ae4846a8b67a5458d7f698c41b480e8f096d942a55",
-    "af63e7c954e285b98dcf543152613d6f90355e5c73f3921d54fa9f0f686132ed",
-    "309f4d1390a89ec5040f00563a601c0c1bb4ec5af3ad6298a00fabc87dd5d664",
-    "8d2ba089cdfaa67d3c15f85a2759ea26110fdb07933cacf9f6dda161737f5b68",
-    "a9f7b755d757da9d16ab65f4aab9869887eb7bdf9147cf8388002cec47958ca1",
-    "92d0612ac16c19249141091b2949bb9c4233cb3dd124b755a804ea171099b2a6"
+    "9f77ec67646530ced3dd9b039b73b7fc89daa4cd43fc2da8f7bd6605ecb383a1",
+    "d2cea1d60f6b6509b91297a5d0c6e5a138f1b5ca6500f5473efd738b7d512688",
+    "16a911f068e50182fe2eb7c7d853546228a2fe5b81f23a5a15647b4e07c1b916",
+    "72f0dbe177c86bd8985b0dfeeab85e4e73e5bdc57a762e3ad9433c18bc89629c",
+    "77557805561c5d0069dcb0d3165093fb38f55a337ab931d23a43e17fabcffc0a",
+    "15f9340716a85d3c061a66700a6504859e1e45b79456b8a33385bd8c059021ee",
+    "d821d5dcb8c628943e9d18870512c43e721d47b0857b9e35ffec8696773a52f1",
+    "9f77ec67646530ced3dd9b039b73b7fc89daa4cd43fc2da8f7bd6605ecb383a1"
   ],
   "verified_frames": 8,
   "comparison": "lossless after shared RGB565 quantization",
@@ -112,35 +112,35 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\000.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_b/cheer/000.png",
       "sha256": "92d0612ac16c19249141091b2949bb9c4233cb3dd124b755a804ea171099b2a6"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\001.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_b/cheer/001.png",
       "sha256": "7e475f8e2a5f0360262cb700ffb4a29bdebdd20ac503c59b4ded4ea8acc1c14a"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\002.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_b/cheer/002.png",
       "sha256": "61e03ab8af8f9b5fde4515ae4846a8b67a5458d7f698c41b480e8f096d942a55"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\003.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_b/cheer/003.png",
       "sha256": "af63e7c954e285b98dcf543152613d6f90355e5c73f3921d54fa9f0f686132ed"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\004.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_b/cheer/004.png",
       "sha256": "309f4d1390a89ec5040f00563a601c0c1bb4ec5af3ad6298a00fabc87dd5d664"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\005.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_b/cheer/005.png",
       "sha256": "8d2ba089cdfaa67d3c15f85a2759ea26110fdb07933cacf9f6dda161737f5b68"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\006.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_b/cheer/006.png",
       "sha256": "a9f7b755d757da9d16ab65f4aab9869887eb7bdf9147cf8388002cec47958ca1"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\cheer\\007.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_b/cheer/007.png",
       "sha256": "92d0612ac16c19249141091b2949bb9c4233cb3dd124b755a804ea171099b2a6"
     }
   ],

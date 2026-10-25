@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_ski_small_spruce__p0",
   "width": 32,
   "height": 32,
@@ -16,12 +16,12 @@
     0
   ],
   "data_bytes": 287,
-  "table_bytes": 144,
+  "table_bytes": 78,
   "frame_sha256": [
     "8188e36a3dfd0e8ff135e7d7142500ba62fcbb7f27e9401d5487bdd8673dba6d"
   ],
   "source_sha256": [
-    "63eb3ddf8e8865f24445732cc82f4fdd27fdd49de5360c3f1461b609e7c226cd"
+    "2d01aee90978ee99bc4f169e2e59e2a12c578b770a1affab43f694ff50a89710"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\ski\\small-spruce.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/ski/small-spruce.png",
       "sha256": "63eb3ddf8e8865f24445732cc82f4fdd27fdd49de5360c3f1461b609e7c226cd"
     }
   ],

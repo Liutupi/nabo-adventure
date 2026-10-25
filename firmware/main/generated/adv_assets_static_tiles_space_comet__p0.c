@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_space_comet__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_space_comet__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_space_comet__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_space_comet__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 16, 22, 28, 37, 47, 58, 69, 81, 94, 108, 122, 136, 150, 164,
     178, 192, 208, 224, 238, 252, 265, 275, 285, 295, 305, 311, 313,
 };

@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_town_flowerbed__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_town_flowerbed__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_town_flowerbed__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_town_flowerbed__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 30, 40, 54, 78, 104, 131, 159,
     184, 202, 216, 230, 248, 270, 280, 290, 300, 310, 316, 318, 320,
 };

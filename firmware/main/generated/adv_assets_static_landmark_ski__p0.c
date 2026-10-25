@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_landmark_ski__p0_palette[] = {
 static const uint16_t adv_assets_static_landmark_ski__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_landmark_ski__p0_rows[] = {
+static const uint16_t adv_assets_static_landmark_ski__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 38, 48, 58, 68, 78,
     84, 90, 104, 118, 132, 146, 160, 174, 188, 202, 216, 230, 244, 258, 272, 286, 300, 318, 336, 346,
     363, 377, 395, 413, 439, 461, 487, 517, 547, 581, 615, 649, 683, 717, 751, 785, 819, 853, 887, 921,

@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_landmark_night__p0_palette[] = {
 static const uint16_t adv_assets_static_landmark_night__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_landmark_night__p0_rows[] = {
+static const uint16_t adv_assets_static_landmark_night__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 16, 22, 28, 38, 48, 58, 68, 78, 88, 98, 108, 118, 128, 138,
     148, 162, 195, 228, 261, 294, 324, 334, 340, 346, 352, 362, 372, 382, 396, 414, 432, 450, 468, 486,
     504, 522, 548, 570, 599, 629, 655, 681, 707, 729, 747, 765, 783, 801, 819, 837, 855, 877, 899, 921,

@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_post_b_delivered__p0",
   "width": 36,
   "height": 40,
@@ -78,7 +78,7 @@
     0
   ],
   "data_bytes": 2446,
-  "table_bytes": 1120,
+  "table_bytes": 628,
   "frame_sha256": [
     "7dfc4d77bed313bfe515d83f7e430d89e4cee4f30512deef39ddc6c0311784de",
     "c259fb65da5d4dc3d3637d11b544869fc2f686a7200615c1836f22d807001502",
@@ -88,12 +88,12 @@
     "7dfc4d77bed313bfe515d83f7e430d89e4cee4f30512deef39ddc6c0311784de"
   ],
   "source_sha256": [
-    "74a1dabc62b05ea29a5f6102a3c11ad8942e041d60930532e8a729f9eb6aaa58",
-    "2305d9401b0e056e8fe7aac8993c325eaee31f7f58b4a22f4fefe5d966cef2a0",
-    "3d1b4247ac8c134e387cb5282b743e35887b3976eee4be77f58c9fe29f903419",
-    "0a50965f9263199ef1b4c99bdda2454650aaba2e7a8147fd53a8b57b8e63de71",
-    "f52676944ae55ae1580939f0e550d75227124e824d310f41e75563393449c1a2",
-    "74a1dabc62b05ea29a5f6102a3c11ad8942e041d60930532e8a729f9eb6aaa58"
+    "6c21104a4301d5d3d2b443c3ec5a573bac431554bb510826d2057b31ef6a26b2",
+    "94e1d559c377b445b5ec354a058b00efec946c398ed60e28dc45ac113269ff49",
+    "5f5b4202fb31b1a94dac43ae13bbb416f545ec4e9c49e95ff12ce05732259469",
+    "273f5d71059a067fae3d1ee45d9a404172740b0534a6b53b5869f81902f96ca8",
+    "b4ea097d119ee0e5b5c5e44ca2929ce4e4506109a9994ffdcc06fe3ccd6d5444",
+    "6c21104a4301d5d3d2b443c3ec5a573bac431554bb510826d2057b31ef6a26b2"
   ],
   "verified_frames": 6,
   "comparison": "lossless after shared RGB565 quantization",
@@ -106,27 +106,27 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_b\\delivered\\000.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/post/runtime/post_b/delivered/000.png",
       "sha256": "74a1dabc62b05ea29a5f6102a3c11ad8942e041d60930532e8a729f9eb6aaa58"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_b\\delivered\\001.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/post/runtime/post_b/delivered/001.png",
       "sha256": "2305d9401b0e056e8fe7aac8993c325eaee31f7f58b4a22f4fefe5d966cef2a0"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_b\\delivered\\002.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/post/runtime/post_b/delivered/002.png",
       "sha256": "3d1b4247ac8c134e387cb5282b743e35887b3976eee4be77f58c9fe29f903419"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_b\\delivered\\003.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/post/runtime/post_b/delivered/003.png",
       "sha256": "0a50965f9263199ef1b4c99bdda2454650aaba2e7a8147fd53a8b57b8e63de71"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_b\\delivered\\004.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/post/runtime/post_b/delivered/004.png",
       "sha256": "f52676944ae55ae1580939f0e550d75227124e824d310f41e75563393449c1a2"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_b\\delivered\\005.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/post/runtime/post_b/delivered/005.png",
       "sha256": "74a1dabc62b05ea29a5f6102a3c11ad8942e041d60930532e8a729f9eb6aaa58"
     }
   ],

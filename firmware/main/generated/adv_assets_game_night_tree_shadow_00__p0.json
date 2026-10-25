@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_game_night_tree_shadow_00__p0",
   "width": 32,
   "height": 32,
@@ -15,12 +15,12 @@
     0
   ],
   "data_bytes": 278,
-  "table_bytes": 142,
+  "table_bytes": 76,
   "frame_sha256": [
     "43e77e39327c968ed2f96ebf418c5018ee2e766ec3b56154512bc57c78518331"
   ],
   "source_sha256": [
-    "f2c1256abc58f1009ca28cdd096a1e6761182e36b62450cb1cc1af1234b04256"
+    "fbec5c92fa3882b18d227a23325e3c1763e37f426e722d3152e1d6d8317fa16e"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\night\\tiles\\tree_shadow_00.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/night/tiles/tree_shadow_00.png",
       "sha256": "f2c1256abc58f1009ca28cdd096a1e6761182e36b62450cb1cc1af1234b04256"
     }
   ],

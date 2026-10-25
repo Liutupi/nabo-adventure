@@ -6,7 +6,7 @@ static const uint16_t adv_assets_game_post_props_sheep__p0_palette[] = {
 static const uint16_t adv_assets_game_post_props_sheep__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_game_post_props_sheep__p0_rows[] = {
+static const uint16_t adv_assets_game_post_props_sheep__p0_rows[] = {
     0, 2, 4, 10, 20, 34, 52, 70, 88, 110, 135, 155, 185, 213, 241, 259, 273, 287, 301, 315,
     329, 343, 357, 367, 377, 387, 397, 407, 417, 419, 421, 423, 425,
 };

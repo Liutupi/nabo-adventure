@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_stamp_kiosk__p0_palette[] = {
 static const uint16_t adv_assets_static_stamp_kiosk__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_stamp_kiosk__p0_rows[] = {
+static const uint16_t adv_assets_static_stamp_kiosk__p0_rows[] = {
     0, 2, 4, 6, 12, 18, 28, 38, 52, 70, 88, 106, 124, 142, 160, 178, 196, 214, 232, 250,
     268, 286, 304, 322, 340, 358, 376, 394, 412, 430, 456, 482, 516, 550, 584, 618, 648, 678, 708, 742,
     784, 826, 868, 910, 952, 994, 1036, 1086, 1136, 1186, 1236, 1286, 1328, 1366, 1404, 1442, 1480, 1514, 1544, 1578,

@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_game_post_props_envelope_blue__p0",
   "width": 32,
   "height": 24,
@@ -15,12 +15,12 @@
     0
   ],
   "data_bytes": 288,
-  "table_bytes": 110,
+  "table_bytes": 60,
   "frame_sha256": [
     "414060d00c485d43ffa4465764c3c34d4fd48001339c78d35c80c1301d0dca44"
   ],
   "source_sha256": [
-    "cd406f8bf8209c479d0d9ec0e8b6649af439abafb79ff6380e4b830dd4443610"
+    "4ef132a25d3aa69be13b740de46f3adbe30232eb89234822eb3555dd9ff9dcf3"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\envelope-blue.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/envelope-blue.png",
       "sha256": "cd406f8bf8209c479d0d9ec0e8b6649af439abafb79ff6380e4b830dd4443610"
     }
   ],

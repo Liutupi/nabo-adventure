@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_deep_sea_coral_fan__p0_palette[] =
 static const uint16_t adv_assets_static_tiles_deep_sea_coral_fan__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_deep_sea_coral_fan__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_deep_sea_coral_fan__p0_rows[] = {
     0, 2, 4, 6, 16, 26, 51, 76, 101, 126, 148, 170, 192, 222, 253, 284, 313, 339, 361, 384,
     406, 424, 441, 455, 465, 475, 485, 495, 505, 515, 521, 527, 529,
 };

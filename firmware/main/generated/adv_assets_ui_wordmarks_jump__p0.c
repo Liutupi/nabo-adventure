@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_wordmarks_jump__p0_palette[] = {
 static const uint16_t adv_assets_ui_wordmarks_jump__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_wordmarks_jump__p0_rows[] = {
+static const uint16_t adv_assets_ui_wordmarks_jump__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 34, 60, 94, 128, 178, 228, 284, 332, 362, 392, 434,
     478, 528, 574, 616, 662, 712, 768, 816, 866, 912, 958, 1004, 1042, 1074, 1084, 1086, 1088, 1090, 1092, 1094,
     1096, 1098, 1100, 1102, 1104, 1106, 1108, 1110, 1112, 1114, 1116, 1118, 1158, 1198, 1242, 1282, 1329, 1370, 1408, 1454,

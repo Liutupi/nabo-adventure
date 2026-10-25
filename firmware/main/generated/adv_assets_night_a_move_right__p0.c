@@ -9,7 +9,7 @@ static const uint16_t adv_assets_night_a_move_right__p0_palette[] = {
 static const uint16_t adv_assets_night_a_move_right__p0_keys[] = {
     0, 1, 1, 3,
 };
-static const uint32_t adv_assets_night_a_move_right__p0_rows[] = {
+static const uint16_t adv_assets_night_a_move_right__p0_rows[] = {
     0, 6, 21, 40, 63, 87, 113, 141, 170, 200, 229, 260, 292, 324, 357, 390, 424, 458, 492, 526,
     559, 591, 621, 650, 677, 701, 722, 740, 751, 765, 780, 800, 822, 846, 870, 896, 922, 950, 978, 1008,
     1038, 1070, 1103, 1137, 1171, 1203, 1244, 1281, 1318, 1358, 1398, 1436, 1473, 1506, 1536, 1560, 1572, 1572, 1583, 1599,

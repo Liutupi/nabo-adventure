@@ -6,7 +6,7 @@ static const uint16_t adv_assets_game_night_tree_shadow_03__p0_palette[] = {
 static const uint16_t adv_assets_game_night_tree_shadow_03__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_game_night_tree_shadow_03__p0_rows[] = {
+static const uint16_t adv_assets_game_night_tree_shadow_03__p0_rows[] = {
     0, 6, 16, 26, 40, 54, 66, 78, 90, 94, 98, 102, 104, 108, 112, 124, 140, 162, 178, 190,
     198, 206, 214, 224, 234, 240, 246, 252, 258, 264, 270, 276, 282,
 };

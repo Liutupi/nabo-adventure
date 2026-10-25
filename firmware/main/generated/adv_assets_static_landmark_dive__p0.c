@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_landmark_dive__p0_palette[] = {
 static const uint16_t adv_assets_static_landmark_dive__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_landmark_dive__p0_rows[] = {
+static const uint16_t adv_assets_static_landmark_dive__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 20, 26, 32, 42, 52, 62, 72, 82, 92, 102, 112, 122,
     128, 134, 144, 154, 164, 170, 176, 182, 192, 202, 212, 230, 248, 270, 296, 318, 340, 362, 378, 394,
     410, 430, 450, 470, 494, 518, 550, 586, 624, 658, 696, 734, 774, 810, 840, 874, 902, 930, 958, 986,

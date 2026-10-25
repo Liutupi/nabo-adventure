@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_numbers_20_8__p0_palette[] = {
 static const uint16_t adv_assets_ui_numbers_20_8__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_numbers_20_8__p0_rows[] = {
+static const uint16_t adv_assets_ui_numbers_20_8__p0_rows[] = {
     0, 10, 20, 28, 40, 56, 70, 86, 100, 110, 118, 130, 144, 158, 172, 188, 200, 210, 220, 230,
     232,
 };

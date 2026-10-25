@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_post_a_settlement_cheer__p0",
   "width": 49,
   "height": 72,
@@ -81,7 +81,7 @@
     6
   ],
   "data_bytes": 13610,
-  "table_bytes": 2478,
+  "table_bytes": 1310,
   "frame_sha256": [
     "21c15e4dead03bda24853fc0abd562baf7e12b5b869201a68f10772090ad0ef3",
     "a297a195bd23bfab29088c11071497ebfe8b702823fedde49e2f4c3d73fba27f",
@@ -93,14 +93,14 @@
     "21c15e4dead03bda24853fc0abd562baf7e12b5b869201a68f10772090ad0ef3"
   ],
   "source_sha256": [
-    "cc048b44337ee06ed6f3bd15c925ca959a40c86cd363cc1cfe5ab2812da2c022",
-    "afffad660bc57ceb4eecae1d0853c057d0ff00c4407c5eae3eb3ba34b78a9381",
-    "ebb988f495afa5c8a041f912cf8927799193ce813a55db8c6b4a0f80a60d1e7b",
-    "08918f951b7e449ce8c350981453c68f552ed0fcec68f5b7069a2987408050a0",
-    "6f8548beab5290dc1b039ff4d19395606f6ba1a3305222eaf2d37705261bb7ad",
-    "5ebb38ecd0f16d7b20f2abf79d04352048810b08667151f5b4f010790a6167f5",
-    "290609bd33ff2af4c2cfdf7c04cac9b411f593c00ad52ef31199e2a2542d223a",
-    "cc048b44337ee06ed6f3bd15c925ca959a40c86cd363cc1cfe5ab2812da2c022"
+    "9bdb6abdf6b326c4e7ad1299d0c3758ae73ebe7a55729891e61c1efdbf23ed9a",
+    "e6c76159a54b13123875ba73ad2e4292603ec2b6f00df0c2c456b792a3e52aab",
+    "766ef503ec982ab39290677aabda06361f420145081f35496f6069baa74cedbf",
+    "a7929d09ad5e8cbdfa42cd6bcdf7b26f5e64ea621413c818183103cb625dc760",
+    "31f17841b700cd0017383f0626ad81cb3da3179cb72ff90dbfd2562bd25ce1b3",
+    "3fe73e5143092173d5013cf769309dc8e2e2ccd90f0d257181067db823ce25a8",
+    "76a849659530a63180dd1b0fd92e902a8a1c7589a4d11365cd4ac610362e7d9f",
+    "9bdb6abdf6b326c4e7ad1299d0c3758ae73ebe7a55729891e61c1efdbf23ed9a"
   ],
   "verified_frames": 8,
   "comparison": "lossless after shared RGB565 quantization",
@@ -113,35 +113,35 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\settlement_cheer\\000.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/post/runtime/post_a/settlement_cheer/000.png",
       "sha256": "cc048b44337ee06ed6f3bd15c925ca959a40c86cd363cc1cfe5ab2812da2c022"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\settlement_cheer\\001.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/post/runtime/post_a/settlement_cheer/001.png",
       "sha256": "afffad660bc57ceb4eecae1d0853c057d0ff00c4407c5eae3eb3ba34b78a9381"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\settlement_cheer\\002.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/post/runtime/post_a/settlement_cheer/002.png",
       "sha256": "ebb988f495afa5c8a041f912cf8927799193ce813a55db8c6b4a0f80a60d1e7b"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\settlement_cheer\\003.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/post/runtime/post_a/settlement_cheer/003.png",
       "sha256": "08918f951b7e449ce8c350981453c68f552ed0fcec68f5b7069a2987408050a0"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\settlement_cheer\\004.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/post/runtime/post_a/settlement_cheer/004.png",
       "sha256": "6f8548beab5290dc1b039ff4d19395606f6ba1a3305222eaf2d37705261bb7ad"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\settlement_cheer\\005.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/post/runtime/post_a/settlement_cheer/005.png",
       "sha256": "5ebb38ecd0f16d7b20f2abf79d04352048810b08667151f5b4f010790a6167f5"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\settlement_cheer\\006.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/post/runtime/post_a/settlement_cheer/006.png",
       "sha256": "290609bd33ff2af4c2cfdf7c04cac9b411f593c00ad52ef31199e2a2542d223a"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\settlement_cheer\\007.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/post/runtime/post_a/settlement_cheer/007.png",
       "sha256": "cc048b44337ee06ed6f3bd15c925ca959a40c86cd363cc1cfe5ab2812da2c022"
     }
   ],

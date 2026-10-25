@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_resources_icons_oxygen__p0_palette[] = {
 static const uint16_t adv_assets_ui_resources_icons_oxygen__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_resources_icons_oxygen__p0_rows[] = {
+static const uint16_t adv_assets_ui_resources_icons_oxygen__p0_rows[] = {
     0, 6, 12, 18, 24, 30, 40, 54, 68, 82, 96, 110, 120, 130, 140, 146, 152,
 };
 static const uint8_t adv_assets_ui_resources_icons_oxygen__p0_data[] = {

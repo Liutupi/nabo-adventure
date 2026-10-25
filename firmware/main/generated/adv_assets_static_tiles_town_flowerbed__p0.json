@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_town_flowerbed__p0",
   "width": 32,
   "height": 32,
@@ -18,12 +18,12 @@
     0
   ],
   "data_bytes": 320,
-  "table_bytes": 148,
+  "table_bytes": 82,
   "frame_sha256": [
     "f25a83d9236b918d096ce07658bdb4b9bbbc1a6179d69f1a54cbc843517d464f"
   ],
   "source_sha256": [
-    "a0e603e41fcf5289f38b4f28d8778cb1316ed42af415251d851da4e39a93e38d"
+    "fde9ce324d994c66cba452d5b06fc161e0812a47fce606a5d23bff4598b871ae"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -36,7 +36,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\town\\flowerbed.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/town/flowerbed.png",
       "sha256": "a0e603e41fcf5289f38b4f28d8778cb1316ed42af415251d851da4e39a93e38d"
     }
   ],

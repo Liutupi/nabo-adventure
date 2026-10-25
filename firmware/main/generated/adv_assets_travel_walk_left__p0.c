@@ -9,7 +9,7 @@ static const uint16_t adv_assets_travel_walk_left__p0_palette[] = {
 static const uint16_t adv_assets_travel_walk_left__p0_keys[] = {
     0, 0, 0, 0, 0, 0, 0, 0,
 };
-static const uint32_t adv_assets_travel_walk_left__p0_rows[] = {
+static const uint16_t adv_assets_travel_walk_left__p0_rows[] = {
     0, 11, 26, 44, 64, 85, 106, 129, 153, 177, 201, 225, 249, 273, 297, 320, 341, 361, 378, 392,
     407, 424, 441, 459, 478, 498, 519, 541, 562, 585, 609, 633, 656, 679, 702, 723, 737, 754, 771, 788,
     806, 824, 842, 860, 879, 898, 920, 943, 963, 963, 974, 989, 1006, 1026, 1039, 1060, 1083, 1103, 1127, 1150,

@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_night_forest_mushrooms__p0",
   "width": 32,
   "height": 32,
@@ -15,12 +15,12 @@
     0
   ],
   "data_bytes": 348,
-  "table_bytes": 142,
+  "table_bytes": 76,
   "frame_sha256": [
     "735eb1e529dbadaec20495d97196fb255c85e1b2fbfe141c3799fa3bbc5c22bf"
   ],
   "source_sha256": [
-    "64d4cd3185035f67cc4ee697f7aa6b7be055175c9a3fdf03630af01b8732072e"
+    "34513a9b9c2ea8d2ad155c587107a214bacdc1993bcb222e50a1ea15a5a4f6eb"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\night-forest\\mushrooms.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/night-forest/mushrooms.png",
       "sha256": "64d4cd3185035f67cc4ee697f7aa6b7be055175c9a3fdf03630af01b8732072e"
     }
   ],

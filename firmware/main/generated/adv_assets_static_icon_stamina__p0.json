@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_icon_stamina__p0",
   "width": 16,
   "height": 16,
@@ -15,12 +15,12 @@
     0
   ],
   "data_bytes": 135,
-  "table_bytes": 78,
+  "table_bytes": 44,
   "frame_sha256": [
     "70ba66f6ae014443e22f982c60f913e338b81ba29e9f5c991e7bd5d2cf25641a"
   ],
   "source_sha256": [
-    "e0217a47fb71230d11e450493eca03c923f61fb74eed0a308e4a488088daeed0"
+    "d764e10e498647e6939adfcc78a37ca6c215bb2de89d0946d0085f22460ebb07"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\icons\\stamina.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/icons/stamina.png",
       "sha256": "e0217a47fb71230d11e450493eca03c923f61fb74eed0a308e4a488088daeed0"
     }
   ],

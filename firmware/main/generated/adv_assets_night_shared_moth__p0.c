@@ -6,7 +6,7 @@ static const uint16_t adv_assets_night_shared_moth__p0_palette[] = {
 static const uint16_t adv_assets_night_shared_moth__p0_keys[] = {
     0, 0, 2, 2,
 };
-static const uint32_t adv_assets_night_shared_moth__p0_rows[] = {
+static const uint16_t adv_assets_night_shared_moth__p0_rows[] = {
     0, 2, 4, 14, 30, 48, 62, 76, 90, 104, 118, 132, 146, 156, 162, 164, 166, 166, 168, 170,
     172, 182, 196, 210, 224, 238, 252, 266, 280, 294, 304, 306, 308, 310, 310, 312, 314, 324, 334, 344,
     356, 368, 380, 392, 404, 416, 426, 436, 442, 444, 446, 446, 448, 450, 452, 458, 472, 486, 500, 514,

@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_night_forest_fireflies__p0_palette
 static const uint16_t adv_assets_static_tiles_night_forest_fireflies__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_night_forest_fireflies__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_night_forest_fireflies__p0_rows[] = {
     0, 2, 4, 6, 8, 18, 28, 37, 47, 53, 67, 81, 90, 100, 106, 112, 118, 120, 122, 124,
     126, 128, 138, 148, 157, 167, 173, 179, 185, 187, 189, 191, 193,
 };

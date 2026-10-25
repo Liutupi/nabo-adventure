@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_night_forest_shrub__p0",
   "width": 32,
   "height": 32,
@@ -15,12 +15,12 @@
     0
   ],
   "data_bytes": 472,
-  "table_bytes": 142,
+  "table_bytes": 76,
   "frame_sha256": [
     "696400cd536c6b3020f930d0f84cc701d6d1e8783a920d6d7d9eb5e9ff877367"
   ],
   "source_sha256": [
-    "a852d0c7ce9aa1c9b3d21132da4b4a6395bb6a4c897437cc19da2af6f3e9b236"
+    "9651d11a82abeb0bf3524906632f10624e6998c3f6952a1ecac871ca774679f6"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\night-forest\\shrub.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/night-forest/shrub.png",
       "sha256": "a852d0c7ce9aa1c9b3d21132da4b4a6395bb6a4c897437cc19da2af6f3e9b236"
     }
   ],

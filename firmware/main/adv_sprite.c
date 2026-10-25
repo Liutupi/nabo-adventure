@@ -6,6 +6,7 @@ bool adv_sprite_frame_valid(const adv_sprite_t *s, unsigned frame)
         !s->width || s->width > ADV_SPRITE_MAX_SIDE ||
         !s->height || s->height > ADV_SPRITE_MAX_SIDE ||
         !s->palette_size || s->palette_size > 64 || frame >= s->frame_count ||
+        s->data_size > ADV_SPRITE_MAX_DATA ||
         s->row_count != (uint32_t)s->frame_count * (s->height + 1u)) return false;
     unsigned key = s->keys[frame];
     if (key > frame || frame - key >= ADV_SPRITE_KEY_INTERVAL || s->keys[key] != key) return false;

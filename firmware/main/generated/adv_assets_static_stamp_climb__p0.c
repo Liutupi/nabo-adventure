@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_stamp_climb__p0_palette[] = {
 static const uint16_t adv_assets_static_stamp_climb__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_stamp_climb__p0_rows[] = {
+static const uint16_t adv_assets_static_stamp_climb__p0_rows[] = {
     0, 2, 4, 6, 12, 18, 28, 38, 52, 70, 88, 106, 124, 142, 160, 178, 196, 214, 232, 250,
     268, 286, 304, 322, 344, 366, 392, 422, 448, 478, 500, 522, 544, 566, 588, 614, 640, 666, 692, 718,
     748, 784, 818, 852, 890, 924, 958, 1000, 1042, 1080, 1122, 1168, 1206, 1244, 1274, 1304, 1334, 1360, 1386, 1412,

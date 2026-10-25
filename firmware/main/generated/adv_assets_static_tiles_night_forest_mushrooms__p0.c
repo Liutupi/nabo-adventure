@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_night_forest_mushrooms__p0_palette
 static const uint16_t adv_assets_static_tiles_night_forest_mushrooms__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_night_forest_mushrooms__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_night_forest_mushrooms__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 22, 32, 42, 52, 66, 80, 94, 108, 118, 132, 152,
     172, 190, 212, 230, 248, 262, 280, 298, 316, 334, 344, 346, 348,
 };

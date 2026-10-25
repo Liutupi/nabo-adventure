@@ -9,7 +9,7 @@ static const uint16_t adv_assets_night_b_yawn__p0_palette[] = {
 static const uint16_t adv_assets_night_b_yawn__p0_keys[] = {
     0, 0, 0, 0, 0, 0,
 };
-static const uint32_t adv_assets_night_b_yawn__p0_rows[] = {
+static const uint16_t adv_assets_night_b_yawn__p0_rows[] = {
     0, 9, 24, 44, 66, 90, 116, 141, 170, 199, 230, 261, 292, 323, 355, 388, 422, 457, 490, 523,
     556, 588, 619, 648, 675, 699, 718, 735, 747, 765, 787, 809, 833, 859, 886, 914, 944, 976, 1008, 1042,
     1075, 1112, 1150, 1187, 1224, 1262, 1300, 1338, 1375, 1413, 1449, 1484, 1517, 1551, 1585, 1618, 1638, 1638, 1647, 1662,

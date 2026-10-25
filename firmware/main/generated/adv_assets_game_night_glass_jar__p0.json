@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_game_night_glass_jar__p0",
   "width": 19,
   "height": 37,
@@ -16,12 +16,12 @@
     0
   ],
   "data_bytes": 381,
-  "table_bytes": 164,
+  "table_bytes": 88,
   "frame_sha256": [
     "dceb82d59e2dbae65745e34b8115656ca714eb961c04c52115d8a8494968de65"
   ],
   "source_sha256": [
-    "bf3863697df2f5d763634c550964c1082ce2b1a93bb31c85e5f7c35372a63640"
+    "1a657291b433c74e280285fe1fbcca6576e55f278919df74c85105001506cada"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\night\\props\\glass_jar.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/night/props/glass_jar.png",
       "sha256": "bf3863697df2f5d763634c550964c1082ce2b1a93bb31c85e5f7c35372a63640"
     }
   ],

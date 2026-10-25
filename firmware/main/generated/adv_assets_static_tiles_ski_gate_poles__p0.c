@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_ski_gate_poles__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_ski_gate_poles__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_ski_gate_poles__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_ski_gate_poles__p0_rows[] = {
     0, 2, 4, 6, 8, 18, 28, 38, 44, 58, 72, 86, 100, 114, 128, 142, 156, 170, 176, 186,
     196, 206, 216, 226, 236, 246, 256, 266, 276, 286, 296, 298, 300,
 };

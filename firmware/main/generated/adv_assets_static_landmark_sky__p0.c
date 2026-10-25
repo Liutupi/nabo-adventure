@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_landmark_sky__p0_palette[] = {
 static const uint16_t adv_assets_static_landmark_sky__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_landmark_sky__p0_rows[] = {
+static const uint16_t adv_assets_static_landmark_sky__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 18, 24, 30, 36, 58, 84, 110, 136, 162, 188, 214, 240, 266,
     292, 318, 344, 370, 396, 422, 448, 474, 500, 526, 552, 578, 604, 630, 656, 682, 708, 734, 760, 786,
     812, 838, 864, 890, 916, 942, 968, 994, 1020, 1026, 1032, 1042, 1052, 1062, 1080, 1098, 1116, 1134, 1152, 1170,

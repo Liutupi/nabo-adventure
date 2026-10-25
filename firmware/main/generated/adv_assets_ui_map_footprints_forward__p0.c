@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_map_footprints_forward__p0_palette[] = {
 static const uint16_t adv_assets_ui_map_footprints_forward__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_map_footprints_forward__p0_rows[] = {
+static const uint16_t adv_assets_ui_map_footprints_forward__p0_rows[] = {
     0, 6, 10, 14, 18, 24, 30, 36, 42, 48, 54,
 };
 static const uint8_t adv_assets_ui_map_footprints_forward__p0_data[] = {

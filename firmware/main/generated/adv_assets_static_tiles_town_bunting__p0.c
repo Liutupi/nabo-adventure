@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_town_bunting__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_town_bunting__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_town_bunting__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_town_bunting__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 24, 34, 48, 70, 96, 122, 147, 171, 194, 214, 231, 241,
     247, 249, 251, 253, 255, 257, 259, 261, 263, 265, 267, 269, 271,
 };

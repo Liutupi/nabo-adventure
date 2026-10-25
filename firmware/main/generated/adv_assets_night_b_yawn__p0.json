@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_night_b_yawn__p0",
   "width": 53,
   "height": 56,
@@ -80,7 +80,7 @@
     0
   ],
   "data_bytes": 7830,
-  "table_bytes": 1508,
+  "table_bytes": 824,
   "frame_sha256": [
     "dfe1ce1790c68b6ee0de29cd93bd20d926756f3724c0bb16e2dd154df1ef32d6",
     "77bd4b0aa9db717118aa81e301a479f008e672facd033fe314def30c1514cee3",
@@ -90,12 +90,12 @@
     "dfe1ce1790c68b6ee0de29cd93bd20d926756f3724c0bb16e2dd154df1ef32d6"
   ],
   "source_sha256": [
-    "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4",
-    "ab4c49c1dbaaa601f13c40711fe6fcaa5237e8e7f9bd451de10e0b4d220deb77",
-    "b2daaf812accfd5e845cd1847ad246f0797aeddfeebc96703716686904b672db",
-    "9edc9be6406b2994e65f99fa01bc9520766088c3bec113db59c631496267f079",
-    "c5188dc123d02050d00644cf1119907805083844e672c59df8ab833589c57201",
-    "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
+    "dae50e593686a5128f4a834cf7e04b0bb009ecb5af5008d9c51bf9426086ea59",
+    "27206ef43d30ffb1eece4e809a966319f06e61f970ab892782af30e52a3fcf6a",
+    "327deadafec62936cfa7d989a7870af7aa40e1830521cca830fd6606c240235f",
+    "0b8b8b538a3cce010e40d498362ba71e00dc7c7fac2b6b1620ad1fd50ca433e9",
+    "d35e171a770b9d25c5113620996fc03458feb65b9f651579c0cc6c4f3ac258da",
+    "dae50e593686a5128f4a834cf7e04b0bb009ecb5af5008d9c51bf9426086ea59"
   ],
   "verified_frames": 6,
   "comparison": "lossless after shared RGB565 quantization",
@@ -108,27 +108,27 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\yawn\\000.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_b/yawn/000.png",
       "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\yawn\\001.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_b/yawn/001.png",
       "sha256": "ab4c49c1dbaaa601f13c40711fe6fcaa5237e8e7f9bd451de10e0b4d220deb77"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\yawn\\002.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_b/yawn/002.png",
       "sha256": "b2daaf812accfd5e845cd1847ad246f0797aeddfeebc96703716686904b672db"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\yawn\\003.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_b/yawn/003.png",
       "sha256": "9edc9be6406b2994e65f99fa01bc9520766088c3bec113db59c631496267f079"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\yawn\\004.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_b/yawn/004.png",
       "sha256": "c5188dc123d02050d00644cf1119907805083844e672c59df8ab833589c57201"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\night\\runtime\\night_b\\yawn\\005.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/night/runtime/night_b/yawn/005.png",
       "sha256": "2f8af553895cf1c369fa19593a550d8876331396073aea193b1808ea7649bcd4"
     }
   ],

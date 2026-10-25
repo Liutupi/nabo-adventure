@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_sky_feather__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_sky_feather__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_sky_feather__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_sky_feather__p0_rows[] = {
     0, 2, 4, 6, 12, 22, 32, 42, 52, 66, 80, 94, 108, 122, 136, 150, 164, 180, 196, 210,
     224, 238, 254, 270, 284, 297, 310, 320, 326, 332, 338, 340, 342,
 };

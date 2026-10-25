@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_rail_mail_sign__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_rail_mail_sign__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_rail_mail_sign__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_rail_mail_sign__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 16, 26, 36, 46, 60, 82, 108, 134, 160, 182, 200, 214, 224, 234,
     240, 250, 260, 270, 280, 290, 300, 310, 320, 330, 336, 338, 340,
 };

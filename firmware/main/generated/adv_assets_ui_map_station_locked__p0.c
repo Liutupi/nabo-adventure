@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_map_station_locked__p0_palette[] = {
 static const uint16_t adv_assets_ui_map_station_locked__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_map_station_locked__p0_rows[] = {
+static const uint16_t adv_assets_ui_map_station_locked__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 18, 24, 34, 44, 54, 64, 74, 84, 94, 104, 114, 124, 134,
     144, 154, 164, 178, 192, 206, 220, 234, 248, 258, 268, 274, 280, 286, 292, 298, 300, 302, 304, 306,
     308,

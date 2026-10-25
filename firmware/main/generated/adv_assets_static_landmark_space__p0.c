@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_landmark_space__p0_palette[] = {
 static const uint16_t adv_assets_static_landmark_space__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_landmark_space__p0_rows[] = {
+static const uint16_t adv_assets_static_landmark_space__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 20, 26, 32, 42, 52, 62, 72, 86, 100, 114, 128, 142,
     156, 170, 180, 190, 200, 206, 216, 230, 244, 262, 278, 294, 310, 330, 350, 368, 388, 412, 440, 470,
     500, 532, 562, 592, 620, 648, 676, 704, 732, 756, 776, 796, 816, 834, 850, 862, 874, 886, 902, 920,

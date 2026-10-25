@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_landmark_post__p0_palette[] = {
 static const uint16_t adv_assets_static_landmark_post__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_landmark_post__p0_rows[] = {
+static const uint16_t adv_assets_static_landmark_post__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 20, 26, 36, 46, 60, 78, 96, 118, 140, 162, 184, 206,
     228, 250, 272, 290, 308, 326, 352, 378, 400, 426, 448, 470, 488, 510, 536, 570, 608, 650, 692, 726,
     760, 794, 824, 854, 884, 914, 944, 974, 1012, 1034, 1056, 1082, 1112, 1138, 1164, 1194, 1220, 1238, 1260, 1278,

@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_landmark_space__p0",
   "width": 96,
   "height": 96,
@@ -21,12 +21,12 @@
     0
   ],
   "data_bytes": 1524,
-  "table_bytes": 410,
+  "table_bytes": 216,
   "frame_sha256": [
     "8ba5d0bb6d9c69fe09cc42dc5b350a4b79f1902e590bf66f8a809c3a98dd4b19"
   ],
   "source_sha256": [
-    "6764b4f23eb63172419a6d00ab004dfffff02bf0e6f316481c00ac07bebb8bd1"
+    "86ff668a79999b1f76dfd2863788e7d09442cb585548064cf3ca68aedb8544a5"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -39,7 +39,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\landmarks\\space.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/landmarks/space.png",
       "sha256": "6764b4f23eb63172419a6d00ab004dfffff02bf0e6f316481c00ac07bebb8bd1"
     }
   ],

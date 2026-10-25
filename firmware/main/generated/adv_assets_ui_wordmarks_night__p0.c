@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_wordmarks_night__p0_palette[] = {
 static const uint16_t adv_assets_ui_wordmarks_night__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_wordmarks_night__p0_rows[] = {
+static const uint16_t adv_assets_ui_wordmarks_night__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 30, 58, 82, 104, 130, 156, 190, 234, 276, 324, 382,
     438, 488, 522, 562, 598, 640, 674, 714, 756, 795, 833, 863, 895, 932, 942, 944, 946, 948, 950, 952,
     954, 956, 958, 960, 962, 964, 966, 968, 970, 972, 974, 976, 1020, 1060, 1108, 1152, 1188, 1230, 1280, 1330,

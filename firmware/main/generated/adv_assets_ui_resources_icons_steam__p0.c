@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_resources_icons_steam__p0_palette[] = {
 static const uint16_t adv_assets_ui_resources_icons_steam__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_resources_icons_steam__p0_rows[] = {
+static const uint16_t adv_assets_ui_resources_icons_steam__p0_rows[] = {
     0, 2, 16, 30, 44, 58, 72, 86, 100, 102, 104, 110, 116, 126, 136, 142, 148,
 };
 static const uint8_t adv_assets_ui_resources_icons_steam__p0_data[] = {

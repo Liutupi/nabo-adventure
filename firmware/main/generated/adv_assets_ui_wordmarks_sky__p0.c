@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_wordmarks_sky__p0_palette[] = {
 static const uint16_t adv_assets_ui_wordmarks_sky__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_wordmarks_sky__p0_rows[] = {
+static const uint16_t adv_assets_ui_wordmarks_sky__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 34, 66, 102, 136, 170, 201, 236, 280, 329, 381, 431,
     478, 529, 583, 634, 683, 729, 777, 821, 859, 913, 974, 1032, 1082, 1122, 1148, 1150, 1152, 1154, 1156, 1158,
     1160, 1162, 1164, 1166, 1168, 1170, 1172, 1174, 1176, 1178, 1180, 1182, 1217, 1249, 1284, 1312, 1340, 1364, 1388, 1418,

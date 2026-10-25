@@ -9,7 +9,7 @@ static const uint16_t adv_assets_travel_turn_left__p0_palette[] = {
 static const uint16_t adv_assets_travel_turn_left__p0_keys[] = {
     0, 0, 0, 0, 0, 0,
 };
-static const uint32_t adv_assets_travel_turn_left__p0_rows[] = {
+static const uint16_t adv_assets_travel_turn_left__p0_rows[] = {
     0, 8, 21, 38, 56, 76, 98, 120, 144, 168, 192, 216, 240, 264, 288, 312, 334, 354, 372, 386,
     400, 417, 434, 453, 471, 491, 512, 534, 557, 580, 604, 628, 651, 673, 696, 718, 732, 749, 764, 781,
     799, 816, 834, 854, 874, 893, 912, 934, 956, 956, 962, 974, 984, 1001, 1015, 1035, 1057, 1074, 1098, 1120,

@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_space_star_field__p0",
   "width": 32,
   "height": 32,
@@ -15,12 +15,12 @@
     0
   ],
   "data_bytes": 168,
-  "table_bytes": 142,
+  "table_bytes": 76,
   "frame_sha256": [
     "d20811cf49751711213312ef177002bd30fb0b685c3ac6908a09742600980c64"
   ],
   "source_sha256": [
-    "13b53ccfabcb3bd9762942ace7426c4785ea6ffb2be1529caa0bf40452d92c9a"
+    "ab6210ca9a60e13720c952ad7c16b32fed43e5a80970aa8b93ee9817223387fa"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\space\\star-field.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/space/star-field.png",
       "sha256": "13b53ccfabcb3bd9762942ace7426c4785ea6ffb2be1529caa0bf40452d92c9a"
     }
   ],

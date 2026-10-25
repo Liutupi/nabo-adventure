@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_passport_grid_current__p0_palette[] = {
 static const uint16_t adv_assets_ui_passport_grid_current__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_passport_grid_current__p0_rows[] = {
+static const uint16_t adv_assets_ui_passport_grid_current__p0_rows[] = {
     0, 6, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80,
     84, 88, 92, 96, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160,
     164, 168, 172, 176, 180, 184, 188, 192, 196, 200, 204, 210, 216,

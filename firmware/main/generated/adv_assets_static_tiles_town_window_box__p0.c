@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_town_window_box__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_town_window_box__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_town_window_box__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_town_window_box__p0_rows[] = {
     0, 2, 4, 6, 12, 22, 32, 50, 72, 94, 116, 138, 160, 182, 208, 232, 258, 284, 312, 341,
     369, 391, 407, 429, 447, 469, 479, 489, 499, 509, 515, 517, 519,
 };

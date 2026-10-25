@@ -6,7 +6,7 @@ static const uint16_t adv_assets_game_post_props_locomotive_body__p0_palette[] =
 static const uint16_t adv_assets_game_post_props_locomotive_body__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_game_post_props_locomotive_body__p0_rows[] = {
+static const uint16_t adv_assets_game_post_props_locomotive_body__p0_rows[] = {
     0, 2, 8, 14, 24, 34, 40, 46, 64, 74, 88, 102, 116, 130, 144, 162, 180, 198, 216, 234,
     252, 270, 292, 314, 336, 358, 384, 414, 444, 478, 512, 546, 572, 598, 620, 642, 664, 688, 712, 734,
     756, 778, 800, 822, 844, 866, 888, 910, 932, 954, 968, 982, 1004, 1026, 1048, 1074, 1100, 1130, 1156, 1178,

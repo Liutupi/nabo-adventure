@@ -6,7 +6,7 @@ static const uint16_t adv_assets_game_post_tiles_track_fork__p0_palette[] = {
 static const uint16_t adv_assets_game_post_tiles_track_fork__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_game_post_tiles_track_fork__p0_rows[] = {
+static const uint16_t adv_assets_game_post_tiles_track_fork__p0_rows[] = {
     0, 2, 4, 6, 8, 14, 23, 33, 41, 51, 63, 75, 91, 107, 121, 135, 149, 170, 192, 214,
     234, 256, 283, 311, 337, 359, 387, 415, 447, 483, 497, 503, 509, 543, 579, 613, 641, 671, 705, 735,
     763, 791, 797, 799, 801, 827, 853, 879, 881, 883, 885, 887, 889, 891, 893, 895, 897,

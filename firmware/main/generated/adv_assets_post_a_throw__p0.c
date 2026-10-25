@@ -9,7 +9,7 @@ static const uint16_t adv_assets_post_a_throw__p0_palette[] = {
 static const uint16_t adv_assets_post_a_throw__p0_keys[] = {
     0, 0, 0, 0, 0, 0,
 };
-static const uint32_t adv_assets_post_a_throw__p0_rows[] = {
+static const uint16_t adv_assets_post_a_throw__p0_rows[] = {
     0, 9, 23, 41, 62, 84, 108, 133, 158, 185, 212, 240, 268, 297, 327, 356, 385, 413, 440, 466,
     490, 511, 529, 539, 554, 567, 583, 602, 622, 643, 664, 687, 710, 732, 757, 781, 807, 830, 856, 881,
     911, 911, 913, 915, 917, 919, 921, 923, 925, 927, 929, 931, 933, 935, 937, 939, 941, 943, 945, 947,

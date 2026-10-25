@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_game_post_tiles_far_mountains__p0",
   "width": 96,
   "height": 32,
@@ -13,12 +13,12 @@
     0
   ],
   "data_bytes": 252,
-  "table_bytes": 138,
+  "table_bytes": 72,
   "frame_sha256": [
     "f1489c60fad32a931c8e9d25348a6e289030d12581d9a786c77e9a7efeb1b06b"
   ],
   "source_sha256": [
-    "0fae12484c1b5e3f8f233fa49d4cdbb6ba54328019b7cbab948027bd7823296d"
+    "d1f7d6f33da38f69cb626f6aecfaa796830b5f0cf8ae29825e81cabb555e870e"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -31,7 +31,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\tiles\\far-mountains.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/tiles/far-mountains.png",
       "sha256": "0fae12484c1b5e3f8f233fa49d4cdbb6ba54328019b7cbab948027bd7823296d"
     }
   ],

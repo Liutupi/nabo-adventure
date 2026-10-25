@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_wordmarks_ski__p0_palette[] = {
 static const uint16_t adv_assets_ui_wordmarks_ski__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_wordmarks_ski__p0_rows[] = {
+static const uint16_t adv_assets_ui_wordmarks_ski__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 30, 52, 76, 107, 136, 158, 193, 239, 280, 317, 347,
     377, 403, 421, 449, 470, 494, 525, 549, 574, 607, 639, 670, 698, 712, 714, 716, 718, 720, 722, 724,
     726, 728, 730, 732, 734, 736, 738, 740, 742, 744, 746, 748, 776, 804, 833, 857, 883, 905, 929, 959,

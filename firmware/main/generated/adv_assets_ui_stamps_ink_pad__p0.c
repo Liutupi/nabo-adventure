@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_stamps_ink_pad__p0_palette[] = {
 static const uint16_t adv_assets_ui_stamps_ink_pad__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_stamps_ink_pad__p0_rows[] = {
+static const uint16_t adv_assets_ui_stamps_ink_pad__p0_rows[] = {
     0, 2, 4, 10, 16, 22, 32, 42, 52, 62, 72, 82, 92, 102, 112, 122, 132, 142, 152, 162,
     172, 182, 192, 202, 212, 222, 232, 242, 252, 262, 272, 282, 292, 302, 312, 322, 332, 342, 352, 362,
     372, 382, 392, 402, 412, 422, 432, 442, 452, 462, 472, 482, 492, 502, 512, 522, 532, 542, 552, 562,

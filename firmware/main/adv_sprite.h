@@ -1,11 +1,13 @@
 #pragma once
 // Immutable flash-backed indexed sprites. Palette index 0 is transparent.
-// adv-row-rle-v2 also reads old v1 streams without changing this descriptor.
+// adv-row-rle-v3 (uint16 offsets) also reads v1 run-only and v2 literal rows.
 // A nonzero count is a legacy (count 1..255, index) run. A zero count escapes
 // (0, length 1..255, literal indices...). Row byte lengths may be odd.
 // Index 64 inherits the previous frame; index 0 explicitly clears a pixel.
 // Keyframes forbid inheritance. At most 7 delta frames follow a keyframe.
 // Rows decode without a framebuffer, allocation or mirroring.
+// adv-row-rle-v3 stores row offsets as uint16, so one sprite piece holds at most
+// 65535 data bytes; the packer rejects anything larger instead of truncating.
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -13,6 +15,7 @@
 #define ADV_SPRITE_MAX_SIDE 256
 #define ADV_SPRITE_KEY_INTERVAL 8
 #define ADV_SPRITE_INHERIT 64
+#define ADV_SPRITE_MAX_DATA 65535u
 
 #ifdef __cplusplus
 extern "C" {
@@ -23,7 +26,7 @@ typedef struct {
     uint32_t row_count, data_size;
     const uint16_t *palette;   // native RGB565, at most 64 entries
     const uint16_t *keys;      // frame -> nearest preceding keyframe
-    const uint32_t *rows;      // frame * (height + 1) + row -> data offset
+    const uint16_t *rows;      // frame * (height + 1) + row -> data offset
     const uint8_t *data;
 } adv_sprite_t;
 

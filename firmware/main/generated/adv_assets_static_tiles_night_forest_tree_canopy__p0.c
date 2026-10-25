@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_night_forest_tree_canopy__p0_palet
 static const uint16_t adv_assets_static_tiles_night_forest_tree_canopy__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_night_forest_tree_canopy__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_night_forest_tree_canopy__p0_rows[] = {
     0, 2, 4, 6, 12, 22, 32, 42, 52, 62, 72, 86, 100, 114, 128, 142, 156, 170, 183, 196,
     210, 224, 238, 252, 266, 276, 290, 304, 317, 327, 337, 343, 345,
 };

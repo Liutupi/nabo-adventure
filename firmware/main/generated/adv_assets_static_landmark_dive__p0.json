@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_landmark_dive__p0",
   "width": 96,
   "height": 96,
@@ -20,12 +20,12 @@
     0
   ],
   "data_bytes": 1524,
-  "table_bytes": 408,
+  "table_bytes": 214,
   "frame_sha256": [
     "a194523e92b0cb1a385ea7d0856dee1f34b0eee5d31ef2d954148aaf05cac5db"
   ],
   "source_sha256": [
-    "d341b383c9798d8769e9d094f4b6c29e13667f7a8d155122036e4cd5d0f76809"
+    "850f3e161a58a03e4b80e991029bc16ff1ace1941b0361d10357e747b0ccc5a7"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -38,7 +38,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\landmarks\\dive.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/landmarks/dive.png",
       "sha256": "d341b383c9798d8769e9d094f4b6c29e13667f7a8d155122036e4cd5d0f76809"
     }
   ],

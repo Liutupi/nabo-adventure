@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_rail_telegraph_pole__p0_palette[] 
 static const uint16_t adv_assets_static_tiles_rail_telegraph_pole__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_rail_telegraph_pole__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_rail_telegraph_pole__p0_rows[] = {
     0, 2, 4, 6, 12, 22, 38, 54, 72, 90, 108, 118, 128, 146, 164, 178, 192, 206, 216, 226,
     236, 246, 256, 266, 276, 286, 296, 306, 316, 326, 336, 342, 344,
 };

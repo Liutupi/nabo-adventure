@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_deep_sea_bubble_chain__p0_palette[
 static const uint16_t adv_assets_static_tiles_deep_sea_bubble_chain__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_deep_sea_bubble_chain__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_deep_sea_bubble_chain__p0_rows[] = {
     0, 2, 4, 10, 21, 33, 45, 55, 65, 71, 73, 79, 89, 99, 111, 121, 131, 141, 151, 161,
     173, 185, 197, 209, 219, 229, 239, 249, 259, 265, 267, 269, 271,
 };

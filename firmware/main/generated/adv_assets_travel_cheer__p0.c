@@ -9,7 +9,7 @@ static const uint16_t adv_assets_travel_cheer__p0_palette[] = {
 static const uint16_t adv_assets_travel_cheer__p0_keys[] = {
     0, 0, 2, 2, 2, 5, 5, 5,
 };
-static const uint32_t adv_assets_travel_cheer__p0_rows[] = {
+static const uint16_t adv_assets_travel_cheer__p0_rows[] = {
     0, 2, 4, 16, 32, 53, 76, 101, 128, 154, 183, 212, 243, 274, 306, 339, 372, 405, 439, 473,
     507, 541, 574, 606, 637, 666, 693, 717, 736, 754, 772, 792, 814, 836, 860, 884, 909, 935, 962, 990,
     1019, 1049, 1079, 1110, 1142, 1175, 1208, 1240, 1272, 1302, 1332, 1363, 1392, 1421, 1441, 1459, 1478, 1499, 1521, 1544,

@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_icon_hot_air__p0_palette[] = {
 static const uint16_t adv_assets_static_icon_hot_air__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_icon_hot_air__p0_rows[] = {
+static const uint16_t adv_assets_static_icon_hot_air__p0_rows[] = {
     0, 2, 8, 14, 23, 32, 42, 55, 65, 80, 94, 108, 122, 136, 149, 155, 157,
 };
 static const uint8_t adv_assets_static_icon_hot_air__p0_data[] = {

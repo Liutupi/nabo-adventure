@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_landmark_kiosk__p0_palette[] = {
 static const uint16_t adv_assets_static_landmark_kiosk__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_landmark_kiosk__p0_rows[] = {
+static const uint16_t adv_assets_static_landmark_kiosk__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 27, 37, 47, 57, 69, 81, 93, 105, 117, 129,
     141, 153, 169, 189, 211, 235, 259, 283, 307, 331, 355, 379, 403, 427, 451, 471, 481, 489, 499, 509,
     519, 529, 535, 541, 551, 561, 575, 589, 611, 635, 659, 683, 707, 731, 755, 779, 807, 835, 863, 891,

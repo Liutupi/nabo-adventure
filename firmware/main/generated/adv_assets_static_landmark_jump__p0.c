@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_landmark_jump__p0_palette[] = {
 static const uint16_t adv_assets_static_landmark_jump__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_landmark_jump__p0_rows[] = {
+static const uint16_t adv_assets_static_landmark_jump__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 36, 42, 48, 58,
     72, 90, 108, 126, 140, 154, 164, 178, 192, 206, 220, 242, 264, 282, 300, 318, 332, 346, 356, 362,
     368, 378, 392, 406, 420, 434, 448, 462, 476, 494, 512, 526, 540, 558, 576, 590, 604, 618, 632, 646,

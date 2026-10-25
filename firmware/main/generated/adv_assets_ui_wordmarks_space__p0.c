@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_wordmarks_space__p0_palette[] = {
 static const uint16_t adv_assets_ui_wordmarks_space__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_wordmarks_space__p0_rows[] = {
+static const uint16_t adv_assets_ui_wordmarks_space__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 26, 44, 58, 74, 90, 106, 128, 159, 195, 225, 251,
     275, 299, 321, 342, 361, 383, 409, 433, 459, 485, 515, 543, 575, 602, 616, 618, 620, 622, 624, 626,
     628, 630, 632, 634, 636, 638, 640, 642, 644, 646, 648, 650, 686, 720, 771, 814, 857, 893, 928, 974,

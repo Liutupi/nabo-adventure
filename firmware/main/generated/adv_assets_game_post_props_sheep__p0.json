@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_game_post_props_sheep__p0",
   "width": 40,
   "height": 32,
@@ -16,12 +16,12 @@
     0
   ],
   "data_bytes": 425,
-  "table_bytes": 144,
+  "table_bytes": 78,
   "frame_sha256": [
     "89dad5a9a00f901d67f466c85f78bc23c156e5d8e2cc3292a6006d4be64c8be8"
   ],
   "source_sha256": [
-    "f489a618e85fd30146125d98892812a4808b458b708946432a851e0d70825c21"
+    "5ea37e90db7567802860b2ade4d8c70b918848a7dc9f494558554ea71487230f"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\sheep.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/sheep.png",
       "sha256": "f489a618e85fd30146125d98892812a4808b458b708946432a851e0d70825c21"
     }
   ],

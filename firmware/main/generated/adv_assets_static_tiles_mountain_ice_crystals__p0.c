@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_mountain_ice_crystals__p0_palette[
 static const uint16_t adv_assets_static_tiles_mountain_ice_crystals__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_mountain_ice_crystals__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_mountain_ice_crystals__p0_rows[] = {
     0, 2, 4, 6, 8, 14, 20, 34, 48, 62, 75, 86, 95, 105, 114, 125, 138, 152, 166, 184,
     194, 212, 225, 236, 245, 255, 264, 275, 288, 302, 308, 314, 316,
 };

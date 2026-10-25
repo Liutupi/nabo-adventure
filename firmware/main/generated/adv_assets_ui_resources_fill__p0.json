@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_ui_resources_fill__p0",
   "width": 8,
   "height": 6,
@@ -13,7 +13,7 @@
     0
   ],
   "data_bytes": 12,
-  "table_bytes": 34,
+  "table_bytes": 20,
   "frame_sha256": [
     "5bf90435cd45d0475cbb0ace7e7e3a672ed2a3a4984ad3e8624d8878725a9c2e"
   ],
@@ -31,7 +31,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\fill.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/resources/fill.png",
       "sha256": "76b1e986bd00991231a378d0dd6a8a759f1e71054251a31f1a69569b0cf71d93"
     }
   ],

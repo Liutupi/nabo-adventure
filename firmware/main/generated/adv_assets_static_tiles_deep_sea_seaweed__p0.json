@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_deep_sea_seaweed__p0",
   "width": 32,
   "height": 32,
@@ -14,12 +14,12 @@
     0
   ],
   "data_bytes": 517,
-  "table_bytes": 140,
+  "table_bytes": 74,
   "frame_sha256": [
     "08439de06e8e94ec47078639ec63456ccdd40cac9a4b27b1056a3fa5bc580c37"
   ],
   "source_sha256": [
-    "d1e6cf9c833a1784774782b4da638acc65c45777787231e7213676a0de557061"
+    "0881842b19a75c0923d39d0d5cc5139c83c9da05a9485997f95649902f780fbd"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\deep-sea\\seaweed.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/deep-sea/seaweed.png",
       "sha256": "d1e6cf9c833a1784774782b4da638acc65c45777787231e7213676a0de557061"
     }
   ],

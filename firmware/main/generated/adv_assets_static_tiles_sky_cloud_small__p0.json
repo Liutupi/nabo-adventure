@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_sky_cloud_small__p0",
   "width": 32,
   "height": 32,
@@ -15,12 +15,12 @@
     0
   ],
   "data_bytes": 174,
-  "table_bytes": 142,
+  "table_bytes": 76,
   "frame_sha256": [
     "427c6b542636b8e8127731422e6aeaee2826cee40623e77300e4d41305de507a"
   ],
   "source_sha256": [
-    "57dc9901ca3b70c464d6615664b235e7fd8525c43ac9c99cda2f4b142f4c0906"
+    "1292f309eee2b384445585bdff0e7bbdde801045489290a25cfbed258add50bc"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\sky\\cloud-small.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/sky/cloud-small.png",
       "sha256": "57dc9901ca3b70c464d6615664b235e7fd8525c43ac9c99cda2f4b142f4c0906"
     }
   ],

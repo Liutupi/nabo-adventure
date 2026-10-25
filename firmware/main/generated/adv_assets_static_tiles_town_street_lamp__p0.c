@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_town_street_lamp__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_town_street_lamp__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_town_street_lamp__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_town_street_lamp__p0_rows[] = {
     0, 2, 4, 10, 16, 22, 28, 34, 40, 54, 68, 82, 96, 110, 124, 138, 152, 158, 168, 178,
     188, 198, 208, 218, 228, 238, 248, 258, 268, 274, 284, 290, 292,
 };

@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_passport_header__p0_palette[] = {
 static const uint16_t adv_assets_ui_passport_header__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_passport_header__p0_rows[] = {
+static const uint16_t adv_assets_ui_passport_header__p0_rows[] = {
     0, 2, 32, 100, 180, 272, 365, 451, 537, 622, 702, 795, 894, 1004, 1121, 1234, 1348, 1471, 1583, 1691,
     1794, 1879, 1969, 2011, 2013,
 };

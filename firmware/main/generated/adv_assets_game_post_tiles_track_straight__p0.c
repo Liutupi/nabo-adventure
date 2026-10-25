@@ -6,7 +6,7 @@ static const uint16_t adv_assets_game_post_tiles_track_straight__p0_palette[] = 
 static const uint16_t adv_assets_game_post_tiles_track_straight__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_game_post_tiles_track_straight__p0_rows[] = {
+static const uint16_t adv_assets_game_post_tiles_track_straight__p0_rows[] = {
     0, 2, 4, 14, 32, 50, 74, 98, 100, 102, 104, 106, 130, 154, 178, 202, 226, 250, 274, 298,
     322, 346, 370, 394, 396, 398, 400, 402, 420, 438, 448, 450, 452,
 };

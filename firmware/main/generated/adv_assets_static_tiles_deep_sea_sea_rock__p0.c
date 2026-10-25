@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_deep_sea_sea_rock__p0_palette[] = 
 static const uint16_t adv_assets_static_tiles_deep_sea_sea_rock__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_deep_sea_sea_rock__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_deep_sea_sea_rock__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 20, 31, 45, 59, 73, 87, 101, 115, 129, 143, 161, 181,
     203, 221, 239, 256, 270, 282, 294, 306, 318, 324, 326, 328, 330,
 };

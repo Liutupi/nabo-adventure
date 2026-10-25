@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_sky_cloud_chain__p0",
   "width": 32,
   "height": 32,
@@ -14,12 +14,12 @@
     0
   ],
   "data_bytes": 160,
-  "table_bytes": 140,
+  "table_bytes": 74,
   "frame_sha256": [
     "071e53f6ae21fb3ed0bf96fa4bed97be0c4e0deb350769d2febf02a3d8192003"
   ],
   "source_sha256": [
-    "eaf72ff9705b239ec784438e262a9e2bd172872a7154b10fd2e3e4c2afaf8977"
+    "8624a6b4beab4741051d9fe1b9d1fbe9b48c15cfdf2107210b08e00b4a746108"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\sky\\cloud-chain.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/sky/cloud-chain.png",
       "sha256": "eaf72ff9705b239ec784438e262a9e2bd172872a7154b10fd2e3e4c2afaf8977"
     }
   ],

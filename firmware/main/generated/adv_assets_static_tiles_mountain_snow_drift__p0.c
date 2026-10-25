@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_mountain_snow_drift__p0_palette[] 
 static const uint16_t adv_assets_static_tiles_mountain_snow_drift__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_mountain_snow_drift__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_mountain_snow_drift__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 32, 42, 52, 62, 72, 82,
     92, 106, 120, 134, 152, 170, 184, 194, 204, 210, 212, 214, 216,
 };

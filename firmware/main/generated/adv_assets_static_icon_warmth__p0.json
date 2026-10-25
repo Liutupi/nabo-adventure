@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_icon_warmth__p0",
   "width": 16,
   "height": 16,
@@ -16,12 +16,12 @@
     0
   ],
   "data_bytes": 151,
-  "table_bytes": 80,
+  "table_bytes": 46,
   "frame_sha256": [
     "fa4c584899a7208f519d42267865b92abf686e2bfc4ab9dbf83ba66ca119aaff"
   ],
   "source_sha256": [
-    "026bc94edb20620b692cd9783999352b40a1911618e1d0fcc8d76b910a98793b"
+    "205a986971aff3a000c5ed15205cf56c57364fe3372e7a2a013d11924283221d"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\icons\\warmth.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/icons/warmth.png",
       "sha256": "026bc94edb20620b692cd9783999352b40a1911618e1d0fcc8d76b910a98793b"
     }
   ],

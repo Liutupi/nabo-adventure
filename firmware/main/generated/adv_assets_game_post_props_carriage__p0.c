@@ -6,7 +6,7 @@ static const uint16_t adv_assets_game_post_props_carriage__p0_palette[] = {
 static const uint16_t adv_assets_game_post_props_carriage__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_game_post_props_carriage__p0_rows[] = {
+static const uint16_t adv_assets_game_post_props_carriage__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 30, 36, 46, 72, 98, 124, 150,
     176, 202, 228, 254, 280, 306, 332, 358, 384, 410, 416, 422, 428, 432, 436, 450, 464, 482, 500, 518,
     536, 554, 564, 574, 584, 586, 588, 590, 592,

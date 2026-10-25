@@ -151,7 +151,7 @@ def build(art=DEFAULT_ART, output=DEFAULT_OUTPUT, groups=('travel', 'ui', 'stati
                   'startup_composition': opening,
                   'linker_alignment_and_final_elf_measurement': 'pending; RLE/tables exact, C3 descriptor estimates exclude linker padding/deduplication',
                   'acceptance': 'host packing validation only; no device/physical artwork acceptance implied'}
-        (stage/OWNERSHIP).write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', 'utf-8')
+        (stage/OWNERSHIP).write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', 'utf-8', newline='\r\n')
         # Only our explicit former ownership list may be removed. Handwritten files
         # and every other generated prefix remain untouched.
         for name in filenames: (stage/name).replace(output/name)

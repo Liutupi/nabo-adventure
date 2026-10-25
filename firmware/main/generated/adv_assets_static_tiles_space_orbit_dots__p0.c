@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_space_orbit_dots__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_space_orbit_dots__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_space_orbit_dots__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_space_orbit_dots__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 16, 22, 30, 42, 56, 66, 76, 92, 110, 128, 142, 160, 178, 196,
     210, 224, 238, 250, 260, 272, 278, 280, 282, 284, 286, 288, 290,
 };

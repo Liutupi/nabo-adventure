@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_map_station_current__p0_palette[] = {
 static const uint16_t adv_assets_ui_map_station_current__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_map_station_current__p0_rows[] = {
+static const uint16_t adv_assets_ui_map_station_current__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 18, 24, 34, 44, 54, 64, 82, 92, 102, 112, 122, 132, 142,
     152, 162, 172, 182, 200, 218, 232, 246, 260, 270, 280, 286, 292, 298, 304, 310, 312, 314, 316, 318,
     320,

@@ -9,7 +9,7 @@ static const uint16_t adv_assets_post_a_settlement_cheer__p0_palette[] = {
 static const uint16_t adv_assets_post_a_settlement_cheer__p0_keys[] = {
     0, 0, 2, 2, 2, 5, 6, 6,
 };
-static const uint32_t adv_assets_post_a_settlement_cheer__p0_rows[] = {
+static const uint16_t adv_assets_post_a_settlement_cheer__p0_rows[] = {
     0, 2, 4, 18, 36, 58, 82, 108, 133, 159, 189, 216, 247, 279, 311, 343, 377, 411, 446, 480,
     514, 548, 581, 612, 642, 670, 696, 719, 740, 752, 769, 783, 798, 817, 838, 861, 884, 908, 932, 957,
     984, 1010, 1039, 1068, 1097, 1128, 1159, 1190, 1218, 1247, 1276, 1306, 1337, 1367, 1396, 1419, 1440, 1462, 1485, 1507,

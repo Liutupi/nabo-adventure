@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_game_night_grass_00__p0",
   "width": 32,
   "height": 32,
@@ -15,12 +15,12 @@
     0
   ],
   "data_bytes": 422,
-  "table_bytes": 142,
+  "table_bytes": 76,
   "frame_sha256": [
     "ce8388c2f558e5c430933ce84c6bbefbcf44b77160665c36fb96cffff34a109f"
   ],
   "source_sha256": [
-    "f2dfcb99c5c2a501bf784611900de348dbc6e5b77dbb3a9d8ccc655263a3a6ba"
+    "e9221c0ed48a8b673e6b81294f95de5d006befd9df4e7584a43588db8d570d69"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\night\\tiles\\grass_00.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/night/tiles/grass_00.png",
       "sha256": "f2dfcb99c5c2a501bf784611900de348dbc6e5b77dbb3a9d8ccc655263a3a6ba"
     }
   ],

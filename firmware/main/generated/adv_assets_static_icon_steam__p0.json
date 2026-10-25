@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_icon_steam__p0",
   "width": 16,
   "height": 16,
@@ -15,12 +15,12 @@
     0
   ],
   "data_bytes": 132,
-  "table_bytes": 78,
+  "table_bytes": 44,
   "frame_sha256": [
     "2db095955cc6de2ffb68909e6175cfb559d5c6285b0ff10076d3e9b491ca48a7"
   ],
   "source_sha256": [
-    "9a64d567d86a690751741ca1eaff31f66dd1acdbb7f71fcd9caddc03c4e0848d"
+    "62598065e77aa905be73502aa0ac9f789e7ca62551dc9aecd4aead95fdb1fe92"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\icons\\steam.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/icons/steam.png",
       "sha256": "9a64d567d86a690751741ca1eaff31f66dd1acdbb7f71fcd9caddc03c4e0848d"
     }
   ],

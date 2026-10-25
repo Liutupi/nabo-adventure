@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_stamp_sky__p0",
   "width": 96,
   "height": 96,
@@ -13,12 +13,12 @@
     0
   ],
   "data_bytes": 2360,
-  "table_bytes": 394,
+  "table_bytes": 200,
   "frame_sha256": [
     "ca6100926e799353cb911082825cd1b4f210d41b52aa3b94cc88079f91396a12"
   ],
   "source_sha256": [
-    "ba53e36b53eee0b10dec41c65d346f902d6e530f12850697fe507d7aed6f1ad6"
+    "9769576d4099139ecf8f36ec872d991dbfe2bce1d4f405d8c743f2b4618387e2"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -31,7 +31,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\stamps\\sky.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/stamps/sky.png",
       "sha256": "ba53e36b53eee0b10dec41c65d346f902d6e530f12850697fe507d7aed6f1ad6"
     }
   ],

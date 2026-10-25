@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_night_forest_fern__p0_palette[] = 
 static const uint16_t adv_assets_static_tiles_night_forest_fern__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_night_forest_fern__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_night_forest_fern__p0_rows[] = {
     0, 2, 4, 6, 8, 14, 20, 29, 39, 49, 59, 73, 87, 105, 123, 145, 167, 189, 211, 237,
     267, 299, 329, 359, 385, 411, 429, 443, 457, 463, 469, 475, 477,
 };

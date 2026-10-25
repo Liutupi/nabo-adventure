@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_mountain_snowcap_rock__p0_palette[
 static const uint16_t adv_assets_static_tiles_mountain_snowcap_rock__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_mountain_snowcap_rock__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_mountain_snowcap_rock__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 22, 32, 42, 52, 62, 72, 82, 92, 102, 120, 142,
     167, 185, 195, 205, 215, 225, 235, 245, 255, 265, 271, 273, 275,
 };

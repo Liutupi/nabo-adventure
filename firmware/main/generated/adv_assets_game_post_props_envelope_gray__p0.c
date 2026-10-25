@@ -6,7 +6,7 @@ static const uint16_t adv_assets_game_post_props_envelope_gray__p0_palette[] = {
 static const uint16_t adv_assets_game_post_props_envelope_gray__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_game_post_props_envelope_gray__p0_rows[] = {
+static const uint16_t adv_assets_game_post_props_envelope_gray__p0_rows[] = {
     0, 2, 4, 6, 12, 18, 28, 46, 64, 84, 106, 124, 142, 166, 188, 206, 224, 242, 260, 270,
     276, 282, 284, 286, 288,
 };

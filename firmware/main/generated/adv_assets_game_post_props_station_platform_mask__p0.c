@@ -6,7 +6,7 @@ static const uint16_t adv_assets_game_post_props_station_platform_mask__p0_palet
 static const uint16_t adv_assets_game_post_props_station_platform_mask__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_game_post_props_station_platform_mask__p0_rows[] = {
+static const uint16_t adv_assets_game_post_props_station_platform_mask__p0_rows[] = {
     0, 2, 4, 6, 8, 14, 20, 30, 40, 50, 60, 77, 95, 117, 135, 153, 171, 189, 215, 241,
     263, 281, 299, 317, 335, 341, 347, 357, 367, 377, 387, 397, 407, 417, 427, 437, 447, 457, 467, 477,
     487, 497, 507, 513, 519, 525, 531, 537, 543, 549, 555, 561, 563, 565, 567, 569, 571,

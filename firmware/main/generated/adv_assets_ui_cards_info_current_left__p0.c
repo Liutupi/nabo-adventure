@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_cards_info_current_left__p0_palette[] = {
 static const uint16_t adv_assets_ui_cards_info_current_left__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_cards_info_current_left__p0_rows[] = {
+static const uint16_t adv_assets_ui_cards_info_current_left__p0_rows[] = {
     0, 4, 8, 12, 16, 20, 24, 28, 32,
 };
 static const uint8_t adv_assets_ui_cards_info_current_left__p0_data[] = {

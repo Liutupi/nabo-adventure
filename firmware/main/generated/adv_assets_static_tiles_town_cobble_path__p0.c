@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_town_cobble_path__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_town_cobble_path__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_town_cobble_path__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_town_cobble_path__p0_rows[] = {
     0, 2, 4, 6, 20, 46, 72, 98, 124, 150, 164, 166, 168, 182, 208, 234, 260, 286, 312, 326,
     328, 330, 344, 370, 396, 422, 448, 474, 488, 490, 492, 494, 496,
 };

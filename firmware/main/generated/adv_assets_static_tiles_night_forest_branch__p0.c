@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_night_forest_branch__p0_palette[] 
 static const uint16_t adv_assets_static_tiles_night_forest_branch__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_night_forest_branch__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_night_forest_branch__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 16, 28, 42, 60, 78, 100, 118, 136, 150, 164, 178, 192, 202, 213,
     223, 233, 243, 253, 263, 273, 283, 293, 301, 309, 311, 313, 315,
 };

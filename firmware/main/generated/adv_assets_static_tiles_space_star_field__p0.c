@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_space_star_field__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_space_star_field__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_space_star_field__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_space_star_field__p0_rows[] = {
     0, 2, 4, 6, 8, 14, 24, 34, 40, 46, 52, 58, 64, 70, 76, 82, 84, 86, 88, 94,
     104, 110, 116, 122, 128, 134, 140, 150, 160, 162, 164, 166, 168,
 };

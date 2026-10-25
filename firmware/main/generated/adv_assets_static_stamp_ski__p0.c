@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_stamp_ski__p0_palette[] = {
 static const uint16_t adv_assets_static_stamp_ski__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_stamp_ski__p0_rows[] = {
+static const uint16_t adv_assets_static_stamp_ski__p0_rows[] = {
     0, 2, 4, 6, 12, 18, 28, 38, 52, 70, 88, 106, 124, 142, 160, 178, 196, 214, 232, 250,
     268, 286, 304, 322, 340, 358, 376, 394, 412, 430, 448, 466, 492, 518, 544, 574, 604, 634, 664, 694,
     724, 754, 780, 806, 832, 858, 884, 918, 952, 994, 1036, 1078, 1112, 1146, 1180, 1214, 1248, 1282, 1316, 1346,

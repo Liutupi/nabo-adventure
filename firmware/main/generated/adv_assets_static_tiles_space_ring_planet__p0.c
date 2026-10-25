@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_space_ring_planet__p0_palette[] = 
 static const uint16_t adv_assets_static_tiles_space_ring_planet__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_space_ring_planet__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_space_ring_planet__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 16, 26, 36, 46, 56, 66, 76, 86, 98, 110, 120, 130, 140, 152,
     173, 194, 215, 236, 254, 268, 278, 288, 294, 296, 298, 300, 302,
 };

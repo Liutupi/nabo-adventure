@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_ui_resources_icons_hot_air__p0",
   "width": 16,
   "height": 16,
@@ -14,12 +14,12 @@
     0
   ],
   "data_bytes": 188,
-  "table_bytes": 76,
+  "table_bytes": 42,
   "frame_sha256": [
     "0994c97101ff86c45cbd666107cf8766f10c0c320e39e561eed2b183e4a99164"
   ],
   "source_sha256": [
-    "bd3f0430f600088343c86e4610f40dec6510105a326a8438567d8dfaa58df17e"
+    "3dc05f7757f9359842c4ff616215bf258f3243cbb7b117ebe220b8f0e5dce1f9"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\icons\\hot-air.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/resources/icons/hot-air.png",
       "sha256": "a7139afbaac89744e17c5359c18bcd7bf243d6847bb54181576a585284a15d62"
     }
   ],

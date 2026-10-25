@@ -60,7 +60,7 @@ def emit_sprites(resources, folder):
             pieces.append(piece); candidates.append(piece)
     for candidates in interned.values():
         for physical in candidates:
-            (folder/f'{physical["symbol"]}.json').write_text(json.dumps(physical['report'], indent=2)+'\n', 'utf-8')
+            (folder/f'{physical["symbol"]}.json').write_text(json.dumps(physical['report'], indent=2)+'\n', 'utf-8', newline='\r\n')
     return pieces
 
 
@@ -137,6 +137,6 @@ def emit_catalog(resources, pieces, folder, ui):
     else: colors = []
     sources.append('const uint16_t adv_assets_ui_palette[] = {'+', '.join(str(c) for c in colors or [0])+'};')
     sources.append(f'const size_t adv_assets_ui_palette_count = {len(colors)};')
-    (folder/'adv_assets_catalog.h').write_text('\n'.join(header)+'\n', 'utf-8')
-    (folder/'adv_assets_catalog.c').write_text('\n'.join(sources)+'\n', 'utf-8')
+    (folder/'adv_assets_catalog.h').write_text('\n'.join(header)+'\n', 'utf-8', newline='\r\n')
+    (folder/'adv_assets_catalog.c').write_text('\n'.join(sources)+'\n', 'utf-8', newline='\r\n')
     return {'patches': patches, 'digit_tables': metrics, 'shared_ui_palette_rgb565': colors}

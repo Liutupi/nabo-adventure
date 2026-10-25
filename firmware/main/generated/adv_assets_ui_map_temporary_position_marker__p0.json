@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_ui_map_temporary_position_marker__p0",
   "width": 32,
   "height": 20,
@@ -14,12 +14,12 @@
     0
   ],
   "data_bytes": 116,
-  "table_bytes": 92,
+  "table_bytes": 50,
   "frame_sha256": [
     "b70f31710c6d4dd33d7da7d895ca7b6bc1099a7f493d71c44aa4abf0b51461d4"
   ],
   "source_sha256": [
-    "b045b3aeb8799b1380d16cdb9c8f04f33e30f851dd1df6801923a13b9f625c4b"
+    "55e77753e8cb185ed9bc93d8058b73d3ddf363cbafcd59fa6bb8184d62acd43a"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\temporary-position-marker.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/map/temporary-position-marker.png",
       "sha256": "2d9f9968abae3cfc1c0de49735a995a1cf174e80b06eb8247de9b6ec7ef2f794"
     }
   ],

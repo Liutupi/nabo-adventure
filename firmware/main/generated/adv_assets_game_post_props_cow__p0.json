@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_game_post_props_cow__p0",
   "width": 48,
   "height": 36,
@@ -16,12 +16,12 @@
     0
   ],
   "data_bytes": 472,
-  "table_bytes": 160,
+  "table_bytes": 86,
   "frame_sha256": [
     "a0c561085018e55b525a9e014fae045d6a49599a78d35d0341198cb3c2b3281f"
   ],
   "source_sha256": [
-    "30a18569f08fb6efe30b0c56658c329cd835a931751447271429cb29af180e20"
+    "d543a0ddeeee80524bd17d2b0cb11cfa07d85677ef5e230792442502d28514c9"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\cow.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/cow.png",
       "sha256": "30a18569f08fb6efe30b0c56658c329cd835a931751447271429cb29af180e20"
     }
   ],

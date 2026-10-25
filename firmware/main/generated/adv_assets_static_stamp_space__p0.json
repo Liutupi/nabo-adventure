@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_stamp_space__p0",
   "width": 96,
   "height": 96,
@@ -13,12 +13,12 @@
     0
   ],
   "data_bytes": 2176,
-  "table_bytes": 394,
+  "table_bytes": 200,
   "frame_sha256": [
     "61b0ea72b0118734890ae950deaeed3a955b06cf4dc2a3ec71f5576c458dfa3a"
   ],
   "source_sha256": [
-    "339fbdcadd076e696d2d2595f5e9a8e657c8d09cbc6552de1e63e55037d2f07b"
+    "0539f7b6bff3cc59c3b09c50e181cfb6b3dcff671a67b8c779193543f44b89e9"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -31,7 +31,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\stamps\\space.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/stamps/space.png",
       "sha256": "339fbdcadd076e696d2d2595f5e9a8e657c8d09cbc6552de1e63e55037d2f07b"
     }
   ],

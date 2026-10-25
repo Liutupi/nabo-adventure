@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_labels_placeholder__p0_palette[] = {
 static const uint16_t adv_assets_ui_labels_placeholder__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_labels_placeholder__p0_rows[] = {
+static const uint16_t adv_assets_ui_labels_placeholder__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 46, 82, 112, 142, 179, 216, 251, 290, 333, 379, 415, 451, 453,
     455, 457, 459, 461, 463,
 };

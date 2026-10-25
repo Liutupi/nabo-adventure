@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_mountain_ice_crystals__p0",
   "width": 32,
   "height": 32,
@@ -14,12 +14,12 @@
     0
   ],
   "data_bytes": 316,
-  "table_bytes": 140,
+  "table_bytes": 74,
   "frame_sha256": [
     "0dc465801677c716051d8442eede0b1af014d1aea2a0e9c571d538e6f9b31f8e"
   ],
   "source_sha256": [
-    "d4226c2f39ab5f08a5c4fd40e4165ccb72bbbae3fa5248f522584016b738b886"
+    "e7361ff7edb63f40e740d20ac27f3fcee781552e380630ddd3b8339c7c5e9144"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\mountain\\ice-crystals.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/mountain/ice-crystals.png",
       "sha256": "d4226c2f39ab5f08a5c4fd40e4165ccb72bbbae3fa5248f522584016b738b886"
     }
   ],

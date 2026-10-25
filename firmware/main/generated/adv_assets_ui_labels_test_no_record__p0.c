@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_labels_test_no_record__p0_palette[] = {
 static const uint16_t adv_assets_ui_labels_test_no_record__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_labels_test_no_record__p0_rows[] = {
+static const uint16_t adv_assets_ui_labels_test_no_record__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 41, 89, 135, 174, 231, 281, 339, 395, 448, 505, 563, 615, 617,
     619, 621, 623, 625, 627,
 };

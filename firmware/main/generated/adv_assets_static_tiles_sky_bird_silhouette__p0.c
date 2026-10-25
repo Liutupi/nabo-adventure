@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_sky_bird_silhouette__p0_palette[] 
 static const uint16_t adv_assets_static_tiles_sky_bird_silhouette__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_sky_bird_silhouette__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_sky_bird_silhouette__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 24, 34, 44, 54, 64, 74, 84, 94, 104, 110,
     116, 122, 128, 134, 140, 142, 144, 146, 148, 150, 152, 154, 156,
 };

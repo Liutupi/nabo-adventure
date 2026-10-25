@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_game_post_props_locomotive_body__p0",
   "width": 96,
   "height": 88,
@@ -20,12 +20,12 @@
     0
   ],
   "data_bytes": 1362,
-  "table_bytes": 376,
+  "table_bytes": 198,
   "frame_sha256": [
     "6439b1122ee422e79e9d164c9cf8eaef243f828cae37b836273c6ed75173847d"
   ],
   "source_sha256": [
-    "2db50eea850e6b2f49f24d3031f2110fe7d7df4c1764645a338b75311a2bbfb7"
+    "77d794448968bbbcd1a4d0e993cae6544fcb28c70cdc68b419d944c3442a8bd5"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -38,7 +38,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\locomotive-body.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/locomotive-body.png",
       "sha256": "2db50eea850e6b2f49f24d3031f2110fe7d7df4c1764645a338b75311a2bbfb7"
     }
   ],

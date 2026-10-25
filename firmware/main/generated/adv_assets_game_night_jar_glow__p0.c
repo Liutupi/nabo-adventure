@@ -6,7 +6,7 @@ static const uint16_t adv_assets_game_night_jar_glow__p0_palette[] = {
 static const uint16_t adv_assets_game_night_jar_glow__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_game_night_jar_glow__p0_rows[] = {
+static const uint16_t adv_assets_game_night_jar_glow__p0_rows[] = {
     0, 2, 4, 10, 12, 14, 20, 34, 44, 54, 64, 74, 84, 94, 104, 114, 124, 141, 151, 161,
     171, 181, 191, 201, 211, 221, 231, 245, 251, 253, 255, 261, 263,
 };

@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_game_post_props_coal_pile__p0",
   "width": 32,
   "height": 24,
@@ -14,12 +14,12 @@
     0
   ],
   "data_bytes": 230,
-  "table_bytes": 108,
+  "table_bytes": 58,
   "frame_sha256": [
     "efca92b0315a61754b0d3ca8b2bd9aa54c49c6afc4fc0aa4d421913174211230"
   ],
   "source_sha256": [
-    "30eb1b4fd4001becd1e03369b03d3ebc033de9d570cf9be1a3e92fb1c87a74a7"
+    "ad5ba768249c1e4b3a3ab5a42e38cafea926bf3e7cc58d34af1c59a466f6e9fb"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\coal-pile.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/coal-pile.png",
       "sha256": "30eb1b4fd4001becd1e03369b03d3ebc033de9d570cf9be1a3e92fb1c87a74a7"
     }
   ],

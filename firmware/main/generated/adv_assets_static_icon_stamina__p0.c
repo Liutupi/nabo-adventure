@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_icon_stamina__p0_palette[] = {
 static const uint16_t adv_assets_static_icon_stamina__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_icon_stamina__p0_rows[] = {
+static const uint16_t adv_assets_static_icon_stamina__p0_rows[] = {
     0, 2, 8, 18, 28, 39, 51, 64, 74, 84, 94, 103, 112, 121, 127, 133, 135,
 };
 static const uint8_t adv_assets_static_icon_stamina__p0_data[] = {

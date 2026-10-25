@@ -6,7 +6,7 @@ static const uint16_t adv_assets_post_props_whistle_cord__p0_palette[] = {
 static const uint16_t adv_assets_post_props_whistle_cord__p0_keys[] = {
     0, 1, 1, 1, 4, 5,
 };
-static const uint32_t adv_assets_post_props_whistle_cord__p0_rows[] = {
+static const uint16_t adv_assets_post_props_whistle_cord__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 16, 26, 36, 46, 52, 61, 70, 79, 88, 97, 106, 115, 124, 133,
     142, 151, 160, 169, 178, 187, 196, 205, 214, 223, 232, 241, 250, 259, 268, 277, 286, 295, 304, 313,
     322, 331, 340, 349, 358, 367, 376, 382, 392, 402, 412, 418, 420, 422, 424, 426, 428, 430, 432, 434,

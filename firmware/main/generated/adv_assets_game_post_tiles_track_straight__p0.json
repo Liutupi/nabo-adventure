@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_game_post_tiles_track_straight__p0",
   "width": 32,
   "height": 32,
@@ -16,12 +16,12 @@
     0
   ],
   "data_bytes": 452,
-  "table_bytes": 144,
+  "table_bytes": 78,
   "frame_sha256": [
     "08358c39e103e7c887d6d198b709bf593cdd007d03de6bea98ee1b4d715ac795"
   ],
   "source_sha256": [
-    "db7eda758de16a707bb8893ece580f36cd16ddaf6694c596baeb0d4805bf21ff"
+    "a6b1d320224ba5b71803603bf7f60464c62cb24fffa897ad7b7ad29643ced1a9"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\tiles\\track-straight.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/tiles/track-straight.png",
       "sha256": "db7eda758de16a707bb8893ece580f36cd16ddaf6694c596baeb0d4805bf21ff"
     }
   ],

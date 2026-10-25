@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_sky_cloud_chain__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_sky_cloud_chain__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_sky_cloud_chain__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_sky_cloud_chain__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 30, 36, 46, 56, 66, 76, 82,
     92, 98, 108, 118, 128, 138, 144, 150, 152, 154, 156, 158, 160,
 };

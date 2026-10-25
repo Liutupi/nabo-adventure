@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_town_cobble_path__p0",
   "width": 32,
   "height": 32,
@@ -15,12 +15,12 @@
     0
   ],
   "data_bytes": 496,
-  "table_bytes": 142,
+  "table_bytes": 76,
   "frame_sha256": [
     "79d3aed85a48105d89eeca0ab62334f16f21185079527bd3385e4e3ad1acdbc2"
   ],
   "source_sha256": [
-    "47bdc55799fdbbc0db59447b03834d9a72c3d322c5cbb69b3b7c2a8c5557503c"
+    "7678cd61ea6cfd6e93b086c5f9dc01ccc8716a641666a86a9524c21351ead13b"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\town\\cobble-path.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/town/cobble-path.png",
       "sha256": "47bdc55799fdbbc0db59447b03834d9a72c3d322c5cbb69b3b7c2a8c5557503c"
     }
   ],

@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_rail_rail_straight__p0_palette[] =
 static const uint16_t adv_assets_static_tiles_rail_rail_straight__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_rail_rail_straight__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_rail_rail_straight__p0_rows[] = {
     0, 16, 32, 48, 64, 80, 96, 110, 134, 158, 182, 196, 212, 228, 244, 260, 276, 292, 308, 324,
     340, 356, 372, 386, 410, 434, 458, 472, 488, 504, 520, 536, 552,
 };

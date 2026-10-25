@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_rail_mail_sign__p0",
   "width": 32,
   "height": 32,
@@ -17,12 +17,12 @@
     0
   ],
   "data_bytes": 340,
-  "table_bytes": 146,
+  "table_bytes": 80,
   "frame_sha256": [
     "cb33e7c7d161f2fbc67f9b398e04922d3fb7ba3b6a664fb68e8bb6332d0b26d5"
   ],
   "source_sha256": [
-    "30e596a3c7f394e9402ae66f826fa94d57f52801736b48fd117afb7d2f25e2b1"
+    "58b5a0bbd960e49a9c9d342576ba59752e77053484077edd1d9a7fc75292fb17"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\rail\\mail-sign.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/rail/mail-sign.png",
       "sha256": "30e596a3c7f394e9402ae66f826fa94d57f52801736b48fd117afb7d2f25e2b1"
     }
   ],

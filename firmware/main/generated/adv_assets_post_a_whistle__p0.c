@@ -9,7 +9,7 @@ static const uint16_t adv_assets_post_a_whistle__p0_palette[] = {
 static const uint16_t adv_assets_post_a_whistle__p0_keys[] = {
     0, 0, 0, 0, 0, 0,
 };
-static const uint32_t adv_assets_post_a_whistle__p0_rows[] = {
+static const uint16_t adv_assets_post_a_whistle__p0_rows[] = {
     0, 9, 23, 41, 62, 84, 108, 133, 158, 185, 212, 240, 268, 297, 327, 356, 385, 413, 440, 466,
     490, 511, 529, 539, 554, 567, 583, 602, 622, 643, 664, 687, 710, 732, 757, 781, 807, 830, 851, 873,
     898, 898, 900, 902, 904, 906, 908, 910, 912, 914, 916, 918, 920, 922, 924, 926, 928, 930, 932, 934,

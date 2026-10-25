@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_ui_wordmarks_ski__p0",
   "width": 200,
   "height": 80,
@@ -17,12 +17,12 @@
     0
   ],
   "data_bytes": 1052,
-  "table_bytes": 338,
+  "table_bytes": 176,
   "frame_sha256": [
     "b18bfa742a22eaf381ff5e5e9ba3c96bcc93dc7c2cba7d1db79e52a510b263de"
   ],
   "source_sha256": [
-    "50f0299d771a3931926d4f44522891575c6da44db53e269ae2718a5a9bdfc3ba"
+    "ac7d8bde65d305d7be6e65b74c7956cbfade1744aa0074e46f6c899c61169ea4"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\wordmarks\\ski.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/wordmarks/ski.png",
       "sha256": "51f0b63a15702cad04f2e6b8ae73bbedb244717278cbf14603b96f24e73a0983"
     }
   ],

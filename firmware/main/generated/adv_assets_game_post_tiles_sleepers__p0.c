@@ -6,7 +6,7 @@ static const uint16_t adv_assets_game_post_tiles_sleepers__p0_palette[] = {
 static const uint16_t adv_assets_game_post_tiles_sleepers__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_game_post_tiles_sleepers__p0_rows[] = {
+static const uint16_t adv_assets_game_post_tiles_sleepers__p0_rows[] = {
     0, 2, 4, 14, 32, 50, 74, 98, 122, 146, 170, 194, 218, 242, 266, 290, 314, 338, 362, 386,
     410, 434, 458, 482, 506, 530, 554, 578, 596, 614, 624, 626, 628,
 };

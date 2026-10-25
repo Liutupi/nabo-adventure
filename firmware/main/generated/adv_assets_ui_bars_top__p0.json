@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_ui_bars_top__p0",
   "width": 240,
   "height": 32,
@@ -14,12 +14,12 @@
     0
   ],
   "data_bytes": 128,
-  "table_bytes": 140,
+  "table_bytes": 74,
   "frame_sha256": [
     "a765c9767bb9577e33a657841d3a8303798bcabafa71f407cc1f38ceede8741e"
   ],
   "source_sha256": [
-    "bfbbd0955e03a3968a5809f1c9dede2158ab95440520d78618035386800d38ca"
+    "2f60c2d378d50ca6b72c0a27e1eb74575c23b576b27e77e388d60f5b84d23001"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\bars\\top.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/bars/top.png",
       "sha256": "817fe6882f094f3e3a9f7cbb3e9644604abcbf4aa1adb71c6ae34bb69bbafe41"
     }
   ],

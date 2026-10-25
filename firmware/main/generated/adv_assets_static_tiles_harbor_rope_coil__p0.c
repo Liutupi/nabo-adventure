@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_tiles_harbor_rope_coil__p0_palette[] = {
 static const uint16_t adv_assets_static_tiles_harbor_rope_coil__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_tiles_harbor_rope_coil__p0_rows[] = {
+static const uint16_t adv_assets_static_tiles_harbor_rope_coil__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 16, 22, 32, 42, 56, 70, 88, 106, 128, 150, 176, 202, 228, 250,
     272, 290, 308, 322, 336, 348, 364, 376, 388, 394, 403, 405, 407,
 };

@@ -6,7 +6,7 @@ static const uint16_t adv_assets_ui_wordmarks_dive__p0_palette[] = {
 static const uint16_t adv_assets_ui_wordmarks_dive__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_ui_wordmarks_dive__p0_rows[] = {
+static const uint16_t adv_assets_ui_wordmarks_dive__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 34, 62, 93, 123, 158, 196, 231, 260, 299, 345, 396,
     451, 499, 531, 553, 577, 606, 637, 668, 702, 746, 791, 832, 871, 901, 915, 917, 919, 921, 923, 925,
     927, 929, 931, 933, 935, 937, 939, 941, 943, 945, 947, 949, 981, 1013, 1054, 1092, 1128, 1163, 1200, 1234,

@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v2",
+  "format": "adv-row-rle-v3",
   "name": "adv_assets_static_tiles_space_asteroid__p0",
   "width": 32,
   "height": 32,
@@ -16,12 +16,12 @@
     0
   ],
   "data_bytes": 400,
-  "table_bytes": 144,
+  "table_bytes": 78,
   "frame_sha256": [
     "9d95bb9765539d0de9ad434f20459285f36f3891b7a554027cfee19ef3a76d40"
   ],
   "source_sha256": [
-    "0c3fd7d7a9eedb33a746ed3272af55162e9e0d75950ff849a2c320e7ca6ffc24"
+    "eb0cea8263e85e36c157b445eeaf45fe5557634a911692b9defb87228f512a20"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\space\\asteroid.png",
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/space/asteroid.png",
       "sha256": "0c3fd7d7a9eedb33a746ed3272af55162e9e0d75950ff849a2c320e7ca6ffc24"
     }
   ],

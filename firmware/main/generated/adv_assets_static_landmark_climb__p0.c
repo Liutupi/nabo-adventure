@@ -6,7 +6,7 @@ static const uint16_t adv_assets_static_landmark_climb__p0_palette[] = {
 static const uint16_t adv_assets_static_landmark_climb__p0_keys[] = {
     0,
 };
-static const uint32_t adv_assets_static_landmark_climb__p0_rows[] = {
+static const uint16_t adv_assets_static_landmark_climb__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 26, 36, 46, 56, 66, 76, 86, 96, 106,
     116, 126, 132, 138, 144, 150, 156, 162, 168, 176, 186, 196, 206, 212, 227, 237, 253, 263, 277, 287,
     297, 307, 317, 327, 341, 355, 371, 389, 407, 421, 439, 457, 479, 501, 527, 547, 569, 591, 613, 631,
