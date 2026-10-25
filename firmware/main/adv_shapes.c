@@ -46,10 +46,15 @@ void ag_paint_band(const ag_op_t *op, int y, int x0, int x1, uint16_t *row)
     int r = op->u.band.r0 + (op->u.band.r1 - op->u.band.r0) * k / h;
     int g = op->u.band.g0 + (op->u.band.g1 - op->u.band.g0) * k / h;
     int b = op->u.band.b0 + (op->u.band.b1 - op->u.band.b0) * k / h;
-    for (int x = imax(x0, op->x0); x < imin(x1, op->x1); x++) {
-        int t = BAYER[y & 3][x & 3];
-        row[x - x0] = (uint16_t)(dither(r, 5, t) << 11 | dither(g, 6, t) << 5 | dither(b, 5, t));
+    // The Bayer pattern repeats every four screen pixels, including clipped
+    // rows. Compute its exact colors once rather than three dithers per pixel.
+    uint16_t colors[4];
+    for (int phase = 0; phase < 4; phase++) {
+        int t = BAYER[y & 3][phase];
+        colors[phase] = (uint16_t)(dither(r, 5, t) << 11 | dither(g, 6, t) << 5 | dither(b, 5, t));
     }
+    for (int x = imax(x0, op->x0); x < imin(x1, op->x1); x++)
+        row[x - x0] = colors[x & 3];
 }
 
 void ag_paint_rect(const ag_op_t *op, int y, int x0, int x1, uint16_t *row)
