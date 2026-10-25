@@ -6,6 +6,7 @@ idf_component_register(
         "adv_model.c"
         "adv_shapes.c"
         "adv_sound.c"
+        "adv_sprite.c"
         "adv_stations.c"
         "adv_text.c"
         "adv_ui.c"

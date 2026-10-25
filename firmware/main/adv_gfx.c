@@ -124,6 +124,22 @@ bool ag_bitmap(ag_t *g, const uint16_t *pixels, int x, int y, int w, int h)
     return true;
 }
 
+bool ag_sprite(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y)
+{
+    if (!adv_sprite_frame_valid(asset, frame) || x < INT16_MIN || y < INT16_MIN ||
+        x > INT16_MAX - asset->width || y > INT16_MAX - asset->height) return false;
+    ag_op_t *op = add(g, AG_SPRITE, x, y, x + asset->width, y + asset->height);
+    if (!op) return false;
+    op->u.sprite.asset = asset;
+    op->u.sprite.frame = (uint16_t)frame;
+    uintptr_t ptr = (uintptr_t)asset;
+    uint32_t h = (uint32_t)ptr;
+    // Include both halves on 64-bit hosts, without shifting a 32-bit C3 pointer.
+    h = mix(h, (uint32_t)((uint64_t)ptr >> 32));
+    seal(op, mix(h, frame));
+    return true;
+}
+
 // ---------- dirty rectangles ----------
 
 typedef struct { int16_t x0, y0, x1, y1; } rect_t;
@@ -168,6 +184,18 @@ static void paint(ag_t *g, const ag_op_t *op, int y, int x0, int x1, uint16_t *r
         for (int x = first; x < last; x++) row[x - x0] = src[x - op->x0];
         break;
     }
+    case AG_SPRITE: {
+        const adv_sprite_t *s = op->u.sprite.asset;
+        uint8_t indices[ADV_SPRITE_MAX_SIDE];
+        if (!adv_sprite_row(s, op->u.sprite.frame, (unsigned)(y - op->y0), indices, sizeof(indices))) break;
+        int first = x0 > op->x0 ? x0 : op->x0;
+        int last = x1 < op->x1 ? x1 : op->x1;
+        for (int x = first; x < last; x++) {
+            uint8_t index = indices[x - op->x0];
+            if (index) row[x - x0] = s->palette[index];
+        }
+        break;
+    }
     default: break;
     }
 }
@@ -200,7 +228,8 @@ void ag_flush(ag_t *g)
             int j = 0;
             while (j < g->prev_n && (matched_prev[j] || op->kind != g->prev[j].kind || op->key != g->prev[j].key)) j++;
             if (j < g->prev_n) matched_prev[j] = true;
-            else add_rect(rects, &n, op->x0, op->y0, op->x1, op->y1, &overflow);
+            // Identical ops in a different order can change overlapping pixels.
+            if (j >= g->prev_n || j != i) add_rect(rects, &n, op->x0, op->y0, op->x1, op->y1, &overflow);
         }
         for (int j = 0; j < g->prev_n && !overflow; j++)
             if (!matched_prev[j]) add_rect(rects, &n, g->prev[j].x0, g->prev[j].y0, g->prev[j].x1, g->prev[j].y1, &overflow);

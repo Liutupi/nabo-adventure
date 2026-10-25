@@ -6,6 +6,7 @@
 #include <stdint.h>
 
 #include "adv_text.h"
+#include "adv_sprite.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -27,7 +28,7 @@ typedef enum {
     AG_TRI,       // small up / down arrow
     AG_GLOW,      // soft round highlight
     AG_BITMAP,    // immutable native RGB565 image in flash
-    // AG_SPRITE is reserved for the indexed RLE NABO sprites (see game-art/adventure/ART_BRIEF.md).
+    AG_SPRITE,    // immutable indexed row RLE with bounded keyframe/delta replay
 } ag_kind_t;
 
 typedef struct {
@@ -41,6 +42,7 @@ typedef struct {
         struct { int16_t cx, cy; uint16_t color; uint8_t up, size; } tri;
         struct { int16_t cx, cy, r; uint16_t color; } glow;
         struct { const uint16_t *pixels; int16_t w; } bitmap;
+        struct { const adv_sprite_t *asset; uint16_t frame; } sprite;
     } u;
 } ag_op_t;
 
@@ -72,6 +74,7 @@ bool ag_text(ag_t *g, const lv_font_t *font, const char *utf8, int x, int baseli
 bool ag_tri(ag_t *g, int cx, int cy, int size, bool up, uint16_t color);
 bool ag_glow(ag_t *g, int cx, int cy, int r, uint16_t color);
 bool ag_bitmap(ag_t *g, const uint16_t *pixels, int x, int y, int w, int h);
+bool ag_sprite(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y);
 int ag_text_width(const lv_font_t *font, const char *utf8);
 
 // Per-op row painters (adv_shapes.c).
