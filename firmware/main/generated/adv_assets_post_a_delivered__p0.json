@@ -1,0 +1,144 @@
+{
+  "format": "adv-row-rle-v2",
+  "name": "adv_assets_post_a_delivered__p0",
+  "width": 36,
+  "height": 40,
+  "palette_rgb565": [
+    0,
+    2080,
+    6307,
+    8453,
+    8520,
+    10633,
+    10698,
+    12580,
+    12614,
+    12714,
+    14661,
+    14693,
+    14694,
+    14726,
+    14793,
+    16708,
+    16773,
+    16774,
+    18919,
+    18952,
+    20869,
+    21032,
+    22982,
+    23211,
+    29255,
+    29321,
+    31433,
+    33645,
+    35594,
+    36087,
+    37512,
+    39754,
+    39853,
+    42032,
+    42261,
+    46520,
+    48272,
+    48699,
+    50516,
+    52925,
+    54416,
+    54676,
+    54807,
+    58674,
+    59066,
+    59165,
+    60852,
+    60917,
+    60983,
+    61246,
+    61278,
+    63259,
+    63326,
+    63357,
+    63390,
+    63391,
+    65111,
+    65176,
+    65209,
+    65273,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "data_bytes": 2445,
+  "table_bytes": 1120,
+  "frame_sha256": [
+    "412224997071947cc54784f586fcc01749bdeb86c1d2be2a416190a99e4f83b8",
+    "ce9f51562d3b759b867270d65f2976270fb8a10ef7dd14e19f13ebb57714b192",
+    "b47f91c8f85c56a481ca5640f927c6aa2667c000cc75f9c7293f4fd56d204581",
+    "d9381de558fb5c891f6ddb6b0b6ff75af4db53c42be69d844a79bf890a49efab",
+    "851943a9911fadc59b8c22018533cab2170a444d51c32cf786fbd2f1d13a4777",
+    "412224997071947cc54784f586fcc01749bdeb86c1d2be2a416190a99e4f83b8"
+  ],
+  "source_sha256": [
+    "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2",
+    "d86d0575ed749afd991a1d52f21b8c60f952442f3110d68c2b55a9317181086d",
+    "80edf6aeaeebfed379212ffadf973e5183a53fd6d836fe75a01acd1257b7d5b4",
+    "c17c6121ebec5c9249b87043b25ce78e26bb0ba84b86a44934382a767f90b003",
+    "06022016c7b905a535ae7cf24a6b25cab4ea62e49067556da6472aacfabcbb20",
+    "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2"
+  ],
+  "verified_frames": 6,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "post_a/delivered",
+  "group": "post",
+  "symbol": "adv_assets_post_a_delivered__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\delivered\\000.png",
+      "sha256": "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\delivered\\001.png",
+      "sha256": "d86d0575ed749afd991a1d52f21b8c60f952442f3110d68c2b55a9317181086d"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\delivered\\002.png",
+      "sha256": "80edf6aeaeebfed379212ffadf973e5183a53fd6d836fe75a01acd1257b7d5b4"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\delivered\\003.png",
+      "sha256": "c17c6121ebec5c9249b87043b25ce78e26bb0ba84b86a44934382a767f90b003"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\delivered\\004.png",
+      "sha256": "06022016c7b905a535ae7cf24a6b25cab4ea62e49067556da6472aacfabcbb20"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\delivered\\005.png",
+      "sha256": "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "post_a/delivered",
+      "logical_symbol": "adv_assets_post_a_delivered__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>NABO 小火车 · 正式玩法原型</title>
+<style>body{background:#fffaf0;color:#203849;font:16px system-ui;margin:24px}main{display:flex;gap:28px;flex-wrap:wrap}canvas{width:360px;height:480px;image-rendering:pixelated;border:8px solid #203849;border-radius:12px}aside{max-width:440px}button{background:#203849;color:#fffaf0;border:0;border-radius:6px;padding:12px;margin:4px;font:700 16px system-ui}label{display:block;margin:14px 0}pre{font-size:12px}p{line-height:1.7}</style>
+<h1>NABO 小火车送信</h1><main><canvas width="240" height="320" id="game"></canvas><aside>
+<p>上/下选下一岔口的轨道。站牌与队首信封颜色相同、同轨时点 OK 卸信；按住 OK 鸣笛驱赶羊牛。煤堆补蒸汽，送完回车库补信。</p>
+<p id="state">加载原尺寸美术…</p><button id="restart">新一局</button><button id="pause">暂停</button>
+<label>原型初速 <input id="speed" type="range" min="60" max="140" value="90"><output id="speed-value">90</output></label>
+<label>每秒自然耗汽 <input id="drain" type="range" min="10" max="40" value="20"><output id="drain-value">20</output></label>
+<p>滑杆仅用于原型调参，下局生效。生产默认90、20；屏内使用原尺寸精灵，网页整体放大仅便于查看。</p>
+<div><button data-key="up_down">上轨 ↑</button><button data-key="down_down">下轨 ↓</button><button id="ok">OK</button></div>
+<pre id="debug"></pre></aside></main>
+<script src="adv_post.js"></script><script src="adv_post_draw.js"></script><script>
+(async()=>{'use strict';await AdvPostDraw.load();const c=document.querySelector('canvas').getContext('2d');
+let g,paused=false,held=false,input={},last=performance.now(),acc=0;
+function restart(){g=AdvPost.start(1234,{speed:+document.querySelector('#speed').value,drain:+document.querySelector('#drain').value});input={};held=false;paused=false;}
+for(const name of ['speed','drain'])document.querySelector('#'+name).oninput=e=>document.querySelector('#'+name+'-value').value=e.target.value;
+function press(key){if(key==='ok'){if(!held)input.ok_down=1;held=true;}else input[key]=1;}
+function release(){input.ok_up=1;held=false;}
+document.querySelector('#restart').onclick=restart;document.querySelector('#pause').onclick=()=>paused=!paused;
+addEventListener('keydown',e=>{const key={ArrowUp:'up_down',ArrowDown:'down_down',Enter:'ok',' ':'ok'}[e.key];if(key){e.preventDefault();if(!e.repeat)press(key);}});
+addEventListener('keyup',e=>{if(['Enter',' '].includes(e.key)){e.preventDefault();release();}});
+addEventListener('blur',()=>{held=false;input={};paused=true;});
+for(const b of document.querySelectorAll('[data-key]'))b.onpointerdown=()=>press(b.dataset.key);
+const ok=document.querySelector('#ok');ok.onpointerdown=e=>{ok.setPointerCapture(e.pointerId);press('ok');};ok.onpointerup=release;ok.onpointercancel=release;
+restart();rootAccess();function rootAccess(){window.postPrototype={get state(){return g;},step(i){AdvPost.step(g,i);},restart};}
+function frame(now){acc+=Math.min(100,now-last);last=now;while(acc>=1000/60){if(!paused&&!g.over){AdvPost.step(g,Object.assign({ok_held:+held},input));input={};}acc-=1000/60;}
+AdvPostDraw.draw(c,g);document.querySelector('#state').textContent=(g.over?'蒸汽耗尽 · 新一局再试':paused?'已暂停':'送达 '+g.score+' 封 · 蒸汽 '+g.res+' · '+(g.whistle?'鸣笛':'运行中'));
+document.querySelector('#debug').textContent=JSON.stringify({seed:1234,frame:g.tick,lap:g.lap,remaining:g.remaining,lane:g.lane,choice:g.choice,spawnBlocked:g.spawnBlocked});requestAnimationFrame(frame);}
+requestAnimationFrame(frame);})();
+</script></html>

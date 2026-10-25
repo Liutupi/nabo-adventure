@@ -68,6 +68,7 @@ class Sprites(unittest.TestCase):
         lib.sprite_host_add.argtypes = [C.POINTER(Asset), C.c_uint, C.c_int, C.c_int]
         lib.sprite_host_tint.argtypes = [C.POINTER(Asset), C.c_uint, C.c_int, C.c_int, C.c_uint16]
         lib.sprite_host_dim.argtypes = lib.sprite_host_add.argtypes
+        lib.sprite_host_crop.argtypes=[C.POINTER(Asset),C.c_uint]+[C.c_int]*6
         lib.sprite_host_flush.argtypes = [C.POINTER(C.c_uint16)]
         lib.sprite_host_flush.restype = C.c_uint
 
@@ -248,6 +249,26 @@ class Sprites(unittest.TestCase):
                 self.assertTrue(add(C.byref(a), 0, 20, 10))
                 self.lib.sprite_host_flush(out)
                 self.assertEqual(list(out), expected)
+
+    def test_crop_keeps_native_source_coordinates_and_checks_bounds(self):
+        pixels=bytes([x%3 for y in range(5) for x in range(8)])
+        a=asset_for([0,0xf800,0],packer.pack(8,5,[pixels]))
+        self.lib.sprite_host_reset();out=(C.c_uint16*(240*320))()
+        # The first two share destination bounds but use different source pixels.
+        for x,y,sx,sy,w,h in [(5,6,2,1,4,3),(4,5,3,2,4,3),(-4,-2,1,1,7,4),(237,317,0,0,8,5)]:
+            expected=[0x1357]*(240*320)
+            for yy in range(sy,sy+h):
+                for xx in range(sx,sx+w):
+                    v=pixels[yy*8+xx]
+                    if v and 0<=x+xx<240 and 0<=y+yy<320:expected[(y+yy)*240+x+xx]=[0,0xf800,0][v]
+            for full in (False,True):
+                self.lib.sprite_host_begin(full)
+                self.assertTrue(self.lib.sprite_host_crop(C.byref(a),0,x,y,sx,sy,w,h))
+                self.lib.sprite_host_flush(out);self.assertEqual(list(out),expected)
+        for sx,sy,w,h in [(-1,0,1,1),(0,-1,1,1),(8,0,1,1),(0,5,1,1),(0,0,0,1),(0,0,1,0),(0,0,9,1),(0,0,1,6),(2147483647,0,1,1)]:
+            self.lib.sprite_host_begin(0)
+            self.assertFalse(self.lib.sprite_host_crop(C.byref(a),0,0,0,sx,sy,w,h))
+            self.lib.sprite_host_flush(out);self.assertEqual(list(out),[0x1357]*(240*320))
 
     def test_decoder_rejects_malformed_streams_and_bounds(self):
         def make(data=b'\x04\x01', rows=None, keys=None):

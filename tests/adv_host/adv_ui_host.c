@@ -4,6 +4,7 @@
 #include <string.h>
 #include "adv_gfx.h"
 #include "adv_model.h"
+#include "adv_post.h"
 #include "adv_ui.h"
 #include "adv_ui_animation.h"
 #include "nabo_jump_model.h"
@@ -62,6 +63,29 @@ int host_overflow(void) { return adv_ui_overflow(); }
 int host_page(void) { return model.page; }
 int host_phase(void) { return model.in_session ? model.phase : -1; }
 uint32_t host_bytes(void) { return adv_ui_bytes(); }
+
+void host_post_case(int which)
+{
+    if(!model.in_session){model.test=true;model.page=ADV_PAGE_MAP;adv_test_open(&model,3);}
+    model.phase=ADV_PLAY;adv_post_t *p=model.game;adv_post_start(p,1234);
+    p->tick=10;p->distance=600;p->next_fork=p->next_coal=p->next_animal=10000;
+    if(which==1){p->whistle=1;p->hold=22;}
+    if(which==2){p->lane=0;p->y=184;p->hit=24;}
+    if(which==3)p->delivered=50;
+    if(which==4)p->delivered=20;
+    if(which==5){p->lane=0;p->y=220;p->transition=40;p->events[0]=(adv_post_event_t){POST_FORK,110*60,0,0,1,0};}
+    if(which==6){
+        p->remaining=5;p->mail[3]=3;p->mail[4]=1;
+        const adv_post_event_t events[]={
+            {POST_FORK,50*60,0,0,0,0},{POST_FORK,275*60,0,0,0,0},
+            {POST_STATION,200*60,0,0,0,0},{POST_STATION,170*60,1,2,0,0},
+            {POST_ANIMAL,220*60,0,1,0,0},{POST_ANIMAL,180*60,1,0,0,0},
+            {POST_COAL,235*60,1,0,0,0},{POST_COAL,130*60,0,0,0,0},
+            {POST_COAL,10*60,1,0,0,0},{POST_DEPOT,225*60,1,0,0,0},
+            {POST_STATION,-10*60,0,1,1,0},{POST_ANIMAL,250*60,0,0,2,36}};
+        memcpy(p->events,events,sizeof(events));
+    }
+}
 
 // ---------- legacy jump ----------
 

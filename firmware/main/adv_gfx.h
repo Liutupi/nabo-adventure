@@ -44,7 +44,7 @@ typedef struct {
         struct { int16_t cx, cy; uint16_t color; uint8_t up, size; } tri;
         struct { int16_t cx, cy, r; uint16_t color; } glow;
         struct { const uint16_t *pixels; int16_t w; } bitmap;
-        struct { const adv_sprite_t *asset; uint16_t frame, color; bool tinted, dimmed; } sprite;
+        struct { const adv_sprite_t *asset; uint16_t frame, color; bool tinted, dimmed; int16_t origin_x,origin_y; } sprite;
         struct { const adv_ninepatch_t *asset; } ninepatch;
     } u;
 } ag_op_t;
@@ -79,6 +79,9 @@ bool ag_tri(ag_t *g, int cx, int cy, int size, bool up, uint16_t color);
 bool ag_glow(ag_t *g, int cx, int cy, int r, uint16_t color);
 bool ag_bitmap(ag_t *g, const uint16_t *pixels, int x, int y, int w, int h);
 bool ag_sprite(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y);
+// Keep native pixel coordinates, but omit an explicitly bounded source region's
+// exterior from painting and dirty bounds. No scaling or framebuffer allocation.
+bool ag_sprite_crop(ag_t *g,const adv_sprite_t *asset,unsigned frame,int x,int y,int sx,int sy,int w,int h);
 // Recolour every nontransparent pixel, e.g. the white stamp masters.
 bool ag_sprite_tint(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y, uint16_t color);
 bool ag_sprite_dim(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y);

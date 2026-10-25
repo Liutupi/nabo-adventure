@@ -1,0 +1,51 @@
+{
+  "format": "adv-row-rle-v2",
+  "name": "adv_assets_game_post_tiles_sleepers__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    44173,
+    48007
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 628,
+  "table_bytes": 142,
+  "frame_sha256": [
+    "96ba2527e46414477e50b733f67c382a2890f5e8a0fd8295864ba31239e3a571"
+  ],
+  "source_sha256": [
+    "3a25a0c263e63843c437829a7d81b415fee5c41beca193bccfcbb99bbc405c40"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/post/tiles/sleepers",
+  "group": "post",
+  "symbol": "adv_assets_game_post_tiles_sleepers__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\tiles\\sleepers.png",
+      "sha256": "3a25a0c263e63843c437829a7d81b415fee5c41beca193bccfcbb99bbc405c40"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/post/tiles/sleepers",
+      "logical_symbol": "adv_assets_game_post_tiles_sleepers__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

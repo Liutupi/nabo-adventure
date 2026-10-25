@@ -41,6 +41,11 @@ int sprite_host_dim(const adv_sprite_t *s, unsigned frame, int x, int y)
     return ag_sprite_dim(&gfx, s, frame, x, y);
 }
 
+int sprite_host_crop(const adv_sprite_t *s,unsigned f,int x,int y,int sx,int sy,int w,int h)
+{
+    return ag_sprite_crop(&gfx,s,f,x,y,sx,sy,w,h);
+}
+
 unsigned sprite_host_flush(uint16_t *out)
 {
     ag_flush(&gfx);

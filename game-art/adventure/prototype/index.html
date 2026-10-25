@@ -80,12 +80,15 @@
     <div class="panel"><h2>状态（view，与 C 快照同字段）</h2><pre id="state"></pre></div>
   </section>
 </main>
+<script src="adv_post.js"></script>
+<script src="adv_post_draw.js"></script>
 <script src="adv_core.js"></script>
 <script src="adv_draw.js"></script>
 <script>
 (function () {
   'use strict';
   const A = window.AdvCore;
+  window.AdvPostDraw.load().catch(error=>console.error('POST art failed',error));
   const canvas = document.getElementById('screen');
   const ctx = canvas.getContext('2d');
   const SETTINGS = { volume: 70, brightness: 80, sleep: 300, speaker: true };

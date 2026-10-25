@@ -189,6 +189,8 @@
       return;
     }
     const d = s.game;
+    if(s.station===3)root.AdvPostDraw.draw(c,d);
+    else {
     text('f16', '占位关卡', 120, 108, 'center', PAPER);
     text('f12', '正式玩法和美术完成后替换', 120, 128, 'center', DIM);
     const zx = 20 + (d.zc - d.zh) * 200 / 1000 | 0, zw = d.zh * 400 / 1000 | 0, mx = 20 + d.p * 200 / 1000 | 0;
@@ -197,6 +199,7 @@
     if (d.hit) glow(mx, 190, 26, GOLD);
     rect(mx - 3, 174, 6, 32, 3, WHITE, 255, INK, 1); tri(mx, 214, 10, true, WHITE);
     text('f12', '色块里按 OK 得分 · 按错扣四分之一', 120, 248, 'center', PAPER);
+    }
     rect(0, 0, 240, 34, 0, INK, 210); text('f12', st.res, 10, 21, 'left', PAPER);
     rect(40, 12, 124, 10, 5, rgb(20, 24, 40), 255, PAPER, 1);
     const w = d.res * 120 / 1000 | 0;

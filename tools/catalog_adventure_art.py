@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 
 from adventure_assets_manifest import GAME_GROUPS, load_resources, digest
-from build_adventure_assets import proof_tools
+from build_adventure_assets import proof_tools, INTEGRATED_GAMES
 
 ROOT = Path(__file__).resolve().parents[1]
 ART = ROOT / 'game-art/adventure/art'
@@ -73,17 +73,22 @@ def main():
     # The loader verifies explicit paths, hashes, dimensions, alpha and palettes.
     groups = ('travel', 'ui', 'static', *GAME_GROUPS)
     resources, manifests, ui = load_resources(ART, groups)
+    common_report=json.loads((ROOT/'firmware/main/generated/adv_assets_generated.json').read_text('utf-8'))
+    common_groups=set(common_report['groups']);base={'travel','ui','static'}
+    if not base<=common_groups or not common_groups<=base|set(INTEGRATED_GAMES):
+        raise ValueError('Production package declares unsupported gameplay integration')
+    integrated=sorted(common_groups-base)
     common_dependencies = {name: sha for name, sha in manifests.items() if name not in
-                           {f'{game}-manifest.json' for game in GAME_GROUPS}}
+                           {f'{game}-manifest.json' for game in GAME_GROUPS if game not in integrated}}
     common = evidence(ROOT / 'firmware/main/generated/adv_assets_generated.json',
                       common_dependencies,
-                      [r for r in resources if r.group in ('travel', 'ui', 'static')], ui=ui)
+                      [r for r in resources if r.group in common_groups], ui=ui)
     games = {game: evidence(ROOT / 'private/game-art-c' / game / 'adv_assets_generated.json',
                             (f'{game}-manifest.json',), [r for r in resources if r.group == game]) for game in GAME_GROUPS}
     source = ART / 'reference/nabo-idle-original.png'
     catalog = {
         'schema': 'nabo-adventure-art-catalog-v1',
-        'scope': 'eleven art rounds; six new gameplay implementations remain separate',
+        'scope': 'eleven art rounds; gameplay integration is listed separately',
         'identity': {'path': source.relative_to(ART).as_posix(), 'sha256': digest(source)},
         'selected_travel_design': 'design/round1/v2/01-hiker-design-board.png',
         'selected_ui_theme': 'ui/design/round3/01-passport',
@@ -95,8 +100,9 @@ def main():
                        'frame_count': len(r.paths)} for r in resources],
         'production_c_evidence': {'common': common, **games},
         'device': {'common_candidate_sha256': args.candidate_sha256,
-                   'new_game_art_embedded_in_this_candidate': False,
-                   'reason': 'Independent game art packages await formal game integration; physical factory is 2,031,616 bytes.'},
+                   'new_game_art_embedded_in_this_candidate': bool(integrated),
+                   'integrated_game_groups': integrated,
+                   'reason': 'Only explicitly integrated games are embedded; physical factory is 2,031,616 bytes.'},
         'acceptance': 'Source integrity and actual C decoder checks; visual/device checks are recorded separately in ART_PROGRESS and VALIDATION.',
     }
     target = ART / 'catalog.json'

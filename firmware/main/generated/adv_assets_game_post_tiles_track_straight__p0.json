@@ -1,0 +1,52 @@
+{
+  "format": "adv-row-rle-v2",
+  "name": "adv_assets_game_post_tiles_track_straight__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    40276,
+    44173,
+    48007
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 452,
+  "table_bytes": 144,
+  "frame_sha256": [
+    "08358c39e103e7c887d6d198b709bf593cdd007d03de6bea98ee1b4d715ac795"
+  ],
+  "source_sha256": [
+    "db7eda758de16a707bb8893ece580f36cd16ddaf6694c596baeb0d4805bf21ff"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/post/tiles/track-straight",
+  "group": "post",
+  "symbol": "adv_assets_game_post_tiles_track_straight__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\tiles\\track-straight.png",
+      "sha256": "db7eda758de16a707bb8893ece580f36cd16ddaf6694c596baeb0d4805bf21ff"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/post/tiles/track-straight",
+      "logical_symbol": "adv_assets_game_post_tiles_track_straight__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

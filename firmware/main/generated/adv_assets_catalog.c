@@ -1,5 +1,37 @@
 #include "adv_assets_catalog.h"
 #include <string.h>
+#include "adv_assets_game_post_props_cab_foreground__p0.h"
+#include "adv_assets_game_post_props_carriage__p0.h"
+#include "adv_assets_game_post_props_coal_pile__p0.h"
+#include "adv_assets_game_post_props_cow__p0.h"
+#include "adv_assets_game_post_props_envelope_blue__p0.h"
+#include "adv_assets_game_post_props_envelope_gray__p0.h"
+#include "adv_assets_game_post_props_envelope_green__p0.h"
+#include "adv_assets_game_post_props_envelope_orange__p0.h"
+#include "adv_assets_game_post_props_envelope_red__p0.h"
+#include "adv_assets_game_post_props_envelope_yellow__p0.h"
+#include "adv_assets_game_post_props_locomotive_body__p0.h"
+#include "adv_assets_game_post_props_sheep__p0.h"
+#include "adv_assets_game_post_props_station_platform_mask__p0.h"
+#include "adv_assets_game_post_props_wheel_000__p0.h"
+#include "adv_assets_game_post_props_wheel_001__p0.h"
+#include "adv_assets_game_post_props_wheel_002__p0.h"
+#include "adv_assets_game_post_props_wheel_003__p0.h"
+#include "adv_assets_game_post_tiles_far_mountains__p0.h"
+#include "adv_assets_game_post_tiles_rails__p0.h"
+#include "adv_assets_game_post_tiles_sleepers__p0.h"
+#include "adv_assets_game_post_tiles_track_fork__p0.h"
+#include "adv_assets_game_post_tiles_track_straight__p0.h"
+#include "adv_assets_post_a_delivered__p0.h"
+#include "adv_assets_post_a_hit__p0.h"
+#include "adv_assets_post_a_idle__p0.h"
+#include "adv_assets_post_a_settlement_cheer__p0.h"
+#include "adv_assets_post_a_throw__p0.h"
+#include "adv_assets_post_a_whistle__p0.h"
+#include "adv_assets_post_b_delivered__p0.h"
+#include "adv_assets_post_b_idle__p0.h"
+#include "adv_assets_post_props_wheel_cycle__p0.h"
+#include "adv_assets_post_props_whistle_cord__p0.h"
 #include "adv_assets_static_icon_fuel__p0.h"
 #include "adv_assets_static_icon_hot_air__p0.h"
 #include "adv_assets_static_icon_oxygen__p0.h"
@@ -174,6 +206,102 @@
 #include "adv_assets_ui_wordmarks_ski__p0.h"
 #include "adv_assets_ui_wordmarks_sky__p0.h"
 #include "adv_assets_ui_wordmarks_space__p0.h"
+static const adv_asset_piece_t adv_assets_game_post_props_cab_foreground__pieces[] = {
+    {&adv_assets_game_post_props_cab_foreground__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_carriage__pieces[] = {
+    {&adv_assets_game_post_props_carriage__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_coal_pile__pieces[] = {
+    {&adv_assets_game_post_props_coal_pile__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_cow__pieces[] = {
+    {&adv_assets_game_post_props_cow__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_envelope_blue__pieces[] = {
+    {&adv_assets_game_post_props_envelope_blue__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_envelope_gray__pieces[] = {
+    {&adv_assets_game_post_props_envelope_gray__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_envelope_green__pieces[] = {
+    {&adv_assets_game_post_props_envelope_green__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_envelope_orange__pieces[] = {
+    {&adv_assets_game_post_props_envelope_orange__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_envelope_red__pieces[] = {
+    {&adv_assets_game_post_props_envelope_red__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_envelope_yellow__pieces[] = {
+    {&adv_assets_game_post_props_envelope_yellow__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_locomotive_body__pieces[] = {
+    {&adv_assets_game_post_props_locomotive_body__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_sheep__pieces[] = {
+    {&adv_assets_game_post_props_sheep__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_station_platform_mask__pieces[] = {
+    {&adv_assets_game_post_props_station_platform_mask__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_wheel_000__pieces[] = {
+    {&adv_assets_game_post_props_wheel_000__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_wheel_001__pieces[] = {
+    {&adv_assets_game_post_props_wheel_001__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_wheel_002__pieces[] = {
+    {&adv_assets_game_post_props_wheel_002__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_props_wheel_003__pieces[] = {
+    {&adv_assets_game_post_props_wheel_003__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_tiles_far_mountains__pieces[] = {
+    {&adv_assets_game_post_tiles_far_mountains__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_tiles_rails__pieces[] = {
+    {&adv_assets_game_post_tiles_rails__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_tiles_sleepers__pieces[] = {
+    {&adv_assets_game_post_tiles_sleepers__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_tiles_track_fork__pieces[] = {
+    {&adv_assets_game_post_tiles_track_fork__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_post_tiles_track_straight__pieces[] = {
+    {&adv_assets_game_post_tiles_track_straight__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_post_a_delivered__pieces[] = {
+    {&adv_assets_post_a_delivered__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_post_a_hit__pieces[] = {
+    {&adv_assets_post_a_hit__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_post_a_idle__pieces[] = {
+    {&adv_assets_post_a_idle__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_post_a_settlement_cheer__pieces[] = {
+    {&adv_assets_post_a_settlement_cheer__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_post_a_throw__pieces[] = {
+    {&adv_assets_post_a_throw__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_post_a_whistle__pieces[] = {
+    {&adv_assets_post_a_whistle__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_post_b_delivered__pieces[] = {
+    {&adv_assets_post_b_delivered__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_post_b_idle__pieces[] = {
+    {&adv_assets_post_b_idle__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_post_props_wheel_cycle__pieces[] = {
+    {&adv_assets_post_props_wheel_cycle__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_post_props_whistle_cord__pieces[] = {
+    {&adv_assets_post_props_whistle_cord__p0, 0, 0},
+};
 static const adv_asset_piece_t adv_assets_static_icon_fuel__pieces[] = {
     {&adv_assets_static_icon_fuel__p0, 0, 0},
 };
@@ -820,6 +948,38 @@ static const adv_asset_piece_t adv_assets_ui_wordmarks_space__pieces[] = {
     {&adv_assets_ui_wordmarks_space__p0, 0, 0},
 };
 const adv_asset_record_t adv_assets_catalog[] = {
+    {"game/post/props/cab-foreground", adv_assets_game_post_props_cab_foreground__pieces, 1, 96, 88, 48, 81, 0, false},
+    {"game/post/props/carriage", adv_assets_game_post_props_carriage__pieces, 1, 64, 48, 32, 44, 0, false},
+    {"game/post/props/coal-pile", adv_assets_game_post_props_coal_pile__pieces, 1, 32, 24, 16, 23, 0, false},
+    {"game/post/props/cow", adv_assets_game_post_props_cow__pieces, 1, 48, 36, 24, 34, 0, false},
+    {"game/post/props/envelope-blue", adv_assets_game_post_props_envelope_blue__pieces, 1, 32, 24, 16, 12, 0, false},
+    {"game/post/props/envelope-gray", adv_assets_game_post_props_envelope_gray__pieces, 1, 32, 24, 16, 12, 0, false},
+    {"game/post/props/envelope-green", adv_assets_game_post_props_envelope_green__pieces, 1, 32, 24, 16, 12, 0, false},
+    {"game/post/props/envelope-orange", adv_assets_game_post_props_envelope_orange__pieces, 1, 32, 24, 16, 12, 0, false},
+    {"game/post/props/envelope-red", adv_assets_game_post_props_envelope_red__pieces, 1, 32, 24, 16, 12, 0, false},
+    {"game/post/props/envelope-yellow", adv_assets_game_post_props_envelope_yellow__pieces, 1, 32, 24, 16, 12, 0, false},
+    {"game/post/props/locomotive-body", adv_assets_game_post_props_locomotive_body__pieces, 1, 96, 88, 48, 81, 0, false},
+    {"game/post/props/sheep", adv_assets_game_post_props_sheep__pieces, 1, 40, 32, 20, 28, 0, false},
+    {"game/post/props/station-platform-mask", adv_assets_game_post_props_station_platform_mask__pieces, 1, 80, 56, 40, 56, 0, false},
+    {"game/post/props/wheel-000", adv_assets_game_post_props_wheel_000__pieces, 1, 96, 88, 48, 81, 0, false},
+    {"game/post/props/wheel-001", adv_assets_game_post_props_wheel_001__pieces, 1, 96, 88, 48, 81, 0, false},
+    {"game/post/props/wheel-002", adv_assets_game_post_props_wheel_002__pieces, 1, 96, 88, 48, 81, 0, false},
+    {"game/post/props/wheel-003", adv_assets_game_post_props_wheel_003__pieces, 1, 96, 88, 48, 81, 0, false},
+    {"game/post/tiles/far-mountains", adv_assets_game_post_tiles_far_mountains__pieces, 1, 96, 32, 48, 32, 0, false},
+    {"game/post/tiles/rails", adv_assets_game_post_tiles_rails__pieces, 1, 32, 32, 16, 32, 0, false},
+    {"game/post/tiles/sleepers", adv_assets_game_post_tiles_sleepers__pieces, 1, 32, 32, 16, 32, 0, false},
+    {"game/post/tiles/track-fork", adv_assets_game_post_tiles_track_fork__pieces, 1, 64, 56, 32, 36, 0, false},
+    {"game/post/tiles/track-straight", adv_assets_game_post_tiles_track_straight__pieces, 1, 32, 32, 16, 32, 0, false},
+    {"post_a/delivered", adv_assets_post_a_delivered__pieces, 1, 36, 40, 22, 40, 12, false},
+    {"post_a/hit", adv_assets_post_a_hit__pieces, 1, 36, 40, 22, 40, 12, false},
+    {"post_a/idle", adv_assets_post_a_idle__pieces, 1, 36, 40, 22, 40, 12, true},
+    {"post_a/settlement_cheer", adv_assets_post_a_settlement_cheer__pieces, 1, 49, 72, 27, 72, 12, false},
+    {"post_a/throw", adv_assets_post_a_throw__pieces, 1, 36, 40, 22, 40, 12, false},
+    {"post_a/whistle", adv_assets_post_a_whistle__pieces, 1, 36, 40, 22, 40, 12, false},
+    {"post_b/delivered", adv_assets_post_b_delivered__pieces, 1, 36, 40, 22, 40, 12, false},
+    {"post_b/idle", adv_assets_post_b_idle__pieces, 1, 36, 40, 22, 40, 12, true},
+    {"post_props/wheel-cycle", adv_assets_post_props_wheel_cycle__pieces, 1, 96, 88, 48, 81, 12, true},
+    {"post_props/whistle-cord", adv_assets_post_props_whistle_cord__pieces, 1, 96, 88, 48, 81, 12, false},
     {"static/icon/fuel", adv_assets_static_icon_fuel__pieces, 1, 16, 16, 8, 8, 0, false},
     {"static/icon/hot-air", adv_assets_static_icon_hot_air__pieces, 1, 16, 16, 8, 8, 0, false},
     {"static/icon/oxygen", adv_assets_static_icon_oxygen__pieces, 1, 16, 16, 8, 8, 0, false},
@@ -1050,32 +1210,32 @@ const adv_ninepatch_t adv_assets_patch_info_normal = {{&adv_assets_ui_cards_info
 const adv_ninepatch_t adv_assets_patch_info_current = {{&adv_assets_ui_cards_info_current_top_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_top_right__p0, &adv_assets_ui_cards_info_current_left__p0, &adv_assets_ui_cards_info_current_center__p0, &adv_assets_ui_cards_info_current_right__p0, &adv_assets_ui_cards_info_current_bottom_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_bottom_right__p0}};
 const adv_ninepatch_t adv_assets_patch_popup_normal = {{&adv_assets_ui_cards_popup_normal_top_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_top_right__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_info_normal_center__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_popup_normal_bottom_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_bottom_right__p0}};
 const adv_asset_digit_t adv_assets_digits_36[] = {
-    {48, &adv_assets_catalog[174], 36},
-    {49, &adv_assets_catalog[175], 22},
-    {50, &adv_assets_catalog[176], 31},
-    {51, &adv_assets_catalog[177], 32},
-    {52, &adv_assets_catalog[178], 36},
-    {53, &adv_assets_catalog[179], 31},
-    {54, &adv_assets_catalog[180], 34},
-    {55, &adv_assets_catalog[181], 33},
-    {56, &adv_assets_catalog[182], 35},
-    {57, &adv_assets_catalog[183], 33},
-    {109, &adv_assets_catalog[184], 53},
-    {43, &adv_assets_catalog[185], 31},
+    {48, &adv_assets_catalog[206], 36},
+    {49, &adv_assets_catalog[207], 22},
+    {50, &adv_assets_catalog[208], 31},
+    {51, &adv_assets_catalog[209], 32},
+    {52, &adv_assets_catalog[210], 36},
+    {53, &adv_assets_catalog[211], 31},
+    {54, &adv_assets_catalog[212], 34},
+    {55, &adv_assets_catalog[213], 33},
+    {56, &adv_assets_catalog[214], 35},
+    {57, &adv_assets_catalog[215], 33},
+    {109, &adv_assets_catalog[216], 53},
+    {43, &adv_assets_catalog[217], 31},
 };
 const adv_asset_digit_t adv_assets_digits_20[] = {
-    {48, &adv_assets_catalog[162], 22},
-    {49, &adv_assets_catalog[163], 15},
-    {50, &adv_assets_catalog[164], 20},
-    {51, &adv_assets_catalog[165], 19},
-    {52, &adv_assets_catalog[166], 22},
-    {53, &adv_assets_catalog[167], 20},
-    {54, &adv_assets_catalog[168], 21},
-    {55, &adv_assets_catalog[169], 20},
-    {56, &adv_assets_catalog[170], 21},
-    {57, &adv_assets_catalog[171], 21},
-    {109, &adv_assets_catalog[172], 32},
-    {43, &adv_assets_catalog[173], 20},
+    {48, &adv_assets_catalog[194], 22},
+    {49, &adv_assets_catalog[195], 15},
+    {50, &adv_assets_catalog[196], 20},
+    {51, &adv_assets_catalog[197], 19},
+    {52, &adv_assets_catalog[198], 22},
+    {53, &adv_assets_catalog[199], 20},
+    {54, &adv_assets_catalog[200], 21},
+    {55, &adv_assets_catalog[201], 20},
+    {56, &adv_assets_catalog[202], 21},
+    {57, &adv_assets_catalog[203], 21},
+    {109, &adv_assets_catalog[204], 32},
+    {43, &adv_assets_catalog[205], 20},
 };
 const uint16_t adv_assets_ui_palette[] = {8649, 15375, 17298, 25487, 35986, 38099, 40276, 44406, 45672, 46518, 48007, 54567, 56595, 57082, 63356, 65502};
 const size_t adv_assets_ui_palette_count = 16;

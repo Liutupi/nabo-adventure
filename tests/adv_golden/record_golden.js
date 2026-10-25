@@ -25,11 +25,13 @@ function recorder(seed, best, seen) {
     steps(n) { let fx = 0; for (let i = 0; i < n; i++) fx |= A.step(m); push(['s', n], fx); },
     legacy(best) { push(['l', best], A.legacyDone(m, best)); },
     test(on) { m.test = !!on; push(['t', on ? 1 : 0], 0); },
+    open(s) {push(['o',s],A.testOpen(m,s));},
   };
 }
 
 // Plays the placeholder game: presses OK when the marker is inside the zone (or misses on purpose).
 function playDemo(r, hits, misses) {
+  if(r.m.session.station===3)return playPost(r,hits,misses);
   const s = () => r.m.session;
   while (s() && s().phase === A.PHASE.READY) r.steps(30);
   let made = 0, missed = 0, guard = 0;
@@ -41,6 +43,23 @@ function playDemo(r, hits, misses) {
     else r.steps(1);
   }
   while (s() && s().phase === A.PHASE.END) r.steps(20);
+}
+
+function playPost(r,hits,misses) {
+  while(r.m.session.phase===A.PHASE.READY)r.steps(30);
+  let errors=0,guard=0;
+  while(r.m.session.phase===A.PHASE.PLAY&&guard++<12000){
+    const g=r.m.session.game;
+    const station=g.events.filter(e=>e.type===2&&!e.done&&e.x>=A.Post.X-A.Post.WINDOW).sort((a,b)=>a.x-b.x)[0];
+    const fork=g.events.find(e=>e.type===1&&!e.done);
+    if(fork&&station&&g.choice!==station.lane)r.ev(station.lane===0?BTN.UP:BTN.DOWN,EV.PRESS);
+    if((g.score<hits&&station&&station.lane===g.lane&&Math.abs(station.x-A.Post.X)<500)||
+       (g.score>=hits&&errors<misses&&!station)){
+      r.ev(BTN.OK,EV.PRESS);r.steps(1);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
+      if(g.score>=hits)errors++;
+    }else r.steps(3);
+  }
+  while(r.m.session.phase===A.PHASE.END)r.steps(20);
 }
 
 function journey() {
@@ -68,7 +87,7 @@ function journey() {
   r.click(BTN.OK);                     // resume
   r.steps(50);
   r.long(BTN.UP); r.click(BTN.DOWN);   // pause, restart
-  playDemo(r, 7, 4);
+  playDemo(r, 13, 4);
   r.long(BTN.UP);                      // result -> map (stamps)
   r.click(BTN.OK); r.click(BTN.OK);    // post bronze and silver
   r.click(BTN.UP); r.click(BTN.OK);    // night title
@@ -125,6 +144,8 @@ const traces = {
   kiosk_settings: kioskAndSettings(),
   fuzz_fresh: fuzz(7, [0, 0, 0, 0, 0, 0, 0, 0, 0], 0, 4000),
   fuzz_open: fuzz(2024, [0, 60, 650, 11, 11, 11, 11, 11, 2], 0, 4000),
+  post_test_entry:(()=>{const r=recorder(42,[0,99,0,0,0,0,0,0,0],7);r.click(BTN.OK);r.open(3);r.test(1);r.open(3);r.click(BTN.OK);playPost(r,6,4);r.long(BTN.UP);return r.trace;})(),
+  threshold_edges:(()=>{const r=recorder(99,[0,10,100,5,3,3,3,3,0],0xffffff);r.click(BTN.OK);r.click(BTN.DOWN);r.click(BTN.DOWN);r.click(BTN.OK);r.legacy(100);r.click(BTN.UP);r.click(BTN.UP);for(let s=3;s<9;s++){r.click(BTN.UP);r.click(BTN.OK);r.long(BTN.UP);}return r.trace;})(),
 };
 for (const [name, trace] of Object.entries(traces)) {
   fs.writeFileSync(path.join(out, name + '.json'), JSON.stringify(trace) + '\n');

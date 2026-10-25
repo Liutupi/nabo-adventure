@@ -1,0 +1,144 @@
+{
+  "format": "adv-row-rle-v2",
+  "name": "adv_assets_post_a_whistle__p0",
+  "width": 36,
+  "height": 40,
+  "palette_rgb565": [
+    0,
+    2080,
+    6307,
+    8453,
+    8520,
+    10633,
+    10698,
+    12580,
+    12614,
+    12714,
+    14661,
+    14693,
+    14694,
+    14726,
+    14793,
+    16708,
+    16773,
+    16774,
+    18919,
+    18952,
+    20869,
+    21032,
+    22982,
+    23211,
+    29255,
+    29321,
+    31433,
+    33645,
+    35594,
+    36087,
+    37512,
+    39754,
+    39853,
+    42032,
+    42261,
+    46520,
+    48272,
+    48699,
+    50516,
+    52925,
+    54416,
+    54676,
+    54807,
+    58674,
+    59066,
+    59165,
+    60852,
+    60917,
+    60983,
+    61246,
+    61278,
+    63259,
+    63326,
+    63357,
+    63390,
+    63391,
+    65111,
+    65176,
+    65209,
+    65273,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "data_bytes": 2050,
+  "table_bytes": 1120,
+  "frame_sha256": [
+    "412224997071947cc54784f586fcc01749bdeb86c1d2be2a416190a99e4f83b8",
+    "f6013f69606b3652636af4a36740bc78abd0f89f736c3d09f85ed8cefbb66205",
+    "8376391bfc3c6af31e245e71f2e9c0fd440bb8b27db00bfe46c36efc1e043a82",
+    "a2592e48f9cbbe559bbbbb91147c60a57457c36d4831077e0b782fae9d4c456e",
+    "20496f4053d9d4396861cbc858641b63aeae4314882ad878361a140611aeffe4",
+    "412224997071947cc54784f586fcc01749bdeb86c1d2be2a416190a99e4f83b8"
+  ],
+  "source_sha256": [
+    "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2",
+    "0411ba3d03b7aebe7a224f6247088f05d5b82668bca044a57a0ea2d1dc8b8b2d",
+    "c899bc165823f6f991c5dff4eb8da7cb626bb0dfa9841416b1cdecc8ac0d25c3",
+    "1fa3f68a7e38467420e6a35cd308672aaef579f52b198899ad68720093037469",
+    "b8e45d3870f33d528ee0b6efa17ef0834605510625047d433d64e8dc36c13b7c",
+    "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2"
+  ],
+  "verified_frames": 6,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "post_a/whistle",
+  "group": "post",
+  "symbol": "adv_assets_post_a_whistle__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\whistle\\000.png",
+      "sha256": "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\whistle\\001.png",
+      "sha256": "0411ba3d03b7aebe7a224f6247088f05d5b82668bca044a57a0ea2d1dc8b8b2d"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\whistle\\002.png",
+      "sha256": "c899bc165823f6f991c5dff4eb8da7cb626bb0dfa9841416b1cdecc8ac0d25c3"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\whistle\\003.png",
+      "sha256": "1fa3f68a7e38467420e6a35cd308672aaef579f52b198899ad68720093037469"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\whistle\\004.png",
+      "sha256": "b8e45d3870f33d528ee0b6efa17ef0834605510625047d433d64e8dc36c13b7c"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\post\\runtime\\post_a\\whistle\\005.png",
+      "sha256": "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "post_a/whistle",
+      "logical_symbol": "adv_assets_post_a_whistle__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

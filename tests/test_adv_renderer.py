@@ -18,7 +18,7 @@ BOARD = ROOT/'firmware/main'
 HOST = ROOT/'tests/adv_host'
 UP, DOWN, OK = 0, 1, 2
 PRESS, CLICK, DOUBLE, LONG, RELEASE = 0, 1, 2, 3, 4
-SOURCES = ['adv_boot_motion.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
+SOURCES = ['adv_boot_motion.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c', 'adv_ui_post.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
            'adv_text.c', 'adv_ui.c', 'adv_ui_animation.c', 'adv_ui_art.c', 'adv_ui_map.c', 'adv_ui_session.c', 'adv_ui_jump.c', 'collection_portrait.c',
            'nabo_jump_model.c', 'nabo_jump_rig.c', 'nabo_dive_text.c', 'collection_font_12.c', 'collection_font_16.c',
            'collection_font_18.c', 'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c']
@@ -87,6 +87,7 @@ class Renderer(unittest.TestCase):
         self.lib.host_draw()
         self.assertFalse(self.lib.host_overflow(), f'display list overflow at {label}')
         incremental = self.snapshot()
+        self.last_incremental_bytes=self.lib.host_bytes()
         self.lib.host_full()
         self.assertEqual(incremental, self.snapshot(), f'stale pixels at {label}')
 
@@ -113,7 +114,7 @@ class Renderer(unittest.TestCase):
         self.steps(160); self.save('play.png', True)
         self.ev(UP, PRESS); self.ev(UP, LONG); self.ev(UP, RELEASE); self.save('pause.png', True)
         self.click(OK)
-        for _ in range(600):
+        for _ in range(30000):
             self.lib.host_steps(1)
             if self.lib.host_phase() == 4: break
         self.check('end'); self.save('end.png', True)
@@ -126,6 +127,30 @@ class Renderer(unittest.TestCase):
         self.click(OK)
         for _ in range(4): self.click(DOWN)
         self.click(OK); self.save('status.png', True)
+
+    def test_post_native_playfield_reactions_and_dense_scene(self):
+        self.new([0,99,0,0,0,0,0,0,0],seen=7)
+        names=('idle','whistle','hit','throw','delivered','switch','dense')
+        for case,name in enumerate(names):
+            self.lib.host_post_case(case);self.check('POST '+name);self.save('post-'+name+'.png',True)
+        self.lib.host_post_case(0);self.check('POST fixed upper backdrop')
+        before=self.snapshot()
+        for _ in range(20):self.steps(3)
+        self.assertEqual(before[84*240:100*240],self.snapshot()[84*240:100*240])
+        self.assertLess(self.last_incremental_bytes,240*200*2,'H redraw should stay below a full screen')
+
+    def test_post_alpha_trims_cover_every_original_opaque_pixel(self):
+        import re
+        art=ROOT/'game-art/adventure/art';manifest=json.loads((art/'post-manifest.json').read_text('utf-8'))
+        source=(BOARD/'adv_ui_post.c').read_text('utf-8')
+        clips={a['skin']+'/'+a['name']:a['runtime_frames'] for a in manifest['animations']}
+        clips.update({'game/'+a['id']:[a['path']] for a in manifest['assets']})
+        for name in ('post_props/wheel-cycle','post_props/whistle-cord','game/post/props/locomotive-body','game/post/props/cab-foreground'):
+            match=re.search(r'ui_art_crop\(g,"'+re.escape(name)+r'"[^;\n]*,(\d+),(\d+),(\d+),(\d+)\);',source)
+            self.assertIsNotNone(match,name);box=tuple(map(int,match.groups()))
+            boxes=[Image.open(art/p).getbbox() for p in clips[name]]
+            union=(min(b[0] for b in boxes),min(b[1] for b in boxes),max(b[2] for b in boxes),max(b[3] for b in boxes))
+            self.assertEqual(box,union,name)
 
     def test_stamp_ceremony_every_tier(self):
         self.new([0, 60, 0, 0, 0, 0, 0, 0, 0])

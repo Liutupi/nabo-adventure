@@ -1,0 +1,51 @@
+{
+  "format": "adv-row-rle-v2",
+  "name": "adv_assets_game_post_props_envelope_red__p0",
+  "width": 32,
+  "height": 24,
+  "palette_rgb565": [
+    0,
+    8649,
+    45672,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 288,
+  "table_bytes": 110,
+  "frame_sha256": [
+    "414060d00c485d43ffa4465764c3c34d4fd48001339c78d35c80c1301d0dca44"
+  ],
+  "source_sha256": [
+    "4ebcb2af03b27d48c66a1bfa5fd543034fd76c34e0a15285f50223a5f29ff82e"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/post/props/envelope-red",
+  "group": "post",
+  "symbol": "adv_assets_game_post_props_envelope_red__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\envelope-red.png",
+      "sha256": "4ebcb2af03b27d48c66a1bfa5fd543034fd76c34e0a15285f50223a5f29ff82e"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/post/props/envelope-red",
+      "logical_symbol": "adv_assets_game_post_props_envelope_red__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "format": "adv-row-rle-v2",
+  "name": "adv_assets_post_props_wheel_cycle__p0",
+  "width": 96,
+  "height": 88,
+  "palette_rgb565": [
+    0,
+    8649,
+    40276,
+    48007,
+    54567,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "data_bytes": 2603,
+  "table_bytes": 1444,
+  "frame_sha256": [
+    "6393286002451504487cf75d903157f105a413b070035e0092f509a24081370c",
+    "4dca8e038e1f913eea00a04c4a7bc0349cab88fa13d13995d596b799e4d7dfa5",
+    "bc145bd1a4c4a58e68286d3546e3486c53f6c5b72d6743ba2e5d2bbd2c4d53d5",
+    "7a9a996b95ff11948fa59db576272111e5866a2b9345f83bc859337d28a1a441"
+  ],
+  "source_sha256": [
+    "035af1ae2f0022683ad9604ccf0522416c1b4497f65740980586656d8f523cb3",
+    "49b5cbcb12d3dbe9268c2548621461d794e40682770f8a2670dcd6c270472876",
+    "1f999c9a515a646194e3cbaaa86ba9787674ac87aa8aa6e3eed9d03a7759bf9c",
+    "cdc282974d389f3e66cd31a20be071e43dea174207b077d7eabb69114a764850"
+  ],
+  "verified_frames": 4,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "post_props/wheel-cycle",
+  "group": "post",
+  "symbol": "adv_assets_post_props_wheel_cycle__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\wheel-000.png",
+      "sha256": "035af1ae2f0022683ad9604ccf0522416c1b4497f65740980586656d8f523cb3"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\wheel-001.png",
+      "sha256": "49b5cbcb12d3dbe9268c2548621461d794e40682770f8a2670dcd6c270472876"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\wheel-002.png",
+      "sha256": "1f999c9a515a646194e3cbaaa86ba9787674ac87aa8aa6e3eed9d03a7759bf9c"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\wheel-003.png",
+      "sha256": "cdc282974d389f3e66cd31a20be071e43dea174207b077d7eabb69114a764850"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "post_props/wheel-cycle",
+      "logical_symbol": "adv_assets_post_props_wheel_cycle__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

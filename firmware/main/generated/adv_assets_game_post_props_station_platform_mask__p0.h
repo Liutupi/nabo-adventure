@@ -1,0 +1,3 @@
+#pragma once
+#include "adv_sprite.h"
+extern const adv_sprite_t adv_assets_game_post_props_station_platform_mask__p0;

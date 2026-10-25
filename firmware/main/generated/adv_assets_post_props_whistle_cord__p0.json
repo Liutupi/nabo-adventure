@@ -1,0 +1,86 @@
+{
+  "format": "adv-row-rle-v2",
+  "name": "adv_assets_post_props_whistle_cord__p0",
+  "width": 96,
+  "height": 88,
+  "palette_rgb565": [
+    0,
+    8649,
+    48007,
+    54567
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    1,
+    1,
+    1,
+    4,
+    5
+  ],
+  "data_bytes": 2541,
+  "table_bytes": 2156,
+  "frame_sha256": [
+    "7c104fb7474f7f78697186097652f4b8f2cb5c2dc5de2c167679e78a55ea86f0",
+    "7f3c469a71f9a126e907d3b89fafe0c5b43e53a47097793f4cf471d1ab736b6f",
+    "cb0f62885bdbe60bdd5de0262118af2628d201e39df3f4bd5a948fd078d3b856",
+    "2f229b4f2344f6399bd4dbfaadaf7f650cef7d163611f783fdcc8d32257bed5a",
+    "b19da14b594c73ff3b23599dce93236b37e5f07d15bd588cd1d2acf91354ffcf",
+    "7c104fb7474f7f78697186097652f4b8f2cb5c2dc5de2c167679e78a55ea86f0"
+  ],
+  "source_sha256": [
+    "8507a6d664ffcc0564bf02fe366fb2af5c5fa583272c54def0f1cac679e55958",
+    "cea8c6e919f00d58386c620d4ca5f9802f8f766722e46a2863a520cbe02ca093",
+    "b8f6d88433cd49ed1843a1e348379eacd89b61af40b8286622b950115fb60af2",
+    "35954d620c34c90e820723558e2e211ce7fe0c19455f5464ad757056082d672b",
+    "fc1d7cb85cc66a148f4e1c207ae3f68dadc41822d83cd22b47fd95e023110378",
+    "8507a6d664ffcc0564bf02fe366fb2af5c5fa583272c54def0f1cac679e55958"
+  ],
+  "verified_frames": 6,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "post_props/whistle-cord",
+  "group": "post",
+  "symbol": "adv_assets_post_props_whistle_cord__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\whistle-cord\\000.png",
+      "sha256": "8507a6d664ffcc0564bf02fe366fb2af5c5fa583272c54def0f1cac679e55958"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\whistle-cord\\001.png",
+      "sha256": "cea8c6e919f00d58386c620d4ca5f9802f8f766722e46a2863a520cbe02ca093"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\whistle-cord\\002.png",
+      "sha256": "b8f6d88433cd49ed1843a1e348379eacd89b61af40b8286622b950115fb60af2"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\whistle-cord\\003.png",
+      "sha256": "35954d620c34c90e820723558e2e211ce7fe0c19455f5464ad757056082d672b"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\whistle-cord\\004.png",
+      "sha256": "fc1d7cb85cc66a148f4e1c207ae3f68dadc41822d83cd22b47fd95e023110378"
+    },
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\whistle-cord\\005.png",
+      "sha256": "8507a6d664ffcc0564bf02fe366fb2af5c5fa583272c54def0f1cac679e55958"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "post_props/whistle-cord",
+      "logical_symbol": "adv_assets_post_props_whistle_cord__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

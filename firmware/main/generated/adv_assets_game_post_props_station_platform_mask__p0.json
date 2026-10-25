@@ -1,0 +1,49 @@
+{
+  "format": "adv-row-rle-v2",
+  "name": "adv_assets_game_post_props_station_platform_mask__p0",
+  "width": 80,
+  "height": 56,
+  "palette_rgb565": [
+    0,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 571,
+  "table_bytes": 234,
+  "frame_sha256": [
+    "82b15810c6a854711d64c29c433a0f26e558de0a07fd6b63ce7ac2524d455383"
+  ],
+  "source_sha256": [
+    "3cd4a5c821f1ac9673bd195242d8c46df44f27ce8078b322f074892f38963af2"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/post/props/station-platform-mask",
+  "group": "post",
+  "symbol": "adv_assets_game_post_props_station_platform_mask__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\station-platform-mask.png",
+      "sha256": "3cd4a5c821f1ac9673bd195242d8c46df44f27ce8078b322f074892f38963af2"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/post/props/station-platform-mask",
+      "logical_symbol": "adv_assets_game_post_props_station_platform_mask__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

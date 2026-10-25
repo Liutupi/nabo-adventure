@@ -1,0 +1,50 @@
+{
+  "format": "adv-row-rle-v2",
+  "name": "adv_assets_game_post_tiles_rails__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8649,
+    40276
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 64,
+  "table_bytes": 140,
+  "frame_sha256": [
+    "fbbf3db036e6f1d319daf91b405421bb6cd38fe0a170df67bdf7c0a5bd317124"
+  ],
+  "source_sha256": [
+    "2a61dccaa7e489dda45134fd046dbe8f83fe41a088b9e4183107515ba7ef762f"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/post/tiles/rails",
+  "group": "post",
+  "symbol": "adv_assets_game_post_tiles_rails__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\tiles\\rails.png",
+      "sha256": "2a61dccaa7e489dda45134fd046dbe8f83fe41a088b9e4183107515ba7ef762f"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/post/tiles/rails",
+      "logical_symbol": "adv_assets_game_post_tiles_rails__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

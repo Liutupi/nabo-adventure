@@ -15,6 +15,7 @@ DEFAULT_OUTPUT = ROOT/'firmware/main/generated'
 OWNERSHIP = 'adv_assets_generated.json'
 UI_LIMIT = 160*1024
 GAME_LIMIT = 260*1024
+INTEGRATED_GAMES = ('post',)
 PROOF_SOURCES = ('tools/generate_adv_sprites.py', 'tools/build_adventure_assets.py',
                  'tools/adventure_assets_manifest.py', 'tools/adventure_assets_emit.py',
                  'tools/adventure_assets_verify.py', 'tools/generate_boot_presentation.py', 'firmware/main/adv_boot.h', 'firmware/main/adv_sprite.c',
@@ -151,8 +152,9 @@ def main():
     parser.add_argument('--output', type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument('--group', choices=('travel', 'ui', 'static', *GAME_GROUPS), action='append')
     parser.add_argument('--verify-c', action='store_true')
+    parser.add_argument('--integrated-game',choices=INTEGRATED_GAMES,action='append',default=[],help='Explicitly include a game whose formal engine is integrated')
     args = parser.parse_args()
-    if any(group in GAME_GROUPS for group in args.group or ()) and args.output.resolve() == DEFAULT_OUTPUT.resolve():
+    if any(group in GAME_GROUPS and group not in args.integrated_game for group in args.group or ()) and args.output.resolve() == DEFAULT_OUTPUT.resolve():
         parser.error('New game art requires --output to a separate delivery directory until gameplay integration')
     try:
         report = build(args.art, args.output, args.group or ('travel', 'ui', 'static'), args.verify_c)

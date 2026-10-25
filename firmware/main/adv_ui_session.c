@@ -2,7 +2,9 @@
 // and result. Every shell game shares this frame; the game draws only its play field.
 #include <stdio.h>
 #include "adv_demo.h"
+#include "adv_post.h"
 #include "adv_ui_internal.h"
+void ui_draw_post(ag_t *g,const adv_post_t *p);
 
 static void draw_backdrop(ag_t *g, const adv_station_t *st)
 {
@@ -49,18 +51,23 @@ static void draw_title(ag_t *g, const adv_model_t *m, const adv_station_t *st, i
     if (st->placeholder) {
         ui_art(g, "ui/labels/placeholder", 0, 76, 128);
     }
+    if(s==3) {
+        ag_text_top(g,&collection_font_12,"上下选轨 岔口切换",120,118,NT_ALIGN_CENTER,UI_INK);
+        ag_text_top(g,&collection_font_12,"点OK卸信 按住OK鸣笛",120,138,NT_ALIGN_CENTER,UI_INK);
+        ag_text_top(g,&collection_font_12,"同色同轨送信 煤堆补汽",120,158,NT_ALIGN_CENTER,UI_INK);
+    }
     uint32_t earned = adv_earned(m);
     for (int tier = 0; tier < 3; tier++) {
         int x = 60 + tier * 60;
         bool on = earned & adv_stamp_bit(s, tier);
-        ag_circle(g, x, 182, 18, ui_tier_color(tier), on ? 255 : 40, on ? UI_INK : ui_tier_color(tier), 2);
+        ag_circle(g, x, s==3?208:182, s==3?12:18, ui_tier_color(tier), on ? 255 : 40, on ? UI_INK : ui_tier_color(tier), 2);
         char th[16];
         snprintf(th, sizeof(th), "%u", (unsigned)adv_threshold(s, tier));
-        ag_text(g, &nabo_mono_font_12, th, x, 218, NT_ALIGN_CENTER, UI_INK);
+        ag_text(g, &nabo_mono_font_12, th, x, s==3?240:218, NT_ALIGN_CENTER, UI_INK);
     }
     char best[32];
     snprintf(best, sizeof(best), "最佳 %u", (unsigned)m->best[s]);
-    ag_text(g, &collection_font_18, best, 120, 254, NT_ALIGN_CENTER, UI_INK);
+    ag_text(g, &collection_font_18, best, 120, s==3?274:254, NT_ALIGN_CENTER, UI_INK);
     ui_footer(g, "OK 开始 · 长按上 回地图");
 }
 
@@ -101,6 +108,7 @@ void ui_draw_session(ag_t *g, const adv_model_t *m)
     ag_begin(g, m->phase == ADV_RESULT ? UI_SCENE_RESULT : UI_SCENE_PLAY);
     draw_backdrop(g, st);
     if (st->game == &adv_demo_game) draw_demo(g, m->game, st);
+    else if(st->game==&adv_post_game)ui_draw_post(g,m->game);
     draw_hud(g, m);
     if (m->phase == ADV_READY) {
         char n[12];

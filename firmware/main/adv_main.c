@@ -6,6 +6,7 @@
 #include <string.h>
 #include "adv_boot.h"
 #include "adv_model.h"
+#include "adv_post.h"
 #include "adv_persist.h"
 #include "adv_sound.h"
 #include "adv_ui.h"
@@ -54,8 +55,10 @@ static nabo_jump_t s_jump;
 static bool s_audio_ok, s_test;
 static atomic_bool s_overflow;
 static atomic_int s_jump_cue, s_cue;
+static atomic_bool s_post_horn;
 static unsigned s_held, s_swallowed;
 static int64_t s_last_input_us, s_step_us;
+static uint32_t s_draw_frames,s_draw_us,s_draw_max_us;
 
 static void report_error(const char *what, esp_err_t err)
 {
@@ -117,6 +120,8 @@ static void set_owner(owner_t next)
 
 static void handle_fx(int fx)
 {
+    bool horn=s_model.in_session&&s_model.station==3&&s_model.phase==ADV_PLAY&&((adv_post_t *)s_model.game)->whistle;
+    atomic_store(&s_post_horn,horn);
     if (s_model.page != ADV_PAGE_COVER) stop_boot();
     if (fx & ADV_FX_CUE) atomic_store(&s_cue, s_model.cue);
     if (fx & ADV_FX_APPLY_SETTINGS) apply_settings();
@@ -209,14 +214,32 @@ static void status(void)
     adv_status_t st = adv_game_status(&s_model);
     flockfile(stdout);  // keep independent legacy-game logs out of this JSON line
     printf("@adv {\"page\":%d,\"owner\":%d,\"cursor\":%d,\"station\":%d,\"phase\":%d,\"score\":%u,\"res\":%d,"
-           "\"seen\":%u,\"stamps\":%d,\"test\":%d,\"heap\":%u,\"largest\":%u,\"bytes\":%u,\"overflow\":%d,\"best\":[",
+           "\"seen\":%u,\"stamps\":%d,\"test\":%d,\"heap\":%u,\"largest\":%u,\"bytes\":%u,\"overflow\":%d,\"frames\":%u,\"draw_us\":%u,\"draw_max_us\":%u,\"best\":[",
            s_model.page, s_owner, s_model.cursor, s_model.in_session ? s_model.station : -1,
            s_model.in_session ? s_model.phase : -1, (unsigned)st.score, st.resource, (unsigned)s_model.seen,
            __builtin_popcount(adv_earned(&s_model)), s_test, (unsigned)esp_get_free_heap_size(),
-           (unsigned)heap_caps_get_largest_free_block(MALLOC_CAP_8BIT), (unsigned)adv_ui_bytes(), adv_ui_overflow());
+           (unsigned)heap_caps_get_largest_free_block(MALLOC_CAP_8BIT), (unsigned)adv_ui_bytes(), adv_ui_overflow(),
+           (unsigned)s_draw_frames,(unsigned)s_draw_us,(unsigned)s_draw_max_us);
     for (int i = 0; i < ADV_STATIONS; i++) printf("%s%u", i ? "," : "", (unsigned)s_model.best[i]);
     puts("]}");
     funlockfile(stdout);
+}
+
+static void post_status(void)
+{
+    if(!s_model.in_session||s_model.station!=3||!s_model.game){puts("@error POST not active");return;}
+    const adv_post_t *g=s_model.game;
+    flockfile(stdout);
+    printf("@post {\"tick\":%u,\"score\":%u,\"res\":%d,\"lane\":%d,\"choice\":%d,\"remaining\":%d,\"lap\":%d,\"speed\":%d,\"hold\":%d,\"over\":%d,\"mail\":[",
+           (unsigned)g->tick,(unsigned)g->score,(int)g->res,(int)g->lane,(int)g->choice,
+           (int)g->remaining,(int)g->lap,(int)g->speed,(int)g->hold,(int)g->over);
+    for(int i=0;i<5;i++)printf("%s%d",i?",":"",(int)g->mail[i]);
+    printf("],\"events\":[");
+    for(int i=0;i<ADV_POST_CAP;i++){
+        const adv_post_event_t *e=&g->events[i];
+        printf("%s[%d,%d,%d,%d,%d,%d]",i?",":"",(int)e->type,(int)e->x,(int)e->lane,(int)e->color,(int)e->done,(int)e->horn);
+    }
+    puts("]}");funlockfile(stdout);
 }
 
 static void inject(int button, int event)
@@ -228,6 +251,7 @@ static void inject(int button, int event)
 static void set_test(bool enabled)
 {
     if (enabled == s_test) return;
+    atomic_store(&s_post_horn,false);
     stop_boot();
     // Keep every writer suppressed until the legacy task has stopped and its test
     // state is discarded. Leaving test mode reloads durable settings/progress.
@@ -252,6 +276,13 @@ static void diagnostic_open(const char *name)
     if (!s_test || s_owner != OWNER_SHELL || s_model.page != ADV_PAGE_MAP) {
         puts("@error open requires test mode and the map"); return;
     }
+    if(!strcmp(name,"post")) {
+        handle_fx(adv_test_open(&s_model,3));
+        s_draw_frames=s_draw_us=s_draw_max_us=0;
+        if(!s_model.in_session)puts("@error POST test entry failed");
+        else puts("@adv open=post");
+        s_last_input_us=s_step_us=esp_timer_get_time();return;
+    }
     int station = !strcmp(name, "jump") ? STATION_JUMP : !strcmp(name, "dive") ? STATION_DIVE : -1;
     if (station < 0) { puts("@error unknown game"); return; }
     // This diagnostic bypasses the map unlock check without touching model rules
@@ -267,6 +298,7 @@ static void diagnostic_open(const char *name)
 static void command(const char *line)
 {
     if (!strcmp(line, ">adv.status")) status();
+    else if(!strcmp(line,">post.status"))post_status();
     else if (!strncmp(line, ">adv.open=", 10)) diagnostic_open(line + 10);
     else if (!strncmp(line, ">adv.key=", 9)) {
         static const struct { const char *name; int button, event; } keys[] = {
@@ -318,6 +350,7 @@ static void audio_task(void *arg)
     int16_t pcm[CHUNK];
     nabo_jump_sound_t jump_audio = {0};
     adv_sound_t cue_audio = {0};
+    int last_cue=0;
     for (;;) {
         xSemaphoreTake(s_audio_lock, portMAX_DELAY);
         memset(pcm, 0, sizeof(pcm));
@@ -328,7 +361,8 @@ static void audio_task(void *arg)
             nabo_jump_sound_fill(&jump_audio, pcm, CHUNK);
         } else {
             int cue = atomic_exchange(&s_cue, 0);
-            if (cue > 0) adv_sound_start(&cue_audio, cue);
+            if (cue > 0){adv_sound_start(&cue_audio,cue);last_cue=cue;}
+            if(last_cue==ADV_CUE_WHISTLE&&!atomic_load(&s_post_horn)){adv_sound_start(&cue_audio,0);last_cue=0;}
             adv_sound_fill(&cue_audio, pcm, CHUNK);
             adv_boot_tick(&s_boot, (uint32_t)(esp_timer_get_time() / 1000));
             adv_boot_fill(&s_boot, pcm, CHUNK);
@@ -388,6 +422,7 @@ static void adventure_task(void *arg)
     bool dirty = true;
     uint32_t last_ui_frame = UINT32_MAX;
     unsigned last_boot_pose = UINT16_MAX;
+    uint32_t last_draw_ms=0;
     for (;;) {
         if (atomic_exchange(&s_overflow, false)) {
             ESP_LOGE(TAG, "input overflow; cancelling held actions");
@@ -420,7 +455,13 @@ static void adventure_task(void *arg)
                 steps++;
             }
             if (us - s_step_us >= STEP_US) s_step_us = us;
-            if (dirty) { adv_ui_draw(&s_model, ms, battery, mv); dirty = false; }
+            bool post=s_model.page==ADV_PAGE_SESSION&&s_model.station==3;
+            if (dirty&&(!post||ms-last_draw_ms>=33)) {
+                int64_t draw_start=esp_timer_get_time();
+                adv_ui_draw(&s_model, ms, battery, mv);dirty=false;last_draw_ms=ms;
+                s_draw_us=(uint32_t)(esp_timer_get_time()-draw_start);s_draw_frames++;
+                if(s_draw_us>s_draw_max_us)s_draw_max_us=s_draw_us;
+            }
         }
         if (s_model.cfg.settings.sleep_seconds > 0 &&
             us - s_last_input_us > (int64_t)s_model.cfg.settings.sleep_seconds * 1000000) sleep_now();

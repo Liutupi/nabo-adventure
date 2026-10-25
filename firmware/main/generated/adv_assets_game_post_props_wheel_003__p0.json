@@ -1,0 +1,53 @@
+{
+  "format": "adv-row-rle-v2",
+  "name": "adv_assets_game_post_props_wheel_003__p0",
+  "width": 96,
+  "height": 88,
+  "palette_rgb565": [
+    0,
+    8649,
+    40276,
+    48007,
+    54567,
+    65433
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "data_bytes": 828,
+  "table_bytes": 370,
+  "frame_sha256": [
+    "7a9a996b95ff11948fa59db576272111e5866a2b9345f83bc859337d28a1a441"
+  ],
+  "source_sha256": [
+    "cdc282974d389f3e66cd31a20be071e43dea174207b077d7eabb69114a764850"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/post/props/wheel-003",
+  "group": "post",
+  "symbol": "adv_assets_game_post_props_wheel_003__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\wheel-003.png",
+      "sha256": "cdc282974d389f3e66cd31a20be071e43dea174207b077d7eabb69114a764850"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/post/props/wheel-003",
+      "logical_symbol": "adv_assets_game_post_props_wheel_003__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

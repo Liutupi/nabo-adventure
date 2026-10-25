@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BOARD = ROOT/'firmware/main'
 HOST = ROOT/'tests/adv_host'
 GOLDEN = ROOT/'tests/adv_golden'
-SOURCES = ['adv_model.c', 'adv_stations.c', 'adv_demo.c', 'collection_model.c']
+SOURCES = ['adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c', 'collection_model.c']
 REDRAW = 1
 
 def build(folder, replace=None):
@@ -43,6 +43,7 @@ def replay(lib, trace):
         if kind == 'e': fx = lib.host_event(action[1], action[2])
         elif kind == 's': fx = lib.host_steps(action[1])
         elif kind == 'l': fx = lib.host_legacy(action[1])
+        elif kind == 'o': fx = lib.host_test_open(action[1])
         else: lib.host_test(action[1]); fx = 0
         lib.host_snapshot(buf, len(buf))
         got = {'view': json.loads(buf.value), 'fx': fx & ~REDRAW, 'cue': lib.host_cue()}

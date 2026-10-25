@@ -4,6 +4,7 @@
 #include <string.h>
 #include "adv_demo.h"
 #include "adv_model.h"
+#include "adv_post_view.h"
 
 static adv_model_t model;
 
@@ -24,6 +25,7 @@ int host_steps(int n)
 int host_legacy(uint32_t best) { return adv_legacy_done(&model, best); }
 void host_test(int on) { model.test = on != 0; }
 int host_cue(void) { return model.cue; }
+int host_test_open(int station) {return adv_test_open(&model,station);}
 
 int host_snapshot(char *out, int size)
 {
@@ -40,6 +42,12 @@ int host_snapshot(char *out, int size)
                       (unsigned)m->seed, m->record ? 1 : 0);
     else n += snprintf(out + n, size - n, "\"session\":null,");
     if (m->in_session && m->phase != ADV_TITLE) {
+        if(m->station==3) {
+            int64_t values[POST_VALUES];post_values(m->game,values);
+            n+=snprintf(out+n,size-n,"\"game\":[");
+            for(int i=0;i<POST_VALUES;i++)n+=snprintf(out+n,size-n,"%s%lld",i?",":"",(long long)values[i]);
+            return n+snprintf(out+n,size-n,"]}");
+        }
         const adv_demo_t *g = m->game;
         n += snprintf(out + n, size - n, "\"game\":[%d,%d,%d,%d,%u,%d,%d,%d,%d]}", g->p, g->v, g->zc, g->zh,
                       (unsigned)g->score, g->res, g->over, g->hit, g->miss);

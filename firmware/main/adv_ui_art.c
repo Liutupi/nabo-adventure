@@ -18,6 +18,17 @@ void ui_art(ag_t *g, const char *id, unsigned frame, int x, int y)
     record(g, adv_assets_find(id), frame, x, y, false, 0);
 }
 
+void ui_art_crop(ag_t *g,const char *id,unsigned frame,int x,int y,int left,int top,int right,int bottom)
+{
+    const adv_asset_record_t *a=adv_assets_find(id);if(!a)return;
+    for(unsigned i=0;i<a->piece_count;i++) {
+        const adv_asset_piece_t *p=&a->pieces[i];const adv_sprite_t *s=p->sprite;
+        int l=left>p->x?left-p->x:0,t=top>p->y?top-p->y:0;
+        int r=right-p->x<s->width?right-p->x:s->width,b=bottom-p->y<s->height?bottom-p->y:s->height;
+        if(r>l&&b>t)ag_sprite_crop(g,s,frame<s->frame_count?frame:(unsigned)s->frame_count-1u,x+p->x,y+p->y,l,t,r-l,b-t);
+    }
+}
+
 void ui_art_anchor(ag_t *g, const char *id, uint32_t elapsed_ms, int x, int y)
 {
     const adv_asset_record_t *a = adv_assets_find(id);

@@ -14,8 +14,9 @@ static const uint16_t HIT[][2] = {{1320, 40}, {1760, 50}, {0, 0}};
 static const uint16_t MISS[][2] = {{180, 120}, {0, 0}};
 static const uint16_t OVER[][2] = {{440, 110}, {330, 110}, {220, 220}, {0, 0}};
 static const uint16_t GO[][2] = {{880, 60}, {1175, 110}, {0, 0}};
+static const uint16_t WHISTLE[][2] = {{660, 180}, {880, 220}, {0, 0}};
 
-static const uint16_t (*const CUES[])[2] = {NULL, MOVE, ENTER, DENY, STAMP, BACK, HIT, MISS, OVER, GO};
+static const uint16_t (*const CUES[])[2] = {NULL, MOVE, ENTER, DENY, STAMP, BACK, HIT, MISS, OVER, GO, WHISTLE};
 
 static void begin_note(adv_sound_t *s)
 {

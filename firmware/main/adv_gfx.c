@@ -130,38 +130,50 @@ bool ag_bitmap(ag_t *g, const uint16_t *pixels, int x, int y, int w, int h)
 }
 
 static bool sprite(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y,
-                   bool tinted, uint16_t color, bool dimmed)
+                   bool tinted, uint16_t color, bool dimmed,const int *crop)
 {
     if (!adv_sprite_frame_valid(asset, frame) || x < INT16_MIN || y < INT16_MIN ||
         x > INT16_MAX - asset->width || y > INT16_MAX - asset->height) return false;
-    ag_op_t *op = add(g, AG_SPRITE, x, y, x + asset->width, y + asset->height);
+    int sx=0,sy=0,cw=asset->width,ch=asset->height;
+    if(crop){
+        sx=crop[0];sy=crop[1];cw=crop[2];ch=crop[3];
+        if(sx<0||sy<0||sx>=asset->width||sy>=asset->height||cw<=0||ch<=0||cw>asset->width-sx||ch>asset->height-sy)return false;
+    }
+    ag_op_t *op = add(g, AG_SPRITE, x+sx, y+sy, x+sx+cw, y+sy+ch);
     if (!op) return false;
     op->u.sprite.asset = asset;
     op->u.sprite.frame = (uint16_t)frame;
     op->u.sprite.tinted = tinted;
     op->u.sprite.color = color;
     op->u.sprite.dimmed = dimmed;
+    op->u.sprite.origin_x=(int16_t)x;op->u.sprite.origin_y=(int16_t)y;
     uintptr_t ptr = (uintptr_t)asset;
     uint32_t h = (uint32_t)ptr;
     // Include both halves on 64-bit hosts, without shifting a 32-bit C3 pointer.
     h = mix(h, (uint32_t)((uint64_t)ptr >> 32));
+    h=mix(mix(h,(uint16_t)x),(uint16_t)y);
     seal(op, mix(mix(mix(mix(h, frame), tinted), color), dimmed));
     return true;
 }
 
 bool ag_sprite(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y)
 {
-    return sprite(g, asset, frame, x, y, false, 0, false);
+    return sprite(g, asset, frame, x, y, false, 0, false,NULL);
+}
+
+bool ag_sprite_crop(ag_t *g,const adv_sprite_t *s,unsigned f,int x,int y,int sx,int sy,int w,int h)
+{
+    const int crop[]={sx,sy,w,h};return sprite(g,s,f,x,y,false,0,false,crop);
 }
 
 bool ag_sprite_tint(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y, uint16_t color)
 {
-    return sprite(g, asset, frame, x, y, true, color, false);
+    return sprite(g, asset, frame, x, y, true, color, false,NULL);
 }
 
 bool ag_sprite_dim(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y)
 {
-    return sprite(g, asset, frame, x, y, false, 0, true);
+    return sprite(g, asset, frame, x, y, false, 0, true,NULL);
 }
 
 bool ag_ninepatch(ag_t *g, const adv_ninepatch_t *asset, int x, int y, int w, int h)
@@ -224,11 +236,11 @@ static void paint(ag_t *g, const ag_op_t *op, int y, int x0, int x1, uint16_t *r
     case AG_SPRITE: {
         const adv_sprite_t *s = op->u.sprite.asset;
         uint8_t indices[ADV_SPRITE_MAX_SIDE];
-        if (!adv_sprite_row(s, op->u.sprite.frame, (unsigned)(y - op->y0), indices, sizeof(indices))) break;
+        if (!adv_sprite_row(s, op->u.sprite.frame, (unsigned)(y - op->u.sprite.origin_y), indices, sizeof(indices))) break;
         int first = x0 > op->x0 ? x0 : op->x0;
         int last = x1 < op->x1 ? x1 : op->x1;
         for (int x = first; x < last; x++) {
-            uint8_t index = indices[x - op->x0];
+            uint8_t index = indices[x - op->u.sprite.origin_x];
             if (index) {
                 uint16_t color = op->u.sprite.tinted ? op->u.sprite.color : s->palette[index];
                 // Halve each RGB565 channel independently, without cross-channel carries.

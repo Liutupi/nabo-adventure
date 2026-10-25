@@ -25,7 +25,7 @@ typedef enum {
 typedef enum { ADV_TITLE, ADV_READY, ADV_PLAY, ADV_PAUSE, ADV_END, ADV_RESULT } adv_phase_t;
 typedef enum {
     ADV_CUE_NONE, ADV_CUE_MOVE, ADV_CUE_ENTER, ADV_CUE_DENY, ADV_CUE_STAMP, ADV_CUE_BACK,
-    ADV_CUE_HIT, ADV_CUE_MISS, ADV_CUE_OVER, ADV_CUE_GO,
+    ADV_CUE_HIT, ADV_CUE_MISS, ADV_CUE_OVER, ADV_CUE_GO, ADV_CUE_WHISTLE,
 } adv_cue_t;
 // Effects returned by adv_event / adv_step / adv_legacy_done for the platform to act on.
 enum {
@@ -66,6 +66,8 @@ void adv_init(adv_model_t *m, uint32_t seed, const cg_settings_t *settings, cons
 void adv_free(adv_model_t *m);
 int adv_event(adv_model_t *m, adv_btn_t button, adv_ev_t event);
 int adv_step(adv_model_t *m);
+// Test-only entry bypasses unlock, never changes any score or earned/seen stamp.
+int adv_test_open(adv_model_t *m,int station);
 // The legacy game on the cursor closed; best is its best score in game units.
 int adv_legacy_done(adv_model_t *m, uint32_t best);
 

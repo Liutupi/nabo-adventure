@@ -27,7 +27,7 @@
   },
   "tools_sha256": {
     "tools/generate_adv_sprites.py": "eff40de537378ceda49cb3327d3b063b6a00d18559be793660cc447456a3f56a",
-    "tools/build_adventure_assets.py": "d9f63eb62e54304885d77edce908249c2b33e0fca9dcf98aab352e2b66f76e49",
+    "tools/build_adventure_assets.py": "ffc4bb74df231f45d769f5b34a7f7f0c0d23e694b7b81a48356ed88af31b19b0",
     "tools/adventure_assets_manifest.py": "1e526efecb93f4b4c8cb01e03a85ca281cb6c910b6bee5faf6423a88d6d5a747",
     "tools/adventure_assets_emit.py": "59dbb6de5b6ad25006606cadfe6c9636ae6e4ca34eb058faa7d4223be34856cb",
     "tools/adventure_assets_verify.py": "46bc8a4727cb94f50afebfb99c3f7470e8260550384bb07ab04b2c6569e8e106",

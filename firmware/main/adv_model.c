@@ -92,17 +92,8 @@ static void move_cursor(adv_model_t *m, int dir)
     cue(m, ADV_CUE_MOVE);
 }
 
-static void enter_station(adv_model_t *m)
+static void begin_session(adv_model_t *m,int s)
 {
-    int s = m->cursor;
-    if (s == ADV_KIOSK) { m->page = ADV_PAGE_KIOSK; m->kiosk = 0; cue(m, ADV_CUE_ENTER); return; }
-    if (!adv_unlocked(m, s)) { cue(m, ADV_CUE_DENY); return; }
-    if (adv_station[s].kind == ADV_KIND_LEGACY) {
-        m->page = ADV_PAGE_LEGACY;
-        m->fx |= ADV_FX_OPEN_LEGACY;
-        cue(m, ADV_CUE_ENTER);
-        return;
-    }
     void *game = calloc(1, adv_station[s].game->state_size);
     if (!game) { m->fx |= ADV_FX_NOMEM; cue(m, ADV_CUE_DENY); return; }
     m->game = game;
@@ -114,6 +105,24 @@ static void enter_station(adv_model_t *m)
     m->record = false;
     m->page = ADV_PAGE_SESSION;
     cue(m, ADV_CUE_ENTER);
+}
+
+static void enter_station(adv_model_t *m)
+{
+    int s=m->cursor;
+    if(s==ADV_KIOSK){m->page=ADV_PAGE_KIOSK;m->kiosk=0;cue(m,ADV_CUE_ENTER);return;}
+    if(!adv_unlocked(m,s)){cue(m,ADV_CUE_DENY);return;}
+    if(adv_station[s].kind==ADV_KIND_LEGACY){m->page=ADV_PAGE_LEGACY;m->fx|=ADV_FX_OPEN_LEGACY;cue(m,ADV_CUE_ENTER);return;}
+    begin_session(m,s);
+}
+
+int adv_test_open(adv_model_t *m,int station)
+{
+    m->fx=0;m->cue=ADV_CUE_NONE;
+    if(!m->test||m->page!=ADV_PAGE_MAP||m->in_session||station<3||station>=ADV_STATIONS)return 0;
+    m->fx=ADV_FX_REDRAW;begin_session(m,station);
+    if(m->in_session)m->cursor=station;
+    return m->fx;
 }
 
 static void open_passport(adv_model_t *m, adv_page_t from)

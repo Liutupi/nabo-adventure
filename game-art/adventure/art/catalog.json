@@ -1,6 +1,6 @@
 {
   "schema": "nabo-adventure-art-catalog-v1",
-  "scope": "eleven art rounds; six new gameplay implementations remain separate",
+  "scope": "eleven art rounds; gameplay integration is listed separately",
   "identity": {
     "path": "reference/nabo-idle-original.png",
     "sha256": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243"
@@ -5461,6 +5461,18 @@
   "production_c_evidence": {
     "common": {
       "groups": {
+        "post": {
+          "rle_bytes": 47971,
+          "table_bytes": 18460,
+          "descriptor_catalog_estimate_c3": 2833,
+          "resources": 32,
+          "pieces": 32,
+          "frames": 82,
+          "physical_sprites": 32,
+          "physical_frames": 82,
+          "interned_pieces": 0,
+          "static_bytes_estimate_c3": 69264
+        },
         "static": {
           "rle_bytes": 49523,
           "table_bytes": 14480,
@@ -5498,10 +5510,10 @@
           "static_bytes_estimate_c3": 57244
         }
       },
-      "python_verified_frames": 299,
+      "python_verified_frames": 381,
       "production_c": {
-        "verified_frames": 299,
-        "verified_sprite_rows": 13780,
+        "verified_frames": 381,
+        "verified_sprite_rows": 17968,
         "verified_ninepatch_rows": 912,
         "comparison": "generated C and production decoders vs indexed source"
       }
@@ -5646,9 +5658,12 @@
     }
   },
   "device": {
-    "common_candidate_sha256": "557607a2f468fed67f5e52adae2f008dd7b44fd5b9d52d94d16c72bb0fa97604",
-    "new_game_art_embedded_in_this_candidate": false,
-    "reason": "Independent game art packages await formal game integration; physical factory is 2,031,616 bytes."
+    "common_candidate_sha256": "5d0f6d69c37c0b2993e67a816db31823eb25ede82ad0aa553bf2abc590c7a526",
+    "new_game_art_embedded_in_this_candidate": true,
+    "integrated_game_groups": [
+      "post"
+    ],
+    "reason": "Only explicitly integrated games are embedded; physical factory is 2,031,616 bytes."
   },
   "acceptance": "Source integrity and actual C decoder checks; visual/device checks are recorded separately in ART_PROGRESS and VALIDATION."
 }

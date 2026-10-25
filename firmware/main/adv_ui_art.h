@@ -5,6 +5,7 @@
 void ui_art(ag_t *g, const char *id, unsigned frame, int x, int y);
 void ui_art_anchor(ag_t *g, const char *id, uint32_t elapsed_ms, int x, int y);
 void ui_art_frame_anchor(ag_t *g, const char *id, unsigned frame, int x, int y);
+void ui_art_crop(ag_t *g,const char *id,unsigned frame,int x,int y,int left,int top,int right,int bottom);
 void ui_art_tint(ag_t *g, const char *id, int x, int y, uint16_t color);
 void ui_art_dim(ag_t *g, const char *id, int x, int y);
 void ui_paper(ag_t *g);

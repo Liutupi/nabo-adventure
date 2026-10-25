@@ -111,7 +111,7 @@ class Persistence(unittest.TestCase):
         (folder / 'esp_log.h').write_text('#define ESP_LOGE(...) ((void)0)\n', 'utf-8')
         (folder / 'harness.c').write_text(HARNESS, 'utf-8')
         library = folder / 'adv_persist.dll'
-        sources = ['adv_persist.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c',
+        sources = ['adv_persist.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c',
                    'collection_model.c', 'nabo_dive_model.c']
         subprocess.run([CC, '-std=gnu11', '-O2', '-shared', SHARED_EXPORT, '-Wall', '-Wextra',
                         '-Werror', '-Wno-unused-parameter', '-I', str(folder), '-I', str(BOARD),

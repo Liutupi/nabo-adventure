@@ -4,6 +4,7 @@
 // Change rules here first, re-record tests/adv_golden, then port to C.
 (function (root) {
   'use strict';
+  const Post=typeof module!=='undefined'&&module.exports?require('./adv_post.js'):root.AdvPost;
 
   // ---------- constants shared with adv_model.h ----------
   const BTN = { UP: 0, DOWN: 1, OK: 2 };
@@ -11,7 +12,7 @@
   const PAGE = { COVER: 0, MAP: 1, KIOSK: 2, PASSPORT: 3, SETTINGS: 4, STAMP: 5, LEGACY: 6, SESSION: 7 };
   const PHASE = { TITLE: 0, READY: 1, PLAY: 2, PAUSE: 3, END: 4, RESULT: 5 };
   const FX = { REDRAW: 1, OPEN_LEGACY: 2, SAVE_PROGRESS: 4, SAVE_BEST: 8, SAVE_SETTINGS: 16, APPLY_SETTINGS: 32, CUE: 64 };
-  const CUE = { NONE: 0, MOVE: 1, ENTER: 2, DENY: 3, STAMP: 4, BACK: 5, HIT: 6, MISS: 7, OVER: 8, GO: 9 };
+  const CUE = { NONE: 0, MOVE: 1, ENTER: 2, DENY: 3, STAMP: 4, BACK: 5, HIT: 6, MISS: 7, OVER: 8, GO: 9, WHISTLE: 10 };
   const READY_STEPS = 180, END_STEPS = 120;
   const STATIONS = 9, KIOSK = 0;
   // Map path from the bottom (deep sea) to the top (space).
@@ -25,7 +26,7 @@
     { id: 'kiosk', cn: '护照亭', en: 'PASSPORT', world: '小镇', res: '', kind: 0, th: [0, 0, 0], placeholder: false },
     { id: 'jump', cn: '跳一跳', en: 'JUMP', world: '小镇', res: '体力', kind: 1, th: [10, 25, 50], placeholder: false },
     { id: 'dive', cn: '深潜', en: 'DIVE', world: '深海', res: '氧气', kind: 1, th: [100, 300, 600], placeholder: false },
-    { id: 'post', cn: '小火车', en: 'POST', world: '铁路平原', res: '蒸汽', kind: 2, th: [5, 12, 25], placeholder: true },
+    { id: 'post', cn: '小火车', en: 'POST', world: '铁路平原', res: '蒸汽', kind: 2, th: [5, 12, 25], placeholder: false },
     { id: 'night', cn: '萤火虫', en: 'NIGHT', world: '夜林', res: '精神', kind: 2, th: [15, 35, 60], placeholder: true },
     { id: 'climb', cn: '登山', en: 'CLIMB', world: '雪山', res: '体力', kind: 2, th: [50, 150, 300], placeholder: true },
     { id: 'ski', cn: '滑雪', en: 'SKI', world: '雪坡', res: '体温', kind: 2, th: [10, 25, 45], placeholder: true },
@@ -165,7 +166,7 @@
   function startRun(m) {
     const s = m.session;
     s.seed = rand(m);
-    s.game = Demo.start(s.seed);
+    s.game = (s.station===3?Post:Demo).start(s.seed);
     s.phase = PHASE.READY; s.t = READY_STEPS; s.record = 0;
     clearInput(m);
     cue(m, CUE.ENTER);
@@ -183,9 +184,19 @@
     if (s === KIOSK) { m.page = PAGE.KIOSK; m.kiosk = 0; cue(m, CUE.ENTER); return; }
     if (!unlocked(m, s)) { cue(m, CUE.DENY); return; }
     if (STATION[s].kind === 1) { m.page = PAGE.LEGACY; m.fx |= FX.OPEN_LEGACY; cue(m, CUE.ENTER); return; }
+    openSession(m,s);
+  }
+
+  function openSession(m,s) {
     m.page = PAGE.SESSION;
     m.session = { station: s, phase: PHASE.TITLE, t: 0, seed: 0, game: null, record: 0 };
     cue(m, CUE.ENTER);
+  }
+
+  function testOpen(m,s) {
+    m.fx=0;m.cue=0;
+    if(!m.test||m.page!==PAGE.MAP||m.session||!Number.isInteger(s)||s<3||s>=STATIONS)return 0;
+    m.cursor=s;m.fx=FX.REDRAW;openSession(m,s);return m.fx;
   }
 
   function openPassport(m, from) { m.page = PAGE.PASSPORT; m.passport = 0; m.passportFrom = from; cue(m, CUE.ENTER); }
@@ -298,15 +309,15 @@
     } else if (s.phase === PHASE.PLAY) {
       const input = Object.assign({ ok_held: (m.held >> BTN.OK) & 1, down_held: (m.held >> BTN.DOWN) & 1 }, m.input);
       clearInput(m);
-      Demo.step(s.game, input);
+      (s.station===3?Post:Demo).step(s.game, input);
       if (s.game.cue) cue(m, s.game.cue);
-      if (Demo.status(s.game).over) { s.phase = PHASE.END; s.t = END_STEPS; }
+      if ((s.station===3?Post:Demo).status(s.game).over) { s.phase = PHASE.END; s.t = END_STEPS; }
       m.fx |= FX.REDRAW;
     } else if (s.phase === PHASE.END) {
-      Demo.step(s.game, { ok_down: 0, ok_up: 0, up_down: 0, down_down: 0, down_up: 0, ok_held: 0, down_held: 0 });
+      (s.station===3?Post:Demo).step(s.game, { ok_down: 0, ok_up: 0, up_down: 0, down_down: 0, down_up: 0, ok_held: 0, down_held: 0 });
       if (--s.t === 0) {
         s.phase = PHASE.RESULT;
-        const score = Demo.status(s.game).score;
+        const score = (s.station===3?Post:Demo).status(s.game).score;
         if (score > m.best[s.station]) {
           s.record = 1;
           if (!m.test) { m.best[s.station] = score; m.fx |= FX.SAVE_BEST; }
@@ -325,13 +336,13 @@
       cfg: [m.cfg.page, m.cfg.cursor, m.cfg.editing, m.cfg.s.volume, m.cfg.s.brightness, m.cfg.s.sleep, m.cfg.s.speaker ? 1 : 0],
       best: m.best.slice(), seen: m.seen, stamp: m.stamp, held: m.held,
       session: s ? [s.station, s.phase, s.t, s.seed, s.record] : null,
-      game: g ? [g.p, g.v, g.zc, g.zh, g.score, g.res, g.over, g.hit, g.miss] : null,
+      game: g ? (s.station===3?Post.view(g):[g.p, g.v, g.zc, g.zh, g.score, g.res, g.over, g.hit, g.miss]) : null,
     };
   }
 
   const api = {
     BTN, EV, PAGE, PHASE, FX, CUE, CG, STATION, PATH, START_STATION, DEMO_THRESHOLDS, READY_STEPS, END_STEPS,
-    create, event, step, legacyDone, view, earned, unlocked, threshold, bit, rand, Demo,
+    create, event, step, legacyDone, view, earned, unlocked, threshold, bit, rand, Demo, Post, testOpen,
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.AdvCore = api;
