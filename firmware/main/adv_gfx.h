@@ -15,6 +15,7 @@ extern "C" {
 
 #define AG_W 240
 #define AG_H 320
+#define AG_MAX_W 320
 #define AG_MAX_OPS 128
 #define AG_MAX_RECTS 16
 #define AG_STRIP 8
@@ -59,12 +60,14 @@ typedef struct {
     void *ctx;
     uint16_t *strip[2];
     int which;
+    uint16_t width,height;
     uint32_t bytes;           // pixel bytes sent by the last frame
     bool overflow;            // a builder ran out of ops or glyphs this frame (host tests)
 } ag_t;
 
-// strip buffers: two of AG_W x AG_STRIP pixels.
+// Strip buffers: two of AG_MAX_W x AG_STRIP pixels, including landscape use.
 void ag_init(ag_t *g, uint16_t *strip0, uint16_t *strip1, ag_send_fn send, void *ctx);
+bool ag_viewport(ag_t *g,int width,int height); // 240x320 or 320x240; invalidates on change
 void ag_begin(ag_t *g, int scene_id);   // starts a new display list; a new scene redraws everything
 void ag_invalidate(ag_t *g);
 void ag_flush(ag_t *g);                 // diffs, composes and sends the dirty areas

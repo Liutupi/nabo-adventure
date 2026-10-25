@@ -40,3 +40,4 @@ void ui_map_reset(void);
 void ui_draw_passport(ag_t *g, const adv_model_t *m);
 void ui_draw_stamp(ag_t *g, const adv_model_t *m);
 void ui_draw_session(ag_t *g, const adv_model_t *m);
+void ui_draw_post_session(ag_t *g,const adv_model_t *m);

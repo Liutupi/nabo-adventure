@@ -107,6 +107,7 @@ static void draw_result(ag_t *g, const adv_model_t *m, int s)
 void ui_draw_session(ag_t *g, const adv_model_t *m)
 {
     int s = m->station;
+    if(s==3){ui_draw_post_session(g,m);return;}
     const adv_station_t *st = &adv_station[s];
     if (m->phase == ADV_TITLE) {
         ag_begin(g, UI_SCENE_TITLE);

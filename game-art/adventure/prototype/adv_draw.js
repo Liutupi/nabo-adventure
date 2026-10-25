@@ -174,6 +174,7 @@
 
   function session(A, m) {
     const s = m.session, st = A.STATION[s.station], [r, g, b] = STATION_COLOR[s.station];
+    if(s.station===3){root.AdvPostDraw.session(c,m,A);return;}
     band(0, 320, rgb(r / 5 | 0, g / 5 | 0, (b / 4 | 0) + 20), rgb(r / 2 | 0, g / 2 | 0, b / 2 | 0));
     if (s.phase === A.PHASE.TITLE) {
       text('f12', st.world, 120, 44, 'center', PAPER); text('p28', st.en, 120, 80, 'center', WHITE);
@@ -229,7 +230,7 @@
 
   function draw(ctx, m, A) {
     c = ctx;
-    c.clearRect(0, 0, 240, 320);
+    c.clearRect(0, 0, c.canvas.width, c.canvas.height);
     [cover, map, kiosk, passport, settings, stamp, legacy, session][m.page](A, m);
   }
 

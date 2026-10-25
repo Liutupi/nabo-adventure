@@ -3,6 +3,7 @@
   'use strict';
   const TYPE={FORK:1,STATION:2,COAL:3,ANIMAL:4,DEPOT:5};
   const X=110*60, MAIL_X=156*60, WINDOW=32*60, HOLD=24, CAP=12;
+  const WIDTH=320,HEIGHT=240,UPPER=132,LOWER=212;
   const DEFAULT={speed:90,drain:20,hornDrain:30,forkMin:150,forkMax:240};
   function random(g) {
     g.rng=(g.rng+0x6D2B79F5)>>>0;
@@ -23,7 +24,7 @@
   }
   function start(seed,config) {
     const g={rng:seed>>>0,tick:0,score:0,res:1000,over:0,lane:1,choice:1,
-      y:264,transition:0,speed:90,drainAcc:0,hold:0,whistle:0,lap:0,remaining:0,
+      y:LOWER,transition:0,speed:90,drainAcc:0,hold:0,whistle:0,lap:0,remaining:0,
       refill:0,nextFork:100,nextCoal:300,nextAnimal:360,hit:0,miss:0,delivered:0,
       cue:0,spawnBlocked:0,distance:0,practice:0,lesson:0,tapTarget:-1,tapReason:0,missReason:0,feedback:0,presses:0,taps:0,mail:[],events:Array.from({length:CAP},()=>({type:0,x:0,lane:0,color:0,done:0,horn:0})),
       config:Object.assign({},DEFAULT,config||{})};
@@ -35,10 +36,16 @@
     if(!g.remaining)return 4;
     if(index<0)return 1;
     const e=g.events[index];
-    if(Math.abs(g.y-(e.lane?264:184))>20)return 2;
+    if(Math.abs(g.y-(e.lane?LOWER:UPPER))>20)return 2;
     return e.color===g.mail[0]?0:3;
   }
   function canDeliver(g) {return tapReason(g,stationAtNose(g))===0;}
+  function route(g) {
+    const station=g.events.filter(e=>e.type===TYPE.STATION&&!e.done&&e.x>=MAIL_X-WINDOW).sort((a,b)=>a.x-b.x)[0];
+    if(!station)return {lane:-1,canChoose:0,choiceMatches:0,atLane:0};
+    return {lane:station.lane,canChoose:+g.events.some(e=>e.type===TYPE.FORK&&!e.done&&e.x>X+3600&&e.x<station.x),
+      choiceMatches:+(g.choice===station.lane),atLane:+(Math.abs(g.y-(station.lane?LOWER:UPPER))<=20)};
+  }
   function controls(g,i,hornAllowed=true) {
     if(i.ok_down){g.hold=1;g.presses=Math.min(0xffffffff,g.presses+1);g.tapTarget=stationAtNose(g);g.tapReason=tapReason(g,g.tapTarget);}
     else if(i.ok_held&&g.hold)g.hold=Math.min(65535,g.hold+1);
@@ -55,7 +62,7 @@
       g.score=Math.min(0xffffffff,g.score+1);g.delivered=60;g.cue=6;e.done=1;
       g.feedback=0;
       g.mail.shift();g.mail.push(0);g.remaining--;
-      if(!g.remaining&&!g.refill){g.refill=1;spawn(g,TYPE.DEPOT,320,g.lane,0);}
+      if(!g.remaining&&!g.refill){g.refill=1;spawn(g,TYPE.DEPOT,WIDTH+80,g.lane,0);}
     } else {penalty(g,g.tapReason||1);if(e)e.done=1;}
     g.tapTarget=-1;
   }
@@ -70,8 +77,8 @@
     if(g.lesson===1) {
       g.distance=(g.distance+g.speed)>>>0;fork.x-=g.speed;station.x-=g.speed;
       if(!fork.done&&fork.x<=X+3600){fork.done=1;g.lane=0;g.transition=120;}
-      if(g.transition){g.y+=Math.trunc((184-g.y)/g.transition);g.transition--;}
-      if(station.x<=MAIL_X&&!g.transition){station.x=MAIL_X;g.y=184;g.lesson=2;g.cue=2;}
+      if(g.transition){g.y+=Math.trunc((UPPER-g.y)/g.transition);g.transition--;}
+      if(station.x<=MAIL_X&&!g.transition){station.x=MAIL_X;g.y=UPPER;g.lesson=2;g.cue=2;}
     } else if(g.lesson===2&&tap) {
       unload(g);g.lesson=3;spawn(g,TYPE.ANIMAL,160,0,0);
     } else if(g.lesson===3) {
@@ -92,16 +99,16 @@
     while(g.drainAcc>=60){g.res--;g.drainAcc-=60;}
     g.distance=(g.distance+g.speed)>>>0;
     if(--g.nextFork<=0) {
-      spawn(g,TYPE.FORK,280,0,0);
-      if(random(g)%100<60&&g.remaining)spawn(g,TYPE.STATION,380,random(g)%2,255);
+      spawn(g,TYPE.FORK,WIDTH+40,0,0);
+      if(random(g)%100<60&&g.remaining)spawn(g,TYPE.STATION,WIDTH+140,random(g)%2,255);
       g.nextFork=range(g,g.config.forkMin,g.config.forkMax);
     }
-    if(--g.nextCoal<=0){spawn(g,TYPE.COAL,280,random(g)%2,0);g.nextCoal=range(g,360,540);}
-    if(g.lap>=3&&--g.nextAnimal<=0){spawn(g,TYPE.ANIMAL,Math.max(280,110+g.speed*2),random(g)%2,random(g)%2);g.nextAnimal=range(g,360,600);}
+    if(--g.nextCoal<=0){spawn(g,TYPE.COAL,WIDTH+40,random(g)%2,0);g.nextCoal=range(g,360,540);}
+    if(g.lap>=3&&--g.nextAnimal<=0){spawn(g,TYPE.ANIMAL,Math.max(WIDTH+40,110+g.speed*2),random(g)%2,random(g)%2);g.nextAnimal=range(g,360,600);}
     for(const e of g.events)if(e.type) {
       e.x-=g.speed;
       if(e.type===TYPE.FORK&&!e.done&&e.x<=X+60*60){e.done=1;if(g.lane!==g.choice){g.lane=g.choice;g.transition=Math.ceil(7200/g.speed);}}
-      if(e.type===TYPE.STATION&&e.color===255&&e.x<=240*60) {
+      if(e.type===TYPE.STATION&&e.color===255&&e.x<=WIDTH*60) {
         if(g.remaining)e.color=g.mail[0];else e.done=1;
       }
     }
@@ -111,23 +118,23 @@
         e.done=1;if(g.remaining)penalty(g,5);
       }
       if(e.type===TYPE.ANIMAL) {
-        const same=Math.abs(g.y-(e.lane?264:184))<=20;
+        const same=Math.abs(g.y-(e.lane?LOWER:UPPER))<=20;
         if(g.whistle&&same&&e.x>X&&e.x<X+g.speed*90)e.horn++;else e.horn=0;
         if(e.horn>=36){e.done=2;g.cue=1;}
         else if(e.x<=X){e.done=1;if(same){penalty(g,6);g.hit=24;}}
       }
-      if(e.type===TYPE.COAL&&e.x<=X){e.done=1;if(Math.abs(g.y-(e.lane?264:184))<=20){g.res=Math.min(1000,g.res+300);g.cue=6;}}
+      if(e.type===TYPE.COAL&&e.x<=X){e.done=1;if(Math.abs(g.y-(e.lane?LOWER:UPPER))<=20){g.res=Math.min(1000,g.res+300);g.cue=6;}}
       if(e.type===TYPE.DEPOT&&e.x<=X){e.done=1;g.lap++;g.speed=Math.min(200,Math.floor((g.speed*108+50)/100));load(g);g.cue=2;}
     }
     for(const e of g.events)if(e.type&&e.x<-100*60)Object.assign(e,{type:0,x:0,lane:0,color:0,done:0,horn:0});
-    if(g.transition){g.y+=Math.trunc(((g.lane?264:184)-g.y)/g.transition);g.transition--;}
-    else g.y=g.lane?264:184;
+    if(g.transition){g.y+=Math.trunc(((g.lane?LOWER:UPPER)-g.y)/g.transition);g.transition--;}
+    else g.y=g.lane?LOWER:UPPER;
     if(g.res<=0){g.res=0;g.over=1;g.whistle=0;g.cue=8;}
   }
   const FIELDS=['tick','score','res','over','lane','choice','y','transition','speed','drainAcc','hold','whistle','lap',
     'remaining','refill','nextFork','nextCoal','nextAnimal','hit','miss','delivered','cue','spawnBlocked','distance','rng','practice','lesson','tapTarget','tapReason','missReason','feedback','presses','taps'];
-  function view(g){return [...FIELDS.map(k=>g[k]),...g.mail,...g.events.flatMap(e=>[e.type,e.x,e.lane,e.color,e.done,e.horn])];}
+  function view(g){const r=route(g);return [...FIELDS.map(k=>g[k]),...g.mail,...g.events.flatMap(e=>[e.type,e.x,e.lane,e.color,e.done,e.horn]),r.lane,r.canChoose,r.choiceMatches,r.atLane];}
   function status(g){return {score:g.practice?0:g.score,res:g.res,over:g.over};}
-  const api={TYPE,X,MAIL_X,WINDOW,HOLD,CAP,DEFAULT,FIELDS,random,start,startPractice,step,view,status,canDeliver};
+  const api={TYPE,X,MAIL_X,WINDOW,HOLD,CAP,WIDTH,HEIGHT,UPPER,LOWER,DEFAULT,FIELDS,random,start,startPractice,step,view,status,canDeliver,route};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.AdvPost=api;
 })(this);

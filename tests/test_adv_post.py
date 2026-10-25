@@ -27,7 +27,7 @@ def build(folder,mutant=None):
     return c
 
 def replay(c,trace):
-    (c.host_post_practice if trace.get('practice') else c.host_post_new)(trace['seed']);want=trace['initial'].copy();buf=(ctypes.c_int64*110)()
+    (c.host_post_practice if trace.get('practice') else c.host_post_new)(trace['seed']);want=trace['initial'].copy();buf=(ctypes.c_int64*114)()
     c.host_post_values(buf)
     if list(buf)!=want:return 'initial'
     for at,(mask,delta) in enumerate(trace['rows']):
@@ -86,9 +86,9 @@ class PostRules(unittest.TestCase):
     def test_choice_changes_actual_lane_only_at_fork_and_smooths(self):
         g=self.new();self.step(4);self.assertEqual((g.choice,g.lane),(0,1))
         g.events[0]=Event(1,110*60,0,0,0,0);self.step()
-        self.assertEqual(g.lane,0);self.assertGreater(g.y,184)
+        self.assertEqual(g.lane,0);self.assertGreater(g.y,132)
         for _ in range(80):self.step()
-        self.assertEqual(g.y,184)
+        self.assertEqual(g.y,132)
 
     def test_visible_nose_taps_use_press_position_and_report_misses(self):
         for duration in (5,9,15,21):
@@ -109,11 +109,20 @@ class PostRules(unittest.TestCase):
         self.assertEqual((g.practice,g.lesson,g.res,g.distance),(1,0,1000,0))
         self.step(4)
         for _ in range(300):self.step()
-        self.assertEqual((g.lesson,g.events[1].x,g.y),(2,156*60,184))
+        self.assertEqual((g.lesson,g.events[1].x,g.y),(2,156*60,132))
         self.step(33)
         for _ in range(14):self.step(32)
         self.step(2);self.assertEqual((g.lesson,g.score,g.res),(3,1,1000))
         self.assertEqual(self.c.host_post_score(),0)
+
+    def test_route_hint_tracks_next_station_choice_and_fork_lock(self):
+        g=self.new();g.events[0]=Event(1,171*60,0,0,0,0);g.events[1]=Event(2,271*60,0,g.mail[0],0,0)
+        def route():
+            values=(ctypes.c_int64*114)();self.c.host_post_values(values);return list(values)[-4:]
+        self.assertEqual(route(),[0,1,0,0])
+        g.choice=0;self.assertEqual(route(),[0,1,1,0]);self.step();self.assertEqual(route(),[0,0,1,0])
+        for _ in range(90):self.step()
+        self.assertEqual(route(),[0,0,1,1]);g.events[1].done=1;self.assertEqual(route(),[-1,0,0,0])
 
     def test_coal_refill_and_speed_cap(self):
         g=self.new();g.res=900;g.events[0]=Event(3,110*60,1,0,0,0);self.step();self.assertEqual(g.res,1000)

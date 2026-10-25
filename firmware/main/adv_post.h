@@ -6,6 +6,10 @@
 #define ADV_POST_X (110*60)
 #define ADV_POST_MAIL_X (156*60)
 #define ADV_POST_WINDOW (32*60)
+#define ADV_POST_WIDTH 320
+#define ADV_POST_HEIGHT 240
+#define ADV_POST_UPPER 132
+#define ADV_POST_LOWER 212
 enum { POST_FORK=1, POST_STATION, POST_COAL, POST_ANIMAL, POST_DEPOT };
 typedef struct { int32_t type,x,lane,color,done,horn; } adv_post_event_t;
 typedef struct {
@@ -18,6 +22,8 @@ typedef struct {
     int32_t mail[5];
     adv_post_event_t events[ADV_POST_CAP];
 } adv_post_t;
+typedef struct {int lane,can_choose,choice_matches,at_lane;} adv_post_route_t;
+adv_post_route_t adv_post_route(const adv_post_t *g);
 void adv_post_start(adv_post_t *g,uint32_t seed);
 void adv_post_start_practice(adv_post_t *g,uint32_t seed);
 bool adv_post_can_deliver(const adv_post_t *g);

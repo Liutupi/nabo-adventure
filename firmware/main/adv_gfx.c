@@ -34,7 +34,15 @@ void ag_init(ag_t *g, uint16_t *strip0, uint16_t *strip1, ag_send_fn send, void 
     g->send = send;
     g->ctx = ctx;
     g->full = true;
+    g->width=AG_W;g->height=AG_H;
     g->prev_scene_id = -1;
+}
+
+bool ag_viewport(ag_t *g,int width,int height)
+{
+    if(!g||!((width==240&&height==320)||(width==320&&height==240)))return false;
+    if(g->width!=width||g->height!=height){g->width=(uint16_t)width;g->height=(uint16_t)height;g->full=true;}
+    return true;
 }
 
 void ag_invalidate(ag_t *g) { g->full = true; }
@@ -49,7 +57,7 @@ void ag_begin(ag_t *g, int scene_id)
 
 bool ag_band(ag_t *g, int y, int h, uint16_t top, uint16_t bottom)
 {
-    ag_op_t *op = add(g, AG_BAND, 0, y, AG_W, y + h);
+    ag_op_t *op = add(g, AG_BAND, 0, y, g->width, y + h);
     if (!op) return false;
     op->u.band.y = (int16_t)y; op->u.band.h = (int16_t)h;
     // Keep 8-bit channels so the dither can place the in-between shades.
@@ -193,12 +201,12 @@ bool ag_ninepatch(ag_t *g, const adv_ninepatch_t *asset, int x, int y, int w, in
 
 typedef struct { int16_t x0, y0, x1, y1; } rect_t;
 
-static void add_rect(rect_t *r, int *n, int x0, int y0, int x1, int y1, bool *overflow)
+static void add_rect(const ag_t *g,rect_t *r, int *n, int x0, int y0, int x1, int y1, bool *overflow)
 {
     if (x0 < 0) x0 = 0;
     if (y0 < 0) y0 = 0;
-    if (x1 > AG_W) x1 = AG_W;
-    if (y1 > AG_H) y1 = AG_H;
+    if (x1 > g->width) x1 = g->width;
+    if (y1 > g->height) y1 = g->height;
     if (x0 >= x1 || y0 >= y1) return;
     // Merge with anything it touches (8 px slack keeps the list short).
     for (int i = 0; i < *n; i++) {
@@ -206,7 +214,7 @@ static void add_rect(rect_t *r, int *n, int x0, int y0, int x1, int y1, bool *ov
             int a = x0 < r[i].x0 ? x0 : r[i].x0, b = y0 < r[i].y0 ? y0 : r[i].y0;
             int c = x1 > r[i].x1 ? x1 : r[i].x1, d = y1 > r[i].y1 ? y1 : r[i].y1;
             r[i] = r[--*n];
-            add_rect(r, n, a, b, c, d, overflow);
+            add_rect(g,r, n, a, b, c, d, overflow);
             return;
         }
     }
@@ -290,13 +298,13 @@ void ag_flush(ag_t *g)
             while (j < g->prev_n && (matched_prev[j] || op->kind != g->prev[j].kind || op->key != g->prev[j].key)) j++;
             if (j < g->prev_n) matched_prev[j] = true;
             // Identical ops in a different order can change overlapping pixels.
-            if (j >= g->prev_n || j != i) add_rect(rects, &n, op->x0, op->y0, op->x1, op->y1, &overflow);
+            if (j >= g->prev_n || j != i) add_rect(g,rects, &n, op->x0, op->y0, op->x1, op->y1, &overflow);
         }
         for (int j = 0; j < g->prev_n && !overflow; j++)
-            if (!matched_prev[j]) add_rect(rects, &n, g->prev[j].x0, g->prev[j].y0, g->prev[j].x1, g->prev[j].y1, &overflow);
+            if (!matched_prev[j]) add_rect(g,rects, &n, g->prev[j].x0, g->prev[j].y0, g->prev[j].x1, g->prev[j].y1, &overflow);
     }
     g->bytes = 0;
-    if (overflow) compose(g, 0, 0, AG_W, AG_H);
+    if (overflow) compose(g, 0, 0, g->width, g->height);
     else
         for (int i = 0; i < n; i++) compose(g, rects[i].x0, rects[i].y0, rects[i].x1, rects[i].y1);
     memcpy(g->prev, g->ops, sizeof(ag_op_t) * (size_t)g->n);

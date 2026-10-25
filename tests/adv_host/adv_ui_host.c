@@ -64,16 +64,50 @@ int host_page(void) { return model.page; }
 int host_phase(void) { return model.in_session ? model.phase : -1; }
 uint32_t host_bytes(void) { return adv_ui_bytes(); }
 
+// Distinct colored pixels verify the production stripe rotation's handedness.
+int host_rotation_patch(void)
+{
+    extern void adv_ui_send(void *,int,int,int,int,uint16_t *);
+    uint16_t source[6],before[6];
+    for(int i=0;i<6;i++)source[i]=__builtin_bswap16((uint16_t)(0x1001+i));
+    memcpy(before,source,sizeof(source));adv_ui_send(NULL,7,9,2,3,source);
+    return memcmp(before,source,sizeof(source))==0;
+}
+
+static uint16_t viewport_pixels[320*320];
+static int viewport_bad,viewport_width,viewport_height;
+static void viewport_send(void *ctx,int x,int y,int w,int h,uint16_t *px)
+{
+    (void)ctx;
+    if(x<0||y<0||x+w>viewport_width||y+h>viewport_height||w>320||h>AG_STRIP){viewport_bad=1;return;}
+    for(int r=0;r<h;r++)for(int c=0;c<w;c++)viewport_pixels[(y+r)*320+x+c]=__builtin_bswap16(px[r*w+c]);
+}
+int host_viewport_edges(void)
+{
+    static ag_t gfx;static uint16_t strips[2][AG_MAX_W*AG_STRIP];
+    ag_init(&gfx,strips[0],strips[1],viewport_send,NULL);
+    if(!ag_viewport(&gfx,320,240)||ag_viewport(&gfx,321,240)||ag_viewport(&gfx,0,240))return 0;
+    viewport_bad=0;viewport_width=320;viewport_height=240;
+    for(unsigned i=0;i<sizeof(viewport_pixels)/sizeof(*viewport_pixels);i++)viewport_pixels[i]=0x2468;
+    ag_begin(&gfx,90);ag_rect(&gfx,0,0,320,240,0,0x1357,255,0,0);ag_rect(&gfx,319,239,4,4,0,0xffff,255,0,0);ag_flush(&gfx);
+    if(viewport_bad||gfx.bytes!=153600||viewport_pixels[239*320+319]!=0xffff||viewport_pixels[240*320]!=0x2468)return 0;
+    ag_begin(&gfx,90);ag_rect(&gfx,0,0,320,240,0,0x1357,255,0,0);ag_rect(&gfx,319,239,4,4,0,0,255,0,0);ag_flush(&gfx);
+    if(viewport_bad||viewport_pixels[239*320+319]||gfx.bytes!=2)return 0;
+    if(!ag_viewport(&gfx,240,320))return 0;
+    viewport_width=240;viewport_height=320;ag_begin(&gfx,90);ag_rect(&gfx,0,0,240,320,0,0x3579,255,0,0);ag_flush(&gfx);
+    return !viewport_bad&&gfx.bytes==153600&&viewport_pixels[319*320+239]==0x3579;
+}
+
 void host_post_case(int which)
 {
     if(!model.in_session){model.test=true;model.page=ADV_PAGE_MAP;adv_test_open(&model,3);}
     model.phase=ADV_PLAY;adv_post_t *p=model.game;adv_post_start(p,1234);
     p->tick=10;p->distance=600;p->next_fork=p->next_coal=p->next_animal=10000;
     if(which==1){p->whistle=1;p->hold=ADV_POST_HOLD+10;}
-    if(which==2){p->lane=0;p->y=184;p->hit=24;}
+    if(which==2){p->lane=0;p->y=ADV_POST_UPPER;p->hit=24;}
     if(which==3)p->delivered=50;
     if(which==4)p->delivered=20;
-    if(which==5){p->lane=0;p->y=220;p->transition=40;p->events[0]=(adv_post_event_t){POST_FORK,110*60,0,0,1,0};}
+    if(which==5){p->lane=0;p->y=172;p->transition=40;p->events[0]=(adv_post_event_t){POST_FORK,110*60,0,0,1,0};}
     if(which==6){
         p->remaining=5;p->mail[3]=3;p->mail[4]=1;
         const adv_post_event_t events[]={
@@ -87,6 +121,13 @@ void host_post_case(int which)
     }
     if(which==7)p->events[0]=(adv_post_event_t){POST_STATION,ADV_POST_MAIL_X,p->lane,p->mail[0],0,0};
     if(which==8){p->miss_reason=2;p->feedback=90;}
+    if(which>=9&&which<=12) {
+        int lane=which==10?1:0;
+        if(which==10){p->lane=p->choice=0;p->y=ADV_POST_UPPER;}
+        if(which==12)p->choice=0;
+        p->events[0]=(adv_post_event_t){POST_FORK,(which==11?90:240)*60,0,0,which==11,0};
+        p->events[1]=(adv_post_event_t){POST_STATION,(which==11?190:340)*60,lane,p->mail[0],0,0};
+    }
 }
 
 void host_post_practice_case(int lesson)
@@ -138,7 +179,7 @@ static void bitmap_send(void *ctx, int x, int y, int w, int h, uint16_t *px)
 void host_bitmap(int x, int y, int alternate, int full)
 {
     static ag_t gfx;
-    static uint16_t strips[2][240 * 8];
+    static uint16_t strips[2][AG_MAX_W * AG_STRIP];
     static const uint16_t first[16] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
     static const uint16_t second[16] = {16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     static int initialized;
@@ -157,7 +198,7 @@ void host_bitmap(int x, int y, int alternate, int full)
 void host_band(uint16_t top, uint16_t bottom)
 {
     static ag_t gfx;
-    static uint16_t strips[2][240 * 8];
+    static uint16_t strips[2][AG_MAX_W * AG_STRIP];
     ag_init(&gfx, strips[0], strips[1], bitmap_send, NULL);
     ag_begin(&gfx, 1);
     ag_band(&gfx, 0, 320, top, bottom);

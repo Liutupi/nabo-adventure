@@ -1,13 +1,14 @@
 <!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>NABO 小火车 · 正式玩法原型</title>
-<style>body{background:#fffaf0;color:#203849;font:16px system-ui;margin:24px}main{display:flex;gap:28px;flex-wrap:wrap}canvas{width:360px;height:480px;image-rendering:pixelated;border:8px solid #203849;border-radius:12px}aside{max-width:440px}button{background:#203849;color:#fffaf0;border:0;border-radius:6px;padding:12px;margin:4px;font:700 16px system-ui}label{display:block;margin:14px 0}pre{font-size:12px}p{line-height:1.7}</style>
-<h1>NABO 小火车送信</h1><main><canvas width="240" height="320" id="game"></canvas><aside>
+<style>body{background:#fffaf0;color:#203849;font:16px system-ui;margin:24px}main{display:flex;gap:28px;flex-wrap:wrap}canvas{width:640px;height:480px;image-rendering:pixelated;border:8px solid #203849;border-radius:12px}aside{max-width:440px}button{background:#203849;color:#fffaf0;border:0;border-radius:6px;padding:12px;margin:4px;font:700 16px system-ui}label{display:block;margin:14px 0}pre{font-size:12px}p{line-height:1.7}</style>
+<h1>NABO 小火车送信 · 横屏</h1><main><canvas width="320" height="240" id="game"></canvas><aside>
+<p><strong>工牌顺时针横拿，三颗按键在下沿。</strong>右上指示牌会告诉你下一站在哪条轨道、该按哪个键；左侧分别显示当前轨道和预选轨道。</p>
 <p>上/下选下一岔口的轨道。站牌与队首信封颜色相同、同轨时点 OK 卸信；按住 OK 鸣笛驱赶羊牛。煤堆补蒸汽，送完回车库补信。</p>
 <p>先看“待送”最左边的信。车头到同色站牌旁时轻点 OK；按住约0.4秒才鸣笛。蒸汽会慢慢减少，漏送/送错扣四分之一，蒸汽空了就结束。第一次可从下方分步练习开始，练习会等你操作，也不耗蒸汽。</p>
 <p id="state">加载原尺寸美术…</p><button id="practice">分步练习</button><button id="restart">正式一局</button><button id="pause">暂停</button>
 <label>原型初速 <input id="speed" type="range" min="60" max="140" value="90"><output id="speed-value">90</output></label>
 <label>每秒自然耗汽 <input id="drain" type="range" min="10" max="40" value="20"><output id="drain-value">20</output></label>
 <p>滑杆仅用于原型调参，下局生效。生产默认90、20；屏内使用原尺寸精灵，网页整体放大仅便于查看。</p>
-<div><button data-key="up_down">上轨 ↑</button><button data-key="down_down">下轨 ↓</button><button id="ok">OK</button></div>
+<div style="display:flex;flex-direction:row-reverse;justify-content:flex-end"><button data-key="up_down">上轨 ↑</button><button data-key="down_down">下轨 ↓</button><button id="ok">OK</button></div>
 <pre id="debug"></pre></aside></main>
 <script src="adv_post.js"></script><script src="adv_post_draw.js"></script><script>
 (async()=>{'use strict';await AdvPostDraw.load();const c=document.querySelector('canvas').getContext('2d');

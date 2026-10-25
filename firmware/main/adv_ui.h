@@ -16,6 +16,8 @@ void adv_ui_invalidate(void);
 void adv_ui_capture(void);          // the next frame is also printed as @cap lines
 uint32_t adv_ui_bytes(void);        // pixel bytes sent by the last frame
 bool adv_ui_overflow(void);         // the last frame ran out of ops or glyphs
+int adv_ui_width(void);
+int adv_ui_height(void);
 // Legacy 跳一跳 page (its own row renderer, from the NABO games collection).
 void adv_jump_draw(const nabo_jump_t *game, uint32_t ms, bool full);
 

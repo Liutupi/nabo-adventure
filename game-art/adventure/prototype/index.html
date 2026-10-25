@@ -31,6 +31,8 @@
   .badge { background: #20263d; border-radius: 28px; padding: 22px 16px 26px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
   canvas { display: block; width: 240px; height: 320px; image-rendering: pixelated; border-radius: 6px; background: #000; }
   .keys { display: flex; flex-direction: column; gap: 10px; }
+  .device.landscape { flex-direction:column; }
+  .device.landscape .keys { flex-direction:row-reverse; }
   .key { width: 64px; height: 44px; border: 0; border-radius: 12px; background: var(--btn); color: var(--btn-ink);
          font: 700 14px "Noto Sans SC", sans-serif; cursor: pointer; touch-action: none; user-select: none; }
   .key:active, .key.down { filter: brightness(1.35); }
@@ -183,6 +185,8 @@
   function frame(now) {
     acc += Math.min(250, now - last); last = now;
     while (acc >= 1000 / 60) { handle(A.step(m)); acc -= 1000 / 60; }
+    const landscape=m.page===A.PAGE.SESSION&&m.session.station===3,w=landscape?320:240,h=landscape?240:320;
+    if(canvas.width!==w){canvas.width=w;canvas.height=h;canvas.style.width=w+'px';canvas.style.height=h+'px';canvas.closest('.device').classList.toggle('landscape',landscape);}
     AdvDraw.draw(ctx, m, A);
     const text = JSON.stringify(A.view(m), null, 1);
     if (text !== shown) { document.getElementById('state').textContent = text; shown = text; }

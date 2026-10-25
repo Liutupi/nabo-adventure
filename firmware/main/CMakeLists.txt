@@ -16,6 +16,7 @@ idf_component_register(
         "adv_model.c"
         "adv_post.c"
         "adv_ui_post.c"
+        "adv_ui_post_session.c"
         "adv_ninepatch.c"
         "adv_persist.c"
         "adv_shapes.c"

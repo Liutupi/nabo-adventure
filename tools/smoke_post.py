@@ -94,7 +94,7 @@ def play(link,target=5):
             if not held:edge(link,2,True);held=True
         else:
             if held:edge(link,2,False);held=False
-            elif station and abs(p['y']-(264 if station[2] else 184))<=20 and station[3]==p['mail'][0] and abs(station[1]-MAIL_X)<900:tap(link)
+            elif station and abs(p['y']-(212 if station[2] else 132))<=20 and station[3]==p['mail'][0] and abs(station[1]-MAIL_X)<900:tap(link)
         now=time.monotonic()
         if now-checked>=1:
             latest=link.expect(7)

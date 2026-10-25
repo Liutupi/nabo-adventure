@@ -18,7 +18,7 @@ BOARD = ROOT/'firmware/main'
 HOST = ROOT/'tests/adv_host'
 UP, DOWN, OK = 0, 1, 2
 PRESS, CLICK, DOUBLE, LONG, RELEASE = 0, 1, 2, 3, 4
-SOURCES = ['adv_boot_motion.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c', 'adv_ui_post.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
+SOURCES = ['adv_boot_motion.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c', 'adv_ui_post.c', 'adv_ui_post_session.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
            'adv_text.c', 'adv_ui.c', 'adv_ui_animation.c', 'adv_ui_art.c', 'adv_ui_map.c', 'adv_ui_session.c', 'adv_ui_jump.c', 'collection_portrait.c',
            'nabo_jump_model.c', 'nabo_jump_rig.c', 'nabo_dive_text.c', 'collection_font_12.c', 'collection_font_16.c',
            'collection_font_18.c', 'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c']
@@ -73,9 +73,14 @@ class Renderer(unittest.TestCase):
         self.lib.host_snapshot(pixels)
         return list(pixels)
 
-    def save(self, name, docs=False):
+    def view_image(self):
         rgb = [((v >> 11)*255//31, ((v >> 5)&63)*255//63, (v&31)*255//31) for v in self.snapshot()]
         image = Image.new('RGB', (240, 320)); image.putdata(rgb)
+        if self.lib.adv_ui_width()==320:image=image.transpose(Image.Transpose.ROTATE_270)
+        return image
+
+    def save(self, name, docs=False):
+        image=self.view_image()
         image.save(self.previews/name)
         if docs: image.save(self.docs/name)
 
@@ -130,13 +135,13 @@ class Renderer(unittest.TestCase):
 
     def test_post_native_playfield_reactions_and_dense_scene(self):
         self.new([0,99,0,0,0,0,0,0,0],seen=7)
-        names=('idle','whistle','hit','throw','delivered','switch','dense','ready-to-send','wrong-track')
+        names=('idle','whistle','hit','throw','delivered','switch','dense','ready-to-send','wrong-track','choose-upper','choose-lower','route-locked','route-selected')
         for case,name in enumerate(names):
             self.lib.host_post_case(case);self.check('POST '+name);self.save('post-'+name+'.png',True)
         self.lib.host_post_case(0);self.check('POST fixed upper backdrop')
-        before=self.snapshot()
+        before=self.view_image().crop((0,90,320,98)).tobytes()
         for _ in range(20):self.steps(3)
-        self.assertEqual(before[84*240:100*240],self.snapshot()[84*240:100*240])
+        self.assertEqual(before,self.view_image().crop((0,90,320,98)).tobytes())
         self.assertLess(self.last_incremental_bytes,240*200*2,'H redraw should stay below a full screen')
 
     def test_post_practice_steps_remain_visible_and_incremental(self):
@@ -146,6 +151,20 @@ class Renderer(unittest.TestCase):
             self.save('post-practice-'+str(lesson)+'.png',True)
         self.lib.host_post_practice_case(2);self.check('POST waiting for a tap');self.steps(1200)
         self.assertEqual(self.lib.host_phase(),2)
+
+    def test_landscape_rotation_has_no_mirror_and_returns_to_portrait(self):
+        self.new([0,99,0,0,0,0,0,0,0],seen=7)
+        self.lib.host_post_case(0);self.check('landscape enter')
+        self.assertEqual((self.lib.adv_ui_width(),self.lib.adv_ui_height()),(320,240))
+        self.assertEqual(self.lib.host_rotation_patch(),1)
+        image=self.snapshot()
+        self.assertEqual([image[y*240+x] for y in (311,312) for x in (9,10,11)],
+                         [0x1002,0x1004,0x1006,0x1001,0x1003,0x1005])
+        self.lib.host_full();self.ev(UP,LONG);self.ev(UP,LONG)
+        self.assertEqual((self.lib.host_page(),self.lib.adv_ui_width(),self.lib.adv_ui_height()),(1,240,320))
+
+    def test_viewport_clips_landscape_edges_and_forces_full_orientation_change(self):
+        self.assertEqual(self.lib.host_viewport_edges(),1)
 
     def test_post_alpha_trims_cover_every_original_opaque_pixel(self):
         import re

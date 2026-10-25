@@ -19,6 +19,7 @@
 static ag_t *s_gfx;
 static uint16_t *s_strip[2];
 static bool s_capture;
+static bool s_capture_header,s_landscape;
 static uint32_t s_millis;
 uint32_t ui_millis(void) { return s_millis; }
 
@@ -32,6 +33,7 @@ void adv_ui_send(void *ctx, int x, int y, int w, int h, uint16_t *px)
 {
     (void)ctx;
     if (s_capture) {
+        if(!s_capture_header){printf("@cap_size %d %d\n",adv_ui_width(),adv_ui_height());s_capture_header=true;}
         const uint8_t *p = (const uint8_t *)px;
         for (int row = 0; row < h; row++) {
             printf("@cap %d %d %d ", y + row, x, w);
@@ -42,7 +44,13 @@ void adv_ui_send(void *ctx, int x, int y, int w, int h, uint16_t *px)
             putchar('\n');
         }
     }
-    esp_lcd_panel_draw_bitmap(bsp_display_panel(), x, y, x + w, y + h, px);
+    if(s_landscape) {
+        // A pure 90-degree rotation, using the other idle strip. The physical
+        // panel stays portrait for legacy games; no framebuffer or mirroring.
+        uint16_t *rotated=s_strip[px==s_strip[0]?1:0];
+        for(int ly=0;ly<h;ly++)for(int lx=0;lx<w;lx++)rotated[(w-1-lx)*h+ly]=px[ly*w+lx];
+        esp_lcd_panel_draw_bitmap(bsp_display_panel(),y,BSP_LCD_H-x-w,y+h,BSP_LCD_H-x,rotated);
+    } else esp_lcd_panel_draw_bitmap(bsp_display_panel(), x, y, x + w, y + h, px);
     // The caller may reuse this DMA strip as soon as we return.
     esp_lcd_panel_io_tx_param(bsp_display_io(), 0x00, NULL, 0);
 }
@@ -52,7 +60,7 @@ bool adv_ui_open(void)
     if (s_gfx) return true;
     s_gfx = calloc(1, sizeof(*s_gfx));
     for (int i = 0; i < 2; i++)
-        s_strip[i] = heap_caps_malloc(BSP_LCD_W * AG_STRIP * 2, MALLOC_CAP_DMA | MALLOC_CAP_INTERNAL);
+        s_strip[i] = heap_caps_malloc(AG_MAX_W * AG_STRIP * 2, MALLOC_CAP_DMA | MALLOC_CAP_INTERNAL);
     if (!s_gfx || !s_strip[0] || !s_strip[1]) {
         adv_ui_close();
         return false;
@@ -69,6 +77,7 @@ void adv_ui_close(void)
     s_gfx = NULL;
     for (int i = 0; i < 2; i++) { free(s_strip[i]); s_strip[i] = NULL; }
     s_capture = false;
+    s_landscape=false;
 }
 
 void adv_ui_invalidate(void)
@@ -78,9 +87,11 @@ void adv_ui_invalidate(void)
     if (s_gfx) ag_invalidate(s_gfx);
 }
 
-void adv_ui_capture(void) { adv_ui_invalidate(); s_capture = true; }
+void adv_ui_capture(void) { adv_ui_invalidate(); s_capture = true;s_capture_header=false; }
 uint32_t adv_ui_bytes(void) { return s_gfx ? s_gfx->bytes : 0; }
 bool adv_ui_overflow(void) { return s_gfx && s_gfx->overflow; }
+int adv_ui_width(void) {return s_gfx?s_gfx->width:AG_W;}
+int adv_ui_height(void) {return s_gfx?s_gfx->height:AG_H;}
 
 // ---------- shared widgets ----------
 
@@ -198,6 +209,8 @@ void adv_ui_draw(const adv_model_t *m, uint32_t ms, int battery, int mv)
     s_millis = ms;
     if (!s_gfx) return;
     ag_t *g = s_gfx;
+    s_landscape=m->page==ADV_PAGE_SESSION&&m->station==3;
+    (void)ag_viewport(g,s_landscape?320:240,s_landscape?240:320);
     switch (m->page) {
     case ADV_PAGE_COVER: ag_begin(g, UI_SCENE_COVER); draw_cover(g, m); break;
     case ADV_PAGE_MAP: ag_begin(g, UI_SCENE_MAP); ui_draw_map(g, m); break;

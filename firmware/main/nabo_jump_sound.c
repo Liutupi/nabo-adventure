@@ -14,6 +14,9 @@ void nabo_jump_sound_start(nabo_jump_sound_t* s, int kind, unsigned combo) {
     if (kind == 5) {
         s->offset = 86372;
         s->length = 35176;
+        // The badge speaker loses the original 130-260Hz opening. Keep the
+        // authored upward sweep, but move it into its audible midrange.
+        s->step = 3 * 65536;
     } else if (kind == 1) {
         s->offset = 35176;
         s->length = 16055;

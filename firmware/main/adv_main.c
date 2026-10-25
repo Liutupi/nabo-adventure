@@ -221,7 +221,7 @@ static void status(void)
            (unsigned)heap_caps_get_largest_free_block(MALLOC_CAP_8BIT), (unsigned)adv_ui_bytes(), adv_ui_overflow(),
            (unsigned)s_draw_frames,(unsigned)s_draw_us,(unsigned)s_draw_max_us);
     for (int i = 0; i < ADV_STATIONS; i++) printf("%s%u", i ? "," : "", (unsigned)s_model.best[i]);
-    puts("]}");
+    printf("],\"view_w\":%d,\"view_h\":%d}\n",adv_ui_width(),adv_ui_height());
     funlockfile(stdout);
 }
 

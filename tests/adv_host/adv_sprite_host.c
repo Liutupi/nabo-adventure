@@ -3,7 +3,7 @@
 #include <string.h>
 
 static ag_t gfx;
-static uint16_t strips[2][AG_W * AG_STRIP], pixels[AG_W * AG_H];
+static uint16_t strips[2][AG_MAX_W * AG_STRIP], pixels[AG_W * AG_H];
 
 static void send(void *ctx, int x, int y, int w, int h, uint16_t *px)
 {

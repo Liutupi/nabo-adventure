@@ -26,7 +26,7 @@ static void load(adv_post_t *g)
 void adv_post_start(adv_post_t *g,uint32_t seed)
 {
     memset(g,0,sizeof(*g));g->rng=seed;g->res=1000;g->lane=g->choice=1;g->tap_target=-1;
-    g->y=264;g->speed=90;g->next_fork=100;g->next_coal=300;g->next_animal=360;
+    g->y=ADV_POST_LOWER;g->speed=90;g->next_fork=100;g->next_coal=300;g->next_animal=360;
     load(g);
 }
 
@@ -46,12 +46,29 @@ static int tap_reason(const adv_post_t *g,int index)
 {
     if(!g->remaining)return 4;
     if(index<0)return 1;
-    const adv_post_event_t *e=&g->events[index];int d=g->y-(e->lane?264:184);
+    const adv_post_event_t *e=&g->events[index];int d=g->y-(e->lane?ADV_POST_LOWER:ADV_POST_UPPER);
     if(d<-20||d>20)return 2;
     return e->color==g->mail[0]?0:3;
 }
 
 bool adv_post_can_deliver(const adv_post_t *g){return tap_reason(g,station_at_nose(g))==0;}
+
+adv_post_route_t adv_post_route(const adv_post_t *g)
+{
+    const adv_post_event_t *station=NULL;
+    for(int i=0;i<ADV_POST_CAP;i++) {
+        const adv_post_event_t *e=&g->events[i];
+        if(e->type==POST_STATION&&!e->done&&e->x>=ADV_POST_MAIL_X-ADV_POST_WINDOW&&(!station||e->x<station->x))station=e;
+    }
+    if(!station)return (adv_post_route_t){-1,0,0,0};
+    int d=g->y-(station->lane?ADV_POST_LOWER:ADV_POST_UPPER);
+    adv_post_route_t r={station->lane,0,g->choice==station->lane,d>=-20&&d<=20};
+    for(int i=0;i<ADV_POST_CAP;i++) {
+        const adv_post_event_t *e=&g->events[i];
+        if(e->type==POST_FORK&&!e->done&&e->x>ADV_POST_X+3600&&e->x<station->x)r.can_choose=1;
+    }
+    return r;
+}
 
 static bool controls(adv_post_t *g,const adv_input_t *in,bool horn_allowed)
 {
@@ -75,7 +92,7 @@ static void unload(adv_post_t *g)
         if(g->score!=UINT32_MAX)g->score++;
         g->delivered=60;g->cue=ADV_CUE_HIT;station->done=1;g->feedback=0;
         memmove(g->mail,g->mail+1,4*sizeof(g->mail[0]));g->mail[4]=0;g->remaining--;
-        if(!g->remaining&&!g->refill){g->refill=1;spawn(g,POST_DEPOT,320,g->lane,0);}
+        if(!g->remaining&&!g->refill){g->refill=1;spawn(g,POST_DEPOT,ADV_POST_WIDTH+80,g->lane,0);}
     } else {penalty(g,g->tap_reason?g->tap_reason:1);if(station)station->done=1;}
     g->tap_target=-1;
 }
@@ -94,8 +111,8 @@ static void practice_step(adv_post_t *g,const adv_input_t *in)
     if(g->lesson==1) {
         g->distance+=(uint32_t)g->speed;fork->x-=g->speed;station->x-=g->speed;
         if(!fork->done&&fork->x<=ADV_POST_X+3600){fork->done=1;g->lane=0;g->transition=120;}
-        if(g->transition){g->y+=(184-g->y)/g->transition;g->transition--;}
-        if(station->x<=ADV_POST_MAIL_X&&!g->transition){station->x=ADV_POST_MAIL_X;g->y=184;g->lesson=2;g->cue=ADV_CUE_ENTER;}
+        if(g->transition){g->y+=(ADV_POST_UPPER-g->y)/g->transition;g->transition--;}
+        if(station->x<=ADV_POST_MAIL_X&&!g->transition){station->x=ADV_POST_MAIL_X;g->y=ADV_POST_UPPER;g->lesson=2;g->cue=ADV_CUE_ENTER;}
     } else if(g->lesson==2&&tap) {
         unload(g);g->lesson=3;spawn(g,POST_ANIMAL,160,0,0);
     } else if(g->lesson==3) {
@@ -121,15 +138,15 @@ void adv_post_step(adv_post_t *g,const adv_input_t *in)
     while(g->drain_acc>=60){g->res--;g->drain_acc-=60;}
     g->distance+=(uint32_t)g->speed;
     if(--g->next_fork<=0) {
-        spawn(g,POST_FORK,280,0,0);
-        if(adv_rand(&g->rng)%100<60&&g->remaining)spawn(g,POST_STATION,380,(int)(adv_rand(&g->rng)%2),255);
+        spawn(g,POST_FORK,ADV_POST_WIDTH+40,0,0);
+        if(adv_rand(&g->rng)%100<60&&g->remaining)spawn(g,POST_STATION,ADV_POST_WIDTH+140,(int)(adv_rand(&g->rng)%2),255);
         g->next_fork=range(g,150,240);
     }
-    if(--g->next_coal<=0){spawn(g,POST_COAL,280,(int)(adv_rand(&g->rng)%2),0);g->next_coal=range(g,360,540);}
+    if(--g->next_coal<=0){spawn(g,POST_COAL,ADV_POST_WIDTH+40,(int)(adv_rand(&g->rng)%2),0);g->next_coal=range(g,360,540);}
     if(g->lap>=3&&--g->next_animal<=0) {
         // Random calls stay ordered; C argument evaluation order is unspecified.
         int lane=(int)(adv_rand(&g->rng)%2),color=(int)(adv_rand(&g->rng)%2);
-        spawn(g,POST_ANIMAL,max(280,110+g->speed*2),lane,color);g->next_animal=range(g,360,600);
+        spawn(g,POST_ANIMAL,max(ADV_POST_WIDTH+40,110+g->speed*2),lane,color);g->next_animal=range(g,360,600);
     }
     for(int i=0;i<ADV_POST_CAP;i++) {
         adv_post_event_t *e=&g->events[i];if(!e->type)continue;
@@ -137,7 +154,7 @@ void adv_post_step(adv_post_t *g,const adv_input_t *in)
         if(e->type==POST_FORK&&!e->done&&e->x<=ADV_POST_X+60*60) {
             e->done=1;if(g->lane!=g->choice){g->lane=g->choice;g->transition=(7200+g->speed-1)/g->speed;}
         }
-        if(e->type==POST_STATION&&e->color==255&&e->x<=240*60) {
+        if(e->type==POST_STATION&&e->color==255&&e->x<=ADV_POST_WIDTH*60) {
             if(g->remaining)e->color=g->mail[0];else e->done=1;
         }
     }
@@ -149,14 +166,14 @@ void adv_post_step(adv_post_t *g,const adv_input_t *in)
             e->done=1;if(g->remaining)penalty(g,5);
         }
         if(e->type==POST_ANIMAL) {
-            int gap=g->y-(e->lane?264:184);bool same=gap>=-20&&gap<=20;
+            int gap=g->y-(e->lane?ADV_POST_LOWER:ADV_POST_UPPER);bool same=gap>=-20&&gap<=20;
             if(g->whistle&&same&&e->x>ADV_POST_X&&e->x<ADV_POST_X+g->speed*90)e->horn++;
             else e->horn=0;
             if(e->horn>=36){e->done=2;g->cue=ADV_CUE_MOVE;}
             else if(e->x<=ADV_POST_X){e->done=1;if(same){penalty(g,6);g->hit=24;}}
         }
         if(e->type==POST_COAL&&e->x<=ADV_POST_X) {
-            int gap=g->y-(e->lane?264:184);
+            int gap=g->y-(e->lane?ADV_POST_LOWER:ADV_POST_UPPER);
             e->done=1;if(gap>=-20&&gap<=20){g->res=min(1000,g->res+300);g->cue=ADV_CUE_HIT;}
         }
         if(e->type==POST_DEPOT&&e->x<=ADV_POST_X) {
@@ -164,8 +181,8 @@ void adv_post_step(adv_post_t *g,const adv_input_t *in)
         }
     }
     for(int i=0;i<ADV_POST_CAP;i++)if(g->events[i].type&&g->events[i].x<-100*60)memset(&g->events[i],0,sizeof(g->events[i]));
-    if(g->transition){g->y+=((g->lane?264:184)-g->y)/g->transition;g->transition--;}
-    else g->y=g->lane?264:184;
+    if(g->transition){g->y+=((g->lane?ADV_POST_LOWER:ADV_POST_UPPER)-g->y)/g->transition;g->transition--;}
+    else g->y=g->lane?ADV_POST_LOWER:ADV_POST_UPPER;
     if(g->res<=0){g->res=0;g->over=1;g->whistle=0;g->cue=ADV_CUE_OVER;}
 }
 

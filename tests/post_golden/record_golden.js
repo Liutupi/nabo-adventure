@@ -33,5 +33,5 @@ function record(name,seed,frames,policy){
  fs.writeFileSync(path.join(__dirname,name+'.json'),JSON.stringify(out)+'\n');
  console.log(name,frames,'steps',JSON.stringify(out.final));
 }
-record('idle',1,6000,'idle');record('drive',9090,18000,'drive');record('fuzz',0x80000032,6000,'fuzz');
+record('idle',1,6000,'idle');record('drive',1,18000,'drive');record('fuzz',0x80000032,6000,'fuzz');
 record('practice',42,1200,'practice');record('practice-fuzz',313,2400,'practice-fuzz');

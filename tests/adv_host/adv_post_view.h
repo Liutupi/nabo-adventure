@@ -2,7 +2,7 @@
 #include <stdint.h>
 #include <string.h>
 #include "adv_post.h"
-#define POST_VALUES 110
+#define POST_VALUES 114
 static inline void post_values(const adv_post_t *g,int64_t *out)
 {
     const int64_t head[]={g->tick,g->score,g->res,g->over,g->lane,g->choice,g->y,g->transition,g->speed,
@@ -15,4 +15,5 @@ static inline void post_values(const adv_post_t *g,int64_t *out)
         const adv_post_event_t *e=&g->events[i];
         out[n++]=e->type;out[n++]=e->x;out[n++]=e->lane;out[n++]=e->color;out[n++]=e->done;out[n++]=e->horn;
     }
+    adv_post_route_t r=adv_post_route(g);out[n++]=r.lane;out[n++]=r.can_choose;out[n++]=r.choice_matches;out[n++]=r.at_lane;
 }
