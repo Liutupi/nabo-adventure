@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_game_post_tiles_rails__p0",
   "width": 32,
   "height": 32,
@@ -13,6 +13,7 @@
   "keys": [
     0
   ],
+  "frame_map": null,
   "data_bytes": 64,
   "table_bytes": 74,
   "frame_sha256": [

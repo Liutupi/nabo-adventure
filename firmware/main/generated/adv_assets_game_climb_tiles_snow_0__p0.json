@@ -1,0 +1,54 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_climb_tiles_snow_0__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8617,
+    29714,
+    40603,
+    52891,
+    63387
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 279,
+  "table_bytes": 80,
+  "frame_sha256": [
+    "da29f1b14ff12bb10dd19e74f84b9b5b6555be87a5d1c88f074dedf5060f56b3"
+  ],
+  "source_sha256": [
+    "bcb27a043e97252c15377866fa9afee58e7a62f396fac2d7cec790c8fbc7a907"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/climb/tiles/snow-0",
+  "group": "climb",
+  "symbol": "adv_assets_game_climb_tiles_snow_0__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/climb/tiles/snow-0.png",
+      "sha256": "580cfae318efbf40feaf576160ca11e1bdbbdb3b4323a0c4bea7ebfe4962e688"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/climb/tiles/snow-0",
+      "logical_symbol": "adv_assets_game_climb_tiles_snow_0__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

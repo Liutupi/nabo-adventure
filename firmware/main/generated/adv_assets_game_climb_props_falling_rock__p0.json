@@ -1,0 +1,53 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_climb_props_falling_rock__p0",
+  "width": 24,
+  "height": 24,
+  "palette_rgb565": [
+    0,
+    8617,
+    17101,
+    29714,
+    52891
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 251,
+  "table_bytes": 62,
+  "frame_sha256": [
+    "5cb46cda340a6d21204ff558854b64865a8d8fe953c07b4fa7c2fa2fb90726dc"
+  ],
+  "source_sha256": [
+    "ccd291c06979b12971e33babe364b4588d69cef85cea7430af471454339699f2"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/climb/props/falling-rock",
+  "group": "climb",
+  "symbol": "adv_assets_game_climb_props_falling_rock__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/climb/props/falling-rock.png",
+      "sha256": "9f980c19382582a94a84cc7c7baac18963fdd9faf871c6543cd8defba38d0b9b"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/climb/props/falling-rock",
+      "logical_symbol": "adv_assets_game_climb_props_falling_rock__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

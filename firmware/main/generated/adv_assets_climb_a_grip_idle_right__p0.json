@@ -1,0 +1,151 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_climb_a_grip_idle_right__p0",
+  "width": 60,
+  "height": 65,
+  "palette_rgb565": [
+    0,
+    2113,
+    6472,
+    8354,
+    8453,
+    8585,
+    10565,
+    10667,
+    12548,
+    12613,
+    12746,
+    12780,
+    12812,
+    14660,
+    14726,
+    16773,
+    16807,
+    16906,
+    17036,
+    18854,
+    20934,
+    21000,
+    21261,
+    23178,
+    23439,
+    27175,
+    27534,
+    27665,
+    29320,
+    29419,
+    29811,
+    31891,
+    31956,
+    33481,
+    34037,
+    34069,
+    35660,
+    35888,
+    36182,
+    37740,
+    41900,
+    44111,
+    44243,
+    44440,
+    50352,
+    50549,
+    50680,
+    52860,
+    54644,
+    56495,
+    58903,
+    59100,
+    60819,
+    61246,
+    62997,
+    63325,
+    63326,
+    63358,
+    63391,
+    65143,
+    65208,
+    65273,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0
+  ],
+  "frame_map": [
+    0,
+    1,
+    1,
+    0,
+    2,
+    2
+  ],
+  "data_bytes": 1929,
+  "table_bytes": 542,
+  "frame_sha256": [
+    "d0137614a3d4e5a1833037ac300e00e71b9d2ede0db76fe6ea856fbba4bf1ad2",
+    "14a4e2d01dbfcf1c8b5012b9cab5b6a1445e62c4bd7dc7ae168b3b5797dc7046",
+    "14a4e2d01dbfcf1c8b5012b9cab5b6a1445e62c4bd7dc7ae168b3b5797dc7046",
+    "d0137614a3d4e5a1833037ac300e00e71b9d2ede0db76fe6ea856fbba4bf1ad2",
+    "d81cb70cc8dc832ce2611f1a216c6d141c909f9fe6d5297a01b186040ecb3738",
+    "d81cb70cc8dc832ce2611f1a216c6d141c909f9fe6d5297a01b186040ecb3738"
+  ],
+  "source_sha256": [
+    "0b862dfa9670b6fb3a5211663dc820daf494d8d55d1218d01c76bdf8a5d2fba0",
+    "a9238012a402031623b717256e81d871d2e86fc5b12f8dd91e6820b82d269884",
+    "a9238012a402031623b717256e81d871d2e86fc5b12f8dd91e6820b82d269884",
+    "0b862dfa9670b6fb3a5211663dc820daf494d8d55d1218d01c76bdf8a5d2fba0",
+    "1ec2eb03c70263bddd37adf01db85bde44c63319af1b28299c7dea75c8baeff7",
+    "1ec2eb03c70263bddd37adf01db85bde44c63319af1b28299c7dea75c8baeff7"
+  ],
+  "verified_frames": 6,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "climb_a/grip_idle_right",
+  "group": "climb",
+  "symbol": "adv_assets_climb_a_grip_idle_right__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/grip_idle_right/000.png",
+      "sha256": "98540983e42798164ca34de5ebc5fb309b213c1b49ffff9af3d13648bcf44c75"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/grip_idle_right/001.png",
+      "sha256": "0a0e0935a59afe361dae8aa2695315b741c8890c8a3fffd6dc23e7f9d10b7bd8"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/grip_idle_right/002.png",
+      "sha256": "0a0e0935a59afe361dae8aa2695315b741c8890c8a3fffd6dc23e7f9d10b7bd8"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/grip_idle_right/003.png",
+      "sha256": "98540983e42798164ca34de5ebc5fb309b213c1b49ffff9af3d13648bcf44c75"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/grip_idle_right/004.png",
+      "sha256": "dd0333cc99f307cd78886034c25ad70ee88f920f5c175c36477927d8b45b6ba6"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/grip_idle_right/005.png",
+      "sha256": "dd0333cc99f307cd78886034c25ad70ee88f920f5c175c36477927d8b45b6ba6"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "climb_a/grip_idle_right",
+      "logical_symbol": "adv_assets_climb_a_grip_idle_right__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

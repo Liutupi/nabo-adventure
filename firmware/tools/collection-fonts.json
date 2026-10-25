@@ -2,24 +2,24 @@
   "converter": "lv_font_conv 1.5.3",
   "font": "SourceHanSansCN-Medium.otf",
   "font_sha256": "a94e558a2fe972bee4f46bce0843abff37063fd68c33f1e7d9058f6f09432b01",
-  "symbols": "·一三上下不丛中举之习书了二云亭亮人任休会位住体你佳保信值停先光入关再冒冰准出击分切别到前力功动医占卡印原去及双发取口另只可台右同后和咖唱啡器四回图在地均块坡堆声备外夜太好始存学完客封小尽局山岔左已带平床库度开式当录待得德心态意戏成房所扣扬抓护择拿持按捕换接撞播收整料新方旁旅无时是显暂替最有服朝木未本术束来松林枚查横次欢款止正步气氧汽没法活测海消深温游滑潜激火点热煤照燃片牌牲状玩现班球用电留畜登的盖直看眠确示神离秒移空站章端笛第等箱簇精红纪线练结给继绩续罐网置羊美耗胶脑自色草获萤蒸蓄虫蛾补装角解认让设试调走起路跳车轨轻达过迎返这进迷送选道都配里重量金针铁铜银锁错键镇长院险陪集雪需靶音顺预颜飞鱼鸣黑齐！，：",
+  "symbols": "·一三上下不丛中举之习书了二云亭亮人任休会位住体你佳侧保信倍值停先光入关再冒冰准出击分切别到前力功动医占卡印原去及双发取口另只可台右同后和咖唱啡器四回图在地均块坡堆塌声壶备外夜太好始存学完客对封小就尽局山岔岩左已带平床库度开式当录待得德心快态意戏成房所扣扬抓护拔择拿持按捕换接撞播收整料新方旁旅无时是显暂更替最有服朝木未本术束来松林枚查横次欢款止正步气氧水汽没法活测海消深温游滑潜激火点热煤照燃片牌牲状玩现班球用电留畜登的盖直看眠石砸确碎示神离秒移空站章端笛第等箱簇米精红纪线练结给继绩续罐网置羊美翻耗胶脑自色草获萤落蒸蓄虫蛾补被装要角解认让设试调走起路跳车轨轻边达过迎返这进迷送选道那都配里重量金针铁铜银锁错键镇长院险陪集雪需面靶音顺预颜飞鱼鸣黑齐！，：",
   "fonts_by_size": {
     "12": {
       "font": "SourceHanSansCN-Medium.otf",
       "sha256": "a94e558a2fe972bee4f46bce0843abff37063fd68c33f1e7d9058f6f09432b01"
     },
     "16": {
-      "font": "Noto Sans SC Bold (TrueType).otf",
-      "sha256": "d1961be1161ea1be08496c920862d06ea5c23a757628f4fd69368de1d9f51bed"
+      "font": "NotoSansSC-Bold.otf",
+      "sha256": "5ed69f3e050c92306141063b9578229b3334f199f667a8d7aae5df0ef4a9bf7a"
     },
     "18": {
-      "font": "Noto Sans SC Bold (TrueType).otf",
-      "sha256": "d1961be1161ea1be08496c920862d06ea5c23a757628f4fd69368de1d9f51bed"
+      "font": "NotoSansSC-Bold.otf",
+      "sha256": "5ed69f3e050c92306141063b9578229b3334f199f667a8d7aae5df0ef4a9bf7a"
     }
   },
   "outputs": {
-    "collection_font_12": "ebcb952e6b69fdc477aa8be0c8efd0f3d5b1b8c46e001b79acfac0402071dd95",
-    "collection_font_16": "7caa41c0874c5794069fd51f09441e92534ea931d7a7cb68eaa490dabe32607d",
-    "collection_font_18": "12304d85c41605318ffb392cc53fc2ad93c7eaba14e074cbfffc666a0f011077"
+    "collection_font_12": "ae7d5f2859d9c9dc0bb0a1ac53eac74745cf503676a3ea139659fbcb5d9664ba",
+    "collection_font_16": "e1b7071e04776aad302cf9bd221a83624ebff1371f6c50d570328fd2d39eee96",
+    "collection_font_18": "80b3c11c805dc09cec58d554fff5a1030ed395d03aeea5f97869d57638408612"
   }
 }

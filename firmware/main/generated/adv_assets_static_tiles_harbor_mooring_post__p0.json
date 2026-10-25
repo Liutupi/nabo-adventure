@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_static_tiles_harbor_mooring_post__p0",
   "width": 32,
   "height": 32,
@@ -16,6 +16,7 @@
   "keys": [
     0
   ],
+  "frame_map": null,
   "data_bytes": 293,
   "table_bytes": 80,
   "frame_sha256": [

@@ -206,6 +206,21 @@ class ClimbModel(unittest.TestCase):
         self.assertGreaterEqual(self.traces['skilled']['states'][-1][2], 100)
         self.assertLess(self.traces['tapper']['states'][-1][2], 50)
 
+    def test_every_climb_string_has_glyphs_at_its_size(self):
+        import re
+        fonts = {}
+        for size in (12, 16, 18):
+            text = (BOARD/f'collection_font_{size}.c').read_text('utf-8')
+            fonts[size] = {chr(int(h, 16)) for h in re.findall(r'/\* U\+([0-9A-F]+) ', text)}
+        source = (BOARD/'adv_ui_climb.c').read_text('utf-8')
+        # The 16/18px heading font is only regenerated on the Windows host, so those sizes must stay within it.
+        big = ['本次到达', '最佳 %um', '最佳 9999+', 'OK 继续', '下 重新开始', '双击上 回地图', '暂停', '体力耗尽', '雪山']
+        for literal in big: self.assertIn('"'+literal+'"', source)
+        for literal in big:
+            self.assertTrue(all(c in fonts[16] and c in fonts[18] for c in literal if ord(c) > 127), literal)
+        for literal in re.findall(r'"([^"]*)"', source):
+            self.assertTrue(all(c in fonts[12] for c in literal if ord(c) > 127), literal)
+
     def test_mutations_are_caught(self):
         mutations = [
             ('adv_climb.c', 'g->press < ADV_CLIMB_TAP ? 1', 'g->press <= ADV_CLIMB_TAP ? 1'),

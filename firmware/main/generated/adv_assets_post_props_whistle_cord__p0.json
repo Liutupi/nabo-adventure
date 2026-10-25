@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_post_props_whistle_cord__p0",
   "width": 96,
   "height": 88,
@@ -16,11 +16,18 @@
     1,
     1,
     1,
-    4,
-    5
+    4
   ],
-  "data_bytes": 2541,
-  "table_bytes": 1088,
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    0
+  ],
+  "data_bytes": 2049,
+  "table_bytes": 920,
   "frame_sha256": [
     "7c104fb7474f7f78697186097652f4b8f2cb5c2dc5de2c167679e78a55ea86f0",
     "7f3c469a71f9a126e907d3b89fafe0c5b43e53a47097793f4cf471d1ab736b6f",

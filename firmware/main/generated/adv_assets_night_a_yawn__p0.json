@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_night_a_yawn__p0",
   "width": 54,
   "height": 56,
@@ -76,11 +76,18 @@
     0,
     0,
     0,
-    0,
     0
   ],
-  "data_bytes": 7673,
-  "table_bytes": 824,
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    0
+  ],
+  "data_bytes": 6309,
+  "table_bytes": 720,
   "frame_sha256": [
     "7817d2bcdb77960585275397a58ec260ddc571a87dad823667dfb57cf1ff89b0",
     "fc90844a39db7c545ecc688e27afc03d9e64d5b04917ea986defe2aa1e0b344e",

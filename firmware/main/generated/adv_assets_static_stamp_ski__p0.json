@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_static_stamp_ski__p0",
   "width": 96,
   "height": 96,
@@ -12,6 +12,7 @@
   "keys": [
     0
   ],
+  "frame_map": null,
   "data_bytes": 2100,
   "table_bytes": 200,
   "frame_sha256": [

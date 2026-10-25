@@ -1,0 +1,54 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_climb_props_hold_ice__p0",
+  "width": 24,
+  "height": 20,
+  "palette_rgb565": [
+    0,
+    8617,
+    17101,
+    40278,
+    40603,
+    63387
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 218,
+  "table_bytes": 56,
+  "frame_sha256": [
+    "27014fcd58ddbb660c9d74caf132eda86dc4486237338f56cf3b17a2d7667b7b"
+  ],
+  "source_sha256": [
+    "ccf3f7844cfc62d24003974c8d6e3597bf7d701021f8578e21d50e799300f37d"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/climb/props/hold-ice",
+  "group": "climb",
+  "symbol": "adv_assets_game_climb_props_hold_ice__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/climb/props/hold-ice.png",
+      "sha256": "8f67162906ee64cdce34bd3ed952131604d154d97cf2dc64506a29a6050e7ca5"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/climb/props/hold-ice",
+      "logical_symbol": "adv_assets_game_climb_props_hold_ice__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

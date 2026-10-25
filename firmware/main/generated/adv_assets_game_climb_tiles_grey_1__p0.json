@@ -1,0 +1,54 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_climb_tiles_grey_1__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8617,
+    17101,
+    29714,
+    40278,
+    52891
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 286,
+  "table_bytes": 80,
+  "frame_sha256": [
+    "e84d2df18b0af7b88fe9f47bc028cc61b0068cea9022aae7cc156e5e9c27a57f"
+  ],
+  "source_sha256": [
+    "51c1af911b8447ff8376de2dacdc46a823d8a5fc668ef5e72e9b9473edaea6f2"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/climb/tiles/grey-1",
+  "group": "climb",
+  "symbol": "adv_assets_game_climb_tiles_grey_1__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/climb/tiles/grey-1.png",
+      "sha256": "e5a2419f8bac1f715a3e0fbb52326bd1f2022280b6f74e30ff7cad7105d445e2"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/climb/tiles/grey-1",
+      "logical_symbol": "adv_assets_game_climb_tiles_grey_1__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

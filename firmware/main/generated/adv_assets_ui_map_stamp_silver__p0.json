@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_ui_map_stamp_silver__p0",
   "width": 16,
   "height": 16,
@@ -13,6 +13,7 @@
   "keys": [
     0
   ],
+  "frame_map": null,
   "data_bytes": 128,
   "table_bytes": 42,
   "frame_sha256": [

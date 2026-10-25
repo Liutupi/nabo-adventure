@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_night_a_catch__p0",
   "width": 54,
   "height": 56,
@@ -76,11 +76,18 @@
     0,
     2,
     3,
-    3,
     3
   ],
-  "data_bytes": 9442,
-  "table_bytes": 824,
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    0
+  ],
+  "data_bytes": 7929,
+  "table_bytes": 720,
   "frame_sha256": [
     "7817d2bcdb77960585275397a58ec260ddc571a87dad823667dfb57cf1ff89b0",
     "af79860314133f2c2882e410a875d0a5e1b9599599e86fa2966b6438dce39b66",

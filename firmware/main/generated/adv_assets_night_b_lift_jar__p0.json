@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_night_b_lift_jar__p0",
   "width": 53,
   "height": 56,
@@ -76,11 +76,18 @@
     0,
     2,
     3,
-    4,
     4
   ],
-  "data_bytes": 9749,
-  "table_bytes": 824,
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    0
+  ],
+  "data_bytes": 8180,
+  "table_bytes": 720,
   "frame_sha256": [
     "dfe1ce1790c68b6ee0de29cd93bd20d926756f3724c0bb16e2dd154df1ef32d6",
     "dbcee7b14852759044ab7a03815f25dbd41eb4e67ab8167f3d81892aa27bca4a",

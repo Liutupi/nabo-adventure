@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_ui_bars_bottom__p0",
   "width": 240,
   "height": 30,
@@ -12,6 +12,7 @@
   "keys": [
     0
   ],
+  "frame_map": null,
   "data_bytes": 60,
   "table_bytes": 68,
   "frame_sha256": [

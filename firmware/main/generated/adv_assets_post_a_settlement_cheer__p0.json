@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_post_a_settlement_cheer__p0",
   "width": 49,
   "height": 72,
@@ -77,11 +77,20 @@
     2,
     2,
     5,
-    6,
     6
   ],
-  "data_bytes": 13610,
-  "table_bytes": 1310,
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    0
+  ],
+  "data_bytes": 13040,
+  "table_bytes": 1178,
   "frame_sha256": [
     "21c15e4dead03bda24853fc0abd562baf7e12b5b869201a68f10772090ad0ef3",
     "a297a195bd23bfab29088c11071497ebfe8b702823fedde49e2f4c3d73fba27f",

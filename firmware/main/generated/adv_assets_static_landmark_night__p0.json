@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_static_landmark_night__p0",
   "width": 96,
   "height": 96,
@@ -20,6 +20,7 @@
   "keys": [
     0
   ],
+  "frame_map": null,
   "data_bytes": 1494,
   "table_bytes": 216,
   "frame_sha256": [

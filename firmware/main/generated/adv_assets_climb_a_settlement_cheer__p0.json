@@ -1,0 +1,169 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_climb_a_settlement_cheer__p0",
+  "width": 72,
+  "height": 78,
+  "palette_rgb565": [
+    0,
+    4161,
+    6472,
+    8387,
+    8453,
+    8553,
+    10500,
+    10565,
+    10667,
+    10699,
+    12613,
+    12779,
+    12813,
+    14660,
+    14726,
+    14860,
+    14924,
+    16773,
+    16807,
+    18821,
+    18886,
+    19148,
+    20967,
+    21065,
+    23439,
+    25095,
+    25618,
+    27208,
+    27306,
+    27731,
+    29647,
+    29875,
+    31532,
+    31858,
+    31956,
+    33481,
+    34037,
+    34069,
+    36149,
+    37707,
+    41900,
+    42392,
+    44079,
+    44242,
+    48534,
+    48665,
+    52335,
+    52498,
+    54676,
+    54939,
+    58902,
+    59099,
+    61245,
+    61246,
+    62868,
+    63358,
+    63390,
+    63391,
+    65078,
+    65143,
+    65208,
+    65241,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    0
+  ],
+  "data_bytes": 6340,
+  "table_bytes": 1264,
+  "frame_sha256": [
+    "1de30d5de6e0796f69bfa876677f04867c9f9af892703a1e061c5844bec5e93f",
+    "17ac0f8c2c4ca9e68b3212abfe1ab8d12c89444a57496fbbc68401c6a28c1e68",
+    "1945533ea4840caea6bc59f7857a08477c4e3c405eb6de61392ea34ac9fcfe76",
+    "f8b2f8aab25066667a1f659de0fbe4889983d6dadee6f08d735f5cbaaeae1c36",
+    "5339ff7216c441e8b8de457ce35f5a2542b8aa2a6fbf6153ddb12f26afed8c47",
+    "ed716606df245fac385575c73024c0aca4f0b31ce2f96bd23b540f291c83dafa",
+    "dc27f74eb4c555285ab40050c49ea53b5ef9f6cd07e72e26a1991103d984681e",
+    "1de30d5de6e0796f69bfa876677f04867c9f9af892703a1e061c5844bec5e93f"
+  ],
+  "source_sha256": [
+    "0ea9142094d39e110dd04d38237a9c6d828c10e47025d0094ce5f7f40704a9b5",
+    "af6ab4c02f5acf7fd5f6432016443aac2cc926785acbb79f4b135d96ec6ce5b1",
+    "96a5050239d1311828cd10a8cf28bd36a44b6c114c7cd03d6a5ad3dd5cc4ef98",
+    "026d6bf5701de142e0ca2e9e7f939e45057840121e7a56da0a7aec2b3676ad9b",
+    "93713a45d8789fa512d6f8a7df94848fb0e2f98c478b1a4428ff0715c74a8c54",
+    "4edc26ee18bada269e194b43568489946a9222ade7b0cdb828355ddcc89a8839",
+    "8d470968e113cdffdc6cc507a20ef7069d6049b17aefcf116e651990f5469baf",
+    "0ea9142094d39e110dd04d38237a9c6d828c10e47025d0094ce5f7f40704a9b5"
+  ],
+  "verified_frames": 8,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "climb_a/settlement_cheer",
+  "group": "climb",
+  "symbol": "adv_assets_climb_a_settlement_cheer__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/settlement_cheer/000.png",
+      "sha256": "a5b1f9eb7898d15fdb77bfd57c4f2e0d0ad795400be0192df9f3551354eba247"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/settlement_cheer/001.png",
+      "sha256": "1de790f7d00ed9896d7d4fd3154304c9ef24ac606860bfcc6eb9985a9eeba91f"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/settlement_cheer/002.png",
+      "sha256": "45e7da6c76837dd1b9bc95fb370cf0b52adfaecaa546dc39202598e0ded07a15"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/settlement_cheer/003.png",
+      "sha256": "17724d400bb3727eefb0b05f77ce4573defad2827dab66ede8ec0c27fa7c9ffc"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/settlement_cheer/004.png",
+      "sha256": "475bc296cb2b48587cd3fef5807414fe4f8dd7c41371ef265d465188c78dd8c3"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/settlement_cheer/005.png",
+      "sha256": "2d0a02de988b6a506e13f002032bb7ba7fb019a6d97da4a260ad23a1b4bdf15c"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/settlement_cheer/006.png",
+      "sha256": "f00a2d1229eacea796db5e35a3015596c2ce7f58463065012115ad9895189f39"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/settlement_cheer/007.png",
+      "sha256": "a5b1f9eb7898d15fdb77bfd57c4f2e0d0ad795400be0192df9f3551354eba247"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "climb_a/settlement_cheer",
+      "logical_symbol": "adv_assets_climb_a_settlement_cheer__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

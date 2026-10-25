@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_night_a_cheer__p0",
   "width": 56,
   "height": 72,
@@ -77,11 +77,20 @@
     2,
     2,
     2,
-    2,
     2
   ],
-  "data_bytes": 19052,
-  "table_bytes": 1310,
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    0
+  ],
+  "data_bytes": 16721,
+  "table_bytes": 1178,
   "frame_sha256": [
     "6e8f54e5cfbb24b16dc678582c54e0bb3c0f5d194ac0919ecf7ab8ed2d86577c",
     "8cfe33997b4ddccdf490355f060d3cba6ee6967f72c68ece8da557f3f868c7ef",

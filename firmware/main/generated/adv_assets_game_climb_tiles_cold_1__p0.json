@@ -1,0 +1,54 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_climb_tiles_cold_1__p0",
+  "width": 32,
+  "height": 32,
+  "palette_rgb565": [
+    0,
+    8617,
+    17101,
+    25717,
+    40603,
+    52891
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 286,
+  "table_bytes": 80,
+  "frame_sha256": [
+    "f4c6a6ada513fab0aadfab6e98219b805c7c1730afb906f910834df1bdf74b47"
+  ],
+  "source_sha256": [
+    "328ade81371da6d563a174faad687504cc676bc716dbb57454f7b3bdf90a03ad"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/climb/tiles/cold-1",
+  "group": "climb",
+  "symbol": "adv_assets_game_climb_tiles_cold_1__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/climb/tiles/cold-1.png",
+      "sha256": "77c4eacfda0501aa39c1fc5e98bf708429d94523cf1926252205ad3cb9c82a98"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/climb/tiles/cold-1",
+      "logical_symbol": "adv_assets_game_climb_tiles_cold_1__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

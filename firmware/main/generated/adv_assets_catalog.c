@@ -1,5 +1,34 @@
 #include "adv_assets_catalog.h"
 #include <string.h>
+#include "adv_assets_climb_a_charge_left__p0.h"
+#include "adv_assets_climb_a_charge_right__p0.h"
+#include "adv_assets_climb_a_grip_idle_left__p0.h"
+#include "adv_assets_climb_a_grip_idle_right__p0.h"
+#include "adv_assets_climb_a_jump_left__p0.h"
+#include "adv_assets_climb_a_jump_right__p0.h"
+#include "adv_assets_climb_a_settlement_cheer__p0.h"
+#include "adv_assets_climb_a_slide_left__p0.h"
+#include "adv_assets_climb_a_slide_right__p0.h"
+#include "adv_assets_climb_a_summit_cheer_left__p0.h"
+#include "adv_assets_climb_a_summit_cheer_right__p0.h"
+#include "adv_assets_climb_a_switch_grab_left__p0.h"
+#include "adv_assets_climb_a_switch_grab_right__p0.h"
+#include "adv_assets_climb_b_grip_idle_left__p0.h"
+#include "adv_assets_climb_b_grip_idle_right__p0.h"
+#include "adv_assets_climb_b_settlement_cheer__p0.h"
+#include "adv_assets_game_climb_props_canteen__p0.h"
+#include "adv_assets_game_climb_props_falling_rock__p0.h"
+#include "adv_assets_game_climb_props_hold_fragile__p0.h"
+#include "adv_assets_game_climb_props_hold_ice__p0.h"
+#include "adv_assets_game_climb_props_hold_normal__p0.h"
+#include "adv_assets_game_climb_shared_snow_drift__p0.h"
+#include "adv_assets_game_climb_shared_snow_mound__p0.h"
+#include "adv_assets_game_climb_tiles_cold_0__p0.h"
+#include "adv_assets_game_climb_tiles_cold_1__p0.h"
+#include "adv_assets_game_climb_tiles_grey_0__p0.h"
+#include "adv_assets_game_climb_tiles_grey_1__p0.h"
+#include "adv_assets_game_climb_tiles_snow_0__p0.h"
+#include "adv_assets_game_climb_tiles_snow_1__p0.h"
 #include "adv_assets_game_night_glass_jar__p0.h"
 #include "adv_assets_game_night_grass_00__p0.h"
 #include "adv_assets_game_night_grass_01__p0.h"
@@ -225,6 +254,93 @@
 #include "adv_assets_ui_wordmarks_ski__p0.h"
 #include "adv_assets_ui_wordmarks_sky__p0.h"
 #include "adv_assets_ui_wordmarks_space__p0.h"
+static const adv_asset_piece_t adv_assets_climb_a_charge_left__pieces[] = {
+    {&adv_assets_climb_a_charge_left__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_a_charge_right__pieces[] = {
+    {&adv_assets_climb_a_charge_right__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_a_grip_idle_left__pieces[] = {
+    {&adv_assets_climb_a_grip_idle_left__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_a_grip_idle_right__pieces[] = {
+    {&adv_assets_climb_a_grip_idle_right__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_a_jump_left__pieces[] = {
+    {&adv_assets_climb_a_jump_left__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_a_jump_right__pieces[] = {
+    {&adv_assets_climb_a_jump_right__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_a_settlement_cheer__pieces[] = {
+    {&adv_assets_climb_a_settlement_cheer__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_a_slide_left__pieces[] = {
+    {&adv_assets_climb_a_slide_left__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_a_slide_right__pieces[] = {
+    {&adv_assets_climb_a_slide_right__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_a_summit_cheer_left__pieces[] = {
+    {&adv_assets_climb_a_summit_cheer_left__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_a_summit_cheer_right__pieces[] = {
+    {&adv_assets_climb_a_summit_cheer_right__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_a_switch_grab_left__pieces[] = {
+    {&adv_assets_climb_a_switch_grab_left__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_a_switch_grab_right__pieces[] = {
+    {&adv_assets_climb_a_switch_grab_right__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_b_grip_idle_left__pieces[] = {
+    {&adv_assets_climb_b_grip_idle_left__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_b_grip_idle_right__pieces[] = {
+    {&adv_assets_climb_b_grip_idle_right__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_climb_b_settlement_cheer__pieces[] = {
+    {&adv_assets_climb_b_settlement_cheer__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_climb_props_canteen__pieces[] = {
+    {&adv_assets_game_climb_props_canteen__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_climb_props_falling_rock__pieces[] = {
+    {&adv_assets_game_climb_props_falling_rock__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_climb_props_hold_fragile__pieces[] = {
+    {&adv_assets_game_climb_props_hold_fragile__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_climb_props_hold_ice__pieces[] = {
+    {&adv_assets_game_climb_props_hold_ice__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_climb_props_hold_normal__pieces[] = {
+    {&adv_assets_game_climb_props_hold_normal__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_climb_shared_snow_drift__pieces[] = {
+    {&adv_assets_game_climb_shared_snow_drift__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_climb_shared_snow_mound__pieces[] = {
+    {&adv_assets_game_climb_shared_snow_mound__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_climb_tiles_cold_0__pieces[] = {
+    {&adv_assets_game_climb_tiles_cold_0__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_climb_tiles_cold_1__pieces[] = {
+    {&adv_assets_game_climb_tiles_cold_1__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_climb_tiles_grey_0__pieces[] = {
+    {&adv_assets_game_climb_tiles_grey_0__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_climb_tiles_grey_1__pieces[] = {
+    {&adv_assets_game_climb_tiles_grey_1__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_climb_tiles_snow_0__pieces[] = {
+    {&adv_assets_game_climb_tiles_snow_0__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_climb_tiles_snow_1__pieces[] = {
+    {&adv_assets_game_climb_tiles_snow_1__p0, 0, 0},
+};
 static const adv_asset_piece_t adv_assets_game_night_glass_jar__pieces[] = {
     {&adv_assets_game_night_glass_jar__p0, 0, 0},
 };
@@ -1024,6 +1140,35 @@ static const adv_asset_piece_t adv_assets_ui_wordmarks_space__pieces[] = {
     {&adv_assets_ui_wordmarks_space__p0, 0, 0},
 };
 const adv_asset_record_t adv_assets_catalog[] = {
+    {"climb_a/charge_left", adv_assets_climb_a_charge_left__pieces, 1, 60, 65, 30, 62, 12, false},
+    {"climb_a/charge_right", adv_assets_climb_a_charge_right__pieces, 1, 60, 65, 30, 62, 12, false},
+    {"climb_a/grip_idle_left", adv_assets_climb_a_grip_idle_left__pieces, 1, 60, 65, 30, 62, 12, true},
+    {"climb_a/grip_idle_right", adv_assets_climb_a_grip_idle_right__pieces, 1, 60, 65, 30, 62, 12, true},
+    {"climb_a/jump_left", adv_assets_climb_a_jump_left__pieces, 1, 60, 65, 30, 62, 12, false},
+    {"climb_a/jump_right", adv_assets_climb_a_jump_right__pieces, 1, 60, 65, 30, 62, 12, false},
+    {"climb_a/settlement_cheer", adv_assets_climb_a_settlement_cheer__pieces, 1, 72, 78, 36, 75, 12, false},
+    {"climb_a/slide_left", adv_assets_climb_a_slide_left__pieces, 1, 60, 65, 30, 62, 12, false},
+    {"climb_a/slide_right", adv_assets_climb_a_slide_right__pieces, 1, 60, 65, 30, 62, 12, false},
+    {"climb_a/summit_cheer_left", adv_assets_climb_a_summit_cheer_left__pieces, 1, 60, 65, 30, 62, 12, false},
+    {"climb_a/summit_cheer_right", adv_assets_climb_a_summit_cheer_right__pieces, 1, 60, 65, 30, 62, 12, false},
+    {"climb_a/switch_grab_left", adv_assets_climb_a_switch_grab_left__pieces, 1, 60, 65, 30, 62, 12, false},
+    {"climb_a/switch_grab_right", adv_assets_climb_a_switch_grab_right__pieces, 1, 60, 65, 30, 62, 12, false},
+    {"climb_b/grip_idle_left", adv_assets_climb_b_grip_idle_left__pieces, 1, 60, 65, 30, 62, 12, true},
+    {"climb_b/grip_idle_right", adv_assets_climb_b_grip_idle_right__pieces, 1, 60, 65, 30, 62, 12, true},
+    {"climb_b/settlement_cheer", adv_assets_climb_b_settlement_cheer__pieces, 1, 72, 78, 36, 75, 12, false},
+    {"game/climb/props/canteen", adv_assets_game_climb_props_canteen__pieces, 1, 16, 24, 8, 24, 0, false},
+    {"game/climb/props/falling-rock", adv_assets_game_climb_props_falling_rock__pieces, 1, 24, 24, 12, 24, 0, false},
+    {"game/climb/props/hold-fragile", adv_assets_game_climb_props_hold_fragile__pieces, 1, 24, 20, 12, 9, 0, false},
+    {"game/climb/props/hold-ice", adv_assets_game_climb_props_hold_ice__pieces, 1, 24, 20, 12, 9, 0, false},
+    {"game/climb/props/hold-normal", adv_assets_game_climb_props_hold_normal__pieces, 1, 24, 20, 12, 9, 0, false},
+    {"game/climb/shared/snow-drift", adv_assets_game_climb_shared_snow_drift__pieces, 1, 32, 32, 0, 0, 0, false},
+    {"game/climb/shared/snow-mound", adv_assets_game_climb_shared_snow_mound__pieces, 1, 32, 32, 0, 0, 0, false},
+    {"game/climb/tiles/cold-0", adv_assets_game_climb_tiles_cold_0__pieces, 1, 32, 32, 0, 0, 0, false},
+    {"game/climb/tiles/cold-1", adv_assets_game_climb_tiles_cold_1__pieces, 1, 32, 32, 0, 0, 0, false},
+    {"game/climb/tiles/grey-0", adv_assets_game_climb_tiles_grey_0__pieces, 1, 32, 32, 0, 0, 0, false},
+    {"game/climb/tiles/grey-1", adv_assets_game_climb_tiles_grey_1__pieces, 1, 32, 32, 0, 0, 0, false},
+    {"game/climb/tiles/snow-0", adv_assets_game_climb_tiles_snow_0__pieces, 1, 32, 32, 0, 0, 0, false},
+    {"game/climb/tiles/snow-1", adv_assets_game_climb_tiles_snow_1__pieces, 1, 32, 32, 0, 0, 0, false},
     {"game/night/glass_jar", adv_assets_game_night_glass_jar__pieces, 1, 19, 37, 9, 37, 0, false},
     {"game/night/grass_00", adv_assets_game_night_grass_00__pieces, 1, 32, 32, 16, 31, 0, false},
     {"game/night/grass_01", adv_assets_game_night_grass_01__pieces, 1, 32, 32, 16, 31, 0, false},
@@ -1305,32 +1450,32 @@ const adv_ninepatch_t adv_assets_patch_info_normal = {{&adv_assets_ui_cards_info
 const adv_ninepatch_t adv_assets_patch_info_current = {{&adv_assets_ui_cards_info_current_top_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_top_right__p0, &adv_assets_ui_cards_info_current_left__p0, &adv_assets_ui_cards_info_current_center__p0, &adv_assets_ui_cards_info_current_right__p0, &adv_assets_ui_cards_info_current_bottom_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_bottom_right__p0}};
 const adv_ninepatch_t adv_assets_patch_popup_normal = {{&adv_assets_ui_cards_popup_normal_top_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_top_right__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_info_normal_center__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_popup_normal_bottom_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_bottom_right__p0}};
 const adv_asset_digit_t adv_assets_digits_36[] = {
-    {48, &adv_assets_catalog[226], 36},
-    {49, &adv_assets_catalog[227], 22},
-    {50, &adv_assets_catalog[228], 31},
-    {51, &adv_assets_catalog[229], 32},
-    {52, &adv_assets_catalog[230], 36},
-    {53, &adv_assets_catalog[231], 31},
-    {54, &adv_assets_catalog[232], 34},
-    {55, &adv_assets_catalog[233], 33},
-    {56, &adv_assets_catalog[234], 35},
-    {57, &adv_assets_catalog[235], 33},
-    {109, &adv_assets_catalog[236], 53},
-    {43, &adv_assets_catalog[237], 31},
+    {48, &adv_assets_catalog[255], 36},
+    {49, &adv_assets_catalog[256], 22},
+    {50, &adv_assets_catalog[257], 31},
+    {51, &adv_assets_catalog[258], 32},
+    {52, &adv_assets_catalog[259], 36},
+    {53, &adv_assets_catalog[260], 31},
+    {54, &adv_assets_catalog[261], 34},
+    {55, &adv_assets_catalog[262], 33},
+    {56, &adv_assets_catalog[263], 35},
+    {57, &adv_assets_catalog[264], 33},
+    {109, &adv_assets_catalog[265], 53},
+    {43, &adv_assets_catalog[266], 31},
 };
 const adv_asset_digit_t adv_assets_digits_20[] = {
-    {48, &adv_assets_catalog[214], 22},
-    {49, &adv_assets_catalog[215], 15},
-    {50, &adv_assets_catalog[216], 20},
-    {51, &adv_assets_catalog[217], 19},
-    {52, &adv_assets_catalog[218], 22},
-    {53, &adv_assets_catalog[219], 20},
-    {54, &adv_assets_catalog[220], 21},
-    {55, &adv_assets_catalog[221], 20},
-    {56, &adv_assets_catalog[222], 21},
-    {57, &adv_assets_catalog[223], 21},
-    {109, &adv_assets_catalog[224], 32},
-    {43, &adv_assets_catalog[225], 20},
+    {48, &adv_assets_catalog[243], 22},
+    {49, &adv_assets_catalog[244], 15},
+    {50, &adv_assets_catalog[245], 20},
+    {51, &adv_assets_catalog[246], 19},
+    {52, &adv_assets_catalog[247], 22},
+    {53, &adv_assets_catalog[248], 20},
+    {54, &adv_assets_catalog[249], 21},
+    {55, &adv_assets_catalog[250], 20},
+    {56, &adv_assets_catalog[251], 21},
+    {57, &adv_assets_catalog[252], 21},
+    {109, &adv_assets_catalog[253], 32},
+    {43, &adv_assets_catalog[254], 20},
 };
 const uint16_t adv_assets_ui_palette[] = {8649, 15375, 17298, 25487, 35986, 38099, 40276, 44406, 45672, 46518, 48007, 54567, 56595, 57082, 63356, 65502};
 const size_t adv_assets_ui_palette_count = 16;

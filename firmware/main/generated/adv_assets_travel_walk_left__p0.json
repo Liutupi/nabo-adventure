@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_travel_walk_left__p0",
   "width": 22,
   "height": 48,
@@ -81,6 +81,7 @@
     0,
     0
   ],
+  "frame_map": null,
   "data_bytes": 5111,
   "table_bytes": 928,
   "frame_sha256": [

@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_ui_cards_popup_normal_top_right__p0",
   "width": 16,
   "height": 16,
@@ -12,6 +12,7 @@
   "keys": [
     0
   ],
+  "frame_map": null,
   "data_bytes": 36,
   "table_bytes": 40,
   "frame_sha256": [

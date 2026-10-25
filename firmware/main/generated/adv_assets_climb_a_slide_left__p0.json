@@ -1,0 +1,151 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_climb_a_slide_left__p0",
+  "width": 60,
+  "height": 65,
+  "palette_rgb565": [
+    0,
+    2113,
+    6472,
+    8354,
+    8453,
+    8585,
+    10565,
+    10667,
+    12548,
+    12613,
+    12746,
+    12780,
+    12812,
+    14660,
+    14726,
+    16773,
+    16807,
+    16906,
+    17036,
+    18854,
+    20934,
+    21000,
+    21261,
+    23178,
+    23439,
+    27175,
+    27534,
+    27665,
+    29320,
+    29419,
+    29811,
+    31891,
+    31956,
+    33481,
+    34037,
+    34069,
+    35660,
+    35888,
+    36182,
+    37740,
+    41900,
+    44111,
+    44243,
+    44440,
+    50352,
+    50549,
+    50680,
+    52860,
+    54644,
+    56495,
+    58903,
+    59100,
+    60819,
+    61246,
+    62997,
+    63325,
+    63326,
+    63358,
+    63391,
+    65143,
+    65208,
+    65273,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0
+  ],
+  "frame_map": [
+    0,
+    1,
+    2,
+    2,
+    1,
+    0
+  ],
+  "data_bytes": 2850,
+  "table_bytes": 542,
+  "frame_sha256": [
+    "ce23f1ba128e454afa48470698f1fce816a31d89c8329d8e64874ceec2e70bd2",
+    "74cef7d1aedace0f897365423875fdbe8271c0d55629c38c07950bef086be49f",
+    "095417fb756307ec27a12863b978b14d4c2e4fffd39e909626208f8a1c65d6b2",
+    "095417fb756307ec27a12863b978b14d4c2e4fffd39e909626208f8a1c65d6b2",
+    "74cef7d1aedace0f897365423875fdbe8271c0d55629c38c07950bef086be49f",
+    "ce23f1ba128e454afa48470698f1fce816a31d89c8329d8e64874ceec2e70bd2"
+  ],
+  "source_sha256": [
+    "28bbd1b93aec5a15b7ed8f33542a084bf88b7c4dbcf4f9465526493f0dc6b56d",
+    "962e462691efbfc16d1747c87128a2b124f22ac45e31fac6e8854f3687eb071f",
+    "5639f35bad5bcf268bd0fea84debc3d656b55dac590e776c317bd1ef6c85e01e",
+    "5639f35bad5bcf268bd0fea84debc3d656b55dac590e776c317bd1ef6c85e01e",
+    "962e462691efbfc16d1747c87128a2b124f22ac45e31fac6e8854f3687eb071f",
+    "28bbd1b93aec5a15b7ed8f33542a084bf88b7c4dbcf4f9465526493f0dc6b56d"
+  ],
+  "verified_frames": 6,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "climb_a/slide_left",
+  "group": "climb",
+  "symbol": "adv_assets_climb_a_slide_left__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/slide_left/000.png",
+      "sha256": "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/slide_left/001.png",
+      "sha256": "4667a09bbb0e8dd1afebe53940cf7f17fcdeecdb6cd7795f1431eb3386208f1f"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/slide_left/002.png",
+      "sha256": "ac056a69ac01efab48717bfed9660602c58474a2be7f4c0394153ee2e5dbf9f9"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/slide_left/003.png",
+      "sha256": "ac056a69ac01efab48717bfed9660602c58474a2be7f4c0394153ee2e5dbf9f9"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/slide_left/004.png",
+      "sha256": "4667a09bbb0e8dd1afebe53940cf7f17fcdeecdb6cd7795f1431eb3386208f1f"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/slide_left/005.png",
+      "sha256": "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "climb_a/slide_left",
+      "logical_symbol": "adv_assets_climb_a_slide_left__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

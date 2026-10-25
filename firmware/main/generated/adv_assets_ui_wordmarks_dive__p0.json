@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_ui_wordmarks_dive__p0",
   "width": 200,
   "height": 80,
@@ -16,6 +16,7 @@
   "keys": [
     0
   ],
+  "frame_map": null,
   "data_bytes": 1324,
   "table_bytes": 176,
   "frame_sha256": [

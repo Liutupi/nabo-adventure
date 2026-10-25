@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_post_props_wheel_cycle__p0",
   "width": 96,
   "height": 88,
@@ -19,6 +19,7 @@
     0,
     0
   ],
+  "frame_map": null,
   "data_bytes": 2603,
   "table_bytes": 732,
   "frame_sha256": [

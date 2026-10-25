@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_night_b_seat_idle__p0",
   "width": 53,
   "height": 56,
@@ -76,13 +76,20 @@
     0,
     0,
     0,
-    0,
-    0,
-    0,
     0
   ],
-  "data_bytes": 7724,
-  "table_bytes": 1056,
+  "frame_map": [
+    0,
+    1,
+    2,
+    1,
+    0,
+    3,
+    4,
+    3
+  ],
+  "data_bytes": 5432,
+  "table_bytes": 724,
   "frame_sha256": [
     "dfe1ce1790c68b6ee0de29cd93bd20d926756f3724c0bb16e2dd154df1ef32d6",
     "65da2bfa7c3cbc6691d1e3a0bc70c8da500058e1b0505734351b6348fe3401f3",

@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_game_night_jar_glow__p0",
   "width": 32,
   "height": 32,
@@ -12,6 +12,7 @@
   "keys": [
     0
   ],
+  "frame_map": null,
   "data_bytes": 263,
   "table_bytes": 72,
   "frame_sha256": [

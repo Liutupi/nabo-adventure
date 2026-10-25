@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_night_b_move_right__p0",
   "width": 53,
   "height": 56,
@@ -74,11 +74,16 @@
   "keys": [
     0,
     1,
-    1,
-    3
+    1
   ],
-  "data_bytes": 6352,
-  "table_bytes": 592,
+  "frame_map": [
+    0,
+    1,
+    2,
+    0
+  ],
+  "data_bytes": 4714,
+  "table_bytes": 484,
   "frame_sha256": [
     "dfe1ce1790c68b6ee0de29cd93bd20d926756f3724c0bb16e2dd154df1ef32d6",
     "0a14386c96309a1d04fb01a57e56e4ca5984f8e89968a8ec96542e939ae9c175",

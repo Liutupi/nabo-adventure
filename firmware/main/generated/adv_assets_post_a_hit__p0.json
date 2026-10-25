@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_post_a_hit__p0",
   "width": 36,
   "height": 40,
@@ -74,11 +74,18 @@
     1,
     2,
     3,
-    4,
     4
   ],
-  "data_bytes": 5359,
-  "table_bytes": 628,
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    0
+  ],
+  "data_bytes": 4509,
+  "table_bytes": 556,
   "frame_sha256": [
     "412224997071947cc54784f586fcc01749bdeb86c1d2be2a416190a99e4f83b8",
     "11507e7a4651d50a858e2b6e3478097217f693a807d309fe4117e465dc6f4252",

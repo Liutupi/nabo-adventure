@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_post_b_delivered__p0",
   "width": 36,
   "height": 40,
@@ -74,11 +74,18 @@
     0,
     0,
     0,
-    0,
     0
   ],
-  "data_bytes": 2446,
-  "table_bytes": 628,
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    0
+  ],
+  "data_bytes": 2132,
+  "table_bytes": 556,
   "frame_sha256": [
     "7dfc4d77bed313bfe515d83f7e430d89e4cee4f30512deef39ddc6c0311784de",
     "c259fb65da5d4dc3d3637d11b544869fc2f686a7200615c1836f22d807001502",

@@ -1,0 +1,53 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_climb_props_hold_fragile__p0",
+  "width": 24,
+  "height": 20,
+  "palette_rgb565": [
+    0,
+    8617,
+    17101,
+    40278,
+    63387
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 232,
+  "table_bytes": 54,
+  "frame_sha256": [
+    "892d066bb9ed54e6d8a0f4f00a5f972e94703fe4994788579ff8bb733cfc3002"
+  ],
+  "source_sha256": [
+    "2cc0fea4f81441c97d2fd73a3d67042976ab7b8bdd3b4da4924aca4f790c8b78"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/climb/props/hold-fragile",
+  "group": "climb",
+  "symbol": "adv_assets_game_climb_props_hold_fragile__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/climb/props/hold-fragile.png",
+      "sha256": "aae0726aa8c260e9dc00d228efd07bd7c3d431f46de5b95f2b1628602abdb327"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/climb/props/hold-fragile",
+      "logical_symbol": "adv_assets_game_climb_props_hold_fragile__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

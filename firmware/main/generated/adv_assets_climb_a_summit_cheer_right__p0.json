@@ -1,0 +1,161 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_climb_a_summit_cheer_right__p0",
+  "width": 60,
+  "height": 65,
+  "palette_rgb565": [
+    0,
+    2113,
+    6472,
+    8354,
+    8453,
+    8585,
+    10565,
+    10667,
+    12548,
+    12613,
+    12746,
+    12780,
+    12812,
+    14660,
+    14726,
+    16773,
+    16807,
+    16906,
+    17036,
+    18854,
+    20934,
+    21000,
+    21261,
+    23178,
+    23439,
+    27175,
+    27534,
+    27665,
+    29320,
+    29419,
+    29811,
+    31891,
+    31956,
+    33481,
+    34037,
+    34069,
+    35660,
+    35888,
+    36182,
+    37740,
+    41900,
+    44111,
+    44243,
+    44440,
+    50352,
+    50549,
+    50680,
+    52860,
+    54644,
+    56495,
+    58903,
+    59100,
+    60819,
+    61246,
+    62997,
+    63325,
+    63326,
+    63358,
+    63391,
+    65143,
+    65208,
+    65273,
+    65471,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 5957,
+  "table_bytes": 1200,
+  "frame_sha256": [
+    "d0137614a3d4e5a1833037ac300e00e71b9d2ede0db76fe6ea856fbba4bf1ad2",
+    "f7ac77e4d42a95ce33a421567cd4d13b3b7f1baeeb06ba5175fda0933e050954",
+    "0e2278585a42c70cd364cc4ab9b8913609b03cbb3c70421f7b2a01d17f4da323",
+    "eaf4b6360ae589f9c6cb57189f97aabe2168c7b82a3263f450600dc9a75f17d9",
+    "a6585d3b9368f40eb2d7363ea436c00f1617e1e4a6b943f5bd04ca19d3bb74c7",
+    "ddd2ed2cb20ab487a9b26371da21620250e7400e395dd17e70e45b4933d6a10c",
+    "2669692dc3671d244e6eb07bcaa033eed2a22be78f07e57da6626180f3e8cf39",
+    "ffe75c435ed557ef94951826da05e01efb517e658920b3543f9ffbbf1ee211fd"
+  ],
+  "source_sha256": [
+    "0b862dfa9670b6fb3a5211663dc820daf494d8d55d1218d01c76bdf8a5d2fba0",
+    "b6bca3bb0b5f4009b2b0cff6dadb106fc777779bd780a9b878f13e54f1362f4f",
+    "3629dd0fa3a407232c6108f30952abd471bd51fde1ab10611bef84af2c5d78f9",
+    "456588dfe2c849c8c2f80b8c57309418a99536608e4278a07fd4bdd7946ee285",
+    "54a96b5c48507bf7bb558aafa4a795cb84cbc7825172506cd8c82ba7eac0413f",
+    "4f4316328fc68e6f652f78e793f8b80022fa413ad307864210dfcd700ec8af69",
+    "b2fb364da42b2c973bbca300bbffa56d9543cf47a6ab65390c344681ac9d81dc",
+    "8ca23bc5a2776ae751ab5eccf86c1daa40f2b7b89e80b54728d253ef1387a53b"
+  ],
+  "verified_frames": 8,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "climb_a/summit_cheer_right",
+  "group": "climb",
+  "symbol": "adv_assets_climb_a_summit_cheer_right__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/summit_cheer_right/000.png",
+      "sha256": "98540983e42798164ca34de5ebc5fb309b213c1b49ffff9af3d13648bcf44c75"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/summit_cheer_right/001.png",
+      "sha256": "dfe95420337c5d686c018d47b37fa3602dd621cb26f08c40ab33d35be50d89c3"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/summit_cheer_right/002.png",
+      "sha256": "a466073a0e37b5798ad7d3b1a3d491d74476a3b91015022ac491dabf6b7313d6"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/summit_cheer_right/003.png",
+      "sha256": "339f8823869c6e7f3479f518257ae381172857321c8e7aaa9793c865ea5d9af5"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/summit_cheer_right/004.png",
+      "sha256": "9dc29e95c1054c13918edf3ab7dcbb026c2efb6c72b7a2de7a3c7f5c747e8311"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/summit_cheer_right/005.png",
+      "sha256": "6ad89a2dc5bea7655d5087400de9dd609cfacf2444c710ceb0945111b7a815a9"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/summit_cheer_right/006.png",
+      "sha256": "b11e6daa91e16b7185eb231fd7fed00cffe79096f9ef1c7510d4003f4afdb422"
+    },
+    {
+      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/summit_cheer_right/007.png",
+      "sha256": "dc68a39cda757e9adade38256f5cb0428f2f99da0e04d05f93a2b58e176c02b8"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "climb_a/summit_cheer_right",
+      "logical_symbol": "adv_assets_climb_a_summit_cheer_right__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

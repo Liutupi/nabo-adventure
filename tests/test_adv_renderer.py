@@ -18,7 +18,7 @@ BOARD = ROOT/'firmware/main'
 HOST = ROOT/'tests/adv_host'
 UP, DOWN, OK = 0, 1, 2
 PRESS, CLICK, DOUBLE, LONG, RELEASE = 0, 1, 2, 3, 4
-SOURCES = ['adv_boot_motion.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c','adv_ui_night.c', 'adv_ui_post.c', 'adv_ui_post_session.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
+SOURCES = ['adv_boot_motion.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c','adv_ui_night.c','adv_climb.c','adv_ui_climb.c', 'adv_ui_post.c', 'adv_ui_post_session.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
            'adv_text.c', 'adv_ui.c', 'adv_ui_animation.c', 'adv_ui_art.c', 'adv_ui_map.c', 'adv_ui_session.c', 'adv_ui_jump.c', 'collection_portrait.c',
            'nabo_jump_model.c', 'nabo_jump_rig.c', 'nabo_jump_codec.c','nabo_dive_text.c', 'collection_font_12.c', 'collection_font_16.c',
            'collection_font_18.c', 'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c','adv_video.c','adv_ui_boot_video.c']
@@ -151,6 +151,28 @@ class Renderer(unittest.TestCase):
             self.save('post-practice-'+str(lesson)+'.png',True)
         self.lib.host_post_practice_case(2);self.check('POST waiting for a tap');self.steps(1200)
         self.assertEqual(self.lib.host_phase(),2)
+
+    def test_climb_native_scenes_and_every_session_phase_are_incremental(self):
+        self.new([0,50,600,25,60,0,0,0,0],seen=0xfff)
+        names=('idle','switch','charge','jump','hit-slide','holds','rocks','snow','title','ready','pause','end','result','max-record','milestone','cold')
+        for case,name in enumerate(names):
+            self.lib.host_climb_case(case);self.check('CLIMB '+name);self.save('climb-'+name+'.png',True)
+            self.assertEqual((self.lib.adv_ui_width(),self.lib.adv_ui_height()),(240,320))
+            if name=='title':
+                source=Image.open(ROOT/'game-art/adventure/art/ui/wordmarks/climb.png').convert('RGBA')
+                got=self.view_image().crop((20,42,220,122))
+                for (r,g,b,a),pixel in zip(source.getdata(),got.getdata()):
+                    if a==255:self.assertEqual(pixel,((r>>3)*255//31,(g>>2)*255//63,(b>>3)*255//31));break
+        # Climbing for real scrolls every frame; each frame must still equal a full redraw.
+        self.lib.host_climb_case(0)
+        for _ in range(3):
+            self.ev(OK,PRESS);self.steps(2);self.ev(OK,RELEASE);self.ev(OK,CLICK)
+            for _ in range(6):self.steps(5)
+        self.ev(OK,PRESS);self.steps(30);self.ev(OK,RELEASE);self.ev(OK,LONG)
+        for _ in range(8):self.steps(5)
+        self.ev(UP,LONG);self.assertEqual(self.lib.host_phase(),3)
+        for _ in range(2):self.ev(UP,PRESS);self.ev(UP,RELEASE);self.ev(UP,CLICK)
+        self.ev(UP,DOUBLE);self.assertIn(self.lib.host_page(),(1,5))   # map, or the stamp ceremony first
 
     def test_night_native_scenes_and_every_session_phase_are_incremental(self):
         self.new([0,50,600,25,0,0,0,0,0],seen=0xffffff)

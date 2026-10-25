@@ -6,6 +6,7 @@
 #include "adv_model.h"
 #include "adv_post.h"
 #include "adv_night.h"
+#include "adv_climb.h"
 #include "adv_ui.h"
 #include "adv_ui_art.h"
 #include "adv_ui_animation.h"
@@ -169,6 +170,35 @@ void host_night_case(int which)
     if(which==10)model.phase=ADV_PAUSE;
     if(which==11){model.phase=ADV_END;model.t=60;p->res=0;p->over=1;}
     if(which>=12){model.phase=ADV_RESULT;p->score=which==13?UINT32_MAX:68;model.best[4]=p->score;model.record=which==12;model.test=false;}
+}
+
+// CLIMB scenes: 0 idle, 1 switch mid-air, 2 charging, 3 jump, 4 slide after a hit, 5 fragile/ice/canteen,
+// 6 rock warning + falling rocks, 7 snow zone, 8 title, 9 ready, 10 pause, 11 end, 12 result record, 13 max result,
+// 14 milestone cheer, 15 cold zone.
+void host_climb_case(int which)
+{
+    if(model.in_session&&model.station!=5)adv_event(&model,ADV_BTN_UP,ADV_EV_DOUBLE);
+    if(!model.in_session){model.test=true;model.page=ADV_PAGE_MAP;adv_test_open(&model,5);}
+    model.phase=ADV_PLAY;adv_climb_t *p=model.game;adv_climb_start(p,1234);p->tick=10;p->rock_next=100000;
+    adv_input_t none={0},down={.ok_down=1,.ok_held=1},held={.ok_held=1},up={.ok_up=1};
+    if(which==1){adv_climb_step(p,&down);adv_climb_step(p,&up);for(int i=0;i<12;i++)adv_climb_step(p,&none);}
+    if(which==2){adv_climb_step(p,&down);for(int i=0;i<26;i++)adv_climb_step(p,&held);}
+    if(which==3){adv_climb_step(p,&down);for(int i=0;i<20;i++)adv_climb_step(p,&held);adv_climb_step(p,&up);for(int i=0;i<14;i++)adv_climb_step(p,&none);}
+    if(which==4){p->row=3;p->score=8;p->rocks[0]=(adv_climb_rock_t){1,0,3*ADV_CLIMB_ROW+20};adv_climb_step(p,&none);for(int i=0;i<10;i++)adv_climb_step(p,&none);}
+    if(which==5){p->row=2;p->side=1;p->grid[2]=CLIMB_NORMAL|(CLIMB_ICE<<2);p->grid[3]=CLIMB_FRAGILE|(CLIMB_NORMAL<<2)|(1<<5);
+        p->grid[4]=CLIMB_ICE|(CLIMB_FRAGILE<<2)|(1<<4);p->res=200;}
+    if(which==6){p->score=40;p->rocks[0]=(adv_climb_rock_t){1,0,14*ADV_CLIMB_ROW};p->rocks[1]=(adv_climb_rock_t){1,1,3*ADV_CLIMB_ROW};
+        p->rocks[2]=(adv_climb_rock_t){1,0,4*ADV_CLIMB_ROW};p->rocks[3]=(adv_climb_rock_t){1,1,12*ADV_CLIMB_ROW};}
+    if(which==7||which==15){int row=which==7?240:150;
+        for(int r=row-10;r<=row+12;r++){p->gen_top=r;p->grid[r%ADV_CLIMB_RING]=(uint8_t)(r%3==0?CLIMB_NORMAL|(CLIMB_ICE<<2):r%3==1?CLIMB_NORMAL:CLIMB_ICE<<2);}
+        p->row=row;p->score=(uint32_t)row;p->side=0;}
+    if(which==8)model.phase=ADV_TITLE;
+    if(which==9){model.phase=ADV_READY;model.t=120;}
+    if(which==10)model.phase=ADV_PAUSE;
+    if(which==11){model.phase=ADV_END;model.t=60;p->res=0;p->over=1;}
+    if(which==12||which==13){model.phase=ADV_RESULT;p->score=which==13?UINT32_MAX:186;model.best[5]=p->score;model.record=which==12;model.test=false;}
+    if(which==14){p->row=50;p->score=50;p->cheer=30;p->feedback=60;p->message=CLIMB_MSG_MILESTONE;
+        for(int r=40;r<=62;r++){p->gen_top=r;p->grid[r%ADV_CLIMB_RING]=CLIMB_NORMAL|(CLIMB_NORMAL<<2);}}
 }
 
 void host_post_station_at(int lane,int x)

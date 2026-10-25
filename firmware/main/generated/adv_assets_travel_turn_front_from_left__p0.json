@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_travel_turn_front_from_left__p0",
   "width": 22,
   "height": 48,
@@ -79,6 +79,7 @@
     0,
     0
   ],
+  "frame_map": null,
   "data_bytes": 4860,
   "table_bytes": 728,
   "frame_sha256": [

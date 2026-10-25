@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_ui_passport_grid_normal__p0",
   "width": 104,
   "height": 52,
@@ -12,6 +12,7 @@
   "keys": [
     0
   ],
+  "frame_map": null,
   "data_bytes": 120,
   "table_bytes": 112,
   "frame_sha256": [

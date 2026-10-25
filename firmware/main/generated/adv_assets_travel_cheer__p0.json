@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_travel_cheer__p0",
   "width": 43,
   "height": 72,
@@ -78,11 +78,20 @@
     2,
     2,
     5,
-    5,
     5
   ],
-  "data_bytes": 13587,
-  "table_bytes": 1312,
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    0
+  ],
+  "data_bytes": 12936,
+  "table_bytes": 1180,
   "frame_sha256": [
     "6d5974b33ed8e4ea32d53dd644975b3153bbadca77c0e25023090caee9c390d1",
     "d5c0a86ddfce6eaabb30916097c7a9ae8b71ba45b788cc71632e36b57476ee1f",

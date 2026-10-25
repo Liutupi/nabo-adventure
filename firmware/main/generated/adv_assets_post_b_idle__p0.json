@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_post_b_idle__p0",
   "width": 36,
   "height": 40,
@@ -77,6 +77,7 @@
     0,
     0
   ],
+  "frame_map": null,
   "data_bytes": 1724,
   "table_bytes": 628,
   "frame_sha256": [

@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v3",
+  "format": "adv-row-rle-v4",
   "name": "adv_assets_post_a_whistle__p0",
   "width": 36,
   "height": 40,
@@ -74,11 +74,18 @@
     0,
     0,
     0,
-    0,
     0
   ],
-  "data_bytes": 2050,
-  "table_bytes": 628,
+  "frame_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    0
+  ],
+  "data_bytes": 1819,
+  "table_bytes": 556,
   "frame_sha256": [
     "412224997071947cc54784f586fcc01749bdeb86c1d2be2a416190a99e4f83b8",
     "f6013f69606b3652636af4a36740bc78abd0f89f736c3d09f85ed8cefbb66205",
