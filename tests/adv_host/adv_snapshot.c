@@ -6,6 +6,7 @@
 #include "adv_model.h"
 #include "adv_post_view.h"
 #include "adv_night_view.h"
+#include "adv_climb_view.h"
 
 static adv_model_t model;
 
@@ -50,6 +51,12 @@ int host_snapshot(char *out, int size)
             int64_t values[POST_VALUES];post_values(m->game,values);
             n+=snprintf(out+n,size-n,"\"game\":[");
             for(int i=0;i<POST_VALUES;i++)n+=snprintf(out+n,size-n,"%s%lld",i?",":"",(long long)values[i]);
+            return n+snprintf(out+n,size-n,"]}");
+        }
+        if(m->station==5){
+            int64_t values[CLIMB_VALUES];climb_values(m->game,values);
+            n+=snprintf(out+n,size-n,"\"game\":[");
+            for(int i=0;i<CLIMB_VALUES;i++)n+=snprintf(out+n,size-n,"%s%lld",i?",":"",(long long)values[i]);
             return n+snprintf(out+n,size-n,"]}");
         }
         if(m->station==4){

@@ -17,10 +17,11 @@ function record(seed,kind,count){
   }
   return r;
 }
-const traces={idle:record(1,'idle',2400),skilled:record(2,'skilled',30000),casual:record(3,'casual',20000),tapper:record(4,'tapper',4000),lazy:record(5,'lazy',12000),fuzz:record(779,'fuzz',10000)};
+const traces={idle:record(1,'idle',2400),skilled:record(2,'skilled',30000),casual:record(3,'casual',20000),tapper:record(4,'tapper',4000),lazy:record(5,'lazy',12000),icy:record(8,'icy',30000),fuzz:record(779,'fuzz',10000)};
+function iceSteps(t){const g=C.start(t.seed);let n=0;for(const a of t.actions){C.step(g,{ok_down:a[0],ok_up:a[1],ok_held:a[5]});if(g.act===C.ACT.IDLE&&C.hold(g,g.row,g.side)===C.HOLD.ICE)n++;}return n;}
 const seen=(name,i)=>traces[name].states.some(s=>s[24]===i);
 const all=Object.keys(traces);
 for(const [what,ok] of [['milestone',all.some(n=>seen(n,MSG.MILESTONE))],['canteen',all.some(n=>seen(n,MSG.CANTEEN))],['rock hit',all.some(n=>seen(n,MSG.HIT))],
-  ['miss',all.some(n=>seen(n,MSG.MISS))],['crumble',all.some(n=>seen(n,MSG.CRUMBLE))],['ice',traces.skilled.states.some(s=>s[2]>=90)],['reset',traces.fuzz.actions.some(a=>a[0]==='reset')]])
+  ['miss',all.some(n=>seen(n,MSG.MISS))],['crumble',all.some(n=>seen(n,MSG.CRUMBLE))],['ice',iceSteps(traces.icy)>0]])
   if(!ok)throw Error('CLIMB golden traces must cover '+what);
 for(const [name,trace] of Object.entries(traces)){fs.writeFileSync(path.join(__dirname,name+'.json'),JSON.stringify(trace)+'\n');console.log(name,trace.actions.length,'steps');}

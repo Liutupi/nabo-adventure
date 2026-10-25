@@ -27,6 +27,7 @@ function choose(g,opts){
 function driver(kind,seed){
   let pressing=0,left=0,wait=0,rng={rng:seed^0x9e3779b9};
   const opts={skilled:{fragile:12,ice:6,charge3:8,canteen:25,react:0,delay:[6,14]},casual:{fragile:4,ice:2,charge3:14,canteen:8,react:6,delay:[14,34]},
+    icy:{fragile:12,ice:-40,charge3:8,canteen:25,react:0,delay:[6,14]},  // icy hangs on frozen holds
     lazy:{fragile:-40,ice:2,charge3:14,canteen:8,react:6,delay:[14,34]}}[kind];  // lazy seeks crumbling rock
   return function next(g){
     if(pressing){if(--left<=0){pressing=0;return {ok_up:1};}return {ok_held:1};}

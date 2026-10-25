@@ -8,6 +8,7 @@
 #include "adv_model.h"
 #include "adv_post.h"
 #include "adv_night_debug.h"
+#include "adv_climb_debug.h"
 #include "adv_persist.h"
 #include "adv_sound.h"
 #include "adv_ui.h"
@@ -277,8 +278,8 @@ static void diagnostic_open(const char *name)
     if (!s_test || s_owner != OWNER_SHELL || s_model.page != ADV_PAGE_MAP) {
         puts("@error open requires test mode and the map"); return;
     }
-    if(!strcmp(name,"post")||!strcmp(name,"night")) {
-        int station=!strcmp(name,"post")?3:4;
+    if(!strcmp(name,"post")||!strcmp(name,"night")||!strcmp(name,"climb")) {
+        int station=!strcmp(name,"post")?3:!strcmp(name,"night")?4:5;
         handle_fx(adv_test_open(&s_model,station));
         s_draw_frames=s_draw_us=s_draw_max_us=0;
         if(!s_model.in_session)puts("@error game test entry failed");
@@ -302,6 +303,7 @@ static void command(const char *line)
     if (!strcmp(line, ">adv.status")) status();
     else if(!strcmp(line,">post.status"))post_status();
     else if(!strcmp(line,">night.status"))adv_night_debug(&s_model);
+    else if(!strcmp(line,">climb.status"))adv_climb_debug(&s_model);
     else if(!strcmp(line,">adv.practice=post")) {
         handle_fx(adv_practice_open(&s_model));
         if(s_model.in_session&&s_model.station==3&&((adv_post_t *)s_model.game)->practice) {

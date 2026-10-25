@@ -2,6 +2,7 @@
 #include "adv_demo.h"
 #include "adv_post.h"
 #include "adv_night.h"
+#include "adv_climb.h"
 
 #define C565(r, g, b) ((uint16_t)(((r) >> 3) << 11 | ((g) >> 2) << 5 | (b) >> 3))
 
@@ -14,7 +15,7 @@ const adv_station_t adv_station[ADV_STATIONS] = {
     {"dive", "深潜", "DIVE", "深海", "氧气", ADV_KIND_LEGACY, false, {100, 300, 600}, C565(80, 200, 230), 0},
     {"post", "小火车", "POST", "铁路平原", "蒸汽", ADV_KIND_SESSION, false, {5, 12, 25}, C565(230, 90, 70), &adv_post_game},
     {"night", "萤火虫", "NIGHT", "夜林", "精神", ADV_KIND_SESSION, false, {15, 35, 60}, C565(200, 230, 90), &adv_night_game},
-    {"climb", "登山", "CLIMB", "雪山", "体力", ADV_KIND_SESSION, true, {50, 150, 300}, C565(150, 170, 200), &adv_demo_game},
+    {"climb", "登山", "CLIMB", "雪山", "体力", ADV_KIND_SESSION, false, {50, 150, 300}, C565(150, 170, 200), &adv_climb_game},
     {"ski", "滑雪", "SKI", "雪坡", "体温", ADV_KIND_SESSION, true, {10, 25, 45}, C565(110, 170, 240), &adv_demo_game},
     {"sky", "热气球", "SKY", "云端", "热气", ADV_KIND_SESSION, true, {200, 500, 1000}, C565(250, 160, 190), &adv_demo_game},
     {"space", "太空", "SPACE", "太空", "燃料", ADV_KIND_SESSION, true, {300, 600, 900}, C565(170, 140, 250), &adv_demo_game},

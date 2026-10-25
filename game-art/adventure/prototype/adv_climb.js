@@ -31,8 +31,11 @@
     // Every hold three rows down must offer a move onto a hold that cannot crumble.
     const j=k-3;
     if(j>=0)for(let s=0;s<2;s++)if(hold(g,j,s)&&!solid(g,j+1,1-s)&&!solid(g,j+2,s)&&!solid(g,k,s))setHold(g,k,s,HOLD.NORMAL);
-    if(--g.canteenNext<=0&&k>=20){
-      const options=[0,1].filter(s=>solid(g,k,s)),s=options.length===2?random(g)&1:options[0];
+    // A canteen waits for the next row with a hold that cannot crumble.
+    if(g.canteenNext>0)g.canteenNext--;
+    const a=solid(g,k,0),b=solid(g,k,1);
+    if(g.canteenNext<=0&&k>=20&&(a||b)){
+      const s=a&&b?random(g)&1:a?0:1;
       g.grid[k%RING]|=1<<(4+s);g.canteenNext=range(g,24,36);
     }
   }
