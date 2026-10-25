@@ -39,45 +39,52 @@
       "static_bytes_estimate_c3": 70902
     },
     "travel": {
-      "rle_bytes": 136752,
-      "table_bytes": 29974,
-      "descriptor_catalog_estimate_c3": 821,
-      "resources": 10,
-      "pieces": 10,
-      "frames": 94,
-      "physical_sprites": 10,
-      "physical_frames": 94,
+      "rle_bytes": 50383,
+      "table_bytes": 14196,
+      "descriptor_catalog_estimate_c3": 739,
+      "resources": 9,
+      "pieces": 9,
+      "frames": 62,
+      "physical_sprites": 9,
+      "physical_frames": 62,
       "interned_pieces": 0,
-      "static_bytes_estimate_c3": 167547
+      "static_bytes_estimate_c3": 65318
     },
     "ui": {
-      "rle_bytes": 34111,
-      "table_bytes": 12462,
-      "descriptor_catalog_estimate_c3": 10671,
-      "resources": 127,
-      "pieces": 127,
-      "frames": 127,
-      "physical_sprites": 92,
-      "physical_frames": 92,
+      "rle_bytes": 25921,
+      "table_bytes": 10516,
+      "descriptor_catalog_estimate_c3": 10231,
+      "resources": 122,
+      "pieces": 122,
+      "frames": 122,
+      "physical_sprites": 87,
+      "physical_frames": 87,
       "interned_pieces": 35,
-      "static_bytes_estimate_c3": 57244
+      "static_bytes_estimate_c3": 46668
     }
   },
   "tools_sha256": {
     "tools/generate_adv_sprites.py": "eff40de537378ceda49cb3327d3b063b6a00d18559be793660cc447456a3f56a",
-    "tools/build_adventure_assets.py": "a94d302cec81be8a1f869979e53a12663a1722e481ad489bfb32fef7e8ead3b9",
-    "tools/adventure_assets_manifest.py": "1e526efecb93f4b4c8cb01e03a85ca281cb6c910b6bee5faf6423a88d6d5a747",
+    "tools/build_adventure_assets.py": "87c0491b10e36bb0b744780fa8266f7f6a6e45aa10c647e6cb622fefc708061a",
+    "tools/adventure_assets_manifest.py": "e8c87de4d139af6d85d2fcad2bc1a39308482821d28922bc2ba19d418255c949",
     "tools/adventure_assets_emit.py": "59dbb6de5b6ad25006606cadfe6c9636ae6e4ca34eb058faa7d4223be34856cb",
     "tools/adventure_assets_verify.py": "46bc8a4727cb94f50afebfb99c3f7470e8260550384bb07ab04b2c6569e8e106",
-    "tools/generate_boot_presentation.py": "c7741863a38640519927c7784d53e861adf0170f3222eb4d98af65b15d3f0282",
+    "tools/generate_boot_presentation.py": "1a61eab768fbbaaf460ebd8245167b09eac8b42a2fae1fe3fec55585646452dc",
     "firmware/main/adv_boot.h": "e66f156b261e439324ca60fd45108ce548ba9f8c74520f7be0dd14086e546fa6",
     "firmware/main/adv_sprite.c": "8c2b37a5ac776ecae017af98b7123aa51031a1cd75ad4734e6fd8d5aba8506a1",
     "firmware/main/adv_sprite.h": "3f44a9762bb4dacfe2724a54f261dfa98305726ae4c3b5def6377e6d012898ad",
     "firmware/main/adv_ninepatch.c": "052cc42ae138c6c762904a5e26163a945d99dd44713ac98197440602c2c866db",
-    "firmware/main/adv_ninepatch.h": "438c7369f79703f2164bbc364a65532e135267f3e52cf5d1009b6af51cae79aa"
+    "firmware/main/adv_ninepatch.h": "438c7369f79703f2164bbc364a65532e135267f3e52cf5d1009b6af51cae79aa",
+    "tools/generate_boot_video.py": "77674c334d62cbe41e1572b023deda6f0ad52c4d24a666f86139163012c31598",
+    "tools/prepare_boot_video.py": "4f03af76e5fde893f219ae17470e7d8acce45969c2def696d0f90866d419a7c9",
+    "firmware/main/adv_video.c": "9d0b349f45aa8c6375735d7bfa404ce5ee3dcfbb991806c7d9e4c057da817096",
+    "firmware/main/adv_video.h": "461e7a4bef3db34aaeef35f91a8c6b14a8437f243621039a1e7a474acfc5dc65",
+    "firmware/main/adv_ui_boot_video.c": "d2d44665c9680a26a61d620da727e73820ae338177da28b3d20e556064147975",
+    "firmware/main/adv_ui_boot_video.h": "b8248be77a1a2f273e228b439dead30e51bdee3b1e22f9866da760fec9a72ca2",
+    "firmware/main/third_party/pl_mpeg/pl_mpeg.h": "f663908a6a0dbb08d3d540c39af971766d45a62b6f641f245fc0c270ac169d3e"
   },
   "generated_code_sha256": {
-    "adv_assets_catalog.c": "e95df0a51b56b9cd5fb5978fbf26eb024b7d7d5ec7435e7fa20875f2ef0882fb",
+    "adv_assets_catalog.c": "74fcc87bd2da30a22b03678e760c8dece709a6e648c578679df87eb881def506",
     "adv_assets_catalog.h": "045bda6ae2668d6c708cbbcbe630f74e3d527ec186931ac34b657f23b6848193",
     "adv_assets_game_night_glass_jar__p0.c": "f40ff10804ac1389ee8bc1f4557787732ca7aa4afb2f5bde73aacccd245b5a01",
     "adv_assets_game_night_glass_jar__p0.h": "d7a297a30ead628705c7e01c0c859274f64388e9cda9e92de7504494a1305d23",
@@ -355,8 +362,6 @@
     "adv_assets_travel_walk_left__p0.h": "d4d71d925a9c2f88e43f72ab96110b5d67a1573c2ac794f8e5bb986f645e480e",
     "adv_assets_travel_walk_right__p0.c": "e03165df9820c9682d699071ca6a5156b155ded8fe01000c2356a2f2c6f45329",
     "adv_assets_travel_walk_right__p0.h": "6921ab64acb6ce8b4969cc486f7759236262643ec6bea71cd69c9cfbf28f81da",
-    "adv_assets_travel_welcome_v2__p0.c": "822e53d18ef02b13ee9d32f73b39c740de843156256278d7579fcc28aa0c09d7",
-    "adv_assets_travel_welcome_v2__p0.h": "206e81df9bf61b92bcef87d94ec4340dc756e0e11ac632da7e7ce2cc8b6c360b",
     "adv_assets_ui_bars_bottom__p0.c": "ecf4608ac28368af3bca3f8f105def12b738c01ff990dfcb337d18cb1231f9ab",
     "adv_assets_ui_bars_bottom__p0.h": "b2961b37d1f8d78b862dd8241543ad19266c49dbaa04cbac8e36357fbe67b8ac",
     "adv_assets_ui_bars_top__p0.c": "06fe5707261a22375bfe556df3e192881f0e7a5a8f861426f998693591fc8084",
@@ -403,18 +408,10 @@
     "adv_assets_ui_cards_popup_normal_top_left__p0.h": "bda510ca86f997a3d2d07560c8263fee30b60eb4ba5c972b04589b989e5423d2",
     "adv_assets_ui_cards_popup_normal_top_right__p0.c": "8ea66dfbcbe3be02fc4f3365a8a6b83a81883ab709857a0514370fa7d5e9ea19",
     "adv_assets_ui_cards_popup_normal_top_right__p0.h": "13cc0e62a4ecdad010febc7e1aa76ae30ac8aec7fefcc8670306162a2725486f",
-    "adv_assets_ui_cover_background_bottom__p0.c": "70e3eceadd389f6ba4f0ea72e2dfc836cdb26e1cbf2580f08dd0fa6f8f08e303",
-    "adv_assets_ui_cover_background_bottom__p0.h": "626433032728f605c17c8224bc9b92777817c29f6e8687316266fdaaa348586f",
-    "adv_assets_ui_cover_background_top__p0.c": "e8c068956591e33a25f689d3dea55909370c91eb65a98cccc6e5fc1c6dfb0ca4",
-    "adv_assets_ui_cover_background_top__p0.h": "4dbc43691df7b207aca43af59c5962853f3e44157afd39690216c36675a06e7e",
-    "adv_assets_ui_labels_boot_caption__p0.c": "9274f1791b332b09cdf77013a793df046b688c2b99442c79221c96f1393447d0",
-    "adv_assets_ui_labels_boot_caption__p0.h": "a73993771562b3cf7f6ff4b29c3b3d2c3f510f52960acb3dd4cac59d54c7a2ed",
     "adv_assets_ui_labels_new_record__p0.c": "98ccf299bd09697613675df0f4a459f79b2021cce60f1e9829706a135444bd97",
     "adv_assets_ui_labels_new_record__p0.h": "c9d872639f7344e67a0f35ef3e8cdaaeacffd53ffe7006159515d5a4a7e3cc94",
     "adv_assets_ui_labels_placeholder__p0.c": "f43c5573d12bb96e36f3efd8c783c89833727e7e8ba6e7081c4020a0c64060e2",
     "adv_assets_ui_labels_placeholder__p0.h": "52ef9cc5b959b76698cd1ec14fe7e9b2e0261252ba4a2afd428098a20a498f66",
-    "adv_assets_ui_labels_press_start__p0.c": "714f2403734b082992edd1743cdf500fc1346bd02cfbf3840f86ddf1a75aee59",
-    "adv_assets_ui_labels_press_start__p0.h": "4073658fd42cc50db31f86a76681b64becff178748d639011a9fa423970557da",
     "adv_assets_ui_labels_test_no_record__p0.c": "32af3e20d2e3b1f46a14efc1f0cf88389c5b6a4ad256eb529c9ffc0e0975770d",
     "adv_assets_ui_labels_test_no_record__p0.h": "c125a7bbd6def0e94b05e1e88f0ee983acead8eda07b0ee30edc0db1f8c5c098",
     "adv_assets_ui_map_footprints_backward__p0.c": "db7ff4373d05c78650b0fe26d57015f1062b8e0720431f978a81140de8e9ec0a",
@@ -525,8 +522,6 @@
     "adv_assets_ui_stamps_ink_pad__p0.h": "086c55726802ce961b53cbb683dd2fcb52fc3260997b002f344849cdcd3bb876",
     "adv_assets_ui_wordmarks_climb__p0.c": "aa24b203a9e8695b42d376806537a2a3ed662bae635d6f5094ea53e057aaa74d",
     "adv_assets_ui_wordmarks_climb__p0.h": "06495e707d93c15e7733997619fcce1860e3609bd82dbeb47f161c54420d79cb",
-    "adv_assets_ui_wordmarks_collection__p0.c": "15e1a5a507b17bb96cc4d112f02888dffa9acc0ec3d11228d06c39afd3f1352c",
-    "adv_assets_ui_wordmarks_collection__p0.h": "d77e45ff64c1fa2388af0063386c5efc0d8a732c4feb65199290bfadacb36109",
     "adv_assets_ui_wordmarks_dive__p0.c": "464c81b5e0ec1d7d3d53cac687de9072c03dc05fd2be98cb545186835cfb0b09",
     "adv_assets_ui_wordmarks_dive__p0.h": "5f99de28037199a22be1f093528cce899b6b57e129cfb4012d200e9963720f4a",
     "adv_assets_ui_wordmarks_jump__p0.c": "8355a68bf2ef44c1397635d44540c9516ba2f07a37700559d88ca9da39579cc3",
@@ -959,9 +954,6 @@
     "adv_assets_travel_walk_right__p0.c",
     "adv_assets_travel_walk_right__p0.h",
     "adv_assets_travel_walk_right__p0.json",
-    "adv_assets_travel_welcome_v2__p0.c",
-    "adv_assets_travel_welcome_v2__p0.h",
-    "adv_assets_travel_welcome_v2__p0.json",
     "adv_assets_ui_bars_bottom__p0.c",
     "adv_assets_ui_bars_bottom__p0.h",
     "adv_assets_ui_bars_bottom__p0.json",
@@ -1031,24 +1023,12 @@
     "adv_assets_ui_cards_popup_normal_top_right__p0.c",
     "adv_assets_ui_cards_popup_normal_top_right__p0.h",
     "adv_assets_ui_cards_popup_normal_top_right__p0.json",
-    "adv_assets_ui_cover_background_bottom__p0.c",
-    "adv_assets_ui_cover_background_bottom__p0.h",
-    "adv_assets_ui_cover_background_bottom__p0.json",
-    "adv_assets_ui_cover_background_top__p0.c",
-    "adv_assets_ui_cover_background_top__p0.h",
-    "adv_assets_ui_cover_background_top__p0.json",
-    "adv_assets_ui_labels_boot_caption__p0.c",
-    "adv_assets_ui_labels_boot_caption__p0.h",
-    "adv_assets_ui_labels_boot_caption__p0.json",
     "adv_assets_ui_labels_new_record__p0.c",
     "adv_assets_ui_labels_new_record__p0.h",
     "adv_assets_ui_labels_new_record__p0.json",
     "adv_assets_ui_labels_placeholder__p0.c",
     "adv_assets_ui_labels_placeholder__p0.h",
     "adv_assets_ui_labels_placeholder__p0.json",
-    "adv_assets_ui_labels_press_start__p0.c",
-    "adv_assets_ui_labels_press_start__p0.h",
-    "adv_assets_ui_labels_press_start__p0.json",
     "adv_assets_ui_labels_test_no_record__p0.c",
     "adv_assets_ui_labels_test_no_record__p0.h",
     "adv_assets_ui_labels_test_no_record__p0.json",
@@ -1214,9 +1194,6 @@
     "adv_assets_ui_wordmarks_climb__p0.c",
     "adv_assets_ui_wordmarks_climb__p0.h",
     "adv_assets_ui_wordmarks_climb__p0.json",
-    "adv_assets_ui_wordmarks_collection__p0.c",
-    "adv_assets_ui_wordmarks_collection__p0.h",
-    "adv_assets_ui_wordmarks_collection__p0.json",
     "adv_assets_ui_wordmarks_dive__p0.c",
     "adv_assets_ui_wordmarks_dive__p0.h",
     "adv_assets_ui_wordmarks_dive__p0.json",
@@ -1246,8 +1223,14 @@
     "shared-static-manifest.json": "f48bb34259cd5f58eb04cdc94d1e95e130875b111888b85962955b9655a4c5c8",
     "manifest.json": "e62681862e7f1c656c547f5324ac0f1d8a462609afcb19ad4157041f7de2d9af",
     "ui/ui-manifest.json": "093a972bcd5fd12ab2a12281216e06d861fc63222b3c98551630d6791c95e0d0",
-    "boot/selection.json": "97f8766bd5ba3c33aa46d5c31b32b4c3a32bb16bd2a37129ae3ca541321edc94",
-    "boot-v2-manifest.json": "e02927badea6222ca97a014b5f9adaaa0090405524c33b6238df2083fef42c0e",
+    "boot/selection.json": "0ca4b960ce4d40972ca9af10c3ef62814c119560b1735ab55b41ebec2e1ecf06",
+    "boot/v3/runtime/manifest.json": "38b2e11a0fe5a3167226b679d39492ea0c51a8cca6497ce1aa31d7ed01a1e5b8",
+    "boot/v3/runtime/boot-welcome.m1v": "5ab6fa3182f432c30b762d51a30a01967541192e9165a6944fbb81154f30725f",
+    "boot/v3/runtime/cover-poster.m1v": "fa6d96480e9dfb99daf815e3d778630fc8545094d060531f5ae0c61423dccaf3",
+    "boot/v3/background-master.png": "267f35da9542337149758cf97679885b0e29a87c32f17de1294661b436637460",
+    "boot/v3/title-master.png": "9ae3cb3708754d0954034e33848b62a8a28999b94a6b03f746b8835d646ad302",
+    "grok-handoff/boot-v3/output/BOOT-V3-01-welcome-master.mp4": "e0458f49a90cfee5fc08bcde0fcca64180c361895850a3d4015a3d74d2558543",
+    "reference/nabo-idle-original.png": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243",
     "../audio/boot-welcome.wav": "38b4eb8435d6a7915d17af2083a696acfa2660244be1bf7e65dc78251f0c468b",
     "ui/palette.json": "3b3dc6d793ac4eff3af34fc01f0d969f7eb6a5c0b5a6b967e66795103949fce0"
   },
@@ -6565,162 +6548,6 @@
       ]
     },
     {
-      "id": "travel/welcome_v2",
-      "sources": [
-        {
-          "path": "boot/v2/v2a/runtime/000.png",
-          "sha256": "2b8a8bd6615512667efbfe5738d51151fd633ef3bd2810d29c8318b07fdaaa66"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/026.png",
-          "sha256": "434ab288d18cd7853ddf570ce0bf76b3ccb1998c496dec84bf4c964a54afabaf"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/017.png",
-          "sha256": "c13939d58feadb26b025a697bd2d5572a88e494d7f92dbd9552938f299f793a3"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/016.png",
-          "sha256": "2ea7f833e33f61b6d61d14528ac206bb583d90604c4d2b199f614d09cafea0e2"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/014.png",
-          "sha256": "a9c48d322ec04f588fc23645f355b761fd34838be1004a3b1ed5cce24806d924"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/011.png",
-          "sha256": "f49a96d1c9703353f4b2741ce7a3e74e0679bf0cfd7b9148691694ad8f35e134"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/018.png",
-          "sha256": "e91d50dc15550bd833a7fc963bb3b01efa435e1879c0c258a30c43adccaa7953"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/010.png",
-          "sha256": "5895770f3642a2e7a3acad3ce270db822f86a96acddce9e8f02f62e343b77a97"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/023.png",
-          "sha256": "de09825f0217679b9f606050d1987977f1ab28594e54583768bb2ff3740afcad"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/022.png",
-          "sha256": "6751f9d1066bd851725372183e5c0c31b6802efdf595f7a81c989e4e6ea0bbc1"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/021.png",
-          "sha256": "0ca9fcecfe409689f6f4abbcefa8c3737f9734b8e1922c7c466a1318d04415d2"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/002.png",
-          "sha256": "1a1963c642657cde85ebf4a3d7070179dd0cd52f0aa981b359a10d8d84090b9e"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/003.png",
-          "sha256": "df53eba4c6f8709d5b3d24c135bbd1e0a21bb17cb975c80661d7db3aa9021050"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/007.png",
-          "sha256": "38b19655c4a2e80f81ea4e0c8eb5dee2bbd4eac309b0ac16c374e5d2a52737e7"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/008.png",
-          "sha256": "0e8556c92bd78131d4decd6dfa0c53d824d00db5526489a9dc902ddea0f4f3d0"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/013.png",
-          "sha256": "5b9eff51e700a00e31b47cadcbad83092428cee26bb3bb574079cf479d65d6cb"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/028.png",
-          "sha256": "8889f33d12db684c67f3f8987da3ddb50c5ceaf325a13bafa795de6ffa92188b"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/027.png",
-          "sha256": "f569ae0de25e0cbef266b2e61cf25e4e32ce13ceb03243f1cd163234c10bd575"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/012.png",
-          "sha256": "e6b0b0ff0fdfffde219fb2f055b44b352e3c4b8921b4e2e68ebfa4bdfd6b8ec4"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/006.png",
-          "sha256": "71af5ee8362497b5c1fe8be2c4fd95c00eeb312d16a652a628361a8cfd3f73f5"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/009.png",
-          "sha256": "2c005f33cc1c9d11c9ed5b3b2ab13ad2e0ae278321da52402ea871f28e34aa04"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/031.png",
-          "sha256": "13525f0376d43301b7d874bf48c8ca8e8b34ed7cf761bd3f82522e9dc8a6a532"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/029.png",
-          "sha256": "fbc996f2286fd52843a6e86754ed1735a848fe7339823cbc7daa5505afa6e032"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/030.png",
-          "sha256": "c0a6456fab14459c9e012299ba4824de02e774346db2539cf081cb4eeafcb18d"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/020.png",
-          "sha256": "3015db28a24ea10e82a83008e5483eebbcd5dfeb5a7157cc2846f043ad19dac1"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/001.png",
-          "sha256": "432cf776739627032522bebcff241bb7d1432a07607957bad32fe2577f7c2ce2"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/004.png",
-          "sha256": "2e8e2c37fa3ae4d35439d212fb0ba9bbfaf1e188452996844b616e6e8fd629d8"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/019.png",
-          "sha256": "cb82ae443ec0b52cb233bf478c3d72a699af73df85d8a35c571b4e11e104f89e"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/025.png",
-          "sha256": "0fc1f7695ee5a1542f5b6c6e3a9d29e943cf05cd26c09fb03fe004f80b93c4b2"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/024.png",
-          "sha256": "56137bc97a97d6a020cf43354e688302261d6a2301e71fd0b20b13261312905e"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/015.png",
-          "sha256": "447f2602a137afb98e0ba6d38ad8d752fc7ba1ddcc9c391a109c58d0a3377ea2"
-        },
-        {
-          "path": "boot/v2/v2a/runtime/005.png",
-          "sha256": "f7824373dd2d9ea57e33f4fb1307160c26e83d6e9faf33aa9fdba199b14b5585"
-        }
-      ],
-      "canvas": [
-        74,
-        121
-      ],
-      "anchor": [
-        29,
-        121
-      ],
-      "fps": 12,
-      "loop": false,
-      "pieces": [
-        {
-          "symbol": "adv_assets_travel_welcome_v2__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            74,
-            121
-          ]
-        }
-      ]
-    },
-    {
       "id": "ui/bars/bottom",
       "sources": [
         {
@@ -8513,102 +8340,6 @@
       ]
     },
     {
-      "id": "ui/cover-background-bottom",
-      "sources": [
-        {
-          "path": "ui/cover-background-bottom.png",
-          "sha256": "d3656a8226942efd59a83576715b81b8d1e2497bbda3c09063e60dd41a89c432"
-        }
-      ],
-      "canvas": [
-        240,
-        64
-      ],
-      "anchor": [
-        0,
-        0
-      ],
-      "fps": 0,
-      "loop": false,
-      "pieces": [
-        {
-          "symbol": "adv_assets_ui_cover_background_bottom__p0",
-          "offset": [
-            0,
-            256
-          ],
-          "size": [
-            240,
-            64
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ui/cover-background-top",
-      "sources": [
-        {
-          "path": "ui/cover-background-top.png",
-          "sha256": "a48250308b755690963233360047009591f526d8d8ac210c3094766a62ae0fac"
-        }
-      ],
-      "canvas": [
-        240,
-        256
-      ],
-      "anchor": [
-        0,
-        0
-      ],
-      "fps": 0,
-      "loop": false,
-      "pieces": [
-        {
-          "symbol": "adv_assets_ui_cover_background_top__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            240,
-            256
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ui/labels/boot-caption",
-      "sources": [
-        {
-          "path": "ui/labels/boot-caption.png",
-          "sha256": "6af62457ae0012eda92b53e8a14ea1625b20c8251944434db6f0b38110139d14"
-        }
-      ],
-      "canvas": [
-        220,
-        24
-      ],
-      "anchor": [
-        0,
-        0
-      ],
-      "fps": 0,
-      "loop": false,
-      "pieces": [
-        {
-          "symbol": "adv_assets_ui_labels_boot_caption__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            220,
-            24
-          ]
-        }
-      ]
-    },
-    {
       "id": "ui/labels/new-record",
       "sources": [
         {
@@ -8668,38 +8399,6 @@
           "size": [
             88,
             24
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ui/labels/press-start",
-      "sources": [
-        {
-          "path": "ui/labels/press-start.png",
-          "sha256": "0cab8b3ee5bffcccc6b2dbe0f4972ee93514f02b82b7bd3b24ea059616b85731"
-        }
-      ],
-      "canvas": [
-        208,
-        34
-      ],
-      "anchor": [
-        0,
-        0
-      ],
-      "fps": 0,
-      "loop": false,
-      "pieces": [
-        {
-          "symbol": "adv_assets_ui_labels_press_start__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            208,
-            34
           ]
         }
       ]
@@ -10529,38 +10228,6 @@
       ]
     },
     {
-      "id": "ui/wordmarks/collection",
-      "sources": [
-        {
-          "path": "ui/wordmarks/collection.png",
-          "sha256": "9c207a66c387feb99ab38787dc11870bb047d6e36deabd7c42c9162778ab3d39"
-        }
-      ],
-      "canvas": [
-        220,
-        90
-      ],
-      "anchor": [
-        0,
-        0
-      ],
-      "fps": 0,
-      "loop": false,
-      "pieces": [
-        {
-          "symbol": "adv_assets_ui_wordmarks_collection__p0",
-          "offset": [
-            0,
-            0
-          ],
-          "size": [
-            220,
-            90
-          ]
-        }
-      ]
-    },
-    {
       "id": "ui/wordmarks/dive",
       "sources": [
         {
@@ -10785,10 +10452,10 @@
       ]
     }
   ],
-  "python_verified_frames": 479,
+  "python_verified_frames": 442,
   "production_c": {
-    "verified_frames": 479,
-    "verified_sprite_rows": 23317,
+    "verified_frames": 442,
+    "verified_sprite_rows": 18977,
     "verified_ninepatch_rows": 912,
     "comparison": "generated C and production decoders vs indexed source"
   },
@@ -10852,19 +10519,20 @@
   "sprite_interning": {
     "scope": "within each group only",
     "comparison": "exact RGBA pixels, dimensions and ordered frame sequence",
-    "logical_pieces": 272,
-    "physical_sprites": 231,
+    "logical_pieces": 266,
+    "physical_sprites": 225,
     "accounting": "RLE/tables/sprite32 per physical object; piece8 and record/id per logical use"
   },
   "startup_composition": {
-    "startup_ids": [
-      "travel/welcome_v2"
-    ],
-    "startup_actor_estimate_c3": 102381,
-    "presentation_table_bytes": 152,
-    "ui_assets_estimate_c3": 57244,
-    "combined_estimate_c3": 159625,
-    "complete_ui_group_present": true
+    "startup_ids": [],
+    "startup_actor_estimate_c3": 0,
+    "presentation_table_bytes": 0,
+    "ui_assets_estimate_c3": 46668,
+    "combined_estimate_c3": 226733,
+    "complete_ui_group_present": true,
+    "boot_video_bytes": 180065,
+    "budget_funding": "Lossless unused legacy glyph removal; 352KiB app reserve unchanged",
+    "limit_bytes": 229376
   },
   "linker_alignment_and_final_elf_measurement": "pending; RLE/tables exact, C3 descriptor estimates exclude linker padding/deduplication",
   "acceptance": "host packing validation only; no device/physical artwork acceptance implied"

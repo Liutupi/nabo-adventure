@@ -10,6 +10,7 @@
 #include "bsp_pins.h"
 #include "adv_ui_animation.h"
 #include "adv_boot_motion.h"
+#include "adv_ui_boot_video.h"
 #include "esp_heap_caps.h"
 #include "esp_lcd_panel_io.h"
 #include "esp_lcd_panel_ops.h"
@@ -21,7 +22,12 @@ static uint16_t *s_strip[2];
 static bool s_capture;
 static bool s_capture_header,s_landscape;
 static uint32_t s_millis;
+static bool s_pipeline,s_pending;
 uint32_t ui_millis(void) { return s_millis; }
+static void finish_transfer(void)
+{
+    if(s_pending){esp_lcd_panel_io_tx_param(bsp_display_io(),0x00,NULL,0);s_pending=false;}
+}
 
 // Shared with adv_ui_jump.c, which composes its own rows.
 uint16_t *adv_ui_strip(void) { return s_strip[0]; }
@@ -32,6 +38,9 @@ void adv_ui_capture_done(void) { s_capture = false; }
 void adv_ui_send(void *ctx, int x, int y, int w, int h, uint16_t *px)
 {
     (void)ctx;
+    // In the portrait cover only, the compositor has filled the OTHER strip
+    // while this transfer ran. Fence before enqueueing its next buffer.
+    finish_transfer();
     if (s_capture) {
         if(!s_capture_header){printf("@cap_size %d %d\n",adv_ui_width(),adv_ui_height());s_capture_header=true;}
         const uint8_t *p = (const uint8_t *)px;
@@ -51,8 +60,8 @@ void adv_ui_send(void *ctx, int x, int y, int w, int h, uint16_t *px)
         for(int ly=0;ly<h;ly++)for(int lx=0;lx<w;lx++)rotated[(w-1-lx)*h+ly]=px[ly*w+lx];
         esp_lcd_panel_draw_bitmap(bsp_display_panel(),y,BSP_LCD_H-x-w,y+h,BSP_LCD_H-x,rotated);
     } else esp_lcd_panel_draw_bitmap(bsp_display_panel(), x, y, x + w, y + h, px);
-    // The caller may reuse this DMA strip as soon as we return.
-    esp_lcd_panel_io_tx_param(bsp_display_io(), 0x00, NULL, 0);
+    if(s_pipeline&&!s_landscape)s_pending=true;
+    else esp_lcd_panel_io_tx_param(bsp_display_io(), 0x00, NULL, 0);
 }
 
 bool adv_ui_open(void)
@@ -72,6 +81,8 @@ bool adv_ui_open(void)
 
 void adv_ui_close(void)
 {
+    finish_transfer();s_pipeline=false;
+    ui_boot_video_close();
     esp_lcd_panel_io_tx_param(bsp_display_io(), 0x00, NULL, 0);
     free(s_gfx);
     s_gfx = NULL;
@@ -124,6 +135,11 @@ int ui_stamp_count(const adv_model_t *m) { return __builtin_popcount(adv_earned(
 static void draw_cover(ag_t *g, const adv_model_t *m)
 {
     (void)m;
+    if(ui_boot_video_draw(g,adv_ui_boot_elapsed(ui_millis()),adv_ui_boot_initial())){
+        ag_text_top(g,&collection_font_12,"NABO,陪你冒险",120,287,NT_ALIGN_CENTER,ag_rgb(255,224,157));
+        ag_text_top(g,&collection_font_12,"OK 出发",120,306,NT_ALIGN_CENTER,ag_rgb(133,236,225));
+        return;
+    }
     uint32_t t = adv_ui_boot_initial() ? adv_ui_boot_elapsed(ui_millis()) : adv_boot_motion_duration();
     // Existing cover stays as the device baseline until the new Grok foreground
     // and complete V3 cover pass packing/visual/device checks together.
@@ -208,6 +224,7 @@ static void draw_status(ag_t *g, int battery, int mv)
 
 void adv_ui_draw(const adv_model_t *m, uint32_t ms, int battery, int mv)
 {
+    if(m->page!=ADV_PAGE_COVER)ui_boot_video_close();
     s_millis = ms;
     if (!s_gfx) return;
     ag_t *g = s_gfx;
@@ -226,6 +243,10 @@ void adv_ui_draw(const adv_model_t *m, uint32_t ms, int battery, int mv)
     case ADV_PAGE_SESSION: ui_draw_session(g, m); break;
     default: return;   // legacy games draw themselves
     }
+    // ag_flush alternates two DMA buffers. Legacy jump reuses one buffer and
+    // landscape rotation uses the other strip as scratch, so they stay blocking.
+    s_pipeline=m->page==ADV_PAGE_COVER&&!s_capture;
     ag_flush(g);
+    finish_transfer();s_pipeline=false;
     s_capture = false;
 }

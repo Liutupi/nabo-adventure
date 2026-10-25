@@ -13,4 +13,6 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Firmware merge failed.' }
     python tools/verify_firmware.py build-idf6
     if ($LASTEXITCODE -ne 0) { throw 'Firmware layout verification failed.' }
+    python ../tools/check_adventure_budget.py build-idf6
+    if ($LASTEXITCODE -ne 0) { throw 'Physical factory/reserve/opening budget verification failed.' }
 } finally { Pop-Location }

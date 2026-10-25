@@ -138,7 +138,6 @@
 #include "adv_assets_travel_turn_right__p0.h"
 #include "adv_assets_travel_walk_left__p0.h"
 #include "adv_assets_travel_walk_right__p0.h"
-#include "adv_assets_travel_welcome_v2__p0.h"
 #include "adv_assets_ui_bars_bottom__p0.h"
 #include "adv_assets_ui_bars_top__p0.h"
 #include "adv_assets_ui_cards_info_current_bottom__p0.h"
@@ -162,12 +161,8 @@
 #include "adv_assets_ui_cards_popup_normal_left__p0.h"
 #include "adv_assets_ui_cards_popup_normal_top_left__p0.h"
 #include "adv_assets_ui_cards_popup_normal_top_right__p0.h"
-#include "adv_assets_ui_cover_background_bottom__p0.h"
-#include "adv_assets_ui_cover_background_top__p0.h"
-#include "adv_assets_ui_labels_boot_caption__p0.h"
 #include "adv_assets_ui_labels_new_record__p0.h"
 #include "adv_assets_ui_labels_placeholder__p0.h"
-#include "adv_assets_ui_labels_press_start__p0.h"
 #include "adv_assets_ui_labels_test_no_record__p0.h"
 #include "adv_assets_ui_map_footprints_backward__p0.h"
 #include "adv_assets_ui_map_footprints_forward__p0.h"
@@ -223,7 +218,6 @@
 #include "adv_assets_ui_resources_low_fill__p0.h"
 #include "adv_assets_ui_stamps_ink_pad__p0.h"
 #include "adv_assets_ui_wordmarks_climb__p0.h"
-#include "adv_assets_ui_wordmarks_collection__p0.h"
 #include "adv_assets_ui_wordmarks_dive__p0.h"
 #include "adv_assets_ui_wordmarks_jump__p0.h"
 #include "adv_assets_ui_wordmarks_night__p0.h"
@@ -663,9 +657,6 @@ static const adv_asset_piece_t adv_assets_travel_walk_left__pieces[] = {
 static const adv_asset_piece_t adv_assets_travel_walk_right__pieces[] = {
     {&adv_assets_travel_walk_right__p0, 0, 0},
 };
-static const adv_asset_piece_t adv_assets_travel_welcome_v2__pieces[] = {
-    {&adv_assets_travel_welcome_v2__p0, 0, 0},
-};
 static const adv_asset_piece_t adv_assets_ui_bars_bottom__pieces[] = {
     {&adv_assets_ui_bars_bottom__p0, 0, 0},
 };
@@ -834,23 +825,11 @@ static const adv_asset_piece_t adv_assets_ui_cards_popup_normal_top_left__pieces
 static const adv_asset_piece_t adv_assets_ui_cards_popup_normal_top_right__pieces[] = {
     {&adv_assets_ui_cards_popup_normal_top_right__p0, 0, 0},
 };
-static const adv_asset_piece_t adv_assets_ui_cover_background_bottom__pieces[] = {
-    {&adv_assets_ui_cover_background_bottom__p0, 0, 256},
-};
-static const adv_asset_piece_t adv_assets_ui_cover_background_top__pieces[] = {
-    {&adv_assets_ui_cover_background_top__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_ui_labels_boot_caption__pieces[] = {
-    {&adv_assets_ui_labels_boot_caption__p0, 0, 0},
-};
 static const adv_asset_piece_t adv_assets_ui_labels_new_record__pieces[] = {
     {&adv_assets_ui_labels_new_record__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_labels_placeholder__pieces[] = {
     {&adv_assets_ui_labels_placeholder__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_ui_labels_press_start__pieces[] = {
-    {&adv_assets_ui_labels_press_start__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_labels_test_no_record__pieces[] = {
     {&adv_assets_ui_labels_test_no_record__p0, 0, 0},
@@ -1023,9 +1002,6 @@ static const adv_asset_piece_t adv_assets_ui_stamps_ink_pad__pieces[] = {
 static const adv_asset_piece_t adv_assets_ui_wordmarks_climb__pieces[] = {
     {&adv_assets_ui_wordmarks_climb__p0, 0, 0},
 };
-static const adv_asset_piece_t adv_assets_ui_wordmarks_collection__pieces[] = {
-    {&adv_assets_ui_wordmarks_collection__p0, 0, 0},
-};
 static const adv_asset_piece_t adv_assets_ui_wordmarks_dive__pieces[] = {
     {&adv_assets_ui_wordmarks_dive__p0, 0, 0},
 };
@@ -1192,7 +1168,6 @@ const adv_asset_record_t adv_assets_catalog[] = {
     {"travel/turn_right", adv_assets_travel_turn_right__pieces, 1, 22, 48, 11, 48, 12, false},
     {"travel/walk_left", adv_assets_travel_walk_left__pieces, 1, 22, 48, 11, 48, 12, true},
     {"travel/walk_right", adv_assets_travel_walk_right__pieces, 1, 22, 48, 11, 48, 12, true},
-    {"travel/welcome_v2", adv_assets_travel_welcome_v2__pieces, 1, 74, 121, 29, 121, 12, false},
     {"ui/bars/bottom", adv_assets_ui_bars_bottom__pieces, 1, 240, 30, 0, 0, 0, false},
     {"ui/bars/top", adv_assets_ui_bars_top__pieces, 1, 240, 32, 0, 0, 0, false},
     {"ui/cards/info/current/bottom", adv_assets_ui_cards_info_current_bottom__pieces, 1, 8, 12, 0, 0, 0, false},
@@ -1249,12 +1224,8 @@ const adv_asset_record_t adv_assets_catalog[] = {
     {"ui/cards/popup/normal/top", adv_assets_ui_cards_popup_normal_top__pieces, 1, 8, 16, 0, 0, 0, false},
     {"ui/cards/popup/normal/top-left", adv_assets_ui_cards_popup_normal_top_left__pieces, 1, 16, 16, 0, 0, 0, false},
     {"ui/cards/popup/normal/top-right", adv_assets_ui_cards_popup_normal_top_right__pieces, 1, 16, 16, 0, 0, 0, false},
-    {"ui/cover-background-bottom", adv_assets_ui_cover_background_bottom__pieces, 1, 240, 64, 0, 0, 0, false},
-    {"ui/cover-background-top", adv_assets_ui_cover_background_top__pieces, 1, 240, 256, 0, 0, 0, false},
-    {"ui/labels/boot-caption", adv_assets_ui_labels_boot_caption__pieces, 1, 220, 24, 0, 0, 0, false},
     {"ui/labels/new-record", adv_assets_ui_labels_new_record__pieces, 1, 72, 24, 0, 0, 0, false},
     {"ui/labels/placeholder", adv_assets_ui_labels_placeholder__pieces, 1, 88, 24, 0, 0, 0, false},
-    {"ui/labels/press-start", adv_assets_ui_labels_press_start__pieces, 1, 208, 34, 0, 0, 0, false},
     {"ui/labels/test-no-record", adv_assets_ui_labels_test_no_record__pieces, 1, 96, 24, 0, 0, 0, false},
     {"ui/map/footprints-backward", adv_assets_ui_map_footprints_backward__pieces, 1, 10, 10, 0, 0, 0, false},
     {"ui/map/footprints-forward", adv_assets_ui_map_footprints_forward__pieces, 1, 10, 10, 0, 0, 0, false},
@@ -1312,7 +1283,6 @@ const adv_asset_record_t adv_assets_catalog[] = {
     {"ui/resources/low-fill-right-cap", adv_assets_ui_resources_low_fill_right_cap__pieces, 1, 3, 10, 0, 0, 0, false},
     {"ui/stamps/ink-pad", adv_assets_ui_stamps_ink_pad__pieces, 1, 64, 64, 0, 0, 0, false},
     {"ui/wordmarks/climb", adv_assets_ui_wordmarks_climb__pieces, 1, 200, 80, 0, 0, 0, false},
-    {"ui/wordmarks/collection", adv_assets_ui_wordmarks_collection__pieces, 1, 220, 90, 0, 0, 0, false},
     {"ui/wordmarks/dive", adv_assets_ui_wordmarks_dive__pieces, 1, 200, 80, 0, 0, 0, false},
     {"ui/wordmarks/jump", adv_assets_ui_wordmarks_jump__pieces, 1, 200, 80, 0, 0, 0, false},
     {"ui/wordmarks/night", adv_assets_ui_wordmarks_night__pieces, 1, 200, 80, 0, 0, 0, false},
@@ -1335,32 +1305,32 @@ const adv_ninepatch_t adv_assets_patch_info_normal = {{&adv_assets_ui_cards_info
 const adv_ninepatch_t adv_assets_patch_info_current = {{&adv_assets_ui_cards_info_current_top_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_top_right__p0, &adv_assets_ui_cards_info_current_left__p0, &adv_assets_ui_cards_info_current_center__p0, &adv_assets_ui_cards_info_current_right__p0, &adv_assets_ui_cards_info_current_bottom_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_bottom_right__p0}};
 const adv_ninepatch_t adv_assets_patch_popup_normal = {{&adv_assets_ui_cards_popup_normal_top_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_top_right__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_info_normal_center__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_popup_normal_bottom_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_bottom_right__p0}};
 const adv_asset_digit_t adv_assets_digits_36[] = {
-    {48, &adv_assets_catalog[231], 36},
-    {49, &adv_assets_catalog[232], 22},
-    {50, &adv_assets_catalog[233], 31},
-    {51, &adv_assets_catalog[234], 32},
-    {52, &adv_assets_catalog[235], 36},
-    {53, &adv_assets_catalog[236], 31},
-    {54, &adv_assets_catalog[237], 34},
-    {55, &adv_assets_catalog[238], 33},
-    {56, &adv_assets_catalog[239], 35},
-    {57, &adv_assets_catalog[240], 33},
-    {109, &adv_assets_catalog[241], 53},
-    {43, &adv_assets_catalog[242], 31},
+    {48, &adv_assets_catalog[226], 36},
+    {49, &adv_assets_catalog[227], 22},
+    {50, &adv_assets_catalog[228], 31},
+    {51, &adv_assets_catalog[229], 32},
+    {52, &adv_assets_catalog[230], 36},
+    {53, &adv_assets_catalog[231], 31},
+    {54, &adv_assets_catalog[232], 34},
+    {55, &adv_assets_catalog[233], 33},
+    {56, &adv_assets_catalog[234], 35},
+    {57, &adv_assets_catalog[235], 33},
+    {109, &adv_assets_catalog[236], 53},
+    {43, &adv_assets_catalog[237], 31},
 };
 const adv_asset_digit_t adv_assets_digits_20[] = {
-    {48, &adv_assets_catalog[219], 22},
-    {49, &adv_assets_catalog[220], 15},
-    {50, &adv_assets_catalog[221], 20},
-    {51, &adv_assets_catalog[222], 19},
-    {52, &adv_assets_catalog[223], 22},
-    {53, &adv_assets_catalog[224], 20},
-    {54, &adv_assets_catalog[225], 21},
-    {55, &adv_assets_catalog[226], 20},
-    {56, &adv_assets_catalog[227], 21},
-    {57, &adv_assets_catalog[228], 21},
-    {109, &adv_assets_catalog[229], 32},
-    {43, &adv_assets_catalog[230], 20},
+    {48, &adv_assets_catalog[214], 22},
+    {49, &adv_assets_catalog[215], 15},
+    {50, &adv_assets_catalog[216], 20},
+    {51, &adv_assets_catalog[217], 19},
+    {52, &adv_assets_catalog[218], 22},
+    {53, &adv_assets_catalog[219], 20},
+    {54, &adv_assets_catalog[220], 21},
+    {55, &adv_assets_catalog[221], 20},
+    {56, &adv_assets_catalog[222], 21},
+    {57, &adv_assets_catalog[223], 21},
+    {109, &adv_assets_catalog[224], 32},
+    {43, &adv_assets_catalog[225], 20},
 };
 const uint16_t adv_assets_ui_palette[] = {8649, 15375, 17298, 25487, 35986, 38099, 40276, 44406, 45672, 46518, 48007, 54567, 56595, 57082, 63356, 65502};
 const size_t adv_assets_ui_palette_count = 16;

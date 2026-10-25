@@ -15,24 +15,46 @@ static uint16_t pixels[240 * 320];
 static nabo_jump_t game;
 static uint32_t now;
 static adv_model_t model;
+static const uint16_t *pending_dma;
+static int dma_x0,dma_y0,dma_x1,dma_y1,dma_faults;
+static uint32_t dma_hash;
+static uint32_t hash_pixels(const uint16_t *p,int count)
+{uint32_t h=2166136261u;for(int i=0;i<count;i++)h=(h^p[i])*16777619u;return h;}
+static void drain_dma(void)
+{
+    if(!pending_dma)return;
+    if(hash_pixels(pending_dma,(dma_x1-dma_x0)*(dma_y1-dma_y0))!=dma_hash)dma_faults++;
+    const uint16_t *p=pending_dma;
+    for(int y=dma_y0;y<dma_y1;y++)for(int x=dma_x0;x<dma_x1;x++)pixels[y*240+x]=__builtin_bswap16(*p++);
+    pending_dma=NULL;
+}
 
 void *bsp_display_panel(void) { return (void *)1; }
 void *bsp_display_io(void) { return (void *)1; }
 int esp_lcd_panel_io_tx_param(void *io, int cmd, const void *data, size_t n)
 {
     (void)io; (void)cmd; (void)data; (void)n;
+    drain_dma();
     return 0;
 }
 int esp_lcd_panel_draw_bitmap(void *panel, int x0, int y0, int x1, int y1, const void *data)
 {
     (void)panel;
-    const uint16_t *p = data;
-    for (int y = y0; y < y1; y++)
-        for (int x = x0; x < x1; x++) pixels[y * 240 + x] = __builtin_bswap16(*p++);
+    if(pending_dma){dma_faults++;drain_dma();}
+    pending_dma=data;dma_x0=x0;dma_y0=y0;dma_x1=x1;dma_y1=y1;
+    dma_hash=hash_pixels(data,(x1-x0)*(y1-y0));
     return 0;
 }
 
 void host_snapshot(uint16_t *out) { memcpy(out, pixels, sizeof(pixels)); }
+int host_dma_selftest(void)
+{
+    if(pending_dma)return 0;
+    int before=dma_faults;uint16_t source[2]={0x1234,0xabcd};
+    esp_lcd_panel_draw_bitmap((void *)1,0,0,2,1,source);source[0]^=1;
+    esp_lcd_panel_io_tx_param((void *)1,0,NULL,0);
+    int detected=dma_faults==before+1;dma_faults=before;return detected&&!pending_dma;
+}
 void host_close(void) { adv_ui_close(); adv_free(&model); }
 
 // ---------- adventure ----------
@@ -61,7 +83,7 @@ void host_draw(void) { adv_ui_draw(&model, now, 85, 4010); }
 void host_draw_at(uint32_t ms) { now = ms; host_draw(); }
 void host_boot_start(uint32_t ms) { now = ms; adv_ui_boot_begin(ms); }
 void host_full(void) { adv_ui_invalidate(); adv_ui_draw(&model, now, 85, 4010); }
-int host_overflow(void) { return adv_ui_overflow(); }
+int host_overflow(void) { return adv_ui_overflow()||dma_faults||pending_dma!=NULL; }
 int host_page(void) { return model.page; }
 int host_phase(void) { return model.in_session ? model.phase : -1; }
 uint32_t host_bytes(void) { return adv_ui_bytes(); }
@@ -213,6 +235,7 @@ static void bitmap_send(void *ctx, int x, int y, int w, int h, uint16_t *px)
 {
     (void)ctx;
     esp_lcd_panel_draw_bitmap((void *)1, x, y, x + w, y + h, px);
+    esp_lcd_panel_io_tx_param((void *)1,0,NULL,0);
 }
 
 void host_bitmap(int x, int y, int alternate, int full)

@@ -137,6 +137,16 @@ bool ag_bitmap(ag_t *g, const uint16_t *pixels, int x, int y, int w, int h)
     return true;
 }
 
+bool ag_rows(ag_t *g,ag_row_fn paint_row,const void *ctx,uint32_t generation)
+{
+    if(!paint_row||!ctx)return false;
+    ag_op_t *op=add(g,AG_ROWS,0,0,g->width,g->height);
+    if(!op)return false;
+    op->u.rows.paint=paint_row;op->u.rows.ctx=ctx;
+    seal(op,mix(mix((uint32_t)(uintptr_t)ctx,(uint32_t)((uint64_t)(uintptr_t)ctx>>32)),generation));
+    return true;
+}
+
 static bool sprite(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y,
                    bool tinted, uint16_t color, bool dimmed,const int *crop)
 {
@@ -229,6 +239,7 @@ static void paint(ag_t *g, const ag_op_t *op, int y, int x0, int x1, uint16_t *r
 {
     if (y < op->y0 || y >= op->y1 || x1 <= op->x0 || x0 >= op->x1) return;
     switch (op->kind) {
+    case AG_ROWS: op->u.rows.paint(op->u.rows.ctx,y,x0,x1,row); break;
     case AG_BAND: ag_paint_band(op, y, x0, x1, row); break;
     case AG_RRECT: ag_paint_rect(op, y, x0, x1, row); break;
     case AG_TEXT: nt_text_row(&g->glyphs, &op->u.text.t, y, x0, x1, row, op->u.text.color); break;

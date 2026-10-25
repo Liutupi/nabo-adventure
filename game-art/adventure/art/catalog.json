@@ -7,6 +7,23 @@
   },
   "selected_travel_design": "design/round1/v2/01-hiker-design-board.png",
   "selected_ui_theme": "ui/design/round3/01-passport",
+  "boot_video": {
+    "task": "BOOT-V3-01",
+    "movie_frames": 73,
+    "poster_frames": 1,
+    "logical_fps": 12,
+    "runtime_canvas": [
+      208,
+      272
+    ],
+    "display_canvas": [
+      240,
+      320
+    ],
+    "media_bytes": 180065,
+    "validation": "Separate production video/renderer tests; excluded from row-RLE frame totals",
+    "manifest": "boot/v3/runtime/manifest.json"
+  },
   "source_manifests_sha256": {
     "manifest.json": "e62681862e7f1c656c547f5324ac0f1d8a462609afcb19ad4157041f7de2d9af",
     "ui/ui-manifest.json": "093a972bcd5fd12ab2a12281216e06d861fc63222b3c98551630d6791c95e0d0",
@@ -17,14 +34,20 @@
     "ski-manifest.json": "ce917671979911b3aa2d645ab99a30bd605677497a4cb5e13649a51ab35c84fb",
     "sky-manifest.json": "abfbc0ffd9e3e97e61295911ea5c65b3c65f988bcc2af9021247590b07b3ee98",
     "space-manifest.json": "168d04124ab06e8d7e181a41c51e3eec91ba3e9f7dd5911fa8690a25e96fe789",
-    "boot/selection.json": "97f8766bd5ba3c33aa46d5c31b32b4c3a32bb16bd2a37129ae3ca541321edc94",
-    "boot-v2-manifest.json": "e02927badea6222ca97a014b5f9adaaa0090405524c33b6238df2083fef42c0e",
+    "boot/selection.json": "0ca4b960ce4d40972ca9af10c3ef62814c119560b1735ab55b41ebec2e1ecf06",
+    "boot/v3/runtime/manifest.json": "38b2e11a0fe5a3167226b679d39492ea0c51a8cca6497ce1aa31d7ed01a1e5b8",
+    "boot/v3/runtime/boot-welcome.m1v": "5ab6fa3182f432c30b762d51a30a01967541192e9165a6944fbb81154f30725f",
+    "boot/v3/runtime/cover-poster.m1v": "fa6d96480e9dfb99daf815e3d778630fc8545094d060531f5ae0c61423dccaf3",
+    "boot/v3/background-master.png": "267f35da9542337149758cf97679885b0e29a87c32f17de1294661b436637460",
+    "boot/v3/title-master.png": "9ae3cb3708754d0954034e33848b62a8a28999b94a6b03f746b8835d646ad302",
+    "grok-handoff/boot-v3/output/BOOT-V3-01-welcome-master.mp4": "e0458f49a90cfee5fc08bcde0fcca64180c361895850a3d4015a3d74d2558543",
+    "reference/nabo-idle-original.png": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243",
     "../audio/boot-welcome.wav": "38b4eb8435d6a7915d17af2083a696acfa2660244be1bf7e65dc78251f0c468b",
     "ui/palette.json": "3b3dc6d793ac4eff3af34fc01f0d969f7eb6a5c0b5a6b967e66795103949fce0"
   },
   "counts": {
-    "resources": 362,
-    "frames_including_static": 804
+    "resources": 356,
+    "frames_including_static": 767
   },
   "resources": [
     {
@@ -3538,21 +3561,6 @@
       "frame_count": 8
     },
     {
-      "id": "travel/welcome_v2",
-      "group": "travel",
-      "canvas": [
-        74,
-        121
-      ],
-      "anchor": [
-        29,
-        121
-      ],
-      "fps": 12,
-      "loop": false,
-      "frame_count": 32
-    },
-    {
       "id": "ui/bars/bottom",
       "group": "ui",
       "canvas": [
@@ -4393,51 +4401,6 @@
       "frame_count": 1
     },
     {
-      "id": "ui/cover-background-bottom",
-      "group": "ui",
-      "canvas": [
-        240,
-        64
-      ],
-      "anchor": [
-        0,
-        0
-      ],
-      "fps": 0,
-      "loop": false,
-      "frame_count": 1
-    },
-    {
-      "id": "ui/cover-background-top",
-      "group": "ui",
-      "canvas": [
-        240,
-        256
-      ],
-      "anchor": [
-        0,
-        0
-      ],
-      "fps": 0,
-      "loop": false,
-      "frame_count": 1
-    },
-    {
-      "id": "ui/labels/boot-caption",
-      "group": "ui",
-      "canvas": [
-        220,
-        24
-      ],
-      "anchor": [
-        0,
-        0
-      ],
-      "fps": 0,
-      "loop": false,
-      "frame_count": 1
-    },
-    {
       "id": "ui/labels/new-record",
       "group": "ui",
       "canvas": [
@@ -4458,21 +4421,6 @@
       "canvas": [
         88,
         24
-      ],
-      "anchor": [
-        0,
-        0
-      ],
-      "fps": 0,
-      "loop": false,
-      "frame_count": 1
-    },
-    {
-      "id": "ui/labels/press-start",
-      "group": "ui",
-      "canvas": [
-        208,
-        34
       ],
       "anchor": [
         0,
@@ -5338,21 +5286,6 @@
       "frame_count": 1
     },
     {
-      "id": "ui/wordmarks/collection",
-      "group": "ui",
-      "canvas": [
-        220,
-        90
-      ],
-      "anchor": [
-        0,
-        0
-      ],
-      "fps": 0,
-      "loop": false,
-      "frame_count": 1
-    },
-    {
       "id": "ui/wordmarks/dive",
       "group": "ui",
       "canvas": [
@@ -5498,34 +5431,34 @@
           "static_bytes_estimate_c3": 70902
         },
         "travel": {
-          "rle_bytes": 136752,
-          "table_bytes": 29974,
-          "descriptor_catalog_estimate_c3": 821,
-          "resources": 10,
-          "pieces": 10,
-          "frames": 94,
-          "physical_sprites": 10,
-          "physical_frames": 94,
+          "rle_bytes": 50383,
+          "table_bytes": 14196,
+          "descriptor_catalog_estimate_c3": 739,
+          "resources": 9,
+          "pieces": 9,
+          "frames": 62,
+          "physical_sprites": 9,
+          "physical_frames": 62,
           "interned_pieces": 0,
-          "static_bytes_estimate_c3": 167547
+          "static_bytes_estimate_c3": 65318
         },
         "ui": {
-          "rle_bytes": 34111,
-          "table_bytes": 12462,
-          "descriptor_catalog_estimate_c3": 10671,
-          "resources": 127,
-          "pieces": 127,
-          "frames": 127,
-          "physical_sprites": 92,
-          "physical_frames": 92,
+          "rle_bytes": 25921,
+          "table_bytes": 10516,
+          "descriptor_catalog_estimate_c3": 10231,
+          "resources": 122,
+          "pieces": 122,
+          "frames": 122,
+          "physical_sprites": 87,
+          "physical_frames": 87,
           "interned_pieces": 35,
-          "static_bytes_estimate_c3": 57244
+          "static_bytes_estimate_c3": 46668
         }
       },
-      "python_verified_frames": 479,
+      "python_verified_frames": 442,
       "production_c": {
-        "verified_frames": 479,
-        "verified_sprite_rows": 23317,
+        "verified_frames": 442,
+        "verified_sprite_rows": 18977,
         "verified_ninepatch_rows": 912,
         "comparison": "generated C and production decoders vs indexed source"
       }
@@ -5670,7 +5603,7 @@
     }
   },
   "device": {
-    "common_candidate_sha256": "99e71e9fa132c8b644aa30125663585b9fd92b2154697a84544d1cab86bcefd8",
+    "common_candidate_sha256": "82efd1efdda558a598fa0058e8f9e419eb571d761856e9c98c96b9a05ba5f236",
     "new_game_art_embedded_in_this_candidate": true,
     "integrated_game_groups": [
       "night",

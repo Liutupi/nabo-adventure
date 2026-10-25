@@ -22,6 +22,7 @@ extern "C" {
 
 // Sends big-endian RGB565 for screen rows [y, y + h), columns [x, x + w).
 typedef void (*ag_send_fn)(void *ctx, int x, int y, int w, int h, uint16_t *px);
+typedef void (*ag_row_fn)(const void *ctx,int y,int x0,int x1,uint16_t *row);
 
 typedef enum {
     AG_BAND,      // vertical gradient, ordered dither against RGB565 banding
@@ -32,6 +33,7 @@ typedef enum {
     AG_BITMAP,    // immutable native RGB565 image in flash
     AG_SPRITE,    // immutable indexed row RLE with bounded keyframe/delta replay
     AG_NINEPATCH, // fixed corners, tiled edges/center, one display-list op
+    AG_ROWS,      // immutable during flush; e.g. a decoded YCbCr reference image
 } ag_kind_t;
 
 typedef struct {
@@ -47,6 +49,7 @@ typedef struct {
         struct { const uint16_t *pixels; int16_t w; } bitmap;
         struct { const adv_sprite_t *asset; uint16_t frame, color; bool tinted, dimmed; int16_t origin_x,origin_y; } sprite;
         struct { const adv_ninepatch_t *asset; } ninepatch;
+        struct { ag_row_fn paint; const void *ctx; } rows;
     } u;
 } ag_op_t;
 
@@ -81,6 +84,7 @@ bool ag_text_top(ag_t *g, const lv_font_t *font, const char *utf8, int x, int in
 bool ag_tri(ag_t *g, int cx, int cy, int size, bool up, uint16_t color);
 bool ag_glow(ag_t *g, int cx, int cy, int r, uint16_t color);
 bool ag_bitmap(ag_t *g, const uint16_t *pixels, int x, int y, int w, int h);
+bool ag_rows(ag_t *g,ag_row_fn paint,const void *ctx,uint32_t generation);
 bool ag_sprite(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y);
 // Keep native pixel coordinates, but omit an explicitly bounded source region's
 // exterior from painting and dirty bounds. No scaling or framebuffer allocation.

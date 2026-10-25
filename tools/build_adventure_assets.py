@@ -19,7 +19,11 @@ INTEGRATED_GAMES = ('post','night')
 PROOF_SOURCES = ('tools/generate_adv_sprites.py', 'tools/build_adventure_assets.py',
                  'tools/adventure_assets_manifest.py', 'tools/adventure_assets_emit.py',
                  'tools/adventure_assets_verify.py', 'tools/generate_boot_presentation.py', 'firmware/main/adv_boot.h', 'firmware/main/adv_sprite.c',
-                 'firmware/main/adv_sprite.h', 'firmware/main/adv_ninepatch.c', 'firmware/main/adv_ninepatch.h')
+                 'firmware/main/adv_sprite.h', 'firmware/main/adv_ninepatch.c', 'firmware/main/adv_ninepatch.h',
+                 'tools/generate_boot_video.py','tools/prepare_boot_video.py',
+                 'firmware/main/adv_video.c','firmware/main/adv_video.h',
+                 'firmware/main/adv_ui_boot_video.c','firmware/main/adv_ui_boot_video.h',
+                 'firmware/main/third_party/pl_mpeg/pl_mpeg.h')
 
 
 def proof_tools():
@@ -105,7 +109,16 @@ def build(art=DEFAULT_ART, output=DEFAULT_OUTPUT, groups=('travel', 'ui', 'stati
         if totals.get('ui', {}).get('static_bytes_estimate_c3', 0) > ui_limit:
             raise ValueError('UI actual RLE/tables/descriptors estimate exceeds budget; valid package left unchanged')
         opening = startup_budget(resources, pieces, totals)
-        if opening['complete_ui_group_present'] and opening['combined_estimate_c3'] > ui_limit:
+        from generate_boot_video import read_video,LIMIT as VIDEO_LIMIT
+        video=read_video(art) if 'travel' in groups else None
+        opening_limit=ui_limit
+        if video:
+            opening_limit=VIDEO_LIMIT
+            opening['boot_video_bytes']=video['bytes']
+            opening['combined_estimate_c3']+=video['bytes']
+            opening['budget_funding']='Lossless unused legacy glyph removal; 352KiB app reserve unchanged'
+        opening['limit_bytes']=opening_limit
+        if opening['complete_ui_group_present'] and opening['combined_estimate_c3'] > opening_limit:
             raise ValueError('Startup UI composition including its actor exceeds budget; valid package left unchanged')
         for group in GAME_GROUPS:
             if totals.get(group, {}).get('static_bytes_estimate_c3', 0) > GAME_LIMIT:

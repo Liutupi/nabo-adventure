@@ -127,13 +127,19 @@ def load_resources(art, groups):
                                           pair(entry['anchor'], 'static anchor'), color_limit=entry['color_limit']))
     if 'travel' in groups:
         from generate_boot_presentation import read_presentation
+        from generate_boot_video import read_video
         selected = read_presentation(art)
-        if selected:
+        video=read_video(art)
+        if selected or video:
             previous = [r for r in resources if r.group == 'travel' and r.startup and
                         r.id.rsplit('/', 1)[-1] in ('welcome', 'welcome_v2')]
             if len(previous) != 1: raise ValueError('Boot selection requires exactly one old startup welcome')
-            resources.remove(previous[0]); resources.append(selected.resource)
-            manifests.update(selected.dependencies)
+            resources.remove(previous[0])
+            if selected:resources.append(selected.resource)
+            manifests.update(selected.dependencies if selected else video['dependencies'])
+        if video:
+            obsolete={'ui/cover-background-top','ui/cover-background-bottom','ui/wordmarks/collection','ui/labels/boot-caption','ui/labels/press-start'}
+            resources=[r for r in resources if r.id not in obsolete]
     ids, symbols, shared = set(), set(), set()
     for resource in resources:
         if resource.id in ids or resource.symbol in symbols: raise ValueError('Duplicate id or C symbol collision')

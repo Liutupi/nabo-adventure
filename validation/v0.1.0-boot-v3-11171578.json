@@ -1,0 +1,84 @@
+{
+  "candidate_sha256": "11171578960cc4730a8c9c7d9e8be3e7016b8d679fd255f89c9d71de3af66d16",
+  "date": "2026-10-26",
+  "status": "SUPERSEDED: LIMITED DEVICE CHECKS PASS; 6.11FPS BELOW TARGET; NOT USER ACCEPTED",
+  "host": {
+    "tests": 223,
+    "seconds": 100.677,
+    "passed": true,
+    "idf_build_passed": true,
+    "all73_video_frames_match_three_reference_path": true,
+    "all73_compositor_frames_incremental_equals_full": true,
+    "no_per_frame_allocation": true,
+    "all_invoked_decoder_allocation_failures_cleaned": true,
+    "flash_input_immutable": true,
+    "final_frame_held_indefinitely": true,
+    "independent_ffmpeg_ycbcr": {
+      "clip_sha256": "5ab6fa3182f432c30b762d51a30a01967541192e9165a6944fbb81154f30725f",
+      "independent_decoder": "FFmpeg7.1 MPEG1 native YCbCr420",
+      "frames": 73,
+      "compared_ycbcr_samples": 6195072,
+      "mean_absolute_error": 0.26588520682245503,
+      "maximum_error": 6,
+      "worst_frame_mean_error": 0.29104213800904977,
+      "status": "PASS"
+    },
+    "independent_reproduction_bytes_identical": true
+  },
+  "budget": {
+    "app_sha256": "11171578960cc4730a8c9c7d9e8be3e7016b8d679fd255f89c9d71de3af66d16",
+    "app_bytes": 1592544,
+    "physical_factory_bytes": 2031616,
+    "free_bytes": 439072,
+    "reserve_bytes": 360448,
+    "remaining_after_reserve_bytes": 78624,
+    "opening_bytes": 226733,
+    "opening_limit_bytes": 229376,
+    "status": "PASS"
+  },
+  "video": {
+    "task": "BOOT-V3-01",
+    "frames": 73,
+    "logical_fps": 12,
+    "runtime_canvas": [
+      208,
+      272
+    ],
+    "display_canvas": [
+      240,
+      320
+    ],
+    "movie_bytes": 168429,
+    "return_poster_bytes": 11604,
+    "audio_tracks": 0,
+    "temporary_ycbcr_reference_bytes": 169728,
+    "actual_device_frame_rate": "pending",
+    "actual_device_minimum_heap_and_largest_block": "pending"
+  },
+  "voice": {
+    "unchanged_sha256": "38b4eb8435d6a7915d17af2083a696acfa2660244be1bf7e65dc78251f0c468b",
+    "start_ms": 1400,
+    "end_us": 4090625,
+    "speaker_enabled": false,
+    "physical_listening": "not performed; user requested silence"
+  },
+  "legacy": {
+    "kept_glyphs_per_font": 150,
+    "original_glyphs_per_font": 620,
+    "all_kept_glyph_pixels_and_metrics_identical": true,
+    "jump_embedded_pixels_and_pcm_identical": true,
+    "jump_scene_identical_pixels": 76800
+  },
+  "device": {
+    "flashed": true,
+    "last_live_confirmed_image": "99e71e9fa132c8b644aa30125663585b9fd92b2154697a84544d1cab86bcefd8",
+    "latest_confirmed_night_best": 51,
+    "latest_confirmed_stamps": 22,
+    "speaker": "OFF",
+    "latest_connection": "USB offline; wake request pending",
+    "draw_counter_fps": 6.105951162420695,
+    "replaced_by": "82efd1efdda558a598fa0058e8f9e419eb571d761856e9c98c96b9a05ba5f236"
+  },
+  "scope": "Grok large-NABO boot cover only; NIGHT/POST rules unchanged; B selection and four remaining formal games pending",
+  "private_device_data_excluded": true
+}

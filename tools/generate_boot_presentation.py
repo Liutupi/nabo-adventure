@@ -95,7 +95,13 @@ def read_presentation(art=DEFAULT_ART, manifest=None):
     art=Path(art).resolve();path,dependencies,storage_order=selected_path(art,manifest)
     if path is None:return None
     dependencies[path.relative_to(art).as_posix()]=digest(path)
-    value=json.loads(path.read_text('utf-8'));animations=value['animations']
+    value=json.loads(path.read_text('utf-8'))
+    if value.get('schema')=='adventure-boot-mpeg1-ip-v1':
+        from generate_boot_video import read_video
+        if manifest is not None:raise ValueError('Video candidates use their separate generator')
+        if read_video(art) is None:raise ValueError('Video requires explicit codec selection')
+        return None
+    animations=value['animations']
     if not isinstance(animations,list) or len(animations)!=1: raise ValueError('Boot manifest requires exactly one actor')
     entry=animations[0];fps=integer(entry['fps'],120,'fps',1)
     if entry['loop'] is not False: raise ValueError('Boot presentation must be nonlooping')

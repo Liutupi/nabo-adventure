@@ -10,6 +10,8 @@ idf_component_register(
         ${ADV_GENERATED}
         "adv_boot.c"
         "adv_boot_motion.c"
+        "adv_video.c"
+        "adv_ui_boot_video.c"
         "adv_demo.c"
         "adv_gfx.c"
         "adv_main.c"

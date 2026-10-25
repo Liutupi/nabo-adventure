@@ -1,0 +1,21 @@
+{
+  "policy": "Original 4bpp pixels and all metrics retained; unused glyphs only removed",
+  "source_files": {
+    "game-art/adventure/font-source/nabo_menu_font_16.c": "3de6bb5af413b0ab9aea5469918fe394c602d5955b6ed285174226985c70544d",
+    "game-art/adventure/font-source/nabo_ui_font_18.c": "3660d06e3b4fc6732470254d7cf0bdb3a0eb33f214b9d4d9901de72b1d684ef9"
+  },
+  "outputs": {
+    "nabo_menu_font_16": {
+      "sha256": "83f0828b087f9963f998db2948545d02bf1e80a7d29b78c0700990a3bcb274a7",
+      "glyphs": 150,
+      "bitmap_bytes": 10889,
+      "source_glyphs": 620
+    },
+    "nabo_ui_font_18": {
+      "sha256": "40416b67ddd3f666aadce05c40bce2176d4282066e6082f23b8e257a179f6c6d",
+      "glyphs": 150,
+      "bitmap_bytes": 13173,
+      "source_glyphs": 620
+    }
+  }
+}

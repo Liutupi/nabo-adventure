@@ -1,0 +1,2 @@
+99e71e9fa132c8b644aa30125663585b9fd92b2154697a84544d1cab86bcefd8  nabo-adventure-night-99e71e9f.bin
+82efd1efdda558a598fa0058e8f9e419eb571d761856e9c98c96b9a05ba5f236  nabo-adventure-boot-v3-82efd1ef-candidate.bin

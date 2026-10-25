@@ -1,0 +1,85 @@
+{
+  "schema": "adventure-boot-mpeg1-ip-v1",
+  "task": "BOOT-V3-01",
+  "status": "development candidate; no physical acceptance",
+  "runtime_canvas": [
+    208,
+    272
+  ],
+  "display_canvas": [
+    240,
+    320
+  ],
+  "logical_fps": 12,
+  "header_fps": 24,
+  "movie": {
+    "path": "boot/v3/runtime/boot-welcome.m1v",
+    "sha256": "5ab6fa3182f432c30b762d51a30a01967541192e9165a6944fbb81154f30725f",
+    "bytes": 168429,
+    "frames": 73
+  },
+  "poster": {
+    "path": "boot/v3/runtime/cover-poster.m1v",
+    "sha256": "fa6d96480e9dfb99daf815e3d778630fc8545094d060531f5ae0c61423dccaf3",
+    "bytes": 11604,
+    "frames": 1
+  },
+  "timeline": {
+    "total_duration_ms": 6600,
+    "voice_start_ms": 1400,
+    "voice_end_ms": 4090.625,
+    "voice_duration_ms": 2690.625,
+    "terminal_frame": 72,
+    "terminal_hold_ms": 600
+  },
+  "voice": {
+    "path": "audio/boot-welcome.wav",
+    "sha256": "38b4eb8435d6a7915d17af2083a696acfa2660244be1bf7e65dc78251f0c468b"
+  },
+  "source_sha256": {
+    "boot/v3/background-master.png": "267f35da9542337149758cf97679885b0e29a87c32f17de1294661b436637460",
+    "boot/v3/title-master.png": "9ae3cb3708754d0954034e33848b62a8a28999b94a6b03f746b8835d646ad302",
+    "grok-handoff/boot-v3/output/BOOT-V3-01-welcome-master.mp4": "e0458f49a90cfee5fc08bcde0fcca64180c361895850a3d4015a3d74d2558543",
+    "reference/nabo-idle-original.png": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243"
+  },
+  "transform": {
+    "raw_source_frames": 145,
+    "source_fps": 24,
+    "sampling": "source frames 0,2,...,144; exposure at floor(n*1000/12) ms",
+    "fixed_crop": [
+      140,
+      90,
+      954,
+      960
+    ],
+    "actor_size": [
+      193,
+      206
+    ],
+    "actor_position": [
+      23,
+      10
+    ],
+    "title_position": [
+      8,
+      202
+    ],
+    "title_native_crop": [
+      0,
+      0,
+      224,
+      82
+    ],
+    "no_audio": true,
+    "mpeg_qscale": 10,
+    "mpeg_gop": 24,
+    "mpeg_b_frames": 0,
+    "encoder": "FFmpeg7.1 mpeg1video -mbd rd -trellis 2",
+    "codec_header_rate": "24fps header is codec syntax only; explicit integer12fps firmware cadence preserves original6sec"
+  },
+  "opening_budget": {
+    "limit_bytes": 229376,
+    "previous_rle_profile_limit_bytes": 163840,
+    "funding": "Lossless legacy font subset; original glyph pixels and all metrics retained; 352KiB app reserve unchanged"
+  }
+}

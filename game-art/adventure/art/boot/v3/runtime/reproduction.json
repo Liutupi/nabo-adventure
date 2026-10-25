@@ -1,0 +1,21 @@
+{
+  "raw_source_sha256": "e0458f49a90cfee5fc08bcde0fcca64180c361895850a3d4015a3d74d2558543",
+  "encoder": "ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers",
+  "encoder_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "pillow": "12.3.0",
+  "operations": "fixed crop/key/despill/resample/composite only; original art and Grok master retained; no audio",
+  "outputs": {
+    "boot-welcome.m1v": {
+      "bytes": 168429,
+      "sha256": "5ab6fa3182f432c30b762d51a30a01967541192e9165a6944fbb81154f30725f"
+    },
+    "cover-poster.m1v": {
+      "bytes": 11604,
+      "sha256": "fa6d96480e9dfb99daf815e3d778630fc8545094d060531f5ae0c61423dccaf3"
+    },
+    "poster.png": {
+      "bytes": 164909,
+      "sha256": "b5def78b989bc6e3ba45ab621d7e825044798050771e353a66f7797dbb092a1b"
+    }
+  }
+}

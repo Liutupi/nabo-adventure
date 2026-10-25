@@ -86,12 +86,18 @@ def main():
     games = {game: evidence(ROOT / 'private/game-art-c' / game / 'adv_assets_generated.json',
                             (f'{game}-manifest.json',), [r for r in resources if r.group == game]) for game in GAME_GROUPS}
     source = ART / 'reference/nabo-idle-original.png'
+    from generate_boot_video import read_video
+    video=read_video(ART)
     catalog = {
         'schema': 'nabo-adventure-art-catalog-v1',
         'scope': 'eleven art rounds; gameplay integration is listed separately',
         'identity': {'path': source.relative_to(ART).as_posix(), 'sha256': digest(source)},
         'selected_travel_design': 'design/round1/v2/01-hiker-design-board.png',
         'selected_ui_theme': 'ui/design/round3/01-passport',
+        'boot_video': None if not video else {'task':'BOOT-V3-01','movie_frames':73,'poster_frames':1,
+            'logical_fps':12,'runtime_canvas':[208,272],'display_canvas':[240,320],
+            'media_bytes':video['bytes'],'validation':'Separate production video/renderer tests; excluded from row-RLE frame totals',
+            'manifest':'boot/v3/runtime/manifest.json'},
         'source_manifests_sha256': manifests,
         'counts': {'resources': len(resources),
                    'frames_including_static': sum(len(r.paths) for r in resources)},

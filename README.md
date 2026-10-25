@@ -8,6 +8,8 @@ FoloToy AI Passport（ESP32-C3 / 8 MB）上的 NABO 游戏合集，独立离线�
 |---|---|---|---|---|---|
 | ![](docs/images/ui/cover.png) | ![](docs/images/ui/map-town.png) | ![](docs/images/ui/passport.png) | ![](docs/images/ui/stamp-bronze.png) | ![](docs/images/ui/title.png) | ![](docs/images/ui/result.png) |
 
+**2026-10-26睡前检查点：** 当前Grok开机候选225项检查通过、已刷入；有限真机检查通过，约9.84fps仍低于12目标，外观/睡醒/整套回归待验。[交接本](docs/HANDOFF.md)和[精确app/SHA清单](firmware/checkpoints/2026-10-26/)已收录；[静音宿主目标预览](docs/images/ui/boot-v3-silent.gif)不是实机录像。
+
 截图由生产C代码在宿主机渲染；共用页面、POST与NIGHT使用正式美术。宿主截图不能代替实体操作、声音和帧率验收。
 
 ## 站点

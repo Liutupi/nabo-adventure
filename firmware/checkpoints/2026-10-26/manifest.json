@@ -1,0 +1,37 @@
+{
+  "schema": "nabo-adventure-checkpoint-v1",
+  "tag": "checkpoint-2026-10-26",
+  "date": "2026-10-26",
+  "release": false,
+  "current_device_app_sha256": "82efd1efdda558a598fa0058e8f9e419eb571d761856e9c98c96b9a05ba5f236",
+  "night_controls_verified_app_sha256": "99e71e9fa132c8b644aa30125663585b9fd92b2154697a84544d1cab86bcefd8",
+  "files": [
+    {
+      "path": "nabo-adventure-night-99e71e9f.bin",
+      "sha256": "99e71e9fa132c8b644aa30125663585b9fd92b2154697a84544d1cab86bcefd8",
+      "bytes": 1655184,
+      "host_tests": 211,
+      "status": "NIGHT controls human-accepted; complete automated suite passed; sleep not retested on99",
+      "flash_offset": "0x10000",
+      "contains_nvs_or_old_assets": false
+    },
+    {
+      "path": "nabo-adventure-boot-v3-82efd1ef-candidate.bin",
+      "sha256": "82efd1efdda558a598fa0058e8f9e419eb571d761856e9c98c96b9a05ba5f236",
+      "bytes": 1592848,
+      "host_tests": 225,
+      "status": "Current device;225 host checks and limited device checks pass;9.84FPS below12 target; visual/sleep/full-game regression pending",
+      "flash_offset": "0x10000",
+      "contains_nvs_or_old_assets": false
+    }
+  ],
+  "rule": "Restore these exact prebuilt app files; do not rebuild an accepted image; use guarded app-only upgrade, preserve NVS/PHY/boot/old resources",
+  "excluded": [
+    "NVS",
+    "full-flash backups",
+    "raw device logs",
+    "credentials",
+    "ELF/MAP/sdkconfig"
+  ],
+  "handoff": "../../../docs/HANDOFF.md"
+}

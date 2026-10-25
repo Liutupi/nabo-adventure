@@ -21,7 +21,7 @@ PRESS, CLICK, DOUBLE, LONG, RELEASE = 0, 1, 2, 3, 4
 SOURCES = ['adv_boot_motion.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c','adv_ui_night.c', 'adv_ui_post.c', 'adv_ui_post_session.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
            'adv_text.c', 'adv_ui.c', 'adv_ui_animation.c', 'adv_ui_art.c', 'adv_ui_map.c', 'adv_ui_session.c', 'adv_ui_jump.c', 'collection_portrait.c',
            'nabo_jump_model.c', 'nabo_jump_rig.c', 'nabo_jump_codec.c','nabo_dive_text.c', 'collection_font_12.c', 'collection_font_16.c',
-           'collection_font_18.c', 'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c']
+           'collection_font_18.c', 'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c','adv_video.c','adv_ui_boot_video.c']
 
 def ui_color(name):
     palette=json.loads((ROOT/'game-art/adventure/art/ui/palette.json').read_text('utf-8'))
@@ -250,7 +250,7 @@ class Renderer(unittest.TestCase):
         self.new([0, 60, 700, 30, 70, 400, 50, 1200, 1000], seen=0xffffff)
         self.lib.host_boot_start(1000)
         frames = []
-        times = (0, 250, 449, 450, 600, 1000, 1399, 1400, 1500, 2000, 2733, 2734, 4066, 4067, 4417, 5000)
+        times = (0, 250, 449, 450, 600, 1000, 1399, 1400, 1500, 2000, 2733, 2734, 4066, 4067, 4417, 5000,6000,6599,6600,7000)
         for t in times:
             self.lib.host_draw_at(1000 + t)
             self.check(f'boot {t}')
@@ -258,7 +258,10 @@ class Renderer(unittest.TestCase):
             if t in (0, 1000, 2000, 5000): self.save(f'boot-{t}.png', True)
         if self.lib.adv_boot_motion_enabled():
             self.assertNotEqual(frames[times.index(2000)], frames[-1], 'selected introduction must perform a gesture')
-        self.assertEqual(frames[0], frames[-1], 'the one-shot returns to its original neutral pose')
+        selected=json.loads((ROOT/'game-art/adventure/art/boot/selection.json').read_text('utf-8'))
+        if selected.get('kind')=='mpeg1-ip':
+            self.assertNotEqual(frames[0],frames[-1],'Grok final pose must be held without snapping to the opening frame')
+        else:self.assertEqual(frames[0], frames[-1], 'the one-shot returns to its original neutral pose')
         self.assertEqual(frames[-2], frames[-1], 'cover settles after its one-time introduction')
         self.click(OK)
         self.click(UP)
@@ -268,6 +271,22 @@ class Renderer(unittest.TestCase):
             self.check(f'map travel {t}')
             frames.append(self.snapshot())
         self.assertNotEqual(frames[0], frames[4])
+
+    def test_every_grok_boot_frame_renders_with_native_caption_and_permanent_final_hold(self):
+        self.new([0]*9);self.lib.host_boot_start(1000)
+        frames=[];snapshots=[]
+        for index in range(73):
+            self.lib.host_draw_at(1000+index*1000//12);self.check(f'Grok frame{index}')
+            frames.append(self.view_image());snapshots.append(hash(tuple(self.snapshot())))
+        self.assertGreater(len(set(snapshots)),65)
+        last=self.snapshot()
+        for elapsed in (6001,6599,6600,7000,12000,0x7fffffff):
+            self.lib.host_draw_at(1000+elapsed);self.check(f'Grok held{elapsed}');self.assertEqual(self.snapshot(),last)
+        frames[0].save(self.docs/'boot-v3-silent.gif',save_all=True,append_images=frames[1:],duration=[80 if i%3<2 else 90 for i in range(72)]+[600],loop=0,disposal=2)
+        frames[-1].save(self.docs/'boot-6000.png')
+
+    def test_deferred_dma_fixture_detects_buffer_reuse_before_transfer_completion(self):
+        self.assertEqual(self.lib.host_dma_selftest(),1)
 
     def test_random_inputs_never_leave_stale_pixels(self):
         self.new([0, 30, 700, 12, 11, 0, 0, 0, 0])

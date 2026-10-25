@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-26",
+  "candidate_sha256": "82efd1efdda558a598fa0058e8f9e419eb571d761856e9c98c96b9a05ba5f236",
+  "status": "CHECKPOINT ONLY: HOST PASS AND LIMITED DEVICE CHECKS; BOOT FPS BELOW TARGET; USER ACCEPTANCE PENDING",
+  "host": {
+    "tests": 225,
+    "seconds": 101.481,
+    "passed": true,
+    "idf_build_passed": true,
+    "video_frames": 73,
+    "separable_interpolation_identical_pixels": 5606400,
+    "deferred_dma_checks_passed": true,
+    "deferred_dma_fixture_detects_early_buffer_reuse": true,
+    "all73_incremental_frames_equal_full": true,
+    "no_per_frame_allocation": true
+  },
+  "budget": {
+    "app_bytes": 1592848,
+    "physical_factory_bytes": 2031616,
+    "free_bytes": 438768,
+    "reserve_bytes": 360448,
+    "remaining_after_reserve_bytes": 78320,
+    "opening_bytes": 226733,
+    "opening_limit_bytes": 229376
+  },
+  "device": {
+    "flashed": true,
+    "all_protected_bytes_verified": true,
+    "compositor_identical_pixels": 76800,
+    "normal_cover_cycles": 10,
+    "normal_cover_cycles_stable": true,
+    "minimum_cover_heap": 80672,
+    "minimum_cover_largest": 28672,
+    "map_heap": 255304,
+    "map_largest": 114688,
+    "draw_counter_fps": 9.836784313584841,
+    "target_fps": 12,
+    "fps_measurement_scope": "two serial snapshots; compositor frame count, not a per-pose presentation guarantee",
+    "normal_mode_restored": true,
+    "nvs_bytes_identical_to_upgrade_backup": 24576,
+    "latest_confirmed_bests": [
+      0,
+      132,
+      5888,
+      8,
+      51,
+      11,
+      13,
+      12,
+      15
+    ],
+    "stamps": 22,
+    "speaker": "OFF",
+    "saved_sleep_seconds": 300,
+    "user_visual_acceptance": "pending",
+    "sleep_wake_on_this_image": "not tested",
+    "full_four_game_device_regression_on_this_image": "not run; stopped at user request"
+  },
+  "prior_attempts": [
+    {
+      "sha256": "11171578960cc4730a8c9c7d9e8be3e7016b8d679fd255f89c9d71de3af66d16",
+      "draw_counter_fps": 6.105951162420695,
+      "target_met": false
+    },
+    {
+      "sha256": "baf301f1e32b734e5c15b9e63706682cb7b160e70540a7bd8116f3644e071795",
+      "draw_counter_fps": 8.25011926402043,
+      "target_met": false
+    }
+  ],
+  "voice": {
+    "sha256": "38b4eb8435d6a7915d17af2083a696acfa2660244be1bf7e65dc78251f0c468b",
+    "start_ms": 1400,
+    "end_us": 4090625,
+    "unchanged": true,
+    "physical_listening": "not performed; user requested silence"
+  },
+  "scope": "Grok BOOT-V3-01 integrated; NIGHT/POST rules unchanged; B selector and CLIMB/SKI/SKY/SPACE formal games pending",
+  "user_instruction": "Freeze current successes, upload GitHub, write handoff, and stop for sleep; no automatic continuation",
+  "night_controls_accepted_app_sha256": "99e71e9fa132c8b644aa30125663585b9fd92b2154697a84544d1cab86bcefd8",
+  "private_device_data_excluded": true
+}
