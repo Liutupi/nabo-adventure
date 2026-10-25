@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-25",
+  "version": "0.1.0",
+  "scope": "POST core/A outfit and common controls; not all new games complete",
+  "app_sha256": "5a2bc80336bddc25aed27f770810bfe0476bf283a7e660e6328415ddd33b7968",
+  "app_bytes": 1644096,
+  "physical_factory_bytes": 2031616,
+  "factory_free_bytes": 387520,
+  "host_tests": {
+    "count": 183,
+    "status": "PASS"
+  },
+  "device_automated": {
+    "post_jump_dive_rounds_each": 10,
+    "warmup_each": 1,
+    "nvs_preserved_after_upgrade": true
+  },
+  "user_confirmed": {
+    "double_up_return_all_three": true,
+    "post_complete_formal_round": true,
+    "sleep30s_up_wake": true
+  },
+  "latest_real_progress": {
+    "jump": 132,
+    "dive": 5888,
+    "post": 6,
+    "stamps": 7,
+    "reset_retained": true,
+    "sleep_nvs_unchanged": true
+  },
+  "pending": [
+    "NIGHT/CLIMB/SKI/SKY/SPACE formal gameplay",
+    "B-outfit selector and silver unlock wiring"
+  ],
+  "artifact_policy": "Use the original frozen accepted app, never an equivalent rebuild; no backups/NVS/private logs are included."
+}

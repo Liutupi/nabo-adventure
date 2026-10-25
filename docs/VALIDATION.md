@@ -191,3 +191,11 @@ fdec0883随后已保护式刷入并通过自动流程/三游戏各10轮/正常�
 | 清理/当前实体状态 | `private/device-suite-5a2bc803.json`五项检查通过，确认恢复test0；`private/post-human-practice-5a2bc803-entry.json`为局内practice1/lesson0、蒸汽1000。当前等用户确认三游戏实体双击返回与完整正式火车一局；本候选30秒睡醒未做 |
 
 [设备练习截图](images/device/post-practice-5a2bc803.png)为保持正常模式的320×240合成器捕获，完整76,800像素；宿主/设备合成器画面与实体观察分别记录。不得将旧镜像的验收或新的构建替代当前候选的待测项目。
+
+#### 5a2bc803 后续实体验收通过
+
+用户已确认“三款都正常”“正式一局正常结束并显示成绩”“约30秒熄屏，上键能恢复”。POST核心玩法M4、三个游戏双击上键返回、当前候选30秒休眠/上键唤醒已通过。此结论绑定原冻结app SHA256，不以之后的重建产物替代；B款换装和其它五款正式玩法不在已完成范围内。公开摘要见`../validation/v0.1.0-post-5a2bc803.json`。
+
+- 实际正常成绩已变为跳一跳132、深潜5888、小火车**6**、seen127即**7枚章**；`private/normal-progress-5a2bc803-post6.json`记录读NVS/硬件重启后保持，不能恢复旧132/5888/4或更早备份。
+- `private/sleep-visible-5a2bc803.json`与用户观察一致：先在设置页可见30秒，USB断开后重新出现，正常封面/test0恢复。`settings_saved=false`，正常模式恢复已确认。
+- `private/normal-progress-5a2bc803-post6-after-sleep.json`：睡眠测试前后NVS24,576B逐字节相同，SHA256 `7fb7336c7b479750f2f2b5130bceda98a1f6e8274f2ca8c370a501e87c9de95e`，新6封/7章保持。相关备份只在private保存。
