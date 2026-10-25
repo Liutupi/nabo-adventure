@@ -18,7 +18,7 @@
 | `AGENTS.md` | 维护约定（必须遵守） |
 | `game-art/adventure/DESIGN.md` | 已实现的规则：站点、按键、印章、一局流程、游戏接口、存档、串口命令 |
 | `game-art/adventure/GAMES.md` | 6 个新游戏的玩法和起始参数 |
-| `game-art/adventure/UI_DESIGN.md` | 配色、字体、每个画面（截图由生产代码渲染） |
+| `game-art/adventure/UI_DESIGN.md` | 配色、字体、每个画面（截图由生产代码渲染）；第 7 节是界面视觉设计要求 |
 | `game-art/adventure/ART_BRIEF.md` / `CODEX_PROMPTS.md` | 美术规格 / 按轮次的提示词 |
 | `game-art/adventure/BUDGET.md` | Flash、内存预算 |
 | nabo-passport-game skill | NABO 小游戏的通用流程（M0–M4、发布） |
@@ -86,8 +86,8 @@ python firmware/tools/flash_candidate.py --app firmware/build-idf6/nabo-adventur
 | # | 任务 | 完成标准 |
 |---|---|---|
 | 1 | **真机冒烟**（要用户的工牌） | 刷 app → 封面、地图、护照亭、设置能走通；跳一跳和深潜进出各 10 次不重启；`>adv.status` 记录地图 / 游戏中 / 回地图的 `heap`、`largest`，10 轮不下降；声音不爆音；深睡后按键能唤醒 |
-| 2 | 美术第 1–3 轮（Codex） | 按 `CODEX_PROMPTS.md`；第 1 轮由用户选造型 |
-| 3 | 精灵管线 | `tools/generate_adv_sprites.py`（64 色、行 RLE、关键帧 + 差分，打包后逐帧比对）；`adv_gfx` 实现 `AG_SPRITE`；地图换上 NABO 走路和地标 |
+| 2 | 美术第 1–5 轮（Codex） | 按 `CODEX_PROMPTS.md`：旅行服造型（用户选）→ 骨骼 → **界面风格板（用户选）** → 共用包 / 地图 / 印章 → 界面全套素材 |
+| 3 | 精灵和界面管线 | `tools/generate_adv_sprites.py`（64 色、行 RLE、关键帧 + 差分，打包后逐帧比对；界面包检查 ≤ 32 色）；`adv_gfx` 实现 `AG_SPRITE`、九宫格、数字精灵字体（UI_DESIGN 7.9）；地图和各页面换上新素材 |
 | 4 | 小火车 POST（M0–M4） | 原型里做出玩法、调参（`GAMES.md` 第 1 节）→ 录对拍 → `adv_post.c` + `draw` → H 横向模式 → 站点 3 `placeholder = false` |
 | 5 | 地图硬件竖向滚动 | 走一站时镜头平滑滚动，60 fps（参考深潜 `nabo_dive_render.c`） |
 | 6 | 服装系统 | 银章解锁第二款；标题页可切换；存 `adv_skin_<id>` |

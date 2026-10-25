@@ -2,7 +2,7 @@
 
 版本 0.1 · 2026-10-25
 
-本文件是合集美术制作的唯一依据。所有素材放在 `game-art/adventure/art/` 下，不要修改 `firmware/` 和其他目录。玩法看 `GAMES.md`，画面版式看 `UI_DESIGN.md`，按轮次的提示词看 `CODEX_PROMPTS.md`。
+本文件是合集**角色和场景**美术的唯一依据；**界面视觉**（风格板、封面、字标、九宫格卡片、护照内页、数字、地图界面元素）的要求在 `UI_DESIGN.md` 第 7 节。所有素材放在 `game-art/adventure/art/` 下，不要修改 `firmware/` 和其他目录。玩法看 `GAMES.md`，按轮次的提示词看 `CODEX_PROMPTS.md`。
 
 ## 1. 要做什么
 
@@ -12,6 +12,7 @@
 | 地图 `map/` | 9 个世界的装饰图块、9 个站点地标 | 第一 |
 | 印章 `stamps/` | 8 枚游戏印章 + 护照亭徽记 | 第一 |
 | 资源图标 `icons/` | 7 个资源小图标 | 第一 |
+| 界面包 `ui/` | 风格板、封面插画、字标、九宫格部件、护照内页、数字、标签、地图界面元素（见 `UI_DESIGN.md` 第 7 节） | 第一（风格板先行） |
 | 各游戏 `games/<id>/` | 该游戏的服装（两款）、动作、场景图块、道具 | 按开发顺序：post → night → climb → ski → sky → space |
 
 ## 2. 硬件约束（必须遵守）
@@ -116,6 +117,7 @@ game-art/adventure/art/
 ├── frames/<skin>/<anim>/000.png …
 ├── map/tiles/<world>/*.png   map/landmarks/<station>.png
 ├── stamps/<station>.png   icons/<resource>.png
+├── ui/                           # 界面包，结构见 UI_DESIGN.md 第 7 节
 ├── games/<id>/tiles/  games/<id>/props/
 └── preview/                      # 目标尺寸、实际背景色上的预览拼图（不进固件）
 ```
