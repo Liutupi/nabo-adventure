@@ -8,6 +8,7 @@ const A = require('../../game-art/adventure/prototype/adv_core.js');
 
 const { BTN, EV, FX } = A;
 const {drive:driveNight}=require('../night_policy.js');
+const {driver:climbDriver}=require('../climb_policy.js');
 const SETTINGS = { volume: 70, brightness: 80, sleep: 300, speaker: true };
 
 function recorder(seed, best, seen) {
@@ -35,6 +36,7 @@ function recorder(seed, best, seen) {
 function playDemo(r, hits, misses,waitResult=true) {
   if(r.m.session.station===3)return playPost(r,hits,misses,waitResult);
   if(r.m.session.station===4)return playNight(r,hits,waitResult);
+  if(r.m.session.station===5)return playClimb(r,hits,waitResult);
   const s = () => r.m.session;
   while (s() && s().phase === A.PHASE.READY) r.steps(30);
   let made = 0, missed = 0, guard = 0;
@@ -84,6 +86,32 @@ function playNight(r,hits,waitResult=true){
   }
   if(r.m.session.phase!==A.PHASE.END)throw Error('NIGHT did not end');
   while(waitResult&&r.m.session.phase===A.PHASE.END)r.steps(20);
+}
+
+// CLIMB through real OK press/release events until `height` metres, then hang on until spent.
+function playClimb(r,height,waitResult=true){
+  while(r.m.session.phase===A.PHASE.READY)r.steps(30);
+  const next=climbDriver('skilled',r.m.session.seed);let guard=0;
+  while(r.m.session.phase===A.PHASE.PLAY&&guard++<30000){
+    const g=r.m.session.game,input=g.score<height||g.press>=0?next(g):{};
+    if(input.ok_down)r.ev(BTN.OK,EV.PRESS);
+    r.steps(1);
+    if(input.ok_up)r.ev(BTN.OK,EV.RELEASE);
+  }
+  if(r.m.session.phase!==A.PHASE.END)throw Error('CLIMB did not end');
+  while(waitResult&&r.m.session.phase===A.PHASE.END)r.steps(20);
+}
+
+function climbRound(){
+  const r=recorder(55,[0,20,300,6,16,0,0,0,0],0x3ff);
+  r.click(BTN.OK);for(let i=0;i<3;i++)r.click(BTN.UP);r.click(BTN.OK);
+  if(!r.m.session||r.m.session.station!==5)throw Error('CLIMB did not open');
+  r.click(BTN.OK);r.steps(240);r.click(BTN.UP);r.long(BTN.UP);r.click(BTN.OK);   // single UP plays on, long UP pauses
+  r.long(BTN.UP);r.click(BTN.DOWN);                                                // restart from pause
+  playClimb(r,55);
+  if(r.m.best[5]<50)throw Error('CLIMB round must earn bronze');
+  r.double(BTN.UP);r.click(BTN.OK);
+  return r.trace;
 }
 
 function journey() {
@@ -216,10 +244,11 @@ function legacyAwards(){
 const out = __dirname;
 const traces = {
   legacy_awards:legacyAwards(),
+  climb_round:climbRound(),
   game_returns:gameReturns(),
   game_return_record:endedReturn(false),
   game_return_test:endedReturn(true),
-  demo_thresholds:(()=>{const r=recorder(81,[0,50,600,25,60,0,0,0,0],0xfff);r.click(BTN.OK);for(let i=0;i<3;i++)r.click(BTN.UP);r.click(BTN.OK);r.click(BTN.OK);playDemo(r,6,4);r.double(BTN.UP);r.click(BTN.OK);r.click(BTN.OK);return r.trace;})(),
+  demo_thresholds:(()=>{const r=recorder(81,[0,50,600,25,60,60,0,0,0],0x1fff);r.click(BTN.OK);for(let i=0;i<4;i++)r.click(BTN.UP);r.click(BTN.OK);r.click(BTN.OK);if(r.m.session.station!==6)throw Error('demo threshold trace must use a placeholder');playDemo(r,6,4);r.double(BTN.UP);r.click(BTN.OK);r.click(BTN.OK);return r.trace;})(),
   journey: journey(),
   kiosk_settings: kioskAndSettings(),
   fuzz_fresh: fuzz(7, [0, 0, 0, 0, 0, 0, 0, 0, 0], 0, 4000),

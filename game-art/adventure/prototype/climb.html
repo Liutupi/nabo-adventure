@@ -1,0 +1,27 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>NABO 登山 · 正式玩法原型</title>
+<style>body{margin:24px;background:#fffaf0;color:#203849;font:16px system-ui}main{display:flex;align-items:flex-start;gap:28px;flex-wrap:wrap}canvas{height:min(640px,calc(100vh - 120px));width:auto;max-width:100%;aspect-ratio:3/4;border:8px solid #203849;border-radius:14px;image-rendering:pixelated}aside{max-width:420px}p{line-height:1.8}button{background:#203849;color:#fffaf0;border:0;border-radius:8px;padding:14px 22px;margin:4px;font:700 16px system-ui}pre{font-size:12px;white-space:pre-wrap}</style>
+<h1>NABO 登山 · 竖屏攀岩</h1><main><canvas id="game" width="240" height="320"></canvas><aside>
+<p>竖拿。<b>点 OK</b>（不到0.2秒）换到对面岩壁、上1米；<b>按住 OK 蓄力</b>再松开，在同一侧跳2米，蓄满（约0.67秒）跳3米。目标处没有岩点会滑落并扣100体力。</p>
+<p>体力每秒消耗30，结冰岩点上翻倍；每爬上新的一米补20，水壶补250。碎石岩点抓住1秒后塌落；落石出现前顶部会亮红色“!”，砸中扣250并下滑。体力耗尽结束，铜/银/金为50/150/300米。</p>
+<p>长按上键暂停，双击上键回地图；上键不参与攀爬。此页为独立玩法原型，不写入工牌存档；人物使用原尺寸登山服A款素材，网页整体放大方便查看。</p>
+<button id="start">开始 / 重来</button><button id="pause">暂停 / 继续</button><p id="status">加载原尺寸素材…</p>
+<div><button data-key="ok">OK（点按换边 / 按住蓄力）</button></div><p>键盘：空格或 Enter 当 OK；P 暂停。</p><pre id="debug"></pre>
+</aside></main><script src="adv_climb.js"></script><script src="adv_climb_draw.js"></script><script>
+(async()=>{'use strict';const C=AdvClimb,D=AdvClimbDraw;await D.load();const c=document.querySelector('canvas').getContext('2d');
+let seed=1234,g=C.start(seed),phase='TITLE',countdown=0,input={},held=false,last=performance.now(),acc=0,previousPhase='TITLE',phaseAt=performance.now(),best=0;
+function start(){seed=(seed*1103515245+12345)>>>0;g=C.start(seed);phase='READY';countdown=180;input={};}
+function down(){if(held)return;held=true;if(phase==='TITLE'||phase==='RESULT'){start();return;}if(phase==='PAUSE'){phase='PLAY';input={};return;}if(phase==='PLAY')input.ok_down=1;}
+function up(){if(!held)return;held=false;if(phase==='PLAY')input.ok_up=1;}
+const pause=()=>{if(phase==='PLAY')phase='PAUSE';else if(phase==='PAUSE')phase='PLAY';};
+document.querySelector('#start').onclick=start;document.querySelector('#pause').onclick=pause;
+const b=document.querySelector('[data-key]');b.onpointerdown=e=>{b.setPointerCapture(e.pointerId);down();};b.onpointerup=up;b.onpointercancel=up;
+addEventListener('keydown',e=>{if(e.key===' '||e.key==='Enter'){e.preventDefault();if(!e.repeat)down();}else if(e.key==='p'||e.key==='P')pause();});
+addEventListener('keyup',e=>{if(e.key===' '||e.key==='Enter'){e.preventDefault();up();}});
+addEventListener('blur',()=>{if(held)up();if(phase==='PLAY')phase='PAUSE';});
+function frame(now){acc+=Math.min(100,now-last);last=now;while(acc>=1000/60){if(phase==='READY'){if(--countdown===0)phase='PLAY';}else if(phase==='PLAY'){C.step(g,Object.assign({ok_held:held?1:0},input));input={};if(g.over)phase='RESULT';}acc-=1000/60;}
+if(previousPhase!==phase){previousPhase=phase;phaseAt=now;if(phase==='RESULT')best=Math.max(best,g.score);}
+D.draw(c,g,phase,countdown,Math.floor(now*60/1000),Math.floor((now-phaseAt)*60/1000),best);
+document.querySelector('#status').textContent='状态 '+phase+' · 海拔 '+g.score+'m · 体力 '+g.res;
+document.querySelector('#debug').textContent=JSON.stringify({seed,tick:g.tick,row:g.row,side:g.side,act:g.act,press:g.press,queue:g.queue,fragileT:g.fragileT,hits:g.hits,misses:g.misses,crumbles:g.crumbles,canteens:g.canteens});requestAnimationFrame(frame);}
+requestAnimationFrame(frame);})();
+</script></html>
