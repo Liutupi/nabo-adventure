@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_sky_bird_silhouette__p0",
   "width": 32,
   "height": 32,
@@ -35,5 +35,15 @@
       "sha256": "7212dde37b96452b1956083d0bc3b446875aafdb91587ed77763642ad6157e56"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/sky/bird-silhouette",
+      "logical_symbol": "adv_assets_static_tiles_sky_bird_silhouette__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

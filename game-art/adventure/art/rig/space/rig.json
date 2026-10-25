@@ -1,0 +1,2360 @@
+{
+  "version": 1,
+  "canvas": [
+    256,
+    256
+  ],
+  "anchor": [
+    128,
+    224
+  ],
+  "draw_order": [
+    "helmet_back",
+    "thigh_l",
+    "shin_foot_l",
+    "thigh_r",
+    "shin_foot_r",
+    "upper_arm_l",
+    "forearm_hand_l",
+    "upper_arm_r",
+    "forearm_hand_r",
+    "torso",
+    "utility_hose",
+    "head",
+    "expression_neutral",
+    "helmet_front"
+  ],
+  "skins": {
+    "space_a": {
+      "master": "games/space/masters/space_a-three-views.png",
+      "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+      "views": {
+        "front": {
+          "parts": {
+            "forearm_hand_l": {
+              "parent": "upper_arm_l",
+              "pivot": [
+                96,
+                138
+              ],
+              "polygon": [
+                [
+                  80,
+                  131
+                ],
+                [
+                  108,
+                  131
+                ],
+                [
+                  110,
+                  167
+                ],
+                [
+                  96,
+                  180
+                ],
+                [
+                  80,
+                  170
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "front",
+              "part": "forearm_hand_l",
+              "path": "space_a/front/forearm_hand_l.png",
+              "sha256": "af8f74bac2b10b270e6509fd18561b32eb99e55a87e8b5ac827fa277bc54ea1d"
+            },
+            "forearm_hand_r": {
+              "parent": "upper_arm_r",
+              "pivot": [
+                160,
+                138
+              ],
+              "polygon": [
+                [
+                  148,
+                  131
+                ],
+                [
+                  177,
+                  131
+                ],
+                [
+                  178,
+                  171
+                ],
+                [
+                  158,
+                  180
+                ],
+                [
+                  147,
+                  156
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "front",
+              "part": "forearm_hand_r",
+              "path": "space_a/front/forearm_hand_r.png",
+              "sha256": "9b5349129fd1fa9af684e4f6ea482fe8fd82d2939da3603efd5d383fcf529ec9"
+            },
+            "upper_arm_l": {
+              "parent": "torso",
+              "pivot": [
+                106,
+                107
+              ],
+              "polygon": [
+                [
+                  92,
+                  100
+                ],
+                [
+                  115,
+                  105
+                ],
+                [
+                  110,
+                  142
+                ],
+                [
+                  82,
+                  148
+                ],
+                [
+                  82,
+                  125
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "front",
+              "part": "upper_arm_l",
+              "path": "space_a/front/upper_arm_l.png",
+              "sha256": "6228f33f3b8c9b13c866190812d9139bc5172be5866658e7ce9bf9f261e3d4da"
+            },
+            "upper_arm_r": {
+              "parent": "torso",
+              "pivot": [
+                150,
+                107
+              ],
+              "polygon": [
+                [
+                  141,
+                  105
+                ],
+                [
+                  165,
+                  100
+                ],
+                [
+                  177,
+                  125
+                ],
+                [
+                  180,
+                  148
+                ],
+                [
+                  150,
+                  143
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "front",
+              "part": "upper_arm_r",
+              "path": "space_a/front/upper_arm_r.png",
+              "sha256": "81ef2101cfd3928f846108a9cea3bbc6484db64ee16aca89c04c387372b88415"
+            },
+            "shin_foot_l": {
+              "parent": "thigh_l",
+              "pivot": [
+                115,
+                188
+              ],
+              "polygon": [
+                [
+                  0,
+                  183
+                ],
+                [
+                  129,
+                  183
+                ],
+                [
+                  129,
+                  256
+                ],
+                [
+                  0,
+                  256
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "front",
+              "part": "shin_foot_l",
+              "path": "space_a/front/shin_foot_l.png",
+              "sha256": "ed16a0fb7e5a4bc2c10f6513457c6154ef8025dfcd863d5cd4f984af6b7f5347"
+            },
+            "shin_foot_r": {
+              "parent": "thigh_r",
+              "pivot": [
+                141,
+                188
+              ],
+              "polygon": [
+                [
+                  126,
+                  183
+                ],
+                [
+                  256,
+                  183
+                ],
+                [
+                  256,
+                  256
+                ],
+                [
+                  126,
+                  256
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "front",
+              "part": "shin_foot_r",
+              "path": "space_a/front/shin_foot_r.png",
+              "sha256": "0261fc7860d6c3d8be9e169c778da44dc298e08ff0cadc2a4c0f337a716cf8f6"
+            },
+            "thigh_l": {
+              "parent": "root",
+              "pivot": [
+                116,
+                151
+              ],
+              "polygon": [
+                [
+                  0,
+                  147
+                ],
+                [
+                  129,
+                  147
+                ],
+                [
+                  129,
+                  196
+                ],
+                [
+                  0,
+                  196
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "front",
+              "part": "thigh_l",
+              "path": "space_a/front/thigh_l.png",
+              "sha256": "9fbc5521c181fd064215491b6fa378a1aa38533775689c1177d31287e68120be"
+            },
+            "thigh_r": {
+              "parent": "root",
+              "pivot": [
+                140,
+                151
+              ],
+              "polygon": [
+                [
+                  126,
+                  147
+                ],
+                [
+                  256,
+                  147
+                ],
+                [
+                  256,
+                  196
+                ],
+                [
+                  126,
+                  196
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "front",
+              "part": "thigh_r",
+              "path": "space_a/front/thigh_r.png",
+              "sha256": "aa0406713d9495f212b9fad2cfaea143cf7fb840c69cf7090c78f6fb8f900f02"
+            },
+            "utility_hose": {
+              "parent": "torso",
+              "pivot": [
+                139,
+                126
+              ],
+              "polygon": [
+                [
+                  137,
+                  125
+                ],
+                [
+                  147,
+                  128
+                ],
+                [
+                  153,
+                  139
+                ],
+                [
+                  150,
+                  152
+                ],
+                [
+                  142,
+                  149
+                ],
+                [
+                  139,
+                  139
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "front",
+              "part": "utility_hose",
+              "path": "space_a/front/utility_hose.png",
+              "sha256": "7ecd9a154a45daa8927bfe3529da47fa933cc2505a6b5a39bb7bc494fe711f28"
+            },
+            "torso": {
+              "parent": "root",
+              "pivot": [
+                128,
+                151
+              ],
+              "polygon": null,
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "front",
+              "part": "torso",
+              "path": "space_a/front/torso.png",
+              "sha256": "15f967bd2508bac30542a3b5d45f67689f01f3d1f83bb90f97ee3ebf1590c81a"
+            },
+            "head": {
+              "parent": "root",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "head",
+              "view": "front",
+              "frozen_head": "rig/common/front/head.png",
+              "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_a/front/head.png",
+              "sha256": "567c9333c9c5e105f1254e1c14b571e3509b4ee9c8339b32e0cfe2645809d5ee"
+            },
+            "expression_neutral": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "expression_neutral",
+              "view": "front",
+              "frozen_head": "rig/common/front/head.png",
+              "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_a/front/expression_neutral.png",
+              "sha256": "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+            },
+            "helmet_back": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "helmet_back",
+              "view": "front",
+              "frozen_head": "rig/common/front/head.png",
+              "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_a/front/helmet_back.png",
+              "sha256": "29fe63272e3b4c2dcb20be1bf6ad5c6cce0894cf2bd621e4bc1bfeefe69f799e"
+            },
+            "helmet_front": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "helmet_front",
+              "view": "front",
+              "frozen_head": "rig/common/front/head.png",
+              "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_a/front/helmet_front.png",
+              "sha256": "059804454cd8742fa01e5989e971d15939d763c586d6204b6d976559f007b8dd"
+            }
+          },
+          "sampling": {
+            "window": [
+              130,
+              0,
+              620,
+              887
+            ],
+            "source_neck_row": 365,
+            "source_sole_row": 867,
+            "scale": 0.2549800796812749,
+            "source_neck_center_x": 252.0,
+            "paste": [
+              64,
+              3
+            ],
+            "target_neck": 96,
+            "target_sole": 224,
+            "once_per_view_source_sole_compensation_y": 0
+          }
+        },
+        "left": {
+          "parts": {
+            "forearm_hand_l": {
+              "parent": "upper_arm_l",
+              "pivot": [
+                96,
+                138
+              ],
+              "polygon": [
+                [
+                  80,
+                  131
+                ],
+                [
+                  108,
+                  131
+                ],
+                [
+                  110,
+                  167
+                ],
+                [
+                  96,
+                  180
+                ],
+                [
+                  80,
+                  170
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "left",
+              "part": "forearm_hand_l",
+              "path": "space_a/left/forearm_hand_l.png",
+              "sha256": "ba24de793d411dd22e2968ee7a9d118db45e93c126f248539b329a72b95bd5dd"
+            },
+            "forearm_hand_r": {
+              "parent": "upper_arm_r",
+              "pivot": [
+                160,
+                138
+              ],
+              "polygon": [
+                [
+                  148,
+                  131
+                ],
+                [
+                  177,
+                  131
+                ],
+                [
+                  178,
+                  171
+                ],
+                [
+                  158,
+                  180
+                ],
+                [
+                  147,
+                  156
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "left",
+              "part": "forearm_hand_r",
+              "path": "space_a/left/forearm_hand_r.png",
+              "sha256": "57aecf8f7979d889570ffd82d6a6d9a58dc8d58f212dc4465ad3223db69f17f2"
+            },
+            "upper_arm_l": {
+              "parent": "torso",
+              "pivot": [
+                106,
+                107
+              ],
+              "polygon": [
+                [
+                  92,
+                  100
+                ],
+                [
+                  115,
+                  105
+                ],
+                [
+                  110,
+                  142
+                ],
+                [
+                  82,
+                  148
+                ],
+                [
+                  82,
+                  125
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "left",
+              "part": "upper_arm_l",
+              "path": "space_a/left/upper_arm_l.png",
+              "sha256": "46db4422aa9d2241632ddb08be1a46c540a8cd7585246a42cc8ad30ea58087f6"
+            },
+            "upper_arm_r": {
+              "parent": "torso",
+              "pivot": [
+                150,
+                107
+              ],
+              "polygon": [
+                [
+                  141,
+                  105
+                ],
+                [
+                  165,
+                  100
+                ],
+                [
+                  177,
+                  125
+                ],
+                [
+                  180,
+                  148
+                ],
+                [
+                  150,
+                  143
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "left",
+              "part": "upper_arm_r",
+              "path": "space_a/left/upper_arm_r.png",
+              "sha256": "2fe007ed9cce775dc7a7155b1d22561f097f122e77faad2fa8c81028824d295e"
+            },
+            "shin_foot_l": {
+              "parent": "thigh_l",
+              "pivot": [
+                115,
+                188
+              ],
+              "polygon": [
+                [
+                  0,
+                  183
+                ],
+                [
+                  129,
+                  183
+                ],
+                [
+                  129,
+                  256
+                ],
+                [
+                  0,
+                  256
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "left",
+              "part": "shin_foot_l",
+              "path": "space_a/left/shin_foot_l.png",
+              "sha256": "8a2105d1afb0b11a1f89f2697fc559857fdeb3d52acdc3757256b19176c164cb"
+            },
+            "shin_foot_r": {
+              "parent": "thigh_r",
+              "pivot": [
+                141,
+                188
+              ],
+              "polygon": [
+                [
+                  126,
+                  183
+                ],
+                [
+                  256,
+                  183
+                ],
+                [
+                  256,
+                  256
+                ],
+                [
+                  126,
+                  256
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "left",
+              "part": "shin_foot_r",
+              "path": "space_a/left/shin_foot_r.png",
+              "sha256": "2cf787a755efca21a4a8f793a5cf23ec3d0b9be4dba44abed7c1866fb7c1edd2"
+            },
+            "thigh_l": {
+              "parent": "root",
+              "pivot": [
+                116,
+                151
+              ],
+              "polygon": [
+                [
+                  0,
+                  147
+                ],
+                [
+                  129,
+                  147
+                ],
+                [
+                  129,
+                  196
+                ],
+                [
+                  0,
+                  196
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "left",
+              "part": "thigh_l",
+              "path": "space_a/left/thigh_l.png",
+              "sha256": "a044f6e65de07455e3495737e73142d60512a353aed0a80c7c52277396ad46e0"
+            },
+            "thigh_r": {
+              "parent": "root",
+              "pivot": [
+                140,
+                151
+              ],
+              "polygon": [
+                [
+                  126,
+                  147
+                ],
+                [
+                  256,
+                  147
+                ],
+                [
+                  256,
+                  196
+                ],
+                [
+                  126,
+                  196
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "left",
+              "part": "thigh_r",
+              "path": "space_a/left/thigh_r.png",
+              "sha256": "d77648aeb53fd3d553867a0e59f718763cf86ddbb69132963394c48348dd99dc"
+            },
+            "utility_hose": {
+              "parent": "torso",
+              "pivot": [
+                139,
+                126
+              ],
+              "polygon": [
+                [
+                  137,
+                  125
+                ],
+                [
+                  147,
+                  128
+                ],
+                [
+                  153,
+                  139
+                ],
+                [
+                  150,
+                  152
+                ],
+                [
+                  142,
+                  149
+                ],
+                [
+                  139,
+                  139
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "left",
+              "part": "utility_hose",
+              "path": "space_a/left/utility_hose.png",
+              "sha256": "03ed8b50c9edc80a0f3b57c9289e387a71c2b7ac51d0b27875202727af1e43dc"
+            },
+            "torso": {
+              "parent": "root",
+              "pivot": [
+                128,
+                151
+              ],
+              "polygon": null,
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "left",
+              "part": "torso",
+              "path": "space_a/left/torso.png",
+              "sha256": "0a499937cc53e72a7d8261910fef8048d4386255dc47902e73a325fae8ae7945"
+            },
+            "head": {
+              "parent": "root",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "head",
+              "view": "left",
+              "frozen_head": "rig/common/left/head.png",
+              "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_a/left/head.png",
+              "sha256": "10d9818891690ca5c0f8bc13197ccdb7fada5068e94ee46387a4efa4592b1e95"
+            },
+            "expression_neutral": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "expression_neutral",
+              "view": "left",
+              "frozen_head": "rig/common/left/head.png",
+              "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_a/left/expression_neutral.png",
+              "sha256": "5d9e00de0489af582a4afb0a323f046ee1a561373affd943e335896e9c0efc5f"
+            },
+            "helmet_back": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "helmet_back",
+              "view": "left",
+              "frozen_head": "rig/common/left/head.png",
+              "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_a/left/helmet_back.png",
+              "sha256": "29fe63272e3b4c2dcb20be1bf6ad5c6cce0894cf2bd621e4bc1bfeefe69f799e"
+            },
+            "helmet_front": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "helmet_front",
+              "view": "left",
+              "frozen_head": "rig/common/left/head.png",
+              "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_a/left/helmet_front.png",
+              "sha256": "059804454cd8742fa01e5989e971d15939d763c586d6204b6d976559f007b8dd"
+            }
+          },
+          "sampling": {
+            "window": [
+              640,
+              0,
+              1140,
+              887
+            ],
+            "source_neck_row": 365,
+            "source_sole_row": 870,
+            "scale": 0.25346534653465347,
+            "source_neck_center_x": 266.5,
+            "paste": [
+              60,
+              3
+            ],
+            "target_neck": 96,
+            "target_sole": 224,
+            "once_per_view_source_sole_compensation_y": 0
+          }
+        },
+        "right": {
+          "parts": {
+            "forearm_hand_l": {
+              "parent": "upper_arm_l",
+              "pivot": [
+                96,
+                138
+              ],
+              "polygon": [
+                [
+                  80,
+                  131
+                ],
+                [
+                  108,
+                  131
+                ],
+                [
+                  110,
+                  167
+                ],
+                [
+                  96,
+                  180
+                ],
+                [
+                  80,
+                  170
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "right",
+              "part": "forearm_hand_l",
+              "path": "space_a/right/forearm_hand_l.png",
+              "sha256": "9d7fe45c31e8a684a8aef64655cbec871bb6c820ad3c2fa69bf1e534906deb48"
+            },
+            "forearm_hand_r": {
+              "parent": "upper_arm_r",
+              "pivot": [
+                160,
+                138
+              ],
+              "polygon": [
+                [
+                  148,
+                  131
+                ],
+                [
+                  177,
+                  131
+                ],
+                [
+                  178,
+                  171
+                ],
+                [
+                  158,
+                  180
+                ],
+                [
+                  147,
+                  156
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "right",
+              "part": "forearm_hand_r",
+              "path": "space_a/right/forearm_hand_r.png",
+              "sha256": "ee9f73cac987dd5eafd9055d28a2d91827d0a0ac6c6762fa9a1f9937edf55b9b"
+            },
+            "upper_arm_l": {
+              "parent": "torso",
+              "pivot": [
+                106,
+                107
+              ],
+              "polygon": [
+                [
+                  92,
+                  100
+                ],
+                [
+                  115,
+                  105
+                ],
+                [
+                  110,
+                  142
+                ],
+                [
+                  82,
+                  148
+                ],
+                [
+                  82,
+                  125
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "right",
+              "part": "upper_arm_l",
+              "path": "space_a/right/upper_arm_l.png",
+              "sha256": "0d6ffc8f5a4c5a16af3e6ba107e32c9805681699d948620ee7aafe7a264ddea2"
+            },
+            "upper_arm_r": {
+              "parent": "torso",
+              "pivot": [
+                150,
+                107
+              ],
+              "polygon": [
+                [
+                  141,
+                  105
+                ],
+                [
+                  165,
+                  100
+                ],
+                [
+                  177,
+                  125
+                ],
+                [
+                  180,
+                  148
+                ],
+                [
+                  150,
+                  143
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "right",
+              "part": "upper_arm_r",
+              "path": "space_a/right/upper_arm_r.png",
+              "sha256": "9567a046ba413b60b11a526c7b006c1a337c03ac895704d94f6777f6da70add4"
+            },
+            "shin_foot_l": {
+              "parent": "thigh_l",
+              "pivot": [
+                115,
+                188
+              ],
+              "polygon": [
+                [
+                  0,
+                  183
+                ],
+                [
+                  129,
+                  183
+                ],
+                [
+                  129,
+                  256
+                ],
+                [
+                  0,
+                  256
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "right",
+              "part": "shin_foot_l",
+              "path": "space_a/right/shin_foot_l.png",
+              "sha256": "015517d6e757a4b4716d5bfb7da6de5e2274c00f132f235754f3b8dcf5426aa3"
+            },
+            "shin_foot_r": {
+              "parent": "thigh_r",
+              "pivot": [
+                141,
+                188
+              ],
+              "polygon": [
+                [
+                  126,
+                  183
+                ],
+                [
+                  256,
+                  183
+                ],
+                [
+                  256,
+                  256
+                ],
+                [
+                  126,
+                  256
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "right",
+              "part": "shin_foot_r",
+              "path": "space_a/right/shin_foot_r.png",
+              "sha256": "add0f7b8dbbdac792b58bbf6e2008b8ad2e43271855f531e96d9dd41dda10a0f"
+            },
+            "thigh_l": {
+              "parent": "root",
+              "pivot": [
+                116,
+                151
+              ],
+              "polygon": [
+                [
+                  0,
+                  147
+                ],
+                [
+                  129,
+                  147
+                ],
+                [
+                  129,
+                  196
+                ],
+                [
+                  0,
+                  196
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "right",
+              "part": "thigh_l",
+              "path": "space_a/right/thigh_l.png",
+              "sha256": "acb09a199cff0263fbc258fc04ce1fd0ce0e53fb2bbe673b3239c0fd7f26f4c8"
+            },
+            "thigh_r": {
+              "parent": "root",
+              "pivot": [
+                140,
+                151
+              ],
+              "polygon": [
+                [
+                  126,
+                  147
+                ],
+                [
+                  256,
+                  147
+                ],
+                [
+                  256,
+                  196
+                ],
+                [
+                  126,
+                  196
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "right",
+              "part": "thigh_r",
+              "path": "space_a/right/thigh_r.png",
+              "sha256": "5b214e2dbe3a840d9b559729e62d2feb09322120ba9f94cd2cdb74219d68df53"
+            },
+            "utility_hose": {
+              "parent": "torso",
+              "pivot": [
+                139,
+                126
+              ],
+              "polygon": [
+                [
+                  137,
+                  125
+                ],
+                [
+                  147,
+                  128
+                ],
+                [
+                  153,
+                  139
+                ],
+                [
+                  150,
+                  152
+                ],
+                [
+                  142,
+                  149
+                ],
+                [
+                  139,
+                  139
+                ]
+              ],
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "right",
+              "part": "utility_hose",
+              "path": "space_a/right/utility_hose.png",
+              "sha256": "e0e960a0c7b274d79f29ddeaab2aa760b894fde3327bfc9f695e4526e9045ce2"
+            },
+            "torso": {
+              "parent": "root",
+              "pivot": [
+                128,
+                151
+              ],
+              "polygon": null,
+              "master_sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+              "view": "right",
+              "part": "torso",
+              "path": "space_a/right/torso.png",
+              "sha256": "577f626a120e86f699575e463c0e901af1d5c45999e8a72a141950e0f1c34909"
+            },
+            "head": {
+              "parent": "root",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "head",
+              "view": "right",
+              "frozen_head": "rig/common/right/head.png",
+              "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_a/right/head.png",
+              "sha256": "4794c45080a2b81f4c9d21942e26bba0130d0877839c42bc7d3fdb7e78342b41"
+            },
+            "expression_neutral": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "expression_neutral",
+              "view": "right",
+              "frozen_head": "rig/common/right/head.png",
+              "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_a/right/expression_neutral.png",
+              "sha256": "c089666e749d51c200e4835796c463086ff582acb8a7c5b250b0f3599291997c"
+            },
+            "helmet_back": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "helmet_back",
+              "view": "right",
+              "frozen_head": "rig/common/right/head.png",
+              "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_a/right/helmet_back.png",
+              "sha256": "29fe63272e3b4c2dcb20be1bf6ad5c6cce0894cf2bd621e4bc1bfeefe69f799e"
+            },
+            "helmet_front": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "helmet_front",
+              "view": "right",
+              "frozen_head": "rig/common/right/head.png",
+              "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_a/right/helmet_front.png",
+              "sha256": "059804454cd8742fa01e5989e971d15939d763c586d6204b6d976559f007b8dd"
+            }
+          },
+          "sampling": {
+            "window": [
+              1180,
+              0,
+              1680,
+              887
+            ],
+            "source_neck_row": 365,
+            "source_sole_row": 871,
+            "scale": 0.25296442687747034,
+            "source_neck_center_x": 229.5,
+            "paste": [
+              70,
+              4
+            ],
+            "target_neck": 96,
+            "target_sole": 224,
+            "once_per_view_source_sole_compensation_y": 0
+          }
+        }
+      }
+    },
+    "space_b": {
+      "master": "games/space/masters/space_b-three-views.png",
+      "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+      "views": {
+        "front": {
+          "parts": {
+            "forearm_hand_l": {
+              "parent": "upper_arm_l",
+              "pivot": [
+                96,
+                138
+              ],
+              "polygon": [
+                [
+                  80,
+                  131
+                ],
+                [
+                  108,
+                  131
+                ],
+                [
+                  110,
+                  167
+                ],
+                [
+                  96,
+                  180
+                ],
+                [
+                  80,
+                  170
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "front",
+              "part": "forearm_hand_l",
+              "path": "space_b/front/forearm_hand_l.png",
+              "sha256": "e84fb165a46057b9d837ac71612cc6cd171665f1b351ceee563462348fd5a558"
+            },
+            "forearm_hand_r": {
+              "parent": "upper_arm_r",
+              "pivot": [
+                160,
+                138
+              ],
+              "polygon": [
+                [
+                  148,
+                  131
+                ],
+                [
+                  177,
+                  131
+                ],
+                [
+                  178,
+                  171
+                ],
+                [
+                  158,
+                  180
+                ],
+                [
+                  147,
+                  156
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "front",
+              "part": "forearm_hand_r",
+              "path": "space_b/front/forearm_hand_r.png",
+              "sha256": "bbfb929f7e906457420949c6103ab877f773262d4eabecf2134bd60b09f6049c"
+            },
+            "upper_arm_l": {
+              "parent": "torso",
+              "pivot": [
+                106,
+                107
+              ],
+              "polygon": [
+                [
+                  92,
+                  100
+                ],
+                [
+                  115,
+                  105
+                ],
+                [
+                  110,
+                  142
+                ],
+                [
+                  82,
+                  148
+                ],
+                [
+                  82,
+                  125
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "front",
+              "part": "upper_arm_l",
+              "path": "space_b/front/upper_arm_l.png",
+              "sha256": "caf89c9dca430faec5ba0d0e03a3691a25a9faa1b58522ef6789cf44181f9a36"
+            },
+            "upper_arm_r": {
+              "parent": "torso",
+              "pivot": [
+                150,
+                107
+              ],
+              "polygon": [
+                [
+                  141,
+                  105
+                ],
+                [
+                  165,
+                  100
+                ],
+                [
+                  177,
+                  125
+                ],
+                [
+                  180,
+                  148
+                ],
+                [
+                  150,
+                  143
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "front",
+              "part": "upper_arm_r",
+              "path": "space_b/front/upper_arm_r.png",
+              "sha256": "e639fe1a4e099de923c810d7b4f2ae38454ce04e3aa3b88d37289eaac12545d1"
+            },
+            "shin_foot_l": {
+              "parent": "thigh_l",
+              "pivot": [
+                115,
+                188
+              ],
+              "polygon": [
+                [
+                  0,
+                  183
+                ],
+                [
+                  129,
+                  183
+                ],
+                [
+                  129,
+                  256
+                ],
+                [
+                  0,
+                  256
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "front",
+              "part": "shin_foot_l",
+              "path": "space_b/front/shin_foot_l.png",
+              "sha256": "08885f08f5c9e773ebda2128e5dd8304260ce5b00bfad54858e5dc998f478fab"
+            },
+            "shin_foot_r": {
+              "parent": "thigh_r",
+              "pivot": [
+                141,
+                188
+              ],
+              "polygon": [
+                [
+                  126,
+                  183
+                ],
+                [
+                  256,
+                  183
+                ],
+                [
+                  256,
+                  256
+                ],
+                [
+                  126,
+                  256
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "front",
+              "part": "shin_foot_r",
+              "path": "space_b/front/shin_foot_r.png",
+              "sha256": "f7afa92762bfedb762f674495e89a61b5251e01fe374585e457b8b7e284ef120"
+            },
+            "thigh_l": {
+              "parent": "root",
+              "pivot": [
+                116,
+                151
+              ],
+              "polygon": [
+                [
+                  0,
+                  147
+                ],
+                [
+                  129,
+                  147
+                ],
+                [
+                  129,
+                  196
+                ],
+                [
+                  0,
+                  196
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "front",
+              "part": "thigh_l",
+              "path": "space_b/front/thigh_l.png",
+              "sha256": "bb5e98a845502a5d05558669e20d806efc0ef4af1c51ae9aa063be70bf6ba679"
+            },
+            "thigh_r": {
+              "parent": "root",
+              "pivot": [
+                140,
+                151
+              ],
+              "polygon": [
+                [
+                  126,
+                  147
+                ],
+                [
+                  256,
+                  147
+                ],
+                [
+                  256,
+                  196
+                ],
+                [
+                  126,
+                  196
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "front",
+              "part": "thigh_r",
+              "path": "space_b/front/thigh_r.png",
+              "sha256": "7fc7327c8fab1d6807621fa5e3bc73e3501c654239a6db3e4aa2756b34d995aa"
+            },
+            "utility_hose": {
+              "parent": "torso",
+              "pivot": [
+                139,
+                126
+              ],
+              "polygon": [
+                [
+                  137,
+                  125
+                ],
+                [
+                  147,
+                  128
+                ],
+                [
+                  153,
+                  139
+                ],
+                [
+                  150,
+                  152
+                ],
+                [
+                  142,
+                  149
+                ],
+                [
+                  139,
+                  139
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "front",
+              "part": "utility_hose",
+              "path": "space_b/front/utility_hose.png",
+              "sha256": "bf5931c7d42d1b6c5e3fae40b9e9a5fc1511c835eacfbd4ba5ca0d796ea4274e"
+            },
+            "torso": {
+              "parent": "root",
+              "pivot": [
+                128,
+                151
+              ],
+              "polygon": null,
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "front",
+              "part": "torso",
+              "path": "space_b/front/torso.png",
+              "sha256": "2d5036f4415bf526627dcb460f0d9bf4d3f3dcbad721f52595b5d73fd1ea9bef"
+            },
+            "head": {
+              "parent": "root",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "head",
+              "view": "front",
+              "frozen_head": "rig/common/front/head.png",
+              "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_b/front/head.png",
+              "sha256": "567c9333c9c5e105f1254e1c14b571e3509b4ee9c8339b32e0cfe2645809d5ee"
+            },
+            "expression_neutral": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "expression_neutral",
+              "view": "front",
+              "frozen_head": "rig/common/front/head.png",
+              "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_b/front/expression_neutral.png",
+              "sha256": "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+            },
+            "helmet_back": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "helmet_back",
+              "view": "front",
+              "frozen_head": "rig/common/front/head.png",
+              "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_b/front/helmet_back.png",
+              "sha256": "29fe63272e3b4c2dcb20be1bf6ad5c6cce0894cf2bd621e4bc1bfeefe69f799e"
+            },
+            "helmet_front": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "helmet_front",
+              "view": "front",
+              "frozen_head": "rig/common/front/head.png",
+              "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_b/front/helmet_front.png",
+              "sha256": "059804454cd8742fa01e5989e971d15939d763c586d6204b6d976559f007b8dd"
+            }
+          },
+          "sampling": {
+            "window": [
+              130,
+              0,
+              620,
+              887
+            ],
+            "source_neck_row": 338,
+            "source_sole_row": 850,
+            "scale": 0.25,
+            "source_neck_center_x": 219.0,
+            "paste": [
+              73,
+              12
+            ],
+            "target_neck": 96,
+            "target_sole": 224,
+            "once_per_view_source_sole_compensation_y": -1
+          }
+        },
+        "left": {
+          "parts": {
+            "forearm_hand_l": {
+              "parent": "upper_arm_l",
+              "pivot": [
+                96,
+                138
+              ],
+              "polygon": [
+                [
+                  80,
+                  131
+                ],
+                [
+                  108,
+                  131
+                ],
+                [
+                  110,
+                  167
+                ],
+                [
+                  96,
+                  180
+                ],
+                [
+                  80,
+                  170
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "left",
+              "part": "forearm_hand_l",
+              "path": "space_b/left/forearm_hand_l.png",
+              "sha256": "b6d596b5acc68bacc6f3f98d1f4222741f8d62b9bd21c4af3fb2fbe2da880a7a"
+            },
+            "forearm_hand_r": {
+              "parent": "upper_arm_r",
+              "pivot": [
+                160,
+                138
+              ],
+              "polygon": [
+                [
+                  148,
+                  131
+                ],
+                [
+                  177,
+                  131
+                ],
+                [
+                  178,
+                  171
+                ],
+                [
+                  158,
+                  180
+                ],
+                [
+                  147,
+                  156
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "left",
+              "part": "forearm_hand_r",
+              "path": "space_b/left/forearm_hand_r.png",
+              "sha256": "13b0dac082134dfc22d946119e680d4f16318718221466f61a8a95cba01b403d"
+            },
+            "upper_arm_l": {
+              "parent": "torso",
+              "pivot": [
+                106,
+                107
+              ],
+              "polygon": [
+                [
+                  92,
+                  100
+                ],
+                [
+                  115,
+                  105
+                ],
+                [
+                  110,
+                  142
+                ],
+                [
+                  82,
+                  148
+                ],
+                [
+                  82,
+                  125
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "left",
+              "part": "upper_arm_l",
+              "path": "space_b/left/upper_arm_l.png",
+              "sha256": "134592857feb1495f45b10e45bf81e3cca5cfdcf5aa276c6607136ece88b7621"
+            },
+            "upper_arm_r": {
+              "parent": "torso",
+              "pivot": [
+                150,
+                107
+              ],
+              "polygon": [
+                [
+                  141,
+                  105
+                ],
+                [
+                  165,
+                  100
+                ],
+                [
+                  177,
+                  125
+                ],
+                [
+                  180,
+                  148
+                ],
+                [
+                  150,
+                  143
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "left",
+              "part": "upper_arm_r",
+              "path": "space_b/left/upper_arm_r.png",
+              "sha256": "b947f43ab882f2ef1d319e6500fd26a63a04f5fd56ae3360308bfe2fdd0c987e"
+            },
+            "shin_foot_l": {
+              "parent": "thigh_l",
+              "pivot": [
+                115,
+                188
+              ],
+              "polygon": [
+                [
+                  0,
+                  183
+                ],
+                [
+                  129,
+                  183
+                ],
+                [
+                  129,
+                  256
+                ],
+                [
+                  0,
+                  256
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "left",
+              "part": "shin_foot_l",
+              "path": "space_b/left/shin_foot_l.png",
+              "sha256": "e6b99f2773432bbdc3f9d312812ce5dde85860d88589432b5d34531120238915"
+            },
+            "shin_foot_r": {
+              "parent": "thigh_r",
+              "pivot": [
+                141,
+                188
+              ],
+              "polygon": [
+                [
+                  126,
+                  183
+                ],
+                [
+                  256,
+                  183
+                ],
+                [
+                  256,
+                  256
+                ],
+                [
+                  126,
+                  256
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "left",
+              "part": "shin_foot_r",
+              "path": "space_b/left/shin_foot_r.png",
+              "sha256": "5152b89a72792778eac5e4c10e02174ab1f1fec70a2c22640927c8c4008e4b16"
+            },
+            "thigh_l": {
+              "parent": "root",
+              "pivot": [
+                116,
+                151
+              ],
+              "polygon": [
+                [
+                  0,
+                  147
+                ],
+                [
+                  129,
+                  147
+                ],
+                [
+                  129,
+                  196
+                ],
+                [
+                  0,
+                  196
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "left",
+              "part": "thigh_l",
+              "path": "space_b/left/thigh_l.png",
+              "sha256": "b7650c8b82bf01ad6f094cc10880a64589a8c3e3748d28339f612aa77ed354ab"
+            },
+            "thigh_r": {
+              "parent": "root",
+              "pivot": [
+                140,
+                151
+              ],
+              "polygon": [
+                [
+                  126,
+                  147
+                ],
+                [
+                  256,
+                  147
+                ],
+                [
+                  256,
+                  196
+                ],
+                [
+                  126,
+                  196
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "left",
+              "part": "thigh_r",
+              "path": "space_b/left/thigh_r.png",
+              "sha256": "9b6db8aabb85ac6dedede0144125c0a9683bded5a0ebd2480ec018adf10e9065"
+            },
+            "utility_hose": {
+              "parent": "torso",
+              "pivot": [
+                139,
+                126
+              ],
+              "polygon": [
+                [
+                  137,
+                  125
+                ],
+                [
+                  147,
+                  128
+                ],
+                [
+                  153,
+                  139
+                ],
+                [
+                  150,
+                  152
+                ],
+                [
+                  142,
+                  149
+                ],
+                [
+                  139,
+                  139
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "left",
+              "part": "utility_hose",
+              "path": "space_b/left/utility_hose.png",
+              "sha256": "7b5f777e038c5369a19f26b74ef736393b5ec81cf7fa75c984d5659eddf82fbf"
+            },
+            "torso": {
+              "parent": "root",
+              "pivot": [
+                128,
+                151
+              ],
+              "polygon": null,
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "left",
+              "part": "torso",
+              "path": "space_b/left/torso.png",
+              "sha256": "d746b0afb5cff28ff2cf3ea4d1ebb641022dc7c2f245d8061a63e8f270eb27f9"
+            },
+            "head": {
+              "parent": "root",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "head",
+              "view": "left",
+              "frozen_head": "rig/common/left/head.png",
+              "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_b/left/head.png",
+              "sha256": "10d9818891690ca5c0f8bc13197ccdb7fada5068e94ee46387a4efa4592b1e95"
+            },
+            "expression_neutral": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "expression_neutral",
+              "view": "left",
+              "frozen_head": "rig/common/left/head.png",
+              "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_b/left/expression_neutral.png",
+              "sha256": "5d9e00de0489af582a4afb0a323f046ee1a561373affd943e335896e9c0efc5f"
+            },
+            "helmet_back": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "helmet_back",
+              "view": "left",
+              "frozen_head": "rig/common/left/head.png",
+              "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_b/left/helmet_back.png",
+              "sha256": "29fe63272e3b4c2dcb20be1bf6ad5c6cce0894cf2bd621e4bc1bfeefe69f799e"
+            },
+            "helmet_front": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "helmet_front",
+              "view": "left",
+              "frozen_head": "rig/common/left/head.png",
+              "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_b/left/helmet_front.png",
+              "sha256": "059804454cd8742fa01e5989e971d15939d763c586d6204b6d976559f007b8dd"
+            }
+          },
+          "sampling": {
+            "window": [
+              640,
+              0,
+              1140,
+              887
+            ],
+            "source_neck_row": 338,
+            "source_sole_row": 855,
+            "scale": 0.24758220502901354,
+            "source_neck_center_x": 252.0,
+            "paste": [
+              66,
+              12
+            ],
+            "target_neck": 96,
+            "target_sole": 224,
+            "once_per_view_source_sole_compensation_y": 0
+          }
+        },
+        "right": {
+          "parts": {
+            "forearm_hand_l": {
+              "parent": "upper_arm_l",
+              "pivot": [
+                96,
+                138
+              ],
+              "polygon": [
+                [
+                  80,
+                  131
+                ],
+                [
+                  108,
+                  131
+                ],
+                [
+                  110,
+                  167
+                ],
+                [
+                  96,
+                  180
+                ],
+                [
+                  80,
+                  170
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "right",
+              "part": "forearm_hand_l",
+              "path": "space_b/right/forearm_hand_l.png",
+              "sha256": "fac9c9a3e871da19aa5bc197dc3cc96e78c0e894258217cc09af9f34549e8d13"
+            },
+            "forearm_hand_r": {
+              "parent": "upper_arm_r",
+              "pivot": [
+                160,
+                138
+              ],
+              "polygon": [
+                [
+                  148,
+                  131
+                ],
+                [
+                  177,
+                  131
+                ],
+                [
+                  178,
+                  171
+                ],
+                [
+                  158,
+                  180
+                ],
+                [
+                  147,
+                  156
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "right",
+              "part": "forearm_hand_r",
+              "path": "space_b/right/forearm_hand_r.png",
+              "sha256": "42a6c805848e806f33c0dcbef9e2bc1583c05c27c26dc7d58543203392ccb438"
+            },
+            "upper_arm_l": {
+              "parent": "torso",
+              "pivot": [
+                106,
+                107
+              ],
+              "polygon": [
+                [
+                  92,
+                  100
+                ],
+                [
+                  115,
+                  105
+                ],
+                [
+                  110,
+                  142
+                ],
+                [
+                  82,
+                  148
+                ],
+                [
+                  82,
+                  125
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "right",
+              "part": "upper_arm_l",
+              "path": "space_b/right/upper_arm_l.png",
+              "sha256": "23e7077f73c89a7eeb4d644fcf60f6a0d77988175d9e81aff81dde6c57b5e74b"
+            },
+            "upper_arm_r": {
+              "parent": "torso",
+              "pivot": [
+                150,
+                107
+              ],
+              "polygon": [
+                [
+                  141,
+                  105
+                ],
+                [
+                  165,
+                  100
+                ],
+                [
+                  177,
+                  125
+                ],
+                [
+                  180,
+                  148
+                ],
+                [
+                  150,
+                  143
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "right",
+              "part": "upper_arm_r",
+              "path": "space_b/right/upper_arm_r.png",
+              "sha256": "29a0f15ce59b2a506614b1429c09a821ed7bf3e51f83f0103c16b894897ec67b"
+            },
+            "shin_foot_l": {
+              "parent": "thigh_l",
+              "pivot": [
+                115,
+                188
+              ],
+              "polygon": [
+                [
+                  0,
+                  183
+                ],
+                [
+                  129,
+                  183
+                ],
+                [
+                  129,
+                  256
+                ],
+                [
+                  0,
+                  256
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "right",
+              "part": "shin_foot_l",
+              "path": "space_b/right/shin_foot_l.png",
+              "sha256": "0d2acf448ef60dbc33dd11fa5e5d4520ef64536957f1ea52b581c42387036fff"
+            },
+            "shin_foot_r": {
+              "parent": "thigh_r",
+              "pivot": [
+                141,
+                188
+              ],
+              "polygon": [
+                [
+                  126,
+                  183
+                ],
+                [
+                  256,
+                  183
+                ],
+                [
+                  256,
+                  256
+                ],
+                [
+                  126,
+                  256
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "right",
+              "part": "shin_foot_r",
+              "path": "space_b/right/shin_foot_r.png",
+              "sha256": "dbae7c6e31ae1c18b8889c9bb514e12310a331ec4889bb7431fe5f4db1a44aff"
+            },
+            "thigh_l": {
+              "parent": "root",
+              "pivot": [
+                116,
+                151
+              ],
+              "polygon": [
+                [
+                  0,
+                  147
+                ],
+                [
+                  129,
+                  147
+                ],
+                [
+                  129,
+                  196
+                ],
+                [
+                  0,
+                  196
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "right",
+              "part": "thigh_l",
+              "path": "space_b/right/thigh_l.png",
+              "sha256": "be67f4210180a8fa542ab8cfa2c8aca0431b21de00ba6c1cdfb4eac4f8a8cd56"
+            },
+            "thigh_r": {
+              "parent": "root",
+              "pivot": [
+                140,
+                151
+              ],
+              "polygon": [
+                [
+                  126,
+                  147
+                ],
+                [
+                  256,
+                  147
+                ],
+                [
+                  256,
+                  196
+                ],
+                [
+                  126,
+                  196
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "right",
+              "part": "thigh_r",
+              "path": "space_b/right/thigh_r.png",
+              "sha256": "7ba960f595f8d96f567da0278c97d7055e162312902d2ba484da5aa4f812701f"
+            },
+            "utility_hose": {
+              "parent": "torso",
+              "pivot": [
+                139,
+                126
+              ],
+              "polygon": [
+                [
+                  137,
+                  125
+                ],
+                [
+                  147,
+                  128
+                ],
+                [
+                  153,
+                  139
+                ],
+                [
+                  150,
+                  152
+                ],
+                [
+                  142,
+                  149
+                ],
+                [
+                  139,
+                  139
+                ]
+              ],
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "right",
+              "part": "utility_hose",
+              "path": "space_b/right/utility_hose.png",
+              "sha256": "062f203e03a12d5a2f74e767d4a1c3c009a6cd1a650f5393a6ab674e1f61580c"
+            },
+            "torso": {
+              "parent": "root",
+              "pivot": [
+                128,
+                151
+              ],
+              "polygon": null,
+              "master_sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+              "view": "right",
+              "part": "torso",
+              "path": "space_b/right/torso.png",
+              "sha256": "872bd5f4f0347ca9150e345b022b9c9f87ad4ddc476b37af0902759bbca4f2dd"
+            },
+            "head": {
+              "parent": "root",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "head",
+              "view": "right",
+              "frozen_head": "rig/common/right/head.png",
+              "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_b/right/head.png",
+              "sha256": "4794c45080a2b81f4c9d21942e26bba0130d0877839c42bc7d3fdb7e78342b41"
+            },
+            "expression_neutral": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "expression_neutral",
+              "view": "right",
+              "frozen_head": "rig/common/right/head.png",
+              "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_b/right/expression_neutral.png",
+              "sha256": "c089666e749d51c200e4835796c463086ff582acb8a7c5b250b0f3599291997c"
+            },
+            "helmet_back": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "helmet_back",
+              "view": "right",
+              "frozen_head": "rig/common/right/head.png",
+              "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_b/right/helmet_back.png",
+              "sha256": "29fe63272e3b4c2dcb20be1bf6ad5c6cce0894cf2bd621e4bc1bfeefe69f799e"
+            },
+            "helmet_front": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "helmet_front",
+              "view": "right",
+              "frozen_head": "rig/common/right/head.png",
+              "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "space_b/right/helmet_front.png",
+              "sha256": "059804454cd8742fa01e5989e971d15939d763c586d6204b6d976559f007b8dd"
+            }
+          },
+          "sampling": {
+            "window": [
+              1180,
+              0,
+              1680,
+              887
+            ],
+            "source_neck_row": 338,
+            "source_sole_row": 855,
+            "scale": 0.24758220502901354,
+            "source_neck_center_x": 208.0,
+            "paste": [
+              77,
+              12
+            ],
+            "target_neck": 96,
+            "target_sole": 224,
+            "once_per_view_source_sole_compensation_y": 0
+          }
+        }
+      }
+    }
+  },
+  "mirror_allowed": false,
+  "helmet_policy": "separate binary line/highlight equipment layers, clear interior; no tinted or semitransparent full glass pane",
+  "head_policy": "frozen common front/left/right head and expression source pixels, integral translation only"
+}

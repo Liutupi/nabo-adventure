@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_icon_fuel__p0",
   "width": 16,
   "height": 16,
@@ -16,7 +16,7 @@
   "keys": [
     0
   ],
-  "data_bytes": 186,
+  "data_bytes": 177,
   "table_bytes": 82,
   "frame_sha256": [
     "4469fcd99fc8de0f6e2e50282906f979827b7c3819a63d8c31abdedbfd05e3cf"
@@ -39,5 +39,15 @@
       "sha256": "1939d939fed173896c0c461c50022b00b63ad37196e6842edb4cb1563536a0eb"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/icon/fuel",
+      "logical_symbol": "adv_assets_static_icon_fuel__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

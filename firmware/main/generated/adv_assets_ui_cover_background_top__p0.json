@@ -1,22 +1,15 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_cover_background_top__p0",
   "width": 240,
   "height": 256,
   "palette_rgb565": [
     0,
     8649,
-    15375,
     17298,
-    29514,
-    40276,
-    44173,
     45672,
     48007,
-    50577,
     54567,
-    59061,
-    63185,
     65433,
     65502
   ],
@@ -25,13 +18,13 @@
   "keys": [
     0
   ],
-  "data_bytes": 9196,
-  "table_bytes": 1060,
+  "data_bytes": 1432,
+  "table_bytes": 1046,
   "frame_sha256": [
-    "dd7a7c4540bfde624974044b39c766cb65ba0f9fee85ce92e3845d6b44682dd0"
+    "7cf75890b2b070b22ba3b154dcf7e29e8b2865f70e5a8cbdb33b4bf8e04f38fd"
   ],
   "source_sha256": [
-    "91da4492b4e2efb4d3f577ed7296ea485c1d1e8e037808ecc6ad9b1cc3546214"
+    "bfa5700653f20bcd4457fec72121f36b7c1edb7320ffe385b97fe4658833363d"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -45,8 +38,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\cover-background-top.png",
-      "sha256": "62d9799d9ba0e63310dfd8a8832499a6423e27b90143e056e0893c904bc5398b"
+      "sha256": "a48250308b755690963233360047009591f526d8d8ac210c3094766a62ae0fac"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/cover-background-top",
+      "logical_symbol": "adv_assets_ui_cover_background_top__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

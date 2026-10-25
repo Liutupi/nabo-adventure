@@ -1,24 +1,25 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_labels_boot_caption__p0",
   "width": 220,
   "height": 24,
   "palette_rgb565": [
     0,
-    8649
+    8649,
+    38099
   ],
   "background_rgb888": null,
   "key_interval": 8,
   "keys": [
     0
   ],
-  "data_bytes": 1056,
-  "table_bytes": 106,
+  "data_bytes": 829,
+  "table_bytes": 108,
   "frame_sha256": [
-    "482e466f22b88bafae16a870e2b66cc297319090672b2fbb43ef13260e165b95"
+    "9fc1e7e7dc2e154f96bf2123fb8d92e658e3af48b8700a4bf4a5f7ff50c47f45"
   ],
   "source_sha256": [
-    "53822491ab0c7b97a1645d88db3dd3f6f30c017b9ccb8c3a6c04c218757c0ce2"
+    "2e4fd7172f265866f44678b0f3baffc60c1ddd6bbb3224fc494706ccd2c6c63c"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,8 +33,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\labels\\boot-caption.png",
-      "sha256": "34d99c5f2005a4447252cae415a8e5dbe2c08c63650da14e33eacda2bb354a7f"
+      "sha256": "6af62457ae0012eda92b53e8a14ea1625b20c8251944434db6f0b38110139d14"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/labels/boot-caption",
+      "logical_symbol": "adv_assets_ui_labels_boot_caption__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

@@ -1,0 +1,2204 @@
+{
+  "canvas": [
+    256,
+    256
+  ],
+  "anchor": [
+    128,
+    224
+  ],
+  "draw_order": [
+    "backpack",
+    "thigh_l",
+    "shin_foot_l",
+    "thigh_r",
+    "shin_foot_r",
+    "upper_arm_l",
+    "forearm_hand_l",
+    "upper_arm_r",
+    "forearm_hand_r",
+    "torso",
+    "jacket_flap",
+    "head",
+    "expression_neutral"
+  ],
+  "skins": {
+    "climb_a": {
+      "master": "games/climb/masters/climb_a-three-views.png",
+      "master_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+      "views": {
+        "front": {
+          "parts": {
+            "backpack": {
+              "parent": "root",
+              "pivot": [
+                128,
+                135
+              ],
+              "path": "climb_a/front/backpack.png",
+              "sha256": "4d82407359faf2a16c84d7709ad2eea9eba72dd2dc77b4e2d43df7cdf49f6f25"
+            },
+            "forearm_hand_l": {
+              "parent": "upper_arm_l",
+              "pivot": [
+                97,
+                138
+              ],
+              "polygon": [
+                [
+                  82,
+                  132
+                ],
+                [
+                  108,
+                  132
+                ],
+                [
+                  110,
+                  162
+                ],
+                [
+                  98,
+                  174
+                ],
+                [
+                  82,
+                  169
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "forearm_hand_l",
+              "view": "front",
+              "path": "climb_a/front/forearm_hand_l.png",
+              "sha256": "1ab3afe526463abe4d452e8936b18c14464e20ca1ac23496c6675b7bb2bb61c3"
+            },
+            "forearm_hand_r": {
+              "parent": "upper_arm_r",
+              "pivot": [
+                161,
+                138
+              ],
+              "polygon": [
+                [
+                  149,
+                  132
+                ],
+                [
+                  178,
+                  131
+                ],
+                [
+                  178,
+                  170
+                ],
+                [
+                  155,
+                  174
+                ],
+                [
+                  148,
+                  151
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "forearm_hand_r",
+              "view": "front",
+              "path": "climb_a/front/forearm_hand_r.png",
+              "sha256": "4fb9906165a7c405ea35c4a97ce32789f3a2792952203383343645259bf67efe"
+            },
+            "upper_arm_l": {
+              "parent": "torso",
+              "pivot": [
+                106,
+                107
+              ],
+              "polygon": [
+                [
+                  95,
+                  100
+                ],
+                [
+                  114,
+                  104
+                ],
+                [
+                  109,
+                  143
+                ],
+                [
+                  84,
+                  146
+                ],
+                [
+                  85,
+                  123
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "upper_arm_l",
+              "view": "front",
+              "path": "climb_a/front/upper_arm_l.png",
+              "sha256": "52a8f319b6b169f9aadaee4d8a9b6efbb5cf1199fd2a1ab3b8f2aa7a80e660ef"
+            },
+            "upper_arm_r": {
+              "parent": "torso",
+              "pivot": [
+                150,
+                107
+              ],
+              "polygon": [
+                [
+                  143,
+                  104
+                ],
+                [
+                  163,
+                  100
+                ],
+                [
+                  175,
+                  124
+                ],
+                [
+                  178,
+                  146
+                ],
+                [
+                  151,
+                  146
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "upper_arm_r",
+              "view": "front",
+              "path": "climb_a/front/upper_arm_r.png",
+              "sha256": "bc148a763659d06e92b62c678a4fe4d9696bbf8be7e8beeb523a69a669ebb554"
+            },
+            "shin_foot_l": {
+              "parent": "thigh_l",
+              "pivot": [
+                115,
+                194
+              ],
+              "polygon": [
+                [
+                  0,
+                  189
+                ],
+                [
+                  129,
+                  189
+                ],
+                [
+                  129,
+                  256
+                ],
+                [
+                  0,
+                  256
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "shin_foot_l",
+              "view": "front",
+              "path": "climb_a/front/shin_foot_l.png",
+              "sha256": "46eef60417f19e40fce71720ff616dc18960fb5be77c237d42f6eb0b5f929965"
+            },
+            "shin_foot_r": {
+              "parent": "thigh_r",
+              "pivot": [
+                141,
+                194
+              ],
+              "polygon": [
+                [
+                  126,
+                  189
+                ],
+                [
+                  256,
+                  189
+                ],
+                [
+                  256,
+                  256
+                ],
+                [
+                  126,
+                  256
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "shin_foot_r",
+              "view": "front",
+              "path": "climb_a/front/shin_foot_r.png",
+              "sha256": "c24a57fd38753d63759912b32436640e5129fc3dc3fda7377bf8fd17ed59c8e5"
+            },
+            "thigh_l": {
+              "parent": "root",
+              "pivot": [
+                116,
+                165
+              ],
+              "polygon": [
+                [
+                  0,
+                  161
+                ],
+                [
+                  129,
+                  161
+                ],
+                [
+                  129,
+                  201
+                ],
+                [
+                  0,
+                  201
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "thigh_l",
+              "view": "front",
+              "path": "climb_a/front/thigh_l.png",
+              "sha256": "5c9d85630087e6b9e2c75eba88524f064bcf7bf5fc7b9f26182cbb8f16f58631"
+            },
+            "thigh_r": {
+              "parent": "root",
+              "pivot": [
+                140,
+                165
+              ],
+              "polygon": [
+                [
+                  126,
+                  161
+                ],
+                [
+                  256,
+                  161
+                ],
+                [
+                  256,
+                  201
+                ],
+                [
+                  126,
+                  201
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "thigh_r",
+              "view": "front",
+              "path": "climb_a/front/thigh_r.png",
+              "sha256": "6e62d7d2d3b0e2b08c849b9c164269797af2f5088ca156b2c54ba84858e72441"
+            },
+            "jacket_flap": {
+              "parent": "torso",
+              "pivot": [
+                108,
+                150
+              ],
+              "polygon": [
+                [
+                  98,
+                  147
+                ],
+                [
+                  112,
+                  147
+                ],
+                [
+                  113,
+                  164
+                ],
+                [
+                  98,
+                  164
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "jacket_flap",
+              "view": "front",
+              "path": "climb_a/front/jacket_flap.png",
+              "sha256": "71d6ed16125db23bc065aaaf569bb970fec3bfe75e59133f87aeaece9a30ac8b"
+            },
+            "torso": {
+              "parent": "root",
+              "pivot": [
+                128,
+                165
+              ],
+              "polygon": null,
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "torso",
+              "view": "front",
+              "path": "climb_a/front/torso.png",
+              "sha256": "3642cfba951e7356870aa41c34963de0b5ab8dfdfbf9de65166ef90a3bb50d9b"
+            },
+            "head": {
+              "parent": "root",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "head",
+              "view": "front",
+              "frozen_head": "rig/common/front/head.png",
+              "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "climb_a/front/head.png",
+              "sha256": "567c9333c9c5e105f1254e1c14b571e3509b4ee9c8339b32e0cfe2645809d5ee"
+            },
+            "expression_neutral": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "expression_neutral",
+              "view": "front",
+              "frozen_head": "rig/common/front/head.png",
+              "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "climb_a/front/expression_neutral.png",
+              "sha256": "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+            }
+          },
+          "sampling": {
+            "window": [
+              140,
+              0,
+              620,
+              887
+            ],
+            "core_bbox": [
+              37,
+              20,
+              398,
+              851
+            ],
+            "scale": 0.2503008423586041,
+            "paste": [
+              82,
+              15
+            ]
+          }
+        },
+        "left": {
+          "parts": {
+            "backpack": {
+              "parent": "root",
+              "pivot": [
+                128,
+                135
+              ],
+              "path": "climb_a/left/backpack.png",
+              "sha256": "3d0e785d8b8e5e063c41e0cfb5b76a6d03d7d8e77264c1320187218ee30abebb"
+            },
+            "forearm_hand_l": {
+              "parent": "upper_arm_l",
+              "pivot": [
+                97,
+                138
+              ],
+              "polygon": [
+                [
+                  82,
+                  132
+                ],
+                [
+                  108,
+                  132
+                ],
+                [
+                  110,
+                  162
+                ],
+                [
+                  98,
+                  174
+                ],
+                [
+                  82,
+                  169
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "forearm_hand_l",
+              "view": "left",
+              "path": "climb_a/left/forearm_hand_l.png",
+              "sha256": "079970357daf41f7de2fa824868cf439f26b0b372bfae5ccc6cacac236dc7cf5"
+            },
+            "forearm_hand_r": {
+              "parent": "upper_arm_r",
+              "pivot": [
+                161,
+                138
+              ],
+              "polygon": [
+                [
+                  149,
+                  132
+                ],
+                [
+                  178,
+                  131
+                ],
+                [
+                  178,
+                  170
+                ],
+                [
+                  155,
+                  174
+                ],
+                [
+                  148,
+                  151
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "forearm_hand_r",
+              "view": "left",
+              "path": "climb_a/left/forearm_hand_r.png",
+              "sha256": "d0cc961aeabbf6861324dee0119d6b06898f5703119f2c70d397933e54d88d5f"
+            },
+            "upper_arm_l": {
+              "parent": "torso",
+              "pivot": [
+                106,
+                107
+              ],
+              "polygon": [
+                [
+                  95,
+                  100
+                ],
+                [
+                  114,
+                  104
+                ],
+                [
+                  109,
+                  143
+                ],
+                [
+                  84,
+                  146
+                ],
+                [
+                  85,
+                  123
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "upper_arm_l",
+              "view": "left",
+              "path": "climb_a/left/upper_arm_l.png",
+              "sha256": "dbe42446308bbb2879fca58c7440e9c39f1c33a70c99c157361249432e8f9c10"
+            },
+            "upper_arm_r": {
+              "parent": "torso",
+              "pivot": [
+                150,
+                107
+              ],
+              "polygon": [
+                [
+                  143,
+                  104
+                ],
+                [
+                  163,
+                  100
+                ],
+                [
+                  175,
+                  124
+                ],
+                [
+                  178,
+                  146
+                ],
+                [
+                  151,
+                  146
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "upper_arm_r",
+              "view": "left",
+              "path": "climb_a/left/upper_arm_r.png",
+              "sha256": "53ab914156ae360d6562e3a5af80d76b2df5777aae1a925005d7e8428f96a91f"
+            },
+            "shin_foot_l": {
+              "parent": "thigh_l",
+              "pivot": [
+                115,
+                194
+              ],
+              "polygon": [
+                [
+                  0,
+                  189
+                ],
+                [
+                  129,
+                  189
+                ],
+                [
+                  129,
+                  256
+                ],
+                [
+                  0,
+                  256
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "shin_foot_l",
+              "view": "left",
+              "path": "climb_a/left/shin_foot_l.png",
+              "sha256": "562e52a9dc916e2d4791c8947c75762a3509dee1e6ede05e4436d25f7bce8d42"
+            },
+            "shin_foot_r": {
+              "parent": "thigh_r",
+              "pivot": [
+                141,
+                194
+              ],
+              "polygon": [
+                [
+                  126,
+                  189
+                ],
+                [
+                  256,
+                  189
+                ],
+                [
+                  256,
+                  256
+                ],
+                [
+                  126,
+                  256
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "shin_foot_r",
+              "view": "left",
+              "path": "climb_a/left/shin_foot_r.png",
+              "sha256": "80431f18c14d71de26c1596124cda9e10ee0a5e65a35d78e0139d7115c605ded"
+            },
+            "thigh_l": {
+              "parent": "root",
+              "pivot": [
+                116,
+                165
+              ],
+              "polygon": [
+                [
+                  0,
+                  161
+                ],
+                [
+                  129,
+                  161
+                ],
+                [
+                  129,
+                  201
+                ],
+                [
+                  0,
+                  201
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "thigh_l",
+              "view": "left",
+              "path": "climb_a/left/thigh_l.png",
+              "sha256": "360fc9f4eaf35638d4cee19080d550afe40055f0fe7a3923bed83adf62494ee9"
+            },
+            "thigh_r": {
+              "parent": "root",
+              "pivot": [
+                140,
+                165
+              ],
+              "polygon": [
+                [
+                  126,
+                  161
+                ],
+                [
+                  256,
+                  161
+                ],
+                [
+                  256,
+                  201
+                ],
+                [
+                  126,
+                  201
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "thigh_r",
+              "view": "left",
+              "path": "climb_a/left/thigh_r.png",
+              "sha256": "60e29feb94eb2853951f916d6c4ce9fa8e77e3be58e896ff6cf3acbc1166154b"
+            },
+            "jacket_flap": {
+              "parent": "torso",
+              "pivot": [
+                108,
+                150
+              ],
+              "polygon": [
+                [
+                  98,
+                  147
+                ],
+                [
+                  112,
+                  147
+                ],
+                [
+                  113,
+                  164
+                ],
+                [
+                  98,
+                  164
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "jacket_flap",
+              "view": "left",
+              "path": "climb_a/left/jacket_flap.png",
+              "sha256": "fbe6f08842f56738ea353fad8172cd7609ce5d8a4cea14839c18b4290c3ff7ca"
+            },
+            "torso": {
+              "parent": "root",
+              "pivot": [
+                128,
+                165
+              ],
+              "polygon": null,
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "torso",
+              "view": "left",
+              "path": "climb_a/left/torso.png",
+              "sha256": "deef501330f67da2907f09da9d858fb923cddf07dbfca0d380275f659ddaf92b"
+            },
+            "head": {
+              "parent": "root",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "head",
+              "view": "left",
+              "frozen_head": "rig/common/left/head.png",
+              "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "climb_a/left/head.png",
+              "sha256": "10d9818891690ca5c0f8bc13197ccdb7fada5068e94ee46387a4efa4592b1e95"
+            },
+            "expression_neutral": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "expression_neutral",
+              "view": "left",
+              "frozen_head": "rig/common/left/head.png",
+              "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "climb_a/left/expression_neutral.png",
+              "sha256": "5d9e00de0489af582a4afb0a323f046ee1a561373affd943e335896e9c0efc5f"
+            }
+          },
+          "sampling": {
+            "window": [
+              640,
+              0,
+              1140,
+              887
+            ],
+            "core_bbox": [
+              59,
+              20,
+              406,
+              856
+            ],
+            "scale": 0.24880382775119617,
+            "paste": [
+              84,
+              16
+            ]
+          }
+        },
+        "right": {
+          "parts": {
+            "backpack": {
+              "parent": "root",
+              "pivot": [
+                128,
+                135
+              ],
+              "path": "climb_a/right/backpack.png",
+              "sha256": "6785844318f451dbf32ce243bc17f0bf0e1cc1600833787db0354812a1947778"
+            },
+            "forearm_hand_l": {
+              "parent": "upper_arm_l",
+              "pivot": [
+                97,
+                138
+              ],
+              "polygon": [
+                [
+                  82,
+                  132
+                ],
+                [
+                  108,
+                  132
+                ],
+                [
+                  110,
+                  162
+                ],
+                [
+                  98,
+                  174
+                ],
+                [
+                  82,
+                  169
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "forearm_hand_l",
+              "view": "right",
+              "path": "climb_a/right/forearm_hand_l.png",
+              "sha256": "ac194af3c1c3982c7fb6c306750a065c0058f9f77da2df99fb6d30f8b76a549d"
+            },
+            "forearm_hand_r": {
+              "parent": "upper_arm_r",
+              "pivot": [
+                161,
+                138
+              ],
+              "polygon": [
+                [
+                  149,
+                  132
+                ],
+                [
+                  178,
+                  131
+                ],
+                [
+                  178,
+                  170
+                ],
+                [
+                  155,
+                  174
+                ],
+                [
+                  148,
+                  151
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "forearm_hand_r",
+              "view": "right",
+              "path": "climb_a/right/forearm_hand_r.png",
+              "sha256": "4eff0fe7d4447f0233974f1336cf4c952ae854ae231ddc5c07852dc8265b5d7f"
+            },
+            "upper_arm_l": {
+              "parent": "torso",
+              "pivot": [
+                106,
+                107
+              ],
+              "polygon": [
+                [
+                  95,
+                  100
+                ],
+                [
+                  114,
+                  104
+                ],
+                [
+                  109,
+                  143
+                ],
+                [
+                  84,
+                  146
+                ],
+                [
+                  85,
+                  123
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "upper_arm_l",
+              "view": "right",
+              "path": "climb_a/right/upper_arm_l.png",
+              "sha256": "15f24655760d38d5147011c9a7ca9a0a2bed992fc5881bb2132c6af741bdedda"
+            },
+            "upper_arm_r": {
+              "parent": "torso",
+              "pivot": [
+                150,
+                107
+              ],
+              "polygon": [
+                [
+                  143,
+                  104
+                ],
+                [
+                  163,
+                  100
+                ],
+                [
+                  175,
+                  124
+                ],
+                [
+                  178,
+                  146
+                ],
+                [
+                  151,
+                  146
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "upper_arm_r",
+              "view": "right",
+              "path": "climb_a/right/upper_arm_r.png",
+              "sha256": "51b8209bf1675fb6707c1ef7302453efc86707d4a3e846cd2148c52a3cabe87f"
+            },
+            "shin_foot_l": {
+              "parent": "thigh_l",
+              "pivot": [
+                115,
+                194
+              ],
+              "polygon": [
+                [
+                  0,
+                  189
+                ],
+                [
+                  129,
+                  189
+                ],
+                [
+                  129,
+                  256
+                ],
+                [
+                  0,
+                  256
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "shin_foot_l",
+              "view": "right",
+              "path": "climb_a/right/shin_foot_l.png",
+              "sha256": "e5b15f64c0f0b20a02a3da8de2363eef2e0f5dfa8fbbbadc8de2b417b3ec2c3c"
+            },
+            "shin_foot_r": {
+              "parent": "thigh_r",
+              "pivot": [
+                141,
+                194
+              ],
+              "polygon": [
+                [
+                  126,
+                  189
+                ],
+                [
+                  256,
+                  189
+                ],
+                [
+                  256,
+                  256
+                ],
+                [
+                  126,
+                  256
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "shin_foot_r",
+              "view": "right",
+              "path": "climb_a/right/shin_foot_r.png",
+              "sha256": "d63e647f5b318b773f48ef6d8299adaf2434116955cd675229ea97a5a046e884"
+            },
+            "thigh_l": {
+              "parent": "root",
+              "pivot": [
+                116,
+                165
+              ],
+              "polygon": [
+                [
+                  0,
+                  161
+                ],
+                [
+                  129,
+                  161
+                ],
+                [
+                  129,
+                  201
+                ],
+                [
+                  0,
+                  201
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "thigh_l",
+              "view": "right",
+              "path": "climb_a/right/thigh_l.png",
+              "sha256": "c90e79c13a01cece5f93d4be853eaf49a60932c08792926209524d47af098662"
+            },
+            "thigh_r": {
+              "parent": "root",
+              "pivot": [
+                140,
+                165
+              ],
+              "polygon": [
+                [
+                  126,
+                  161
+                ],
+                [
+                  256,
+                  161
+                ],
+                [
+                  256,
+                  201
+                ],
+                [
+                  126,
+                  201
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "thigh_r",
+              "view": "right",
+              "path": "climb_a/right/thigh_r.png",
+              "sha256": "1fa3e5cb28d7a3d909bded3b4271732246fdcc68fe79124089f8336cbc6bf595"
+            },
+            "jacket_flap": {
+              "parent": "torso",
+              "pivot": [
+                108,
+                150
+              ],
+              "polygon": [
+                [
+                  98,
+                  147
+                ],
+                [
+                  112,
+                  147
+                ],
+                [
+                  113,
+                  164
+                ],
+                [
+                  98,
+                  164
+                ]
+              ],
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "jacket_flap",
+              "view": "right",
+              "path": "climb_a/right/jacket_flap.png",
+              "sha256": "3c804e8983553297f4f6590f49b206f0a1ce5b9193ddc242eecf0824f8926c9c"
+            },
+            "torso": {
+              "parent": "root",
+              "pivot": [
+                128,
+                165
+              ],
+              "polygon": null,
+              "source_sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+              "part": "torso",
+              "view": "right",
+              "path": "climb_a/right/torso.png",
+              "sha256": "0bb0a436b9b64959a30eedd049a8d059b036338fd667913999f5e5b3da3ffc06"
+            },
+            "head": {
+              "parent": "root",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "head",
+              "view": "right",
+              "frozen_head": "rig/common/right/head.png",
+              "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "climb_a/right/head.png",
+              "sha256": "4794c45080a2b81f4c9d21942e26bba0130d0877839c42bc7d3fdb7e78342b41"
+            },
+            "expression_neutral": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "expression_neutral",
+              "view": "right",
+              "frozen_head": "rig/common/right/head.png",
+              "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "climb_a/right/expression_neutral.png",
+              "sha256": "c089666e749d51c200e4835796c463086ff582acb8a7c5b250b0f3599291997c"
+            }
+          },
+          "sampling": {
+            "window": [
+              1170,
+              0,
+              1700,
+              887
+            ],
+            "core_bbox": [
+              66,
+              20,
+              420,
+              855
+            ],
+            "scale": 0.24910179640718563,
+            "paste": [
+              83,
+              16
+            ]
+          }
+        }
+      }
+    },
+    "climb_b": {
+      "master": "games/climb/masters/climb_b-three-views.png",
+      "master_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+      "views": {
+        "front": {
+          "parts": {
+            "backpack": {
+              "parent": "root",
+              "pivot": [
+                128,
+                135
+              ],
+              "path": "climb_b/front/backpack.png",
+              "sha256": "b305e855fb5bad87c81368e69f256f6bc9f88a00cfd23e659ff1d2c15caa470c"
+            },
+            "forearm_hand_l": {
+              "parent": "upper_arm_l",
+              "pivot": [
+                97,
+                138
+              ],
+              "polygon": [
+                [
+                  82,
+                  132
+                ],
+                [
+                  108,
+                  132
+                ],
+                [
+                  110,
+                  162
+                ],
+                [
+                  98,
+                  174
+                ],
+                [
+                  82,
+                  169
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "forearm_hand_l",
+              "view": "front",
+              "path": "climb_b/front/forearm_hand_l.png",
+              "sha256": "631cf145dcc0d87eadfa035c708d1498467d43849222bf2645c70b6b9f16e710"
+            },
+            "forearm_hand_r": {
+              "parent": "upper_arm_r",
+              "pivot": [
+                161,
+                138
+              ],
+              "polygon": [
+                [
+                  149,
+                  132
+                ],
+                [
+                  178,
+                  131
+                ],
+                [
+                  178,
+                  170
+                ],
+                [
+                  155,
+                  174
+                ],
+                [
+                  148,
+                  151
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "forearm_hand_r",
+              "view": "front",
+              "path": "climb_b/front/forearm_hand_r.png",
+              "sha256": "bf436bb56e810017cf43f6b63e8ed8e30d30728d8d405da2632a05f2bab99eb1"
+            },
+            "upper_arm_l": {
+              "parent": "torso",
+              "pivot": [
+                106,
+                107
+              ],
+              "polygon": [
+                [
+                  95,
+                  100
+                ],
+                [
+                  114,
+                  104
+                ],
+                [
+                  109,
+                  143
+                ],
+                [
+                  84,
+                  146
+                ],
+                [
+                  85,
+                  123
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "upper_arm_l",
+              "view": "front",
+              "path": "climb_b/front/upper_arm_l.png",
+              "sha256": "bd1ce612efaa30d5006e327a2881d7beef20684cc41ee90155f3d590e61f7749"
+            },
+            "upper_arm_r": {
+              "parent": "torso",
+              "pivot": [
+                150,
+                107
+              ],
+              "polygon": [
+                [
+                  143,
+                  104
+                ],
+                [
+                  163,
+                  100
+                ],
+                [
+                  175,
+                  124
+                ],
+                [
+                  178,
+                  146
+                ],
+                [
+                  151,
+                  146
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "upper_arm_r",
+              "view": "front",
+              "path": "climb_b/front/upper_arm_r.png",
+              "sha256": "a2609faca075dc01d303de569354b862503ac5258df1303726aec020117768e3"
+            },
+            "shin_foot_l": {
+              "parent": "thigh_l",
+              "pivot": [
+                115,
+                194
+              ],
+              "polygon": [
+                [
+                  0,
+                  189
+                ],
+                [
+                  129,
+                  189
+                ],
+                [
+                  129,
+                  256
+                ],
+                [
+                  0,
+                  256
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "shin_foot_l",
+              "view": "front",
+              "path": "climb_b/front/shin_foot_l.png",
+              "sha256": "a8f22515fcb53217d54c1850328c7c53bb62500426468c7d27a28ea554be350d"
+            },
+            "shin_foot_r": {
+              "parent": "thigh_r",
+              "pivot": [
+                141,
+                194
+              ],
+              "polygon": [
+                [
+                  126,
+                  189
+                ],
+                [
+                  256,
+                  189
+                ],
+                [
+                  256,
+                  256
+                ],
+                [
+                  126,
+                  256
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "shin_foot_r",
+              "view": "front",
+              "path": "climb_b/front/shin_foot_r.png",
+              "sha256": "158fc5301dd32aa04e1833464e36eb8ee3fdb5bf800f46babb8ef425bac14cb4"
+            },
+            "thigh_l": {
+              "parent": "root",
+              "pivot": [
+                116,
+                165
+              ],
+              "polygon": [
+                [
+                  0,
+                  161
+                ],
+                [
+                  129,
+                  161
+                ],
+                [
+                  129,
+                  201
+                ],
+                [
+                  0,
+                  201
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "thigh_l",
+              "view": "front",
+              "path": "climb_b/front/thigh_l.png",
+              "sha256": "9ff334b1078154b07a16f0be06ca6577b7542a2634725c20a74089e8378a54da"
+            },
+            "thigh_r": {
+              "parent": "root",
+              "pivot": [
+                140,
+                165
+              ],
+              "polygon": [
+                [
+                  126,
+                  161
+                ],
+                [
+                  256,
+                  161
+                ],
+                [
+                  256,
+                  201
+                ],
+                [
+                  126,
+                  201
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "thigh_r",
+              "view": "front",
+              "path": "climb_b/front/thigh_r.png",
+              "sha256": "ba02986c88edfb99061bf099f91ddd29189ee82d0f19b4e99f6492f61ecb80b7"
+            },
+            "jacket_flap": {
+              "parent": "torso",
+              "pivot": [
+                108,
+                150
+              ],
+              "polygon": [
+                [
+                  98,
+                  147
+                ],
+                [
+                  112,
+                  147
+                ],
+                [
+                  113,
+                  164
+                ],
+                [
+                  98,
+                  164
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "jacket_flap",
+              "view": "front",
+              "path": "climb_b/front/jacket_flap.png",
+              "sha256": "3ca2b1ba3e35b71508068e684a6dac1f873aa71dfe9ddd71234c3a8791536a6c"
+            },
+            "torso": {
+              "parent": "root",
+              "pivot": [
+                128,
+                165
+              ],
+              "polygon": null,
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "torso",
+              "view": "front",
+              "path": "climb_b/front/torso.png",
+              "sha256": "5eb32220e6d6ac2b1c435ec6b723c7fee891fa5938f1860a6ad87ced29add00d"
+            },
+            "head": {
+              "parent": "root",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "head",
+              "view": "front",
+              "frozen_head": "rig/common/front/head.png",
+              "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "climb_b/front/head.png",
+              "sha256": "567c9333c9c5e105f1254e1c14b571e3509b4ee9c8339b32e0cfe2645809d5ee"
+            },
+            "expression_neutral": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "expression_neutral",
+              "view": "front",
+              "frozen_head": "rig/common/front/head.png",
+              "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "climb_b/front/expression_neutral.png",
+              "sha256": "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+            }
+          },
+          "sampling": {
+            "window": [
+              140,
+              0,
+              620,
+              887
+            ],
+            "core_bbox": [
+              79,
+              31,
+              428,
+              852
+            ],
+            "scale": 0.25334957369062117,
+            "paste": [
+              83,
+              15
+            ]
+          }
+        },
+        "left": {
+          "parts": {
+            "backpack": {
+              "parent": "root",
+              "pivot": [
+                128,
+                135
+              ],
+              "path": "climb_b/left/backpack.png",
+              "sha256": "deae7bfab0652e746acf5eb24842ffc5d9b4015cb2d5bc0af722b82c690bfd8d"
+            },
+            "forearm_hand_l": {
+              "parent": "upper_arm_l",
+              "pivot": [
+                97,
+                138
+              ],
+              "polygon": [
+                [
+                  82,
+                  132
+                ],
+                [
+                  108,
+                  132
+                ],
+                [
+                  110,
+                  162
+                ],
+                [
+                  98,
+                  174
+                ],
+                [
+                  82,
+                  169
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "forearm_hand_l",
+              "view": "left",
+              "path": "climb_b/left/forearm_hand_l.png",
+              "sha256": "1b208c47d52b9895d6cf4949767525e8391c90cca78717fd7e4ce909ec604e63"
+            },
+            "forearm_hand_r": {
+              "parent": "upper_arm_r",
+              "pivot": [
+                161,
+                138
+              ],
+              "polygon": [
+                [
+                  149,
+                  132
+                ],
+                [
+                  178,
+                  131
+                ],
+                [
+                  178,
+                  170
+                ],
+                [
+                  155,
+                  174
+                ],
+                [
+                  148,
+                  151
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "forearm_hand_r",
+              "view": "left",
+              "path": "climb_b/left/forearm_hand_r.png",
+              "sha256": "5eaa04c0245badea2191929dbf50da12f9993ad773ff60a748ca0d1da122f8d5"
+            },
+            "upper_arm_l": {
+              "parent": "torso",
+              "pivot": [
+                106,
+                107
+              ],
+              "polygon": [
+                [
+                  95,
+                  100
+                ],
+                [
+                  114,
+                  104
+                ],
+                [
+                  109,
+                  143
+                ],
+                [
+                  84,
+                  146
+                ],
+                [
+                  85,
+                  123
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "upper_arm_l",
+              "view": "left",
+              "path": "climb_b/left/upper_arm_l.png",
+              "sha256": "6f1fa2597d5aab22ff79878bb72df9795e75272ac36e45bcf998d5b0a97624d3"
+            },
+            "upper_arm_r": {
+              "parent": "torso",
+              "pivot": [
+                150,
+                107
+              ],
+              "polygon": [
+                [
+                  143,
+                  104
+                ],
+                [
+                  163,
+                  100
+                ],
+                [
+                  175,
+                  124
+                ],
+                [
+                  178,
+                  146
+                ],
+                [
+                  151,
+                  146
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "upper_arm_r",
+              "view": "left",
+              "path": "climb_b/left/upper_arm_r.png",
+              "sha256": "8735f5aa7dd15a3ad84c35306edd0023c77641ec999e4985fef00c86afb25ad0"
+            },
+            "shin_foot_l": {
+              "parent": "thigh_l",
+              "pivot": [
+                115,
+                194
+              ],
+              "polygon": [
+                [
+                  0,
+                  189
+                ],
+                [
+                  129,
+                  189
+                ],
+                [
+                  129,
+                  256
+                ],
+                [
+                  0,
+                  256
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "shin_foot_l",
+              "view": "left",
+              "path": "climb_b/left/shin_foot_l.png",
+              "sha256": "29e914e9965d97d8a71984fd34613c609f364fa761ddb17e9d0a5e49a2e5b3a5"
+            },
+            "shin_foot_r": {
+              "parent": "thigh_r",
+              "pivot": [
+                141,
+                194
+              ],
+              "polygon": [
+                [
+                  126,
+                  189
+                ],
+                [
+                  256,
+                  189
+                ],
+                [
+                  256,
+                  256
+                ],
+                [
+                  126,
+                  256
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "shin_foot_r",
+              "view": "left",
+              "path": "climb_b/left/shin_foot_r.png",
+              "sha256": "1ad642d973a4903e3cedbd1ffa7ace6db7b681b9f663034abb82dc983695f4c1"
+            },
+            "thigh_l": {
+              "parent": "root",
+              "pivot": [
+                116,
+                165
+              ],
+              "polygon": [
+                [
+                  0,
+                  161
+                ],
+                [
+                  129,
+                  161
+                ],
+                [
+                  129,
+                  201
+                ],
+                [
+                  0,
+                  201
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "thigh_l",
+              "view": "left",
+              "path": "climb_b/left/thigh_l.png",
+              "sha256": "93feacf19260040ba03f77a9ae25343a27a81ee82a7f057e806291bcd7d74f41"
+            },
+            "thigh_r": {
+              "parent": "root",
+              "pivot": [
+                140,
+                165
+              ],
+              "polygon": [
+                [
+                  126,
+                  161
+                ],
+                [
+                  256,
+                  161
+                ],
+                [
+                  256,
+                  201
+                ],
+                [
+                  126,
+                  201
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "thigh_r",
+              "view": "left",
+              "path": "climb_b/left/thigh_r.png",
+              "sha256": "3e3acda053cba9ea503f7de160d458310560dfb0f7fdedb37a70e6080fd12387"
+            },
+            "jacket_flap": {
+              "parent": "torso",
+              "pivot": [
+                108,
+                150
+              ],
+              "polygon": [
+                [
+                  98,
+                  147
+                ],
+                [
+                  112,
+                  147
+                ],
+                [
+                  113,
+                  164
+                ],
+                [
+                  98,
+                  164
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "jacket_flap",
+              "view": "left",
+              "path": "climb_b/left/jacket_flap.png",
+              "sha256": "132158378382d06c00bcc2d03c0441b9a4b6118a976aad81973d05c975034f0b"
+            },
+            "torso": {
+              "parent": "root",
+              "pivot": [
+                128,
+                165
+              ],
+              "polygon": null,
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "torso",
+              "view": "left",
+              "path": "climb_b/left/torso.png",
+              "sha256": "f7db81f5c58d1aa348d1750fab951a5fc21bb3e1b82b23707016c3c09e464eed"
+            },
+            "head": {
+              "parent": "root",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "head",
+              "view": "left",
+              "frozen_head": "rig/common/left/head.png",
+              "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "climb_b/left/head.png",
+              "sha256": "10d9818891690ca5c0f8bc13197ccdb7fada5068e94ee46387a4efa4592b1e95"
+            },
+            "expression_neutral": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "expression_neutral",
+              "view": "left",
+              "frozen_head": "rig/common/left/head.png",
+              "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "climb_b/left/expression_neutral.png",
+              "sha256": "5d9e00de0489af582a4afb0a323f046ee1a561373affd943e335896e9c0efc5f"
+            }
+          },
+          "sampling": {
+            "window": [
+              640,
+              0,
+              1140,
+              887
+            ],
+            "core_bbox": [
+              58,
+              29,
+              401,
+              858
+            ],
+            "scale": 0.25090470446320867,
+            "paste": [
+              84,
+              15
+            ]
+          }
+        },
+        "right": {
+          "parts": {
+            "backpack": {
+              "parent": "root",
+              "pivot": [
+                128,
+                135
+              ],
+              "path": "climb_b/right/backpack.png",
+              "sha256": "51d4c9dd0a79df8f2e7c15c5112ca223d584763229247e90cb1d2fd92d888f3b"
+            },
+            "forearm_hand_l": {
+              "parent": "upper_arm_l",
+              "pivot": [
+                97,
+                138
+              ],
+              "polygon": [
+                [
+                  82,
+                  132
+                ],
+                [
+                  108,
+                  132
+                ],
+                [
+                  110,
+                  162
+                ],
+                [
+                  98,
+                  174
+                ],
+                [
+                  82,
+                  169
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "forearm_hand_l",
+              "view": "right",
+              "path": "climb_b/right/forearm_hand_l.png",
+              "sha256": "a31e06a4fa0494817a02ca96f21d28b5c99633cce7fcfc537af781217a89fd23"
+            },
+            "forearm_hand_r": {
+              "parent": "upper_arm_r",
+              "pivot": [
+                161,
+                138
+              ],
+              "polygon": [
+                [
+                  149,
+                  132
+                ],
+                [
+                  178,
+                  131
+                ],
+                [
+                  178,
+                  170
+                ],
+                [
+                  155,
+                  174
+                ],
+                [
+                  148,
+                  151
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "forearm_hand_r",
+              "view": "right",
+              "path": "climb_b/right/forearm_hand_r.png",
+              "sha256": "84a2ce060693d9f11962529d7925bb7f354805f72111a58b325e893b330081fc"
+            },
+            "upper_arm_l": {
+              "parent": "torso",
+              "pivot": [
+                106,
+                107
+              ],
+              "polygon": [
+                [
+                  95,
+                  100
+                ],
+                [
+                  114,
+                  104
+                ],
+                [
+                  109,
+                  143
+                ],
+                [
+                  84,
+                  146
+                ],
+                [
+                  85,
+                  123
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "upper_arm_l",
+              "view": "right",
+              "path": "climb_b/right/upper_arm_l.png",
+              "sha256": "4a26677d4bd68024b32e9c342f27699ed622006859c8cbfce8421cea75ef39f9"
+            },
+            "upper_arm_r": {
+              "parent": "torso",
+              "pivot": [
+                150,
+                107
+              ],
+              "polygon": [
+                [
+                  143,
+                  104
+                ],
+                [
+                  163,
+                  100
+                ],
+                [
+                  175,
+                  124
+                ],
+                [
+                  178,
+                  146
+                ],
+                [
+                  151,
+                  146
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "upper_arm_r",
+              "view": "right",
+              "path": "climb_b/right/upper_arm_r.png",
+              "sha256": "e9b92a4ba3c5559ec59b3284b5064cd6e18c1c623192bfbce73971b77530c944"
+            },
+            "shin_foot_l": {
+              "parent": "thigh_l",
+              "pivot": [
+                115,
+                194
+              ],
+              "polygon": [
+                [
+                  0,
+                  189
+                ],
+                [
+                  129,
+                  189
+                ],
+                [
+                  129,
+                  256
+                ],
+                [
+                  0,
+                  256
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "shin_foot_l",
+              "view": "right",
+              "path": "climb_b/right/shin_foot_l.png",
+              "sha256": "2f10ef8e5f181f203d5717ee05fea02b64383efb3f92e045add280577cd97e6c"
+            },
+            "shin_foot_r": {
+              "parent": "thigh_r",
+              "pivot": [
+                141,
+                194
+              ],
+              "polygon": [
+                [
+                  126,
+                  189
+                ],
+                [
+                  256,
+                  189
+                ],
+                [
+                  256,
+                  256
+                ],
+                [
+                  126,
+                  256
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "shin_foot_r",
+              "view": "right",
+              "path": "climb_b/right/shin_foot_r.png",
+              "sha256": "304c480b15365eb1c4fc808cdbb3fa09d358ef31c690aae5c498220f978aa2fe"
+            },
+            "thigh_l": {
+              "parent": "root",
+              "pivot": [
+                116,
+                165
+              ],
+              "polygon": [
+                [
+                  0,
+                  161
+                ],
+                [
+                  129,
+                  161
+                ],
+                [
+                  129,
+                  201
+                ],
+                [
+                  0,
+                  201
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "thigh_l",
+              "view": "right",
+              "path": "climb_b/right/thigh_l.png",
+              "sha256": "9d9238916ddacc711e9e89163ed38a8cbc08abed4870c728d3378dcfb4b35449"
+            },
+            "thigh_r": {
+              "parent": "root",
+              "pivot": [
+                140,
+                165
+              ],
+              "polygon": [
+                [
+                  126,
+                  161
+                ],
+                [
+                  256,
+                  161
+                ],
+                [
+                  256,
+                  201
+                ],
+                [
+                  126,
+                  201
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "thigh_r",
+              "view": "right",
+              "path": "climb_b/right/thigh_r.png",
+              "sha256": "04fab02f75c3b7be71a57e878c64d6c18fa727dfdba44ce137c4e556ebcb49ec"
+            },
+            "jacket_flap": {
+              "parent": "torso",
+              "pivot": [
+                108,
+                150
+              ],
+              "polygon": [
+                [
+                  98,
+                  147
+                ],
+                [
+                  112,
+                  147
+                ],
+                [
+                  113,
+                  164
+                ],
+                [
+                  98,
+                  164
+                ]
+              ],
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "jacket_flap",
+              "view": "right",
+              "path": "climb_b/right/jacket_flap.png",
+              "sha256": "11bb3241bf2aacd6d1cfa61bb4fd800d09211bc200b36e6f350e4ff5eceab9f8"
+            },
+            "torso": {
+              "parent": "root",
+              "pivot": [
+                128,
+                165
+              ],
+              "polygon": null,
+              "source_sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+              "part": "torso",
+              "view": "right",
+              "path": "climb_b/right/torso.png",
+              "sha256": "2e26983881b4d9afad5bbe07e1153a4cc5b810d81e032403fd6cdd99cf92c959"
+            },
+            "head": {
+              "parent": "root",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "head",
+              "view": "right",
+              "frozen_head": "rig/common/right/head.png",
+              "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "climb_b/right/head.png",
+              "sha256": "4794c45080a2b81f4c9d21942e26bba0130d0877839c42bc7d3fdb7e78342b41"
+            },
+            "expression_neutral": {
+              "parent": "head",
+              "pivot": [
+                128,
+                97
+              ],
+              "part": "expression_neutral",
+              "view": "right",
+              "frozen_head": "rig/common/right/head.png",
+              "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+              "local_alpha_trim": "row>=98 and inherited teal cloth at row>=94 only; no RGB edits",
+              "path": "climb_b/right/expression_neutral.png",
+              "sha256": "c089666e749d51c200e4835796c463086ff582acb8a7c5b250b0f3599291997c"
+            }
+          },
+          "sampling": {
+            "window": [
+              1170,
+              0,
+              1700,
+              887
+            ],
+            "core_bbox": [
+              55,
+              30,
+              406,
+              858
+            ],
+            "scale": 0.25120772946859904,
+            "paste": [
+              83,
+              15
+            ]
+          }
+        }
+      }
+    }
+  },
+  "mirror_allowed": false,
+  "contact_contract": {
+    "space": "formal canvas pixels, same fixed (128,224) root as frames",
+    "grip_contact": "outer two-pixel band of transformed hand source (source y>=156)",
+    "foot_contact": "mean of transformed sole bottom two rows, at bottom pixel edge",
+    "wall_support": "primary screen-left hand/foot for left wall; screen-right for right wall",
+    "engine_policy": "translate runtime_contact - runtime_anchor with world root; never recenter sprite"
+  },
+  "representation": "SVG wrappers of immutable sampled pixel layers; no vector face redraw",
+  "identity_source": "reference/nabo-idle-original.png",
+  "identity_sha256": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243"
+}

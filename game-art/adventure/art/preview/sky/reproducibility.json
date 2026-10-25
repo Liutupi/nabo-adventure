@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "files_compared": 297,
+  "changed": [],
+  "source_manifest_sha256": "abfbc0ffd9e3e97e61295911ea5c65b3c65f988bcc2af9021247590b07b3ee98",
+  "method": "two deterministic complete builds, every owned output SHA compared",
+  "scope": "same-machine bundled Python/Pillow/numpy; not a cross-library-version guarantee",
+  "no_generative_frames": true
+}

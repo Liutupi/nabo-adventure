@@ -9,6 +9,7 @@
 #include "bsp_display.h"
 #include "bsp_pins.h"
 #include "adv_ui_animation.h"
+#include "adv_boot_motion.h"
 #include "esp_heap_caps.h"
 #include "esp_lcd_panel_io.h"
 #include "esp_lcd_panel_ops.h"
@@ -86,8 +87,8 @@ bool adv_ui_overflow(void) { return s_gfx && s_gfx->overflow; }
 void ui_header(ag_t *g, const char *title, const char *right)
 {
     ui_art(g, "ui/bars/top", 0, 0, 0);
-    ag_text(g, &collection_font_16, title, 12, 22, NT_ALIGN_LEFT, UI_PAPER);
-    if (right) ag_text(g, &collection_font_12, right, 228, 21, NT_ALIGN_RIGHT, UI_PAPER);
+    ag_text_top(g, &collection_font_18, title, 20, 8, NT_ALIGN_LEFT, UI_WHITE);
+    if (right) ag_text_top(g, &collection_font_12, right, 224, 11, NT_ALIGN_RIGHT, UI_WHITE);
 }
 
 void ui_footer(ag_t *g, const char *hint)
@@ -112,17 +113,17 @@ int ui_stamp_count(const adv_model_t *m) { return __builtin_popcount(adv_earned(
 static void draw_cover(ag_t *g, const adv_model_t *m)
 {
     (void)m;
-    uint32_t t = adv_ui_boot_initial() ? adv_ui_boot_elapsed(ui_millis()) : 5000;
+    uint32_t t = adv_ui_boot_initial() ? adv_ui_boot_elapsed(ui_millis()) : adv_boot_motion_duration();
     ui_art(g, "ui/cover-background-top", 0, 0, 0);
     ui_art(g, "ui/cover-background-bottom", 0, 0, 0);
-    int title_y = t < 450 ? -82 + (int)t * 90 / 450 : 8;
-    ui_art(g, "ui/wordmarks/collection", 0, 10, title_y);
-    // The original face stays rigid; narration has a nod/invitation, not lip sync.
-    int x = t < 600 ? 270 : t < 1400 ? 270 - (int)(t - 600) * 150 / 800 : 120;
-    uint32_t action = t >= 1400 && t < 4067 ? (t - 1400) % 1334 : 0;
-    ui_art_anchor(g, "travel/welcome", action, x, 266);
+    ui_art(g, "ui/wordmarks/collection", 0, 10, 12);
+    if (adv_boot_motion_enabled()) {
+        ui_art_frame_anchor(g, adv_boot_motion_asset_id(), adv_boot_motion_frame(t), 120, 266);
+    } else {
+        ui_art_anchor(g, "travel/welcome", 0, 120, 266);
+    }
     ui_art(g, "ui/labels/boot-caption", 0, 10, 270);
-    ui_art(g, "ui/labels/press-start", 0, 36, 292);
+    ui_art(g, "ui/labels/press-start", 0, 16, 284);
 }
 
 // ---------- kiosk ----------
@@ -140,7 +141,7 @@ static void draw_kiosk(ag_t *g, const adv_model_t *m)
         bool on = i == m->kiosk;
         int y = 124 + i * 46;
         ui_card(g, 30, y, 180, 36, on, false);
-        ag_text(g, &collection_font_18, items[i], 120, y + 25, NT_ALIGN_CENTER, UI_INK);
+        ag_text_top(g, &collection_font_18, items[i], 120, y + 8, NT_ALIGN_CENTER, on ? UI_WHITE : UI_INK);
     }
     ui_footer(g, "上/下选择 · OK确认 · 长按上返回");
 }
@@ -159,7 +160,7 @@ static void draw_settings(ag_t *g, const adv_model_t *m)
         bool on = i == c->settings_cursor;
         int y = 80 + 34 * i;
         ui_card(g, 16, y, 208, 34, on, false);
-        ag_text(g, &collection_font_16, names[i], 26, y + 24, NT_ALIGN_LEFT, UI_INK);
+        ag_text_top(g, &collection_font_16, names[i], 26, y + 8, NT_ALIGN_LEFT, on ? UI_WHITE : UI_INK);
         char value[24] = "";
         if (i == 0) snprintf(value, sizeof(value), "%d%%", c->settings.volume);
         if (i == 1) snprintf(value, sizeof(value), "%d%%", c->settings.brightness);
@@ -168,7 +169,7 @@ static void draw_settings(ag_t *g, const adv_model_t *m)
             if (c->settings.sleep_seconds) snprintf(value, sizeof(value), "%d秒", c->settings.sleep_seconds);
             else snprintf(value, sizeof(value), "不休眠");
         }
-        ag_text(g, &collection_font_16, value, 214, y + 24, NT_ALIGN_RIGHT, UI_INK);
+        ag_text_top(g, &collection_font_16, value, 214, y + 8, NT_ALIGN_RIGHT, on ? UI_WHITE : UI_INK);
     }
     ui_footer(g, c->editing >= 0 ? "长按上取消本次调整" : "长按上返回护照亭");
 }

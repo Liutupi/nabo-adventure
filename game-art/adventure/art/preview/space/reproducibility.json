@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "files_compared": 459,
+  "changed": [],
+  "manifest_sha256": "168d04124ab06e8d7e181a41c51e3eec91ba3e9f7dd5911fa8690a25e96fe789",
+  "method": "two full same-machine builds with actual production C decode, every owned output SHA compared",
+  "tools": "bundled Python 3.12.14, Pillow12.3.0, numpy2.3.5; portable w64devkit gcc16.2.0",
+  "no_generative_frames": true,
+  "cross_library_version_guarantee": false
+}

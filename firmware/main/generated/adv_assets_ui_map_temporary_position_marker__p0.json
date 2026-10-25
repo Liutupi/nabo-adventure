@@ -1,12 +1,12 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_map_temporary_position_marker__p0",
   "width": 32,
   "height": 20,
   "palette_rgb565": [
     0,
     45672,
-    63185
+    65502
   ],
   "background_rgb888": null,
   "key_interval": 8,
@@ -19,7 +19,7 @@
     "b70f31710c6d4dd33d7da7d895ca7b6bc1099a7f493d71c44aa4abf0b51461d4"
   ],
   "source_sha256": [
-    "138fe4d2afc67089788894d86f4d7e868f6d30043de272e04b5cab9b02d29c59"
+    "b045b3aeb8799b1380d16cdb9c8f04f33e30f851dd1df6801923a13b9f625c4b"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,8 +33,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\temporary-position-marker.png",
-      "sha256": "b0e5b1efc5d6457ac040a0c22d13d3b3fdb76f4eb8aa664c6c26e96c8eb641bd"
+      "sha256": "2d9f9968abae3cfc1c0de49735a995a1cf174e80b06eb8247de9b6ec7ef2f794"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/map/temporary-position-marker",
+      "logical_symbol": "adv_assets_ui_map_temporary_position_marker__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

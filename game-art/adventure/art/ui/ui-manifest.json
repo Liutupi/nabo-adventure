@@ -1,20 +1,125 @@
 {
   "schema": "nabo-ui-assets-v1",
   "theme": "selected round3 option 01 vintage passport journal",
-  "status": "generated_for_review_not_firmware_or_device_acceptance",
+  "status": "v2 production assets pending C integration and device acceptance",
   "native_scale": 1,
   "font": {
     "path": "D:\\AI PASSPORT XIAOZHI\\nabo-fortune\\tools\\fonts\\SourceHanSansCN-Medium.otf",
     "sha256": "a94e558a2fe972bee4f46bce0843abff37063fd68c33f1e7d9058f6f09432b01",
     "chinese_sizes_px": [
-      12,
-      16,
-      18
-    ]
+      12
+    ],
+    "role": "body"
   },
+  "fonts": {
+    "bold": {
+      "path": "C:/Windows/Fonts/Noto Sans SC Bold (TrueType).otf",
+      "sha256": "d1961be1161ea1be08496c920862d06ea5c23a757628f4fd69368de1d9f51bed",
+      "family": "Noto Sans SC",
+      "weight": 700,
+      "names": {
+        "0": [
+          "© 2014-2020 Adobe (http://www.adobe.com/)."
+        ],
+        "1": [
+          "Noto Sans SC"
+        ],
+        "2": [
+          "Bold"
+        ],
+        "4": [
+          "Noto Sans SC Bold"
+        ],
+        "5": [
+          "Version 2.002;hotconv 1.0.116;makeotfexe 2.5.65601"
+        ],
+        "8": [
+          "Adobe"
+        ],
+        "13": [
+          "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software."
+        ],
+        "14": [
+          "http://scripts.sil.org/OFL"
+        ]
+      },
+      "fsType": 0,
+      "variable": false,
+      "operation": "read original file for preview; no font conversion or redistribution"
+    },
+    "medium": {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-fortune\\tools\\fonts\\SourceHanSansCN-Medium.otf",
+      "sha256": "a94e558a2fe972bee4f46bce0843abff37063fd68c33f1e7d9058f6f09432b01",
+      "family": "Source Han Sans CN",
+      "weight": 500,
+      "names": {
+        "0": [
+          "© 2014-2025 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'."
+        ],
+        "1": [
+          "Source Han Sans CN Medium",
+          "思源黑体 CN Medium"
+        ],
+        "2": [
+          "Regular"
+        ],
+        "4": [
+          "Source Han Sans CN Medium",
+          "思源黑体 CN Medium"
+        ],
+        "5": [
+          "Version 2.005;addfeatures 5.0.0b21"
+        ],
+        "8": [
+          "Adobe"
+        ],
+        "13": [
+          "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software."
+        ],
+        "14": [
+          "http://scripts.sil.org/OFL"
+        ]
+      },
+      "fsType": 0,
+      "variable": false,
+      "operation": "read original file for preview; no font conversion or redistribution"
+    },
+    "latin": {
+      "path": "D:\\AI PASSPORT XIAOZHI\\table-undercover\\repo\\xiaozhi-esp32\\managed_components\\lvgl__lvgl\\tests\\src\\test_files\\fonts\\Montserrat-Bold.ttf",
+      "sha256": "06a0e623bbaf4a0237f1d605affa269f9e431ff50c7143dcbb47b815edaba9bd",
+      "family": "Montserrat",
+      "weight": 700,
+      "names": {
+        "0": [
+          "Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)"
+        ],
+        "1": [
+          "Montserrat"
+        ],
+        "2": [
+          "Bold"
+        ],
+        "4": [
+          "Montserrat Bold"
+        ],
+        "5": [
+          "Version 8.000"
+        ],
+        "14": [
+          "http://scripts.sil.org/OFL"
+        ]
+      },
+      "fsType": 0,
+      "variable": false,
+      "operation": "read original file for preview; no font conversion or redistribution"
+    }
+  },
+  "typography": "16/18 Noto Sans SC Bold700, 12 SourceHan Medium500; fixed English Montserrat Bold700",
+  "selected_dynamic_text": "#fffaf0",
   "shared_ui_palette": {
     "path": "palette.json",
-    "visible_colors": 15,
+    "visible_colors": 16,
+    "sha256": "3b3dc6d793ac4eff3af34fc01f0d969f7eb6a5c0b5a6b967e66795103949fce0",
     "limit_including_transparent": 32
   },
   "nine_slice": [
@@ -149,124 +254,124 @@
     "36": {
       "0": {
         "path": "numbers/36/0.png",
-        "advance": 28,
-        "ink_height": 34
+        "advance": 36,
+        "ink_height": 35
       },
       "1": {
         "path": "numbers/36/1.png",
-        "advance": 28,
-        "ink_height": 32
+        "advance": 22,
+        "ink_height": 33
       },
       "2": {
         "path": "numbers/36/2.png",
-        "advance": 28,
-        "ink_height": 33
+        "advance": 31,
+        "ink_height": 34
       },
       "3": {
         "path": "numbers/36/3.png",
-        "advance": 28,
+        "advance": 32,
         "ink_height": 34
       },
       "4": {
         "path": "numbers/36/4.png",
-        "advance": 28,
-        "ink_height": 32
+        "advance": 36,
+        "ink_height": 33
       },
       "5": {
         "path": "numbers/36/5.png",
-        "advance": 28,
-        "ink_height": 33
+        "advance": 31,
+        "ink_height": 34
       },
       "6": {
         "path": "numbers/36/6.png",
-        "advance": 28,
-        "ink_height": 34
+        "advance": 34,
+        "ink_height": 35
       },
       "7": {
         "path": "numbers/36/7.png",
-        "advance": 28,
-        "ink_height": 32
+        "advance": 33,
+        "ink_height": 33
       },
       "8": {
         "path": "numbers/36/8.png",
-        "advance": 28,
-        "ink_height": 34
+        "advance": 35,
+        "ink_height": 35
       },
       "9": {
         "path": "numbers/36/9.png",
-        "advance": 28,
-        "ink_height": 34
+        "advance": 33,
+        "ink_height": 35
       },
       "m": {
         "path": "numbers/36/m.png",
-        "advance": 44,
-        "ink_height": 25
+        "advance": 53,
+        "ink_height": 26
       },
       "+": {
         "path": "numbers/36/plus.png",
-        "advance": 28,
+        "advance": 31,
         "ink_height": 28
       }
     },
     "20": {
       "0": {
         "path": "numbers/20/0.png",
-        "advance": 17,
-        "ink_height": 18
+        "advance": 22,
+        "ink_height": 19
       },
       "1": {
         "path": "numbers/20/1.png",
-        "advance": 17,
-        "ink_height": 18
+        "advance": 15,
+        "ink_height": 19
       },
       "2": {
         "path": "numbers/20/2.png",
-        "advance": 17,
-        "ink_height": 18
+        "advance": 20,
+        "ink_height": 19
       },
       "3": {
         "path": "numbers/20/3.png",
-        "advance": 17,
-        "ink_height": 18
+        "advance": 19,
+        "ink_height": 19
       },
       "4": {
         "path": "numbers/20/4.png",
-        "advance": 17,
-        "ink_height": 18
+        "advance": 22,
+        "ink_height": 19
       },
       "5": {
         "path": "numbers/20/5.png",
-        "advance": 17,
-        "ink_height": 18
+        "advance": 20,
+        "ink_height": 19
       },
       "6": {
         "path": "numbers/20/6.png",
-        "advance": 17,
-        "ink_height": 18
+        "advance": 21,
+        "ink_height": 19
       },
       "7": {
         "path": "numbers/20/7.png",
-        "advance": 17,
-        "ink_height": 18
+        "advance": 20,
+        "ink_height": 19
       },
       "8": {
         "path": "numbers/20/8.png",
-        "advance": 17,
-        "ink_height": 18
+        "advance": 21,
+        "ink_height": 19
       },
       "9": {
         "path": "numbers/20/9.png",
-        "advance": 17,
-        "ink_height": 18
+        "advance": 21,
+        "ink_height": 19
       },
       "m": {
         "path": "numbers/20/m.png",
-        "advance": 26,
-        "ink_height": 13
+        "advance": 32,
+        "ink_height": 15
       },
       "+": {
         "path": "numbers/20/plus.png",
-        "advance": 17,
+        "advance": 20,
         "ink_height": 16
       }
     }
@@ -278,7 +383,7 @@
     "logo": "wordmarks/collection.png",
     "logo_offset": [
       10,
-      8
+      12
     ],
     "character_foot_anchor": [
       120,
@@ -302,45 +407,22 @@
     "start_button": {
       "path": "labels/press-start.png",
       "offset": [
-        36,
-        292
+        16,
+        284
       ]
     },
-    "layer_assembly": "exact; see verify_ui_assets.py",
+    "layer_assembly": "exact; verify_ui_assets.py",
     "source_art": [
       {
-        "path": "map\\tiles\\space\\asteroid.png",
-        "sha256": "0c3fd7d7a9eedb33a746ed3272af55162e9e0d75950ff849a2c320e7ca6ffc24"
+        "path": "map/tiles/mountain/snowcap-rock.png",
+        "sha256": "1b94744c19c7bb95a7faf3c53bb9b3d410cdbf932aa690722797fe997928264e"
       },
       {
-        "path": "map\\landmarks\\space.png",
-        "sha256": "6764b4f23eb63172419a6d00ab004dfffff02bf0e6f316481c00ac07bebb8bd1"
-      },
-      {
-        "path": "map\\tiles\\mountain\\ice-crystals.png",
-        "sha256": "d4226c2f39ab5f08a5c4fd40e4165ccb72bbbae3fa5248f522584016b738b886"
-      },
-      {
-        "path": "map\\landmarks\\climb.png",
-        "sha256": "ac128f0afb2902bdc9418a51d87068c238690d326125d664fbebe84cd5729c94"
-      },
-      {
-        "path": "map\\tiles\\town\\bunting.png",
-        "sha256": "6da0b8085c835b4f6c75c0d240cd468ecd73298967f96d813cbbcc40bfa103d7"
-      },
-      {
-        "path": "map\\landmarks\\kiosk.png",
-        "sha256": "053f4bba2f368f5f9003d574f53b45e6b822751f503dd58f85249f6f6107e5a1"
-      },
-      {
-        "path": "map\\tiles\\deep-sea\\bubble-chain.png",
-        "sha256": "0d9e83cc68bc23bb7ff7dc5d367b9221314c70819b6bd9a448215eec7d249015"
-      },
-      {
-        "path": "map\\landmarks\\dive.png",
-        "sha256": "d341b383c9798d8769e9d094f4b6c29e13667f7a8d155122036e4cd5d0f76809"
+        "path": "map/tiles/town/red-roof.png",
+        "sha256": "83e638db8c492c9768a696269cb33ca7a13707e725b2691ca44d5cdeea61915d"
       }
-    ]
+    ],
+    "character_budget_policy": "include welcome animation with UI; do not hide it in travel group"
   },
   "preview_screens": [
     "map",
@@ -367,15 +449,14 @@
       "width": 32,
       "height": 32,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": false,
-      "sha256": "23b3482b88dd9659e06bec0fcefbfbf611a3ec3037e8ffc208373ea855d83ee8",
+      "sha256": "5f443458a0366cb65c47d8ab7276018055ad819c69411495d1f6dd10b9ecd73d",
       "role": "editable-nine-slice-atlas"
     },
     {
@@ -388,16 +469,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "633860c0666e5ea01a07412e7a1fe85715ec6db49c14ff1b6fddccc9845344fb",
-      "row_rle_estimate_bytes": 130
+      "sha256": "f31a4760643199833f6f9480795e1b715f32a9b6e93fcf5611ec7601fe481423",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_menu_normal_top",
@@ -409,16 +489,15 @@
       "width": 8,
       "height": 12,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "76f203136ba6afed2b5111651b33816b9c99194ea83373f108a7cfc26585daf2",
-      "row_rle_estimate_bytes": 104
+      "sha256": "792cf1621679496ae6f5fe401741d5e5664ef4024b87a4e0889c16177facc911",
+      "row_rle_estimate_bytes": 102
     },
     {
       "name": "cards_menu_normal_top_right",
@@ -430,16 +509,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "b60aa576540ce8c74859b408c70c627474858a0b29a359a827cad4c82cbcaaba",
-      "row_rle_estimate_bytes": 130
+      "sha256": "3c0d21fe70ed5f92dcd0fc98bfe51fd057772210d82346d0baf06e41560f9cff",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_menu_normal_left",
@@ -451,16 +529,15 @@
       "width": 12,
       "height": 8,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "b8b2a4c9159a38b1fd59703c9968b7912732ee6bf9129af545513126faf15682",
-      "row_rle_estimate_bytes": 96
+      "sha256": "cc0873c87b7aeb8ebc975ccf1edc1d9c76eacf0e547001396506b3e239dda9da",
+      "row_rle_estimate_bytes": 78
     },
     {
       "name": "cards_menu_normal_center",
@@ -472,14 +549,14 @@
       "width": 8,
       "height": 8,
       "palette": [
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
       "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "f5dc936c16ff7e98ad6138b1b917e80a462d184256f9c578544725b069ccb01b",
+      "sha256": "d52d3f188c2ed22af72a1bb37a012e1da09414a79f732abdae686840058186e0",
       "row_rle_estimate_bytes": 78
     },
     {
@@ -492,16 +569,15 @@
       "width": 12,
       "height": 8,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "bd56843c1cf6493837547aeebfc5a6511b4a2cac4d6c1f2a973f2b340105ccec",
-      "row_rle_estimate_bytes": 96
+      "sha256": "cc0873c87b7aeb8ebc975ccf1edc1d9c76eacf0e547001396506b3e239dda9da",
+      "row_rle_estimate_bytes": 78
     },
     {
       "name": "cards_menu_normal_bottom_left",
@@ -513,16 +589,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "e00d625b93b3f1d4c4d79f52ebb586ea6995f91cf6e9511d0e1badd3c4888482",
-      "row_rle_estimate_bytes": 130
+      "sha256": "3f5f7cb608198d2167285103979e5bfdb7445aa35d337ccd5e3993d8a4f74e0f",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_menu_normal_bottom",
@@ -534,16 +609,15 @@
       "width": 8,
       "height": 12,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "14834674124ca28b683d7b36070565c96f04aa5c97f6237f055c1f62faac25c7",
-      "row_rle_estimate_bytes": 104
+      "sha256": "792cf1621679496ae6f5fe401741d5e5664ef4024b87a4e0889c16177facc911",
+      "row_rle_estimate_bytes": 102
     },
     {
       "name": "cards_menu_normal_bottom_right",
@@ -555,16 +629,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "72039f7a688ad80a14c7cf65643f9831064abba0488a90e2268be4f8ca83c393",
-      "row_rle_estimate_bytes": 130
+      "sha256": "812dce855ddd0da089b9777b331726920b6e55690e4ebb939d44e6e2a1c97565",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_menu_selected_atlas",
@@ -577,15 +650,14 @@
       "height": 32,
       "palette": [
         "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#b64c43"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": false,
-      "sha256": "98ea4e164d7bf0657268c6e63936068c2afad8b7991780208b363747dca1a8c1",
+      "sha256": "a674801ea30a4ba84a7a5daf4e4e88855523ad8bf03cc9d6263c8343e73170d9",
       "role": "editable-nine-slice-atlas"
     },
     {
@@ -599,16 +671,15 @@
       "height": 12,
       "palette": [
         "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#b64c43"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "262d92591a6dcfa6bfc0c310de1eced53b59e03254c4ff46aab5028ae13862d4",
-      "row_rle_estimate_bytes": 162
+      "sha256": "499add3935de40c2600b4ebf44ec10c4fd09e23dc47cb2e364060f5533d0634e",
+      "row_rle_estimate_bytes": 130
     },
     {
       "name": "cards_menu_selected_top",
@@ -620,17 +691,15 @@
       "width": 8,
       "height": 12,
       "palette": [
-        "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#203849"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "c20ca633554d0429c36d9ee498632ca4bd608e4473df75e5f748e819ce04a325",
-      "row_rle_estimate_bytes": 106
+      "sha256": "608e989a3e2cbe2c24b279c8d6c7e2843dc60b8c50c2737bec1c330b797a4488",
+      "row_rle_estimate_bytes": 102
     },
     {
       "name": "cards_menu_selected_top_right",
@@ -642,17 +711,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#203849"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "8ebef04da87b96561a39733d5bb2aa8c4e02e23746c8c61ac36f36909b8d65a4",
-      "row_rle_estimate_bytes": 162
+      "sha256": "56cc090fd81a2ee0fd56670849cfee18fce6022d77dc4caf973d4dacff68acce",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_menu_selected_left",
@@ -665,16 +732,15 @@
       "height": 8,
       "palette": [
         "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#b64c43"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "d819bd12c38a0c36f59342c97e90c1de5d4931932f589c2864822cf9a4668f49",
-      "row_rle_estimate_bytes": 130
+      "sha256": "68dc3aa93d56c7e2479a1c3a63b16ea51cf88fcf20c28833b8544976bf052bf5",
+      "row_rle_estimate_bytes": 96
     },
     {
       "name": "cards_menu_selected_center",
@@ -686,14 +752,14 @@
       "width": 8,
       "height": 8,
       "palette": [
-        "#f3d88a"
+        "#203849"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
       "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "012e4aa21eb2ea19a72e08e167dd63d1da8b056c8f6414b6bb5af0da17d1970f",
+      "sha256": "12fa29a64e90e18dd7acdf7f324d3b53c1b7eeb250c215df95895e720aaf7150",
       "row_rle_estimate_bytes": 78
     },
     {
@@ -706,17 +772,15 @@
       "width": 12,
       "height": 8,
       "palette": [
-        "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#203849"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "ac7ba2ff624b9982ceb0be8e2fa6e20cc0b5b885ede16ea35c8063560698b3d9",
-      "row_rle_estimate_bytes": 130
+      "sha256": "c8e3be09a0c9839494a492dd08497a218c2c8e7ef73093ecb6eb40edfe70db0b",
+      "row_rle_estimate_bytes": 78
     },
     {
       "name": "cards_menu_selected_bottom_left",
@@ -729,16 +793,15 @@
       "height": 12,
       "palette": [
         "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#b64c43"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "5ebff4ecae598709ba8e22f9635319eed11425b94095d7cbbd91af5c211a0dfb",
-      "row_rle_estimate_bytes": 162
+      "sha256": "09878aa5c9969d5875808a9f76567f01d078729a408330cdf844f4087d694968",
+      "row_rle_estimate_bytes": 130
     },
     {
       "name": "cards_menu_selected_bottom",
@@ -750,17 +813,15 @@
       "width": 8,
       "height": 12,
       "palette": [
-        "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#203849"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "dcc0c3cfea32bce4c5a524271a854f514336ff315b831a84f3339fab40718017",
-      "row_rle_estimate_bytes": 106
+      "sha256": "608e989a3e2cbe2c24b279c8d6c7e2843dc60b8c50c2737bec1c330b797a4488",
+      "row_rle_estimate_bytes": 102
     },
     {
       "name": "cards_menu_selected_bottom_right",
@@ -772,17 +833,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#203849"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "6282be5920c728f248c8c6d332cce79fa20345c6a67d9997e15fe2f6af60ec68",
-      "row_rle_estimate_bytes": 162
+      "sha256": "ff622ec6b7a66f84928cd0daebec65dcb0c096bba0950a473414953caf6a5e39",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_menu_disabled_atlas",
@@ -794,15 +853,14 @@
       "width": 32,
       "height": 32,
       "palette": [
-        "#756b55",
-        "#ddc7a0"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": false,
-      "sha256": "b610b3d48dee25ee1e9a7407cb0b90e87fd62dcde5adccb0dfa207c3c7eabb70",
+      "sha256": "5f443458a0366cb65c47d8ab7276018055ad819c69411495d1f6dd10b9ecd73d",
       "role": "editable-nine-slice-atlas"
     },
     {
@@ -815,16 +873,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#756b55",
-        "#ddc7a0"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "8a3316b4c1e1c5e5bc37c9e1358145d5984adbe4451c033057ea2bb62a117e76",
-      "row_rle_estimate_bytes": 130
+      "sha256": "f31a4760643199833f6f9480795e1b715f32a9b6e93fcf5611ec7601fe481423",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_menu_disabled_top",
@@ -836,16 +893,15 @@
       "width": 8,
       "height": 12,
       "palette": [
-        "#756b55",
-        "#ddc7a0"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "4c489f7921432c1edb6b47cad0abebf0533a008d37a65719ecf517c79118e06b",
-      "row_rle_estimate_bytes": 104
+      "sha256": "792cf1621679496ae6f5fe401741d5e5664ef4024b87a4e0889c16177facc911",
+      "row_rle_estimate_bytes": 102
     },
     {
       "name": "cards_menu_disabled_top_right",
@@ -857,16 +913,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#756b55",
-        "#ddc7a0"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "4caaf9a19603b5cb06f16c13cdf6dec5b145f59a46af540e95ccfc6130a3d650",
-      "row_rle_estimate_bytes": 130
+      "sha256": "3c0d21fe70ed5f92dcd0fc98bfe51fd057772210d82346d0baf06e41560f9cff",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_menu_disabled_left",
@@ -878,16 +933,15 @@
       "width": 12,
       "height": 8,
       "palette": [
-        "#756b55",
-        "#ddc7a0"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "61cbd79a0c3394aca7075ee61a9ac2c471e2eac51ed95d2328480fe074c7fde4",
-      "row_rle_estimate_bytes": 96
+      "sha256": "cc0873c87b7aeb8ebc975ccf1edc1d9c76eacf0e547001396506b3e239dda9da",
+      "row_rle_estimate_bytes": 78
     },
     {
       "name": "cards_menu_disabled_center",
@@ -899,14 +953,14 @@
       "width": 8,
       "height": 8,
       "palette": [
-        "#ddc7a0"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
       "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "21795790aac2d36ab224c84f61a9db1b4d8f61215869427361a55112765a2bec",
+      "sha256": "d52d3f188c2ed22af72a1bb37a012e1da09414a79f732abdae686840058186e0",
       "row_rle_estimate_bytes": 78
     },
     {
@@ -919,16 +973,15 @@
       "width": 12,
       "height": 8,
       "palette": [
-        "#756b55",
-        "#ddc7a0"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "3bf8be8855a1d8b788d72a5a19bba9edd88a1e41845d58c41dbb528ce82601c0",
-      "row_rle_estimate_bytes": 96
+      "sha256": "cc0873c87b7aeb8ebc975ccf1edc1d9c76eacf0e547001396506b3e239dda9da",
+      "row_rle_estimate_bytes": 78
     },
     {
       "name": "cards_menu_disabled_bottom_left",
@@ -940,16 +993,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#756b55",
-        "#ddc7a0"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "e14b7022c8d4b20b56f0ec0979979cbace6506e502174c72e3284bf5a5a756f9",
-      "row_rle_estimate_bytes": 130
+      "sha256": "3f5f7cb608198d2167285103979e5bfdb7445aa35d337ccd5e3993d8a4f74e0f",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_menu_disabled_bottom",
@@ -961,16 +1013,15 @@
       "width": 8,
       "height": 12,
       "palette": [
-        "#756b55",
-        "#ddc7a0"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "fff5ce56dcd1b211a794b06c847ac3e92b768c32435167b7d68aa62c59a14dee",
-      "row_rle_estimate_bytes": 104
+      "sha256": "792cf1621679496ae6f5fe401741d5e5664ef4024b87a4e0889c16177facc911",
+      "row_rle_estimate_bytes": 102
     },
     {
       "name": "cards_menu_disabled_bottom_right",
@@ -982,16 +1033,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#756b55",
-        "#ddc7a0"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "b34122034b9581ba5cca8c6776ec5a329d03f3c4ac60e3010dd72e144cb3748a",
-      "row_rle_estimate_bytes": 130
+      "sha256": "812dce855ddd0da089b9777b331726920b6e55690e4ebb939d44e6e2a1c97565",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_info_normal_atlas",
@@ -1003,15 +1053,14 @@
       "width": 32,
       "height": 32,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": false,
-      "sha256": "23b3482b88dd9659e06bec0fcefbfbf611a3ec3037e8ffc208373ea855d83ee8",
+      "sha256": "5f443458a0366cb65c47d8ab7276018055ad819c69411495d1f6dd10b9ecd73d",
       "role": "editable-nine-slice-atlas"
     },
     {
@@ -1024,16 +1073,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "633860c0666e5ea01a07412e7a1fe85715ec6db49c14ff1b6fddccc9845344fb",
-      "row_rle_estimate_bytes": 130
+      "sha256": "f31a4760643199833f6f9480795e1b715f32a9b6e93fcf5611ec7601fe481423",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_info_normal_top",
@@ -1045,16 +1093,15 @@
       "width": 8,
       "height": 12,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "76f203136ba6afed2b5111651b33816b9c99194ea83373f108a7cfc26585daf2",
-      "row_rle_estimate_bytes": 104
+      "sha256": "792cf1621679496ae6f5fe401741d5e5664ef4024b87a4e0889c16177facc911",
+      "row_rle_estimate_bytes": 102
     },
     {
       "name": "cards_info_normal_top_right",
@@ -1066,16 +1113,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "b60aa576540ce8c74859b408c70c627474858a0b29a359a827cad4c82cbcaaba",
-      "row_rle_estimate_bytes": 130
+      "sha256": "3c0d21fe70ed5f92dcd0fc98bfe51fd057772210d82346d0baf06e41560f9cff",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_info_normal_left",
@@ -1087,16 +1133,15 @@
       "width": 12,
       "height": 8,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "b8b2a4c9159a38b1fd59703c9968b7912732ee6bf9129af545513126faf15682",
-      "row_rle_estimate_bytes": 96
+      "sha256": "cc0873c87b7aeb8ebc975ccf1edc1d9c76eacf0e547001396506b3e239dda9da",
+      "row_rle_estimate_bytes": 78
     },
     {
       "name": "cards_info_normal_center",
@@ -1108,14 +1153,14 @@
       "width": 8,
       "height": 8,
       "palette": [
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
       "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "f5dc936c16ff7e98ad6138b1b917e80a462d184256f9c578544725b069ccb01b",
+      "sha256": "d52d3f188c2ed22af72a1bb37a012e1da09414a79f732abdae686840058186e0",
       "row_rle_estimate_bytes": 78
     },
     {
@@ -1128,16 +1173,15 @@
       "width": 12,
       "height": 8,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "bd56843c1cf6493837547aeebfc5a6511b4a2cac4d6c1f2a973f2b340105ccec",
-      "row_rle_estimate_bytes": 96
+      "sha256": "cc0873c87b7aeb8ebc975ccf1edc1d9c76eacf0e547001396506b3e239dda9da",
+      "row_rle_estimate_bytes": 78
     },
     {
       "name": "cards_info_normal_bottom_left",
@@ -1149,16 +1193,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "e00d625b93b3f1d4c4d79f52ebb586ea6995f91cf6e9511d0e1badd3c4888482",
-      "row_rle_estimate_bytes": 130
+      "sha256": "3f5f7cb608198d2167285103979e5bfdb7445aa35d337ccd5e3993d8a4f74e0f",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_info_normal_bottom",
@@ -1170,16 +1213,15 @@
       "width": 8,
       "height": 12,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "14834674124ca28b683d7b36070565c96f04aa5c97f6237f055c1f62faac25c7",
-      "row_rle_estimate_bytes": 104
+      "sha256": "792cf1621679496ae6f5fe401741d5e5664ef4024b87a4e0889c16177facc911",
+      "row_rle_estimate_bytes": 102
     },
     {
       "name": "cards_info_normal_bottom_right",
@@ -1191,16 +1233,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "72039f7a688ad80a14c7cf65643f9831064abba0488a90e2268be4f8ca83c393",
-      "row_rle_estimate_bytes": 130
+      "sha256": "812dce855ddd0da089b9777b331726920b6e55690e4ebb939d44e6e2a1c97565",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_info_current_atlas",
@@ -1213,15 +1254,14 @@
       "height": 32,
       "palette": [
         "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#b64c43"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": false,
-      "sha256": "98ea4e164d7bf0657268c6e63936068c2afad8b7991780208b363747dca1a8c1",
+      "sha256": "a674801ea30a4ba84a7a5daf4e4e88855523ad8bf03cc9d6263c8343e73170d9",
       "role": "editable-nine-slice-atlas"
     },
     {
@@ -1235,16 +1275,15 @@
       "height": 12,
       "palette": [
         "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#b64c43"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "262d92591a6dcfa6bfc0c310de1eced53b59e03254c4ff46aab5028ae13862d4",
-      "row_rle_estimate_bytes": 162
+      "sha256": "499add3935de40c2600b4ebf44ec10c4fd09e23dc47cb2e364060f5533d0634e",
+      "row_rle_estimate_bytes": 130
     },
     {
       "name": "cards_info_current_top",
@@ -1256,17 +1295,15 @@
       "width": 8,
       "height": 12,
       "palette": [
-        "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#203849"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "c20ca633554d0429c36d9ee498632ca4bd608e4473df75e5f748e819ce04a325",
-      "row_rle_estimate_bytes": 106
+      "sha256": "608e989a3e2cbe2c24b279c8d6c7e2843dc60b8c50c2737bec1c330b797a4488",
+      "row_rle_estimate_bytes": 102
     },
     {
       "name": "cards_info_current_top_right",
@@ -1278,17 +1315,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#203849"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "8ebef04da87b96561a39733d5bb2aa8c4e02e23746c8c61ac36f36909b8d65a4",
-      "row_rle_estimate_bytes": 162
+      "sha256": "56cc090fd81a2ee0fd56670849cfee18fce6022d77dc4caf973d4dacff68acce",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_info_current_left",
@@ -1301,16 +1336,15 @@
       "height": 8,
       "palette": [
         "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#b64c43"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "d819bd12c38a0c36f59342c97e90c1de5d4931932f589c2864822cf9a4668f49",
-      "row_rle_estimate_bytes": 130
+      "sha256": "68dc3aa93d56c7e2479a1c3a63b16ea51cf88fcf20c28833b8544976bf052bf5",
+      "row_rle_estimate_bytes": 96
     },
     {
       "name": "cards_info_current_center",
@@ -1322,14 +1356,14 @@
       "width": 8,
       "height": 8,
       "palette": [
-        "#f3d88a"
+        "#203849"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
       "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "012e4aa21eb2ea19a72e08e167dd63d1da8b056c8f6414b6bb5af0da17d1970f",
+      "sha256": "12fa29a64e90e18dd7acdf7f324d3b53c1b7eeb250c215df95895e720aaf7150",
       "row_rle_estimate_bytes": 78
     },
     {
@@ -1342,17 +1376,15 @@
       "width": 12,
       "height": 8,
       "palette": [
-        "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#203849"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "ac7ba2ff624b9982ceb0be8e2fa6e20cc0b5b885ede16ea35c8063560698b3d9",
-      "row_rle_estimate_bytes": 130
+      "sha256": "c8e3be09a0c9839494a492dd08497a218c2c8e7ef73093ecb6eb40edfe70db0b",
+      "row_rle_estimate_bytes": 78
     },
     {
       "name": "cards_info_current_bottom_left",
@@ -1365,16 +1397,15 @@
       "height": 12,
       "palette": [
         "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#b64c43"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "5ebff4ecae598709ba8e22f9635319eed11425b94095d7cbbd91af5c211a0dfb",
-      "row_rle_estimate_bytes": 162
+      "sha256": "09878aa5c9969d5875808a9f76567f01d078729a408330cdf844f4087d694968",
+      "row_rle_estimate_bytes": 130
     },
     {
       "name": "cards_info_current_bottom",
@@ -1386,17 +1417,15 @@
       "width": 8,
       "height": 12,
       "palette": [
-        "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#203849"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "dcc0c3cfea32bce4c5a524271a854f514336ff315b831a84f3339fab40718017",
-      "row_rle_estimate_bytes": 106
+      "sha256": "608e989a3e2cbe2c24b279c8d6c7e2843dc60b8c50c2737bec1c330b797a4488",
+      "row_rle_estimate_bytes": 102
     },
     {
       "name": "cards_info_current_bottom_right",
@@ -1408,17 +1437,15 @@
       "width": 12,
       "height": 12,
       "palette": [
-        "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#203849"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "6282be5920c728f248c8c6d332cce79fa20345c6a67d9997e15fe2f6af60ec68",
-      "row_rle_estimate_bytes": 162
+      "sha256": "ff622ec6b7a66f84928cd0daebec65dcb0c096bba0950a473414953caf6a5e39",
+      "row_rle_estimate_bytes": 108
     },
     {
       "name": "cards_popup_normal_atlas",
@@ -1430,15 +1457,14 @@
       "width": 40,
       "height": 40,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": false,
-      "sha256": "1efc4f59dce298d82d495a71244c53b8b5b1855deffb0c64e4418dd58d7c062b",
+      "sha256": "28d9326464f50af8d4e0f7da23c35e5384e2da6781fcc177c87abcd2cc4cd338",
       "role": "editable-nine-slice-atlas"
     },
     {
@@ -1451,16 +1477,15 @@
       "width": 16,
       "height": 16,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "d80462dd413d1106fc9053d97b0c821e4f17dea8409f5f5f5a85c4a787f0330c",
-      "row_rle_estimate_bytes": 162
+      "sha256": "233de3aff9bf9b85fa19c5239a97770f41dff49615d7dbdfd542e6297561a379",
+      "row_rle_estimate_bytes": 132
     },
     {
       "name": "cards_popup_normal_top",
@@ -1472,16 +1497,15 @@
       "width": 8,
       "height": 16,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "6f75dd9f8acd1a566c65d71f1a6eef1fb73a11baadab1b6e392d0eaa9e4f677d",
-      "row_rle_estimate_bytes": 128
+      "sha256": "2515c9bbefa2eb20bcc293ba4e5b9c271e5b07faddd2ad7d5d3704238cf28997",
+      "row_rle_estimate_bytes": 126
     },
     {
       "name": "cards_popup_normal_top_right",
@@ -1493,16 +1517,15 @@
       "width": 16,
       "height": 16,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "2d2a23bb3b1cdd9deb3eea9c797863c1aa501d5a3d4cae2db11f33c9622a1e67",
-      "row_rle_estimate_bytes": 162
+      "sha256": "fad744f92b46791aae66ac622c42d9a6c70d198708ee2093d0ab8b35df42abe0",
+      "row_rle_estimate_bytes": 132
     },
     {
       "name": "cards_popup_normal_left",
@@ -1514,16 +1537,15 @@
       "width": 16,
       "height": 8,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "a0097f057f29063e83bf56f9d5222a19eaf7fabf8500e6566acf9e12f1b37099",
-      "row_rle_estimate_bytes": 96
+      "sha256": "bbb088a3ed944fbe92df79d5a372ca26ddd82cbffa0143a48f97efbb3e3e1f74",
+      "row_rle_estimate_bytes": 78
     },
     {
       "name": "cards_popup_normal_center",
@@ -1535,14 +1557,14 @@
       "width": 8,
       "height": 8,
       "palette": [
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
       "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "f5dc936c16ff7e98ad6138b1b917e80a462d184256f9c578544725b069ccb01b",
+      "sha256": "d52d3f188c2ed22af72a1bb37a012e1da09414a79f732abdae686840058186e0",
       "row_rle_estimate_bytes": 78
     },
     {
@@ -1555,16 +1577,15 @@
       "width": 16,
       "height": 8,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "c9c11bc70180414f25ee761968c09668b5ecfc2bf3d277a9a7a9bfa4540c333a",
-      "row_rle_estimate_bytes": 96
+      "sha256": "bbb088a3ed944fbe92df79d5a372ca26ddd82cbffa0143a48f97efbb3e3e1f74",
+      "row_rle_estimate_bytes": 78
     },
     {
       "name": "cards_popup_normal_bottom_left",
@@ -1576,16 +1597,15 @@
       "width": 16,
       "height": 16,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "f7468ff16bbc39985eda11be75a59f2d7cff2ca250926f698f4328f46b5c7334",
-      "row_rle_estimate_bytes": 162
+      "sha256": "887553f2e87a1c294a054d94e0e6d35602810b8574ac76b5dab0a44526f2b343",
+      "row_rle_estimate_bytes": 132
     },
     {
       "name": "cards_popup_normal_bottom",
@@ -1597,16 +1617,15 @@
       "width": 8,
       "height": 16,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "d54fd5eb1726580e11b393715ebb2de10f00d7ac1cd42a2ef6bedbb1cdce6d8b",
-      "row_rle_estimate_bytes": 128
+      "sha256": "2515c9bbefa2eb20bcc293ba4e5b9c271e5b07faddd2ad7d5d3704238cf28997",
+      "row_rle_estimate_bytes": 126
     },
     {
       "name": "cards_popup_normal_bottom_right",
@@ -1618,16 +1637,15 @@
       "width": 16,
       "height": 16,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "b30fd5216339d9c6adb7bb76fc4f3c442bee5b424aa09e68f0606af6fb167d79",
-      "row_rle_estimate_bytes": 162
+      "sha256": "f067c0eb8490ff5bae482e7a7ff3bd9fd35202f9bfd507c342ef0610bda782be",
+      "row_rle_estimate_bytes": 132
     },
     {
       "name": "bars_top",
@@ -1640,16 +1658,15 @@
       "height": 32,
       "palette": [
         "#203849",
-        "#a89269",
         "#b64c43"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "e1cf8fc0c82575cc4f0e6158f3729222c7049cb0ef8e5966e46bc70dab6d5b69",
-      "row_rle_estimate_bytes": 274
+      "sha256": "817fe6882f094f3e3a9f7cbb3e9644604abcbf4aa1adb71c6ae34bb69bbafe41",
+      "row_rle_estimate_bytes": 288
     },
     {
       "name": "bars_bottom",
@@ -1661,17 +1678,15 @@
       "width": 240,
       "height": 30,
       "palette": [
-        "#203849",
-        "#a89269",
-        "#b64c43"
+        "#203849"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "686913a7ad3d22c48931bcf848ab13427101be0f7d4e2913bff0a68cf3b6b179",
-      "row_rle_estimate_bytes": 262
+      "sha256": "9e32ad7bfb24e950318602b9fe0702ba9607c18f0f71338c8cb381300de49a6c",
+      "row_rle_estimate_bytes": 210
     },
     {
       "name": "resources_bar_frame",
@@ -1684,14 +1699,14 @@
       "height": 10,
       "palette": [
         "#203849",
-        "#fff0cd"
+        "#fffaf0"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
       "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "fcdf1d911cd1f372c79a4d6cd96a1884e74348fe61ba82ae3c6816b313985602",
+      "sha256": "019b54aa3f180039d8bb27086582e5c7dbb9ab3a65d618fbf384de0c664b52be",
       "content_rect": [
         2,
         2,
@@ -1710,17 +1725,16 @@
       "width": 8,
       "height": 6,
       "palette": [
-        "#3f817b",
-        "#f3d88a"
+        "#3f817b"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "0e7812e442cab8ad2c0b3b13e2eaea23e9a9194846a2d5b00a3815204632c938",
+      "sha256": "76b1e986bd00991231a378d0dd6a8a759f1e71054251a31f1a69569b0cf71d93",
       "tile_x": true,
-      "row_rle_estimate_bytes": 68
+      "row_rle_estimate_bytes": 66
     },
     {
       "name": "resources_fill_left_cap",
@@ -1733,14 +1747,14 @@
       "height": 10,
       "palette": [
         "#203849",
-        "#fff0cd"
+        "#fffaf0"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
       "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "efa46f4554cf59436b5b0eadbae69ff53297bc9d818c0f9f5f2637a8e3475332",
+      "sha256": "fd0b685c3b6ddb804d011cda92575f5c1d25716502ce1abb24bbbf7ec2c9063b",
       "row_rle_estimate_bytes": 104
     },
     {
@@ -1754,14 +1768,14 @@
       "height": 10,
       "palette": [
         "#203849",
-        "#fff0cd"
+        "#fffaf0"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
       "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "deab853d0ed0a8936ffc39b86b0852601bf501da2f9628944ed9b0087d948db3",
+      "sha256": "abeec19b08aec6152fe9777084d876677e56771af09322e1ad02027d99639093",
       "row_rle_estimate_bytes": 104
     },
     {
@@ -1774,17 +1788,16 @@
       "width": 8,
       "height": 6,
       "palette": [
-        "#b64c43",
-        "#b9703d"
+        "#b64c43"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 32,
       "pack": true,
-      "sha256": "c802a64e44cc3e9969549ef5c84e3e6ebb4a84ab8a7703f2cb08547a6fb13d7d",
+      "sha256": "17c2fb5f5df323d7f63d5bc8f24742bb131441c21a8ad5f717af387ff08c157b",
       "tile_x": true,
-      "row_rle_estimate_bytes": 68
+      "row_rle_estimate_bytes": 66
     },
     {
       "name": "resources_low_fill_left_cap",
@@ -1797,14 +1810,14 @@
       "height": 10,
       "palette": [
         "#203849",
-        "#fff0cd"
+        "#fffaf0"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
       "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "efa46f4554cf59436b5b0eadbae69ff53297bc9d818c0f9f5f2637a8e3475332",
+      "sha256": "fd0b685c3b6ddb804d011cda92575f5c1d25716502ce1abb24bbbf7ec2c9063b",
       "row_rle_estimate_bytes": 104
     },
     {
@@ -1818,14 +1831,14 @@
       "height": 10,
       "palette": [
         "#203849",
-        "#fff0cd"
+        "#fffaf0"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
       "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "deab853d0ed0a8936ffc39b86b0852601bf501da2f9628944ed9b0087d948db3",
+      "sha256": "abeec19b08aec6152fe9777084d876677e56771af09322e1ad02027d99639093",
       "row_rle_estimate_bytes": 104
     },
     {
@@ -1838,18 +1851,17 @@
       "width": 32,
       "height": 32,
       "palette": [
-        "#ddc7a0",
-        "#fff0cd"
+        "#fffaf0"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 1,
       "color_limit": 8,
       "pack": true,
-      "sha256": "deb54c751f18f878ed77d36748e39362cf0a41565a76a9b49cbad23dc608d3a9",
+      "sha256": "d9b5aa36ace1be8c300661d6ce47618e78b63d15334062eda7b74f8ba8ff7e9f",
       "tile_x": true,
       "tile_y": true,
-      "row_rle_estimate_bytes": 272
+      "row_rle_estimate_bytes": 222
     },
     {
       "name": "passport_grid_normal",
@@ -1861,23 +1873,23 @@
       "width": 104,
       "height": 52,
       "palette": [
-        "#3f817b",
-        "#a89269",
-        "#fff0cd"
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "775bbc5a7dd6f5a7436a201ccfe8c19ab21ca342c33b35817542960200e4fabe",
+      "sha256": "3642d3de72e7ae0866e68a62734e9a873d40df7c2bed32c9511d02e12ad8be2a",
       "text_rect": [
-        12,
+        8,
         8,
         96,
-        30
+        44
       ],
-      "row_rle_estimate_bytes": 892
+      "text_color": "ink",
+      "stamps": "program draws earned stamps; no duplicate baked placeholders",
+      "row_rle_estimate_bytes": 360
     },
     {
       "name": "passport_grid_current",
@@ -1890,25 +1902,23 @@
       "height": 52,
       "palette": [
         "#203849",
-        "#3f817b",
-        "#a89269",
-        "#b64c43",
-        "#f3d88a",
-        "#fff0cd"
+        "#b64c43"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 7,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "067bbfdc7a4adbd3aebc3bc3eba1626ae76a8b0070850cd64a7cb00a90349d79",
+      "sha256": "de61515f7cb299a9cafd56fcee2ffd670dd4da4c4c182a8f5852cacec1284ad0",
       "text_rect": [
-        12,
+        8,
         8,
         96,
-        30
+        44
       ],
-      "row_rle_estimate_bytes": 1098
+      "text_color": "white",
+      "stamps": "program draws earned stamps; no duplicate baked placeholders",
+      "row_rle_estimate_bytes": 458
     },
     {
       "name": "passport_locked_mask",
@@ -1920,17 +1930,17 @@
       "width": 104,
       "height": 52,
       "palette": [
-        "#203849",
-        "#756b55",
-        "#ddc7a0"
+        "#60707a",
+        "#fffaf0"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "7ee8724352e4959d77bfc4aa775a6f8aca22bd9d4e734bccd9bc944249d719bb",
-      "row_rle_estimate_bytes": 904
+      "sha256": "d066f67fd07dce0d466507993d8a8ff7fbd996be26a1679207b7186df9986146",
+      "note": "Symbol only; render 未解锁 dynamically at (8,30), cream if selected",
+      "row_rle_estimate_bytes": 442
     },
     {
       "name": "passport_header",
@@ -1943,567 +1953,615 @@
       "height": 24,
       "palette": [
         "#203849",
-        "#a89269"
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
       "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "d8ce1a0ae5edd14c0ccb0b8afc879ebd2040a40d4292f4022ce30d419285e800",
-      "row_rle_estimate_bytes": 714
+      "sha256": "301a887c62d254e49fc8a237b6a47c2fecb6e95191bfbc3aa684ec15dc3e5b21",
+      "row_rle_estimate_bytes": 2268
     },
     {
       "name": "numbers_36_0",
       "path": "numbers/36/0.png",
       "size": [
-        29,
+        37,
         36
       ],
-      "width": 29,
+      "width": 37,
       "height": 36,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "8a7ea02f6220ad927be27e608efc9b684d3e8338227fddd525dc803a19553fee",
-      "advance": 28,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "ee0cfb221562a61bf293119284e66d14a579b944e95a1e9afc6cca65eb43f76f",
+      "advance": 36,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 488
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 638
     },
     {
       "name": "numbers_36_1",
       "path": "numbers/36/1.png",
       "size": [
-        29,
+        23,
         36
       ],
-      "width": 29,
+      "width": 23,
       "height": 36,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "fa9ff1f28516ea297f878a0979efe3bee07bc42b85a062fdf33e999183b2c6c7",
-      "advance": 28,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "a69152c68106e70142d64d493d57f0dcace13a06e29e6861acb8a528d3c067c7",
+      "advance": 22,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 376
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 460
     },
     {
       "name": "numbers_36_2",
       "path": "numbers/36/2.png",
       "size": [
-        29,
+        32,
         36
       ],
-      "width": 29,
+      "width": 32,
       "height": 36,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "be2a8a9a2c4c9067948e5743bcf61d112050586b2aba3ee5907421878cc2aa89",
-      "advance": 28,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "26b4dc9400f8e8e56492902e2d09cd31f1eb58b6658740bec8718ac5efc2014c",
+      "advance": 31,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 392
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 498
     },
     {
       "name": "numbers_36_3",
       "path": "numbers/36/3.png",
       "size": [
-        29,
+        33,
         36
       ],
-      "width": 29,
+      "width": 33,
       "height": 36,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "9a541e98fd2e15cf95887c3a898b1bc09a8328355707376fbeb52af3f46a3a40",
-      "advance": 28,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "7321b4e541d2016a4ecb6c648accea7d31b8609765664f3f2d2b3b8ec78c671e",
+      "advance": 32,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 412
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 506
     },
     {
       "name": "numbers_36_4",
       "path": "numbers/36/4.png",
       "size": [
-        29,
+        37,
         36
       ],
-      "width": 29,
+      "width": 37,
       "height": 36,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "b7783ed1863858ef6da98382af3302828e47425ff46d3dbc17039dfb30f8e0f8",
-      "advance": 28,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "6f694cdbf7b2741f8c2c9df374f5069d5cfa26984579e8bfcab45adc4242a4c5",
+      "advance": 36,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 428
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 498
     },
     {
       "name": "numbers_36_5",
       "path": "numbers/36/5.png",
       "size": [
-        29,
+        32,
         36
       ],
-      "width": 29,
+      "width": 32,
       "height": 36,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "f986cfa7b35216e1fb372df6d4a93333a4f0e094758a87cb8337ada2aebf2899",
-      "advance": 28,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "7ac311d5f2ddf16d9d3eef0192e5437b954f03c9930b2029f49054f0b10faf6f",
+      "advance": 31,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 404
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 510
     },
     {
       "name": "numbers_36_6",
       "path": "numbers/36/6.png",
       "size": [
-        29,
+        35,
         36
       ],
-      "width": 29,
+      "width": 35,
       "height": 36,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "2dde530f8b627667b31627e04a65997f32e9f7a5c076e374c46d7117fba3a474",
-      "advance": 28,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "e0d61d3db478784228e9faae038fe50dd35982db43583e68a8c0f0a19ef0027e",
+      "advance": 34,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 456
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 584
     },
     {
       "name": "numbers_36_7",
       "path": "numbers/36/7.png",
       "size": [
-        29,
+        34,
         36
       ],
-      "width": 29,
+      "width": 34,
       "height": 36,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "8e807fd3d1657c4f0ea64c7388d99106a160eaf3ed56ea1dbb538cdb375a082a",
-      "advance": 28,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "e6c02afea2c27ff9756dd5d86203958def76cc4c72f0a746586e09a0c0042239",
+      "advance": 33,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 376
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 484
     },
     {
       "name": "numbers_36_8",
       "path": "numbers/36/8.png",
       "size": [
-        29,
+        36,
         36
       ],
-      "width": 29,
+      "width": 36,
       "height": 36,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "1b6b1cad4fc942e00f37a06f9538c9d7aefceef772c7b540ce119ba6ab61fce9",
-      "advance": 28,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "85284528eab1382c414dacea1c7ebdbaf174281f39cac0b2b643eaa684c7b27b",
+      "advance": 35,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 476
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 612
     },
     {
       "name": "numbers_36_9",
       "path": "numbers/36/9.png",
       "size": [
-        29,
+        34,
         36
       ],
-      "width": 29,
+      "width": 34,
       "height": 36,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "71104f589e3ffc6bf5fea658cf440878ef73fbad74d350ef4063131158e3e6d1",
-      "advance": 28,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "c938edd1fcbd3232d9f6433dacb6339a13b4daf1291db4847d0680d4f876075e",
+      "advance": 33,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 456
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 594
     },
     {
       "name": "numbers_36_m",
       "path": "numbers/36/m.png",
       "size": [
-        45,
+        54,
         36
       ],
-      "width": 45,
+      "width": 54,
       "height": 36,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "42ceddd5b35007205707d79446d528edbf80bffe1cc05d967b514e6099798a6a",
-      "advance": 44,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "c10a2193b5fa7b055dd971219cb4dd197e7a0bf9514de1a20a77c89e4558966e",
+      "advance": 53,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 536
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 698
     },
     {
       "name": "numbers_36_plus",
       "path": "numbers/36/plus.png",
       "size": [
-        29,
+        32,
         36
       ],
-      "width": 29,
+      "width": 32,
       "height": 36,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "160c80b16325a12ab6483086d2e5454bf7838911273695af7eafa212216a219e",
-      "advance": 28,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "be88b83984174d49ef3204bbee165a64f9e34880baa2dfffe1f01c0bf748c556",
+      "advance": 31,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 340
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 362
     },
     {
       "name": "numbers_20_0",
       "path": "numbers/20/0.png",
       "size": [
-        18,
+        23,
         20
       ],
-      "width": 18,
+      "width": 23,
       "height": 20,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "30cffe72cc7444e5550ecc479bd10433e50069df65dcfd2f45eeb1c3c2232a00",
-      "advance": 17,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "a9a8318e0f0edac5b9f1a9ae17af122aff663ea46ff1060990a6863ef5c4b2cc",
+      "advance": 22,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 280
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 362
     },
     {
       "name": "numbers_20_1",
       "path": "numbers/20/1.png",
       "size": [
-        18,
+        16,
         20
       ],
-      "width": 18,
+      "width": 16,
       "height": 20,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "5d30a6e2cf87000da9768e07893b197e400cb7deb64c051e6db522f78f5a4d31",
-      "advance": 17,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "0ce244e8a94285f7c69599e3afddcf89efc836f134bd62c7f0f793b3af8ff829",
+      "advance": 15,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 224
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 270
     },
     {
       "name": "numbers_20_2",
       "path": "numbers/20/2.png",
       "size": [
-        18,
+        21,
         20
       ],
-      "width": 18,
+      "width": 21,
       "height": 20,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "b9e886b71b65fd3f4427c104ef316da8cafa88430f68b7ad3065c18fe68eb5db",
-      "advance": 17,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "151b9afd5df2456ed8b628e820b87cc5f300fa7c1ea4cbdeb8c985763a133dbc",
+      "advance": 20,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 232
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 294
     },
     {
       "name": "numbers_20_3",
       "path": "numbers/20/3.png",
       "size": [
-        18,
+        20,
         20
       ],
-      "width": 18,
+      "width": 20,
       "height": 20,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "691b873b4727bdc5a1098c0c5b0dd2eb83d6d4bac49ff10e4cd636e413c77b95",
-      "advance": 17,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "4f56a0f36bce0e0c26d37bc667597d73d1e5050b24093470bc4886354cf875df",
+      "advance": 19,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 240
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 296
     },
     {
       "name": "numbers_20_4",
       "path": "numbers/20/4.png",
       "size": [
-        18,
+        23,
         20
       ],
-      "width": 18,
+      "width": 23,
       "height": 20,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "c25ca328d4fbaf657dc6a3cc9bb2466994bdf2db0a689192030ed81f7c751ca1",
-      "advance": 17,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "55033f1240638ad331fbc3dd78e5d52ea86f9cbda968992da0822af5ed6deb35",
+      "advance": 22,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 252
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 308
     },
     {
       "name": "numbers_20_5",
       "path": "numbers/20/5.png",
       "size": [
-        18,
+        21,
         20
       ],
-      "width": 18,
+      "width": 21,
       "height": 20,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "bf833c6b99e29976933c87763e03a25fe1cbaf69fcb59296f90d9bc8e4653fbc",
-      "advance": 17,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "4b329328fa10f99859e130e19ed7e6b54acfcdc4ddc2b672cd21871ddf0ec8cb",
+      "advance": 20,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 236
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 298
     },
     {
       "name": "numbers_20_6",
       "path": "numbers/20/6.png",
       "size": [
-        18,
+        22,
         20
       ],
-      "width": 18,
+      "width": 22,
       "height": 20,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "b4faaa326cd2e844f942bb7e580a2624e187e13dbaa0d9d5b8d81ac70b47babb",
-      "advance": 17,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "e88261a9d0d776b48fc14b8442f937d7633b76de165ded51e59e4c76aa3fd3e6",
+      "advance": 21,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 260
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 332
     },
     {
       "name": "numbers_20_7",
       "path": "numbers/20/7.png",
       "size": [
-        18,
+        21,
         20
       ],
-      "width": 18,
+      "width": 21,
       "height": 20,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "36290b72cbf585ae0ad2dcfbc04108a9cf131994cbd2d6e8171f31964868ed96",
-      "advance": 17,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "0abb28f6f3ea315549c5195915210dde5faedaf5824872ea3e66ab267d02410d",
+      "advance": 20,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 224
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 300
     },
     {
       "name": "numbers_20_8",
       "path": "numbers/20/8.png",
       "size": [
-        18,
+        22,
         20
       ],
-      "width": 18,
+      "width": 22,
       "height": 20,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "0dd3860fe49684cda6eb1f4634650dffb079a80d9aecac0ce3df374d0e1b3e25",
-      "advance": 17,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "b734bc6e0f4cf81c5fc0d5447b4d51b9ce19da8096a8e1086a62fa29257b4c32",
+      "advance": 21,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 272
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 346
     },
     {
       "name": "numbers_20_9",
       "path": "numbers/20/9.png",
       "size": [
-        18,
+        22,
         20
       ],
-      "width": 18,
+      "width": 22,
       "height": 20,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "1a8ff73d9b3c718625ca1f2c1b9d5acd8cef84d88c55657e36d55496a1552f29",
-      "advance": 17,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "90d6de64063ba451ece51afa6fcaee25fd9f1a34c08c9bae9e50530f9f643fc4",
+      "advance": 21,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 260
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 330
     },
     {
       "name": "numbers_20_m",
       "path": "numbers/20/m.png",
       "size": [
-        27,
+        33,
         20
       ],
-      "width": 27,
+      "width": 33,
       "height": 20,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "17c0586db8f4f394a436749adeb02405d707b8526cf063603da81cf0cef1f9c6",
-      "advance": 26,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "d84b99c2a71987d16f3076044d21de9b425b9ada4883323ad46e46d2612a82e2",
+      "advance": 32,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 296
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 410
     },
     {
       "name": "numbers_20_plus",
       "path": "numbers/20/plus.png",
       "size": [
-        18,
+        21,
         20
       ],
-      "width": 18,
+      "width": 21,
       "height": 20,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 8,
       "pack": true,
-      "sha256": "03ce10a1c1f90c2f6d02c466216304ade749329a48b4e01946469d303aed1d8b",
-      "advance": 17,
-      "font_source": "verified SourceHanSansCN-Medium",
+      "sha256": "dddff7189ae460af90f5a8f4b00f73030a89f51ae560787c52992bd1570caf56",
+      "advance": 20,
+      "font_source": "verified Montserrat Bold 700",
       "native_raster": true,
-      "row_rle_estimate_bytes": 200
+      "matte": "white paper",
+      "row_rle_estimate_bytes": 216
     },
     {
       "name": "labels_new_record",
@@ -2515,18 +2573,18 @@
       "width": 72,
       "height": 24,
       "palette": [
-        "#203849",
         "#b64c43",
-        "#fff0cd"
+        "#dba39a",
+        "#fffaf0"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
       "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "2392e19aba655abdad0637720cbf152aa91ea119822617f8096c97e5fac0ee28",
+      "sha256": "7b662b238ff0499009671c44acef88ec7360001e3ec75375b9acd2edc04ea4a0",
       "text": "新纪录",
-      "row_rle_estimate_bytes": 554
+      "row_rle_estimate_bytes": 608
     },
     {
       "name": "labels_test_no_record",
@@ -2539,16 +2597,17 @@
       "height": 24,
       "palette": [
         "#203849",
-        "#fff0cd"
+        "#90999d",
+        "#fffaf0"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "0ae4be25eceffead6fb79cf4cdee4e518ad24853e04b50f500d1174664910ae0",
+      "sha256": "80eac3bd516ef99c01a908a211174b6db1700c6742f2ceec9fa7ccaedf7471c7",
       "text": "测试不记录",
-      "row_rle_estimate_bytes": 668
+      "row_rle_estimate_bytes": 834
     },
     {
       "name": "labels_placeholder",
@@ -2560,18 +2619,18 @@
       "width": 88,
       "height": 24,
       "palette": [
-        "#203849",
-        "#756b55",
-        "#ddc7a0"
+        "#60707a",
+        "#a9afb0",
+        "#f1eee5"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
       "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "38830fa775a685c3cf6cfcf0d4160bbddb3f3c1d86163bcd110bd8358f21212e",
+      "sha256": "09a0ed4768f5c1b6efdb6723ec4946d2c9cdb2b4b365c6946c469f422762e0c2",
       "text": "占位关卡",
-      "row_rle_estimate_bytes": 554
+      "row_rle_estimate_bytes": 632
     },
     {
       "name": "labels_boot_caption",
@@ -2583,39 +2642,40 @@
       "width": 220,
       "height": 24,
       "palette": [
-        "#203849"
+        "#203849",
+        "#90999d"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 2,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "34d99c5f2005a4447252cae415a8e5dbe2c08c63650da14e33eacda2bb354a7f",
+      "sha256": "6af62457ae0012eda92b53e8a14ea1625b20c8251944434db6f0b38110139d14",
       "text": "NABO,陪你冒险",
-      "row_rle_estimate_bytes": 1184
+      "row_rle_estimate_bytes": 1094
     },
     {
       "name": "labels_press_start",
       "path": "labels/press-start.png",
       "size": [
-        168,
-        28
+        208,
+        34
       ],
-      "width": 168,
-      "height": 28,
+      "width": 208,
+      "height": 34,
       "palette": [
         "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#90999d",
+        "#fffaf0"
       ],
-      "palette_has_transparent": true,
+      "palette_has_transparent": false,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "b9053c3b86f083842c344895fe6f85a02fa0c709c391a82537e570fbcd23bd81",
+      "sha256": "0cab8b3ee5bffcccc6b2dbe0f4972ee93514f02b82b7bd3b24ea059616b85731",
       "text": "按 OK 出发",
-      "row_rle_estimate_bytes": 1044
+      "row_rle_estimate_bytes": 1236
     },
     {
       "name": "map_station_unlocked",
@@ -2627,22 +2687,21 @@
       "width": 48,
       "height": 40,
       "palette": [
-        "#203849",
-        "#a89269",
-        "#c7b389",
-        "#fff0cd"
+        "#60707a",
+        "#dcdcd3",
+        "#fffaf0"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 5,
+      "colors_with_transparency": 4,
       "color_limit": 32,
       "pack": true,
-      "sha256": "76fd80a94e7ae73fdafac63cc72046b8bfd791c919a92996ffbc9a04fd02f54c",
+      "sha256": "60b94b480cf38fb16e2a343cf702ffd18964d7e407b69743ba52e50c29a65e00",
       "anchor": [
         24,
         24
       ],
-      "row_rle_estimate_bytes": 566
+      "row_rle_estimate_bytes": 504
     },
     {
       "name": "map_station_locked",
@@ -2654,22 +2713,21 @@
       "width": 48,
       "height": 40,
       "palette": [
-        "#203849",
-        "#a89269",
-        "#c7b389",
-        "#ddc7a0"
+        "#60707a",
+        "#dcdcd3",
+        "#f1eee5"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 5,
+      "colors_with_transparency": 4,
       "color_limit": 32,
       "pack": true,
-      "sha256": "02da180e4b1898555f71a2a5df77a308fc188dbf3fe5860cc1231ce475e1093a",
+      "sha256": "fe961d9ebbb17e30e79c27b2292c255a818563a607963f99b666638749b84afc",
       "anchor": [
         24,
         24
       ],
-      "row_rle_estimate_bytes": 566
+      "row_rle_estimate_bytes": 504
     },
     {
       "name": "map_station_current",
@@ -2681,22 +2739,21 @@
       "width": 48,
       "height": 40,
       "palette": [
-        "#203849",
         "#b64c43",
-        "#c7b389",
-        "#f3d88a"
+        "#dcdcd3",
+        "#fffaf0"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 5,
+      "colors_with_transparency": 4,
       "color_limit": 32,
       "pack": true,
-      "sha256": "a161e7004b57812e9c4654eea799a1d7e1e623a2ae7d2fdea8e47bf34d9338f4",
+      "sha256": "01638dff0f1174de9deb52a5e2fa70110dcd1a55d6cc0539fdaf385fc0a99287",
       "anchor": [
         24,
         24
       ],
-      "row_rle_estimate_bytes": 538
+      "row_rle_estimate_bytes": 516
     },
     {
       "name": "map_footprints_forward",
@@ -2748,17 +2805,16 @@
       "width": 16,
       "height": 16,
       "palette": [
-        "#203849",
-        "#756b55",
-        "#ddc7a0"
+        "#60707a",
+        "#fffaf0"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "b8514b70be05d9678c2ff20e37beb23cbedae4ec66b631c1e03df853613117d4",
-      "row_rle_estimate_bytes": 252
+      "sha256": "b340d12d645006f7be1a710984fb1c7e0ef70d4532840d91c5fc676339cc2b58",
+      "row_rle_estimate_bytes": 226
     },
     {
       "name": "map_stamp_bronze",
@@ -2770,17 +2826,16 @@
       "width": 16,
       "height": 16,
       "palette": [
-        "#203849",
         "#b9703d",
-        "#fff0cd"
+        "#fffaf0"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "9a7c98af42bc7df40a1266cfa5a73bd6f21078ffe645676ddbb3dd9350f1b1a3",
-      "row_rle_estimate_bytes": 264
+      "sha256": "2cba07d10f610270caa869aff8ae0020ee1632d38cecd9e0f033a0d01497156a",
+      "row_rle_estimate_bytes": 226
     },
     {
       "name": "map_stamp_silver",
@@ -2792,17 +2847,16 @@
       "width": 16,
       "height": 16,
       "palette": [
-        "#203849",
         "#9ca8a7",
-        "#fff0cd"
+        "#fffaf0"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "da6046e7b6877d00831bafb235fdbd9a9e312aa64e38a0abdb1c38a1a32d3bba",
-      "row_rle_estimate_bytes": 264
+      "sha256": "4cfdc03b59757982d91b9852280965d1ffc560c4052dfed650a0920c8781e130",
+      "row_rle_estimate_bytes": 226
     },
     {
       "name": "map_stamp_gold",
@@ -2814,17 +2868,16 @@
       "width": 16,
       "height": 16,
       "palette": [
-        "#203849",
         "#d1a43f",
-        "#fff0cd"
+        "#fffaf0"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "eae4ae327a6829b68d6239f676800b008f1fdf4443e90cdfa14053b004a348f1",
-      "row_rle_estimate_bytes": 264
+      "sha256": "6c8ac5c09baa830d983e8485da8568bd98b10e5bcb3743839579a46264bd79e3",
+      "row_rle_estimate_bytes": 226
     },
     {
       "name": "map_stamp_empty",
@@ -2836,16 +2889,15 @@
       "width": 16,
       "height": 16,
       "palette": [
-        "#a89269",
-        "#fff0cd"
+        "#60707a"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 3,
+      "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "8258c407324e620ab7f6e84f718d71e0441625240b9f9de2272b092f4b663774",
-      "row_rle_estimate_bytes": 226
+      "sha256": "cab2a874fc2c9c7ee63b6e5d41eff652a2021c8d529e42f1fc1f26e3dd0ac39a",
+      "row_rle_estimate_bytes": 224
     },
     {
       "name": "map_temporary_position_marker",
@@ -2858,14 +2910,14 @@
       "height": 20,
       "palette": [
         "#b64c43",
-        "#f3d88a"
+        "#fffaf0"
       ],
       "palette_has_transparent": false,
       "palette_group": "shared",
       "colors_with_transparency": 2,
       "color_limit": 32,
       "pack": true,
-      "sha256": "b0e5b1efc5d6457ac040a0c22d13d3b3fdb76f4eb8aa664c6c26e96c8eb641bd",
+      "sha256": "2d9f9968abae3cfc1c0de49735a995a1cf174e80b06eb8247de9b6ec7ef2f794",
       "temporary": true,
       "note": "Unused when the real NABO sprite is available; no character drawing",
       "row_rle_estimate_bytes": 228
@@ -2888,8 +2940,8 @@
       "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "24a9028ec1a413b78495c138bcac9af748f8c65b6c8b04f87ed5ceffa51680a7",
-      "row_rle_estimate_bytes": 1050
+      "sha256": "38f6e2f57d30bd11e6d727e4aff4c2f34f780a23049a416135e144b0e67b6efb",
+      "row_rle_estimate_bytes": 874
     },
     {
       "name": "wordmarks_collection",
@@ -2902,21 +2954,20 @@
       "height": 90,
       "palette": [
         "#203849",
-        "#a89269",
-        "#b64c43",
-        "#fff0cd"
+        "#90999d",
+        "#b64c43"
       ],
       "palette_has_transparent": true,
       "palette_group": "wordmarks",
-      "colors_with_transparency": 5,
+      "colors_with_transparency": 4,
       "color_limit": 16,
       "pack": true,
-      "sha256": "c277e2fa7b91baf203238a460a92c5bfd111b2ba41b255a1b593a9b615924ca1",
+      "sha256": "9c207a66c387feb99ab38787dc11870bb047d6e36deabd7c42c9162778ab3d39",
       "text": [
         "NABO ADVENTURE",
         "NABO 的冒险之旅"
       ],
-      "row_rle_estimate_bytes": 3370
+      "row_rle_estimate_bytes": 5366
     },
     {
       "name": "wordmarks_jump",
@@ -2929,21 +2980,22 @@
       "height": 80,
       "palette": [
         "#203849",
-        "#a89269",
+        "#90999d",
         "#b64c43",
-        "#fff0cd"
+        "#dba39a",
+        "#fffaf0"
       ],
-      "palette_has_transparent": true,
+      "palette_has_transparent": false,
       "palette_group": "wordmarks",
       "colors_with_transparency": 5,
       "color_limit": 16,
       "pack": true,
-      "sha256": "64a9f8d4ff4b6e2ad168b08dc9a5847731eb674307afed6d828bc9f70ead0aad",
+      "sha256": "af3847bf24ed80b867d7747a52bf3d46180f8e46a5ecbe8daa76a1fe733950b9",
       "text": [
         "JUMP",
         "跳一跳"
       ],
-      "row_rle_estimate_bytes": 2790
+      "row_rle_estimate_bytes": 2012
     },
     {
       "name": "wordmarks_dive",
@@ -2956,21 +3008,22 @@
       "height": 80,
       "palette": [
         "#203849",
-        "#a89269",
+        "#90999d",
         "#b64c43",
-        "#fff0cd"
+        "#dba39a",
+        "#fffaf0"
       ],
-      "palette_has_transparent": true,
+      "palette_has_transparent": false,
       "palette_group": "wordmarks",
       "colors_with_transparency": 5,
       "color_limit": 16,
       "pack": true,
-      "sha256": "c5ea475f5ad173fde9bc148dba6e24631b01fd3c9f62f78e70bd5e19938c8753",
+      "sha256": "1db11f5364b625345f5001714c30034876f3542f0ab895d60f7ce5937b69385d",
       "text": [
         "DIVE",
         "深潜"
       ],
-      "row_rle_estimate_bytes": 2518
+      "row_rle_estimate_bytes": 1740
     },
     {
       "name": "wordmarks_post",
@@ -2983,21 +3036,22 @@
       "height": 80,
       "palette": [
         "#203849",
-        "#a89269",
+        "#90999d",
         "#b64c43",
-        "#fff0cd"
+        "#dba39a",
+        "#fffaf0"
       ],
-      "palette_has_transparent": true,
+      "palette_has_transparent": false,
       "palette_group": "wordmarks",
       "colors_with_transparency": 5,
       "color_limit": 16,
       "pack": true,
-      "sha256": "a34c9d8b9c1676b147b2a2fc8ea58e9cb2858bf3d6ee5357ade53ddaf1e59f36",
+      "sha256": "72d6025198d510c41a9ffbeec5dd19c943de91d51331adb42b2ed3ba090e5cd0",
       "text": [
         "POST",
         "小火车"
       ],
-      "row_rle_estimate_bytes": 2498
+      "row_rle_estimate_bytes": 1744
     },
     {
       "name": "wordmarks_night",
@@ -3010,21 +3064,22 @@
       "height": 80,
       "palette": [
         "#203849",
-        "#a89269",
+        "#90999d",
         "#b64c43",
-        "#fff0cd"
+        "#dba39a",
+        "#fffaf0"
       ],
-      "palette_has_transparent": true,
+      "palette_has_transparent": false,
       "palette_group": "wordmarks",
       "colors_with_transparency": 5,
       "color_limit": 16,
       "pack": true,
-      "sha256": "2dc0d27de86975e7d88f85acd28a0ffaaab0d990b124baf35c1c8b1e8f3b1320",
+      "sha256": "ba1d2a8f9efc3151ffc87024bdfeae2cb0975c3c9c8ff885efaeda0be85fa6e4",
       "text": [
         "NIGHT",
         "萤火虫"
       ],
-      "row_rle_estimate_bytes": 2646
+      "row_rle_estimate_bytes": 1828
     },
     {
       "name": "wordmarks_climb",
@@ -3037,21 +3092,22 @@
       "height": 80,
       "palette": [
         "#203849",
-        "#a89269",
+        "#90999d",
         "#b64c43",
-        "#fff0cd"
+        "#dba39a",
+        "#fffaf0"
       ],
-      "palette_has_transparent": true,
+      "palette_has_transparent": false,
       "palette_group": "wordmarks",
       "colors_with_transparency": 5,
       "color_limit": 16,
       "pack": true,
-      "sha256": "024e716e64bbdc6905f23bda403a056d6f9a54b9479adbd1ed2293a54cbf0578",
+      "sha256": "311d3e321653014525668004b6bec954cf8338ff9893e0ebc69614ba5d7fef22",
       "text": [
         "CLIMB",
         "登山"
       ],
-      "row_rle_estimate_bytes": 2570
+      "row_rle_estimate_bytes": 1700
     },
     {
       "name": "wordmarks_ski",
@@ -3064,21 +3120,22 @@
       "height": 80,
       "palette": [
         "#203849",
-        "#a89269",
+        "#90999d",
         "#b64c43",
-        "#fff0cd"
+        "#dba39a",
+        "#fffaf0"
       ],
-      "palette_has_transparent": true,
+      "palette_has_transparent": false,
       "palette_group": "wordmarks",
       "colors_with_transparency": 5,
       "color_limit": 16,
       "pack": true,
-      "sha256": "6a766c6bef724944fd745861dae097f5bc238e1a8a27e9a3fb4b69b7b87c2881",
+      "sha256": "51f0b63a15702cad04f2e6b8ae73bbedb244717278cbf14603b96f24e73a0983",
       "text": [
         "SKI",
         "滑雪"
       ],
-      "row_rle_estimate_bytes": 2350
+      "row_rle_estimate_bytes": 1438
     },
     {
       "name": "wordmarks_sky",
@@ -3091,21 +3148,22 @@
       "height": 80,
       "palette": [
         "#203849",
-        "#a89269",
+        "#90999d",
         "#b64c43",
-        "#fff0cd"
+        "#dba39a",
+        "#fffaf0"
       ],
-      "palette_has_transparent": true,
+      "palette_has_transparent": false,
       "palette_group": "wordmarks",
       "colors_with_transparency": 5,
       "color_limit": 16,
       "pack": true,
-      "sha256": "4d6dc5aafdc5d83cd746bbe8bf6a93e690309d9e3dc709f5a0e066dd8aadc05a",
+      "sha256": "893f514fe1937f6bc7b8013212a9ead4e9d18ef75ca612b1304ed2944b2d7682",
       "text": [
         "SKY",
         "热气球"
       ],
-      "row_rle_estimate_bytes": 2586
+      "row_rle_estimate_bytes": 1934
     },
     {
       "name": "wordmarks_space",
@@ -3118,21 +3176,22 @@
       "height": 80,
       "palette": [
         "#203849",
-        "#a89269",
+        "#90999d",
         "#b64c43",
-        "#fff0cd"
+        "#dba39a",
+        "#fffaf0"
       ],
-      "palette_has_transparent": true,
+      "palette_has_transparent": false,
       "palette_group": "wordmarks",
       "colors_with_transparency": 5,
       "color_limit": 16,
       "pack": true,
-      "sha256": "e2b554dcb5eaa876e184ab2883509cdce67e75f00b4e229e8c78a216410dce62",
+      "sha256": "7c91a87bfe33d5ff3607e6b0cbd9b0702fd416015e931556060c7b7a1eb5004e",
       "text": [
         "SPACE",
         "太空"
       ],
-      "row_rle_estimate_bytes": 2426
+      "row_rle_estimate_bytes": 1470
     },
     {
       "name": "resources_icons_stamina",
@@ -3145,16 +3204,15 @@
       "height": 16,
       "palette": [
         "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#b64c43"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "e965610417a670e0f0bb1ecc86c4bd623438f605d9b118c764cb6c468fc1953c",
-      "row_rle_estimate_bytes": 266
+      "sha256": "68626ba880f8f4b5e1ade1c2700e609f5d6ec2e0fd1252622b58808ab0c57c19",
+      "row_rle_estimate_bytes": 262
     },
     {
       "name": "resources_icons_oxygen",
@@ -3168,14 +3226,14 @@
       "palette": [
         "#203849",
         "#477191",
-        "#fff0cd"
+        "#fffaf0"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
       "colors_with_transparency": 4,
       "color_limit": 32,
       "pack": true,
-      "sha256": "db2e5cde83c3a0afaa0a13ad5d0273161977f54bbe5d47e9512f8deb6ef0a038",
+      "sha256": "396b8e74ac5e2bc92982d106ec822f6373a52518f490221fe142a9812e88db5b",
       "row_rle_estimate_bytes": 252
     },
     {
@@ -3190,14 +3248,14 @@
       "palette": [
         "#203849",
         "#3f817b",
-        "#756b55"
+        "#60707a"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
       "colors_with_transparency": 4,
       "color_limit": 32,
       "pack": true,
-      "sha256": "787a93ff6825eb9c151cec800f1de0b857a448c83246cd12864f182261322af3",
+      "sha256": "4be2ef8ff5b002522692ac02b400b1f47f3817fb7bbf11d11f4082cf1a577c87",
       "row_rle_estimate_bytes": 248
     },
     {
@@ -3234,14 +3292,14 @@
       "palette": [
         "#203849",
         "#b64c43",
-        "#fff0cd"
+        "#fffaf0"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
       "colors_with_transparency": 4,
       "color_limit": 32,
       "pack": true,
-      "sha256": "128e36fb7c0715dcd46043120333dabc83d58a1a1e47fd7a67b9b2c6517ba3e3",
+      "sha256": "c911aeda8f6c1e2e8870d7f8c95058e231c8bda5480ba1e5a6a831ae51b61760",
       "row_rle_estimate_bytes": 244
     },
     {
@@ -3255,16 +3313,15 @@
       "height": 16,
       "palette": [
         "#203849",
-        "#b64c43",
-        "#f3d88a"
+        "#b64c43"
       ],
       "palette_has_transparent": true,
       "palette_group": "shared",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 3,
       "color_limit": 32,
       "pack": true,
-      "sha256": "b19f58b5370e766b3e5a170e1d077b28d04173d4afbd2eba2349579212678f79",
-      "row_rle_estimate_bytes": 298
+      "sha256": "a7139afbaac89744e17c5359c18bcd7bf243d6847bb54181576a585284a15d62",
+      "row_rle_estimate_bytes": 294
     },
     {
       "name": "resources_icons_fuel",
@@ -3298,66 +3355,35 @@
       "height": 320,
       "palette": [
         "#203849",
-        "#3f817b",
         "#477191",
-        "#756b55",
-        "#9ca8a7",
-        "#a89269",
         "#b64c43",
         "#b9703d",
-        "#c7b389",
         "#d1a43f",
-        "#e7d5ad",
-        "#f3d88a",
         "#fff0cd",
         "#fffaf0"
       ],
       "palette_has_transparent": false,
       "palette_group": "cover",
-      "colors_with_transparency": 14,
+      "colors_with_transparency": 7,
       "color_limit": 64,
       "pack": false,
-      "sha256": "eede7e663e19b35bff77d599a0c9f2ae62cbcf3ed1e512a5f1e090c7a0bc36bd",
+      "sha256": "e0ea16ea3cf56907d6f2798af88bab767414c2fd826b0a239425117c5a533337",
       "contains_character": false,
       "source_art": [
         {
-          "path": "map\\tiles\\space\\asteroid.png",
-          "sha256": "0c3fd7d7a9eedb33a746ed3272af55162e9e0d75950ff849a2c320e7ca6ffc24"
+          "path": "map/tiles/mountain/snowcap-rock.png",
+          "sha256": "1b94744c19c7bb95a7faf3c53bb9b3d410cdbf932aa690722797fe997928264e"
         },
         {
-          "path": "map\\landmarks\\space.png",
-          "sha256": "6764b4f23eb63172419a6d00ab004dfffff02bf0e6f316481c00ac07bebb8bd1"
-        },
-        {
-          "path": "map\\tiles\\mountain\\ice-crystals.png",
-          "sha256": "d4226c2f39ab5f08a5c4fd40e4165ccb72bbbae3fa5248f522584016b738b886"
-        },
-        {
-          "path": "map\\landmarks\\climb.png",
-          "sha256": "ac128f0afb2902bdc9418a51d87068c238690d326125d664fbebe84cd5729c94"
-        },
-        {
-          "path": "map\\tiles\\town\\bunting.png",
-          "sha256": "6da0b8085c835b4f6c75c0d240cd468ecd73298967f96d813cbbcc40bfa103d7"
-        },
-        {
-          "path": "map\\landmarks\\kiosk.png",
-          "sha256": "053f4bba2f368f5f9003d574f53b45e6b822751f503dd58f85249f6f6107e5a1"
-        },
-        {
-          "path": "map\\tiles\\deep-sea\\bubble-chain.png",
-          "sha256": "0d9e83cc68bc23bb7ff7dc5d367b9221314c70819b6bd9a448215eec7d249015"
-        },
-        {
-          "path": "map\\landmarks\\dive.png",
-          "sha256": "d341b383c9798d8769e9d094f4b6c29e13667f7a8d155122036e4cd5d0f76809"
+          "path": "map/tiles/town/red-roof.png",
+          "sha256": "83e638db8c492c9768a696269cb33ca7a13707e725b2691ca44d5cdeea61915d"
         }
       ],
       "reserved_logo": [
         10,
-        8,
+        12,
         230,
-        98
+        102
       ],
       "reserved_character": [
         78,
@@ -3383,31 +3409,24 @@
       "height": 256,
       "palette": [
         "#203849",
-        "#3f817b",
         "#477191",
-        "#756b55",
-        "#9ca8a7",
-        "#a89269",
         "#b64c43",
         "#b9703d",
-        "#c7b389",
         "#d1a43f",
-        "#e7d5ad",
-        "#f3d88a",
         "#fff0cd",
         "#fffaf0"
       ],
       "palette_has_transparent": false,
       "palette_group": "cover",
-      "colors_with_transparency": 14,
+      "colors_with_transparency": 7,
       "color_limit": 64,
       "pack": true,
-      "sha256": "62d9799d9ba0e63310dfd8a8832499a6423e27b90143e056e0893c904bc5398b",
+      "sha256": "a48250308b755690963233360047009591f526d8d8ac210c3094766a62ae0fac",
       "draw_offset": [
         0,
         0
       ],
-      "row_rle_estimate_bytes": 10276
+      "row_rle_estimate_bytes": 2500
     },
     {
       "name": "cover_background_bottom",
@@ -3419,22 +3438,20 @@
       "width": 240,
       "height": 64,
       "palette": [
-        "#203849",
-        "#a89269",
-        "#c7b389",
-        "#fff0cd"
+        "#477191",
+        "#fffaf0"
       ],
       "palette_has_transparent": false,
       "palette_group": "cover",
-      "colors_with_transparency": 4,
+      "colors_with_transparency": 2,
       "color_limit": 64,
       "pack": true,
-      "sha256": "94d45e5915ecc1450c64f75173c8e724c8f6a7c98cad42a40d4dd9076629bebf",
+      "sha256": "d3656a8226942efd59a83576715b81b8d1e2497bbda3c09063e60dd41a89c432",
       "draw_offset": [
         0,
         256
       ],
-      "row_rle_estimate_bytes": 536
+      "row_rle_estimate_bytes": 444
     },
     {
       "name": "cover_character",
@@ -3507,7 +3524,7 @@
         31,
         120
       ],
-      "note": "Static composition reference; firmware may use the separate welcome120 animation"
+      "note": "Reference only; separate animation is counted in the combined UI+boot budget"
     },
     {
       "name": "cover_character_sprite",
@@ -3578,7 +3595,7 @@
         89,
         146
       ],
-      "note": "Reference only; use manifest travel/welcome animation in firmware"
+      "note": "Unmodified approved runtime pixels; no rescale/recolor"
     },
     {
       "name": "cover_illustration",
@@ -3602,7 +3619,6 @@
         "#382d2f",
         "#38466a",
         "#3b2724",
-        "#3f817b",
         "#413233",
         "#475668",
         "#477191",
@@ -3614,33 +3630,28 @@
         "#646469",
         "#65443b",
         "#678690",
-        "#756b55",
         "#7d5343",
         "#7e979e",
         "#83675e",
         "#868a8b",
         "#869fa8",
+        "#90999d",
         "#926959",
         "#96acb6",
-        "#9ca8a7",
-        "#a89269",
         "#a9735f",
         "#b4856d",
         "#b64c43",
         "#b79889",
         "#b9703d",
         "#c6b6b3",
-        "#c7b389",
         "#d1a43f",
         "#d2907b",
         "#d99f8b",
         "#d9d4db",
-        "#e7d5ad",
         "#ebdee2",
         "#ede8f1",
         "#efb2a1",
         "#efeaf2",
-        "#f3d88a",
         "#f4ecf0",
         "#f5f1f6",
         "#f6c1b1",
@@ -3655,13 +3666,13 @@
       ],
       "palette_has_transparent": false,
       "palette_group": "cover",
-      "colors_with_transparency": 62,
+      "colors_with_transparency": 56,
       "color_limit": 64,
       "pack": false,
-      "sha256": "f54a0d6e9e144eb00644b6f3177b0f6492c0917fe660639b45ddfd44e0850a55",
+      "sha256": "c610a98a6515126594a97dbffadf72cfad0331a9bc99a88e9dc4d1f49d1b6a83",
       "composition": [
         "cover-background.png",
-        "wordmarks/collection.png@10,8",
+        "wordmarks/collection.png@10,12",
         "cover-character.png"
       ],
       "reserved_footer": [
@@ -3674,13 +3685,22 @@
   ],
   "budget": {
     "limit_bytes": 163840,
-    "row_rle_estimate_bytes_deduplicated": 62140,
+    "row_rle_estimate_bytes_deduplicated": 49558,
     "estimate_below_limit": true,
-    "final_firmware_rle_measurement": "pending main-task integration; PNG size is not firmware size"
+    "final_firmware_rle_measurement": "pending main-task integration; PNG size is not firmware size",
+    "actual_python_rle_bytes": 36008,
+    "actual_python_table_bytes": 14310,
+    "descriptor_catalog_estimate_c3": 11791,
+    "actual_static_estimate_c3": 62109,
+    "current_boot_welcome_bytes": 47730,
+    "ui_plus_current_boot_estimate": 109839,
+    "character_budget_allowance": 101731,
+    "actual_production_c_validation": "pending root integration; Python lossless index roundtrip only",
+    "new_boot_v2": "replace current welcome cost with measured final v2 cost before acceptance"
   },
   "notes": [
     "No approved character pixels are redrawn.",
-    "No existing firmware/UI code is modified.",
+    "No hand-written firmware is modified; UI assets rebuilt after checkpoint899d275.",
     "design/round3 originals are preserved.",
     "Dynamic scores/names/hints remain font-rendered by firmware."
   ]

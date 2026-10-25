@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_travel_walk_right__p0",
   "width": 22,
   "height": 48,
@@ -81,7 +81,7 @@
     0,
     0
   ],
-  "data_bytes": 7368,
+  "data_bytes": 5765,
   "table_bytes": 1712,
   "frame_sha256": [
     "e2067209704995a18a74a1d17ca1b8c2c065332962221c3dab5898bb4466e41b",
@@ -146,5 +146,15 @@
       "sha256": "d3850df752288b70eeff4a04fadb24784fee4f607c8bcc74ad933bdcab7559f1"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "travel/walk_right",
+      "logical_symbol": "adv_assets_travel_walk_right__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

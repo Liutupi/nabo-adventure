@@ -1,0 +1,2097 @@
+{
+  "formal_frames": 58,
+  "clips": [
+    {
+      "skin": "space_a",
+      "name": "cabin_idle",
+      "count": 6,
+      "frame_reports": [
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0.0,
+            "upper_arm_r": -0.0,
+            "utility_hose": 0.0,
+            "forearm_hand_r": 0.0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 1.0392304845413263,
+            "upper_arm_r": -0.8660254037844386,
+            "utility_hose": 1.5588457268119895,
+            "forearm_hand_r": -0.3999999999999999
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              96,
+              163
+            ],
+            "r": [
+              163,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 1.0392304845413265,
+            "upper_arm_r": -0.8660254037844387,
+            "utility_hose": 1.5588457268119897,
+            "forearm_hand_r": -1.2
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              96,
+              163
+            ],
+            "r": [
+              163,
+              162
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 1.4695761589768238e-16,
+            "upper_arm_r": -1.2246467991473532e-16,
+            "utility_hose": 2.2043642384652358e-16,
+            "forearm_hand_r": -1.6
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              162
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": -1.039230484541326,
+            "upper_arm_r": 0.8660254037844385,
+            "utility_hose": -1.5588457268119893,
+            "forearm_hand_r": -1.2000000000000004
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": -1.0392304845413263,
+            "upper_arm_r": 0.8660254037844386,
+            "utility_hose": -1.5588457268119895,
+            "forearm_hand_r": -0.3999999999999999
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              161,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        }
+      ],
+      "adjacent_master_mae": [
+        1.317840576171875,
+        0.166290283203125,
+        1.2072029113769531,
+        1.1045646667480469,
+        0.09807586669921875,
+        0.9855804443359375
+      ],
+      "loop_wrap_mae": 0.9855804443359375
+    },
+    {
+      "skin": "space_a",
+      "name": "jet",
+      "count": 4,
+      "frame_reports": [
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0.0,
+            "upper_arm_r": -0.0,
+            "forearm_hand_l": 0.0,
+            "forearm_hand_r": -0.0,
+            "utility_hose": 0.0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 5.0,
+            "upper_arm_r": -5.0,
+            "forearm_hand_l": 8.0,
+            "forearm_hand_r": -8.0,
+            "utility_hose": 4.0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              88,
+              162
+            ],
+            "r": [
+              170,
+              160
+            ]
+          },
+          "alpha_bbox": [
+            72,
+            4,
+            185,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 6.123233995736766e-16,
+            "upper_arm_r": -6.123233995736766e-16,
+            "forearm_hand_l": 9.797174393178826e-16,
+            "forearm_hand_r": -9.797174393178826e-16,
+            "utility_hose": 4.898587196589413e-16
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": -5.0,
+            "upper_arm_r": 5.0,
+            "forearm_hand_l": -8.0,
+            "forearm_hand_r": 8.0,
+            "utility_hose": -4.0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              105,
+              163
+            ],
+            "r": [
+              153,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        }
+      ],
+      "adjacent_master_mae": [
+        4.259429931640625,
+        4.259429931640625,
+        3.2011642456054688,
+        3.2011642456054688
+      ],
+      "loop_wrap_mae": 3.2011642456054688
+    },
+    {
+      "skin": "space_a",
+      "name": "land",
+      "count": 6,
+      "frame_reports": [
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 0.0,
+            "shin_foot_l": -0.0,
+            "thigh_r": -0.0,
+            "shin_foot_r": 0.0,
+            "upper_arm_l": 0.0,
+            "upper_arm_r": -0.0,
+            "utility_hose": 0.0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 5.877852522924732,
+            "shin_foot_l": -9.40456403667957,
+            "thigh_r": -5.877852522924732,
+            "shin_foot_r": 9.40456403667957,
+            "upper_arm_l": 4.702282018339785,
+            "upper_arm_r": -4.702282018339785,
+            "utility_hose": 1.7633557568774194
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              92,
+              163
+            ],
+            "r": [
+              166,
+              161
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 9.510565162951535,
+            "shin_foot_l": -15.216904260722456,
+            "thigh_r": -9.510565162951535,
+            "shin_foot_r": 15.216904260722456,
+            "upper_arm_l": 7.608452130361228,
+            "upper_arm_r": -7.608452130361228,
+            "utility_hose": 2.8531695488854605
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              89,
+              162
+            ],
+            "r": [
+              169,
+              160
+            ]
+          },
+          "alpha_bbox": [
+            73,
+            4,
+            184,
+            228
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 9.510565162951536,
+            "shin_foot_l": -15.216904260722458,
+            "thigh_r": -9.510565162951536,
+            "shin_foot_r": 15.216904260722458,
+            "upper_arm_l": 7.608452130361229,
+            "upper_arm_r": -7.608452130361229,
+            "utility_hose": 2.853169548885461
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              89,
+              162
+            ],
+            "r": [
+              169,
+              160
+            ]
+          },
+          "alpha_bbox": [
+            73,
+            4,
+            184,
+            228
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 5.877852522924733,
+            "shin_foot_l": -9.404564036679572,
+            "thigh_r": -5.877852522924733,
+            "shin_foot_r": 9.404564036679572,
+            "upper_arm_l": 4.702282018339786,
+            "upper_arm_r": -4.702282018339786,
+            "utility_hose": 1.7633557568774196
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              92,
+              163
+            ],
+            "r": [
+              166,
+              161
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 1.2246467991473533e-15,
+            "shin_foot_l": -1.959434878635765e-15,
+            "thigh_r": -1.2246467991473533e-15,
+            "shin_foot_r": 1.959434878635765e-15,
+            "upper_arm_l": 9.797174393178826e-16,
+            "upper_arm_r": -9.797174393178826e-16,
+            "utility_hose": 3.6739403974420594e-16
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        }
+      ],
+      "adjacent_master_mae": [
+        5.957061767578125,
+        4.837688446044922,
+        0.0,
+        4.837688446044922,
+        5.957061767578125,
+        0.0
+      ],
+      "loop_wrap_mae": null
+    },
+    {
+      "skin": "space_a",
+      "name": "hard_land",
+      "count": 8,
+      "frame_reports": [
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 0,
+            "shin_foot_l": 0,
+            "thigh_r": 0,
+            "shin_foot_r": 0,
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "utility_hose": 0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 9.0,
+            "shin_foot_l": -15.0,
+            "thigh_r": -9.0,
+            "shin_foot_r": 15.0,
+            "upper_arm_l": 24.0,
+            "forearm_hand_l": 16.0,
+            "upper_arm_r": -20.0,
+            "forearm_hand_r": -11.0,
+            "utility_hose": 4.0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              68,
+              151
+            ],
+            "r": [
+              184,
+              153
+            ]
+          },
+          "alpha_bbox": [
+            55,
+            4,
+            198,
+            228
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 18,
+            "shin_foot_l": -30,
+            "thigh_r": -18,
+            "shin_foot_r": 30,
+            "upper_arm_l": 48,
+            "forearm_hand_l": 32,
+            "upper_arm_r": -40,
+            "forearm_hand_r": -22,
+            "utility_hose": 8
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              50,
+              125
+            ],
+            "r": [
+              200,
+              134
+            ]
+          },
+          "alpha_bbox": [
+            36,
+            4,
+            214,
+            228
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 12.959999999999999,
+            "shin_foot_l": -21.599999999999998,
+            "thigh_r": -12.959999999999999,
+            "shin_foot_r": 21.599999999999998,
+            "upper_arm_l": 34.56,
+            "forearm_hand_l": 23.04,
+            "upper_arm_r": -28.799999999999997,
+            "forearm_hand_r": -15.84,
+            "utility_hose": 5.76
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              58,
+              141
+            ],
+            "r": [
+              192,
+              145
+            ]
+          },
+          "alpha_bbox": [
+            47,
+            4,
+            205,
+            228
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 7.56,
+            "shin_foot_l": -12.6,
+            "thigh_r": -7.56,
+            "shin_foot_r": 12.6,
+            "upper_arm_l": 20.16,
+            "forearm_hand_l": 13.44,
+            "upper_arm_r": -16.8,
+            "forearm_hand_r": -9.24,
+            "utility_hose": 3.36
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              72,
+              154
+            ],
+            "r": [
+              181,
+              155
+            ]
+          },
+          "alpha_bbox": [
+            58,
+            4,
+            195,
+            228
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 3.6,
+            "shin_foot_l": -6.0,
+            "thigh_r": -3.6,
+            "shin_foot_r": 6.0,
+            "upper_arm_l": 9.600000000000001,
+            "forearm_hand_l": 6.4,
+            "upper_arm_r": -8.0,
+            "forearm_hand_r": -4.4,
+            "utility_hose": 1.6
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              84,
+              161
+            ],
+            "r": [
+              171,
+              160
+            ]
+          },
+          "alpha_bbox": [
+            68,
+            4,
+            186,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 1.2600000000000002,
+            "shin_foot_l": -2.1,
+            "thigh_r": -1.2600000000000002,
+            "shin_foot_r": 2.1,
+            "upper_arm_l": 3.3600000000000003,
+            "forearm_hand_l": 2.24,
+            "upper_arm_r": -2.8000000000000003,
+            "forearm_hand_r": -1.54,
+            "utility_hose": 0.56
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              92,
+              163
+            ],
+            "r": [
+              165,
+              162
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 0,
+            "shin_foot_l": 0,
+            "thigh_r": 0,
+            "shin_foot_r": 0,
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "utility_hose": 0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        }
+      ],
+      "adjacent_master_mae": [
+        12.464981079101562,
+        13.725833892822266,
+        9.584548950195312,
+        9.905269622802734,
+        8.209060668945312,
+        6.125461578369141,
+        3.866527557373047,
+        0.0
+      ],
+      "loop_wrap_mae": null
+    },
+    {
+      "skin": "space_a",
+      "name": "plant_flag",
+      "count": 8,
+      "frame_reports": [
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "upper_arm_l": 0,
+            "utility_hose": 0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_r": -9.5,
+            "forearm_hand_r": -3.75,
+            "upper_arm_l": 1.0,
+            "utility_hose": -0.75
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              96,
+              163
+            ],
+            "r": [
+              173,
+              159
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            187,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_r": -22.8,
+            "forearm_hand_r": -9,
+            "upper_arm_l": 2.4,
+            "utility_hose": -1.7999999999999998
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              94,
+              163
+            ],
+            "r": [
+              186,
+              151
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            200,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_r": -38,
+            "forearm_hand_r": -15,
+            "upper_arm_l": 4,
+            "utility_hose": -3
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              93,
+              163
+            ],
+            "r": [
+              198,
+              138
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            210,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_r": -33,
+            "forearm_hand_r": -8,
+            "upper_arm_l": 4,
+            "utility_hose": -3
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              93,
+              163
+            ],
+            "r": [
+              193,
+              145
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            206,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_r": -24,
+            "forearm_hand_r": 0,
+            "upper_arm_l": 2.6,
+            "utility_hose": -1.9500000000000002
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              94,
+              163
+            ],
+            "r": [
+              183,
+              153
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            198,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_r": -11.4,
+            "forearm_hand_r": -4.5,
+            "upper_arm_l": 1.2,
+            "utility_hose": -0.8999999999999999
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              96,
+              163
+            ],
+            "r": [
+              174,
+              158
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            189,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "upper_arm_l": 0,
+            "utility_hose": 0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        }
+      ],
+      "adjacent_master_mae": [
+        2.985015869140625,
+        3.878307342529297,
+        4.308368682861328,
+        1.9593505859375,
+        3.4432945251464844,
+        3.542400360107422,
+        3.3669815063476562,
+        0.0
+      ],
+      "loop_wrap_mae": null
+    },
+    {
+      "skin": "space_a",
+      "name": "settlement_cheer",
+      "count": 8,
+      "frame_reports": [
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "utility_hose": 0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 28.0,
+            "forearm_hand_l": 9.0,
+            "upper_arm_r": -17.0,
+            "forearm_hand_r": -6.25,
+            "utility_hose": 1.0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              67,
+              151
+            ],
+            "r": [
+              180,
+              155
+            ]
+          },
+          "alpha_bbox": [
+            54,
+            4,
+            194,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 72.8,
+            "forearm_hand_l": 23.400000000000002,
+            "upper_arm_r": -44.2,
+            "forearm_hand_r": -16.25,
+            "utility_hose": 2.6
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              47,
+              104
+            ],
+            "r": [
+              201,
+              132
+            ]
+          },
+          "alpha_bbox": [
+            32,
+            4,
+            214,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 112,
+            "forearm_hand_l": 36,
+            "upper_arm_r": -68,
+            "forearm_hand_r": -25,
+            "utility_hose": 4
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              66,
+              64
+            ],
+            "r": [
+              207,
+              105
+            ]
+          },
+          "alpha_bbox": [
+            51,
+            4,
+            224,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 106.39999999999999,
+            "forearm_hand_l": 34.199999999999996,
+            "upper_arm_r": -64.6,
+            "forearm_hand_r": -23.75,
+            "utility_hose": 3.8
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              61,
+              69
+            ],
+            "r": [
+              207,
+              109
+            ]
+          },
+          "alpha_bbox": [
+            47,
+            4,
+            223,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 67.2,
+            "forearm_hand_l": 21.599999999999998,
+            "upper_arm_r": -40.8,
+            "forearm_hand_r": -15.0,
+            "utility_hose": 2.4
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              47,
+              111
+            ],
+            "r": [
+              199,
+              136
+            ]
+          },
+          "alpha_bbox": [
+            33,
+            4,
+            212,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 22.400000000000002,
+            "forearm_hand_l": 7.2,
+            "upper_arm_r": -13.600000000000001,
+            "forearm_hand_r": -5.0,
+            "utility_hose": 0.8
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              73,
+              154
+            ],
+            "r": [
+              177,
+              157
+            ]
+          },
+          "alpha_bbox": [
+            58,
+            4,
+            191,
+            227
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "utility_hose": 0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              163
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            227
+          ]
+        }
+      ],
+      "adjacent_master_mae": [
+        8.786029815673828,
+        12.03702163696289,
+        10.63747787475586,
+        3.8556137084960938,
+        10.825702667236328,
+        12.033123016357422,
+        7.563777923583984,
+        0.0
+      ],
+      "loop_wrap_mae": null
+    },
+    {
+      "skin": "space_b",
+      "name": "cabin_idle",
+      "count": 6,
+      "frame_reports": [
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0.0,
+            "upper_arm_r": -0.0,
+            "utility_hose": 0.0,
+            "forearm_hand_r": 0.0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              161
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 1.0392304845413263,
+            "upper_arm_r": -0.8660254037844386,
+            "utility_hose": 1.5588457268119895,
+            "forearm_hand_r": -0.3999999999999999
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              96,
+              163
+            ],
+            "r": [
+              162,
+              161
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 1.0392304845413265,
+            "upper_arm_r": -0.8660254037844387,
+            "utility_hose": 1.5588457268119897,
+            "forearm_hand_r": -1.2
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              96,
+              163
+            ],
+            "r": [
+              163,
+              161
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 1.4695761589768238e-16,
+            "upper_arm_r": -1.2246467991473532e-16,
+            "utility_hose": 2.2043642384652358e-16,
+            "forearm_hand_r": -1.6
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              161
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": -1.039230484541326,
+            "upper_arm_r": 0.8660254037844385,
+            "utility_hose": -1.5588457268119893,
+            "forearm_hand_r": -1.2000000000000004
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 1,
+          "hand_contacts": {
+            "l": [
+              98,
+              163
+            ],
+            "r": [
+              162,
+              161
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": -1.0392304845413263,
+            "upper_arm_r": 0.8660254037844386,
+            "utility_hose": -1.5588457268119895,
+            "forearm_hand_r": -0.3999999999999999
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 1,
+          "hand_contacts": {
+            "l": [
+              98,
+              163
+            ],
+            "r": [
+              161,
+              161
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            226
+          ]
+        }
+      ],
+      "adjacent_master_mae": [
+        1.5189590454101562,
+        0.18489456176757812,
+        1.389129638671875,
+        1.188201904296875,
+        0.11389923095703125,
+        1.0917091369628906
+      ],
+      "loop_wrap_mae": 1.0917091369628906
+    },
+    {
+      "skin": "space_b",
+      "name": "jet",
+      "count": 4,
+      "frame_reports": [
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0.0,
+            "upper_arm_r": -0.0,
+            "forearm_hand_l": 0.0,
+            "forearm_hand_r": -0.0,
+            "utility_hose": 0.0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              161
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 5.0,
+            "upper_arm_r": -5.0,
+            "forearm_hand_l": 8.0,
+            "forearm_hand_r": -8.0,
+            "utility_hose": 4.0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              89,
+              162
+            ],
+            "r": [
+              169,
+              159
+            ]
+          },
+          "alpha_bbox": [
+            71,
+            4,
+            184,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 6.123233995736766e-16,
+            "upper_arm_r": -6.123233995736766e-16,
+            "forearm_hand_l": 9.797174393178826e-16,
+            "forearm_hand_r": -9.797174393178826e-16,
+            "utility_hose": 4.898587196589413e-16
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              161
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": -5.0,
+            "upper_arm_r": 5.0,
+            "forearm_hand_l": -8.0,
+            "forearm_hand_r": 8.0,
+            "utility_hose": -4.0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 1,
+          "hand_contacts": {
+            "l": [
+              106,
+              163
+            ],
+            "r": [
+              153,
+              162
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            226
+          ]
+        }
+      ],
+      "adjacent_master_mae": [
+        4.797893524169922,
+        4.797893524169922,
+        3.7566299438476562,
+        3.7566299438476562
+      ],
+      "loop_wrap_mae": 3.7566299438476562
+    },
+    {
+      "skin": "space_b",
+      "name": "settlement_cheer",
+      "count": 8,
+      "frame_reports": [
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "utility_hose": 0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              161
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 28.0,
+            "forearm_hand_l": 9.0,
+            "upper_arm_r": -17.0,
+            "forearm_hand_r": -6.25,
+            "utility_hose": 1.0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              68,
+              151
+            ],
+            "r": [
+              179,
+              154
+            ]
+          },
+          "alpha_bbox": [
+            53,
+            4,
+            193,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 72.8,
+            "forearm_hand_l": 23.400000000000002,
+            "upper_arm_r": -44.2,
+            "forearm_hand_r": -16.25,
+            "utility_hose": 2.6
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 1,
+          "hand_contacts": {
+            "l": [
+              47,
+              105
+            ],
+            "r": [
+              200,
+              131
+            ]
+          },
+          "alpha_bbox": [
+            32,
+            4,
+            211,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 112,
+            "forearm_hand_l": 36,
+            "upper_arm_r": -68,
+            "forearm_hand_r": -25,
+            "utility_hose": 4
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 1,
+          "hand_contacts": {
+            "l": [
+              66,
+              65
+            ],
+            "r": [
+              206,
+              106
+            ]
+          },
+          "alpha_bbox": [
+            51,
+            4,
+            217,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 106.39999999999999,
+            "forearm_hand_l": 34.199999999999996,
+            "upper_arm_r": -64.6,
+            "forearm_hand_r": -23.75,
+            "utility_hose": 3.8
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 1,
+          "hand_contacts": {
+            "l": [
+              61,
+              70
+            ],
+            "r": [
+              206,
+              109
+            ]
+          },
+          "alpha_bbox": [
+            47,
+            4,
+            216,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 67.2,
+            "forearm_hand_l": 21.599999999999998,
+            "upper_arm_r": -40.8,
+            "forearm_hand_r": -15.0,
+            "utility_hose": 2.4
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 1,
+          "hand_contacts": {
+            "l": [
+              48,
+              112
+            ],
+            "r": [
+              198,
+              135
+            ]
+          },
+          "alpha_bbox": [
+            32,
+            4,
+            209,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 22.400000000000002,
+            "forearm_hand_l": 7.2,
+            "upper_arm_r": -13.600000000000001,
+            "forearm_hand_r": -5.0,
+            "utility_hose": 0.8
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              73,
+              154
+            ],
+            "r": [
+              176,
+              156
+            ]
+          },
+          "alpha_bbox": [
+            57,
+            4,
+            190,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "utility_hose": 0
+          },
+          "head_rigid": true,
+          "head_translation": [
+            0,
+            0
+          ],
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "hand_contacts": {
+            "l": [
+              97,
+              163
+            ],
+            "r": [
+              162,
+              161
+            ]
+          },
+          "alpha_bbox": [
+            74,
+            4,
+            184,
+            226
+          ]
+        }
+      ],
+      "adjacent_master_mae": [
+        8.539817810058594,
+        11.527774810791016,
+        10.183635711669922,
+        4.060832977294922,
+        10.341773986816406,
+        11.528724670410156,
+        7.488246917724609,
+        0.0
+      ],
+      "loop_wrap_mae": null
+    }
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "palette_policy": "shared per skin formal, per skin + size runtime",
+  "helmet": "binary clear-interior equipment layers"
+}

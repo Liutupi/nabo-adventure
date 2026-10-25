@@ -1,0 +1,178 @@
+{
+  "passed": true,
+  "character_clips": 14,
+  "character_frames": 84,
+  "frozen_head_core_reused": true,
+  "svg_embedded_pixels_equal_png": true,
+  "checks": [
+    {
+      "skin": "night_a",
+      "action": "seat_idle",
+      "frames": 8,
+      "runtime_canvas": [
+        54,
+        56
+      ],
+      "max_adjacent_rgba_mae": 1.751984126984127,
+      "wrap_rgba_mae": 1.5044642857142858,
+      "passed": true
+    },
+    {
+      "skin": "night_a",
+      "action": "move_left",
+      "frames": 4,
+      "runtime_canvas": [
+        54,
+        56
+      ],
+      "max_adjacent_rgba_mae": 15.298445767195767,
+      "wrap_rgba_mae": 0.0,
+      "passed": true
+    },
+    {
+      "skin": "night_a",
+      "action": "move_right",
+      "frames": 4,
+      "runtime_canvas": [
+        54,
+        56
+      ],
+      "max_adjacent_rgba_mae": 12.851025132275133,
+      "wrap_rgba_mae": 0.0,
+      "passed": true
+    },
+    {
+      "skin": "night_a",
+      "action": "catch",
+      "frames": 6,
+      "runtime_canvas": [
+        54,
+        56
+      ],
+      "max_adjacent_rgba_mae": 58.145585317460316,
+      "wrap_rgba_mae": 0.0,
+      "passed": true
+    },
+    {
+      "skin": "night_a",
+      "action": "lift_jar",
+      "frames": 6,
+      "runtime_canvas": [
+        54,
+        56
+      ],
+      "max_adjacent_rgba_mae": 60.82886904761905,
+      "wrap_rgba_mae": 0.0,
+      "passed": true
+    },
+    {
+      "skin": "night_a",
+      "action": "yawn",
+      "frames": 6,
+      "runtime_canvas": [
+        54,
+        56
+      ],
+      "max_adjacent_rgba_mae": 10.843998015873016,
+      "wrap_rgba_mae": 0.0,
+      "passed": true
+    },
+    {
+      "skin": "night_a",
+      "action": "cheer",
+      "frames": 8,
+      "runtime_canvas": [
+        56,
+        72
+      ],
+      "max_adjacent_rgba_mae": 17.360553075396826,
+      "wrap_rgba_mae": 0.0,
+      "passed": true
+    },
+    {
+      "skin": "night_b",
+      "action": "seat_idle",
+      "frames": 8,
+      "runtime_canvas": [
+        53,
+        56
+      ],
+      "max_adjacent_rgba_mae": 1.998989218328841,
+      "wrap_rgba_mae": 1.8173012129380053,
+      "passed": true
+    },
+    {
+      "skin": "night_b",
+      "action": "move_left",
+      "frames": 4,
+      "runtime_canvas": [
+        53,
+        56
+      ],
+      "max_adjacent_rgba_mae": 15.263308625336927,
+      "wrap_rgba_mae": 0.0,
+      "passed": true
+    },
+    {
+      "skin": "night_b",
+      "action": "move_right",
+      "frames": 4,
+      "runtime_canvas": [
+        53,
+        56
+      ],
+      "max_adjacent_rgba_mae": 18.528386118598384,
+      "wrap_rgba_mae": 0.0,
+      "passed": true
+    },
+    {
+      "skin": "night_b",
+      "action": "catch",
+      "frames": 6,
+      "runtime_canvas": [
+        53,
+        56
+      ],
+      "max_adjacent_rgba_mae": 60.44516509433962,
+      "wrap_rgba_mae": 0.0,
+      "passed": true
+    },
+    {
+      "skin": "night_b",
+      "action": "lift_jar",
+      "frames": 6,
+      "runtime_canvas": [
+        53,
+        56
+      ],
+      "max_adjacent_rgba_mae": 63.387971698113205,
+      "wrap_rgba_mae": 0.0,
+      "passed": true
+    },
+    {
+      "skin": "night_b",
+      "action": "yawn",
+      "frames": 6,
+      "runtime_canvas": [
+        53,
+        56
+      ],
+      "max_adjacent_rgba_mae": 12.609585579514825,
+      "wrap_rgba_mae": 0.0,
+      "passed": true
+    },
+    {
+      "skin": "night_b",
+      "action": "cheer",
+      "frames": 8,
+      "runtime_canvas": [
+        52,
+        72
+      ],
+      "max_adjacent_rgba_mae": 20.53138354700855,
+      "wrap_rgba_mae": 0.0,
+      "passed": true
+    }
+  ],
+  "visual_gate": "contacts actually inspected; see QA.md for limitations and repairs, no user acceptance claimed"
+}

@@ -1,0 +1,21 @@
+{
+  "method": "built-in imagegen costume edit from original identity and approved hiker board; shared-head rig replaces generated head",
+  "identity": "reference/nabo-idle-original.png",
+  "identity_sha256": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243",
+  "approved_design": "design/round1/v2/01-hiker-design-board.png",
+  "outputs": [
+    {
+      "skin": "climb_a",
+      "path": "games/climb/masters/climb_a-three-views.png",
+      "sha256": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+      "prompt": "games/climb/masters/climb_a-prompt.txt"
+    },
+    {
+      "skin": "climb_b",
+      "path": "games/climb/masters/climb_b-three-views.png",
+      "sha256": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73",
+      "prompt": "games/climb/masters/climb_b-prompt.txt"
+    }
+  ],
+  "user_acceptance": "not claimed; production pose review is separate"
+}

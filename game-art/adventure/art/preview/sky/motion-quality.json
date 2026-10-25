@@ -1,0 +1,3474 @@
+{
+  "geometry": {
+    "40": {
+      "bbox": [
+        49,
+        15,
+        206,
+        160
+      ],
+      "scale": 0.27586206896551724,
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ]
+    },
+    "72": {
+      "bbox": [
+        50,
+        15,
+        199,
+        224
+      ],
+      "scale": 0.3444976076555024,
+      "canvas": [
+        51,
+        72
+      ],
+      "anchor": [
+        27,
+        72
+      ]
+    }
+  },
+  "skins": {
+    "sky_a": {
+      "idle": {
+        "reports": [
+          {
+            "index": 0,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 0.778836684617301,
+              "active_rope": null,
+              "upper_l": 0.0,
+              "upper_r": -0.0
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 1.9847427807915405,
+              "active_rope": null,
+              "upper_l": 0.6928203230275509,
+              "upper_r": -0.6928203230275509
+            },
+            "palms": {
+              "l": [
+                95.34770610679753,
+                162.8872268965406
+              ],
+              "r": [
+                159.6523670004924,
+                162.8993185976297
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 1.20590609617424,
+              "active_rope": null,
+              "upper_l": 0.692820323027551,
+              "upper_r": -0.692820323027551
+            },
+            "palms": {
+              "l": [
+                95.34770610679753,
+                162.8872268965406
+              ],
+              "r": [
+                159.6523670004924,
+                162.8993185976297
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": -0.7788366846173006,
+              "active_rope": null,
+              "upper_l": 9.797174393178826e-17,
+              "upper_r": -9.797174393178826e-17
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 4,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": -1.9847427807915403,
+              "active_rope": null,
+              "upper_l": -0.6928203230275508,
+              "upper_r": 0.6928203230275508
+            },
+            "palms": {
+              "l": [
+                96.6536098244216,
+                163.1048775161446
+              ],
+              "r": [
+                158.34646328286834,
+                163.0927858150555
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 5,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": -1.2059060961742387,
+              "active_rope": null,
+              "upper_l": -0.6928203230275509,
+              "upper_r": 0.6928203230275509
+            },
+            "palms": {
+              "l": [
+                96.6536098244216,
+                163.1048775161446
+              ],
+              "r": [
+                158.34646328286834,
+                163.0927858150555
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          }
+        ],
+        "runtime_contacts": [
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          },
+          {
+            "l": [
+              12.786,
+              40.796
+            ],
+            "r": [
+              30.525,
+              40.8
+            ]
+          },
+          {
+            "l": [
+              12.786,
+              40.796
+            ],
+            "r": [
+              30.525,
+              40.8
+            ]
+          },
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          },
+          {
+            "l": [
+              13.146,
+              40.857
+            ],
+            "r": [
+              30.165,
+              40.853
+            ]
+          },
+          {
+            "l": [
+              13.146,
+              40.857
+            ],
+            "r": [
+              30.165,
+              40.853
+            ]
+          }
+        ]
+      },
+      "heat": {
+        "reports": [
+          {
+            "index": 0,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 0.778836684617301,
+              "active_rope": null,
+              "upper_l": 0,
+              "forearm_l": 0
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 2.778836684617301,
+              "active_rope": "heat",
+              "upper_l": 36,
+              "forearm_l": 66
+            },
+            "palms": {
+              "l": [
+                59.188125143197965,
+                126.66791437331943
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": "heat",
+            "rope_endpoints": {
+              "heat": [
+                59.188125143197965,
+                126.66791437331943
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 4.778836684617301,
+              "active_rope": "heat",
+              "upper_l": 65,
+              "forearm_l": 100
+            },
+            "palms": {
+              "l": [
+                66.59413407106695,
+                96.54122303200666
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": "heat",
+            "rope_endpoints": {
+              "heat": [
+                66.59413407106695,
+                96.54122303200666
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 3.778836684617301,
+              "active_rope": "heat",
+              "upper_l": 48,
+              "forearm_l": 90
+            },
+            "palms": {
+              "l": [
+                61.74056378119795,
+                110.27325489647528
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": "heat",
+            "rope_endpoints": {
+              "heat": [
+                61.74056378119795,
+                110.27325489647528
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 4,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 1.7788366846173012,
+              "active_rope": "heat",
+              "upper_l": 20,
+              "forearm_l": 45
+            },
+            "palms": {
+              "l": [
+                67.30500015816631,
+                145.75944540789288
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": "heat",
+            "rope_endpoints": {
+              "heat": [
+                67.30500015816631,
+                145.75944540789288
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 5,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 0.778836684617301,
+              "active_rope": null,
+              "upper_l": 0,
+              "forearm_l": 0
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          }
+        ],
+        "runtime_contacts": [
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          },
+          {
+            "l": [
+              2.811,
+              30.805
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          },
+          {
+            "l": [
+              4.854,
+              22.494
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          },
+          {
+            "l": [
+              3.515,
+              26.282
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          },
+          {
+            "l": [
+              5.05,
+              36.072
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          },
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          }
+        ]
+      },
+      "vent": {
+        "reports": [
+          {
+            "index": 0,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 0.778836684617301,
+              "active_rope": null,
+              "upper_r": 0,
+              "forearm_r": 0
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": -1.2211633153826988,
+              "active_rope": "vent",
+              "upper_r": -32,
+              "forearm_r": -66
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                197.58144352224474,
+                131.73151674526827
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": "vent",
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                197.58144352224474,
+                131.73151674526827
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": -3.221163315382699,
+              "active_rope": "vent",
+              "upper_r": -62,
+              "forearm_r": -100
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                193.79738670515167,
+                97.72946086897784
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": "vent",
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                193.79738670515167,
+                97.72946086897784
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": -2.221163315382699,
+              "active_rope": "vent",
+              "upper_r": -44,
+              "forearm_r": -87
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                198.21809226142886,
+                114.89920808755954
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": "vent",
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                198.21809226142886,
+                114.89920808755954
+              ]
+            }
+          },
+          {
+            "index": 4,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": -0.22116331538269896,
+              "active_rope": "vent",
+              "upper_r": -18,
+              "forearm_r": -42
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                187.33765104738853,
+                149.97780241785466
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": "vent",
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                187.33765104738853,
+                149.97780241785466
+              ]
+            }
+          },
+          {
+            "index": 5,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 0.778836684617301,
+              "active_rope": null,
+              "upper_r": 0,
+              "forearm_r": 0
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          }
+        ],
+        "runtime_contacts": [
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          },
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              40.988,
+              32.202
+            ]
+          },
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              39.944,
+              22.822
+            ]
+          },
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              41.164,
+              27.558
+            ]
+          },
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              38.162,
+              37.235
+            ]
+          },
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          }
+        ]
+      },
+      "hit": {
+        "reports": [
+          {
+            "index": 0,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 0.778836684617301,
+              "active_rope": null,
+              "upper_l": 0,
+              "upper_r": 0,
+              "forearm_l": 0,
+              "forearm_r": 0
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "pose": {
+              "torso": -6,
+              "shift": [
+                2,
+                0
+              ],
+              "scarf": -13.221163315382698,
+              "active_rope": null,
+              "upper_l": 10,
+              "upper_r": -10,
+              "forearm_l": 5,
+              "forearm_r": -5
+            },
+            "palms": {
+              "l": [
+                87.84907694543904,
+                164.61260573395901
+              ],
+              "r": [
+                172.35017947823098,
+                156.1627066906709
+              ]
+            },
+            "head_matrix": [
+              [
+                0.9945218953682733,
+                0.10452846326765347,
+                -13.500714413625275
+              ],
+              [
+                -0.10452846326765347,
+                0.9945218953682733,
+                14.228749516177288
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "pose": {
+              "torso": 4.5,
+              "shift": [
+                -2,
+                0
+              ],
+              "scarf": 11.278836684617302,
+              "active_rope": null,
+              "upper_l": -7.5,
+              "upper_r": 7.5,
+              "forearm_l": -3.75,
+              "forearm_r": 3.75
+            },
+            "palms": {
+              "l": [
+                101.82808545404426,
+                161.68824181469108
+              ],
+              "r": [
+                147.89697612866829,
+                164.9887210124863
+              ]
+            },
+            "head_matrix": [
+              [
+                0.996917333733128,
+                -0.07845909572784494,
+                10.555741119975593
+              ],
+              [
+                0.07845909572784494,
+                0.996917333733128,
+                -9.564950981799
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "pose": {
+              "torso": -2.4000000000000004,
+              "shift": [
+                1,
+                0
+              ],
+              "scarf": -4.8211633153827,
+              "active_rope": null,
+              "upper_l": 4.0,
+              "upper_r": -4.0,
+              "forearm_l": 2.0,
+              "forearm_r": -2.0
+            },
+            "palms": {
+              "l": [
+                92.89384108024436,
+                163.66460470184373
+              ],
+              "r": [
+                164.7242838126738,
+                160.82824242546252
+              ]
+            },
+            "head_matrix": [
+              [
+                0.9991228300988584,
+                0.04187565372919963,
+                -5.378448580679816
+              ],
+              [
+                -0.04187565372919963,
+                0.9991228300988584,
+                5.496045012014491
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 4,
+            "pose": {
+              "torso": 0.8999999999999999,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 2.8788366846173012,
+              "active_rope": null,
+              "upper_l": -1.5,
+              "upper_r": 1.5,
+              "forearm_l": -0.75,
+              "forearm_r": 0.75
+            },
+            "palms": {
+              "l": [
+                97.55332622074803,
+                162.74432500822275
+              ],
+              "r": [
+                157.19117342446773,
+                163.61575755385454
+              ]
+            },
+            "head_matrix": [
+              [
+                0.9998766324816606,
+                -0.015707317311820672,
+                2.450425225679652
+              ],
+              [
+                0.015707317311820672,
+                0.9998766324816606,
+                -1.991414650570448
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 5,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 0.778836684617301,
+              "active_rope": null,
+              "upper_l": 0,
+              "upper_r": 0,
+              "forearm_l": 0,
+              "forearm_r": 0
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          }
+        ],
+        "runtime_contacts": [
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          },
+          {
+            "l": [
+              10.717,
+              41.272
+            ],
+            "r": [
+              34.028,
+              38.941
+            ]
+          },
+          {
+            "l": [
+              14.573,
+              40.466
+            ],
+            "r": [
+              27.282,
+              41.376
+            ]
+          },
+          {
+            "l": [
+              12.109,
+              41.011
+            ],
+            "r": [
+              31.924,
+              40.228
+            ]
+          },
+          {
+            "l": [
+              13.394,
+              40.757
+            ],
+            "r": [
+              29.846,
+              40.997
+            ]
+          },
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          }
+        ]
+      },
+      "receive_stamp": {
+        "reports": [
+          {
+            "index": 0,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 0.778836684617301,
+              "active_rope": null,
+              "upper_l": 0,
+              "forearm_l": 0
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 2.7288366846173013,
+              "active_rope": null,
+              "upper_l": 35.75,
+              "forearm_l": 42.25
+            },
+            "palms": {
+              "l": [
+                58.87205580711321,
+                135.09960427733233
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 3.778836684617301,
+              "active_rope": null,
+              "upper_l": 55,
+              "forearm_l": 65
+            },
+            "palms": {
+              "l": [
+                55.73971092767715,
+                111.08235707783922
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 0.778836684617301,
+              "active_rope": null,
+              "upper_l": 0,
+              "forearm_l": 0
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          }
+        ],
+        "runtime_contacts": [
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          },
+          {
+            "l": [
+              2.723,
+              33.131
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          },
+          {
+            "l": [
+              1.859,
+              26.505
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          },
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          }
+        ]
+      },
+      "settlement_cheer": {
+        "reports": [
+          {
+            "index": 0,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 0.778836684617301,
+              "active_rope": null,
+              "upper_l": 0,
+              "forearm_l": 0,
+              "upper_r": 0,
+              "forearm_r": 0
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 2.4588366846173013,
+              "active_rope": null,
+              "upper_l": 18.200000000000003,
+              "forearm_l": 28.000000000000004,
+              "upper_r": -2.24,
+              "forearm_r": -2.8000000000000003
+            },
+            "palms": {
+              "l": [
+                71.6534886225492,
+                151.9214736530501
+              ],
+              "r": [
+                162.08601961529104,
+                162.68154009518096
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 5.338836684617301,
+              "active_rope": null,
+              "upper_l": 49.4,
+              "forearm_l": 76.0,
+              "upper_r": -6.08,
+              "forearm_r": -7.6
+            },
+            "palms": {
+              "l": [
+                58.25530707025882,
+                112.65140168577777
+              ],
+              "r": [
+                167.3316434070432,
+                161.65521210606823
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 6.778836684617301,
+              "active_rope": null,
+              "upper_l": 65,
+              "forearm_l": 100,
+              "upper_r": -8,
+              "forearm_r": -10
+            },
+            "palms": {
+              "l": [
+                66.59413407106695,
+                96.54122303200666
+              ],
+              "r": [
+                169.91279297496658,
+                160.91654764226567
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 4,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 6.178836684617301,
+              "active_rope": null,
+              "upper_l": 58.5,
+              "forearm_l": 90.0,
+              "upper_r": -7.2,
+              "forearm_r": -9.0
+            },
+            "palms": {
+              "l": [
+                62.2329147642684,
+                102.36852803371173
+              ],
+              "r": [
+                168.8417117037618,
+                161.2424234346665
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 5,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 4.078836684617301,
+              "active_rope": null,
+              "upper_l": 35.75,
+              "forearm_l": 55.00000000000001,
+              "upper_r": -4.4,
+              "forearm_r": -5.5
+            },
+            "palms": {
+              "l": [
+                58.6577225566983,
+                130.65781182271004
+              ],
+              "r": [
+                165.04733783185966,
+                162.1786480181014
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 6,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 1.7388366846173011,
+              "active_rope": null,
+              "upper_l": 10.4,
+              "forearm_l": 16.0,
+              "upper_r": -1.28,
+              "forearm_r": -1.6
+            },
+            "palms": {
+              "l": [
+                81.20536195103591,
+                158.466876871254
+              ],
+              "r": [
+                160.7644212388461,
+                162.8433601113403
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 7,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 0.778836684617301,
+              "active_rope": null,
+              "upper_l": 0,
+              "forearm_l": 0,
+              "upper_r": 0,
+              "forearm_r": 0
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          }
+        ],
+        "runtime_contacts": [
+          {
+            "l": [
+              15.847,
+              50.986
+            ],
+            "r": [
+              37.55,
+              50.986
+            ]
+          },
+          {
+            "l": [
+              7.46,
+              47.169
+            ],
+            "r": [
+              38.613,
+              50.876
+            ]
+          },
+          {
+            "l": [
+              2.844,
+              33.641
+            ],
+            "r": [
+              40.42,
+              50.522
+            ]
+          },
+          {
+            "l": [
+              5.717,
+              28.091
+            ],
+            "r": [
+              41.31,
+              50.268
+            ]
+          },
+          {
+            "l": [
+              4.214,
+              30.098
+            ],
+            "r": [
+              40.941,
+              50.38
+            ]
+          },
+          {
+            "l": [
+              2.983,
+              39.844
+            ],
+            "r": [
+              39.634,
+              50.703
+            ]
+          },
+          {
+            "l": [
+              10.75,
+              49.424
+            ],
+            "r": [
+              38.158,
+              50.932
+            ]
+          },
+          {
+            "l": [
+              15.847,
+              50.986
+            ],
+            "r": [
+              37.55,
+              50.986
+            ]
+          }
+        ]
+      }
+    },
+    "sky_b": {
+      "idle": {
+        "reports": [
+          {
+            "index": 0,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 0.778836684617301,
+              "active_rope": null,
+              "upper_l": 0.0,
+              "upper_r": -0.0
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 1.9847427807915405,
+              "active_rope": null,
+              "upper_l": 0.6928203230275509,
+              "upper_r": -0.6928203230275509
+            },
+            "palms": {
+              "l": [
+                95.34770610679753,
+                162.8872268965406
+              ],
+              "r": [
+                159.6523670004924,
+                162.8993185976297
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 1.20590609617424,
+              "active_rope": null,
+              "upper_l": 0.692820323027551,
+              "upper_r": -0.692820323027551
+            },
+            "palms": {
+              "l": [
+                95.34770610679753,
+                162.8872268965406
+              ],
+              "r": [
+                159.6523670004924,
+                162.8993185976297
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": -0.7788366846173006,
+              "active_rope": null,
+              "upper_l": 9.797174393178826e-17,
+              "upper_r": -9.797174393178826e-17
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 4,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": -1.9847427807915403,
+              "active_rope": null,
+              "upper_l": -0.6928203230275508,
+              "upper_r": 0.6928203230275508
+            },
+            "palms": {
+              "l": [
+                96.6536098244216,
+                163.1048775161446
+              ],
+              "r": [
+                158.34646328286834,
+                163.0927858150555
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 5,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": -1.2059060961742387,
+              "active_rope": null,
+              "upper_l": -0.6928203230275509,
+              "upper_r": 0.6928203230275509
+            },
+            "palms": {
+              "l": [
+                96.6536098244216,
+                163.1048775161446
+              ],
+              "r": [
+                158.34646328286834,
+                163.0927858150555
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": 160,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          }
+        ],
+        "runtime_contacts": [
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          },
+          {
+            "l": [
+              12.786,
+              40.796
+            ],
+            "r": [
+              30.525,
+              40.8
+            ]
+          },
+          {
+            "l": [
+              12.786,
+              40.796
+            ],
+            "r": [
+              30.525,
+              40.8
+            ]
+          },
+          {
+            "l": [
+              12.966,
+              40.828
+            ],
+            "r": [
+              30.345,
+              40.828
+            ]
+          },
+          {
+            "l": [
+              13.146,
+              40.857
+            ],
+            "r": [
+              30.165,
+              40.853
+            ]
+          },
+          {
+            "l": [
+              13.146,
+              40.857
+            ],
+            "r": [
+              30.165,
+              40.853
+            ]
+          }
+        ]
+      },
+      "settlement_cheer": {
+        "reports": [
+          {
+            "index": 0,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 0.778836684617301,
+              "active_rope": null,
+              "upper_l": 0,
+              "forearm_l": 0,
+              "upper_r": 0,
+              "forearm_r": 0
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 2.4588366846173013,
+              "active_rope": null,
+              "upper_l": 18.200000000000003,
+              "forearm_l": 28.000000000000004,
+              "upper_r": -2.24,
+              "forearm_r": -2.8000000000000003
+            },
+            "palms": {
+              "l": [
+                71.6534886225492,
+                151.9214736530501
+              ],
+              "r": [
+                162.08601961529104,
+                162.68154009518096
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 5.338836684617301,
+              "active_rope": null,
+              "upper_l": 49.4,
+              "forearm_l": 76.0,
+              "upper_r": -6.08,
+              "forearm_r": -7.6
+            },
+            "palms": {
+              "l": [
+                58.25530707025882,
+                112.65140168577777
+              ],
+              "r": [
+                167.3316434070432,
+                161.65521210606823
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 6.778836684617301,
+              "active_rope": null,
+              "upper_l": 65,
+              "forearm_l": 100,
+              "upper_r": -8,
+              "forearm_r": -10
+            },
+            "palms": {
+              "l": [
+                66.59413407106695,
+                96.54122303200666
+              ],
+              "r": [
+                169.91279297496658,
+                160.91654764226567
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 4,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 6.178836684617301,
+              "active_rope": null,
+              "upper_l": 58.5,
+              "forearm_l": 90.0,
+              "upper_r": -7.2,
+              "forearm_r": -9.0
+            },
+            "palms": {
+              "l": [
+                62.2329147642684,
+                102.36852803371173
+              ],
+              "r": [
+                168.8417117037618,
+                161.2424234346665
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 5,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 4.078836684617301,
+              "active_rope": null,
+              "upper_l": 35.75,
+              "forearm_l": 55.00000000000001,
+              "upper_r": -4.4,
+              "forearm_r": -5.5
+            },
+            "palms": {
+              "l": [
+                58.6577225566983,
+                130.65781182271004
+              ],
+              "r": [
+                165.04733783185966,
+                162.1786480181014
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 6,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 1.7388366846173011,
+              "active_rope": null,
+              "upper_l": 10.4,
+              "forearm_l": 16.0,
+              "upper_r": -1.28,
+              "forearm_r": -1.6
+            },
+            "palms": {
+              "l": [
+                81.20536195103591,
+                158.466876871254
+              ],
+              "r": [
+                160.7644212388461,
+                162.8433601113403
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          },
+          {
+            "index": 7,
+            "pose": {
+              "torso": 0,
+              "shift": [
+                0,
+                0
+              ],
+              "scarf": 0.778836684617301,
+              "active_rope": null,
+              "upper_l": 0,
+              "forearm_l": 0,
+              "upper_r": 0,
+              "forearm_r": 0
+            },
+            "palms": {
+              "l": [
+                96.0,
+                163.0
+              ],
+              "r": [
+                159.0,
+                163.0
+              ]
+            },
+            "head_matrix": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "head_expression_matrix_identical": true,
+            "head_rgb_source": "rig/common/front/head.png",
+            "redrawn_face": false,
+            "half_body_trim_y": null,
+            "rope_contact": null,
+            "rope_endpoints": {
+              "heat": [
+                68.0,
+                138.0
+              ],
+              "vent": [
+                196.0,
+                138.0
+              ]
+            }
+          }
+        ],
+        "runtime_contacts": [
+          {
+            "l": [
+              15.847,
+              50.986
+            ],
+            "r": [
+              37.55,
+              50.986
+            ]
+          },
+          {
+            "l": [
+              7.46,
+              47.169
+            ],
+            "r": [
+              38.613,
+              50.876
+            ]
+          },
+          {
+            "l": [
+              2.844,
+              33.641
+            ],
+            "r": [
+              40.42,
+              50.522
+            ]
+          },
+          {
+            "l": [
+              5.717,
+              28.091
+            ],
+            "r": [
+              41.31,
+              50.268
+            ]
+          },
+          {
+            "l": [
+              4.214,
+              30.098
+            ],
+            "r": [
+              40.941,
+              50.38
+            ]
+          },
+          {
+            "l": [
+              2.983,
+              39.844
+            ],
+            "r": [
+              39.634,
+              50.703
+            ]
+          },
+          {
+            "l": [
+              10.75,
+              49.424
+            ],
+            "r": [
+              38.158,
+              50.932
+            ]
+          },
+          {
+            "l": [
+              15.847,
+              50.986
+            ],
+            "r": [
+              37.55,
+              50.986
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "repairs": [
+    "Pants edge was incorrectly attached to a raised wrist. Only original skin/cuff coverage follows hands; pants stay with legs.",
+    "Scarf-root colors entered sleeve overlap circles. Local source-color exclusion now keeps the scarf off moving sleeves; frozen head is unchanged."
+  ],
+  "continuity": {
+    "heat": {
+      "boundary_runtime_rgba_mae": [
+        0.0,
+        0.0
+      ],
+      "geometry_palette_anchor_shared_with_idle": true
+    },
+    "vent": {
+      "boundary_runtime_rgba_mae": [
+        0.0,
+        0.0
+      ],
+      "geometry_palette_anchor_shared_with_idle": true
+    },
+    "hit": {
+      "boundary_runtime_rgba_mae": [
+        0.0,
+        0.0
+      ],
+      "geometry_palette_anchor_shared_with_idle": true
+    },
+    "receive_stamp": {
+      "boundary_runtime_rgba_mae": [
+        0.0,
+        0.0
+      ],
+      "geometry_palette_anchor_shared_with_idle": true
+    }
+  },
+  "engine_scene_anchor": [
+    80,
+    248
+  ]
+}

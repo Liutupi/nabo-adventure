@@ -1,24 +1,25 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_numbers_36_6__p0",
-  "width": 29,
+  "width": 35,
   "height": 36,
   "palette_rgb565": [
     0,
-    8649
+    8649,
+    38099
   ],
   "background_rgb888": null,
   "key_interval": 8,
   "keys": [
     0
   ],
-  "data_bytes": 280,
-  "table_bytes": 154,
+  "data_bytes": 405,
+  "table_bytes": 156,
   "frame_sha256": [
-    "4cb5263a15f9b823186b554d1ba63969b0e7b19dedc7a41cc1f46d317549137a"
+    "2698081b8e12106cbc663f47fc96d1aea9a931357289ef194b96d0f4509d9317"
   ],
   "source_sha256": [
-    "460d198ded088f217632323e80922839978254a96c63ecd2e8468701dc784a64"
+    "89ad611be484bfb569493260504348b7b12869b8332e0042bfb65274afdcde87"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,8 +33,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\numbers\\36\\6.png",
-      "sha256": "2dde530f8b627667b31627e04a65997f32e9f7a5c076e374c46d7117fba3a474"
+      "sha256": "e0d61d3db478784228e9faae038fe50dd35982db43583e68a8c0f0a19ef0027e"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/numbers/36/6",
+      "logical_symbol": "adv_assets_ui_numbers_36_6__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

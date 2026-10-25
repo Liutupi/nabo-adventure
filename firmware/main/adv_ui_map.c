@@ -124,18 +124,23 @@ static void draw_station(ag_t *g, const adv_model_t *m, int i, int cam)
            "ui/map/station-locked", 0, x - 24, y - 14);
     // Label card on the side away from the path's turn.
     int cx = x < 120 ? x + NODE_R + 8 : x - NODE_R - 8 - 112;
+    int top = y - 26;
+    uint16_t ink = here ? UI_WHITE : open ? UI_INK : UI_LOCK;
     ag_ninepatch(g, here ? &adv_assets_patch_info_current : &adv_assets_patch_info_normal,
-                 cx, y - 20, 112, 40);
-    ag_text(g, &collection_font_16, st->cn, cx + 8, y - 2, NT_ALIGN_LEFT, open ? UI_INK : UI_LOCK);
+                 cx, top, 112, 52);
+    ag_text_top(g, &collection_font_16, st->cn, cx + 8, top + 8, NT_ALIGN_LEFT, ink);
     if (s == ADV_KIOSK) {
-        ag_text(g, &collection_font_12, "护照 · 设置", cx + 8, y + 15, NT_ALIGN_LEFT, UI_INK);
+        ag_text_top(g, &collection_font_12, "护照 · 设置", cx + 8, top + 30, NT_ALIGN_LEFT, ink);
     } else if (!open) {
-        ag_text(g, &collection_font_12, "未解锁", cx + 8, y + 15, NT_ALIGN_LEFT, UI_LOCK);
+        ag_text_top(g, &collection_font_12, "未解锁", cx + 8, top + 30, NT_ALIGN_LEFT, ink);
     } else {
-        ui_stamps(g, m, s, cx + 13, y + 10, 4, 11);
+        ag_text_top(g, &collection_font_12, "最佳", cx + 104, top + 8, NT_ALIGN_RIGHT, ink);
+        ui_stamps(g, m, s, cx + 13, top + 37, 4, 11);
         char best[16];
-        snprintf(best, sizeof(best), "%u", (unsigned)m->best[s]);
-        ag_text(g, &nabo_mono_font_12, best, cx + 104, y + 14, NT_ALIGN_RIGHT, UI_INK);
+        if (m->best[s] > 9999) snprintf(best, sizeof(best), "9999+");
+        else snprintf(best, sizeof(best), "%u", (unsigned)m->best[s]);
+        if (here) ui_number_tint(g, best, 20, cx + 104, top + 24, NT_ALIGN_RIGHT, UI_WHITE);
+        else ui_number(g, best, 20, cx + 104, top + 24, NT_ALIGN_RIGHT);
     }
     if (!open) ui_art(g, "ui/map/lock", 0, x - 8, y - 55);
 }
@@ -150,10 +155,10 @@ void ui_draw_map(ag_t *g, const adv_model_t *m)
     for (int i = 0; i < ADV_STATIONS; i++) draw_station(g, m, i, cam);
     ui_art_anchor(g, action, time, x, y - cam + 15);
     const adv_station_t *st = &adv_station[m->cursor];
-    char title[48], count[16];
-    snprintf(title, sizeof(title), "冒险地图 · %s", st->world);
+    char count[16];
     snprintf(count, sizeof(count), "章 %d/24", ui_stamp_count(m));
-    ui_header(g, title, count);
+    ui_header(g, "冒险地图", count);
+    ag_text_top(g, &collection_font_12, st->world, 104, 11, NT_ALIGN_LEFT, UI_WHITE);
     if (m->cursor == ADV_KIOSK) ui_footer(g, "OK 进入护照亭 · 上/下 走");
     else if (!adv_unlocked(m, m->cursor)) {
         char hint[64];
@@ -167,35 +172,35 @@ void ui_draw_map(ag_t *g, const adv_model_t *m)
 void ui_draw_passport(ag_t *g, const adv_model_t *m)
 {
     ui_paper(g);
-    char count[16];
-    snprintf(count, sizeof(count), "章 %d/24", ui_stamp_count(m));
-    ui_header(g, "冒险护照", count);
-    for (int i = 0; i < 8; i++) {
-        int s = i + 1, x = i % 2 ? 124 : 12, y = 38 + (i / 2) * 57;
-        bool on = i == m->passport, open = adv_unlocked(m, s);
-        ui_art(g, on ? "ui/passport/grid-current" : "ui/passport/grid-normal", 0, x, y);
-        if (!open) ui_art(g, "ui/passport/locked-mask", 0, x, y);
-        ag_text(g, &collection_font_16, adv_station[s].cn, x + 16, y + 21, NT_ALIGN_LEFT, open ? UI_INK : UI_LOCK);
-        if (open) {
-            uint32_t earned = adv_earned(m);
-            for (int tier = 0; tier < 3; tier++)
-                if (earned & adv_stamp_bit(s, tier))
-                    ag_circle(g, x + 20 + tier * 20, y + 40, 4, ui_tier_color(tier), 255, 0, 0);
-            char best[16];
-            snprintf(best, sizeof(best), "%u", (unsigned)m->best[s]);
-            ag_text(g, &nabo_mono_font_12, best, x + 98, y + 41, NT_ALIGN_RIGHT, UI_INK);
-        }
-    }
-    int s = m->passport + 1;
-    char line[64];
+    int selected = m->passport + 1, tier = 0;
     uint32_t earned = adv_earned(m);
-    int tier = 0;
-    while (tier < 3 && (earned & adv_stamp_bit(s, tier))) tier++;
+    while (tier < 3 && (earned & adv_stamp_bit(selected, tier))) tier++;
     static const char *const tiers[] = {"铜章", "银章", "金章"};
-    if (tier == 3) snprintf(line, sizeof(line), "%s · 三枚章已集齐", adv_station[s].cn);
-    else snprintf(line, sizeof(line), "%s · 最佳 %u · %s %u", adv_station[s].cn, (unsigned)m->best[s], tiers[tier],
-                  (unsigned)adv_threshold(s, tier));
-    ag_text(g, &collection_font_12, line, 120, 282, NT_ALIGN_CENTER, UI_INK);
+    char goal[24], count[16];
+    if (tier == 3) snprintf(goal, sizeof(goal), "三枚章已集齐");
+    else snprintf(goal, sizeof(goal), "%s %u", tiers[tier], (unsigned)adv_threshold(selected, tier));
+    ui_header(g, "冒险护照", goal);
+    ui_art(g, "ui/passport/header", 0, 12, 40);
+    snprintf(count, sizeof(count), "%02d / 24", ui_stamp_count(m));
+    ag_text_top(g, &collection_font_12, count, 224, 48, NT_ALIGN_RIGHT, UI_DIM);
+    for (int i = 0; i < 8; i++) {
+        int s = i + 1, x = i % 2 ? 124 : 12, y = 70 + (i / 2) * 54;
+        bool on = i == m->passport, open = adv_unlocked(m, s);
+        uint16_t ink = on ? UI_WHITE : open ? UI_INK : UI_LOCK;
+        ui_art(g, on ? "ui/passport/grid-current" : "ui/passport/grid-normal", 0, x, y);
+        if (!open) {
+            if (on) ui_art_tint(g, "ui/passport/locked-mask", x, y, UI_WHITE);
+            else ui_art(g, "ui/passport/locked-mask", 0, x, y);
+        }
+        ag_text_top(g, &collection_font_16, adv_station[s].cn, x + 8, y + 8, NT_ALIGN_LEFT, ink);
+        if (open) {
+            ui_stamps(g, m, s, x + 13, y + 37, 4, 13);
+            char best[16];
+            if (m->best[s] > 9999) snprintf(best, sizeof(best), "9999+");
+            else snprintf(best, sizeof(best), "%u", (unsigned)m->best[s]);
+            ag_text_top(g, &collection_font_12, best, x + 96, y + 30, NT_ALIGN_RIGHT, ink);
+        } else ag_text_top(g, &collection_font_12, "未解锁", x + 8, y + 30, NT_ALIGN_LEFT, ink);
+    }
     ui_footer(g, "上/下 查看 · OK 返回");
 }
 
@@ -215,7 +220,8 @@ void ui_draw_stamp(ag_t *g, const adv_model_t *m)
     snprintf(asset, sizeof(asset), "static/stamp/%s", adv_station[s].id);
     ui_art_tint(g, asset, 72, 114, c);
     static const char *const names[] = {"铜章", "银章", "金章"};
-    ag_text(g, &collection_font_18, names[tier], 120, 246, NT_ALIGN_CENTER, c);
+    // Tier metal remains on the seal; the small caption needs full ink contrast.
+    ag_text(g, &collection_font_18, names[tier], 120, 246, NT_ALIGN_CENTER, UI_INK);
     if (tier == 0 && s + 1 < ADV_STATIONS) snprintf(line, sizeof(line), "解锁下一站：%s", adv_station[s + 1].cn);
     else if (tier == 1) snprintf(line, sizeof(line), "解锁第二款服装");
     else snprintf(line, sizeof(line), "护照金章");

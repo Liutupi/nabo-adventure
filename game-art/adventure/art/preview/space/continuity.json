@@ -1,0 +1,219 @@
+{
+  "checks": [
+    {
+      "from": [
+        "space_a",
+        "cabin_idle",
+        0
+      ],
+      "to": [
+        "space_a",
+        "jet",
+        0
+      ],
+      "pixel_equal_fields": [
+        "frames",
+        "runtime_frames"
+      ]
+    },
+    {
+      "from": [
+        "space_a",
+        "settlement_cheer",
+        0
+      ],
+      "to": [
+        "space_a",
+        "settlement_cheer",
+        -1
+      ],
+      "pixel_equal_fields": [
+        "frames",
+        "runtime_frames"
+      ]
+    },
+    {
+      "from": [
+        "space_a",
+        "cabin_idle",
+        0
+      ],
+      "to": [
+        "space_a",
+        "settlement_cheer",
+        0
+      ],
+      "pixel_equal_fields": [
+        "frames"
+      ]
+    },
+    {
+      "from": [
+        "space_b",
+        "cabin_idle",
+        0
+      ],
+      "to": [
+        "space_b",
+        "jet",
+        0
+      ],
+      "pixel_equal_fields": [
+        "frames",
+        "runtime_frames"
+      ]
+    },
+    {
+      "from": [
+        "space_b",
+        "settlement_cheer",
+        0
+      ],
+      "to": [
+        "space_b",
+        "settlement_cheer",
+        -1
+      ],
+      "pixel_equal_fields": [
+        "frames",
+        "runtime_frames"
+      ]
+    },
+    {
+      "from": [
+        "space_b",
+        "cabin_idle",
+        0
+      ],
+      "to": [
+        "space_b",
+        "settlement_cheer",
+        0
+      ],
+      "pixel_equal_fields": [
+        "frames"
+      ]
+    },
+    {
+      "from": [
+        "space_a",
+        "cabin_idle",
+        0
+      ],
+      "to": [
+        "space_a",
+        "land",
+        0
+      ],
+      "pixel_equal_fields": [
+        "frames",
+        "runtime_frames"
+      ]
+    },
+    {
+      "from": [
+        "space_a",
+        "land",
+        -1
+      ],
+      "to": [
+        "space_a",
+        "cabin_idle",
+        0
+      ],
+      "pixel_equal_fields": [
+        "frames",
+        "runtime_frames"
+      ]
+    },
+    {
+      "from": [
+        "space_a",
+        "cabin_idle",
+        0
+      ],
+      "to": [
+        "space_a",
+        "hard_land",
+        0
+      ],
+      "pixel_equal_fields": [
+        "frames",
+        "runtime_frames"
+      ]
+    },
+    {
+      "from": [
+        "space_a",
+        "hard_land",
+        -1
+      ],
+      "to": [
+        "space_a",
+        "cabin_idle",
+        0
+      ],
+      "pixel_equal_fields": [
+        "frames",
+        "runtime_frames"
+      ]
+    },
+    {
+      "from": [
+        "space_a",
+        "cabin_idle",
+        0
+      ],
+      "to": [
+        "space_a",
+        "plant_flag",
+        0
+      ],
+      "pixel_equal_fields": [
+        "frames",
+        "runtime_frames"
+      ]
+    },
+    {
+      "from": [
+        "space_a",
+        "plant_flag",
+        -1
+      ],
+      "to": [
+        "space_a",
+        "cabin_idle",
+        0
+      ],
+      "pixel_equal_fields": [
+        "frames",
+        "runtime_frames"
+      ]
+    },
+    {
+      "flag_planted_base_equals_world_root": true,
+      "planted_frames": [
+        5,
+        6,
+        7
+      ],
+      "persistent_prop_after_clip": true
+    },
+    {
+      "touchdown_before_release": true,
+      "exact_source_glove_contact_frames": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "max_flag_displacement_px": 4.242640687119285
+    }
+  ],
+  "notes": [
+    "Jet is periodic; finish at phase0 before switching to neutral, not an arbitrary loop frame.",
+    "Landing/hard landing/plant flag body first and last frames equal idle0 at formal and runtime size.",
+    "Flag is an explicit prop attachment; it remains planted in world space after the body returns to idle.",
+    "Cabin front frame deliberately occludes lower crew legs; it is not a second resize or head mask."
+  ]
+}

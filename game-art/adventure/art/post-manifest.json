@@ -1,0 +1,7308 @@
+{
+  "version": 1,
+  "package": "round6-post",
+  "status": "host-rendered; user artwork and hardware acceptance pending",
+  "rig": "rig/post/rig.json",
+  "animations": [
+    {
+      "name": "idle",
+      "skin": "post_a",
+      "facing": "front",
+      "fps": 12,
+      "loop": true,
+      "frames": [
+        "frames/post/post_a/idle/000.png",
+        "frames/post/post_a/idle/001.png",
+        "frames/post/post_a/idle/002.png",
+        "frames/post/post_a/idle/003.png",
+        "frames/post/post_a/idle/004.png",
+        "frames/post/post_a/idle/005.png"
+      ],
+      "masters": [
+        "frames/post/masters/post_a/idle/000.png",
+        "frames/post/masters/post_a/idle/001.png",
+        "frames/post/masters/post_a/idle/002.png",
+        "frames/post/masters/post_a/idle/003.png",
+        "frames/post/masters/post_a/idle/004.png",
+        "frames/post/masters/post_a/idle/005.png"
+      ],
+      "runtime_frames": [
+        "frames/post/runtime/post_a/idle/000.png",
+        "frames/post/runtime/post_a/idle/001.png",
+        "frames/post/runtime/post_a/idle/002.png",
+        "frames/post/runtime/post_a/idle/003.png",
+        "frames/post/runtime/post_a/idle/004.png",
+        "frames/post/runtime/post_a/idle/005.png"
+      ],
+      "frame_sha256": [
+        "8cd210e11e4f7dfeeaa34ce9945f5c8b72b397852282eb2abf330bb81e19575d",
+        "52984cb7a34a7d514e0276856d3106e724f2d73f28974f95ba6ece58694dc739",
+        "e8a15daef09649ec578c23f45f1351def7fa3d3fc0973e4c9d36e38b4c02574f",
+        "57419734630a05f6aeeb0cddcf79c348c8de4720da4c8a8640abc6d86687f125",
+        "2b12bb25620c75dcae64abf411bce335537526c7d2b3af2f1c5fa2fb38be6dd7",
+        "be8c305066f98a1595127077526a86dc175a715122e2a1715d304462ccb8cf7d"
+      ],
+      "master_sha256": [
+        "e74d41426f7153bf697643ed03071e7e7609d3cd307001ab836874a0f7c12059",
+        "8bb8be56031232bdb2bacd2c58d0817df1d495313556a28856f2c1485e1f7b7c",
+        "9b3b64f176475987ae98eb34e7b3707843fc6494e733ab3a9613203b502ec79b",
+        "884880f4a8debb0091b60270a1c6df41623305625dd778ed2432bf11848b867c",
+        "ffb8948b306e9b5015c9f3d84ac57c4be1707b317519d2c902e647305c8b14e2",
+        "33d443bb5362af14ad57776a49a8432ff3b66622b77a9a5fe5188c0aafdea2fa"
+      ],
+      "runtime_sha256": [
+        "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2",
+        "a6a18a1312950d7bdc6f1b64d24b284aded4fe1014665d6bb7d659321bda6732",
+        "a0290e5402e446cb19f1738cefea81c7ead14dd00c9344c21d759426ae5d6cbc",
+        "8a56868c8560586bf24da371d30123423a5151bbcde8158f7b51ddfa37abad1e",
+        "7ee53fe10fdfce855cce35cb2f09b4bbde651ae2e9000d599b5875d1946301f4",
+        "425850c81403c0646711e199095a3a41f3c776b77cd505c98ecf3b5c8e7ae7da"
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "anchor": [
+        128,
+        160
+      ],
+      "target_height_px": 40,
+      "runtime_canvas": [
+        36,
+        40
+      ],
+      "runtime_anchor": [
+        22,
+        40
+      ],
+      "runtime_group": "post_half40",
+      "hitbox": [
+        83,
+        15,
+        174,
+        160
+      ],
+      "shared_rgba_colors": 64,
+      "runtime_shared_rgba_colors": 64,
+      "runtime_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            255,
+            254,
+            254
+          ],
+          [
+            251,
+            247,
+            251
+          ],
+          [
+            247,
+            242,
+            250
+          ],
+          [
+            247,
+            242,
+            242
+          ],
+          [
+            245,
+            240,
+            245
+          ],
+          [
+            246,
+            237,
+            236
+          ],
+          [
+            240,
+            234,
+            243
+          ],
+          [
+            237,
+            232,
+            241
+          ],
+          [
+            247,
+            227,
+            217
+          ],
+          [
+            248,
+            221,
+            206
+          ],
+          [
+            250,
+            215,
+            200
+          ],
+          [
+            250,
+            209,
+            194
+          ],
+          [
+            234,
+            228,
+            240
+          ],
+          [
+            226,
+            225,
+            237
+          ],
+          [
+            225,
+            213,
+            212
+          ],
+          [
+            205,
+            213,
+            232
+          ],
+          [
+            251,
+            202,
+            185
+          ],
+          [
+            238,
+            199,
+            185
+          ],
+          [
+            236,
+            190,
+            174
+          ],
+          [
+            233,
+            181,
+            166
+          ],
+          [
+            215,
+            193,
+            187
+          ],
+          [
+            212,
+            179,
+            166
+          ],
+          [
+            186,
+            197,
+            223
+          ],
+          [
+            182,
+            180,
+            194
+          ],
+          [
+            224,
+            166,
+            149
+          ],
+          [
+            192,
+            170,
+            165
+          ],
+          [
+            210,
+            147,
+            130
+          ],
+          [
+            185,
+            145,
+            133
+          ],
+          [
+            167,
+            161,
+            170
+          ],
+          [
+            137,
+            157,
+            190
+          ],
+          [
+            163,
+            135,
+            128
+          ],
+          [
+            156,
+            117,
+            106
+          ],
+          [
+            157,
+            105,
+            86
+          ],
+          [
+            133,
+            108,
+            104
+          ],
+          [
+            139,
+            97,
+            82
+          ],
+          [
+            145,
+            82,
+            69
+          ],
+          [
+            127,
+            88,
+            75
+          ],
+          [
+            114,
+            83,
+            75
+          ],
+          [
+            112,
+            73,
+            62
+          ],
+          [
+            91,
+            84,
+            92
+          ],
+          [
+            87,
+            70,
+            71
+          ],
+          [
+            78,
+            66,
+            69
+          ],
+          [
+            89,
+            59,
+            52
+          ],
+          [
+            76,
+            61,
+            62
+          ],
+          [
+            59,
+            59,
+            78
+          ],
+          [
+            47,
+            59,
+            83
+          ],
+          [
+            83,
+            51,
+            45
+          ],
+          [
+            68,
+            48,
+            45
+          ],
+          [
+            65,
+            49,
+            48
+          ],
+          [
+            64,
+            43,
+            39
+          ],
+          [
+            61,
+            50,
+            53
+          ],
+          [
+            59,
+            47,
+            49
+          ],
+          [
+            58,
+            45,
+            46
+          ],
+          [
+            58,
+            43,
+            43
+          ],
+          [
+            55,
+            38,
+            37
+          ],
+          [
+            48,
+            55,
+            83
+          ],
+          [
+            49,
+            43,
+            50
+          ],
+          [
+            41,
+            51,
+            76
+          ],
+          [
+            35,
+            43,
+            67
+          ],
+          [
+            50,
+            37,
+            37
+          ],
+          [
+            37,
+            34,
+            41
+          ],
+          [
+            30,
+            23,
+            27
+          ],
+          [
+            13,
+            5,
+            5
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.396452790818988,
+        "mean_rgb_absolute_error": 4.2697240233295926,
+        "head_rgb_mean_absolute_error": 3.6372949357619317,
+        "protected_head_sampling_weight": 3,
+        "source_bbox": [
+          50,
+          15,
+          180,
+          160
+        ],
+        "scale": 0.27586206896551724,
+        "canvas": [
+          36,
+          40
+        ],
+        "anchor": [
+          22,
+          40
+        ],
+        "policy": "One union crop, scale and palette for all clips and both skins of the same target height; never recenter individual frames."
+      },
+      "delivery_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            254,
+            254,
+            254
+          ],
+          [
+            252,
+            249,
+            251
+          ],
+          [
+            248,
+            244,
+            250
+          ],
+          [
+            248,
+            242,
+            243
+          ],
+          [
+            243,
+            238,
+            246
+          ],
+          [
+            241,
+            237,
+            246
+          ],
+          [
+            244,
+            236,
+            239
+          ],
+          [
+            239,
+            235,
+            244
+          ],
+          [
+            249,
+            229,
+            216
+          ],
+          [
+            239,
+            232,
+            241
+          ],
+          [
+            247,
+            222,
+            209
+          ],
+          [
+            250,
+            218,
+            202
+          ],
+          [
+            236,
+            231,
+            241
+          ],
+          [
+            234,
+            229,
+            240
+          ],
+          [
+            229,
+            223,
+            232
+          ],
+          [
+            252,
+            213,
+            198
+          ],
+          [
+            252,
+            209,
+            193
+          ],
+          [
+            253,
+            203,
+            188
+          ],
+          [
+            253,
+            193,
+            177
+          ],
+          [
+            243,
+            207,
+            193
+          ],
+          [
+            245,
+            191,
+            176
+          ],
+          [
+            220,
+            208,
+            208
+          ],
+          [
+            209,
+            192,
+            191
+          ],
+          [
+            240,
+            175,
+            156
+          ],
+          [
+            212,
+            169,
+            154
+          ],
+          [
+            216,
+            152,
+            133
+          ],
+          [
+            209,
+            137,
+            116
+          ],
+          [
+            185,
+            157,
+            151
+          ],
+          [
+            147,
+            153,
+            174
+          ],
+          [
+            178,
+            125,
+            105
+          ],
+          [
+            132,
+            122,
+            131
+          ],
+          [
+            165,
+            98,
+            82
+          ],
+          [
+            140,
+            94,
+            77
+          ],
+          [
+            122,
+            90,
+            81
+          ],
+          [
+            116,
+            75,
+            62
+          ],
+          [
+            92,
+            91,
+            105
+          ],
+          [
+            91,
+            74,
+            75
+          ],
+          [
+            98,
+            66,
+            57
+          ],
+          [
+            76,
+            65,
+            71
+          ],
+          [
+            95,
+            59,
+            52
+          ],
+          [
+            75,
+            58,
+            58
+          ],
+          [
+            93,
+            49,
+            42
+          ],
+          [
+            73,
+            50,
+            45
+          ],
+          [
+            66,
+            56,
+            62
+          ],
+          [
+            66,
+            52,
+            52
+          ],
+          [
+            65,
+            48,
+            46
+          ],
+          [
+            64,
+            42,
+            37
+          ],
+          [
+            48,
+            70,
+            109
+          ],
+          [
+            49,
+            58,
+            87
+          ],
+          [
+            50,
+            55,
+            83
+          ],
+          [
+            43,
+            54,
+            83
+          ],
+          [
+            51,
+            50,
+            66
+          ],
+          [
+            56,
+            43,
+            45
+          ],
+          [
+            42,
+            48,
+            75
+          ],
+          [
+            35,
+            45,
+            70
+          ],
+          [
+            52,
+            38,
+            38
+          ],
+          [
+            50,
+            32,
+            29
+          ],
+          [
+            41,
+            31,
+            33
+          ],
+          [
+            30,
+            32,
+            46
+          ],
+          [
+            35,
+            23,
+            23
+          ],
+          [
+            30,
+            16,
+            15
+          ],
+          [
+            16,
+            14,
+            18
+          ],
+          [
+            7,
+            4,
+            4
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.583315086490037,
+        "mean_rgb_absolute_error": 4.372940242942892,
+        "head_rgb_mean_absolute_error": 4.093644573581079,
+        "protected_head_sampling_weight": 3
+      },
+      "rig": "rig/post/rig.json",
+      "preview": "preview/post/post_a-idle-contact.png"
+    },
+    {
+      "name": "whistle",
+      "skin": "post_a",
+      "facing": "front",
+      "fps": 12,
+      "loop": false,
+      "frames": [
+        "frames/post/post_a/whistle/000.png",
+        "frames/post/post_a/whistle/001.png",
+        "frames/post/post_a/whistle/002.png",
+        "frames/post/post_a/whistle/003.png",
+        "frames/post/post_a/whistle/004.png",
+        "frames/post/post_a/whistle/005.png"
+      ],
+      "masters": [
+        "frames/post/masters/post_a/whistle/000.png",
+        "frames/post/masters/post_a/whistle/001.png",
+        "frames/post/masters/post_a/whistle/002.png",
+        "frames/post/masters/post_a/whistle/003.png",
+        "frames/post/masters/post_a/whistle/004.png",
+        "frames/post/masters/post_a/whistle/005.png"
+      ],
+      "runtime_frames": [
+        "frames/post/runtime/post_a/whistle/000.png",
+        "frames/post/runtime/post_a/whistle/001.png",
+        "frames/post/runtime/post_a/whistle/002.png",
+        "frames/post/runtime/post_a/whistle/003.png",
+        "frames/post/runtime/post_a/whistle/004.png",
+        "frames/post/runtime/post_a/whistle/005.png"
+      ],
+      "frame_sha256": [
+        "8cd210e11e4f7dfeeaa34ce9945f5c8b72b397852282eb2abf330bb81e19575d",
+        "70909ec5a4e62c2b99250e9c57263f5b2655420b9aac42cc71c169a5757deb74",
+        "4aa8a9ac7742ca61deed7b2e9dabfc35ab896e4e48ab53a4365f52c0ce89308d",
+        "43a2386fa3f129def12e6411d75ed7ff0d4d5a04b3239a5cfcc489fdd7ff848f",
+        "2e90db219488d5b061968dac4946be037bca270a996de78e6ca3e8188766d7c8",
+        "8cd210e11e4f7dfeeaa34ce9945f5c8b72b397852282eb2abf330bb81e19575d"
+      ],
+      "master_sha256": [
+        "e74d41426f7153bf697643ed03071e7e7609d3cd307001ab836874a0f7c12059",
+        "a8cacf8a2d316dcbe3e3cfc6175dfc6d44c112f180890556df18c859711595d8",
+        "7a9454f99a46a2ced6216d3f3bbe78baed9cb7ac0adf5dc0eca9b4070be6dd96",
+        "35a44b0aa1bcbbe883d727aa98857d9b655ca6d9f19cd16e2e6e8177f1bd75dc",
+        "28f88413b7a570550e11a75a272f02664cdb007b9542a8bb2ddb1f600ffbb8a3",
+        "e74d41426f7153bf697643ed03071e7e7609d3cd307001ab836874a0f7c12059"
+      ],
+      "runtime_sha256": [
+        "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2",
+        "0411ba3d03b7aebe7a224f6247088f05d5b82668bca044a57a0ea2d1dc8b8b2d",
+        "c899bc165823f6f991c5dff4eb8da7cb626bb0dfa9841416b1cdecc8ac0d25c3",
+        "1fa3f68a7e38467420e6a35cd308672aaef579f52b198899ad68720093037469",
+        "b8e45d3870f33d528ee0b6efa17ef0834605510625047d433d64e8dc36c13b7c",
+        "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2"
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "anchor": [
+        128,
+        160
+      ],
+      "target_height_px": 40,
+      "runtime_canvas": [
+        36,
+        40
+      ],
+      "runtime_anchor": [
+        22,
+        40
+      ],
+      "runtime_group": "post_half40",
+      "hitbox": [
+        55,
+        15,
+        174,
+        160
+      ],
+      "shared_rgba_colors": 64,
+      "runtime_shared_rgba_colors": 64,
+      "runtime_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            255,
+            254,
+            254
+          ],
+          [
+            251,
+            247,
+            251
+          ],
+          [
+            247,
+            242,
+            250
+          ],
+          [
+            247,
+            242,
+            242
+          ],
+          [
+            245,
+            240,
+            245
+          ],
+          [
+            246,
+            237,
+            236
+          ],
+          [
+            240,
+            234,
+            243
+          ],
+          [
+            237,
+            232,
+            241
+          ],
+          [
+            247,
+            227,
+            217
+          ],
+          [
+            248,
+            221,
+            206
+          ],
+          [
+            250,
+            215,
+            200
+          ],
+          [
+            250,
+            209,
+            194
+          ],
+          [
+            234,
+            228,
+            240
+          ],
+          [
+            226,
+            225,
+            237
+          ],
+          [
+            225,
+            213,
+            212
+          ],
+          [
+            205,
+            213,
+            232
+          ],
+          [
+            251,
+            202,
+            185
+          ],
+          [
+            238,
+            199,
+            185
+          ],
+          [
+            236,
+            190,
+            174
+          ],
+          [
+            233,
+            181,
+            166
+          ],
+          [
+            215,
+            193,
+            187
+          ],
+          [
+            212,
+            179,
+            166
+          ],
+          [
+            186,
+            197,
+            223
+          ],
+          [
+            182,
+            180,
+            194
+          ],
+          [
+            224,
+            166,
+            149
+          ],
+          [
+            192,
+            170,
+            165
+          ],
+          [
+            210,
+            147,
+            130
+          ],
+          [
+            185,
+            145,
+            133
+          ],
+          [
+            167,
+            161,
+            170
+          ],
+          [
+            137,
+            157,
+            190
+          ],
+          [
+            163,
+            135,
+            128
+          ],
+          [
+            156,
+            117,
+            106
+          ],
+          [
+            157,
+            105,
+            86
+          ],
+          [
+            133,
+            108,
+            104
+          ],
+          [
+            139,
+            97,
+            82
+          ],
+          [
+            145,
+            82,
+            69
+          ],
+          [
+            127,
+            88,
+            75
+          ],
+          [
+            114,
+            83,
+            75
+          ],
+          [
+            112,
+            73,
+            62
+          ],
+          [
+            91,
+            84,
+            92
+          ],
+          [
+            87,
+            70,
+            71
+          ],
+          [
+            78,
+            66,
+            69
+          ],
+          [
+            89,
+            59,
+            52
+          ],
+          [
+            76,
+            61,
+            62
+          ],
+          [
+            59,
+            59,
+            78
+          ],
+          [
+            47,
+            59,
+            83
+          ],
+          [
+            83,
+            51,
+            45
+          ],
+          [
+            68,
+            48,
+            45
+          ],
+          [
+            65,
+            49,
+            48
+          ],
+          [
+            64,
+            43,
+            39
+          ],
+          [
+            61,
+            50,
+            53
+          ],
+          [
+            59,
+            47,
+            49
+          ],
+          [
+            58,
+            45,
+            46
+          ],
+          [
+            58,
+            43,
+            43
+          ],
+          [
+            55,
+            38,
+            37
+          ],
+          [
+            48,
+            55,
+            83
+          ],
+          [
+            49,
+            43,
+            50
+          ],
+          [
+            41,
+            51,
+            76
+          ],
+          [
+            35,
+            43,
+            67
+          ],
+          [
+            50,
+            37,
+            37
+          ],
+          [
+            37,
+            34,
+            41
+          ],
+          [
+            30,
+            23,
+            27
+          ],
+          [
+            13,
+            5,
+            5
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.396452790818988,
+        "mean_rgb_absolute_error": 4.2697240233295926,
+        "head_rgb_mean_absolute_error": 3.6372949357619317,
+        "protected_head_sampling_weight": 3,
+        "source_bbox": [
+          50,
+          15,
+          180,
+          160
+        ],
+        "scale": 0.27586206896551724,
+        "canvas": [
+          36,
+          40
+        ],
+        "anchor": [
+          22,
+          40
+        ],
+        "policy": "One union crop, scale and palette for all clips and both skins of the same target height; never recenter individual frames."
+      },
+      "delivery_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            254,
+            254,
+            254
+          ],
+          [
+            252,
+            249,
+            251
+          ],
+          [
+            248,
+            244,
+            250
+          ],
+          [
+            248,
+            242,
+            243
+          ],
+          [
+            243,
+            238,
+            246
+          ],
+          [
+            241,
+            237,
+            246
+          ],
+          [
+            244,
+            236,
+            239
+          ],
+          [
+            239,
+            235,
+            244
+          ],
+          [
+            249,
+            229,
+            216
+          ],
+          [
+            239,
+            232,
+            241
+          ],
+          [
+            247,
+            222,
+            209
+          ],
+          [
+            250,
+            218,
+            202
+          ],
+          [
+            236,
+            231,
+            241
+          ],
+          [
+            234,
+            229,
+            240
+          ],
+          [
+            229,
+            223,
+            232
+          ],
+          [
+            252,
+            213,
+            198
+          ],
+          [
+            252,
+            209,
+            193
+          ],
+          [
+            253,
+            203,
+            188
+          ],
+          [
+            253,
+            193,
+            177
+          ],
+          [
+            243,
+            207,
+            193
+          ],
+          [
+            245,
+            191,
+            176
+          ],
+          [
+            220,
+            208,
+            208
+          ],
+          [
+            209,
+            192,
+            191
+          ],
+          [
+            240,
+            175,
+            156
+          ],
+          [
+            212,
+            169,
+            154
+          ],
+          [
+            216,
+            152,
+            133
+          ],
+          [
+            209,
+            137,
+            116
+          ],
+          [
+            185,
+            157,
+            151
+          ],
+          [
+            147,
+            153,
+            174
+          ],
+          [
+            178,
+            125,
+            105
+          ],
+          [
+            132,
+            122,
+            131
+          ],
+          [
+            165,
+            98,
+            82
+          ],
+          [
+            140,
+            94,
+            77
+          ],
+          [
+            122,
+            90,
+            81
+          ],
+          [
+            116,
+            75,
+            62
+          ],
+          [
+            92,
+            91,
+            105
+          ],
+          [
+            91,
+            74,
+            75
+          ],
+          [
+            98,
+            66,
+            57
+          ],
+          [
+            76,
+            65,
+            71
+          ],
+          [
+            95,
+            59,
+            52
+          ],
+          [
+            75,
+            58,
+            58
+          ],
+          [
+            93,
+            49,
+            42
+          ],
+          [
+            73,
+            50,
+            45
+          ],
+          [
+            66,
+            56,
+            62
+          ],
+          [
+            66,
+            52,
+            52
+          ],
+          [
+            65,
+            48,
+            46
+          ],
+          [
+            64,
+            42,
+            37
+          ],
+          [
+            48,
+            70,
+            109
+          ],
+          [
+            49,
+            58,
+            87
+          ],
+          [
+            50,
+            55,
+            83
+          ],
+          [
+            43,
+            54,
+            83
+          ],
+          [
+            51,
+            50,
+            66
+          ],
+          [
+            56,
+            43,
+            45
+          ],
+          [
+            42,
+            48,
+            75
+          ],
+          [
+            35,
+            45,
+            70
+          ],
+          [
+            52,
+            38,
+            38
+          ],
+          [
+            50,
+            32,
+            29
+          ],
+          [
+            41,
+            31,
+            33
+          ],
+          [
+            30,
+            32,
+            46
+          ],
+          [
+            35,
+            23,
+            23
+          ],
+          [
+            30,
+            16,
+            15
+          ],
+          [
+            16,
+            14,
+            18
+          ],
+          [
+            7,
+            4,
+            4
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.583315086490037,
+        "mean_rgb_absolute_error": 4.372940242942892,
+        "head_rgb_mean_absolute_error": 4.093644573581079,
+        "protected_head_sampling_weight": 3
+      },
+      "rig": "rig/post/rig.json",
+      "events": [
+        {
+          "frame": 2,
+          "event": "grasp"
+        },
+        {
+          "frame": 3,
+          "event": "pull-whistle"
+        }
+      ],
+      "preview": "preview/post/post_a-whistle-contact.png",
+      "cab_attachment": "post_props/whistle-cord",
+      "grip_contact": [
+        {
+          "frame": 0,
+          "source_grip_xy": [
+            96,
+            161
+          ],
+          "roof_anchor": [
+            12,
+            7
+          ],
+          "hand_contact": [
+            16,
+            48
+          ],
+          "state": "rest"
+        },
+        {
+          "frame": 1,
+          "source_grip_xy": [
+            72,
+            144
+          ],
+          "roof_anchor": [
+            12,
+            7
+          ],
+          "hand_contact": [
+            9,
+            45
+          ],
+          "state": "approach"
+        },
+        {
+          "frame": 2,
+          "source_grip_xy": [
+            72,
+            113
+          ],
+          "roof_anchor": [
+            12,
+            7
+          ],
+          "hand_contact": [
+            9,
+            36
+          ],
+          "state": "grasp"
+        },
+        {
+          "frame": 3,
+          "source_grip_xy": [
+            67,
+            128
+          ],
+          "roof_anchor": [
+            12,
+            7
+          ],
+          "hand_contact": [
+            8,
+            40
+          ],
+          "state": "pull"
+        },
+        {
+          "frame": 4,
+          "source_grip_xy": [
+            80,
+            154
+          ],
+          "roof_anchor": [
+            12,
+            7
+          ],
+          "hand_contact": [
+            11,
+            47
+          ],
+          "state": "release"
+        },
+        {
+          "frame": 5,
+          "source_grip_xy": [
+            96,
+            161
+          ],
+          "roof_anchor": [
+            12,
+            7
+          ],
+          "hand_contact": [
+            16,
+            48
+          ],
+          "state": "rest"
+        }
+      ]
+    },
+    {
+      "name": "throw",
+      "skin": "post_a",
+      "facing": "front",
+      "fps": 12,
+      "loop": false,
+      "frames": [
+        "frames/post/post_a/throw/000.png",
+        "frames/post/post_a/throw/001.png",
+        "frames/post/post_a/throw/002.png",
+        "frames/post/post_a/throw/003.png",
+        "frames/post/post_a/throw/004.png",
+        "frames/post/post_a/throw/005.png"
+      ],
+      "masters": [
+        "frames/post/masters/post_a/throw/000.png",
+        "frames/post/masters/post_a/throw/001.png",
+        "frames/post/masters/post_a/throw/002.png",
+        "frames/post/masters/post_a/throw/003.png",
+        "frames/post/masters/post_a/throw/004.png",
+        "frames/post/masters/post_a/throw/005.png"
+      ],
+      "runtime_frames": [
+        "frames/post/runtime/post_a/throw/000.png",
+        "frames/post/runtime/post_a/throw/001.png",
+        "frames/post/runtime/post_a/throw/002.png",
+        "frames/post/runtime/post_a/throw/003.png",
+        "frames/post/runtime/post_a/throw/004.png",
+        "frames/post/runtime/post_a/throw/005.png"
+      ],
+      "frame_sha256": [
+        "655009ace626338abfab9910b2c5aa706cb6b8bcdcc613d9101cbcbce206080b",
+        "b0d14c9f58fe7df46c2ec95e3fd3d8823995decb731021538bc9f997e6e72bdd",
+        "7e4c49fbf17dc50f6d49f0ded44508d0b0450d21ae3a8e303a45ddb5d03ebe52",
+        "935a50b8808260995e653d92878f2f7ef963ee9e85d723cca2aa35fb358cfa17",
+        "1d858ffe97a7e025279b2727bcd2788326139165000132dbc62edddf051124e4",
+        "8cd210e11e4f7dfeeaa34ce9945f5c8b72b397852282eb2abf330bb81e19575d"
+      ],
+      "master_sha256": [
+        "8cd946219d8e2a9fcede8720b348791dca8bd6f728c321c70cb9300cba540ab2",
+        "f44e72546c8f82ab9766da6b6e41e20af6d1b07100b2db2ba2491a2e790a5e80",
+        "9e34e230a5bc10a7d02d85c5b343d2ecad656c22030cfc8ccfc8a12f0dd7d41c",
+        "a2ccd2a7bdaa628da4d10285d62772ca2c211b17c9a1c20cf1a77930e68a8825",
+        "efbf2268e4e5cef910c4c1e19db088215fb89b4caae2a8dcd7bda3ba8125a1e9",
+        "e74d41426f7153bf697643ed03071e7e7609d3cd307001ab836874a0f7c12059"
+      ],
+      "runtime_sha256": [
+        "877106f1880349eabb4caa23faa7fffef58ea70ec6542dd86c26537fd51ec0c9",
+        "4526b7557c77d7a3ffa9db4366f7bcd70cfc7eac8ccc9272141df044c90d71ce",
+        "85a455ea2348a264bd92d2f582dd359459e4dc4af58d6f6c99e1801c97b59245",
+        "aed0fd53d941b507c36a5af6fa30a6146f627cda3ebe26faabd72f8d17740b7e",
+        "dfc2a0f9eb34202566651cb34dc60e86cb107983ecab90d3af5fe791ec73d9f1",
+        "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2"
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "anchor": [
+        128,
+        160
+      ],
+      "target_height_px": 40,
+      "runtime_canvas": [
+        36,
+        40
+      ],
+      "runtime_anchor": [
+        22,
+        40
+      ],
+      "runtime_group": "post_half40",
+      "hitbox": [
+        55,
+        15,
+        174,
+        160
+      ],
+      "shared_rgba_colors": 64,
+      "runtime_shared_rgba_colors": 64,
+      "runtime_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            255,
+            254,
+            254
+          ],
+          [
+            251,
+            247,
+            251
+          ],
+          [
+            247,
+            242,
+            250
+          ],
+          [
+            247,
+            242,
+            242
+          ],
+          [
+            245,
+            240,
+            245
+          ],
+          [
+            246,
+            237,
+            236
+          ],
+          [
+            240,
+            234,
+            243
+          ],
+          [
+            237,
+            232,
+            241
+          ],
+          [
+            247,
+            227,
+            217
+          ],
+          [
+            248,
+            221,
+            206
+          ],
+          [
+            250,
+            215,
+            200
+          ],
+          [
+            250,
+            209,
+            194
+          ],
+          [
+            234,
+            228,
+            240
+          ],
+          [
+            226,
+            225,
+            237
+          ],
+          [
+            225,
+            213,
+            212
+          ],
+          [
+            205,
+            213,
+            232
+          ],
+          [
+            251,
+            202,
+            185
+          ],
+          [
+            238,
+            199,
+            185
+          ],
+          [
+            236,
+            190,
+            174
+          ],
+          [
+            233,
+            181,
+            166
+          ],
+          [
+            215,
+            193,
+            187
+          ],
+          [
+            212,
+            179,
+            166
+          ],
+          [
+            186,
+            197,
+            223
+          ],
+          [
+            182,
+            180,
+            194
+          ],
+          [
+            224,
+            166,
+            149
+          ],
+          [
+            192,
+            170,
+            165
+          ],
+          [
+            210,
+            147,
+            130
+          ],
+          [
+            185,
+            145,
+            133
+          ],
+          [
+            167,
+            161,
+            170
+          ],
+          [
+            137,
+            157,
+            190
+          ],
+          [
+            163,
+            135,
+            128
+          ],
+          [
+            156,
+            117,
+            106
+          ],
+          [
+            157,
+            105,
+            86
+          ],
+          [
+            133,
+            108,
+            104
+          ],
+          [
+            139,
+            97,
+            82
+          ],
+          [
+            145,
+            82,
+            69
+          ],
+          [
+            127,
+            88,
+            75
+          ],
+          [
+            114,
+            83,
+            75
+          ],
+          [
+            112,
+            73,
+            62
+          ],
+          [
+            91,
+            84,
+            92
+          ],
+          [
+            87,
+            70,
+            71
+          ],
+          [
+            78,
+            66,
+            69
+          ],
+          [
+            89,
+            59,
+            52
+          ],
+          [
+            76,
+            61,
+            62
+          ],
+          [
+            59,
+            59,
+            78
+          ],
+          [
+            47,
+            59,
+            83
+          ],
+          [
+            83,
+            51,
+            45
+          ],
+          [
+            68,
+            48,
+            45
+          ],
+          [
+            65,
+            49,
+            48
+          ],
+          [
+            64,
+            43,
+            39
+          ],
+          [
+            61,
+            50,
+            53
+          ],
+          [
+            59,
+            47,
+            49
+          ],
+          [
+            58,
+            45,
+            46
+          ],
+          [
+            58,
+            43,
+            43
+          ],
+          [
+            55,
+            38,
+            37
+          ],
+          [
+            48,
+            55,
+            83
+          ],
+          [
+            49,
+            43,
+            50
+          ],
+          [
+            41,
+            51,
+            76
+          ],
+          [
+            35,
+            43,
+            67
+          ],
+          [
+            50,
+            37,
+            37
+          ],
+          [
+            37,
+            34,
+            41
+          ],
+          [
+            30,
+            23,
+            27
+          ],
+          [
+            13,
+            5,
+            5
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.396452790818988,
+        "mean_rgb_absolute_error": 4.2697240233295926,
+        "head_rgb_mean_absolute_error": 3.6372949357619317,
+        "protected_head_sampling_weight": 3,
+        "source_bbox": [
+          50,
+          15,
+          180,
+          160
+        ],
+        "scale": 0.27586206896551724,
+        "canvas": [
+          36,
+          40
+        ],
+        "anchor": [
+          22,
+          40
+        ],
+        "policy": "One union crop, scale and palette for all clips and both skins of the same target height; never recenter individual frames."
+      },
+      "delivery_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            254,
+            254,
+            254
+          ],
+          [
+            252,
+            249,
+            251
+          ],
+          [
+            248,
+            244,
+            250
+          ],
+          [
+            248,
+            242,
+            243
+          ],
+          [
+            243,
+            238,
+            246
+          ],
+          [
+            241,
+            237,
+            246
+          ],
+          [
+            244,
+            236,
+            239
+          ],
+          [
+            239,
+            235,
+            244
+          ],
+          [
+            249,
+            229,
+            216
+          ],
+          [
+            239,
+            232,
+            241
+          ],
+          [
+            247,
+            222,
+            209
+          ],
+          [
+            250,
+            218,
+            202
+          ],
+          [
+            236,
+            231,
+            241
+          ],
+          [
+            234,
+            229,
+            240
+          ],
+          [
+            229,
+            223,
+            232
+          ],
+          [
+            252,
+            213,
+            198
+          ],
+          [
+            252,
+            209,
+            193
+          ],
+          [
+            253,
+            203,
+            188
+          ],
+          [
+            253,
+            193,
+            177
+          ],
+          [
+            243,
+            207,
+            193
+          ],
+          [
+            245,
+            191,
+            176
+          ],
+          [
+            220,
+            208,
+            208
+          ],
+          [
+            209,
+            192,
+            191
+          ],
+          [
+            240,
+            175,
+            156
+          ],
+          [
+            212,
+            169,
+            154
+          ],
+          [
+            216,
+            152,
+            133
+          ],
+          [
+            209,
+            137,
+            116
+          ],
+          [
+            185,
+            157,
+            151
+          ],
+          [
+            147,
+            153,
+            174
+          ],
+          [
+            178,
+            125,
+            105
+          ],
+          [
+            132,
+            122,
+            131
+          ],
+          [
+            165,
+            98,
+            82
+          ],
+          [
+            140,
+            94,
+            77
+          ],
+          [
+            122,
+            90,
+            81
+          ],
+          [
+            116,
+            75,
+            62
+          ],
+          [
+            92,
+            91,
+            105
+          ],
+          [
+            91,
+            74,
+            75
+          ],
+          [
+            98,
+            66,
+            57
+          ],
+          [
+            76,
+            65,
+            71
+          ],
+          [
+            95,
+            59,
+            52
+          ],
+          [
+            75,
+            58,
+            58
+          ],
+          [
+            93,
+            49,
+            42
+          ],
+          [
+            73,
+            50,
+            45
+          ],
+          [
+            66,
+            56,
+            62
+          ],
+          [
+            66,
+            52,
+            52
+          ],
+          [
+            65,
+            48,
+            46
+          ],
+          [
+            64,
+            42,
+            37
+          ],
+          [
+            48,
+            70,
+            109
+          ],
+          [
+            49,
+            58,
+            87
+          ],
+          [
+            50,
+            55,
+            83
+          ],
+          [
+            43,
+            54,
+            83
+          ],
+          [
+            51,
+            50,
+            66
+          ],
+          [
+            56,
+            43,
+            45
+          ],
+          [
+            42,
+            48,
+            75
+          ],
+          [
+            35,
+            45,
+            70
+          ],
+          [
+            52,
+            38,
+            38
+          ],
+          [
+            50,
+            32,
+            29
+          ],
+          [
+            41,
+            31,
+            33
+          ],
+          [
+            30,
+            32,
+            46
+          ],
+          [
+            35,
+            23,
+            23
+          ],
+          [
+            30,
+            16,
+            15
+          ],
+          [
+            16,
+            14,
+            18
+          ],
+          [
+            7,
+            4,
+            4
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.583315086490037,
+        "mean_rgb_absolute_error": 4.372940242942892,
+        "head_rgb_mean_absolute_error": 4.093644573581079,
+        "protected_head_sampling_weight": 3
+      },
+      "rig": "rig/post/rig.json",
+      "events": [
+        {
+          "frame": 3,
+          "event": "release-envelope; engine owns subsequent projectile motion"
+        }
+      ],
+      "preview": "preview/post/post_a-throw-contact.png"
+    },
+    {
+      "name": "hit",
+      "skin": "post_a",
+      "facing": "front",
+      "fps": 12,
+      "loop": false,
+      "frames": [
+        "frames/post/post_a/hit/000.png",
+        "frames/post/post_a/hit/001.png",
+        "frames/post/post_a/hit/002.png",
+        "frames/post/post_a/hit/003.png",
+        "frames/post/post_a/hit/004.png",
+        "frames/post/post_a/hit/005.png"
+      ],
+      "masters": [
+        "frames/post/masters/post_a/hit/000.png",
+        "frames/post/masters/post_a/hit/001.png",
+        "frames/post/masters/post_a/hit/002.png",
+        "frames/post/masters/post_a/hit/003.png",
+        "frames/post/masters/post_a/hit/004.png",
+        "frames/post/masters/post_a/hit/005.png"
+      ],
+      "runtime_frames": [
+        "frames/post/runtime/post_a/hit/000.png",
+        "frames/post/runtime/post_a/hit/001.png",
+        "frames/post/runtime/post_a/hit/002.png",
+        "frames/post/runtime/post_a/hit/003.png",
+        "frames/post/runtime/post_a/hit/004.png",
+        "frames/post/runtime/post_a/hit/005.png"
+      ],
+      "frame_sha256": [
+        "8cd210e11e4f7dfeeaa34ce9945f5c8b72b397852282eb2abf330bb81e19575d",
+        "15df054b225accf70e7f3f00424a953f23c06a51c468b0be57e22027195d13d3",
+        "8e84ca4323991fe4f1a29ee02d541728dd0eea8cae02213fd3dea72419cfd75e",
+        "4c3874bafe7ca4ad31a3386d5801346da368ad7cfa5e26b1b6d78d8bfa9b68d8",
+        "9ff36547a0454f7ff61eacc99ea9081d44d17868fd9221eeb746e09dcbfa8340",
+        "8cd210e11e4f7dfeeaa34ce9945f5c8b72b397852282eb2abf330bb81e19575d"
+      ],
+      "master_sha256": [
+        "e74d41426f7153bf697643ed03071e7e7609d3cd307001ab836874a0f7c12059",
+        "776253717234e047b789fc617f4b3d94f3ce02aac34498b3efb1ed5897cda073",
+        "4e2014ff14ecfc658fcd79d5f84b6cccb24ebf1c0e0e497e4f7c25372069447b",
+        "3e89b9a1b89b117d92d000556157c8af36bf70266a083be2e3192b5e489afc8f",
+        "8020315456b0dcad261127a9f263a4fb32dfc7324fcae01ba3d0b5746baa56ce",
+        "e74d41426f7153bf697643ed03071e7e7609d3cd307001ab836874a0f7c12059"
+      ],
+      "runtime_sha256": [
+        "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2",
+        "98e2e048ab9c76f2cc0c7f850d20ba6389c1540d3efbaeb91cb8abfcb8ac6cd8",
+        "fed26c7d5012edeeaceac8892ffa39f00bd457a1b0fa73386ce705d7e9b76e0a",
+        "ffa1980f365dc1fafe242bca0afd0f5b834430ce990d5938f705b796f8c25bb0",
+        "fab151ddb70dc847f50f460814c66dfa40680940e60c2f50e19f7132429d88d4",
+        "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2"
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "anchor": [
+        128,
+        160
+      ],
+      "target_height_px": 40,
+      "runtime_canvas": [
+        36,
+        40
+      ],
+      "runtime_anchor": [
+        22,
+        40
+      ],
+      "runtime_group": "post_half40",
+      "hitbox": [
+        77,
+        15,
+        180,
+        160
+      ],
+      "shared_rgba_colors": 64,
+      "runtime_shared_rgba_colors": 64,
+      "runtime_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            255,
+            254,
+            254
+          ],
+          [
+            251,
+            247,
+            251
+          ],
+          [
+            247,
+            242,
+            250
+          ],
+          [
+            247,
+            242,
+            242
+          ],
+          [
+            245,
+            240,
+            245
+          ],
+          [
+            246,
+            237,
+            236
+          ],
+          [
+            240,
+            234,
+            243
+          ],
+          [
+            237,
+            232,
+            241
+          ],
+          [
+            247,
+            227,
+            217
+          ],
+          [
+            248,
+            221,
+            206
+          ],
+          [
+            250,
+            215,
+            200
+          ],
+          [
+            250,
+            209,
+            194
+          ],
+          [
+            234,
+            228,
+            240
+          ],
+          [
+            226,
+            225,
+            237
+          ],
+          [
+            225,
+            213,
+            212
+          ],
+          [
+            205,
+            213,
+            232
+          ],
+          [
+            251,
+            202,
+            185
+          ],
+          [
+            238,
+            199,
+            185
+          ],
+          [
+            236,
+            190,
+            174
+          ],
+          [
+            233,
+            181,
+            166
+          ],
+          [
+            215,
+            193,
+            187
+          ],
+          [
+            212,
+            179,
+            166
+          ],
+          [
+            186,
+            197,
+            223
+          ],
+          [
+            182,
+            180,
+            194
+          ],
+          [
+            224,
+            166,
+            149
+          ],
+          [
+            192,
+            170,
+            165
+          ],
+          [
+            210,
+            147,
+            130
+          ],
+          [
+            185,
+            145,
+            133
+          ],
+          [
+            167,
+            161,
+            170
+          ],
+          [
+            137,
+            157,
+            190
+          ],
+          [
+            163,
+            135,
+            128
+          ],
+          [
+            156,
+            117,
+            106
+          ],
+          [
+            157,
+            105,
+            86
+          ],
+          [
+            133,
+            108,
+            104
+          ],
+          [
+            139,
+            97,
+            82
+          ],
+          [
+            145,
+            82,
+            69
+          ],
+          [
+            127,
+            88,
+            75
+          ],
+          [
+            114,
+            83,
+            75
+          ],
+          [
+            112,
+            73,
+            62
+          ],
+          [
+            91,
+            84,
+            92
+          ],
+          [
+            87,
+            70,
+            71
+          ],
+          [
+            78,
+            66,
+            69
+          ],
+          [
+            89,
+            59,
+            52
+          ],
+          [
+            76,
+            61,
+            62
+          ],
+          [
+            59,
+            59,
+            78
+          ],
+          [
+            47,
+            59,
+            83
+          ],
+          [
+            83,
+            51,
+            45
+          ],
+          [
+            68,
+            48,
+            45
+          ],
+          [
+            65,
+            49,
+            48
+          ],
+          [
+            64,
+            43,
+            39
+          ],
+          [
+            61,
+            50,
+            53
+          ],
+          [
+            59,
+            47,
+            49
+          ],
+          [
+            58,
+            45,
+            46
+          ],
+          [
+            58,
+            43,
+            43
+          ],
+          [
+            55,
+            38,
+            37
+          ],
+          [
+            48,
+            55,
+            83
+          ],
+          [
+            49,
+            43,
+            50
+          ],
+          [
+            41,
+            51,
+            76
+          ],
+          [
+            35,
+            43,
+            67
+          ],
+          [
+            50,
+            37,
+            37
+          ],
+          [
+            37,
+            34,
+            41
+          ],
+          [
+            30,
+            23,
+            27
+          ],
+          [
+            13,
+            5,
+            5
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.396452790818988,
+        "mean_rgb_absolute_error": 4.2697240233295926,
+        "head_rgb_mean_absolute_error": 3.6372949357619317,
+        "protected_head_sampling_weight": 3,
+        "source_bbox": [
+          50,
+          15,
+          180,
+          160
+        ],
+        "scale": 0.27586206896551724,
+        "canvas": [
+          36,
+          40
+        ],
+        "anchor": [
+          22,
+          40
+        ],
+        "policy": "One union crop, scale and palette for all clips and both skins of the same target height; never recenter individual frames."
+      },
+      "delivery_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            254,
+            254,
+            254
+          ],
+          [
+            252,
+            249,
+            251
+          ],
+          [
+            248,
+            244,
+            250
+          ],
+          [
+            248,
+            242,
+            243
+          ],
+          [
+            243,
+            238,
+            246
+          ],
+          [
+            241,
+            237,
+            246
+          ],
+          [
+            244,
+            236,
+            239
+          ],
+          [
+            239,
+            235,
+            244
+          ],
+          [
+            249,
+            229,
+            216
+          ],
+          [
+            239,
+            232,
+            241
+          ],
+          [
+            247,
+            222,
+            209
+          ],
+          [
+            250,
+            218,
+            202
+          ],
+          [
+            236,
+            231,
+            241
+          ],
+          [
+            234,
+            229,
+            240
+          ],
+          [
+            229,
+            223,
+            232
+          ],
+          [
+            252,
+            213,
+            198
+          ],
+          [
+            252,
+            209,
+            193
+          ],
+          [
+            253,
+            203,
+            188
+          ],
+          [
+            253,
+            193,
+            177
+          ],
+          [
+            243,
+            207,
+            193
+          ],
+          [
+            245,
+            191,
+            176
+          ],
+          [
+            220,
+            208,
+            208
+          ],
+          [
+            209,
+            192,
+            191
+          ],
+          [
+            240,
+            175,
+            156
+          ],
+          [
+            212,
+            169,
+            154
+          ],
+          [
+            216,
+            152,
+            133
+          ],
+          [
+            209,
+            137,
+            116
+          ],
+          [
+            185,
+            157,
+            151
+          ],
+          [
+            147,
+            153,
+            174
+          ],
+          [
+            178,
+            125,
+            105
+          ],
+          [
+            132,
+            122,
+            131
+          ],
+          [
+            165,
+            98,
+            82
+          ],
+          [
+            140,
+            94,
+            77
+          ],
+          [
+            122,
+            90,
+            81
+          ],
+          [
+            116,
+            75,
+            62
+          ],
+          [
+            92,
+            91,
+            105
+          ],
+          [
+            91,
+            74,
+            75
+          ],
+          [
+            98,
+            66,
+            57
+          ],
+          [
+            76,
+            65,
+            71
+          ],
+          [
+            95,
+            59,
+            52
+          ],
+          [
+            75,
+            58,
+            58
+          ],
+          [
+            93,
+            49,
+            42
+          ],
+          [
+            73,
+            50,
+            45
+          ],
+          [
+            66,
+            56,
+            62
+          ],
+          [
+            66,
+            52,
+            52
+          ],
+          [
+            65,
+            48,
+            46
+          ],
+          [
+            64,
+            42,
+            37
+          ],
+          [
+            48,
+            70,
+            109
+          ],
+          [
+            49,
+            58,
+            87
+          ],
+          [
+            50,
+            55,
+            83
+          ],
+          [
+            43,
+            54,
+            83
+          ],
+          [
+            51,
+            50,
+            66
+          ],
+          [
+            56,
+            43,
+            45
+          ],
+          [
+            42,
+            48,
+            75
+          ],
+          [
+            35,
+            45,
+            70
+          ],
+          [
+            52,
+            38,
+            38
+          ],
+          [
+            50,
+            32,
+            29
+          ],
+          [
+            41,
+            31,
+            33
+          ],
+          [
+            30,
+            32,
+            46
+          ],
+          [
+            35,
+            23,
+            23
+          ],
+          [
+            30,
+            16,
+            15
+          ],
+          [
+            16,
+            14,
+            18
+          ],
+          [
+            7,
+            4,
+            4
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.583315086490037,
+        "mean_rgb_absolute_error": 4.372940242942892,
+        "head_rgb_mean_absolute_error": 4.093644573581079,
+        "protected_head_sampling_weight": 3
+      },
+      "rig": "rig/post/rig.json",
+      "preview": "preview/post/post_a-hit-contact.png"
+    },
+    {
+      "name": "delivered",
+      "skin": "post_a",
+      "facing": "front",
+      "fps": 12,
+      "loop": false,
+      "frames": [
+        "frames/post/post_a/delivered/000.png",
+        "frames/post/post_a/delivered/001.png",
+        "frames/post/post_a/delivered/002.png",
+        "frames/post/post_a/delivered/003.png",
+        "frames/post/post_a/delivered/004.png",
+        "frames/post/post_a/delivered/005.png"
+      ],
+      "masters": [
+        "frames/post/masters/post_a/delivered/000.png",
+        "frames/post/masters/post_a/delivered/001.png",
+        "frames/post/masters/post_a/delivered/002.png",
+        "frames/post/masters/post_a/delivered/003.png",
+        "frames/post/masters/post_a/delivered/004.png",
+        "frames/post/masters/post_a/delivered/005.png"
+      ],
+      "runtime_frames": [
+        "frames/post/runtime/post_a/delivered/000.png",
+        "frames/post/runtime/post_a/delivered/001.png",
+        "frames/post/runtime/post_a/delivered/002.png",
+        "frames/post/runtime/post_a/delivered/003.png",
+        "frames/post/runtime/post_a/delivered/004.png",
+        "frames/post/runtime/post_a/delivered/005.png"
+      ],
+      "frame_sha256": [
+        "8cd210e11e4f7dfeeaa34ce9945f5c8b72b397852282eb2abf330bb81e19575d",
+        "dcba5585b844021921061bb53ead41c21b1cca52570eee65aa1f444a7af0f9b2",
+        "95e4df7201e4cc315a16837b3deac38fb0c1b3d0a14ca3a20bb4797d5afb1059",
+        "773cb4643bab416c008673a0760f871a4124d4ecfcf4d8b96ec3f9094176ef80",
+        "6f0e9541725f4c6558df0323886ac1041fd4661a8e23d07d9ca6a65ca32bd1b3",
+        "8cd210e11e4f7dfeeaa34ce9945f5c8b72b397852282eb2abf330bb81e19575d"
+      ],
+      "master_sha256": [
+        "e74d41426f7153bf697643ed03071e7e7609d3cd307001ab836874a0f7c12059",
+        "0578b1e21db15ab69186fd50508c9e555b4d94d37eea9cabbdf26534f3ab75e8",
+        "56644bea22a3fc2ac73505c316edb9d9dc9c076da11f516c597efb7501e389d8",
+        "482cacfcdc88d524198cbd13c190e8c8682d63cd36e32b5e0263a3d5e89a37e5",
+        "7123799513be22102e226859a996d4419edc11304cdce578bce18287b2e673cc",
+        "e74d41426f7153bf697643ed03071e7e7609d3cd307001ab836874a0f7c12059"
+      ],
+      "runtime_sha256": [
+        "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2",
+        "d86d0575ed749afd991a1d52f21b8c60f952442f3110d68c2b55a9317181086d",
+        "80edf6aeaeebfed379212ffadf973e5183a53fd6d836fe75a01acd1257b7d5b4",
+        "c17c6121ebec5c9249b87043b25ce78e26bb0ba84b86a44934382a767f90b003",
+        "06022016c7b905a535ae7cf24a6b25cab4ea62e49067556da6472aacfabcbb20",
+        "65a2b7d448e9583d80267234fa2aff7b9a481754932bef727af9e8e75ee294f2"
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "anchor": [
+        128,
+        160
+      ],
+      "target_height_px": 40,
+      "runtime_canvas": [
+        36,
+        40
+      ],
+      "runtime_anchor": [
+        22,
+        40
+      ],
+      "runtime_group": "post_half40",
+      "hitbox": [
+        50,
+        15,
+        174,
+        160
+      ],
+      "shared_rgba_colors": 64,
+      "runtime_shared_rgba_colors": 64,
+      "runtime_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            255,
+            254,
+            254
+          ],
+          [
+            251,
+            247,
+            251
+          ],
+          [
+            247,
+            242,
+            250
+          ],
+          [
+            247,
+            242,
+            242
+          ],
+          [
+            245,
+            240,
+            245
+          ],
+          [
+            246,
+            237,
+            236
+          ],
+          [
+            240,
+            234,
+            243
+          ],
+          [
+            237,
+            232,
+            241
+          ],
+          [
+            247,
+            227,
+            217
+          ],
+          [
+            248,
+            221,
+            206
+          ],
+          [
+            250,
+            215,
+            200
+          ],
+          [
+            250,
+            209,
+            194
+          ],
+          [
+            234,
+            228,
+            240
+          ],
+          [
+            226,
+            225,
+            237
+          ],
+          [
+            225,
+            213,
+            212
+          ],
+          [
+            205,
+            213,
+            232
+          ],
+          [
+            251,
+            202,
+            185
+          ],
+          [
+            238,
+            199,
+            185
+          ],
+          [
+            236,
+            190,
+            174
+          ],
+          [
+            233,
+            181,
+            166
+          ],
+          [
+            215,
+            193,
+            187
+          ],
+          [
+            212,
+            179,
+            166
+          ],
+          [
+            186,
+            197,
+            223
+          ],
+          [
+            182,
+            180,
+            194
+          ],
+          [
+            224,
+            166,
+            149
+          ],
+          [
+            192,
+            170,
+            165
+          ],
+          [
+            210,
+            147,
+            130
+          ],
+          [
+            185,
+            145,
+            133
+          ],
+          [
+            167,
+            161,
+            170
+          ],
+          [
+            137,
+            157,
+            190
+          ],
+          [
+            163,
+            135,
+            128
+          ],
+          [
+            156,
+            117,
+            106
+          ],
+          [
+            157,
+            105,
+            86
+          ],
+          [
+            133,
+            108,
+            104
+          ],
+          [
+            139,
+            97,
+            82
+          ],
+          [
+            145,
+            82,
+            69
+          ],
+          [
+            127,
+            88,
+            75
+          ],
+          [
+            114,
+            83,
+            75
+          ],
+          [
+            112,
+            73,
+            62
+          ],
+          [
+            91,
+            84,
+            92
+          ],
+          [
+            87,
+            70,
+            71
+          ],
+          [
+            78,
+            66,
+            69
+          ],
+          [
+            89,
+            59,
+            52
+          ],
+          [
+            76,
+            61,
+            62
+          ],
+          [
+            59,
+            59,
+            78
+          ],
+          [
+            47,
+            59,
+            83
+          ],
+          [
+            83,
+            51,
+            45
+          ],
+          [
+            68,
+            48,
+            45
+          ],
+          [
+            65,
+            49,
+            48
+          ],
+          [
+            64,
+            43,
+            39
+          ],
+          [
+            61,
+            50,
+            53
+          ],
+          [
+            59,
+            47,
+            49
+          ],
+          [
+            58,
+            45,
+            46
+          ],
+          [
+            58,
+            43,
+            43
+          ],
+          [
+            55,
+            38,
+            37
+          ],
+          [
+            48,
+            55,
+            83
+          ],
+          [
+            49,
+            43,
+            50
+          ],
+          [
+            41,
+            51,
+            76
+          ],
+          [
+            35,
+            43,
+            67
+          ],
+          [
+            50,
+            37,
+            37
+          ],
+          [
+            37,
+            34,
+            41
+          ],
+          [
+            30,
+            23,
+            27
+          ],
+          [
+            13,
+            5,
+            5
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.396452790818988,
+        "mean_rgb_absolute_error": 4.2697240233295926,
+        "head_rgb_mean_absolute_error": 3.6372949357619317,
+        "protected_head_sampling_weight": 3,
+        "source_bbox": [
+          50,
+          15,
+          180,
+          160
+        ],
+        "scale": 0.27586206896551724,
+        "canvas": [
+          36,
+          40
+        ],
+        "anchor": [
+          22,
+          40
+        ],
+        "policy": "One union crop, scale and palette for all clips and both skins of the same target height; never recenter individual frames."
+      },
+      "delivery_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            254,
+            254,
+            254
+          ],
+          [
+            252,
+            249,
+            251
+          ],
+          [
+            248,
+            244,
+            250
+          ],
+          [
+            248,
+            242,
+            243
+          ],
+          [
+            243,
+            238,
+            246
+          ],
+          [
+            241,
+            237,
+            246
+          ],
+          [
+            244,
+            236,
+            239
+          ],
+          [
+            239,
+            235,
+            244
+          ],
+          [
+            249,
+            229,
+            216
+          ],
+          [
+            239,
+            232,
+            241
+          ],
+          [
+            247,
+            222,
+            209
+          ],
+          [
+            250,
+            218,
+            202
+          ],
+          [
+            236,
+            231,
+            241
+          ],
+          [
+            234,
+            229,
+            240
+          ],
+          [
+            229,
+            223,
+            232
+          ],
+          [
+            252,
+            213,
+            198
+          ],
+          [
+            252,
+            209,
+            193
+          ],
+          [
+            253,
+            203,
+            188
+          ],
+          [
+            253,
+            193,
+            177
+          ],
+          [
+            243,
+            207,
+            193
+          ],
+          [
+            245,
+            191,
+            176
+          ],
+          [
+            220,
+            208,
+            208
+          ],
+          [
+            209,
+            192,
+            191
+          ],
+          [
+            240,
+            175,
+            156
+          ],
+          [
+            212,
+            169,
+            154
+          ],
+          [
+            216,
+            152,
+            133
+          ],
+          [
+            209,
+            137,
+            116
+          ],
+          [
+            185,
+            157,
+            151
+          ],
+          [
+            147,
+            153,
+            174
+          ],
+          [
+            178,
+            125,
+            105
+          ],
+          [
+            132,
+            122,
+            131
+          ],
+          [
+            165,
+            98,
+            82
+          ],
+          [
+            140,
+            94,
+            77
+          ],
+          [
+            122,
+            90,
+            81
+          ],
+          [
+            116,
+            75,
+            62
+          ],
+          [
+            92,
+            91,
+            105
+          ],
+          [
+            91,
+            74,
+            75
+          ],
+          [
+            98,
+            66,
+            57
+          ],
+          [
+            76,
+            65,
+            71
+          ],
+          [
+            95,
+            59,
+            52
+          ],
+          [
+            75,
+            58,
+            58
+          ],
+          [
+            93,
+            49,
+            42
+          ],
+          [
+            73,
+            50,
+            45
+          ],
+          [
+            66,
+            56,
+            62
+          ],
+          [
+            66,
+            52,
+            52
+          ],
+          [
+            65,
+            48,
+            46
+          ],
+          [
+            64,
+            42,
+            37
+          ],
+          [
+            48,
+            70,
+            109
+          ],
+          [
+            49,
+            58,
+            87
+          ],
+          [
+            50,
+            55,
+            83
+          ],
+          [
+            43,
+            54,
+            83
+          ],
+          [
+            51,
+            50,
+            66
+          ],
+          [
+            56,
+            43,
+            45
+          ],
+          [
+            42,
+            48,
+            75
+          ],
+          [
+            35,
+            45,
+            70
+          ],
+          [
+            52,
+            38,
+            38
+          ],
+          [
+            50,
+            32,
+            29
+          ],
+          [
+            41,
+            31,
+            33
+          ],
+          [
+            30,
+            32,
+            46
+          ],
+          [
+            35,
+            23,
+            23
+          ],
+          [
+            30,
+            16,
+            15
+          ],
+          [
+            16,
+            14,
+            18
+          ],
+          [
+            7,
+            4,
+            4
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.583315086490037,
+        "mean_rgb_absolute_error": 4.372940242942892,
+        "head_rgb_mean_absolute_error": 4.093644573581079,
+        "protected_head_sampling_weight": 3
+      },
+      "rig": "rig/post/rig.json",
+      "preview": "preview/post/post_a-delivered-contact.png"
+    },
+    {
+      "name": "settlement_cheer",
+      "skin": "post_a",
+      "facing": "front",
+      "fps": 12,
+      "loop": false,
+      "frames": [
+        "frames/post/post_a/settlement_cheer/000.png",
+        "frames/post/post_a/settlement_cheer/001.png",
+        "frames/post/post_a/settlement_cheer/002.png",
+        "frames/post/post_a/settlement_cheer/003.png",
+        "frames/post/post_a/settlement_cheer/004.png",
+        "frames/post/post_a/settlement_cheer/005.png",
+        "frames/post/post_a/settlement_cheer/006.png",
+        "frames/post/post_a/settlement_cheer/007.png"
+      ],
+      "masters": [
+        "frames/post/masters/post_a/settlement_cheer/000.png",
+        "frames/post/masters/post_a/settlement_cheer/001.png",
+        "frames/post/masters/post_a/settlement_cheer/002.png",
+        "frames/post/masters/post_a/settlement_cheer/003.png",
+        "frames/post/masters/post_a/settlement_cheer/004.png",
+        "frames/post/masters/post_a/settlement_cheer/005.png",
+        "frames/post/masters/post_a/settlement_cheer/006.png",
+        "frames/post/masters/post_a/settlement_cheer/007.png"
+      ],
+      "runtime_frames": [
+        "frames/post/runtime/post_a/settlement_cheer/000.png",
+        "frames/post/runtime/post_a/settlement_cheer/001.png",
+        "frames/post/runtime/post_a/settlement_cheer/002.png",
+        "frames/post/runtime/post_a/settlement_cheer/003.png",
+        "frames/post/runtime/post_a/settlement_cheer/004.png",
+        "frames/post/runtime/post_a/settlement_cheer/005.png",
+        "frames/post/runtime/post_a/settlement_cheer/006.png",
+        "frames/post/runtime/post_a/settlement_cheer/007.png"
+      ],
+      "frame_sha256": [
+        "27c91deb884d53eaa16dc487a932e6c8e5a8110dd6ab19dd677c6207a3aad2b6",
+        "b14dd3e6eb53bed34e92bab5150041890b4ac5cff03dead0e1e9239eb071fea2",
+        "f5707d68a1776453378075c64903dbd725c5e0a818d9e0eb2a099aff4d4f1054",
+        "70f04b83d075f9f3ba07ec21aae1d07860863e43327176008c387213cb10f2c4",
+        "ec1073c74177c45fbb589a843f3219dbc7c35ed010e51657faf40af350768917",
+        "62ce92a5e7542da9a6708b786b0f190cd1daeab943cf17262e87d4b557981ecc",
+        "eeffebe42f3579507d20fdbf123ae675c6d31a2acf630e6c018bd3c5592162a1",
+        "27c91deb884d53eaa16dc487a932e6c8e5a8110dd6ab19dd677c6207a3aad2b6"
+      ],
+      "master_sha256": [
+        "8ff1ca393e2f193d14ab2d366271dc65b68088d8f5ab56b3a549e5868d6db4a9",
+        "73a4bb0e2b16f98c601ceab78f39c827946e69a3a62a5b9a8a43f519d4e464c5",
+        "ac6182a4efc15fdafc0f1221c319f35972579992203af8a2eb6e1ed0b9da58b0",
+        "20e6e49d154c3f1ab74f50cf68aaf43c0a42446e7b9e65e732200156bb6698ab",
+        "2d39cdfca68738bf4a1db0938e0d3eda486a0e3168b4f9f1c3aac4d1336e34f3",
+        "06f427af516973ec1b4653035b29cda15f1436718a9caf65e1805326aa0a26a6",
+        "9354a3286fd5f618afb5b8ba3b8a64393fa37178de98dac0e71c5733e923868e",
+        "8ff1ca393e2f193d14ab2d366271dc65b68088d8f5ab56b3a549e5868d6db4a9"
+      ],
+      "runtime_sha256": [
+        "cc048b44337ee06ed6f3bd15c925ca959a40c86cd363cc1cfe5ab2812da2c022",
+        "afffad660bc57ceb4eecae1d0853c057d0ff00c4407c5eae3eb3ba34b78a9381",
+        "ebb988f495afa5c8a041f912cf8927799193ce813a55db8c6b4a0f80a60d1e7b",
+        "08918f951b7e449ce8c350981453c68f552ed0fcec68f5b7069a2987408050a0",
+        "6f8548beab5290dc1b039ff4d19395606f6ba1a3305222eaf2d37705261bb7ad",
+        "5ebb38ecd0f16d7b20f2abf79d04352048810b08667151f5b4f010790a6167f5",
+        "290609bd33ff2af4c2cfdf7c04cac9b411f593c00ad52ef31199e2a2542d223a",
+        "cc048b44337ee06ed6f3bd15c925ca959a40c86cd363cc1cfe5ab2812da2c022"
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "anchor": [
+        128,
+        224
+      ],
+      "target_height_px": 72,
+      "runtime_canvas": [
+        49,
+        72
+      ],
+      "runtime_anchor": [
+        27,
+        72
+      ],
+      "runtime_group": "post_full72",
+      "hitbox": [
+        48,
+        11,
+        195,
+        225
+      ],
+      "shared_rgba_colors": 64,
+      "runtime_shared_rgba_colors": 64,
+      "runtime_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            255,
+            254,
+            254
+          ],
+          [
+            254,
+            249,
+            253
+          ],
+          [
+            249,
+            244,
+            251
+          ],
+          [
+            248,
+            243,
+            243
+          ],
+          [
+            246,
+            240,
+            243
+          ],
+          [
+            249,
+            236,
+            228
+          ],
+          [
+            241,
+            237,
+            244
+          ],
+          [
+            239,
+            233,
+            243
+          ],
+          [
+            248,
+            226,
+            212
+          ],
+          [
+            250,
+            219,
+            204
+          ],
+          [
+            253,
+            214,
+            199
+          ],
+          [
+            250,
+            209,
+            194
+          ],
+          [
+            235,
+            229,
+            239
+          ],
+          [
+            228,
+            225,
+            237
+          ],
+          [
+            232,
+            214,
+            205
+          ],
+          [
+            214,
+            214,
+            227
+          ],
+          [
+            251,
+            201,
+            184
+          ],
+          [
+            232,
+            200,
+            187
+          ],
+          [
+            238,
+            188,
+            173
+          ],
+          [
+            237,
+            174,
+            156
+          ],
+          [
+            208,
+            192,
+            189
+          ],
+          [
+            180,
+            192,
+            218
+          ],
+          [
+            208,
+            170,
+            158
+          ],
+          [
+            170,
+            168,
+            182
+          ],
+          [
+            211,
+            156,
+            140
+          ],
+          [
+            180,
+            153,
+            145
+          ],
+          [
+            182,
+            138,
+            123
+          ],
+          [
+            174,
+            123,
+            108
+          ],
+          [
+            136,
+            148,
+            175
+          ],
+          [
+            143,
+            126,
+            126
+          ],
+          [
+            155,
+            110,
+            92
+          ],
+          [
+            136,
+            110,
+            103
+          ],
+          [
+            147,
+            97,
+            83
+          ],
+          [
+            133,
+            92,
+            79
+          ],
+          [
+            113,
+            92,
+            90
+          ],
+          [
+            112,
+            82,
+            74
+          ],
+          [
+            129,
+            69,
+            61
+          ],
+          [
+            105,
+            70,
+            60
+          ],
+          [
+            95,
+            71,
+            67
+          ],
+          [
+            92,
+            60,
+            52
+          ],
+          [
+            76,
+            70,
+            82
+          ],
+          [
+            72,
+            61,
+            68
+          ],
+          [
+            80,
+            56,
+            51
+          ],
+          [
+            67,
+            55,
+            59
+          ],
+          [
+            73,
+            50,
+            46
+          ],
+          [
+            63,
+            49,
+            50
+          ],
+          [
+            64,
+            43,
+            40
+          ],
+          [
+            53,
+            59,
+            90
+          ],
+          [
+            50,
+            57,
+            87
+          ],
+          [
+            50,
+            56,
+            86
+          ],
+          [
+            49,
+            55,
+            83
+          ],
+          [
+            47,
+            53,
+            81
+          ],
+          [
+            50,
+            49,
+            66
+          ],
+          [
+            43,
+            49,
+            78
+          ],
+          [
+            40,
+            46,
+            75
+          ],
+          [
+            53,
+            42,
+            43
+          ],
+          [
+            51,
+            37,
+            37
+          ],
+          [
+            40,
+            42,
+            63
+          ],
+          [
+            34,
+            39,
+            64
+          ],
+          [
+            47,
+            33,
+            33
+          ],
+          [
+            33,
+            32,
+            45
+          ],
+          [
+            34,
+            20,
+            19
+          ],
+          [
+            15,
+            12,
+            18
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 3.813970588235294,
+        "mean_rgb_absolute_error": 3.757072201146685,
+        "head_rgb_mean_absolute_error": 3.9824157211638993,
+        "protected_head_sampling_weight": 3,
+        "source_bbox": [
+          48,
+          11,
+          195,
+          225
+        ],
+        "scale": 0.3364485981308411,
+        "canvas": [
+          49,
+          72
+        ],
+        "anchor": [
+          27,
+          72
+        ],
+        "policy": "One union crop, scale and palette for all clips and both skins of the same target height; never recenter individual frames."
+      },
+      "delivery_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            254,
+            254,
+            254
+          ],
+          [
+            252,
+            249,
+            251
+          ],
+          [
+            248,
+            244,
+            250
+          ],
+          [
+            248,
+            242,
+            243
+          ],
+          [
+            243,
+            238,
+            246
+          ],
+          [
+            241,
+            237,
+            246
+          ],
+          [
+            244,
+            236,
+            239
+          ],
+          [
+            239,
+            235,
+            244
+          ],
+          [
+            249,
+            229,
+            216
+          ],
+          [
+            239,
+            232,
+            241
+          ],
+          [
+            247,
+            222,
+            209
+          ],
+          [
+            250,
+            218,
+            202
+          ],
+          [
+            236,
+            231,
+            241
+          ],
+          [
+            234,
+            229,
+            240
+          ],
+          [
+            229,
+            223,
+            232
+          ],
+          [
+            252,
+            213,
+            198
+          ],
+          [
+            252,
+            209,
+            193
+          ],
+          [
+            253,
+            203,
+            188
+          ],
+          [
+            253,
+            193,
+            177
+          ],
+          [
+            243,
+            207,
+            193
+          ],
+          [
+            245,
+            191,
+            176
+          ],
+          [
+            220,
+            208,
+            208
+          ],
+          [
+            209,
+            192,
+            191
+          ],
+          [
+            240,
+            175,
+            156
+          ],
+          [
+            212,
+            169,
+            154
+          ],
+          [
+            216,
+            152,
+            133
+          ],
+          [
+            209,
+            137,
+            116
+          ],
+          [
+            185,
+            157,
+            151
+          ],
+          [
+            147,
+            153,
+            174
+          ],
+          [
+            178,
+            125,
+            105
+          ],
+          [
+            132,
+            122,
+            131
+          ],
+          [
+            165,
+            98,
+            82
+          ],
+          [
+            140,
+            94,
+            77
+          ],
+          [
+            122,
+            90,
+            81
+          ],
+          [
+            116,
+            75,
+            62
+          ],
+          [
+            92,
+            91,
+            105
+          ],
+          [
+            91,
+            74,
+            75
+          ],
+          [
+            98,
+            66,
+            57
+          ],
+          [
+            76,
+            65,
+            71
+          ],
+          [
+            95,
+            59,
+            52
+          ],
+          [
+            75,
+            58,
+            58
+          ],
+          [
+            93,
+            49,
+            42
+          ],
+          [
+            73,
+            50,
+            45
+          ],
+          [
+            66,
+            56,
+            62
+          ],
+          [
+            66,
+            52,
+            52
+          ],
+          [
+            65,
+            48,
+            46
+          ],
+          [
+            64,
+            42,
+            37
+          ],
+          [
+            48,
+            70,
+            109
+          ],
+          [
+            49,
+            58,
+            87
+          ],
+          [
+            50,
+            55,
+            83
+          ],
+          [
+            43,
+            54,
+            83
+          ],
+          [
+            51,
+            50,
+            66
+          ],
+          [
+            56,
+            43,
+            45
+          ],
+          [
+            42,
+            48,
+            75
+          ],
+          [
+            35,
+            45,
+            70
+          ],
+          [
+            52,
+            38,
+            38
+          ],
+          [
+            50,
+            32,
+            29
+          ],
+          [
+            41,
+            31,
+            33
+          ],
+          [
+            30,
+            32,
+            46
+          ],
+          [
+            35,
+            23,
+            23
+          ],
+          [
+            30,
+            16,
+            15
+          ],
+          [
+            16,
+            14,
+            18
+          ],
+          [
+            7,
+            4,
+            4
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.583315086490037,
+        "mean_rgb_absolute_error": 4.372940242942892,
+        "head_rgb_mean_absolute_error": 4.093644573581079,
+        "protected_head_sampling_weight": 3
+      },
+      "rig": "rig/post/rig.json",
+      "preview": "preview/post/post_a-settlement_cheer-contact.png"
+    },
+    {
+      "name": "idle",
+      "skin": "post_b",
+      "facing": "front",
+      "fps": 12,
+      "loop": true,
+      "frames": [
+        "frames/post/post_b/idle/000.png",
+        "frames/post/post_b/idle/001.png",
+        "frames/post/post_b/idle/002.png",
+        "frames/post/post_b/idle/003.png",
+        "frames/post/post_b/idle/004.png",
+        "frames/post/post_b/idle/005.png"
+      ],
+      "masters": [
+        "frames/post/masters/post_b/idle/000.png",
+        "frames/post/masters/post_b/idle/001.png",
+        "frames/post/masters/post_b/idle/002.png",
+        "frames/post/masters/post_b/idle/003.png",
+        "frames/post/masters/post_b/idle/004.png",
+        "frames/post/masters/post_b/idle/005.png"
+      ],
+      "runtime_frames": [
+        "frames/post/runtime/post_b/idle/000.png",
+        "frames/post/runtime/post_b/idle/001.png",
+        "frames/post/runtime/post_b/idle/002.png",
+        "frames/post/runtime/post_b/idle/003.png",
+        "frames/post/runtime/post_b/idle/004.png",
+        "frames/post/runtime/post_b/idle/005.png"
+      ],
+      "frame_sha256": [
+        "45d4a303506fe9ae7a7045a389b22ed4a8dcc80c8bff3cb823b96f253539ad50",
+        "06353b01b513600e3ccadca7b520903f2de6b1d6f06eecbe3334b1edd1b11033",
+        "c00f8e306cdd85a7e307e31dd458e8fb148e7947e429ae65943d3704c5c4627c",
+        "4d1eb7c715d2debf9b2de7ddd92cbb6f7766d6dd7de113264382d20774b4db32",
+        "9e946f255626ba570194b281828f9d4ffac950b640c734c763e4293c5a144821",
+        "039d3e607dcd8fcd784832ed32049f5c76e4e18cee43ef0a19187546b6b7c1a4"
+      ],
+      "master_sha256": [
+        "c6c95cda4c6563db3a7257e021fc22559f28cd7b4cbd50e94ef309f774f307fd",
+        "f42d8235f87bc08ba9277301813a3f4eafbb2749794354b7a16249fc6cac1cef",
+        "8a14987b2946f881fbfc041ec1e0ad860b519526f7c106bc79efa4f3d7bd92ca",
+        "a4ec32eb076c174f6629bc43b59230f2e85ab38d449816d589cc4eab4ded8d13",
+        "78836919bb9b39862b117181b289e6a9260dea9b2730f4a6d2652f9c19980f19",
+        "3982eea66f706c60d3972a8a1059d2a8abba623c538dcf6f44bafab05cadffad"
+      ],
+      "runtime_sha256": [
+        "74a1dabc62b05ea29a5f6102a3c11ad8942e041d60930532e8a729f9eb6aaa58",
+        "24073cb935a472fdd7a0b77cedf1af671918fba531cdbfaaad1d66dd657e00df",
+        "acd992f8498ef831939e95bce19afc0cee192b08c1b1127a8df527108191fcd7",
+        "b5454b03e76146d7bc99113992340cda404ea7773486a87e151969c55a763226",
+        "41e026fa2b4dda3da22146823ab1e94788f8e44422176854d47e210308b72306",
+        "2919cf0db043eedb42833e05e33f54597d868d77c1957fe85e18269bcda199b2"
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "anchor": [
+        128,
+        160
+      ],
+      "target_height_px": 40,
+      "runtime_canvas": [
+        36,
+        40
+      ],
+      "runtime_anchor": [
+        22,
+        40
+      ],
+      "runtime_group": "post_half40",
+      "hitbox": [
+        83,
+        15,
+        174,
+        160
+      ],
+      "shared_rgba_colors": 64,
+      "runtime_shared_rgba_colors": 63,
+      "runtime_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            255,
+            254,
+            254
+          ],
+          [
+            251,
+            247,
+            251
+          ],
+          [
+            247,
+            242,
+            250
+          ],
+          [
+            247,
+            242,
+            242
+          ],
+          [
+            245,
+            240,
+            245
+          ],
+          [
+            246,
+            237,
+            236
+          ],
+          [
+            240,
+            234,
+            243
+          ],
+          [
+            237,
+            232,
+            241
+          ],
+          [
+            247,
+            227,
+            217
+          ],
+          [
+            248,
+            221,
+            206
+          ],
+          [
+            250,
+            215,
+            200
+          ],
+          [
+            250,
+            209,
+            194
+          ],
+          [
+            234,
+            228,
+            240
+          ],
+          [
+            226,
+            225,
+            237
+          ],
+          [
+            225,
+            213,
+            212
+          ],
+          [
+            205,
+            213,
+            232
+          ],
+          [
+            251,
+            202,
+            185
+          ],
+          [
+            238,
+            199,
+            185
+          ],
+          [
+            236,
+            190,
+            174
+          ],
+          [
+            233,
+            181,
+            166
+          ],
+          [
+            215,
+            193,
+            187
+          ],
+          [
+            212,
+            179,
+            166
+          ],
+          [
+            186,
+            197,
+            223
+          ],
+          [
+            182,
+            180,
+            194
+          ],
+          [
+            224,
+            166,
+            149
+          ],
+          [
+            192,
+            170,
+            165
+          ],
+          [
+            210,
+            147,
+            130
+          ],
+          [
+            185,
+            145,
+            133
+          ],
+          [
+            167,
+            161,
+            170
+          ],
+          [
+            137,
+            157,
+            190
+          ],
+          [
+            163,
+            135,
+            128
+          ],
+          [
+            156,
+            117,
+            106
+          ],
+          [
+            157,
+            105,
+            86
+          ],
+          [
+            133,
+            108,
+            104
+          ],
+          [
+            139,
+            97,
+            82
+          ],
+          [
+            145,
+            82,
+            69
+          ],
+          [
+            127,
+            88,
+            75
+          ],
+          [
+            114,
+            83,
+            75
+          ],
+          [
+            112,
+            73,
+            62
+          ],
+          [
+            91,
+            84,
+            92
+          ],
+          [
+            87,
+            70,
+            71
+          ],
+          [
+            78,
+            66,
+            69
+          ],
+          [
+            89,
+            59,
+            52
+          ],
+          [
+            76,
+            61,
+            62
+          ],
+          [
+            59,
+            59,
+            78
+          ],
+          [
+            47,
+            59,
+            83
+          ],
+          [
+            83,
+            51,
+            45
+          ],
+          [
+            68,
+            48,
+            45
+          ],
+          [
+            65,
+            49,
+            48
+          ],
+          [
+            64,
+            43,
+            39
+          ],
+          [
+            61,
+            50,
+            53
+          ],
+          [
+            59,
+            47,
+            49
+          ],
+          [
+            58,
+            45,
+            46
+          ],
+          [
+            58,
+            43,
+            43
+          ],
+          [
+            55,
+            38,
+            37
+          ],
+          [
+            48,
+            55,
+            83
+          ],
+          [
+            49,
+            43,
+            50
+          ],
+          [
+            41,
+            51,
+            76
+          ],
+          [
+            35,
+            43,
+            67
+          ],
+          [
+            50,
+            37,
+            37
+          ],
+          [
+            37,
+            34,
+            41
+          ],
+          [
+            30,
+            23,
+            27
+          ],
+          [
+            13,
+            5,
+            5
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.396452790818988,
+        "mean_rgb_absolute_error": 4.2697240233295926,
+        "head_rgb_mean_absolute_error": 3.6372949357619317,
+        "protected_head_sampling_weight": 3,
+        "source_bbox": [
+          50,
+          15,
+          180,
+          160
+        ],
+        "scale": 0.27586206896551724,
+        "canvas": [
+          36,
+          40
+        ],
+        "anchor": [
+          22,
+          40
+        ],
+        "policy": "One union crop, scale and palette for all clips and both skins of the same target height; never recenter individual frames."
+      },
+      "delivery_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            254,
+            254,
+            254
+          ],
+          [
+            252,
+            249,
+            251
+          ],
+          [
+            248,
+            244,
+            250
+          ],
+          [
+            248,
+            242,
+            243
+          ],
+          [
+            243,
+            238,
+            246
+          ],
+          [
+            241,
+            237,
+            246
+          ],
+          [
+            244,
+            236,
+            239
+          ],
+          [
+            239,
+            235,
+            244
+          ],
+          [
+            249,
+            229,
+            216
+          ],
+          [
+            239,
+            232,
+            241
+          ],
+          [
+            247,
+            222,
+            209
+          ],
+          [
+            250,
+            218,
+            202
+          ],
+          [
+            236,
+            231,
+            241
+          ],
+          [
+            234,
+            229,
+            240
+          ],
+          [
+            229,
+            223,
+            232
+          ],
+          [
+            252,
+            213,
+            198
+          ],
+          [
+            252,
+            209,
+            193
+          ],
+          [
+            253,
+            203,
+            188
+          ],
+          [
+            253,
+            193,
+            177
+          ],
+          [
+            243,
+            207,
+            193
+          ],
+          [
+            245,
+            191,
+            176
+          ],
+          [
+            220,
+            208,
+            208
+          ],
+          [
+            209,
+            192,
+            191
+          ],
+          [
+            240,
+            175,
+            156
+          ],
+          [
+            212,
+            169,
+            154
+          ],
+          [
+            216,
+            152,
+            133
+          ],
+          [
+            209,
+            137,
+            116
+          ],
+          [
+            185,
+            157,
+            151
+          ],
+          [
+            147,
+            153,
+            174
+          ],
+          [
+            178,
+            125,
+            105
+          ],
+          [
+            132,
+            122,
+            131
+          ],
+          [
+            165,
+            98,
+            82
+          ],
+          [
+            140,
+            94,
+            77
+          ],
+          [
+            122,
+            90,
+            81
+          ],
+          [
+            116,
+            75,
+            62
+          ],
+          [
+            92,
+            91,
+            105
+          ],
+          [
+            91,
+            74,
+            75
+          ],
+          [
+            98,
+            66,
+            57
+          ],
+          [
+            76,
+            65,
+            71
+          ],
+          [
+            95,
+            59,
+            52
+          ],
+          [
+            75,
+            58,
+            58
+          ],
+          [
+            93,
+            49,
+            42
+          ],
+          [
+            73,
+            50,
+            45
+          ],
+          [
+            66,
+            56,
+            62
+          ],
+          [
+            66,
+            52,
+            52
+          ],
+          [
+            65,
+            48,
+            46
+          ],
+          [
+            64,
+            42,
+            37
+          ],
+          [
+            48,
+            70,
+            109
+          ],
+          [
+            49,
+            58,
+            87
+          ],
+          [
+            50,
+            55,
+            83
+          ],
+          [
+            43,
+            54,
+            83
+          ],
+          [
+            51,
+            50,
+            66
+          ],
+          [
+            56,
+            43,
+            45
+          ],
+          [
+            42,
+            48,
+            75
+          ],
+          [
+            35,
+            45,
+            70
+          ],
+          [
+            52,
+            38,
+            38
+          ],
+          [
+            50,
+            32,
+            29
+          ],
+          [
+            41,
+            31,
+            33
+          ],
+          [
+            30,
+            32,
+            46
+          ],
+          [
+            35,
+            23,
+            23
+          ],
+          [
+            30,
+            16,
+            15
+          ],
+          [
+            16,
+            14,
+            18
+          ],
+          [
+            7,
+            4,
+            4
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.583315086490037,
+        "mean_rgb_absolute_error": 4.372940242942892,
+        "head_rgb_mean_absolute_error": 4.093644573581079,
+        "protected_head_sampling_weight": 3
+      },
+      "rig": "rig/post/rig.json",
+      "preview": "preview/post/post_b-idle-contact.png"
+    },
+    {
+      "name": "delivered",
+      "skin": "post_b",
+      "facing": "front",
+      "fps": 12,
+      "loop": false,
+      "frames": [
+        "frames/post/post_b/delivered/000.png",
+        "frames/post/post_b/delivered/001.png",
+        "frames/post/post_b/delivered/002.png",
+        "frames/post/post_b/delivered/003.png",
+        "frames/post/post_b/delivered/004.png",
+        "frames/post/post_b/delivered/005.png"
+      ],
+      "masters": [
+        "frames/post/masters/post_b/delivered/000.png",
+        "frames/post/masters/post_b/delivered/001.png",
+        "frames/post/masters/post_b/delivered/002.png",
+        "frames/post/masters/post_b/delivered/003.png",
+        "frames/post/masters/post_b/delivered/004.png",
+        "frames/post/masters/post_b/delivered/005.png"
+      ],
+      "runtime_frames": [
+        "frames/post/runtime/post_b/delivered/000.png",
+        "frames/post/runtime/post_b/delivered/001.png",
+        "frames/post/runtime/post_b/delivered/002.png",
+        "frames/post/runtime/post_b/delivered/003.png",
+        "frames/post/runtime/post_b/delivered/004.png",
+        "frames/post/runtime/post_b/delivered/005.png"
+      ],
+      "frame_sha256": [
+        "45d4a303506fe9ae7a7045a389b22ed4a8dcc80c8bff3cb823b96f253539ad50",
+        "a3c2b6039875059f38bd6ea34e22a2371f5fe294e55b730e6d1a16b9188f4c3f",
+        "e12ab6d1d43425449681b010881ce654dafdc52732a55a430374d67e7b14f28d",
+        "ca866ab912a40e705f050a4e16962f0c269f79c41712740940c6d7c01345a3c4",
+        "f988202af48c7d8fd604c28ac7c36ff611ddd4b4c921bf03224d4c820136d09c",
+        "45d4a303506fe9ae7a7045a389b22ed4a8dcc80c8bff3cb823b96f253539ad50"
+      ],
+      "master_sha256": [
+        "c6c95cda4c6563db3a7257e021fc22559f28cd7b4cbd50e94ef309f774f307fd",
+        "d35a52f3ed84a0f871d48becb4f55d6e0dd75d274f97d67df40e1fd97e576e23",
+        "c172e2ffff1d1afa66184c54aac7883ca2a71ba4a41681cc28b7f5b5b3090ba8",
+        "51e00834743ad13341111c947e1811123c14f98a7a949fcefe1731378535a917",
+        "676e5834b7fe4ecabb18e415f3e5fef8fc6d868d067a78b4c06abb808e670d4c",
+        "c6c95cda4c6563db3a7257e021fc22559f28cd7b4cbd50e94ef309f774f307fd"
+      ],
+      "runtime_sha256": [
+        "74a1dabc62b05ea29a5f6102a3c11ad8942e041d60930532e8a729f9eb6aaa58",
+        "2305d9401b0e056e8fe7aac8993c325eaee31f7f58b4a22f4fefe5d966cef2a0",
+        "3d1b4247ac8c134e387cb5282b743e35887b3976eee4be77f58c9fe29f903419",
+        "0a50965f9263199ef1b4c99bdda2454650aaba2e7a8147fd53a8b57b8e63de71",
+        "f52676944ae55ae1580939f0e550d75227124e824d310f41e75563393449c1a2",
+        "74a1dabc62b05ea29a5f6102a3c11ad8942e041d60930532e8a729f9eb6aaa58"
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "anchor": [
+        128,
+        160
+      ],
+      "target_height_px": 40,
+      "runtime_canvas": [
+        36,
+        40
+      ],
+      "runtime_anchor": [
+        22,
+        40
+      ],
+      "runtime_group": "post_half40",
+      "hitbox": [
+        50,
+        15,
+        174,
+        160
+      ],
+      "shared_rgba_colors": 64,
+      "runtime_shared_rgba_colors": 63,
+      "runtime_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            255,
+            254,
+            254
+          ],
+          [
+            251,
+            247,
+            251
+          ],
+          [
+            247,
+            242,
+            250
+          ],
+          [
+            247,
+            242,
+            242
+          ],
+          [
+            245,
+            240,
+            245
+          ],
+          [
+            246,
+            237,
+            236
+          ],
+          [
+            240,
+            234,
+            243
+          ],
+          [
+            237,
+            232,
+            241
+          ],
+          [
+            247,
+            227,
+            217
+          ],
+          [
+            248,
+            221,
+            206
+          ],
+          [
+            250,
+            215,
+            200
+          ],
+          [
+            250,
+            209,
+            194
+          ],
+          [
+            234,
+            228,
+            240
+          ],
+          [
+            226,
+            225,
+            237
+          ],
+          [
+            225,
+            213,
+            212
+          ],
+          [
+            205,
+            213,
+            232
+          ],
+          [
+            251,
+            202,
+            185
+          ],
+          [
+            238,
+            199,
+            185
+          ],
+          [
+            236,
+            190,
+            174
+          ],
+          [
+            233,
+            181,
+            166
+          ],
+          [
+            215,
+            193,
+            187
+          ],
+          [
+            212,
+            179,
+            166
+          ],
+          [
+            186,
+            197,
+            223
+          ],
+          [
+            182,
+            180,
+            194
+          ],
+          [
+            224,
+            166,
+            149
+          ],
+          [
+            192,
+            170,
+            165
+          ],
+          [
+            210,
+            147,
+            130
+          ],
+          [
+            185,
+            145,
+            133
+          ],
+          [
+            167,
+            161,
+            170
+          ],
+          [
+            137,
+            157,
+            190
+          ],
+          [
+            163,
+            135,
+            128
+          ],
+          [
+            156,
+            117,
+            106
+          ],
+          [
+            157,
+            105,
+            86
+          ],
+          [
+            133,
+            108,
+            104
+          ],
+          [
+            139,
+            97,
+            82
+          ],
+          [
+            145,
+            82,
+            69
+          ],
+          [
+            127,
+            88,
+            75
+          ],
+          [
+            114,
+            83,
+            75
+          ],
+          [
+            112,
+            73,
+            62
+          ],
+          [
+            91,
+            84,
+            92
+          ],
+          [
+            87,
+            70,
+            71
+          ],
+          [
+            78,
+            66,
+            69
+          ],
+          [
+            89,
+            59,
+            52
+          ],
+          [
+            76,
+            61,
+            62
+          ],
+          [
+            59,
+            59,
+            78
+          ],
+          [
+            47,
+            59,
+            83
+          ],
+          [
+            83,
+            51,
+            45
+          ],
+          [
+            68,
+            48,
+            45
+          ],
+          [
+            65,
+            49,
+            48
+          ],
+          [
+            64,
+            43,
+            39
+          ],
+          [
+            61,
+            50,
+            53
+          ],
+          [
+            59,
+            47,
+            49
+          ],
+          [
+            58,
+            45,
+            46
+          ],
+          [
+            58,
+            43,
+            43
+          ],
+          [
+            55,
+            38,
+            37
+          ],
+          [
+            48,
+            55,
+            83
+          ],
+          [
+            49,
+            43,
+            50
+          ],
+          [
+            41,
+            51,
+            76
+          ],
+          [
+            35,
+            43,
+            67
+          ],
+          [
+            50,
+            37,
+            37
+          ],
+          [
+            37,
+            34,
+            41
+          ],
+          [
+            30,
+            23,
+            27
+          ],
+          [
+            13,
+            5,
+            5
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.396452790818988,
+        "mean_rgb_absolute_error": 4.2697240233295926,
+        "head_rgb_mean_absolute_error": 3.6372949357619317,
+        "protected_head_sampling_weight": 3,
+        "source_bbox": [
+          50,
+          15,
+          180,
+          160
+        ],
+        "scale": 0.27586206896551724,
+        "canvas": [
+          36,
+          40
+        ],
+        "anchor": [
+          22,
+          40
+        ],
+        "policy": "One union crop, scale and palette for all clips and both skins of the same target height; never recenter individual frames."
+      },
+      "delivery_quantization": {
+        "palette_size_including_transparency": 64,
+        "alpha_threshold": 128,
+        "palette_rgb": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            254,
+            254,
+            254
+          ],
+          [
+            252,
+            249,
+            251
+          ],
+          [
+            248,
+            244,
+            250
+          ],
+          [
+            248,
+            242,
+            243
+          ],
+          [
+            243,
+            238,
+            246
+          ],
+          [
+            241,
+            237,
+            246
+          ],
+          [
+            244,
+            236,
+            239
+          ],
+          [
+            239,
+            235,
+            244
+          ],
+          [
+            249,
+            229,
+            216
+          ],
+          [
+            239,
+            232,
+            241
+          ],
+          [
+            247,
+            222,
+            209
+          ],
+          [
+            250,
+            218,
+            202
+          ],
+          [
+            236,
+            231,
+            241
+          ],
+          [
+            234,
+            229,
+            240
+          ],
+          [
+            229,
+            223,
+            232
+          ],
+          [
+            252,
+            213,
+            198
+          ],
+          [
+            252,
+            209,
+            193
+          ],
+          [
+            253,
+            203,
+            188
+          ],
+          [
+            253,
+            193,
+            177
+          ],
+          [
+            243,
+            207,
+            193
+          ],
+          [
+            245,
+            191,
+            176
+          ],
+          [
+            220,
+            208,
+            208
+          ],
+          [
+            209,
+            192,
+            191
+          ],
+          [
+            240,
+            175,
+            156
+          ],
+          [
+            212,
+            169,
+            154
+          ],
+          [
+            216,
+            152,
+            133
+          ],
+          [
+            209,
+            137,
+            116
+          ],
+          [
+            185,
+            157,
+            151
+          ],
+          [
+            147,
+            153,
+            174
+          ],
+          [
+            178,
+            125,
+            105
+          ],
+          [
+            132,
+            122,
+            131
+          ],
+          [
+            165,
+            98,
+            82
+          ],
+          [
+            140,
+            94,
+            77
+          ],
+          [
+            122,
+            90,
+            81
+          ],
+          [
+            116,
+            75,
+            62
+          ],
+          [
+            92,
+            91,
+            105
+          ],
+          [
+            91,
+            74,
+            75
+          ],
+          [
+            98,
+            66,
+            57
+          ],
+          [
+            76,
+            65,
+            71
+          ],
+          [
+            95,
+            59,
+            52
+          ],
+          [
+            75,
+            58,
+            58
+          ],
+          [
+            93,
+            49,
+            42
+          ],
+          [
+            73,
+            50,
+            45
+          ],
+          [
+            66,
+            56,
+            62
+          ],
+          [
+            66,
+            52,
+            52
+          ],
+          [
+            65,
+            48,
+            46
+          ],
+          [
+            64,
+            42,
+            37
+          ],
+          [
+            48,
+            70,
+            109
+          ],
+          [
+            49,
+            58,
+            87
+          ],
+          [
+            50,
+            55,
+            83
+          ],
+          [
+            43,
+            54,
+            83
+          ],
+          [
+            51,
+            50,
+            66
+          ],
+          [
+            56,
+            43,
+            45
+          ],
+          [
+            42,
+            48,
+            75
+          ],
+          [
+            35,
+            45,
+            70
+          ],
+          [
+            52,
+            38,
+            38
+          ],
+          [
+            50,
+            32,
+            29
+          ],
+          [
+            41,
+            31,
+            33
+          ],
+          [
+            30,
+            32,
+            46
+          ],
+          [
+            35,
+            23,
+            23
+          ],
+          [
+            30,
+            16,
+            15
+          ],
+          [
+            16,
+            14,
+            18
+          ],
+          [
+            7,
+            4,
+            4
+          ]
+        ],
+        "palette_index_0_transparent": true,
+        "max_rgb_mean_absolute_error": 4.583315086490037,
+        "mean_rgb_absolute_error": 4.372940242942892,
+        "head_rgb_mean_absolute_error": 4.093644573581079,
+        "protected_head_sampling_weight": 3
+      },
+      "rig": "rig/post/rig.json",
+      "preview": "preview/post/post_b-delivered-contact.png"
+    },
+    {
+      "name": "wheel-cycle",
+      "skin": "post_props",
+      "facing": "right",
+      "fps": 12,
+      "loop": true,
+      "frames": [
+        "games/post/props/wheel-000.png",
+        "games/post/props/wheel-001.png",
+        "games/post/props/wheel-002.png",
+        "games/post/props/wheel-003.png"
+      ],
+      "runtime_frames": [
+        "games/post/props/wheel-000.png",
+        "games/post/props/wheel-001.png",
+        "games/post/props/wheel-002.png",
+        "games/post/props/wheel-003.png"
+      ],
+      "canvas": [
+        96,
+        88
+      ],
+      "runtime_canvas": [
+        96,
+        88
+      ],
+      "anchor": [
+        48,
+        81
+      ],
+      "runtime_anchor": [
+        48,
+        81
+      ],
+      "runtime_sha256": [
+        "035af1ae2f0022683ad9604ccf0522416c1b4497f65740980586656d8f523cb3",
+        "49b5cbcb12d3dbe9268c2548621461d794e40682770f8a2670dcd6c270472876",
+        "1f999c9a515a646194e3cbaaa86ba9787674ac87aa8aa6e3eed9d03a7759bf9c",
+        "cdc282974d389f3e66cd31a20be071e43dea174207b077d7eabb69114a764850"
+      ],
+      "runtime_shared_rgba_colors": 6
+    },
+    {
+      "name": "whistle-cord",
+      "skin": "post_props",
+      "facing": "right",
+      "fps": 12,
+      "loop": false,
+      "frames": [
+        "games/post/props/whistle-cord/000.png",
+        "games/post/props/whistle-cord/001.png",
+        "games/post/props/whistle-cord/002.png",
+        "games/post/props/whistle-cord/003.png",
+        "games/post/props/whistle-cord/004.png",
+        "games/post/props/whistle-cord/005.png"
+      ],
+      "runtime_frames": [
+        "games/post/props/whistle-cord/000.png",
+        "games/post/props/whistle-cord/001.png",
+        "games/post/props/whistle-cord/002.png",
+        "games/post/props/whistle-cord/003.png",
+        "games/post/props/whistle-cord/004.png",
+        "games/post/props/whistle-cord/005.png"
+      ],
+      "canvas": [
+        96,
+        88
+      ],
+      "runtime_canvas": [
+        96,
+        88
+      ],
+      "anchor": [
+        48,
+        81
+      ],
+      "runtime_anchor": [
+        48,
+        81
+      ],
+      "color_limit": 16,
+      "source_svg": [
+        "games/post/props/whistle-cord/000.svg",
+        "games/post/props/whistle-cord/001.svg",
+        "games/post/props/whistle-cord/002.svg",
+        "games/post/props/whistle-cord/003.svg",
+        "games/post/props/whistle-cord/004.svg",
+        "games/post/props/whistle-cord/005.svg"
+      ],
+      "source_sha256": [
+        "b4441f0b0c52978870fe486d1303d9d1761a8842dbe8286fa02dbc8509772751",
+        "0bad63e0101312b4d1315c08cd8e956237ba95d8dd14b29a86ad37c7897ccb4e",
+        "5c4d506cea864fdd0bdba3b124c146d4759d3f02bb372f7cc71a9eb7c7978cc9",
+        "22a6dd898a07f16a51ab4cbc7aa160c2dca350be1eaa323948e656cbded311cb",
+        "b4aeccd950be552098fda159b57c023ffa21394cafb05e4235b6170ab15a85b3",
+        "b4441f0b0c52978870fe486d1303d9d1761a8842dbe8286fa02dbc8509772751"
+      ],
+      "coordinate_space": "locomotive native top-left; same canvas/anchor as body, before actor and foreground",
+      "owner_animation": "post_a/whistle",
+      "idle_frame": 0,
+      "default_when_not_whistling": 0,
+      "contacts": [
+        {
+          "frame": 0,
+          "source_grip_xy": [
+            96,
+            161
+          ],
+          "roof_anchor": [
+            12,
+            7
+          ],
+          "hand_contact": [
+            16,
+            48
+          ],
+          "state": "rest"
+        },
+        {
+          "frame": 1,
+          "source_grip_xy": [
+            72,
+            144
+          ],
+          "roof_anchor": [
+            12,
+            7
+          ],
+          "hand_contact": [
+            9,
+            45
+          ],
+          "state": "approach"
+        },
+        {
+          "frame": 2,
+          "source_grip_xy": [
+            72,
+            113
+          ],
+          "roof_anchor": [
+            12,
+            7
+          ],
+          "hand_contact": [
+            9,
+            36
+          ],
+          "state": "grasp"
+        },
+        {
+          "frame": 3,
+          "source_grip_xy": [
+            67,
+            128
+          ],
+          "roof_anchor": [
+            12,
+            7
+          ],
+          "hand_contact": [
+            8,
+            40
+          ],
+          "state": "pull"
+        },
+        {
+          "frame": 4,
+          "source_grip_xy": [
+            80,
+            154
+          ],
+          "roof_anchor": [
+            12,
+            7
+          ],
+          "hand_contact": [
+            11,
+            47
+          ],
+          "state": "release"
+        },
+        {
+          "frame": 5,
+          "source_grip_xy": [
+            96,
+            161
+          ],
+          "roof_anchor": [
+            12,
+            7
+          ],
+          "hand_contact": [
+            16,
+            48
+          ],
+          "state": "rest"
+        }
+      ],
+      "endpoint_policy": "Ceiling pulley fixed at every frame; lower endpoint follows transformed glove. Neutral grip is clipped at the visible half-body boundary.",
+      "runtime_sha256": [
+        "8507a6d664ffcc0564bf02fe366fb2af5c5fa583272c54def0f1cac679e55958",
+        "cea8c6e919f00d58386c620d4ca5f9802f8f766722e46a2863a520cbe02ca093",
+        "b8f6d88433cd49ed1843a1e348379eacd89b61af40b8286622b950115fb60af2",
+        "35954d620c34c90e820723558e2e211ce7fe0c19455f5464ad757056082d672b",
+        "fc1d7cb85cc66a148f4e1c207ae3f68dadc41822d83cd22b47fd95e023110378",
+        "8507a6d664ffcc0564bf02fe366fb2af5c5fa583272c54def0f1cac679e55958"
+      ],
+      "runtime_shared_rgba_colors": 4
+    }
+  ],
+  "assets": [
+    {
+      "id": "post/props/locomotive-body",
+      "category": "prop",
+      "path": "games/post/props/locomotive-body.png",
+      "size": [
+        96,
+        88
+      ],
+      "source_svg": "games/post/props/locomotive-body.svg",
+      "anchor": [
+        48,
+        81
+      ],
+      "sha256": "2db50eea850e6b2f49f24d3031f2110fe7d7df4c1764645a338b75311a2bbfb7",
+      "source_sha256": "66bb57ca70c3190ebe4a5f10767e34090ced09bf555fa3d14800411344f22ac1",
+      "cab_window": [
+        10,
+        8,
+        39,
+        49
+      ],
+      "driver_chest": [
+        25,
+        49
+      ],
+      "roof_bottom_y": 7,
+      "whistle_roof_anchor": [
+        12,
+        7
+      ],
+      "coordinate_space": "locomotive top-left, native pixels; window right/bottom exclusive",
+      "composition_order": [
+        "wheel-cycle",
+        "locomotive-body",
+        "whistle-cord",
+        "NABO-halfbody",
+        "cab-foreground"
+      ],
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 9,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          1,
+          1,
+          96,
+          70
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/locomotive-body.png"
+    },
+    {
+      "id": "post/props/cab-foreground",
+      "category": "prop",
+      "path": "games/post/props/cab-foreground.png",
+      "size": [
+        96,
+        88
+      ],
+      "source_svg": "games/post/props/cab-foreground.svg",
+      "anchor": [
+        48,
+        81
+      ],
+      "sha256": "46ba944dd8233d9f35b7d9986f8d0bcf5109b94a565d7715bdae2079f8f29d6f",
+      "source_sha256": "2994d7f23b1ea8772354afff525b1f9867818d07556a99e687186a7f73f1e1c0",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 5,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          8,
+          49,
+          44,
+          63
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/cab-foreground.png"
+    },
+    {
+      "id": "post/props/wheel-000",
+      "category": "prop",
+      "path": "games/post/props/wheel-000.png",
+      "size": [
+        96,
+        88
+      ],
+      "source_svg": "games/post/props/wheel-000.svg",
+      "anchor": [
+        48,
+        81
+      ],
+      "sha256": "035af1ae2f0022683ad9604ccf0522416c1b4497f65740980586656d8f523cb3",
+      "source_sha256": "93368e94702b8aed4b1b48216e5f4b79fabf67b666282350819d67a8c65d4b70",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 6,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          13,
+          58,
+          88,
+          81
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/wheel-000.png"
+    },
+    {
+      "id": "post/props/wheel-001",
+      "category": "prop",
+      "path": "games/post/props/wheel-001.png",
+      "size": [
+        96,
+        88
+      ],
+      "source_svg": "games/post/props/wheel-001.svg",
+      "anchor": [
+        48,
+        81
+      ],
+      "sha256": "49b5cbcb12d3dbe9268c2548621461d794e40682770f8a2670dcd6c270472876",
+      "source_sha256": "3dcd344f976ab762ac14f2e36765363df5b25e0346e6c8058b1e7f34b98350d7",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 6,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          13,
+          58,
+          88,
+          81
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/wheel-001.png"
+    },
+    {
+      "id": "post/props/wheel-002",
+      "category": "prop",
+      "path": "games/post/props/wheel-002.png",
+      "size": [
+        96,
+        88
+      ],
+      "source_svg": "games/post/props/wheel-002.svg",
+      "anchor": [
+        48,
+        81
+      ],
+      "sha256": "1f999c9a515a646194e3cbaaa86ba9787674ac87aa8aa6e3eed9d03a7759bf9c",
+      "source_sha256": "44ef321ec2d0a982a24b445f4effb417814091db1305d26598cd597e2371bd00",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 6,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          13,
+          58,
+          88,
+          81
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/wheel-002.png"
+    },
+    {
+      "id": "post/props/wheel-003",
+      "category": "prop",
+      "path": "games/post/props/wheel-003.png",
+      "size": [
+        96,
+        88
+      ],
+      "source_svg": "games/post/props/wheel-003.svg",
+      "anchor": [
+        48,
+        81
+      ],
+      "sha256": "cdc282974d389f3e66cd31a20be071e43dea174207b077d7eabb69114a764850",
+      "source_sha256": "0a91253bba2a84a5ce36291f1a7b201ee7fb3a28bbb1233d69fb31dcff75ee3f",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 6,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          13,
+          58,
+          88,
+          81
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/wheel-003.png"
+    },
+    {
+      "id": "post/props/carriage",
+      "category": "prop",
+      "path": "games/post/props/carriage.png",
+      "size": [
+        64,
+        48
+      ],
+      "source_svg": "games/post/props/carriage.svg",
+      "anchor": [
+        32,
+        44
+      ],
+      "sha256": "2f2290fa8c044a1a41401e9edf3707b56351966fe4f058fa1151a073bf9e37a0",
+      "source_sha256": "074446e6e126b419b97ebb000522d03b7c2829e356234278c94ab672bfbfd52d",
+      "letter_mount": [
+        32,
+        9
+      ],
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 5,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          12,
+          63,
+          44
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/carriage.png"
+    },
+    {
+      "id": "post/props/envelope-red",
+      "category": "prop",
+      "path": "games/post/props/envelope-red.png",
+      "size": [
+        32,
+        24
+      ],
+      "source_svg": "games/post/props/envelope-red.svg",
+      "anchor": [
+        16,
+        12
+      ],
+      "sha256": "4ebcb2af03b27d48c66a1bfa5fd543034fd76c34e0a15285f50223a5f29ff82e",
+      "source_sha256": "009212103b85449f236acc08f7793a8791ac382a8a34a9920730e776ca686c6c",
+      "semantic_color": "red",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 4,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          3,
+          30,
+          21
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/envelope-red.png"
+    },
+    {
+      "id": "post/props/envelope-blue",
+      "category": "prop",
+      "path": "games/post/props/envelope-blue.png",
+      "size": [
+        32,
+        24
+      ],
+      "source_svg": "games/post/props/envelope-blue.svg",
+      "anchor": [
+        16,
+        12
+      ],
+      "sha256": "cd406f8bf8209c479d0d9ec0e8b6649af439abafb79ff6380e4b830dd4443610",
+      "source_sha256": "aec4e9a2bd37e4a97a5f8ba17b10c5625262951d86fd91c6725ca24e58643970",
+      "semantic_color": "blue",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 4,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          3,
+          30,
+          21
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/envelope-blue.png"
+    },
+    {
+      "id": "post/props/envelope-yellow",
+      "category": "prop",
+      "path": "games/post/props/envelope-yellow.png",
+      "size": [
+        32,
+        24
+      ],
+      "source_svg": "games/post/props/envelope-yellow.svg",
+      "anchor": [
+        16,
+        12
+      ],
+      "sha256": "c5aab508eae9110fe118e4c414ec5cd4c3b5339bd9968e6666dedb49b842506a",
+      "source_sha256": "4bc728bd88cf0f1954d02815723ef14b0a40190522c7a33a9359d96ccfe68159",
+      "semantic_color": "yellow",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 4,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          3,
+          30,
+          21
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/envelope-yellow.png"
+    },
+    {
+      "id": "post/props/envelope-green",
+      "category": "prop",
+      "path": "games/post/props/envelope-green.png",
+      "size": [
+        32,
+        24
+      ],
+      "source_svg": "games/post/props/envelope-green.svg",
+      "anchor": [
+        16,
+        12
+      ],
+      "sha256": "f7abb09f13633d848c92f23dcc87320459a37c6fc7631aee8fc8affb887b441b",
+      "source_sha256": "6f17f6e84879c5efd9d954afdc440d0ec72a4588671e03992105b664c230b4de",
+      "semantic_color": "green",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 4,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          3,
+          30,
+          21
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/envelope-green.png"
+    },
+    {
+      "id": "post/props/envelope-orange",
+      "category": "prop",
+      "path": "games/post/props/envelope-orange.png",
+      "size": [
+        32,
+        24
+      ],
+      "source_svg": "games/post/props/envelope-orange.svg",
+      "anchor": [
+        16,
+        12
+      ],
+      "sha256": "c4d55a11bf6cd5fc076a06533b148dcd300c268bf48294b8818ceafca2ba7547",
+      "source_sha256": "7924926167a8289584978279ac10bff46bcfb6bc7d6e8c59315cf6cb63546c69",
+      "semantic_color": "orange",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 4,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          3,
+          30,
+          21
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/envelope-orange.png"
+    },
+    {
+      "id": "post/props/envelope-gray",
+      "category": "prop",
+      "path": "games/post/props/envelope-gray.png",
+      "size": [
+        32,
+        24
+      ],
+      "source_svg": "games/post/props/envelope-gray.svg",
+      "anchor": [
+        16,
+        12
+      ],
+      "sha256": "1ae89e3876e2455213f4728302d5016e60058d7059e0e6a8a75824ac821c404a",
+      "source_sha256": "f9ed019117846e56653c4959ba75544e40b2f86dc9a8b2a78f11cf61813f1b80",
+      "semantic_color": "gray",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 4,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          3,
+          30,
+          21
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/envelope-gray.png"
+    },
+    {
+      "id": "post/tiles/rails",
+      "category": "tile",
+      "path": "games/post/tiles/rails.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_svg": "games/post/tiles/rails.svg",
+      "anchor": [
+        16,
+        32
+      ],
+      "sha256": "2a61dccaa7e489dda45134fd046dbe8f83fe41a088b9e4183107515ba7ef762f",
+      "source_sha256": "abba4a32bbd1ae512d294801fb28a7419344af0014f0d2a332ae83b7a54ac98f",
+      "repeat_axes": "x",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 3,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          7,
+          32,
+          27
+        ],
+        "seams": {
+          "x": true
+        },
+        "passed": true
+      },
+      "preview": "preview/post/props/rails.png"
+    },
+    {
+      "id": "post/tiles/sleepers",
+      "category": "tile",
+      "path": "games/post/tiles/sleepers.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_svg": "games/post/tiles/sleepers.svg",
+      "anchor": [
+        16,
+        32
+      ],
+      "sha256": "3a25a0c263e63843c437829a7d81b415fee5c41beca193bccfcbb99bbc405c40",
+      "source_sha256": "108ade5c09af00154227ae7731a88deba94ec830a86c9b1e794ec12d3ab469b1",
+      "repeat_axes": "x",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 4,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          3,
+          2,
+          27,
+          30
+        ],
+        "seams": {
+          "x": true
+        },
+        "passed": true
+      },
+      "preview": "preview/post/props/sleepers.png"
+    },
+    {
+      "id": "post/tiles/track-straight",
+      "category": "tile",
+      "path": "games/post/tiles/track-straight.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_svg": "games/post/tiles/track-straight.svg",
+      "anchor": [
+        16,
+        32
+      ],
+      "sha256": "db7eda758de16a707bb8893ece580f36cd16ddaf6694c596baeb0d4805bf21ff",
+      "source_sha256": "72a6f6396365444acadec634e09f3bbf1488b68b05d06653fc94cf5d288128ea",
+      "repeat_axes": "x",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 5,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          2,
+          32,
+          30
+        ],
+        "seams": {
+          "x": true
+        },
+        "passed": true
+      },
+      "preview": "preview/post/props/track-straight.png"
+    },
+    {
+      "id": "post/tiles/track-fork",
+      "category": "tile",
+      "path": "games/post/tiles/track-fork.png",
+      "size": [
+        64,
+        56
+      ],
+      "source_svg": "games/post/tiles/track-fork.svg",
+      "anchor": [
+        32,
+        36
+      ],
+      "sha256": "85494406138f099474b4dd29cc9edbd84ccf3a741358da17218dc8b319387a4b",
+      "source_sha256": "2d3766544a9aa67142a8dd4d5f7554c6fdbe7aed3582472741e2ef44bfa5ed5c",
+      "entry": [
+        0,
+        36
+      ],
+      "exits": [
+        [
+          63,
+          36
+        ],
+        [
+          63,
+          11
+        ]
+      ],
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 5,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          4,
+          64,
+          47
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/track-fork.png"
+    },
+    {
+      "id": "post/props/station-platform-mask",
+      "category": "prop",
+      "path": "games/post/props/station-platform-mask.png",
+      "size": [
+        80,
+        56
+      ],
+      "source_svg": "games/post/props/station-platform-mask.svg",
+      "anchor": [
+        40,
+        56
+      ],
+      "sha256": "3cd4a5c821f1ac9673bd195242d8c46df44f27ce8078b322f074892f38963af2",
+      "source_sha256": "e5161e4398014b214da198863b59ad5c9462e5b0def22f17a96d0a32a020e3f2",
+      "tintable": true,
+      "color_limit": 2,
+      "sign_center": [
+        40,
+        14
+      ],
+      "qa": {
+        "rgba_colors": 2,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          4,
+          4,
+          76,
+          51
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/station-platform-mask.png"
+    },
+    {
+      "id": "post/props/sheep",
+      "category": "prop",
+      "path": "games/post/props/sheep.png",
+      "size": [
+        40,
+        32
+      ],
+      "source_svg": "games/post/props/sheep.svg",
+      "anchor": [
+        20,
+        28
+      ],
+      "sha256": "f489a618e85fd30146125d98892812a4808b458b708946432a851e0d70825c21",
+      "source_sha256": "fe2fdfb3637711b123d5a691c4f10854d30a021a08680497386016cd7b8b9609",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 5,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          2,
+          38,
+          28
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/sheep.png"
+    },
+    {
+      "id": "post/props/cow",
+      "category": "prop",
+      "path": "games/post/props/cow.png",
+      "size": [
+        48,
+        36
+      ],
+      "source_svg": "games/post/props/cow.svg",
+      "anchor": [
+        24,
+        34
+      ],
+      "sha256": "30a18569f08fb6efe30b0c56658c329cd835a931751447271429cb29af180e20",
+      "source_sha256": "30e6a46ab42d3079a58ca5f6e767d1ce100581bc6e4430ea10e8c9ca150a3e36",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 5,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          2,
+          5,
+          47,
+          34
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/cow.png"
+    },
+    {
+      "id": "post/props/coal-pile",
+      "category": "prop",
+      "path": "games/post/props/coal-pile.png",
+      "size": [
+        32,
+        24
+      ],
+      "source_svg": "games/post/props/coal-pile.svg",
+      "anchor": [
+        16,
+        23
+      ],
+      "sha256": "30eb1b4fd4001becd1e03369b03d3ebc033de9d570cf9be1a3e92fb1c87a74a7",
+      "source_sha256": "f5cf517df54d7e3fed5bb550a746c2655a7b607dddf09c72bc86f88bc660347f",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 3,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          1,
+          6,
+          30,
+          23
+        ],
+        "seams": {},
+        "passed": true
+      },
+      "preview": "preview/post/props/coal-pile.png"
+    },
+    {
+      "id": "post/tiles/far-mountains",
+      "category": "tile",
+      "path": "games/post/tiles/far-mountains.png",
+      "size": [
+        96,
+        32
+      ],
+      "source_svg": "games/post/tiles/far-mountains.svg",
+      "anchor": [
+        48,
+        32
+      ],
+      "sha256": "0fae12484c1b5e3f8f233fa49d4cdbb6ba54328019b7cbab948027bd7823296d",
+      "source_sha256": "72530f13b9843fe4b632c36e2b0ce0387b600e9accbe9bb557b58c1cded7b6a9",
+      "parallax": "engine only; no baked translation",
+      "repeat_axes": "x",
+      "color_limit": 16,
+      "qa": {
+        "rgba_colors": 2,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          5,
+          96,
+          31
+        ],
+        "seams": {
+          "x": true
+        },
+        "passed": true
+      },
+      "preview": "preview/post/props/far-mountains.png"
+    }
+  ],
+  "background": {
+    "world": "rail",
+    "preview_rgb": [
+      148,
+      202,
+      106
+    ],
+    "source": "firmware/main/adv_ui_map.c"
+  },
+  "identity": {
+    "reference": "reference/nabo-idle-original.png",
+    "sha256": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243",
+    "selected_travel": "design/round1/v2/01-hiker-design-board.png",
+    "common_head": [
+      {
+        "name": "head",
+        "path": "rig/common/front/head.png",
+        "sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+        "pivot": [
+          128,
+          97
+        ],
+        "parent": "rigid_head",
+        "local_alpha_mask": "rig/post/head-garment-exclusion-mask.png"
+      },
+      {
+        "name": "expression_neutral",
+        "path": "rig/common/front/expression_neutral.png",
+        "sha256": "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd",
+        "pivot": [
+          128,
+          97
+        ],
+        "parent": "rigid_head",
+        "local_alpha_mask": "rig/post/head-garment-exclusion-mask.png"
+      }
+    ],
+    "generated_head_used": false,
+    "garment_exclusion": {
+      "preserve_all_rows": [
+        0,
+        93
+      ],
+      "preserve_neck_rect": [
+        121,
+        94,
+        137,
+        100
+      ],
+      "reason": "Frozen head slice includes old travel collar at its bottom; POST alpha-only mask excludes that garment. Common files and all retained RGB remain unchanged."
+    },
+    "mirror": false,
+    "expressions": "Original neutral face retained; gestures carry emotion."
+  },
+  "counts": {
+    "character_clips": 8,
+    "character_frames": 50,
+    "props": 22,
+    "wheel_frames": 4,
+    "whistle_cord_frames": 6
+  },
+  "provenance": {
+    "game-art\\adventure\\tools\\post_build.py": "4ff78bf1921722b5755d0934225acd37ef22cb2b1775460248ef5606f37f912a",
+    "game-art\\adventure\\tools\\post_cab.py": "3e423099da62b99ddc3cdff31b9bc5c3dee1c948ad012c168d9a8e636798e821",
+    "game-art\\adventure\\tools\\post_cab_verify.py": "ccb5422fdcfc127227bfe6a570bcd6b3d18b87c2c1cee3028879dfdadf09a9de",
+    "game-art\\adventure\\tools\\post_config.py": "b9817ce7bd0c8b609c66b5df1677fc80900c981459cc4718fda7541f98271b7d",
+    "game-art\\adventure\\tools\\post_palette.py": "d750bd9801de89cb1e475fe61036a6ec5ce2936a89a54360e5d48d20890b8af7",
+    "game-art\\adventure\\tools\\post_props.py": "ecbd00a93cbf6ca03f88db69b36127751f7333df998fd76ecdf8dd47d8ba45a5",
+    "game-art\\adventure\\tools\\post_render.py": "e59ef103eecbf3ffc7c253c4b105db39ace9c6593b1abf6c4dc08901b45ca04e",
+    "game-art\\adventure\\tools\\post_reproduce.py": "4fd359ca2e805e64bdf7bece897762341eafbabe0219863eb12e33fee2a93281",
+    "game-art\\adventure\\tools\\post_rig.py": "62ec4d5ce4cea837cdcee4aa5ce77bc8bca666e05592613aa8c069b1b3b45630",
+    "game-art\\adventure\\tools\\post_verify.py": "debd12bc34ae59f8db40153a7127addb3ef74e4a11084ea8a9f14853db13fea6",
+    "game-art\\adventure\\tools\\rig_render.py": "d77bb7abfe142abd7fa1eca12ad6606c34df12ca2c6f9561c4ee86b4d4b102e5",
+    "game-art\\adventure\\tools\\rig_preview.py": "da14b748e324e986dfabcf1f6c294f966cb6bfc7823ceb88b7d59ac64dd6130a",
+    "game-art\\adventure\\tools\\shared_static_canvas.py": "879db009db36b1de3adc285664b8b95e135c7ecee11e1c5b9e662c5ca4812155",
+    "game-art\\adventure\\art\\rig\\rig.json": "f5b1c14327fe9b92dbc2e00ed8863e6d53df4122252bb781489af4c9e28afa8e",
+    "game-art\\adventure\\art\\rig\\post\\export-palette-lock.json": "8091a146c26e51f1acdb0e7ea38c51b90a52302b5f5561018210d92274eaf3ac",
+    "game-art\\adventure\\art\\ui\\design\\round3\\01-passport\\palette.json": "937c2d09f1ee0ee124b7c13f562b5ea8208a7901a9aa1a0637c5d1310b8de457",
+    "game-art\\adventure\\art\\games\\post\\source\\generation.json": "0ff70dea87669effeecd2e0a5876026d0814594e23cddd51f8b0c48ca7ae96cd",
+    "firmware\\main\\adv_ui_map.c": "6cac3f0c60549cc2d2e050af5bc8172964f5330cd0dcfcbc4c7d8f8f9614b7b7",
+    "D:\\AI PASSPORT XIAOZHI\\nabo-fortune\\tools\\fonts\\SourceHanSansCN-Medium.otf": "a94e558a2fe972bee4f46bce0843abff37063fd68c33f1e7d9058f6f09432b01"
+  }
+}

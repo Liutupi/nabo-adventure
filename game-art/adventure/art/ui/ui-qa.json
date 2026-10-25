@@ -2,20 +2,138 @@
   "status": "PASS: EXPORTED PIXEL AND STRUCTURAL CHECKS",
   "firmware_or_device_acceptance": false,
   "assets": 137,
-  "shared_ui_visible_colors": 13,
+  "shared_ui_visible_colors": 14,
   "nine_slice": "6 families/states; 48x32 and 240x120; original corners, no interior gaps",
   "font": {
     "path": "D:\\AI PASSPORT XIAOZHI\\nabo-fortune\\tools\\fonts\\SourceHanSansCN-Medium.otf",
     "sha256": "a94e558a2fe972bee4f46bce0843abff37063fd68c33f1e7d9058f6f09432b01",
     "chinese_sizes_px": [
-      12,
-      16,
-      18
-    ]
+      12
+    ],
+    "role": "body"
   },
   "cover_layer_assembly": "pixel_equal",
+  "fonts": {
+    "bold": {
+      "path": "C:/Windows/Fonts/Noto Sans SC Bold (TrueType).otf",
+      "sha256": "d1961be1161ea1be08496c920862d06ea5c23a757628f4fd69368de1d9f51bed",
+      "family": "Noto Sans SC",
+      "weight": 700,
+      "names": {
+        "0": [
+          "© 2014-2020 Adobe (http://www.adobe.com/)."
+        ],
+        "1": [
+          "Noto Sans SC"
+        ],
+        "2": [
+          "Bold"
+        ],
+        "4": [
+          "Noto Sans SC Bold"
+        ],
+        "5": [
+          "Version 2.002;hotconv 1.0.116;makeotfexe 2.5.65601"
+        ],
+        "8": [
+          "Adobe"
+        ],
+        "13": [
+          "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software."
+        ],
+        "14": [
+          "http://scripts.sil.org/OFL"
+        ]
+      },
+      "fsType": 0,
+      "variable": false,
+      "operation": "read original file for preview; no font conversion or redistribution"
+    },
+    "medium": {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-fortune\\tools\\fonts\\SourceHanSansCN-Medium.otf",
+      "sha256": "a94e558a2fe972bee4f46bce0843abff37063fd68c33f1e7d9058f6f09432b01",
+      "family": "Source Han Sans CN",
+      "weight": 500,
+      "names": {
+        "0": [
+          "© 2014-2025 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'."
+        ],
+        "1": [
+          "Source Han Sans CN Medium",
+          "思源黑体 CN Medium"
+        ],
+        "2": [
+          "Regular"
+        ],
+        "4": [
+          "Source Han Sans CN Medium",
+          "思源黑体 CN Medium"
+        ],
+        "5": [
+          "Version 2.005;addfeatures 5.0.0b21"
+        ],
+        "8": [
+          "Adobe"
+        ],
+        "13": [
+          "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software."
+        ],
+        "14": [
+          "http://scripts.sil.org/OFL"
+        ]
+      },
+      "fsType": 0,
+      "variable": false,
+      "operation": "read original file for preview; no font conversion or redistribution"
+    },
+    "latin": {
+      "path": "D:\\AI PASSPORT XIAOZHI\\table-undercover\\repo\\xiaozhi-esp32\\managed_components\\lvgl__lvgl\\tests\\src\\test_files\\fonts\\Montserrat-Bold.ttf",
+      "sha256": "06a0e623bbaf4a0237f1d605affa269f9e431ff50c7143dcbb47b815edaba9bd",
+      "family": "Montserrat",
+      "weight": 700,
+      "names": {
+        "0": [
+          "Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)"
+        ],
+        "1": [
+          "Montserrat"
+        ],
+        "2": [
+          "Bold"
+        ],
+        "4": [
+          "Montserrat Bold"
+        ],
+        "5": [
+          "Version 8.000"
+        ],
+        "14": [
+          "http://scripts.sil.org/OFL"
+        ]
+      },
+      "fsType": 0,
+      "variable": false,
+      "operation": "read original file for preview; no font conversion or redistribution"
+    }
+  },
+  "selected_dynamic_text": "#fffaf0",
   "preview_screen_count": 13,
-  "row_rle_estimate_bytes_deduplicated": 62140,
+  "row_rle_estimate_bytes_deduplicated": 49558,
   "packed_limit_bytes": 163840,
-  "actual_firmware_pack_measurement": "pending integration; this is an explicit estimate, not PNG byte size"
+  "actual_python_codec_measurement": {
+    "limit_bytes": 163840,
+    "row_rle_estimate_bytes_deduplicated": 49558,
+    "estimate_below_limit": true,
+    "final_firmware_rle_measurement": "pending main-task integration; PNG size is not firmware size",
+    "actual_python_rle_bytes": 36008,
+    "actual_python_table_bytes": 14310,
+    "descriptor_catalog_estimate_c3": 11791,
+    "actual_static_estimate_c3": 62109,
+    "current_boot_welcome_bytes": 47730,
+    "ui_plus_current_boot_estimate": 109839,
+    "character_budget_allowance": 101731,
+    "actual_production_c_validation": "pending root integration; Python lossless index roundtrip only",
+    "new_boot_v2": "replace current welcome cost with measured final v2 cost before acceptance"
+  },
+  "actual_firmware_pack_measurement": "pending root C integration; Python streams/tables measured, no C pass inferred"
 }

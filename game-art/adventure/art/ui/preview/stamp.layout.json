@@ -1,0 +1,182 @@
+{
+  "space": "native 240x320; text positions are ink top-left, derive C baseline from generated glyph metrics",
+  "dynamic_text": [
+    {
+      "fixture_text": "新的旅途印章",
+      "anchor_xy": [
+        120,
+        75
+      ],
+      "ink_box": [
+        66,
+        75,
+        174,
+        95
+      ],
+      "size_px": 18,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "center"
+    },
+    {
+      "fixture_text": "小火车 · 银章",
+      "anchor_xy": [
+        120,
+        211
+      ],
+      "ink_box": [
+        68,
+        211,
+        172,
+        228
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "center"
+    },
+    {
+      "fixture_text": "解锁第二款服装",
+      "anchor_xy": [
+        120,
+        247
+      ],
+      "ink_box": [
+        78,
+        247,
+        162,
+        261
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "center"
+    },
+    {
+      "fixture_text": "旅途盖章",
+      "anchor_xy": [
+        20,
+        6
+      ],
+      "ink_box": [
+        20,
+        6,
+        92,
+        26
+      ],
+      "size_px": 18,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "left"
+    },
+    {
+      "fixture_text": "章 1/24",
+      "anchor_xy": [
+        226,
+        11
+      ],
+      "ink_box": [
+        185,
+        11,
+        226,
+        25
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "right"
+    },
+    {
+      "fixture_text": "OK 收下这枚章",
+      "anchor_xy": [
+        120,
+        300
+      ],
+      "ink_box": [
+        80,
+        300,
+        160,
+        314
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "center"
+    }
+  ],
+  "cards": [
+    {
+      "family": "popup",
+      "state": "normal",
+      "xy": [
+        24,
+        57
+      ],
+      "size": [
+        192,
+        218
+      ],
+      "dynamic_text": "#203849"
+    }
+  ],
+  "assets": [
+    {
+      "path": "stamps/ink-pad.png",
+      "xy": [
+        88,
+        120
+      ]
+    },
+    {
+      "path": "bars/top.png",
+      "xy": [
+        0,
+        0
+      ]
+    },
+    {
+      "path": "bars/bottom.png",
+      "xy": [
+        0,
+        290
+      ]
+    }
+  ],
+  "numbers": []
+}

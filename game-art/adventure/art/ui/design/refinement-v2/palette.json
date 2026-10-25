@@ -1,0 +1,26 @@
+{
+  "basis": "selected 01-passport navy/paper/red; cool neutrals + measured font edge colors",
+  "visible_colors": 19,
+  "colors": [
+    "#203849",
+    "#3f817b",
+    "#477191",
+    "#60707a",
+    "#756b55",
+    "#899397",
+    "#90999d",
+    "#9ca8a7",
+    "#9fbeb6",
+    "#a9afb0",
+    "#b0b5b5",
+    "#b64c43",
+    "#b9703d",
+    "#d1a43f",
+    "#dcdcd3",
+    "#f1eee5",
+    "#f3d88a",
+    "#fff0cd",
+    "#fffaf0"
+  ],
+  "limit": 32
+}

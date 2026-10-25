@@ -1,27 +1,28 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_wordmarks_sky__p0",
   "width": 200,
   "height": 80,
   "palette_rgb565": [
     0,
     8649,
-    44173,
+    38099,
     45672,
-    65433
+    56595,
+    65502
   ],
   "background_rgb888": null,
   "key_interval": 8,
   "keys": [
     0
   ],
-  "data_bytes": 2228,
-  "table_bytes": 336,
+  "data_bytes": 1511,
+  "table_bytes": 338,
   "frame_sha256": [
-    "9cec960a2b635054a020a2cafe28971f00a073b2ce1895b6634b37ddc783001c"
+    "a97d759b0157b336d07c3bd1d8be684e027992f1f223e8e79b17605cdd0d37e5"
   ],
   "source_sha256": [
-    "c088d52517449d24295a30d113f243d0878d61b853dadf14fea2e992f9cf63bf"
+    "911f330e298aff8f7083d11b5dd9113c0d600bd62d9811141b65e817784923dc"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,8 +36,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\wordmarks\\sky.png",
-      "sha256": "4d6dc5aafdc5d83cd746bbe8bf6a93e690309d9e3dc709f5a0e066dd8aadc05a"
+      "sha256": "893f514fe1937f6bc7b8013212a9ead4e9d18ef75ca612b1304ed2944b2d7682"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/wordmarks/sky",
+      "logical_symbol": "adv_assets_ui_wordmarks_sky__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

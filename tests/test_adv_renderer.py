@@ -4,6 +4,7 @@ Every screen is saved under docs/images/ui/ (UI_DESIGN.md shows them) and privat
 After every input the incremental frame must equal a full redraw, and no frame may overflow.
 """
 import ctypes
+import json
 import os
 from pathlib import Path
 import subprocess
@@ -17,10 +18,15 @@ BOARD = ROOT/'firmware/main'
 HOST = ROOT/'tests/adv_host'
 UP, DOWN, OK = 0, 1, 2
 PRESS, CLICK, DOUBLE, LONG, RELEASE = 0, 1, 2, 3, 4
-SOURCES = ['adv_model.c', 'adv_stations.c', 'adv_demo.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
+SOURCES = ['adv_boot_motion.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
            'adv_text.c', 'adv_ui.c', 'adv_ui_animation.c', 'adv_ui_art.c', 'adv_ui_map.c', 'adv_ui_session.c', 'adv_ui_jump.c', 'collection_portrait.c',
            'nabo_jump_model.c', 'nabo_jump_rig.c', 'nabo_dive_text.c', 'collection_font_12.c', 'collection_font_16.c',
            'collection_font_18.c', 'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c']
+
+def ui_color(name):
+    palette=json.loads((ROOT/'game-art/adventure/art/ui/palette.json').read_text('utf-8'))
+    r,g,b=bytes.fromhex(palette[name].lstrip('#'))
+    return (r>>3)<<11 | (g>>2)<<5 | b>>3
 
 class Renderer(unittest.TestCase):
     @classmethod
@@ -37,7 +43,7 @@ class Renderer(unittest.TestCase):
         assembly.write_text('\n'.join(lines)+'\n', 'utf-8')
         library = folder/'adv_render.dll'
         subprocess.run([CC, '-std=gnu11', '-O2', '-shared', SHARED_EXPORT, '-Wall', '-Wextra', '-Werror',
-                        '-Wno-missing-field-initializers', '-I', str(HOST), '-I', str(BOARD)] +
+                        '-Wno-missing-field-initializers', '-I', str(HOST), '-I', str(BOARD), '-I', str(BOARD/'generated')] +
                        [str(BOARD/s) for s in SOURCES] + [str(p) for p in sorted((BOARD/'generated').glob('*.c'))] + [str(HOST/'adv_ui_host.c'), str(assembly), '-lm', '-o',
                        str(library)], check=True)
         cls.lib = lib = ctypes.CDLL(str(library))
@@ -50,6 +56,7 @@ class Renderer(unittest.TestCase):
         lib.host_band.argtypes = [ctypes.c_uint16, ctypes.c_uint16]
         lib.host_draw_at.argtypes = [ctypes.c_uint32]
         lib.host_boot_start.argtypes = [ctypes.c_uint32]
+        lib.adv_boot_motion_enabled.restype = ctypes.c_bool
         cls.previews = ROOT/'private/previews'
         cls.previews.mkdir(parents=True, exist_ok=True)
         cls.docs = ROOT/'docs/images/ui'
@@ -126,6 +133,9 @@ class Renderer(unittest.TestCase):
         for tier, name in enumerate(('stamp-bronze.png', 'stamp-silver.png', 'stamp-gold.png')):
             self.assertEqual(self.lib.host_page(), 5)
             self.save(name, True)
+            pixels=self.snapshot()
+            caption=[pixels[y*240+x] for y in range(230,251) for x in range(95,145)]
+            self.assertGreater(caption.count(ui_color('ink')),20,'stamp tier captions need dark text contrast')
             self.click(OK)
         self.assertEqual(self.lib.host_page(), 1)
 
@@ -138,16 +148,34 @@ class Renderer(unittest.TestCase):
             self.click(UP)
         self.save('map-space.png', True)
 
+    def test_passport_locked_selection_and_uint32_records(self):
+        self.new([0]*9)
+        self.click(OK); self.ev(OK, LONG); self.click(DOWN)
+        self.save('passport-selected-locked.png')
+        pixels=self.snapshot()
+        lock=[pixels[y*240+x] for y in range(99,117) for x in range(204,220)]
+        self.assertGreater(lock.count(ui_color('white')),10,'selected lock must contrast with the navy card')
+        self.new([0xffffffff]*9, seen=0xffffff)
+        self.click(OK); self.ev(OK, LONG)
+        self.save('passport-max-records.png')
+        maximum=self.snapshot()
+        self.new([10000]*9, seen=0xffffff)
+        self.click(OK); self.ev(OK, LONG)
+        self.assertEqual(maximum,self.snapshot(),'all overflow records use the same bounded display marker')
+
     def test_boot_and_map_animation_incremental_matches_full_at_boundaries(self):
         self.new([0, 60, 700, 30, 70, 400, 50, 1200, 1000], seen=0xffffff)
         self.lib.host_boot_start(1000)
         frames = []
-        for t in (0, 250, 449, 450, 600, 1000, 1399, 1400, 1500, 2000, 2733, 2734, 4066, 4067, 5000):
+        times = (0, 250, 449, 450, 600, 1000, 1399, 1400, 1500, 2000, 2733, 2734, 4066, 4067, 4417, 5000)
+        for t in times:
             self.lib.host_draw_at(1000 + t)
             self.check(f'boot {t}')
             frames.append(self.snapshot())
             if t in (0, 1000, 2000, 5000): self.save(f'boot-{t}.png', True)
-        self.assertNotEqual(frames[0], frames[-1])
+        if self.lib.adv_boot_motion_enabled():
+            self.assertNotEqual(frames[times.index(2000)], frames[-1], 'selected introduction must perform a gesture')
+        self.assertEqual(frames[0], frames[-1], 'the one-shot returns to its original neutral pose')
         self.assertEqual(frames[-2], frames[-1], 'cover settles after its one-time introduction')
         self.click(OK)
         self.click(UP)

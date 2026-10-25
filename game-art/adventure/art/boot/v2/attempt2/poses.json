@@ -1,0 +1,1767 @@
+{
+  "timeline": {
+    "timebase": "milliseconds since screen visible t=0",
+    "pose_start_ms": [
+      0,
+      167,
+      333,
+      583,
+      750,
+      833,
+      1000,
+      1167,
+      1333,
+      1417,
+      1583,
+      1750,
+      1833,
+      1917,
+      2000,
+      2167,
+      2333,
+      2500,
+      2750,
+      2917,
+      3000,
+      3083,
+      3250,
+      3417,
+      3583,
+      3750,
+      3917,
+      4083,
+      4250
+    ],
+    "duration_ms": [
+      167,
+      166,
+      250,
+      167,
+      83,
+      167,
+      167,
+      166,
+      84,
+      166,
+      167,
+      83,
+      84,
+      83,
+      167,
+      166,
+      167,
+      250,
+      167,
+      83,
+      83,
+      167,
+      167,
+      166,
+      167,
+      167,
+      166,
+      167,
+      167
+    ],
+    "duration_ticks": [
+      2,
+      2,
+      3,
+      2,
+      1,
+      2,
+      2,
+      2,
+      1,
+      2,
+      2,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      3,
+      2,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "exact_ticks": [
+      0,
+      2,
+      4,
+      7,
+      9,
+      10,
+      12,
+      14,
+      16,
+      17,
+      19,
+      21,
+      22,
+      23,
+      24,
+      26,
+      28,
+      30,
+      33,
+      35,
+      36,
+      37,
+      39,
+      41,
+      43,
+      45,
+      47,
+      49,
+      51
+    ],
+    "labels": [
+      "ready",
+      "bag-approach",
+      "take-strap",
+      "bag-anticipation",
+      "look-up",
+      "raise-to-hat",
+      "touch-brim",
+      "hat-tip",
+      "release-hat",
+      "open-palm",
+      "wave-out",
+      "wave-in",
+      "warm-blink",
+      "wave-return",
+      "greet-open",
+      "lower-wave",
+      "offer-hand",
+      "invite",
+      "invite-hold",
+      "invite-nod",
+      "invite-rise",
+      "invitation-settle",
+      "withdraw",
+      "return-to-cuff",
+      "toe-to-route",
+      "departure-nod",
+      "steady",
+      "idle-arrival",
+      "idle-hold"
+    ],
+    "pose_frame_indices": [
+      0,
+      16,
+      9,
+      8,
+      17,
+      22,
+      23,
+      24,
+      25,
+      21,
+      5,
+      3,
+      13,
+      4,
+      2,
+      20,
+      18,
+      10,
+      11,
+      12,
+      14,
+      15,
+      1,
+      19,
+      6,
+      7,
+      26,
+      0,
+      0
+    ],
+    "unique_frame_count": 27,
+    "logical_pose_count": 29,
+    "total_duration_ms": 4417,
+    "exact_duration_s": 4.416666666666667,
+    "voice_start_ms": 1400,
+    "voice_end_ms": 4090.625,
+    "voice_duration_ms": 2690.625,
+    "playback": "one shot; hold final idle, never loop or add whole-character entrance translation"
+  },
+  "reports": [
+    {
+      "index": 0,
+      "tick": 0,
+      "duration_ticks": 2,
+      "label": "ready",
+      "goal": [
+        162,
+        153
+      ],
+      "torso_angle": 0,
+      "head_angle": 0,
+      "head_dy": 0,
+      "expression": "open",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -7.165854217200291,
+      "forearm_r_degrees": 11.274500340914557,
+      "world_wrist": [
+        161.99999999999997,
+        153.0
+      ],
+      "head_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 0,
+      "head_det": 1.0,
+      "head_orthogonal_error": 0.0,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        83,
+        14,
+        172,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "tick": 2,
+      "duration_ticks": 2,
+      "label": "bag-approach",
+      "goal": [
+        158,
+        145
+      ],
+      "torso_angle": -1,
+      "head_angle": -2,
+      "head_dy": 0,
+      "expression": "open",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -24.492095562365535,
+      "forearm_r_degrees": 62.73136006122198,
+      "world_wrist": [
+        158.00000000000006,
+        145.00000000000003
+      ],
+      "head_matrix": [
+        [
+          0.9986295347545739,
+          0.05233595624294383,
+          -5.913407777513454
+        ],
+        [
+          -0.05233595624294383,
+          0.9986295347545739,
+          6.840771208832442
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": -3,
+      "head_det": 1.0000000000000002,
+      "head_orthogonal_error": 2.220446049250313e-16,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        80,
+        15,
+        181,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "tick": 4,
+      "duration_ticks": 3,
+      "label": "take-strap",
+      "goal": [
+        151,
+        133
+      ],
+      "torso_angle": -2,
+      "head_angle": -3,
+      "head_dy": 1,
+      "expression": "half",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -28.99947266259622,
+      "forearm_r_degrees": 105.17743432851756,
+      "world_wrist": [
+        151.0000000000001,
+        133.00000000000006
+      ],
+      "head_matrix": [
+        [
+          0.9961946980917455,
+          0.08715574274765818,
+          -9.956299714308809
+        ],
+        [
+          -0.08715574274765817,
+          0.9961946980917455,
+          12.559772216712478
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": -5,
+      "head_det": 1.0,
+      "head_orthogonal_error": 1.1579573185890945e-17,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        78,
+        16,
+        182,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "tick": 7,
+      "duration_ticks": 2,
+      "label": "bag-anticipation",
+      "goal": [
+        151,
+        130
+      ],
+      "torso_angle": -2,
+      "head_angle": -3,
+      "head_dy": 1,
+      "expression": "closed",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -31.101770688797757,
+      "forearm_r_degrees": 113.9955980276356,
+      "world_wrist": [
+        150.99999999999994,
+        130.00000000000003
+      ],
+      "head_matrix": [
+        [
+          0.9961946980917455,
+          0.08715574274765818,
+          -9.956299714308809
+        ],
+        [
+          -0.08715574274765817,
+          0.9961946980917455,
+          12.559772216712478
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": -5,
+      "head_det": 1.0,
+      "head_orthogonal_error": 1.1579573185890945e-17,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        78,
+        16,
+        183,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "tick": 9,
+      "duration_ticks": 1,
+      "label": "look-up",
+      "goal": [
+        155,
+        135
+      ],
+      "torso_angle": -1,
+      "head_angle": -1,
+      "head_dy": 0,
+      "expression": "half",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -34.390499589844126,
+      "forearm_r_degrees": 99.20036097575621,
+      "world_wrist": [
+        154.99999999999994,
+        135.0
+      ],
+      "head_matrix": [
+        [
+          0.9993908270190958,
+          0.03489949670250097,
+          -4.3195166119492905
+        ],
+        [
+          -0.03489949670250097,
+          0.9993908270190958,
+          4.5350590379971365
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": -2,
+      "head_det": 1.0000000000000002,
+      "head_orthogonal_error": 2.1632406296408585e-18,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        81,
+        15,
+        185,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "tick": 10,
+      "duration_ticks": 2,
+      "label": "raise-to-hat",
+      "goal": [
+        173,
+        107
+      ],
+      "torso_angle": 0,
+      "head_angle": 2,
+      "head_dy": 0,
+      "expression": "open",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -117.39004125621697,
+      "forearm_r_degrees": 122.07651727478918,
+      "world_wrist": [
+        173.00000000000006,
+        107.0
+      ],
+      "head_matrix": [
+        [
+          0.9993908270190958,
+          -0.03489949670250097,
+          3.4632253216983315
+        ],
+        [
+          0.03489949670250097,
+          0.9993908270190958,
+          -4.408045798772406
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 2,
+      "head_det": 1.0000000000000002,
+      "head_orthogonal_error": 2.1632406296408585e-18,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        84,
+        14,
+        183,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "tick": 12,
+      "duration_ticks": 2,
+      "label": "touch-brim",
+      "goal": [
+        170,
+        62
+      ],
+      "torso_angle": 0,
+      "head_angle": 6,
+      "head_dy": 4,
+      "expression": "open",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -132.79050230788246,
+      "forearm_r_degrees": -32.316010823289815,
+      "world_wrist": [
+        169.99999999999997,
+        61.99999999999994
+      ],
+      "head_matrix": [
+        [
+          0.9945218953682733,
+          -0.10452846326765347,
+          10.840458329823406
+        ],
+        [
+          0.10452846326765347,
+          0.9945218953682733,
+          -8.84826714898216
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 6,
+      "head_det": 1.0,
+      "head_orthogonal_error": 1.1102230246251565e-16,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        87,
+        19,
+        182,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "tick": 14,
+      "duration_ticks": 2,
+      "label": "hat-tip",
+      "goal": [
+        170,
+        62
+      ],
+      "torso_angle": 0,
+      "head_angle": 6,
+      "head_dy": 4,
+      "expression": "half",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -132.79050230788246,
+      "forearm_r_degrees": -32.316010823289815,
+      "world_wrist": [
+        169.99999999999997,
+        61.99999999999994
+      ],
+      "head_matrix": [
+        [
+          0.9945218953682733,
+          -0.10452846326765347,
+          10.840458329823406
+        ],
+        [
+          0.10452846326765347,
+          0.9945218953682733,
+          -8.84826714898216
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 6,
+      "head_det": 1.0,
+      "head_orthogonal_error": 1.1102230246251565e-16,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        87,
+        19,
+        182,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "tick": 16,
+      "duration_ticks": 1,
+      "label": "release-hat",
+      "goal": [
+        180,
+        80
+      ],
+      "torso_angle": 0,
+      "head_angle": 3,
+      "head_dy": 1,
+      "expression": "open",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -87.78842221770076,
+      "forearm_r_degrees": -84.36048287328823,
+      "world_wrist": [
+        180.0,
+        80.0
+      ],
+      "head_matrix": [
+        [
+          0.9986295347545738,
+          -0.052335956242943835,
+          5.252007306980104
+        ],
+        [
+          0.052335956242943835,
+          0.9986295347545738,
+          -5.566067270290475
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 3,
+      "head_det": 0.9999999999999999,
+      "head_orthogonal_error": 1.1102230246251565e-16,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        85,
+        16,
+        192,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 9,
+      "tick": 17,
+      "duration_ticks": 2,
+      "label": "open-palm",
+      "goal": [
+        187,
+        94
+      ],
+      "torso_angle": 0,
+      "head_angle": 2,
+      "head_dy": 0,
+      "expression": "open",
+      "palm": true,
+      "palm_world_angle": -4,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -62.96548280687668,
+      "forearm_r_degrees": -88.24898966193635,
+      "world_wrist": [
+        187.00000000000003,
+        93.99999999999997
+      ],
+      "head_matrix": [
+        [
+          0.9993908270190958,
+          -0.03489949670250097,
+          3.4632253216983315
+        ],
+        [
+          0.03489949670250097,
+          0.9993908270190958,
+          -4.408045798772406
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 2,
+      "head_det": 1.0000000000000002,
+      "head_orthogonal_error": 2.1632406296408585e-18,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        84,
+        14,
+        198,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 10,
+      "tick": 19,
+      "duration_ticks": 2,
+      "label": "wave-out",
+      "goal": [
+        190,
+        94
+      ],
+      "torso_angle": 0.6,
+      "head_angle": 4,
+      "head_dy": 0,
+      "expression": "open",
+      "palm": true,
+      "palm_world_angle": -14,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -66.3026187307246,
+      "forearm_r_degrees": -78.46116595060455,
+      "world_wrist": [
+        189.99999999999994,
+        93.99999999999991
+      ],
+      "head_matrix": [
+        [
+          0.9967788784562471,
+          -0.08019892432885892,
+          8.79896269624194
+        ],
+        [
+          0.08019892432885892,
+          0.9967788784562471,
+          -9.949833347549605
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 4.6,
+      "head_det": 1.0,
+      "head_orthogonal_error": 1.1102230246251565e-16,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        86,
+        15,
+        201,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 11,
+      "tick": 21,
+      "duration_ticks": 1,
+      "label": "wave-in",
+      "goal": [
+        190,
+        94
+      ],
+      "torso_angle": 0,
+      "head_angle": -2,
+      "head_dy": 0,
+      "expression": "half",
+      "palm": true,
+      "palm_world_angle": 14,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -65.81826000497362,
+      "forearm_r_degrees": -76.67827920473552,
+      "world_wrist": [
+        189.99999999999997,
+        93.99999999999997
+      ],
+      "head_matrix": [
+        [
+          0.9993908270190958,
+          0.03489949670250097,
+          -3.3072770385868466
+        ],
+        [
+          -0.03489949670250097,
+          0.9993908270190958,
+          4.52622535706783
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": -2,
+      "head_det": 1.0000000000000002,
+      "head_orthogonal_error": 2.1632406296408585e-18,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        82,
+        15,
+        201,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 12,
+      "tick": 22,
+      "duration_ticks": 1,
+      "label": "warm-blink",
+      "goal": [
+        190,
+        94
+      ],
+      "torso_angle": -0.5,
+      "head_angle": -4,
+      "head_dy": 1,
+      "expression": "closed",
+      "palm": true,
+      "palm_world_angle": -10,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -65.45245933754035,
+      "forearm_r_degrees": -75.13587283892733,
+      "world_wrist": [
+        189.99999999999997,
+        94.00000000000006
+      ],
+      "head_matrix": [
+        [
+          0.996917333733128,
+          0.07845909572784494,
+          -7.713363526848654
+        ],
+        [
+          -0.07845909572784494,
+          0.996917333733128,
+          11.34395326639298
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": -4.5,
+      "head_det": 0.9999999999999999,
+      "head_orthogonal_error": 2.4037328984954106e-18,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        80,
+        16,
+        200,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 13,
+      "tick": 23,
+      "duration_ticks": 1,
+      "label": "wave-return",
+      "goal": [
+        190,
+        94
+      ],
+      "torso_angle": 0,
+      "head_angle": -3,
+      "head_dy": 0,
+      "expression": "half",
+      "palm": true,
+      "palm_world_angle": 10,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -65.81826000497362,
+      "forearm_r_degrees": -76.67827920473552,
+      "world_wrist": [
+        189.99999999999997,
+        93.99999999999997
+      ],
+      "head_matrix": [
+        [
+          0.9986295347545738,
+          0.052335956242943835,
+          -4.901168204150991
+        ],
+        [
+          -0.052335956242943835,
+          0.9986295347545738,
+          6.8319375279031505
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": -3,
+      "head_det": 0.9999999999999999,
+      "head_orthogonal_error": 1.1102230246251565e-16,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        81,
+        15,
+        200,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 14,
+      "tick": 24,
+      "duration_ticks": 2,
+      "label": "greet-open",
+      "goal": [
+        190,
+        94
+      ],
+      "torso_angle": 0,
+      "head_angle": 0,
+      "head_dy": 0,
+      "expression": "open",
+      "palm": true,
+      "palm_world_angle": -5,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -65.81826000497362,
+      "forearm_r_degrees": -76.67827920473552,
+      "world_wrist": [
+        189.99999999999997,
+        93.99999999999997
+      ],
+      "head_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 0,
+      "head_det": 1.0,
+      "head_orthogonal_error": 0.0,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        83,
+        14,
+        200,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 15,
+      "tick": 26,
+      "duration_ticks": 2,
+      "label": "lower-wave",
+      "goal": [
+        186,
+        98
+      ],
+      "torso_angle": 0,
+      "head_angle": 2,
+      "head_dy": 0,
+      "expression": "open",
+      "palm": true,
+      "palm_world_angle": 0,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -54.83288920865911,
+      "forearm_r_degrees": -95.75686211235376,
+      "world_wrist": [
+        186.00000000000006,
+        98.00000000000003
+      ],
+      "head_matrix": [
+        [
+          0.9993908270190958,
+          -0.03489949670250097,
+          3.4632253216983315
+        ],
+        [
+          0.03489949670250097,
+          0.9993908270190958,
+          -4.408045798772406
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 2,
+      "head_det": 1.0000000000000002,
+      "head_orthogonal_error": 2.1632406296408585e-18,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        84,
+        14,
+        197,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 16,
+      "tick": 28,
+      "duration_ticks": 2,
+      "label": "offer-hand",
+      "goal": [
+        185,
+        115
+      ],
+      "torso_angle": -1,
+      "head_angle": 0,
+      "head_dy": 0,
+      "expression": "open",
+      "palm": true,
+      "palm_world_angle": 45,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -93.64972938293613,
+      "forearm_r_degrees": 78.39484182104547,
+      "world_wrist": [
+        185.0,
+        114.99999999999993
+      ],
+      "head_matrix": [
+        [
+          0.9998476951563913,
+          0.01745240643728351,
+          -2.685627977797026
+        ],
+        [
+          -0.01745240643728351,
+          0.9998476951563913,
+          2.257515274731645
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": -1,
+      "head_det": 1.0,
+      "head_orthogonal_error": 5.919271775735572e-19,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        81,
+        15,
+        205,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 17,
+      "tick": 30,
+      "duration_ticks": 3,
+      "label": "invite",
+      "goal": [
+        181,
+        128
+      ],
+      "torso_angle": -2,
+      "head_angle": -4,
+      "head_dy": 1,
+      "expression": "open",
+      "palm": true,
+      "palm_world_angle": 78,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -68.19800593367512,
+      "forearm_r_degrees": 67.30070815835043,
+      "world_wrist": [
+        180.99999999999994,
+        127.99999999999997
+      ],
+      "head_matrix": [
+        [
+          0.9945218953682733,
+          0.10452846326765347,
+          -11.427334856143919
+        ],
+        [
+          -0.10452846326765347,
+          0.9945218953682733,
+          14.945742307448683
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": -6,
+      "head_det": 1.0,
+      "head_orthogonal_error": 1.1102230246251565e-16,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        77,
+        16,
+        206,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 18,
+      "tick": 33,
+      "duration_ticks": 2,
+      "label": "invite-hold",
+      "goal": [
+        178,
+        130
+      ],
+      "torso_angle": -2,
+      "head_angle": -5,
+      "head_dy": 1,
+      "expression": "half",
+      "palm": true,
+      "palm_world_angle": 80,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -64.64284640300835,
+      "forearm_r_degrees": 71.65954239658473,
+      "world_wrist": [
+        177.99999999999997,
+        130.0
+      ],
+      "head_matrix": [
+        [
+          0.9925461516413221,
+          0.12186934340514748,
+          -12.856505032431073
+        ],
+        [
+          -0.12186934340514748,
+          0.9925461516413221,
+          17.357022106562173
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": -7,
+      "head_det": 1.0,
+      "head_orthogonal_error": 2.220446049250313e-16,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        77,
+        16,
+        203,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 19,
+      "tick": 35,
+      "duration_ticks": 1,
+      "label": "invite-nod",
+      "goal": [
+        178,
+        130
+      ],
+      "torso_angle": -2,
+      "head_angle": -5,
+      "head_dy": 2,
+      "expression": "closed",
+      "palm": true,
+      "palm_world_angle": 80,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -64.64284640300835,
+      "forearm_r_degrees": 71.65954239658473,
+      "world_wrist": [
+        177.99999999999997,
+        130.0
+      ],
+      "head_matrix": [
+        [
+          0.9925461516413221,
+          0.12186934340514748,
+          -12.821605535728573
+        ],
+        [
+          -0.12186934340514748,
+          0.9925461516413221,
+          18.356412933581268
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": -7,
+      "head_det": 1.0,
+      "head_orthogonal_error": 2.220446049250313e-16,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        77,
+        17,
+        203,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 20,
+      "tick": 36,
+      "duration_ticks": 1,
+      "label": "invite-rise",
+      "goal": [
+        178,
+        130
+      ],
+      "torso_angle": -1,
+      "head_angle": -3,
+      "head_dy": 1,
+      "expression": "half",
+      "palm": true,
+      "palm_world_angle": 76,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -66.38413456288093,
+      "forearm_r_degrees": 75.03374655799752,
+      "world_wrist": [
+        178.00000000000009,
+        130.00000000000003
+      ],
+      "head_matrix": [
+        [
+          0.9975640502598242,
+          0.0697564737441253,
+          -7.449363553362805
+        ],
+        [
+          -0.0697564737441253,
+          0.9975640502598242,
+          10.17379714013079
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": -4,
+      "head_det": 0.9999999999999999,
+      "head_orthogonal_error": 1.1102230246251565e-16,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        79,
+        16,
+        203,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 21,
+      "tick": 37,
+      "duration_ticks": 2,
+      "label": "invitation-settle",
+      "goal": [
+        178,
+        130
+      ],
+      "torso_angle": -1,
+      "head_angle": -3,
+      "head_dy": 0,
+      "expression": "open",
+      "palm": true,
+      "palm_world_angle": 76,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -66.38413456288093,
+      "forearm_r_degrees": 75.03374655799752,
+      "world_wrist": [
+        178.00000000000009,
+        130.00000000000003
+      ],
+      "head_matrix": [
+        [
+          0.9975640502598242,
+          0.0697564737441253,
+          -7.466815959800089
+        ],
+        [
+          -0.0697564737441253,
+          0.9975640502598242,
+          9.173949444974397
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": -4,
+      "head_det": 0.9999999999999999,
+      "head_orthogonal_error": 1.1102230246251565e-16,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        79,
+        15,
+        203,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 22,
+      "tick": 39,
+      "duration_ticks": 2,
+      "label": "withdraw",
+      "goal": [
+        165,
+        140
+      ],
+      "torso_angle": 0,
+      "head_angle": 0,
+      "head_dy": 0,
+      "expression": "open",
+      "palm": true,
+      "palm_world_angle": 35,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -41.296783976781256,
+      "forearm_r_degrees": 75.98593839363588,
+      "world_wrist": [
+        165.0,
+        140.0
+      ],
+      "head_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 0,
+      "head_det": 1.0,
+      "head_orthogonal_error": 0.0,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        83,
+        14,
+        188,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 23,
+      "tick": 41,
+      "duration_ticks": 2,
+      "label": "return-to-cuff",
+      "goal": [
+        159,
+        148
+      ],
+      "torso_angle": 0,
+      "head_angle": 1,
+      "head_dy": 0,
+      "expression": "open",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -20.611070246645568,
+      "forearm_r_degrees": 51.05162056662169,
+      "world_wrist": [
+        159.0,
+        148.0
+      ],
+      "head_matrix": [
+        [
+          0.9998476951563913,
+          -0.01745240643728351,
+          1.712378444398425
+        ],
+        [
+          0.01745240643728351,
+          0.9998476951563913,
+          -2.2191344541422495
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 1,
+      "head_det": 1.0,
+      "head_orthogonal_error": 5.919271775735572e-19,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        83,
+        14,
+        179,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 24,
+      "tick": 43,
+      "duration_ticks": 2,
+      "label": "toe-to-route",
+      "goal": [
+        162,
+        153
+      ],
+      "torso_angle": 1,
+      "head_angle": 4,
+      "head_dy": 0,
+      "expression": "open",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 7,
+      "upper_arm_r_degrees": -10.160722786365483,
+      "forearm_r_degrees": 18.351463459037177,
+      "world_wrist": [
+        162.00000000000003,
+        152.99999999999997
+      ],
+      "head_matrix": [
+        [
+          0.9961946980917454,
+          -0.08715574274765818,
+          9.95342526414186
+        ],
+        [
+          0.08715574274765818,
+          0.9961946980917455,
+          -10.777987105670249
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 5,
+      "head_det": 0.9999999999999999,
+      "head_orthogonal_error": 2.220446049250313e-16,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        87,
+        15,
+        176,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 25,
+      "tick": 45,
+      "duration_ticks": 2,
+      "label": "departure-nod",
+      "goal": [
+        162,
+        153
+      ],
+      "torso_angle": 1,
+      "head_angle": 4,
+      "head_dy": 3,
+      "expression": "half",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 7,
+      "upper_arm_r_degrees": -10.160722786365483,
+      "forearm_r_degrees": 18.351463459037177,
+      "world_wrist": [
+        162.00000000000003,
+        152.99999999999997
+      ],
+      "head_matrix": [
+        [
+          0.9961946980917454,
+          -0.08715574274765818,
+          9.901068044830009
+        ],
+        [
+          0.08715574274765818,
+          0.9961946980917455,
+          -7.778444020201075
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 5,
+      "head_det": 0.9999999999999999,
+      "head_orthogonal_error": 2.220446049250313e-16,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        87,
+        18,
+        176,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 26,
+      "tick": 47,
+      "duration_ticks": 2,
+      "label": "steady",
+      "goal": [
+        162,
+        153
+      ],
+      "torso_angle": 0.4,
+      "head_angle": 1,
+      "head_dy": 1,
+      "expression": "open",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 3,
+      "upper_arm_r_degrees": -8.472750567992279,
+      "forearm_r_degrees": 14.36545604646841,
+      "world_wrist": [
+        162.00000000000003,
+        153.0
+      ],
+      "head_matrix": [
+        [
+          0.9997014897811831,
+          -0.02443217815265315,
+          2.806062425799738
+        ],
+        [
+          0.02443217815265315,
+          0.9997014897811831,
+          -2.0969742625218633
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 1.4,
+      "head_det": 0.9999999999999999,
+      "head_orthogonal_error": 1.1102230246251565e-16,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        84,
+        15,
+        174,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 27,
+      "tick": 49,
+      "duration_ticks": 2,
+      "label": "idle-arrival",
+      "goal": [
+        162,
+        153
+      ],
+      "torso_angle": 0,
+      "head_angle": 0,
+      "head_dy": 0,
+      "expression": "open",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -7.165854217200291,
+      "forearm_r_degrees": 11.274500340914557,
+      "world_wrist": [
+        161.99999999999997,
+        153.0
+      ],
+      "head_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 0,
+      "head_det": 1.0,
+      "head_orthogonal_error": 0.0,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        83,
+        14,
+        172,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "index": 28,
+      "tick": 51,
+      "duration_ticks": 2,
+      "label": "idle-hold",
+      "goal": [
+        162,
+        153
+      ],
+      "torso_angle": 0,
+      "head_angle": 0,
+      "head_dy": 0,
+      "expression": "open",
+      "palm": false,
+      "palm_world_angle": 0,
+      "toe_angle": 0,
+      "upper_arm_r_degrees": -7.165854217200291,
+      "forearm_r_degrees": 11.274500340914557,
+      "world_wrist": [
+        161.99999999999997,
+        153.0
+      ],
+      "head_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_rotation_degrees": 0,
+      "head_det": 1.0,
+      "head_orthogonal_error": 0.0,
+      "head_resampler": "BICUBIC rigid rotation and translation; no claim of per-pixel preservation after resampling",
+      "bbox": [
+        83,
+        14,
+        172,
+        223
+      ],
+      "frame_root_translation": [
+        0,
+        0
+      ]
+    }
+  ]
+}

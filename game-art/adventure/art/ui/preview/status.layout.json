@@ -1,0 +1,221 @@
+{
+  "space": "native 240x320; text positions are ink top-left, derive C baseline from generated glyph metrics",
+  "dynamic_text": [
+    {
+      "fixture_text": "设备状态",
+      "anchor_xy": [
+        120,
+        81
+      ],
+      "ink_box": [
+        84,
+        81,
+        156,
+        100
+      ],
+      "size_px": 18,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "center"
+    },
+    {
+      "fixture_text": "电池 85%",
+      "anchor_xy": [
+        32,
+        123
+      ],
+      "ink_box": [
+        32,
+        123,
+        84,
+        136
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "电压 3980 mV",
+      "anchor_xy": [
+        32,
+        153
+      ],
+      "ink_box": [
+        32,
+        153,
+        109,
+        165
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "离线冒险 · 无需联网",
+      "anchor_xy": [
+        32,
+        183
+      ],
+      "ink_box": [
+        32,
+        183,
+        146,
+        197
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "声音与亮度可在设置调整",
+      "anchor_xy": [
+        32,
+        213
+      ],
+      "ink_box": [
+        32,
+        213,
+        164,
+        227
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "状态",
+      "anchor_xy": [
+        20,
+        6
+      ],
+      "ink_box": [
+        20,
+        6,
+        56,
+        25
+      ],
+      "size_px": 18,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "left"
+    },
+    {
+      "fixture_text": "章 1/24",
+      "anchor_xy": [
+        226,
+        11
+      ],
+      "ink_box": [
+        185,
+        11,
+        226,
+        25
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "right"
+    },
+    {
+      "fixture_text": "OK 返回",
+      "anchor_xy": [
+        120,
+        300
+      ],
+      "ink_box": [
+        98,
+        300,
+        142,
+        313
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "center"
+    }
+  ],
+  "cards": [
+    {
+      "family": "popup",
+      "state": "normal",
+      "xy": [
+        16,
+        56
+      ],
+      "size": [
+        208,
+        210
+      ],
+      "dynamic_text": "#203849"
+    }
+  ],
+  "assets": [
+    {
+      "path": "bars/top.png",
+      "xy": [
+        0,
+        0
+      ]
+    },
+    {
+      "path": "bars/bottom.png",
+      "xy": [
+        0,
+        290
+      ]
+    }
+  ],
+  "numbers": []
+}

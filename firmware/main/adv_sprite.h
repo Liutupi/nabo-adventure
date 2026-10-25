@@ -1,8 +1,11 @@
 #pragma once
 // Immutable flash-backed indexed sprites. Palette index 0 is transparent.
-// Each row is (run length 1..255, palette index) pairs. Index 64 inherits pixels
-// from the previous frame; zero explicitly clears them. At most 7 delta frames
-// follow a keyframe. Rows decode without a framebuffer, allocation or mirroring.
+// adv-row-rle-v2 also reads old v1 streams without changing this descriptor.
+// A nonzero count is a legacy (count 1..255, index) run. A zero count escapes
+// (0, length 1..255, literal indices...). Row byte lengths may be odd.
+// Index 64 inherits the previous frame; index 0 explicitly clears a pixel.
+// Keyframes forbid inheritance. At most 7 delta frames follow a keyframe.
+// Rows decode without a framebuffer, allocation or mirroring.
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>

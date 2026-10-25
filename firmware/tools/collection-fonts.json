@@ -2,10 +2,24 @@
   "converter": "lv_font_conv 1.5.3",
   "font": "SourceHanSansCN-Medium.otf",
   "font_sha256": "a94e558a2fe972bee4f46bce0843abff37063fd68c33f1e7d9058f6f09432b01",
-  "symbols": "·一三上下不之书二云亭亮人任休位住体你佳保值停入关再冒冰准出分到力功动医占卡印原发取可后和咖唱啡器四回图在地均块坡声备外夜太始存完客小局山已带平床度开式录得德心态意戏成房所扣扬护择拿按换播收整料新旁旅无显暂替最有服木未本术束来松林枚查次欢款正气氧汽法活测海消深温游滑潜激火热照燃片状玩班球用电登的盖看眠确示神离秒空站章端第箱精纪线结继绩续网置美胶脑自色获萤蒸蓄虫装角解认记设试调走起路跳车过迎返进迷选都配里重量金铁铜银锁错键镇长院险集雪需靶音鱼黑齐，：",
+  "symbols": "·一三上下不之书二云亭亮人任休位住体你佳保值停入关再冒冰准分到力功动医占卡印原取可后和咖唱啡器四回图在地均块坡声备外夜太始存完客小局山已带平床度开式得德心态意戏成房所扣扬护择拿按换播收整料新旁旅无显暂替最有服木未本术束来松林枚查次欢款正气氧汽法活海消深温游滑潜激火热照燃片状玩班球用电登的盖看眠确示神离秒空站章端第箱精线结继绩续网置美胶脑自色获萤蒸蓄虫装角解认设调走起路跳车过迎返进迷选都配里重量金铁铜银锁错键镇长院险集雪需靶音鱼黑齐，：",
+  "fonts_by_size": {
+    "12": {
+      "font": "SourceHanSansCN-Medium.otf",
+      "sha256": "a94e558a2fe972bee4f46bce0843abff37063fd68c33f1e7d9058f6f09432b01"
+    },
+    "16": {
+      "font": "Noto Sans SC Bold (TrueType).otf",
+      "sha256": "d1961be1161ea1be08496c920862d06ea5c23a757628f4fd69368de1d9f51bed"
+    },
+    "18": {
+      "font": "Noto Sans SC Bold (TrueType).otf",
+      "sha256": "d1961be1161ea1be08496c920862d06ea5c23a757628f4fd69368de1d9f51bed"
+    }
+  },
   "outputs": {
-    "collection_font_12": "38222a0093a719ad55f82b17289291045f17d040ffe62e278fb474bab856c0a9",
-    "collection_font_16": "a4863500ec8d9343d366f796eccda095564d64e5eb0015036ef5e35526db6913",
-    "collection_font_18": "cf211b4ca53f298d06a6e8db3dd417068e77a0c9c7f2900101a85aee713571dc"
+    "collection_font_12": "a685a4169bc680150322b7167d1bf94d71347431bb31c55bc5751757a81624f0",
+    "collection_font_16": "6b212891b4a723003082098f6fa17403f676cdaf3a178e079b94479e647b600a",
+    "collection_font_18": "67914eefe755f592761e9f3ae467882f9484508c60f70d43fe9b1e7de61d2f4c"
   }
 }

@@ -1,0 +1,29 @@
+"""SKY-only frame, source and layer contracts; original white cap is immutable."""
+from pathlib import Path
+ART=Path(__file__).resolve().parents[1]/'art'
+GAME=ART/'games/sky';RIG=ART/'rig/sky';PREVIEW=ART/'preview/sky'
+SKY='#8cc8fa';CANVAS=(256,256)
+HEAD_LOCKS={'head':'1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da',
+            'expression_neutral':'7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd'}
+SOURCES={
+ 'sky_a':{'sha256':'cda49e734e5ca949dfaf87d664dbb32252dfe100691d7aea079c4e5d44e4217b','neck':[637,532],'foot':1227,'head_width':520,
+          'generated_file':'exec-4c71778a-622a-4ff6-baa1-915940225f47.png'},
+ 'sky_b':{'sha256':'bdcf3073e8a5e88bd43d4fc36c5d4df376cd01df0d2b6b0cd12fc7c0e3c7a895','neck':[639,531],'foot':1225,'head_width':520,
+          'generated_file':'exec-320ac824-db99-469d-8ab7-d83143d2c123.png'},
+}
+ANIMS={'idle':{'count':6,'loop':True,'height':40},'heat':{'count':6,'loop':False,'height':40},
+       'vent':{'count':6,'loop':False,'height':40},'hit':{'count':6,'loop':False,'height':40},
+       'receive_stamp':{'count':4,'loop':False,'height':40},'settlement_cheer':{'count':8,'loop':False,'height':72}}
+SKIN_ANIMS={'sky_a':list(ANIMS),'sky_b':['idle','settlement_cheer']}
+PIVOTS={'torso':(128,155),'upper_l':(105,109),'forearm_l':(97,143),
+        'upper_r':(151,109),'forearm_r':(161,143),'scarf':(148,107),'collar':(128,103)}
+POLYS={
+ 'scarf':[(148,100),(160,104),(176,110),(208,123),(208,149),(175,137),(153,117)],
+ 'forearm_l':[(81,141),(107,138),(108,176),(81,176)],
+ 'forearm_r':[(150,140),(179,140),(180,176),(151,176)],
+ 'upper_l':[(96,103),(112,105),(108,132),(104,148),(81,148),(87,121)],
+ 'upper_r':[(143,104),(159,104),(174,122),(179,148),(153,148),(148,129)],
+ 'legs':[(0,153),(256,153),(256,256),(0,256)],
+ 'collar':[(115,96),(141,95),(154,109),(144,120),(113,114)],
+}
+ORDER=['legs','scarf','torso','upper_l','upper_r','collar','head','expression','forearm_l','forearm_r']

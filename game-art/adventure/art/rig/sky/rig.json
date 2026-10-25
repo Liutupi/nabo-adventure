@@ -1,0 +1,252 @@
+{
+  "canvas": [
+    256,
+    256
+  ],
+  "half_anchor": [
+    128,
+    160
+  ],
+  "full_anchor": [
+    128,
+    224
+  ],
+  "order": [
+    "legs",
+    "scarf",
+    "torso",
+    "upper_l",
+    "upper_r",
+    "collar",
+    "head",
+    "expression",
+    "forearm_l",
+    "forearm_r"
+  ],
+  "skins": {
+    "sky_a": {
+      "contract": {
+        "source": "games/sky/source/sky_a-source.png",
+        "source_sha256": "cda49e734e5ca949dfaf87d664dbb32252dfe100691d7aea079c4e5d44e4217b",
+        "neck_source": [
+          637,
+          532
+        ],
+        "target_neck": [
+          128,
+          98
+        ],
+        "scale": [
+          0.175,
+          0.18129496402877698
+        ],
+        "source_alpha_discard_below": 16,
+        "discarded_low_alpha_pixels": 21159,
+        "source_generated_head_discarded": true
+      },
+      "parts": {
+        "scarf": {
+          "raster": "rig/sky/sky_a/scarf.png",
+          "svg": "rig/sky/sky_a/scarf.svg",
+          "mask": "rig/sky/sky_a/scarf-mask.png",
+          "sha256": "f26195b098f86f674535fa7a5491c68d894e9216cba0200ea29320bad7794489",
+          "pivot": [
+            148,
+            107
+          ]
+        },
+        "collar": {
+          "raster": "rig/sky/sky_a/collar.png",
+          "svg": "rig/sky/sky_a/collar.svg",
+          "mask": "rig/sky/sky_a/collar-mask.png",
+          "sha256": "c3a61829dbc2848fa65657b223f5f3c64563a27df5474632440b3a1ebfe14ff0",
+          "pivot": [
+            128,
+            103
+          ]
+        },
+        "forearm_l": {
+          "raster": "rig/sky/sky_a/forearm_l.png",
+          "svg": "rig/sky/sky_a/forearm_l.svg",
+          "mask": "rig/sky/sky_a/forearm_l-mask.png",
+          "sha256": "1cc846d02334dad79795119fb0f13a3e51fb361a738b7ace1dbb9f764a7d421a",
+          "pivot": [
+            97,
+            143
+          ]
+        },
+        "forearm_r": {
+          "raster": "rig/sky/sky_a/forearm_r.png",
+          "svg": "rig/sky/sky_a/forearm_r.svg",
+          "mask": "rig/sky/sky_a/forearm_r-mask.png",
+          "sha256": "df7d4673ff1e86a4801332ac5d7c591840e0c219d4cca2d7483d7fe9d935a2b6",
+          "pivot": [
+            161,
+            143
+          ]
+        },
+        "upper_l": {
+          "raster": "rig/sky/sky_a/upper_l.png",
+          "svg": "rig/sky/sky_a/upper_l.svg",
+          "mask": "rig/sky/sky_a/upper_l-mask.png",
+          "sha256": "fcd6e8d8a575f6db75f745d3c67bc50a9a73d0a6a1fe360f5d15c3e8d3a1503b",
+          "pivot": [
+            105,
+            109
+          ]
+        },
+        "upper_r": {
+          "raster": "rig/sky/sky_a/upper_r.png",
+          "svg": "rig/sky/sky_a/upper_r.svg",
+          "mask": "rig/sky/sky_a/upper_r-mask.png",
+          "sha256": "afb7b628427ca27a23135b7896d0481d417d11311975432de40dc0c0337f3635",
+          "pivot": [
+            151,
+            109
+          ]
+        },
+        "legs": {
+          "raster": "rig/sky/sky_a/legs.png",
+          "svg": "rig/sky/sky_a/legs.svg",
+          "mask": "rig/sky/sky_a/legs-mask.png",
+          "sha256": "68f20b197e77e2614c2caf304ad5b053eff15ad27cd42173b1e04299917c2aa9",
+          "pivot": [
+            128,
+            155
+          ]
+        },
+        "torso": {
+          "raster": "rig/sky/sky_a/torso.png",
+          "svg": "rig/sky/sky_a/torso.svg",
+          "mask": "rig/sky/sky_a/torso-mask.png",
+          "sha256": "861e2fd788789b3140e479ed35f49d84641da6584647f2ee2a690eb747295d4e",
+          "pivot": [
+            128,
+            155
+          ]
+        },
+        "head": {
+          "raster": "rig/sky/head.png",
+          "sha256": "54ab9329fd3cd3b8d44a100bc6bc27fa5d00a977025939aa19fe09185848b8ae"
+        },
+        "expression": {
+          "raster": "rig/sky/expression.png",
+          "sha256": "09fae099bf2e828d708f978ccbe3b125664099360e2fc561e2098c6df2e69b73"
+        }
+      }
+    },
+    "sky_b": {
+      "contract": {
+        "source": "games/sky/source/sky_b-source.png",
+        "source_sha256": "bdcf3073e8a5e88bd43d4fc36c5d4df376cd01df0d2b6b0cd12fc7c0e3c7a895",
+        "neck_source": [
+          639,
+          531
+        ],
+        "target_neck": [
+          128,
+          98
+        ],
+        "scale": [
+          0.175,
+          0.18155619596541786
+        ],
+        "source_alpha_discard_below": 16,
+        "discarded_low_alpha_pixels": 18399,
+        "source_generated_head_discarded": true
+      },
+      "parts": {
+        "scarf": {
+          "raster": "rig/sky/sky_b/scarf.png",
+          "svg": "rig/sky/sky_b/scarf.svg",
+          "mask": "rig/sky/sky_b/scarf-mask.png",
+          "sha256": "390a381153ef99cc4ba7a2560940f16a100ee35ddd8027104852019061f44bd3",
+          "pivot": [
+            148,
+            107
+          ]
+        },
+        "collar": {
+          "raster": "rig/sky/sky_b/collar.png",
+          "svg": "rig/sky/sky_b/collar.svg",
+          "mask": "rig/sky/sky_b/collar-mask.png",
+          "sha256": "36ad5d0a335ae0b474b6276c6798e7f97acb47b0793e2a67182995d79a081902",
+          "pivot": [
+            128,
+            103
+          ]
+        },
+        "forearm_l": {
+          "raster": "rig/sky/sky_b/forearm_l.png",
+          "svg": "rig/sky/sky_b/forearm_l.svg",
+          "mask": "rig/sky/sky_b/forearm_l-mask.png",
+          "sha256": "ff48a95882945c378ae8f1e1b75349a13499701ff791267c7e1d9179400eab42",
+          "pivot": [
+            97,
+            143
+          ]
+        },
+        "forearm_r": {
+          "raster": "rig/sky/sky_b/forearm_r.png",
+          "svg": "rig/sky/sky_b/forearm_r.svg",
+          "mask": "rig/sky/sky_b/forearm_r-mask.png",
+          "sha256": "5a1fd6ed6059a3c8afdffa5f5724fd6963b6ae6c7e0c5ba9f4eb86a4dd042e45",
+          "pivot": [
+            161,
+            143
+          ]
+        },
+        "upper_l": {
+          "raster": "rig/sky/sky_b/upper_l.png",
+          "svg": "rig/sky/sky_b/upper_l.svg",
+          "mask": "rig/sky/sky_b/upper_l-mask.png",
+          "sha256": "e81671365a1afa2bdabffe96041ac7129385c7477807854d742360f41b194777",
+          "pivot": [
+            105,
+            109
+          ]
+        },
+        "upper_r": {
+          "raster": "rig/sky/sky_b/upper_r.png",
+          "svg": "rig/sky/sky_b/upper_r.svg",
+          "mask": "rig/sky/sky_b/upper_r-mask.png",
+          "sha256": "034f3c155c1a81c31fdae33f0f84be274dd0e9c4f31cad09236ef7083afeaa16",
+          "pivot": [
+            151,
+            109
+          ]
+        },
+        "legs": {
+          "raster": "rig/sky/sky_b/legs.png",
+          "svg": "rig/sky/sky_b/legs.svg",
+          "mask": "rig/sky/sky_b/legs-mask.png",
+          "sha256": "c2715d1b85f20c4f3400f9b2aba563c986d2d15a010c1583eb32b794cea13f7f",
+          "pivot": [
+            128,
+            155
+          ]
+        },
+        "torso": {
+          "raster": "rig/sky/sky_b/torso.png",
+          "svg": "rig/sky/sky_b/torso.svg",
+          "mask": "rig/sky/sky_b/torso-mask.png",
+          "sha256": "f97c462bf04d600253ccc2a762c002c871e9f4a538686da6c823f060b6802c77",
+          "pivot": [
+            128,
+            155
+          ]
+        },
+        "head": {
+          "raster": "rig/sky/head.png",
+          "sha256": "54ab9329fd3cd3b8d44a100bc6bc27fa5d00a977025939aa19fe09185848b8ae"
+        },
+        "expression": {
+          "raster": "rig/sky/expression.png",
+          "sha256": "09fae099bf2e828d708f978ccbe3b125664099360e2fc561e2098c6df2e69b73"
+        }
+      }
+    }
+  },
+  "identity": "Frozen common front head + expression; no generated head or replacement flying hat is used.",
+  "representation": "SVG wrappers of source-pixel slices with inspectable alpha masks, not drawn vector characters"
+}

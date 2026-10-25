@@ -39,7 +39,6 @@
 #include "adv_assets_static_tiles_harbor_wave_line__p0.h"
 #include "adv_assets_static_tiles_mountain_ice_crystals__p0.h"
 #include "adv_assets_static_tiles_mountain_ridge__p0.h"
-#include "adv_assets_static_tiles_mountain_rock_face__p0.h"
 #include "adv_assets_static_tiles_mountain_snow_drift__p0.h"
 #include "adv_assets_static_tiles_mountain_snowcap_rock__p0.h"
 #include "adv_assets_static_tiles_mountain_young_pine__p0.h"
@@ -53,22 +52,17 @@
 #include "adv_assets_static_tiles_rail_rail_crossing__p0.h"
 #include "adv_assets_static_tiles_rail_rail_straight__p0.h"
 #include "adv_assets_static_tiles_rail_telegraph_pole__p0.h"
-#include "adv_assets_static_tiles_rail_trackside_grass__p0.h"
 #include "adv_assets_static_tiles_rail_wheat__p0.h"
 #include "adv_assets_static_tiles_ski_gate_poles__p0.h"
 #include "adv_assets_static_tiles_ski_small_spruce__p0.h"
-#include "adv_assets_static_tiles_ski_snow_mound__p0.h"
-#include "adv_assets_static_tiles_ski_snow_pine__p0.h"
 #include "adv_assets_static_tiles_ski_snow_track__p0.h"
 #include "adv_assets_static_tiles_sky_bird_silhouette__p0.h"
 #include "adv_assets_static_tiles_sky_cloud_chain__p0.h"
 #include "adv_assets_static_tiles_sky_cloud_large__p0.h"
 #include "adv_assets_static_tiles_sky_cloud_small__p0.h"
 #include "adv_assets_static_tiles_sky_feather__p0.h"
-#include "adv_assets_static_tiles_sky_wind_ribbon__p0.h"
 #include "adv_assets_static_tiles_space_asteroid__p0.h"
 #include "adv_assets_static_tiles_space_comet__p0.h"
-#include "adv_assets_static_tiles_space_crater__p0.h"
 #include "adv_assets_static_tiles_space_orbit_dots__p0.h"
 #include "adv_assets_static_tiles_space_ring_planet__p0.h"
 #include "adv_assets_static_tiles_space_star_field__p0.h"
@@ -87,7 +81,7 @@
 #include "adv_assets_travel_turn_right__p0.h"
 #include "adv_assets_travel_walk_left__p0.h"
 #include "adv_assets_travel_walk_right__p0.h"
-#include "adv_assets_travel_welcome__p0.h"
+#include "adv_assets_travel_welcome_v2__p0.h"
 #include "adv_assets_ui_bars_bottom__p0.h"
 #include "adv_assets_ui_bars_top__p0.h"
 #include "adv_assets_ui_cards_info_current_bottom__p0.h"
@@ -96,7 +90,6 @@
 #include "adv_assets_ui_cards_info_current_center__p0.h"
 #include "adv_assets_ui_cards_info_current_left__p0.h"
 #include "adv_assets_ui_cards_info_current_right__p0.h"
-#include "adv_assets_ui_cards_info_current_top__p0.h"
 #include "adv_assets_ui_cards_info_current_top_left__p0.h"
 #include "adv_assets_ui_cards_info_current_top_right__p0.h"
 #include "adv_assets_ui_cards_info_normal_bottom__p0.h"
@@ -104,44 +97,12 @@
 #include "adv_assets_ui_cards_info_normal_bottom_right__p0.h"
 #include "adv_assets_ui_cards_info_normal_center__p0.h"
 #include "adv_assets_ui_cards_info_normal_left__p0.h"
-#include "adv_assets_ui_cards_info_normal_right__p0.h"
-#include "adv_assets_ui_cards_info_normal_top__p0.h"
 #include "adv_assets_ui_cards_info_normal_top_left__p0.h"
 #include "adv_assets_ui_cards_info_normal_top_right__p0.h"
-#include "adv_assets_ui_cards_menu_disabled_bottom__p0.h"
-#include "adv_assets_ui_cards_menu_disabled_bottom_left__p0.h"
-#include "adv_assets_ui_cards_menu_disabled_bottom_right__p0.h"
-#include "adv_assets_ui_cards_menu_disabled_center__p0.h"
-#include "adv_assets_ui_cards_menu_disabled_left__p0.h"
-#include "adv_assets_ui_cards_menu_disabled_right__p0.h"
-#include "adv_assets_ui_cards_menu_disabled_top__p0.h"
-#include "adv_assets_ui_cards_menu_disabled_top_left__p0.h"
-#include "adv_assets_ui_cards_menu_disabled_top_right__p0.h"
-#include "adv_assets_ui_cards_menu_normal_bottom__p0.h"
-#include "adv_assets_ui_cards_menu_normal_bottom_left__p0.h"
-#include "adv_assets_ui_cards_menu_normal_bottom_right__p0.h"
-#include "adv_assets_ui_cards_menu_normal_center__p0.h"
-#include "adv_assets_ui_cards_menu_normal_left__p0.h"
-#include "adv_assets_ui_cards_menu_normal_right__p0.h"
-#include "adv_assets_ui_cards_menu_normal_top__p0.h"
-#include "adv_assets_ui_cards_menu_normal_top_left__p0.h"
-#include "adv_assets_ui_cards_menu_normal_top_right__p0.h"
-#include "adv_assets_ui_cards_menu_selected_bottom__p0.h"
-#include "adv_assets_ui_cards_menu_selected_bottom_left__p0.h"
-#include "adv_assets_ui_cards_menu_selected_bottom_right__p0.h"
-#include "adv_assets_ui_cards_menu_selected_center__p0.h"
-#include "adv_assets_ui_cards_menu_selected_left__p0.h"
-#include "adv_assets_ui_cards_menu_selected_right__p0.h"
-#include "adv_assets_ui_cards_menu_selected_top__p0.h"
-#include "adv_assets_ui_cards_menu_selected_top_left__p0.h"
-#include "adv_assets_ui_cards_menu_selected_top_right__p0.h"
 #include "adv_assets_ui_cards_popup_normal_bottom__p0.h"
 #include "adv_assets_ui_cards_popup_normal_bottom_left__p0.h"
 #include "adv_assets_ui_cards_popup_normal_bottom_right__p0.h"
-#include "adv_assets_ui_cards_popup_normal_center__p0.h"
 #include "adv_assets_ui_cards_popup_normal_left__p0.h"
-#include "adv_assets_ui_cards_popup_normal_right__p0.h"
-#include "adv_assets_ui_cards_popup_normal_top__p0.h"
 #include "adv_assets_ui_cards_popup_normal_top_left__p0.h"
 #include "adv_assets_ui_cards_popup_normal_top_right__p0.h"
 #include "adv_assets_ui_cover_background_bottom__p0.h"
@@ -203,8 +164,6 @@
 #include "adv_assets_ui_resources_icons_steam__p0.h"
 #include "adv_assets_ui_resources_icons_temperature__p0.h"
 #include "adv_assets_ui_resources_low_fill__p0.h"
-#include "adv_assets_ui_resources_low_fill_left_cap__p0.h"
-#include "adv_assets_ui_resources_low_fill_right_cap__p0.h"
 #include "adv_assets_ui_stamps_ink_pad__p0.h"
 #include "adv_assets_ui_wordmarks_climb__p0.h"
 #include "adv_assets_ui_wordmarks_collection__p0.h"
@@ -333,7 +292,7 @@ static const adv_asset_piece_t adv_assets_static_tiles_mountain_ridge__pieces[] 
     {&adv_assets_static_tiles_mountain_ridge__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_static_tiles_mountain_rock_face__pieces[] = {
-    {&adv_assets_static_tiles_mountain_rock_face__p0, 0, 0},
+    {&adv_assets_static_tiles_deep_sea_sea_rock__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_static_tiles_mountain_snow_drift__pieces[] = {
     {&adv_assets_static_tiles_mountain_snow_drift__p0, 0, 0},
@@ -375,7 +334,7 @@ static const adv_asset_piece_t adv_assets_static_tiles_rail_telegraph_pole__piec
     {&adv_assets_static_tiles_rail_telegraph_pole__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_static_tiles_rail_trackside_grass__pieces[] = {
-    {&adv_assets_static_tiles_rail_trackside_grass__p0, 0, 0},
+    {&adv_assets_static_tiles_night_forest_fern__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_static_tiles_rail_wheat__pieces[] = {
     {&adv_assets_static_tiles_rail_wheat__p0, 0, 0},
@@ -387,10 +346,10 @@ static const adv_asset_piece_t adv_assets_static_tiles_ski_small_spruce__pieces[
     {&adv_assets_static_tiles_ski_small_spruce__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_static_tiles_ski_snow_mound__pieces[] = {
-    {&adv_assets_static_tiles_ski_snow_mound__p0, 0, 0},
+    {&adv_assets_static_tiles_mountain_snowcap_rock__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_static_tiles_ski_snow_pine__pieces[] = {
-    {&adv_assets_static_tiles_ski_snow_pine__p0, 0, 0},
+    {&adv_assets_static_tiles_ski_small_spruce__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_static_tiles_ski_snow_track__pieces[] = {
     {&adv_assets_static_tiles_ski_snow_track__p0, 0, 0},
@@ -411,7 +370,7 @@ static const adv_asset_piece_t adv_assets_static_tiles_sky_feather__pieces[] = {
     {&adv_assets_static_tiles_sky_feather__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_static_tiles_sky_wind_ribbon__pieces[] = {
-    {&adv_assets_static_tiles_sky_wind_ribbon__p0, 0, 0},
+    {&adv_assets_static_tiles_harbor_wave_line__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_static_tiles_space_asteroid__pieces[] = {
     {&adv_assets_static_tiles_space_asteroid__p0, 0, 0},
@@ -420,7 +379,7 @@ static const adv_asset_piece_t adv_assets_static_tiles_space_comet__pieces[] = {
     {&adv_assets_static_tiles_space_comet__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_static_tiles_space_crater__pieces[] = {
-    {&adv_assets_static_tiles_space_crater__p0, 0, 0},
+    {&adv_assets_static_tiles_space_asteroid__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_static_tiles_space_orbit_dots__pieces[] = {
     {&adv_assets_static_tiles_space_orbit_dots__p0, 0, 0},
@@ -476,8 +435,8 @@ static const adv_asset_piece_t adv_assets_travel_walk_left__pieces[] = {
 static const adv_asset_piece_t adv_assets_travel_walk_right__pieces[] = {
     {&adv_assets_travel_walk_right__p0, 0, 0},
 };
-static const adv_asset_piece_t adv_assets_travel_welcome__pieces[] = {
-    {&adv_assets_travel_welcome__p0, 0, 0},
+static const adv_asset_piece_t adv_assets_travel_welcome_v2__pieces[] = {
+    {&adv_assets_travel_welcome_v2__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_bars_bottom__pieces[] = {
     {&adv_assets_ui_bars_bottom__p0, 0, 0},
@@ -504,7 +463,7 @@ static const adv_asset_piece_t adv_assets_ui_cards_info_current_right__pieces[] 
     {&adv_assets_ui_cards_info_current_right__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_info_current_top__pieces[] = {
-    {&adv_assets_ui_cards_info_current_top__p0, 0, 0},
+    {&adv_assets_ui_cards_info_current_bottom__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_info_current_top_left__pieces[] = {
     {&adv_assets_ui_cards_info_current_top_left__p0, 0, 0},
@@ -528,10 +487,10 @@ static const adv_asset_piece_t adv_assets_ui_cards_info_normal_left__pieces[] = 
     {&adv_assets_ui_cards_info_normal_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_info_normal_right__pieces[] = {
-    {&adv_assets_ui_cards_info_normal_right__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_info_normal_top__pieces[] = {
-    {&adv_assets_ui_cards_info_normal_top__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_bottom__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_info_normal_top_left__pieces[] = {
     {&adv_assets_ui_cards_info_normal_top_left__p0, 0, 0},
@@ -540,85 +499,85 @@ static const adv_asset_piece_t adv_assets_ui_cards_info_normal_top_right__pieces
     {&adv_assets_ui_cards_info_normal_top_right__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_disabled_bottom__pieces[] = {
-    {&adv_assets_ui_cards_menu_disabled_bottom__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_bottom__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_disabled_bottom_left__pieces[] = {
-    {&adv_assets_ui_cards_menu_disabled_bottom_left__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_bottom_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_disabled_bottom_right__pieces[] = {
-    {&adv_assets_ui_cards_menu_disabled_bottom_right__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_bottom_right__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_disabled_center__pieces[] = {
-    {&adv_assets_ui_cards_menu_disabled_center__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_center__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_disabled_left__pieces[] = {
-    {&adv_assets_ui_cards_menu_disabled_left__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_disabled_right__pieces[] = {
-    {&adv_assets_ui_cards_menu_disabled_right__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_disabled_top__pieces[] = {
-    {&adv_assets_ui_cards_menu_disabled_top__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_bottom__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_disabled_top_left__pieces[] = {
-    {&adv_assets_ui_cards_menu_disabled_top_left__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_top_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_disabled_top_right__pieces[] = {
-    {&adv_assets_ui_cards_menu_disabled_top_right__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_top_right__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_normal_bottom__pieces[] = {
-    {&adv_assets_ui_cards_menu_normal_bottom__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_bottom__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_normal_bottom_left__pieces[] = {
-    {&adv_assets_ui_cards_menu_normal_bottom_left__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_bottom_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_normal_bottom_right__pieces[] = {
-    {&adv_assets_ui_cards_menu_normal_bottom_right__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_bottom_right__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_normal_center__pieces[] = {
-    {&adv_assets_ui_cards_menu_normal_center__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_center__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_normal_left__pieces[] = {
-    {&adv_assets_ui_cards_menu_normal_left__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_normal_right__pieces[] = {
-    {&adv_assets_ui_cards_menu_normal_right__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_normal_top__pieces[] = {
-    {&adv_assets_ui_cards_menu_normal_top__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_bottom__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_normal_top_left__pieces[] = {
-    {&adv_assets_ui_cards_menu_normal_top_left__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_top_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_normal_top_right__pieces[] = {
-    {&adv_assets_ui_cards_menu_normal_top_right__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_top_right__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_selected_bottom__pieces[] = {
-    {&adv_assets_ui_cards_menu_selected_bottom__p0, 0, 0},
+    {&adv_assets_ui_cards_info_current_bottom__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_selected_bottom_left__pieces[] = {
-    {&adv_assets_ui_cards_menu_selected_bottom_left__p0, 0, 0},
+    {&adv_assets_ui_cards_info_current_bottom_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_selected_bottom_right__pieces[] = {
-    {&adv_assets_ui_cards_menu_selected_bottom_right__p0, 0, 0},
+    {&adv_assets_ui_cards_info_current_bottom_right__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_selected_center__pieces[] = {
-    {&adv_assets_ui_cards_menu_selected_center__p0, 0, 0},
+    {&adv_assets_ui_cards_info_current_center__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_selected_left__pieces[] = {
-    {&adv_assets_ui_cards_menu_selected_left__p0, 0, 0},
+    {&adv_assets_ui_cards_info_current_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_selected_right__pieces[] = {
-    {&adv_assets_ui_cards_menu_selected_right__p0, 0, 0},
+    {&adv_assets_ui_cards_info_current_right__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_selected_top__pieces[] = {
-    {&adv_assets_ui_cards_menu_selected_top__p0, 0, 0},
+    {&adv_assets_ui_cards_info_current_bottom__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_selected_top_left__pieces[] = {
-    {&adv_assets_ui_cards_menu_selected_top_left__p0, 0, 0},
+    {&adv_assets_ui_cards_info_current_top_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_menu_selected_top_right__pieces[] = {
-    {&adv_assets_ui_cards_menu_selected_top_right__p0, 0, 0},
+    {&adv_assets_ui_cards_info_current_top_right__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_popup_normal_bottom__pieces[] = {
     {&adv_assets_ui_cards_popup_normal_bottom__p0, 0, 0},
@@ -630,16 +589,16 @@ static const adv_asset_piece_t adv_assets_ui_cards_popup_normal_bottom_right__pi
     {&adv_assets_ui_cards_popup_normal_bottom_right__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_popup_normal_center__pieces[] = {
-    {&adv_assets_ui_cards_popup_normal_center__p0, 0, 0},
+    {&adv_assets_ui_cards_info_normal_center__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_popup_normal_left__pieces[] = {
     {&adv_assets_ui_cards_popup_normal_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_popup_normal_right__pieces[] = {
-    {&adv_assets_ui_cards_popup_normal_right__p0, 0, 0},
+    {&adv_assets_ui_cards_popup_normal_left__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_popup_normal_top__pieces[] = {
-    {&adv_assets_ui_cards_popup_normal_top__p0, 0, 0},
+    {&adv_assets_ui_cards_popup_normal_bottom__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_cards_popup_normal_top_left__pieces[] = {
     {&adv_assets_ui_cards_popup_normal_top_left__p0, 0, 0},
@@ -825,10 +784,10 @@ static const adv_asset_piece_t adv_assets_ui_resources_low_fill__pieces[] = {
     {&adv_assets_ui_resources_low_fill__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_resources_low_fill_left_cap__pieces[] = {
-    {&adv_assets_ui_resources_low_fill_left_cap__p0, 0, 0},
+    {&adv_assets_ui_resources_fill_left_cap__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_resources_low_fill_right_cap__pieces[] = {
-    {&adv_assets_ui_resources_low_fill_right_cap__p0, 0, 0},
+    {&adv_assets_ui_resources_fill_right_cap__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_ui_stamps_ink_pad__pieces[] = {
     {&adv_assets_ui_stamps_ink_pad__p0, 0, 0},
@@ -948,7 +907,7 @@ const adv_asset_record_t adv_assets_catalog[] = {
     {"travel/turn_right", adv_assets_travel_turn_right__pieces, 1, 22, 48, 11, 48, 12, false},
     {"travel/walk_left", adv_assets_travel_walk_left__pieces, 1, 22, 48, 11, 48, 12, true},
     {"travel/walk_right", adv_assets_travel_walk_right__pieces, 1, 22, 48, 11, 48, 12, true},
-    {"travel/welcome", adv_assets_travel_welcome__pieces, 1, 58, 120, 31, 120, 12, true},
+    {"travel/welcome_v2", adv_assets_travel_welcome_v2__pieces, 1, 74, 121, 29, 121, 12, false},
     {"ui/bars/bottom", adv_assets_ui_bars_bottom__pieces, 1, 240, 30, 0, 0, 0, false},
     {"ui/bars/top", adv_assets_ui_bars_top__pieces, 1, 240, 32, 0, 0, 0, false},
     {"ui/cards/info/current/bottom", adv_assets_ui_cards_info_current_bottom__pieces, 1, 8, 12, 0, 0, 0, false},
@@ -1010,7 +969,7 @@ const adv_asset_record_t adv_assets_catalog[] = {
     {"ui/labels/boot-caption", adv_assets_ui_labels_boot_caption__pieces, 1, 220, 24, 0, 0, 0, false},
     {"ui/labels/new-record", adv_assets_ui_labels_new_record__pieces, 1, 72, 24, 0, 0, 0, false},
     {"ui/labels/placeholder", adv_assets_ui_labels_placeholder__pieces, 1, 88, 24, 0, 0, 0, false},
-    {"ui/labels/press-start", adv_assets_ui_labels_press_start__pieces, 1, 168, 28, 0, 0, 0, false},
+    {"ui/labels/press-start", adv_assets_ui_labels_press_start__pieces, 1, 208, 34, 0, 0, 0, false},
     {"ui/labels/test-no-record", adv_assets_ui_labels_test_no_record__pieces, 1, 96, 24, 0, 0, 0, false},
     {"ui/map/footprints-backward", adv_assets_ui_map_footprints_backward__pieces, 1, 10, 10, 0, 0, 0, false},
     {"ui/map/footprints-forward", adv_assets_ui_map_footprints_forward__pieces, 1, 10, 10, 0, 0, 0, false},
@@ -1023,30 +982,30 @@ const adv_asset_record_t adv_assets_catalog[] = {
     {"ui/map/station-locked", adv_assets_ui_map_station_locked__pieces, 1, 48, 40, 24, 24, 0, false},
     {"ui/map/station-unlocked", adv_assets_ui_map_station_unlocked__pieces, 1, 48, 40, 24, 24, 0, false},
     {"ui/map/temporary-position-marker", adv_assets_ui_map_temporary_position_marker__pieces, 1, 32, 20, 0, 0, 0, false},
-    {"ui/numbers/20/0", adv_assets_ui_numbers_20_0__pieces, 1, 18, 20, 0, 0, 0, false},
-    {"ui/numbers/20/1", adv_assets_ui_numbers_20_1__pieces, 1, 18, 20, 0, 0, 0, false},
-    {"ui/numbers/20/2", adv_assets_ui_numbers_20_2__pieces, 1, 18, 20, 0, 0, 0, false},
-    {"ui/numbers/20/3", adv_assets_ui_numbers_20_3__pieces, 1, 18, 20, 0, 0, 0, false},
-    {"ui/numbers/20/4", adv_assets_ui_numbers_20_4__pieces, 1, 18, 20, 0, 0, 0, false},
-    {"ui/numbers/20/5", adv_assets_ui_numbers_20_5__pieces, 1, 18, 20, 0, 0, 0, false},
-    {"ui/numbers/20/6", adv_assets_ui_numbers_20_6__pieces, 1, 18, 20, 0, 0, 0, false},
-    {"ui/numbers/20/7", adv_assets_ui_numbers_20_7__pieces, 1, 18, 20, 0, 0, 0, false},
-    {"ui/numbers/20/8", adv_assets_ui_numbers_20_8__pieces, 1, 18, 20, 0, 0, 0, false},
-    {"ui/numbers/20/9", adv_assets_ui_numbers_20_9__pieces, 1, 18, 20, 0, 0, 0, false},
-    {"ui/numbers/20/m", adv_assets_ui_numbers_20_m__pieces, 1, 27, 20, 0, 0, 0, false},
-    {"ui/numbers/20/plus", adv_assets_ui_numbers_20_plus__pieces, 1, 18, 20, 0, 0, 0, false},
-    {"ui/numbers/36/0", adv_assets_ui_numbers_36_0__pieces, 1, 29, 36, 0, 0, 0, false},
-    {"ui/numbers/36/1", adv_assets_ui_numbers_36_1__pieces, 1, 29, 36, 0, 0, 0, false},
-    {"ui/numbers/36/2", adv_assets_ui_numbers_36_2__pieces, 1, 29, 36, 0, 0, 0, false},
-    {"ui/numbers/36/3", adv_assets_ui_numbers_36_3__pieces, 1, 29, 36, 0, 0, 0, false},
-    {"ui/numbers/36/4", adv_assets_ui_numbers_36_4__pieces, 1, 29, 36, 0, 0, 0, false},
-    {"ui/numbers/36/5", adv_assets_ui_numbers_36_5__pieces, 1, 29, 36, 0, 0, 0, false},
-    {"ui/numbers/36/6", adv_assets_ui_numbers_36_6__pieces, 1, 29, 36, 0, 0, 0, false},
-    {"ui/numbers/36/7", adv_assets_ui_numbers_36_7__pieces, 1, 29, 36, 0, 0, 0, false},
-    {"ui/numbers/36/8", adv_assets_ui_numbers_36_8__pieces, 1, 29, 36, 0, 0, 0, false},
-    {"ui/numbers/36/9", adv_assets_ui_numbers_36_9__pieces, 1, 29, 36, 0, 0, 0, false},
-    {"ui/numbers/36/m", adv_assets_ui_numbers_36_m__pieces, 1, 45, 36, 0, 0, 0, false},
-    {"ui/numbers/36/plus", adv_assets_ui_numbers_36_plus__pieces, 1, 29, 36, 0, 0, 0, false},
+    {"ui/numbers/20/0", adv_assets_ui_numbers_20_0__pieces, 1, 23, 20, 0, 0, 0, false},
+    {"ui/numbers/20/1", adv_assets_ui_numbers_20_1__pieces, 1, 16, 20, 0, 0, 0, false},
+    {"ui/numbers/20/2", adv_assets_ui_numbers_20_2__pieces, 1, 21, 20, 0, 0, 0, false},
+    {"ui/numbers/20/3", adv_assets_ui_numbers_20_3__pieces, 1, 20, 20, 0, 0, 0, false},
+    {"ui/numbers/20/4", adv_assets_ui_numbers_20_4__pieces, 1, 23, 20, 0, 0, 0, false},
+    {"ui/numbers/20/5", adv_assets_ui_numbers_20_5__pieces, 1, 21, 20, 0, 0, 0, false},
+    {"ui/numbers/20/6", adv_assets_ui_numbers_20_6__pieces, 1, 22, 20, 0, 0, 0, false},
+    {"ui/numbers/20/7", adv_assets_ui_numbers_20_7__pieces, 1, 21, 20, 0, 0, 0, false},
+    {"ui/numbers/20/8", adv_assets_ui_numbers_20_8__pieces, 1, 22, 20, 0, 0, 0, false},
+    {"ui/numbers/20/9", adv_assets_ui_numbers_20_9__pieces, 1, 22, 20, 0, 0, 0, false},
+    {"ui/numbers/20/m", adv_assets_ui_numbers_20_m__pieces, 1, 33, 20, 0, 0, 0, false},
+    {"ui/numbers/20/plus", adv_assets_ui_numbers_20_plus__pieces, 1, 21, 20, 0, 0, 0, false},
+    {"ui/numbers/36/0", adv_assets_ui_numbers_36_0__pieces, 1, 37, 36, 0, 0, 0, false},
+    {"ui/numbers/36/1", adv_assets_ui_numbers_36_1__pieces, 1, 23, 36, 0, 0, 0, false},
+    {"ui/numbers/36/2", adv_assets_ui_numbers_36_2__pieces, 1, 32, 36, 0, 0, 0, false},
+    {"ui/numbers/36/3", adv_assets_ui_numbers_36_3__pieces, 1, 33, 36, 0, 0, 0, false},
+    {"ui/numbers/36/4", adv_assets_ui_numbers_36_4__pieces, 1, 37, 36, 0, 0, 0, false},
+    {"ui/numbers/36/5", adv_assets_ui_numbers_36_5__pieces, 1, 32, 36, 0, 0, 0, false},
+    {"ui/numbers/36/6", adv_assets_ui_numbers_36_6__pieces, 1, 35, 36, 0, 0, 0, false},
+    {"ui/numbers/36/7", adv_assets_ui_numbers_36_7__pieces, 1, 34, 36, 0, 0, 0, false},
+    {"ui/numbers/36/8", adv_assets_ui_numbers_36_8__pieces, 1, 36, 36, 0, 0, 0, false},
+    {"ui/numbers/36/9", adv_assets_ui_numbers_36_9__pieces, 1, 34, 36, 0, 0, 0, false},
+    {"ui/numbers/36/m", adv_assets_ui_numbers_36_m__pieces, 1, 54, 36, 0, 0, 0, false},
+    {"ui/numbers/36/plus", adv_assets_ui_numbers_36_plus__pieces, 1, 32, 36, 0, 0, 0, false},
     {"ui/passport/grid-current", adv_assets_ui_passport_grid_current__pieces, 1, 104, 52, 0, 0, 0, false},
     {"ui/passport/grid-normal", adv_assets_ui_passport_grid_normal__pieces, 1, 104, 52, 0, 0, 0, false},
     {"ui/passport/header", adv_assets_ui_passport_header__pieces, 1, 216, 24, 0, 0, 0, false},
@@ -1084,39 +1043,39 @@ const adv_asset_record_t *adv_assets_find(const char *id) {
         if (!strcmp(id, adv_assets_catalog[i].id)) return &adv_assets_catalog[i];
     return NULL;
 }
-const adv_ninepatch_t adv_assets_patch_menu_normal = {{&adv_assets_ui_cards_menu_normal_top_left__p0, &adv_assets_ui_cards_menu_normal_top__p0, &adv_assets_ui_cards_menu_normal_top_right__p0, &adv_assets_ui_cards_menu_normal_left__p0, &adv_assets_ui_cards_menu_normal_center__p0, &adv_assets_ui_cards_menu_normal_right__p0, &adv_assets_ui_cards_menu_normal_bottom_left__p0, &adv_assets_ui_cards_menu_normal_bottom__p0, &adv_assets_ui_cards_menu_normal_bottom_right__p0}};
-const adv_ninepatch_t adv_assets_patch_menu_selected = {{&adv_assets_ui_cards_menu_selected_top_left__p0, &adv_assets_ui_cards_menu_selected_top__p0, &adv_assets_ui_cards_menu_selected_top_right__p0, &adv_assets_ui_cards_menu_selected_left__p0, &adv_assets_ui_cards_menu_selected_center__p0, &adv_assets_ui_cards_menu_selected_right__p0, &adv_assets_ui_cards_menu_selected_bottom_left__p0, &adv_assets_ui_cards_menu_selected_bottom__p0, &adv_assets_ui_cards_menu_selected_bottom_right__p0}};
-const adv_ninepatch_t adv_assets_patch_menu_disabled = {{&adv_assets_ui_cards_menu_disabled_top_left__p0, &adv_assets_ui_cards_menu_disabled_top__p0, &adv_assets_ui_cards_menu_disabled_top_right__p0, &adv_assets_ui_cards_menu_disabled_left__p0, &adv_assets_ui_cards_menu_disabled_center__p0, &adv_assets_ui_cards_menu_disabled_right__p0, &adv_assets_ui_cards_menu_disabled_bottom_left__p0, &adv_assets_ui_cards_menu_disabled_bottom__p0, &adv_assets_ui_cards_menu_disabled_bottom_right__p0}};
-const adv_ninepatch_t adv_assets_patch_info_normal = {{&adv_assets_ui_cards_info_normal_top_left__p0, &adv_assets_ui_cards_info_normal_top__p0, &adv_assets_ui_cards_info_normal_top_right__p0, &adv_assets_ui_cards_info_normal_left__p0, &adv_assets_ui_cards_info_normal_center__p0, &adv_assets_ui_cards_info_normal_right__p0, &adv_assets_ui_cards_info_normal_bottom_left__p0, &adv_assets_ui_cards_info_normal_bottom__p0, &adv_assets_ui_cards_info_normal_bottom_right__p0}};
-const adv_ninepatch_t adv_assets_patch_info_current = {{&adv_assets_ui_cards_info_current_top_left__p0, &adv_assets_ui_cards_info_current_top__p0, &adv_assets_ui_cards_info_current_top_right__p0, &adv_assets_ui_cards_info_current_left__p0, &adv_assets_ui_cards_info_current_center__p0, &adv_assets_ui_cards_info_current_right__p0, &adv_assets_ui_cards_info_current_bottom_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_bottom_right__p0}};
-const adv_ninepatch_t adv_assets_patch_popup_normal = {{&adv_assets_ui_cards_popup_normal_top_left__p0, &adv_assets_ui_cards_popup_normal_top__p0, &adv_assets_ui_cards_popup_normal_top_right__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_popup_normal_center__p0, &adv_assets_ui_cards_popup_normal_right__p0, &adv_assets_ui_cards_popup_normal_bottom_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_bottom_right__p0}};
+const adv_ninepatch_t adv_assets_patch_menu_normal = {{&adv_assets_ui_cards_info_normal_top_left__p0, &adv_assets_ui_cards_info_normal_bottom__p0, &adv_assets_ui_cards_info_normal_top_right__p0, &adv_assets_ui_cards_info_normal_left__p0, &adv_assets_ui_cards_info_normal_center__p0, &adv_assets_ui_cards_info_normal_left__p0, &adv_assets_ui_cards_info_normal_bottom_left__p0, &adv_assets_ui_cards_info_normal_bottom__p0, &adv_assets_ui_cards_info_normal_bottom_right__p0}};
+const adv_ninepatch_t adv_assets_patch_menu_selected = {{&adv_assets_ui_cards_info_current_top_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_top_right__p0, &adv_assets_ui_cards_info_current_left__p0, &adv_assets_ui_cards_info_current_center__p0, &adv_assets_ui_cards_info_current_right__p0, &adv_assets_ui_cards_info_current_bottom_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_bottom_right__p0}};
+const adv_ninepatch_t adv_assets_patch_menu_disabled = {{&adv_assets_ui_cards_info_normal_top_left__p0, &adv_assets_ui_cards_info_normal_bottom__p0, &adv_assets_ui_cards_info_normal_top_right__p0, &adv_assets_ui_cards_info_normal_left__p0, &adv_assets_ui_cards_info_normal_center__p0, &adv_assets_ui_cards_info_normal_left__p0, &adv_assets_ui_cards_info_normal_bottom_left__p0, &adv_assets_ui_cards_info_normal_bottom__p0, &adv_assets_ui_cards_info_normal_bottom_right__p0}};
+const adv_ninepatch_t adv_assets_patch_info_normal = {{&adv_assets_ui_cards_info_normal_top_left__p0, &adv_assets_ui_cards_info_normal_bottom__p0, &adv_assets_ui_cards_info_normal_top_right__p0, &adv_assets_ui_cards_info_normal_left__p0, &adv_assets_ui_cards_info_normal_center__p0, &adv_assets_ui_cards_info_normal_left__p0, &adv_assets_ui_cards_info_normal_bottom_left__p0, &adv_assets_ui_cards_info_normal_bottom__p0, &adv_assets_ui_cards_info_normal_bottom_right__p0}};
+const adv_ninepatch_t adv_assets_patch_info_current = {{&adv_assets_ui_cards_info_current_top_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_top_right__p0, &adv_assets_ui_cards_info_current_left__p0, &adv_assets_ui_cards_info_current_center__p0, &adv_assets_ui_cards_info_current_right__p0, &adv_assets_ui_cards_info_current_bottom_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_bottom_right__p0}};
+const adv_ninepatch_t adv_assets_patch_popup_normal = {{&adv_assets_ui_cards_popup_normal_top_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_top_right__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_info_normal_center__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_popup_normal_bottom_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_bottom_right__p0}};
 const adv_asset_digit_t adv_assets_digits_36[] = {
-    {48, &adv_assets_catalog[174], 28},
-    {49, &adv_assets_catalog[175], 28},
-    {50, &adv_assets_catalog[176], 28},
-    {51, &adv_assets_catalog[177], 28},
-    {52, &adv_assets_catalog[178], 28},
-    {53, &adv_assets_catalog[179], 28},
-    {54, &adv_assets_catalog[180], 28},
-    {55, &adv_assets_catalog[181], 28},
-    {56, &adv_assets_catalog[182], 28},
-    {57, &adv_assets_catalog[183], 28},
-    {109, &adv_assets_catalog[184], 44},
-    {43, &adv_assets_catalog[185], 28},
+    {48, &adv_assets_catalog[174], 36},
+    {49, &adv_assets_catalog[175], 22},
+    {50, &adv_assets_catalog[176], 31},
+    {51, &adv_assets_catalog[177], 32},
+    {52, &adv_assets_catalog[178], 36},
+    {53, &adv_assets_catalog[179], 31},
+    {54, &adv_assets_catalog[180], 34},
+    {55, &adv_assets_catalog[181], 33},
+    {56, &adv_assets_catalog[182], 35},
+    {57, &adv_assets_catalog[183], 33},
+    {109, &adv_assets_catalog[184], 53},
+    {43, &adv_assets_catalog[185], 31},
 };
 const adv_asset_digit_t adv_assets_digits_20[] = {
-    {48, &adv_assets_catalog[162], 17},
-    {49, &adv_assets_catalog[163], 17},
-    {50, &adv_assets_catalog[164], 17},
-    {51, &adv_assets_catalog[165], 17},
-    {52, &adv_assets_catalog[166], 17},
-    {53, &adv_assets_catalog[167], 17},
-    {54, &adv_assets_catalog[168], 17},
-    {55, &adv_assets_catalog[169], 17},
-    {56, &adv_assets_catalog[170], 17},
-    {57, &adv_assets_catalog[171], 17},
-    {109, &adv_assets_catalog[172], 26},
-    {43, &adv_assets_catalog[173], 17},
+    {48, &adv_assets_catalog[162], 22},
+    {49, &adv_assets_catalog[163], 15},
+    {50, &adv_assets_catalog[164], 20},
+    {51, &adv_assets_catalog[165], 19},
+    {52, &adv_assets_catalog[166], 22},
+    {53, &adv_assets_catalog[167], 20},
+    {54, &adv_assets_catalog[168], 21},
+    {55, &adv_assets_catalog[169], 20},
+    {56, &adv_assets_catalog[170], 21},
+    {57, &adv_assets_catalog[171], 21},
+    {109, &adv_assets_catalog[172], 32},
+    {43, &adv_assets_catalog[173], 20},
 };
-const uint16_t adv_assets_ui_palette[] = {8649, 15375, 17298, 29514, 40276, 44173, 45672, 48007, 50577, 54567, 56884, 59061, 63185, 65433, 65502};
-const size_t adv_assets_ui_palette_count = 15;
+const uint16_t adv_assets_ui_palette[] = {8649, 15375, 17298, 25487, 35986, 38099, 40276, 44406, 45672, 46518, 48007, 54567, 56595, 57082, 63356, 65502};
+const size_t adv_assets_ui_palette_count = 16;

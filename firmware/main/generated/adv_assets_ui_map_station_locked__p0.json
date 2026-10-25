@@ -1,27 +1,26 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_map_station_locked__p0",
   "width": 48,
   "height": 40,
   "palette_rgb565": [
     0,
-    8649,
-    44173,
-    50577,
-    56884
+    25487,
+    57082,
+    63356
   ],
   "background_rgb888": null,
   "key_interval": 8,
   "keys": [
     0
   ],
-  "data_bytes": 368,
-  "table_bytes": 176,
+  "data_bytes": 308,
+  "table_bytes": 174,
   "frame_sha256": [
-    "749901a604e39a0c56d4444c76c8120061453961a5f59b46145e87a3c8bdb966"
+    "d314430ea783923944e8e38bcee5f313ae47c405524eea645a36c6c067377fc6"
   ],
   "source_sha256": [
-    "0ca9e3c643bacd0db14cad235d0a1293f1f8addaa513c0ad272a35416f7874b9"
+    "84590a70a631b55d38741f9598e99ec523f697d1215fe38a4ac6b279661a0a95"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,8 +34,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\station-locked.png",
-      "sha256": "02da180e4b1898555f71a2a5df77a308fc188dbf3fe5860cc1231ce475e1093a"
+      "sha256": "fe961d9ebbb17e30e79c27b2292c255a818563a607963f99b666638749b84afc"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/map/station-locked",
+      "logical_symbol": "adv_assets_ui_map_station_locked__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

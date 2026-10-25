@@ -1,0 +1,288 @@
+{
+  "passed": true,
+  "after": {
+    "visible_flag_frames": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "visible_flag_adjacent_displacement_px": [
+      4.242640687119285,
+      2.23606797749979,
+      2.8284271247461903,
+      0.0,
+      0.0
+    ],
+    "max_flag_displacement_px": 4.242640687119285,
+    "max_flag_vertical_step_px": 3,
+    "right_glove_adjacent_displacement_px": [
+      3.1622776601683795,
+      3.605551275463989,
+      4.242640687119285,
+      2.23606797749979,
+      2.8284271247461903,
+      3.1622776601683795,
+      3.1622776601683795
+    ],
+    "max_glove_displacement_px": 4.242640687119285,
+    "right_glove_contacts": [
+      [
+        37,
+        40
+      ],
+      [
+        40,
+        39
+      ],
+      [
+        43,
+        37
+      ],
+      [
+        46,
+        34
+      ],
+      [
+        45,
+        36
+      ],
+      [
+        43,
+        38
+      ],
+      [
+        40,
+        39
+      ],
+      [
+        37,
+        40
+      ]
+    ],
+    "flag_top_left": [
+      [
+        35,
+        30
+      ],
+      [
+        38,
+        29
+      ],
+      [
+        41,
+        27
+      ],
+      [
+        44,
+        24
+      ],
+      [
+        43,
+        26
+      ],
+      [
+        41,
+        28
+      ],
+      [
+        41,
+        28
+      ],
+      [
+        41,
+        28
+      ]
+    ]
+  },
+  "glove_flag_contacts": [
+    {
+      "frame": 2,
+      "grip": [
+        43,
+        37
+      ],
+      "flag_asset_point": [
+        2,
+        10
+      ],
+      "runtime_rgba": [
+        67,
+        62,
+        74,
+        255
+      ],
+      "independent_source_glove_alpha": 250,
+      "gap_px": 0
+    },
+    {
+      "frame": 3,
+      "grip": [
+        46,
+        34
+      ],
+      "flag_asset_point": [
+        2,
+        10
+      ],
+      "runtime_rgba": [
+        69,
+        72,
+        92,
+        255
+      ],
+      "independent_source_glove_alpha": 228,
+      "gap_px": 0
+    },
+    {
+      "frame": 4,
+      "grip": [
+        45,
+        36
+      ],
+      "flag_asset_point": [
+        2,
+        10
+      ],
+      "runtime_rgba": [
+        57,
+        54,
+        66,
+        255
+      ],
+      "independent_source_glove_alpha": 208,
+      "gap_px": 0
+    },
+    {
+      "frame": 5,
+      "grip": [
+        43,
+        38
+      ],
+      "flag_asset_point": [
+        2,
+        10
+      ],
+      "runtime_rgba": [
+        57,
+        54,
+        66,
+        255
+      ],
+      "independent_source_glove_alpha": 251,
+      "gap_px": 0
+    }
+  ],
+  "touchdown_frame": 5,
+  "release_frame": 6,
+  "world_latch_top_left": [
+    41,
+    28
+  ],
+  "world_latch_root_space": "root + attachment.top_left - runtime_anchor",
+  "persistent_world_prop_after_body_clip": true,
+  "head_and_helmet_sources_modified": false,
+  "logic_boundary": "The host preview implements prop retention to demonstrate the contract; gameplay/device state handling is not implemented here.",
+  "before_manifest_sha256": "5f645db8a9dbd6f09a28ec707a0f70fb5f380f172ee198674c57660d2ebaf75f",
+  "before": {
+    "visible_flag_frames": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "visible_flag_adjacent_displacement_px": [
+      3.605551275463989,
+      4.242640687119285,
+      0.0,
+      8.0,
+      0.0,
+      0.0
+    ],
+    "max_flag_displacement_px": 8.0,
+    "max_flag_vertical_step_px": 8,
+    "right_glove_adjacent_displacement_px": [
+      3.1622776601683795,
+      3.605551275463989,
+      4.242640687119285,
+      0.0,
+      3.605551275463989,
+      4.47213595499958,
+      3.1622776601683795
+    ],
+    "max_glove_displacement_px": 4.47213595499958,
+    "right_glove_contacts": [
+      [
+        37,
+        40
+      ],
+      [
+        40,
+        39
+      ],
+      [
+        43,
+        37
+      ],
+      [
+        46,
+        34
+      ],
+      [
+        46,
+        34
+      ],
+      [
+        44,
+        37
+      ],
+      [
+        40,
+        39
+      ],
+      [
+        37,
+        40
+      ]
+    ],
+    "flag_top_left": [
+      [
+        35,
+        26
+      ],
+      [
+        38,
+        25
+      ],
+      [
+        41,
+        23
+      ],
+      [
+        44,
+        20
+      ],
+      [
+        44,
+        20
+      ],
+      [
+        44,
+        28
+      ],
+      [
+        44,
+        28
+      ],
+      [
+        44,
+        28
+      ]
+    ]
+  }
+}

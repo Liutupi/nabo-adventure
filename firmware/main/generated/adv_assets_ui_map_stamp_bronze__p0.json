@@ -1,26 +1,25 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_map_stamp_bronze__p0",
   "width": 16,
   "height": 16,
   "palette_rgb565": [
     0,
-    8649,
     48007,
-    65433
+    65502
   ],
   "background_rgb888": null,
   "key_interval": 8,
   "keys": [
     0
   ],
-  "data_bytes": 164,
-  "table_bytes": 78,
+  "data_bytes": 128,
+  "table_bytes": 76,
   "frame_sha256": [
-    "7ae80e8730e00c021b2e09644436c8b034b59f9f5227d06c00456b2e7a3347c2"
+    "644173a0b0a651a8d004334907f1da2686a3386eb6134f650afabe892538a94e"
   ],
   "source_sha256": [
-    "cafa683861040bc3eca393f24f4b23fb56645ba66582b8c678454535e662c67d"
+    "11b0833e0f35e5accc7b437996eb4ae4eb38bad233a9ab43ee98c352ad6a0d55"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,8 +33,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\stamp-bronze.png",
-      "sha256": "9a7c98af42bc7df40a1266cfa5a73bd6f21078ffe645676ddbb3dd9350f1b1a3"
+      "sha256": "2cba07d10f610270caa869aff8ae0020ee1632d38cecd9e0f033a0d01497156a"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/map/stamp-bronze",
+      "logical_symbol": "adv_assets_ui_map_stamp_bronze__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

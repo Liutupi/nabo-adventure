@@ -1,0 +1,51 @@
+{
+  "calls": [
+    {
+      "skin": "sky_a",
+      "sha256": "cda49e734e5ca949dfaf87d664dbb32252dfe100691d7aea079c4e5d44e4217b",
+      "neck": [
+        637,
+        532
+      ],
+      "foot": 1227,
+      "head_width": 520,
+      "generated_file": "exec-4c71778a-622a-4ff6-baa1-915940225f47.png",
+      "prompt": "games/sky/source/sky_a-prompt.txt",
+      "generator": "built-in image_gen edit",
+      "source_refs": [
+        "reference/nabo-idle-original.png",
+        "design/round1/v2/01-hiker-design-board.png"
+      ],
+      "reference_sha256": {
+        "original": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243",
+        "approved_hiker": "3ed446475284c3d1b75ba78a41d75922935ee928bc91ba51fccbd7d8a13a1060"
+      },
+      "source_preserved": true,
+      "no_ai_animation_frames": true
+    },
+    {
+      "skin": "sky_b",
+      "sha256": "bdcf3073e8a5e88bd43d4fc36c5d4df376cd01df0d2b6b0cd12fc7c0e3c7a895",
+      "neck": [
+        639,
+        531
+      ],
+      "foot": 1225,
+      "head_width": 520,
+      "generated_file": "exec-320ac824-db99-469d-8ab7-d83143d2c123.png",
+      "prompt": "games/sky/source/sky_b-prompt.txt",
+      "generator": "built-in image_gen edit",
+      "source_refs": [
+        "reference/nabo-idle-original.png",
+        "design/round1/v2/01-hiker-design-board.png"
+      ],
+      "reference_sha256": {
+        "original": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243",
+        "approved_hiker": "3ed446475284c3d1b75ba78a41d75922935ee928bc91ba51fccbd7d8a13a1060"
+      },
+      "source_preserved": true,
+      "no_ai_animation_frames": true
+    }
+  ],
+  "head_acceptance": "Final rig discards edited heads and reuses frozen approved common identity, no new human approval claimed"
+}

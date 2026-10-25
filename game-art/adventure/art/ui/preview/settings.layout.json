@@ -1,0 +1,336 @@
+{
+  "space": "native 240x320; text positions are ink top-left, derive C baseline from generated glyph metrics",
+  "dynamic_text": [
+    {
+      "fixture_text": "音量",
+      "anchor_xy": [
+        27,
+        59
+      ],
+      "ink_box": [
+        27,
+        59,
+        59,
+        77
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "left"
+    },
+    {
+      "fixture_text": "70",
+      "anchor_xy": [
+        211,
+        60
+      ],
+      "ink_box": [
+        193,
+        60,
+        211,
+        72
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "right"
+    },
+    {
+      "fixture_text": "亮度",
+      "anchor_xy": [
+        27,
+        109
+      ],
+      "ink_box": [
+        27,
+        109,
+        59,
+        126
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "80",
+      "anchor_xy": [
+        211,
+        110
+      ],
+      "ink_box": [
+        193,
+        110,
+        211,
+        122
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "right"
+    },
+    {
+      "fixture_text": "休眠",
+      "anchor_xy": [
+        27,
+        159
+      ],
+      "ink_box": [
+        27,
+        159,
+        59,
+        175
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "5 分钟",
+      "anchor_xy": [
+        211,
+        160
+      ],
+      "ink_box": [
+        166,
+        160,
+        211,
+        177
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "right"
+    },
+    {
+      "fixture_text": "扬声器",
+      "anchor_xy": [
+        27,
+        209
+      ],
+      "ink_box": [
+        27,
+        209,
+        75,
+        226
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "开启",
+      "anchor_xy": [
+        211,
+        210
+      ],
+      "ink_box": [
+        179,
+        210,
+        211,
+        227
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "right"
+    },
+    {
+      "fixture_text": "设置",
+      "anchor_xy": [
+        20,
+        6
+      ],
+      "ink_box": [
+        20,
+        6,
+        56,
+        24
+      ],
+      "size_px": 18,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "left"
+    },
+    {
+      "fixture_text": "章 1/24",
+      "anchor_xy": [
+        226,
+        11
+      ],
+      "ink_box": [
+        185,
+        11,
+        226,
+        25
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "right"
+    },
+    {
+      "fixture_text": "OK 调整   上键返回",
+      "anchor_xy": [
+        120,
+        300
+      ],
+      "ink_box": [
+        70,
+        300,
+        171,
+        314
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "center"
+    }
+  ],
+  "cards": [
+    {
+      "family": "menu",
+      "state": "selected",
+      "xy": [
+        16,
+        46
+      ],
+      "size": [
+        208,
+        42
+      ],
+      "dynamic_text": "#fffaf0"
+    },
+    {
+      "family": "menu",
+      "state": "normal",
+      "xy": [
+        16,
+        96
+      ],
+      "size": [
+        208,
+        42
+      ],
+      "dynamic_text": "#203849"
+    },
+    {
+      "family": "menu",
+      "state": "normal",
+      "xy": [
+        16,
+        146
+      ],
+      "size": [
+        208,
+        42
+      ],
+      "dynamic_text": "#203849"
+    },
+    {
+      "family": "menu",
+      "state": "normal",
+      "xy": [
+        16,
+        196
+      ],
+      "size": [
+        208,
+        42
+      ],
+      "dynamic_text": "#203849"
+    }
+  ],
+  "assets": [
+    {
+      "path": "resources/bar-frame.png",
+      "xy": [
+        56,
+        264
+      ]
+    },
+    {
+      "path": "bars/top.png",
+      "xy": [
+        0,
+        0
+      ]
+    },
+    {
+      "path": "bars/bottom.png",
+      "xy": [
+        0,
+        290
+      ]
+    }
+  ],
+  "numbers": []
+}

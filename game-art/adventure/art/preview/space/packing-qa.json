@@ -1,0 +1,866 @@
+{
+  "schema": "adventure-assets-package-v1",
+  "format": "adv-row-rle-v1",
+  "groups": {
+    "space": {
+      "rle_bytes": 60054,
+      "table_bytes": 17470,
+      "descriptor_catalog_estimate_c3": 1539,
+      "resources": 18,
+      "pieces": 18,
+      "frames": 67,
+      "static_bytes_estimate_c3": 79063
+    }
+  },
+  "files": [
+    "adv_assets_catalog.c",
+    "adv_assets_catalog.h",
+    "adv_assets_game_space_lander_back__p0.c",
+    "adv_assets_game_space_lander_back__p0.h",
+    "adv_assets_game_space_lander_back__p0.json",
+    "adv_assets_game_space_lander_front__p0.c",
+    "adv_assets_game_space_lander_front__p0.h",
+    "adv_assets_game_space_lander_front__p0.json",
+    "adv_assets_game_space_props_asteroid__p0.c",
+    "adv_assets_game_space_props_asteroid__p0.h",
+    "adv_assets_game_space_props_asteroid__p0.json",
+    "adv_assets_game_space_props_flag__p0.c",
+    "adv_assets_game_space_props_flag__p0.h",
+    "adv_assets_game_space_props_flag__p0.json",
+    "adv_assets_game_space_props_fuel_can__p0.c",
+    "adv_assets_game_space_props_fuel_can__p0.h",
+    "adv_assets_game_space_props_fuel_can__p0.json",
+    "adv_assets_game_space_props_landing_pad__p0.c",
+    "adv_assets_game_space_props_landing_pad__p0.h",
+    "adv_assets_game_space_props_landing_pad__p0.json",
+    "adv_assets_game_space_tiles_lunar_0__p0.c",
+    "adv_assets_game_space_tiles_lunar_0__p0.h",
+    "adv_assets_game_space_tiles_lunar_0__p0.json",
+    "adv_assets_game_space_tiles_lunar_1__p0.c",
+    "adv_assets_game_space_tiles_lunar_1__p0.h",
+    "adv_assets_game_space_tiles_lunar_1__p0.json",
+    "adv_assets_game_space_tiles_lunar_2__p0.c",
+    "adv_assets_game_space_tiles_lunar_2__p0.h",
+    "adv_assets_game_space_tiles_lunar_2__p0.json",
+    "adv_assets_space_a_cabin_idle__p0.c",
+    "adv_assets_space_a_cabin_idle__p0.h",
+    "adv_assets_space_a_cabin_idle__p0.json",
+    "adv_assets_space_a_hard_land__p0.c",
+    "adv_assets_space_a_hard_land__p0.h",
+    "adv_assets_space_a_hard_land__p0.json",
+    "adv_assets_space_a_jet__p0.c",
+    "adv_assets_space_a_jet__p0.h",
+    "adv_assets_space_a_jet__p0.json",
+    "adv_assets_space_a_land__p0.c",
+    "adv_assets_space_a_land__p0.h",
+    "adv_assets_space_a_land__p0.json",
+    "adv_assets_space_a_plant_flag__p0.c",
+    "adv_assets_space_a_plant_flag__p0.h",
+    "adv_assets_space_a_plant_flag__p0.json",
+    "adv_assets_space_a_settlement_cheer__p0.c",
+    "adv_assets_space_a_settlement_cheer__p0.h",
+    "adv_assets_space_a_settlement_cheer__p0.json",
+    "adv_assets_space_b_cabin_idle__p0.c",
+    "adv_assets_space_b_cabin_idle__p0.h",
+    "adv_assets_space_b_cabin_idle__p0.json",
+    "adv_assets_space_b_jet__p0.c",
+    "adv_assets_space_b_jet__p0.h",
+    "adv_assets_space_b_jet__p0.json",
+    "adv_assets_space_b_settlement_cheer__p0.c",
+    "adv_assets_space_b_settlement_cheer__p0.h",
+    "adv_assets_space_b_settlement_cheer__p0.json",
+    "adv_assets_generated.json"
+  ],
+  "source_manifests_sha256": {
+    "space-manifest.json": "168d04124ab06e8d7e181a41c51e3eec91ba3e9f7dd5911fa8690a25e96fe789"
+  },
+  "source_frames": [
+    {
+      "id": "game/space/lander/back",
+      "sources": [
+        {
+          "path": "games\\space\\lander\\back.png",
+          "sha256": "d3e488ea51168861a928c4c53708aec2dcdd397afe417a07424ffdf3c4590ed4"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        92
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_lander_back__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/lander/front",
+      "sources": [
+        {
+          "path": "games\\space\\lander\\front.png",
+          "sha256": "b6a69822623b186653a353ab269a3b951bbd4f918b7d30415d44981dbbe055ea"
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        92
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_lander_front__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/props/asteroid",
+      "sources": [
+        {
+          "path": "games\\space\\props\\asteroid.png",
+          "sha256": "7341819b7dcbbc92c2c4332a25e1396f3321b820c470c3b560ffe51db9cd6b0c"
+        }
+      ],
+      "canvas": [
+        32,
+        28
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_props_asteroid__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/props/flag",
+      "sources": [
+        {
+          "path": "games\\space\\props\\flag.png",
+          "sha256": "0a2d7e6c579e7936c8c3d22e2dbe33721ba5823082d9c42029097994e4d5ed4c"
+        }
+      ],
+      "canvas": [
+        16,
+        28
+      ],
+      "anchor": [
+        2,
+        28
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_props_flag__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/props/fuel-can",
+      "sources": [
+        {
+          "path": "games\\space\\props\\fuel-can.png",
+          "sha256": "aff19cae1f384f71ca348cfc20ef6b9837f4269896a23c42d80f5ae2a4ac89c6"
+        }
+      ],
+      "canvas": [
+        16,
+        24
+      ],
+      "anchor": [
+        8,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_props_fuel_can__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/props/landing-pad",
+      "sources": [
+        {
+          "path": "games\\space\\props\\landing-pad.png",
+          "sha256": "561e14aa31566beffdb790835560fbd7794b1bc9405609f86538177232c8c43c"
+        }
+      ],
+      "canvas": [
+        96,
+        24
+      ],
+      "anchor": [
+        48,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_props_landing_pad__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            96,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/tiles/lunar-0",
+      "sources": [
+        {
+          "path": "games\\space\\tiles\\lunar-0.png",
+          "sha256": "33e30cb4c1c6387b5d498b54a7d0fc28ba0b4ee4acf5bdf00a86e15a80d706fc"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_tiles_lunar_0__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/tiles/lunar-1",
+      "sources": [
+        {
+          "path": "games\\space\\tiles\\lunar-1.png",
+          "sha256": "d9160bc6873060915d6bd9340ad31211bdcc8e08b8539bc395e57d4ca4cc3476"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_tiles_lunar_1__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space/tiles/lunar-2",
+      "sources": [
+        {
+          "path": "games\\space\\tiles\\lunar-2.png",
+          "sha256": "07353ad30f0350c08718fa7e2a2f9de25e45afa6d310829954795ddbe2de2d95"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_tiles_lunar_2__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_a/cabin_idle",
+      "sources": [
+        {
+          "path": "frames\\space\\runtime\\space_a\\cabin_idle\\000.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\cabin_idle\\001.png",
+          "sha256": "6cd2267e3bcfaf7535c82bacaaa7a31ea7b5d288b55142e313f76f17def3ca3f"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\cabin_idle\\002.png",
+          "sha256": "b28a5043577a72c156cbce6bbe9710aa2224ad732dbe439c2498021bc50223be"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\cabin_idle\\003.png",
+          "sha256": "dbece9d87809f4e61dbab4392bdbd8615b271cd0e8d1a7dfde7bc5f3082a0b25"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\cabin_idle\\004.png",
+          "sha256": "8db2d2d53447a0f7380e2b1c8de4691465ef6dfaf472187be61ff293fd081456"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\cabin_idle\\005.png",
+          "sha256": "25cd1d507e5069bc9bcc1841ee00d9f7e54974063eae165704c6b4dc81af4b74"
+        }
+      ],
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_a_cabin_idle__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            57,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_a/hard_land",
+      "sources": [
+        {
+          "path": "frames\\space\\runtime\\space_a\\hard_land\\000.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\hard_land\\001.png",
+          "sha256": "104aaf2d35d37d25f04ab1e8a21877dd5089d5a3c4997a6b40ea9359d69eed79"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\hard_land\\002.png",
+          "sha256": "0163bd8a953c0116f5e2a54b4bd0d03fd84e8a1aca90404b7013d1b24848084f"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\hard_land\\003.png",
+          "sha256": "c5a63ce37a6aecbe6ff0bbfc546d9e63a549456611aed33ace0571b39c551f21"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\hard_land\\004.png",
+          "sha256": "161de056fbd61d2526b59a1b5dea678a83b18e4e7909935a99c1d84a86ce2ad1"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\hard_land\\005.png",
+          "sha256": "0cdeba62497446e19b28565c35145a899e9fa1f68474ddd92d4d88ea71b265f1"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\hard_land\\006.png",
+          "sha256": "925dcc200d7f1f10c0e9975de9a7a73e187c5409ebf46fd47873a2bba95de2b4"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\hard_land\\007.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        }
+      ],
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_a_hard_land__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            57,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_a/jet",
+      "sources": [
+        {
+          "path": "frames\\space\\runtime\\space_a\\jet\\000.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\jet\\001.png",
+          "sha256": "b9ca76873c6fc457bcae768e4756f43ffc55212a953de01f5c2e6f2bf2e195f2"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\jet\\002.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\jet\\003.png",
+          "sha256": "641579177b67aae54dee5bb03b0838059fb0055cf1f6cbc1ecbba28ba5eef858"
+        }
+      ],
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_a_jet__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            57,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_a/land",
+      "sources": [
+        {
+          "path": "frames\\space\\runtime\\space_a\\land\\000.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\land\\001.png",
+          "sha256": "cba08eebedefa0017244d71a5745f04cc2765b83040014357e537ea44e362769"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\land\\002.png",
+          "sha256": "da9bc68dbb24e9277c092bd1c54c750dac18ee4e55a4a3a1c3e5fed348b8e95d"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\land\\003.png",
+          "sha256": "da9bc68dbb24e9277c092bd1c54c750dac18ee4e55a4a3a1c3e5fed348b8e95d"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\land\\004.png",
+          "sha256": "cba08eebedefa0017244d71a5745f04cc2765b83040014357e537ea44e362769"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\land\\005.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        }
+      ],
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_a_land__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            57,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_a/plant_flag",
+      "sources": [
+        {
+          "path": "frames\\space\\runtime\\space_a\\plant_flag\\000.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\plant_flag\\001.png",
+          "sha256": "58af3dda92944f3ffa48ee7f9d09e1b638ee53220f0f0503561db0eeae6d02a0"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\plant_flag\\002.png",
+          "sha256": "c97a85bbcc17d576b75ddfd0221b197a076a9126c73f9b77481f4082648de1d1"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\plant_flag\\003.png",
+          "sha256": "3005cd2412881f6baafac48536ef4c3423b217d47fe4286d9f74a61e5dd3a8b3"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\plant_flag\\004.png",
+          "sha256": "55e6cf36aa624fe80c4e760c1b8c7b4e3d04b9463a5a8320e6707a3e5376059c"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\plant_flag\\005.png",
+          "sha256": "fd84f4ee1d3b263eeb21a1df95283d8399542caa6a5fdd7c18052ad0a364e045"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\plant_flag\\006.png",
+          "sha256": "9ca9f94c1d4cb0e931c3fb6102bc5f0daaa4690cc4096a89609b4004941bd2ec"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\plant_flag\\007.png",
+          "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
+        }
+      ],
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_a_plant_flag__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            57,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_a/settlement_cheer",
+      "sources": [
+        {
+          "path": "frames\\space\\runtime\\space_a\\settlement_cheer\\000.png",
+          "sha256": "bfcf82dfb8a68035dfeb8a3ab8308f65771707b3b09c19bb68ed9592b7d8f4a0"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\settlement_cheer\\001.png",
+          "sha256": "8291a573644c98c736f173f84743cfda420c8aaab3eba332091754bde1a97c9b"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\settlement_cheer\\002.png",
+          "sha256": "e20deaf244bda2b691ba4b064e73db2764ebbbc955bf860922cfe7f4a8bca45f"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\settlement_cheer\\003.png",
+          "sha256": "f13d17c9a9811cb44d27e3ec2821047aca7b5eacb8e8f862ebe3bac700c73f16"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\settlement_cheer\\004.png",
+          "sha256": "39c7f3901181be5edd2e4d74e602156a5a7e6059b5172a03065e88fe43eba295"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\settlement_cheer\\005.png",
+          "sha256": "667ddf7530d7a06eb81c44f8bdb735dfa5c6dc7b7d1d9ed149c84dfd397c7327"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\settlement_cheer\\006.png",
+          "sha256": "24bae8eb87dbfd4783b178c64d1a9adb695ae24bd83af7b7116e8758ab611471"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_a\\settlement_cheer\\007.png",
+          "sha256": "bfcf82dfb8a68035dfeb8a3ab8308f65771707b3b09c19bb68ed9592b7d8f4a0"
+        }
+      ],
+      "canvas": [
+        73,
+        73
+      ],
+      "anchor": [
+        37,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_a_settlement_cheer__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            73,
+            73
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_b/cabin_idle",
+      "sources": [
+        {
+          "path": "frames\\space\\runtime\\space_b\\cabin_idle\\000.png",
+          "sha256": "dd6ca16c5ea258b8b3a0f9d82d98d8fc7a7ee719601c1f9f11f8faee8a6425b3"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\cabin_idle\\001.png",
+          "sha256": "2a5ad2bf4fae2e4e341c8fa893de325eb9ae0385ca95cf5afe9ef193a0b823ea"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\cabin_idle\\002.png",
+          "sha256": "0bace53446aadc8447581dca61c8ccd1135a5acf9d1a93de65db0e00f7140caa"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\cabin_idle\\003.png",
+          "sha256": "a77005e884221cf3691cd9792d866cdaf6962f39bd8097a75ba24cb95ee10443"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\cabin_idle\\004.png",
+          "sha256": "bb3d7f03245b5a2c85cf51d431008caef6fde66d51438a18619cc9158ba4d5db"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\cabin_idle\\005.png",
+          "sha256": "d104ca2798d3b35edce187cc0673241070cb46ee4d720c77ffcb794ac8727b25"
+        }
+      ],
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_b_cabin_idle__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            57,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_b/jet",
+      "sources": [
+        {
+          "path": "frames\\space\\runtime\\space_b\\jet\\000.png",
+          "sha256": "dd6ca16c5ea258b8b3a0f9d82d98d8fc7a7ee719601c1f9f11f8faee8a6425b3"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\jet\\001.png",
+          "sha256": "2cb57fb9238a366f2431d7a6c0f358c9a213fec83c0c085e3ce85b793a70180f"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\jet\\002.png",
+          "sha256": "dd6ca16c5ea258b8b3a0f9d82d98d8fc7a7ee719601c1f9f11f8faee8a6425b3"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\jet\\003.png",
+          "sha256": "3048bfa86cf84b48d87a09ee52e6687639ad6ac81e67fe3dfd07e72870c9f3a1"
+        }
+      ],
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_b_jet__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            57,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_b/settlement_cheer",
+      "sources": [
+        {
+          "path": "frames\\space\\runtime\\space_b\\settlement_cheer\\000.png",
+          "sha256": "a7c0a8f206e873fbee1128251f631e536b5df4fe5e96a5cb31a07283e54a3026"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\settlement_cheer\\001.png",
+          "sha256": "bdc56f7ac24cb7cfad50dd0a62391212dd09d636b413ce7a5e95596da4cb6cf7"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\settlement_cheer\\002.png",
+          "sha256": "76f9e625826ebe1b8324dd6eb1d56b485a7b32676a71d45a08e6f2baf0382ca0"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\settlement_cheer\\003.png",
+          "sha256": "d46aeb1e4137a885365aad738850c0dd4141d86e254d574f951a238998b5cf52"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\settlement_cheer\\004.png",
+          "sha256": "d00f8f599fe7edc9dfa0fc0a5741d4ba8221212f2227191a338d0a90200150e0"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\settlement_cheer\\005.png",
+          "sha256": "56bb34d84dea12b1f41ca4c5a43e1be89f642783932053d9980569889cf8d894"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\settlement_cheer\\006.png",
+          "sha256": "42208f9404414b9579693002f0976bef0327869dd2f1ffb0cfcdf5b2f327e538"
+        },
+        {
+          "path": "frames\\space\\runtime\\space_b\\settlement_cheer\\007.png",
+          "sha256": "a7c0a8f206e873fbee1128251f631e536b5df4fe5e96a5cb31a07283e54a3026"
+        }
+      ],
+      "canvas": [
+        73,
+        73
+      ],
+      "anchor": [
+        37,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_space_b_settlement_cheer__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            73,
+            73
+          ]
+        }
+      ]
+    }
+  ],
+  "python_verified_frames": 67,
+  "production_c": {
+    "verified_frames": 67,
+    "verified_sprite_rows": 3954,
+    "verified_ninepatch_rows": 0,
+    "comparison": "generated C and production decoders vs indexed source"
+  },
+  "catalog": {
+    "patches": [],
+    "digit_tables": {},
+    "shared_ui_palette_rgb565": []
+  },
+  "ui_limit_bytes": 163840,
+  "linker_alignment_and_final_elf_measurement": "pending; RLE/tables exact, C3 descriptor estimates exclude linker padding/deduplication",
+  "acceptance": "host packing validation only; no device/physical artwork acceptance implied"
+}

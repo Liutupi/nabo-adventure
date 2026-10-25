@@ -1,0 +1,5832 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "skin": "ski_a",
+      "name": "straight",
+      "count": 6,
+      "rgba_colors": 64,
+      "runtime_rgba_colors": 64,
+      "reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "torso": 0.0,
+              "upper_arm_l": 0.0,
+              "upper_arm_r": -0.0,
+              "secondary": 1.1682550269259515
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                71.0,
+                158.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 88,
+              "pole_bbox": [
+                64,
+                154,
+                83,
+                232
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.0,
+                151.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 49,
+              "pole_bbox": [
+                152,
+                147,
+                171,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "torso": 0.4330127018922193,
+              "upper_arm_l": 1.212435565298214,
+              "upper_arm_r": -1.12583302491977,
+              "secondary": 2.977114171187311
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                69.98643698412235,
+                157.06749102811793
+              ],
+              "actual_mitten_pole_overlap_pixels": 81,
+              "pole_bbox": [
+                61,
+                153,
+                80,
+                231
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.74760868053326,
+                150.82613217083735
+              ],
+              "actual_mitten_pole_overlap_pixels": 49,
+              "pole_bbox": [
+                154,
+                147,
+                172,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "torso": 0.43301270189221935,
+              "upper_arm_l": 1.2124355652982142,
+              "upper_arm_r": -1.1258330249197703,
+              "secondary": 1.8088591442613602
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                69.98643698412235,
+                157.0674910281179
+              ],
+              "actual_mitten_pole_overlap_pixels": 81,
+              "pole_bbox": [
+                61,
+                153,
+                80,
+                231
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.74760868053326,
+                150.82613217083735
+              ],
+              "actual_mitten_pole_overlap_pixels": 49,
+              "pole_bbox": [
+                154,
+                147,
+                172,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "torso": 6.123233995736766e-17,
+              "upper_arm_l": 1.7145055188062944e-16,
+              "upper_arm_r": -1.5920408388915593e-16,
+              "secondary": -1.1682550269259508
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                71.0,
+                158.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 88,
+              "pole_bbox": [
+                64,
+                154,
+                83,
+                232
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.0,
+                151.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 49,
+              "pole_bbox": [
+                152,
+                147,
+                171,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "torso": -0.43301270189221924,
+              "upper_arm_l": -1.2124355652982137,
+              "upper_arm_r": 1.12583302491977,
+              "secondary": -2.9771141711873104
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                72.03566539325655,
+                158.89620427403153
+              ],
+              "actual_mitten_pole_overlap_pixels": 88,
+              "pole_bbox": [
+                67,
+                155,
+                86,
+                233
+              ]
+            },
+            "r": {
+              "world_grip": [
+                158.24822876720788,
+                151.1707425094806
+              ],
+              "actual_mitten_pole_overlap_pixels": 47,
+              "pole_bbox": [
+                151,
+                148,
+                170,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "torso": -0.4330127018922193,
+              "upper_arm_l": -1.212435565298214,
+              "upper_arm_r": 1.12583302491977,
+              "secondary": -1.808859144261358
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                72.03566539325656,
+                158.89620427403153
+              ],
+              "actual_mitten_pole_overlap_pixels": 88,
+              "pole_bbox": [
+                67,
+                155,
+                86,
+                233
+              ]
+            },
+            "r": {
+              "world_grip": [
+                158.24822876720788,
+                151.1707425094806
+              ],
+              "actual_mitten_pole_overlap_pixels": 47,
+              "pole_bbox": [
+                151,
+                148,
+                170,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        1.76890756302521,
+        0.004201680672268907,
+        1.8510737628384688,
+        1.0755718954248366,
+        0.06880252100840337,
+        1.0931372549019607
+      ]
+    },
+    {
+      "skin": "ski_a",
+      "name": "lean_left",
+      "count": 4,
+      "rgba_colors": 64,
+      "runtime_rgba_colors": 64,
+      "reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "torso": 0,
+              "thigh_l": 0,
+              "thigh_r": 0,
+              "shin_foot_l": 0,
+              "shin_foot_r": 0,
+              "upper_arm_l": 0,
+              "upper_arm_r": 0,
+              "secondary": 1.1682550269259515
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                71.0,
+                158.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 88,
+              "pole_bbox": [
+                64,
+                154,
+                83,
+                232
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.0,
+                151.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 49,
+              "pole_bbox": [
+                152,
+                147,
+                171,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "torso": -2.8000000000000003,
+              "thigh_l": -2.0,
+              "thigh_r": -2.0,
+              "shin_foot_l": 1.6,
+              "shin_foot_r": 1.6,
+              "upper_arm_l": -2.8000000000000003,
+              "upper_arm_r": -2.8000000000000003,
+              "secondary": 4.368255026925952
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -17,
+            1
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -17.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                116.32091098657601,
+                223.03660407610505
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                23,
+                212,
+                135,
+                250
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                148.0978913415823,
+                208.6763581474357
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 35,
+              "board_bbox": [
+                129,
+                198,
+                241,
+                234
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                73.63621161704557,
+                161.5366904021291
+              ],
+              "actual_mitten_pole_overlap_pixels": 91,
+              "pole_bbox": [
+                70,
+                157,
+                92,
+                235
+              ]
+            },
+            "r": {
+              "world_grip": [
+                160.53009262162618,
+                147.94286483407137
+              ],
+              "actual_mitten_pole_overlap_pixels": 48,
+              "pole_bbox": [
+                157,
+                144,
+                179,
+                222
+              ]
+            }
+          },
+          "bbox": [
+            23,
+            16,
+            241,
+            250
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "torso": -5.6000000000000005,
+              "thigh_l": -4.0,
+              "thigh_r": -4.0,
+              "shin_foot_l": 3.2,
+              "shin_foot_r": 3.2,
+              "upper_arm_l": -5.6000000000000005,
+              "upper_arm_r": -5.6000000000000005,
+              "secondary": 7.568255026925952
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -19,
+            1
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -19.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                117.64384476283607,
+                223.03465410301595
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                25,
+                212,
+                137,
+                250
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                149.18473186495913,
+                208.32003546770636
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 41,
+              "board_bbox": [
+                130,
+                198,
+                242,
+                233
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                76.53315853443786,
+                164.70312827643045
+              ],
+              "actual_mitten_pole_overlap_pixels": 94,
+              "pole_bbox": [
+                73,
+                160,
+                100,
+                237
+              ]
+            },
+            "r": {
+              "world_grip": [
+                161.77850717755,
+                144.6526940739594
+              ],
+              "actual_mitten_pole_overlap_pixels": 48,
+              "pole_bbox": [
+                158,
+                140,
+                186,
+                217
+              ]
+            }
+          },
+          "bbox": [
+            25,
+            16,
+            242,
+            250
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "torso": -7,
+              "thigh_l": -5,
+              "thigh_r": -5,
+              "shin_foot_l": 4,
+              "shin_foot_r": 4,
+              "upper_arm_l": -7,
+              "upper_arm_r": -7,
+              "secondary": 9.168255026925952
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -21,
+            2
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -21.0
+            ],
+            [
+              0.0,
+              1.0,
+              2.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                118.3056659053033,
+                223.01920143703362
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                26,
+                212,
+                137,
+                251
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                149.72366505704258,
+                208.12974204703391
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                130,
+                197,
+                243,
+                233
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                78.06635422718878,
+                166.14106493292047
+              ],
+              "actual_mitten_pole_overlap_pixels": 84,
+              "pole_bbox": [
+                75,
+                161,
+                105,
+                238
+              ]
+            },
+            "r": {
+              "world_grip": [
+                162.28878422830826,
+                142.92872140009456
+              ],
+              "actual_mitten_pole_overlap_pixels": 48,
+              "pole_bbox": [
+                159,
+                138,
+                189,
+                214
+              ]
+            }
+          },
+          "bbox": [
+            26,
+            17,
+            243,
+            251
+          ],
+          "no_clipping": true
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        9.098389355742297,
+        7.110352474323062,
+        5.423494397759104,
+        16.45576563958917
+      ]
+    },
+    {
+      "skin": "ski_a",
+      "name": "lean_right",
+      "count": 4,
+      "rgba_colors": 64,
+      "runtime_rgba_colors": 64,
+      "reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "torso": 0,
+              "thigh_l": 0,
+              "thigh_r": 0,
+              "shin_foot_l": 0,
+              "shin_foot_r": 0,
+              "upper_arm_l": 0,
+              "upper_arm_r": 0,
+              "secondary": 1.1682550269259515
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                71.0,
+                158.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 88,
+              "pole_bbox": [
+                64,
+                154,
+                83,
+                232
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.0,
+                151.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 49,
+              "pole_bbox": [
+                152,
+                147,
+                171,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "torso": 2.8000000000000003,
+              "thigh_l": 2.0,
+              "thigh_r": 2.0,
+              "shin_foot_l": -1.6,
+              "shin_foot_r": -1.6,
+              "upper_arm_l": 2.8000000000000003,
+              "upper_arm_r": 2.8000000000000003,
+              "secondary": -2.0317449730740487
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -11,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -11.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                113.68240288118497,
+                222.92494474006153
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                21,
+                212,
+                133,
+                248
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                145.8921669363664,
+                209.29060017705942
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 41,
+              "board_bbox": [
+                127,
+                198,
+                239,
+                236
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                68.66449924210828,
+                154.11735738479973
+              ],
+              "actual_mitten_pole_overlap_pixels": 86,
+              "pole_bbox": [
+                56,
+                150,
+                77,
+                228
+              ]
+            },
+            "r": {
+              "world_grip": [
+                157.2169396230982,
+                153.7994717772694
+              ],
+              "actual_mitten_pole_overlap_pixels": 48,
+              "pole_bbox": [
+                144,
+                150,
+                166,
+                228
+              ]
+            }
+          },
+          "bbox": [
+            21,
+            15,
+            239,
+            248
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "torso": 5.6000000000000005,
+              "thigh_l": 4.0,
+              "thigh_r": 4.0,
+              "shin_foot_l": -3.2,
+              "shin_foot_r": -3.2,
+              "upper_arm_l": 5.6000000000000005,
+              "upper_arm_r": 5.6000000000000005,
+              "secondary": -5.231744973074049
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -8,
+            -1
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -8.0
+            ],
+            [
+              0.0,
+              1.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                112.36940627173524,
+                222.81158578529926
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                19,
+                212,
+                131,
+                248
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                144.7755131312725,
+                209.54783649032555
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 35,
+              "board_bbox": [
+                126,
+                198,
+                238,
+                237
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                66.66725889904734,
+                149.9170999279561
+              ],
+              "actual_mitten_pole_overlap_pixels": 88,
+              "pole_bbox": [
+                48,
+                146,
+                75,
+                223
+              ]
+            },
+            "r": {
+              "world_grip": [
+                155.21179716800407,
+                156.31979542333426
+              ],
+              "actual_mitten_pole_overlap_pixels": 47,
+              "pole_bbox": [
+                136,
+                153,
+                164,
+                230
+              ]
+            }
+          },
+          "bbox": [
+            19,
+            14,
+            238,
+            248
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "torso": 7,
+              "thigh_l": 5,
+              "thigh_r": 5,
+              "shin_foot_l": -4,
+              "shin_foot_r": -4,
+              "upper_arm_l": 7,
+              "upper_arm_r": 7,
+              "secondary": -6.8317449730740485
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -7,
+            -1
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -7.0
+            ],
+            [
+              0.0,
+              1.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                111.7150336383357,
+                222.74060067066964
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                18,
+                212,
+                131,
+                247
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                144.21423167367652,
+                209.66385318249476
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                125,
+                198,
+                237,
+                237
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                65.80645957366269,
+                147.70776429586945
+              ],
+              "actual_mitten_pole_overlap_pixels": 87,
+              "pole_bbox": [
+                44,
+                144,
+                74,
+                220
+              ]
+            },
+            "r": {
+              "world_grip": [
+                154.13611142634463,
+                157.46947021302338
+              ],
+              "actual_mitten_pole_overlap_pixels": 48,
+              "pole_bbox": [
+                132,
+                154,
+                162,
+                230
+              ]
+            }
+          },
+          "bbox": [
+            18,
+            14,
+            237,
+            247
+          ],
+          "no_clipping": true
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        7.892390289449113,
+        8.395599906629318,
+        4.010679271708684,
+        15.009103641456583
+      ]
+    },
+    {
+      "skin": "ski_a",
+      "name": "jump",
+      "count": 6,
+      "rgba_colors": 64,
+      "runtime_rgba_colors": 64,
+      "reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "thigh_l": 0,
+              "thigh_r": 0,
+              "shin_foot_l": 0,
+              "shin_foot_r": 0,
+              "upper_arm_l": 0,
+              "upper_arm_r": 0,
+              "secondary": 1.1682550269259515
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                71.0,
+                158.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 88,
+              "pole_bbox": [
+                64,
+                154,
+                83,
+                232
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.0,
+                151.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 49,
+              "pole_bbox": [
+                152,
+                147,
+                171,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "thigh_l": 2.8000000000000003,
+              "thigh_r": -2.0,
+              "shin_foot_l": -3.6,
+              "shin_foot_r": 2.8000000000000003,
+              "upper_arm_l": -3.2,
+              "upper_arm_r": 3.2,
+              "secondary": -2.0317449730740487
+            },
+            "lift": 5,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            -5
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -5.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                114.0819311953991,
+                217.71609798484502
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                21,
+                206,
+                133,
+                245
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.51118257695896,
+                203.75808492249357
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                129,
+                193,
+                240,
+                231
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                73.66259163012919,
+                154.32225354138222
+              ],
+              "actual_mitten_pole_overlap_pixels": 84,
+              "pole_bbox": [
+                70,
+                150,
+                89,
+                228
+              ]
+            },
+            "r": {
+              "world_grip": [
+                156.8987418914385,
+                147.22620288957606
+              ],
+              "actual_mitten_pole_overlap_pixels": 46,
+              "pole_bbox": [
+                146,
+                144,
+                165,
+                221
+              ]
+            }
+          },
+          "bbox": [
+            21,
+            10,
+            240,
+            245
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "thigh_l": 7,
+              "thigh_r": -5,
+              "shin_foot_l": -9,
+              "shin_foot_r": 7,
+              "upper_arm_l": -8,
+              "upper_arm_r": 8,
+              "secondary": -6.8317449730740485
+            },
+            "lift": 13,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            -13
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -13.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                112.7230974034528,
+                209.14272229585146
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                20,
+                198,
+                132,
+                238
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                148.2559842965794,
+                195.32635735174878
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 43,
+              "board_bbox": [
+                129,
+                184,
+                241,
+                224
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                77.78443402658381,
+                148.02192675485543
+              ],
+              "actual_mitten_pole_overlap_pixels": 88,
+              "pole_bbox": [
+                74,
+                144,
+                98,
+                221
+              ]
+            },
+            "r": {
+              "world_grip": [
+                153.6267608455337,
+                140.8408998655196
+              ],
+              "actual_mitten_pole_overlap_pixels": 49,
+              "pole_bbox": [
+                138,
+                137,
+                162,
+                215
+              ]
+            }
+          },
+          "bbox": [
+            20,
+            2,
+            241,
+            238
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "thigh_l": 5.95,
+              "thigh_r": -4.25,
+              "shin_foot_l": -7.6499999999999995,
+              "shin_foot_r": 5.95,
+              "upper_arm_l": -6.8,
+              "upper_arm_r": 6.8,
+              "secondary": -5.631744973074048
+            },
+            "lift": 11,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            -11
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -11.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                113.06024815031189,
+                211.30257126645952
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 43,
+              "board_bbox": [
+                21,
+                200,
+                132,
+                240
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                148.0724068319707,
+                197.4419779507066
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 43,
+              "board_bbox": [
+                129,
+                186,
+                241,
+                226
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                76.74084880774213,
+                149.62947808866977
+              ],
+              "actual_mitten_pole_overlap_pixels": 91,
+              "pole_bbox": [
+                73,
+                145,
+                96,
+                223
+              ]
+            },
+            "r": {
+              "world_grip": [
+                154.45725985910983,
+                142.4630150709914
+              ],
+              "actual_mitten_pole_overlap_pixels": 50,
+              "pole_bbox": [
+                140,
+                139,
+                163,
+                216
+              ]
+            }
+          },
+          "bbox": [
+            21,
+            4,
+            241,
+            240
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "thigh_l": 2.1,
+              "thigh_r": -1.5,
+              "shin_foot_l": -2.6999999999999997,
+              "shin_foot_r": 2.1,
+              "upper_arm_l": -2.4,
+              "upper_arm_r": 2.4,
+              "secondary": -1.2317449730740484
+            },
+            "lift": 4,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            -4
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -4.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                114.31071932355952,
+                218.79447980368127
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                21,
+                208,
+                133,
+                246
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.38442997801633,
+                204.8220267416008
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 37,
+              "board_bbox": [
+                128,
+                194,
+                240,
+                232
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                72.99008497280093,
+                155.00566435787636
+              ],
+              "actual_mitten_pole_overlap_pixels": 87,
+              "pole_bbox": [
+                69,
+                151,
+                88,
+                229
+              ]
+            },
+            "r": {
+              "world_grip": [
+                157.43042590429334,
+                147.93068474942936
+              ],
+              "actual_mitten_pole_overlap_pixels": 52,
+              "pole_bbox": [
+                148,
+                144,
+                167,
+                222
+              ]
+            }
+          },
+          "bbox": [
+            21,
+            11,
+            240,
+            246
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "thigh_l": 0,
+              "thigh_r": 0,
+              "shin_foot_l": 0,
+              "shin_foot_r": 0,
+              "upper_arm_l": 0,
+              "upper_arm_r": 0,
+              "secondary": 1.1682550269259515
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                71.0,
+                158.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 88,
+              "pole_bbox": [
+                64,
+                154,
+                83,
+                232
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.0,
+                151.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 49,
+              "pole_bbox": [
+                152,
+                147,
+                171,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        17.306956115779645,
+        22.27982026143791,
+        7.942927170868347,
+        20.29592670401494,
+        13.751283846872083,
+        0.0
+      ]
+    },
+    {
+      "skin": "ski_a",
+      "name": "fall",
+      "count": 8,
+      "rgba_colors": 64,
+      "runtime_rgba_colors": 64,
+      "reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "torso": 0,
+              "thigh_l": 0,
+              "thigh_r": 0,
+              "shin_foot_l": 0,
+              "shin_foot_r": 0,
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "upper_arm_r": 0,
+              "forearm_hand_r": 0,
+              "secondary": 1.1682550269259515
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true,
+            "fall_pitch": 0,
+            "fall_envelope": 0,
+            "fall_phase": "neutral"
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {
+            "peak_ground_edge_y": 234,
+            "peak_contact_y_translation": 43,
+            "root_shift": [
+              0,
+              0
+            ],
+            "rigid_pitch_degrees": 0,
+            "rigid_determinant": 1.0
+          },
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                71.0,
+                158.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 88,
+              "pole_bbox": [
+                64,
+                154,
+                83,
+                232
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.0,
+                151.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 49,
+              "pole_bbox": [
+                152,
+                147,
+                171,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true,
+          "snow_contact": {
+            "active": false,
+            "feature": "right mitten outer edge",
+            "formal_edge": [
+              156,
+              154
+            ],
+            "sample_pixel": [
+              156,
+              153
+            ],
+            "actual_mitten_alpha": 237,
+            "gear_alpha_at_sample": {
+              "ski_l": 0,
+              "ski_r": 0,
+              "pole_l": 0,
+              "pole_r": 172
+            },
+            "ground_edge_y": 234,
+            "gap_px": 80
+          }
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "torso": 0,
+              "thigh_l": -33.2,
+              "thigh_r": 18.0,
+              "shin_foot_l": 21.200000000000003,
+              "shin_foot_r": -35.0,
+              "upper_arm_l": 4.0,
+              "forearm_hand_l": -2.4000000000000004,
+              "upper_arm_r": -9.600000000000001,
+              "forearm_hand_r": -2.0,
+              "secondary": 4.368255026925952
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true,
+            "fall_pitch": 12,
+            "fall_envelope": 0.2,
+            "fall_phase": "lose-balance"
+          },
+          "head_translation": [
+            -6,
+            8
+          ],
+          "head_rigid_integer_translation": false,
+          "head_matrix": [
+            [
+              0.9781476007338057,
+              -0.20791169081775934,
+              16.990326686137365
+            ],
+            [
+              0.20791169081775934,
+              0.9781476007338057,
+              -15.910720464221338
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {
+            "peak_ground_edge_y": 234,
+            "peak_contact_y_translation": 43,
+            "root_shift": [
+              -4,
+              9
+            ],
+            "rigid_pitch_degrees": 12,
+            "rigid_determinant": 1.0
+          },
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                122.29214209074436,
+                228.7675591477163
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                29,
+                218,
+                141,
+                255
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                130.86134993829864,
+                220.74248865533832
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 35,
+              "board_bbox": [
+                111,
+                211,
+                225,
+                240
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                65.24387540554764,
+                154.5329433308783
+              ],
+              "actual_mitten_pole_overlap_pixels": 85,
+              "pole_bbox": [
+                62,
+                151,
+                82,
+                228
+              ]
+            },
+            "r": {
+              "world_grip": [
+                161.9720510542044,
+                164.41428685974267
+              ],
+              "actual_mitten_pole_overlap_pixels": 53,
+              "pole_bbox": [
+                159,
+                159,
+                191,
+                235
+              ]
+            }
+          },
+          "bbox": [
+            29,
+            26,
+            225,
+            255
+          ],
+          "no_clipping": true,
+          "snow_contact": {
+            "active": false,
+            "feature": "right mitten outer edge",
+            "formal_edge": [
+              160,
+              168
+            ],
+            "sample_pixel": [
+              160,
+              167
+            ],
+            "actual_mitten_alpha": 170,
+            "gear_alpha_at_sample": {
+              "ski_l": 0,
+              "ski_r": 0,
+              "pole_l": 0,
+              "pole_r": 200
+            },
+            "ground_edge_y": 234,
+            "gap_px": 66
+          }
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "torso": 0,
+              "thigh_l": -99.6,
+              "thigh_r": 54.0,
+              "shin_foot_l": 63.599999999999994,
+              "shin_foot_r": -105.0,
+              "upper_arm_l": 12.0,
+              "forearm_hand_l": -7.199999999999999,
+              "upper_arm_r": -28.799999999999997,
+              "forearm_hand_r": -6.0,
+              "secondary": 10.768255026925951
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true,
+            "fall_pitch": 36,
+            "fall_envelope": 0.6,
+            "fall_phase": "tumble"
+          },
+          "head_translation": [
+            9,
+            30
+          ],
+          "head_rigid_integer_translation": false,
+          "head_matrix": [
+            [
+              0.8090169943749475,
+              -0.5877852522924731,
+              90.49261761804802
+            ],
+            [
+              0.5877852522924731,
+              0.8090169943749475,
+              -24.527411445518258
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0000000000000002,
+          "fall": {
+            "peak_ground_edge_y": 234,
+            "peak_contact_y_translation": 43,
+            "root_shift": [
+              -12,
+              26
+            ],
+            "rigid_pitch_degrees": 36,
+            "rigid_determinant": 1.0000000000000002
+          },
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                133.6382603315032,
+                228.56055288104884
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                41,
+                218,
+                153,
+                255
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                105.04007224260869,
+                222.4608722298609
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 41,
+              "board_bbox": [
+                84,
+                207,
+                200,
+                234
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                63.414087298137,
+                145.7222146372028
+              ],
+              "actual_mitten_pole_overlap_pixels": 87,
+              "pole_bbox": [
+                60,
+                141,
+                89,
+                217
+              ]
+            },
+            "r": {
+              "world_grip": [
+                164.65381254595945,
+                194.63469448698834
+              ],
+              "actual_mitten_pole_overlap_pixels": 55,
+              "pole_bbox": [
+                161,
+                187,
+                222,
+                243
+              ]
+            }
+          },
+          "bbox": [
+            41,
+            57,
+            222,
+            255
+          ],
+          "no_clipping": true,
+          "snow_contact": {
+            "active": false,
+            "feature": "right mitten outer edge",
+            "formal_edge": [
+              162,
+              198
+            ],
+            "sample_pixel": [
+              162,
+              197
+            ],
+            "actual_mitten_alpha": 181,
+            "gear_alpha_at_sample": {
+              "ski_l": 0,
+              "ski_r": 0,
+              "pole_l": 0,
+              "pole_r": 89
+            },
+            "ground_edge_y": 234,
+            "gap_px": 36
+          }
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "torso": 0,
+              "thigh_l": -166,
+              "thigh_r": 90,
+              "shin_foot_l": 104,
+              "shin_foot_r": -177,
+              "upper_arm_l": 20,
+              "forearm_hand_l": -12,
+              "upper_arm_r": -48,
+              "forearm_hand_r": -10,
+              "secondary": 17.16825502692595
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true,
+            "fall_pitch": 62,
+            "fall_envelope": 1,
+            "fall_phase": "snow-contact"
+          },
+          "head_translation": [
+            21,
+            63
+          ],
+          "head_rigid_integer_translation": false,
+          "head_matrix": [
+            [
+              0.46947156278589086,
+              -0.8829475928589269,
+              174.1257967613936
+            ],
+            [
+              0.8829475928589269,
+              0.46947156278589086,
+              4.620506702158753
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {
+            "peak_ground_edge_y": 234,
+            "peak_contact_y_translation": 43,
+            "root_shift": [
+              -20,
+              43
+            ],
+            "rigid_pitch_degrees": 62,
+            "rigid_determinant": 1.0
+          },
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                133.67045028443408,
+                221.9408067893898
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                41,
+                211,
+                153,
+                248
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                103.40888382493924,
+                213.43307034797033
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 41,
+              "board_bbox": [
+                82,
+                183,
+                197,
+                227
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                76.36647900432692,
+                140.50721267760403
+              ],
+              "actual_mitten_pole_overlap_pixels": 86,
+              "pole_bbox": [
+                73,
+                135,
+                111,
+                208
+              ]
+            },
+            "r": {
+              "world_grip": [
+                160.08409340420735,
+                230.90708532265108
+              ],
+              "actual_mitten_pole_overlap_pixels": 63,
+              "pole_bbox": [
+                156,
+                223,
+                234,
+                249
+              ]
+            }
+          },
+          "bbox": [
+            41,
+            102,
+            234,
+            249
+          ],
+          "no_clipping": true,
+          "snow_contact": {
+            "active": true,
+            "feature": "right mitten outer edge",
+            "formal_edge": [
+              157,
+              234
+            ],
+            "sample_pixel": [
+              157,
+              233
+            ],
+            "actual_mitten_alpha": 192,
+            "gear_alpha_at_sample": {
+              "ski_l": 0,
+              "ski_r": 0,
+              "pole_l": 0,
+              "pole_r": 123
+            },
+            "ground_edge_y": 234,
+            "gap_px": 0
+          }
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "torso": 0,
+              "thigh_l": -166,
+              "thigh_r": 90,
+              "shin_foot_l": 104,
+              "shin_foot_r": -177,
+              "upper_arm_l": 20,
+              "forearm_hand_l": -12,
+              "upper_arm_r": -48,
+              "forearm_hand_r": -10,
+              "secondary": 17.16825502692595
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true,
+            "fall_pitch": 62,
+            "fall_envelope": 1,
+            "fall_phase": "snow-contact"
+          },
+          "head_translation": [
+            21,
+            63
+          ],
+          "head_rigid_integer_translation": false,
+          "head_matrix": [
+            [
+              0.46947156278589086,
+              -0.8829475928589269,
+              174.1257967613936
+            ],
+            [
+              0.8829475928589269,
+              0.46947156278589086,
+              4.620506702158753
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {
+            "peak_ground_edge_y": 234,
+            "peak_contact_y_translation": 43,
+            "root_shift": [
+              -20,
+              43
+            ],
+            "rigid_pitch_degrees": 62,
+            "rigid_determinant": 1.0
+          },
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                133.67045028443408,
+                221.9408067893898
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                41,
+                211,
+                153,
+                248
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                103.40888382493924,
+                213.43307034797033
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 41,
+              "board_bbox": [
+                82,
+                183,
+                197,
+                227
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                76.36647900432692,
+                140.50721267760403
+              ],
+              "actual_mitten_pole_overlap_pixels": 86,
+              "pole_bbox": [
+                73,
+                135,
+                111,
+                208
+              ]
+            },
+            "r": {
+              "world_grip": [
+                160.08409340420735,
+                230.90708532265108
+              ],
+              "actual_mitten_pole_overlap_pixels": 63,
+              "pole_bbox": [
+                156,
+                223,
+                234,
+                249
+              ]
+            }
+          },
+          "bbox": [
+            41,
+            102,
+            234,
+            249
+          ],
+          "no_clipping": true,
+          "snow_contact": {
+            "active": true,
+            "feature": "right mitten outer edge",
+            "formal_edge": [
+              157,
+              234
+            ],
+            "sample_pixel": [
+              157,
+              233
+            ],
+            "actual_mitten_alpha": 192,
+            "gear_alpha_at_sample": {
+              "ski_l": 0,
+              "ski_r": 0,
+              "pole_l": 0,
+              "pole_r": 123
+            },
+            "ground_edge_y": 234,
+            "gap_px": 0
+          }
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "torso": 0,
+              "thigh_l": -99.6,
+              "thigh_r": 54.0,
+              "shin_foot_l": 63.599999999999994,
+              "shin_foot_r": -105.0,
+              "upper_arm_l": 12.0,
+              "forearm_hand_l": -7.199999999999999,
+              "upper_arm_r": -28.799999999999997,
+              "forearm_hand_r": -6.0,
+              "secondary": 10.768255026925951
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true,
+            "fall_pitch": 36,
+            "fall_envelope": 0.6,
+            "fall_phase": "push-up"
+          },
+          "head_translation": [
+            9,
+            30
+          ],
+          "head_rigid_integer_translation": false,
+          "head_matrix": [
+            [
+              0.8090169943749475,
+              -0.5877852522924731,
+              90.49261761804802
+            ],
+            [
+              0.5877852522924731,
+              0.8090169943749475,
+              -24.527411445518258
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0000000000000002,
+          "fall": {
+            "peak_ground_edge_y": 234,
+            "peak_contact_y_translation": 43,
+            "root_shift": [
+              -12,
+              26
+            ],
+            "rigid_pitch_degrees": 36,
+            "rigid_determinant": 1.0000000000000002
+          },
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                133.6382603315032,
+                228.56055288104884
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                41,
+                218,
+                153,
+                255
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                105.04007224260869,
+                222.4608722298609
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 41,
+              "board_bbox": [
+                84,
+                207,
+                200,
+                234
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                63.414087298137,
+                145.7222146372028
+              ],
+              "actual_mitten_pole_overlap_pixels": 87,
+              "pole_bbox": [
+                60,
+                141,
+                89,
+                217
+              ]
+            },
+            "r": {
+              "world_grip": [
+                164.65381254595945,
+                194.63469448698834
+              ],
+              "actual_mitten_pole_overlap_pixels": 55,
+              "pole_bbox": [
+                161,
+                187,
+                222,
+                243
+              ]
+            }
+          },
+          "bbox": [
+            41,
+            57,
+            222,
+            255
+          ],
+          "no_clipping": true,
+          "snow_contact": {
+            "active": false,
+            "feature": "right mitten outer edge",
+            "formal_edge": [
+              162,
+              198
+            ],
+            "sample_pixel": [
+              162,
+              197
+            ],
+            "actual_mitten_alpha": 181,
+            "gear_alpha_at_sample": {
+              "ski_l": 0,
+              "ski_r": 0,
+              "pole_l": 0,
+              "pole_r": 89
+            },
+            "ground_edge_y": 234,
+            "gap_px": 36
+          }
+        },
+        {
+          "frame": 6,
+          "keyframe": {
+            "angles": {
+              "torso": 0,
+              "thigh_l": -33.2,
+              "thigh_r": 18.0,
+              "shin_foot_l": 21.200000000000003,
+              "shin_foot_r": -35.0,
+              "upper_arm_l": 4.0,
+              "forearm_hand_l": -2.4000000000000004,
+              "upper_arm_r": -9.600000000000001,
+              "forearm_hand_r": -2.0,
+              "secondary": 4.368255026925952
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true,
+            "fall_pitch": 12,
+            "fall_envelope": 0.2,
+            "fall_phase": "regain-balance"
+          },
+          "head_translation": [
+            -6,
+            8
+          ],
+          "head_rigid_integer_translation": false,
+          "head_matrix": [
+            [
+              0.9781476007338057,
+              -0.20791169081775934,
+              16.990326686137365
+            ],
+            [
+              0.20791169081775934,
+              0.9781476007338057,
+              -15.910720464221338
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {
+            "peak_ground_edge_y": 234,
+            "peak_contact_y_translation": 43,
+            "root_shift": [
+              -4,
+              9
+            ],
+            "rigid_pitch_degrees": 12,
+            "rigid_determinant": 1.0
+          },
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                122.29214209074436,
+                228.7675591477163
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                29,
+                218,
+                141,
+                255
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                130.86134993829864,
+                220.74248865533832
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 35,
+              "board_bbox": [
+                111,
+                211,
+                225,
+                240
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                65.24387540554764,
+                154.5329433308783
+              ],
+              "actual_mitten_pole_overlap_pixels": 85,
+              "pole_bbox": [
+                62,
+                151,
+                82,
+                228
+              ]
+            },
+            "r": {
+              "world_grip": [
+                161.9720510542044,
+                164.41428685974267
+              ],
+              "actual_mitten_pole_overlap_pixels": 53,
+              "pole_bbox": [
+                159,
+                159,
+                191,
+                235
+              ]
+            }
+          },
+          "bbox": [
+            29,
+            26,
+            225,
+            255
+          ],
+          "no_clipping": true,
+          "snow_contact": {
+            "active": false,
+            "feature": "right mitten outer edge",
+            "formal_edge": [
+              160,
+              168
+            ],
+            "sample_pixel": [
+              160,
+              167
+            ],
+            "actual_mitten_alpha": 170,
+            "gear_alpha_at_sample": {
+              "ski_l": 0,
+              "ski_r": 0,
+              "pole_l": 0,
+              "pole_r": 200
+            },
+            "ground_edge_y": 234,
+            "gap_px": 66
+          }
+        },
+        {
+          "frame": 7,
+          "keyframe": {
+            "angles": {
+              "torso": 0,
+              "thigh_l": 0,
+              "thigh_r": 0,
+              "shin_foot_l": 0,
+              "shin_foot_r": 0,
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "upper_arm_r": 0,
+              "forearm_hand_r": 0,
+              "secondary": 1.1682550269259515
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true,
+            "fall_pitch": 0,
+            "fall_envelope": 0,
+            "fall_phase": "neutral"
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {
+            "peak_ground_edge_y": 234,
+            "peak_contact_y_translation": 43,
+            "root_shift": [
+              0,
+              0
+            ],
+            "rigid_pitch_degrees": 0,
+            "rigid_determinant": 1.0
+          },
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                71.0,
+                158.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 88,
+              "pole_bbox": [
+                64,
+                154,
+                83,
+                232
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.0,
+                151.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 49,
+              "pole_bbox": [
+                152,
+                147,
+                171,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true,
+          "snow_contact": {
+            "active": false,
+            "feature": "right mitten outer edge",
+            "formal_edge": [
+              156,
+              154
+            ],
+            "sample_pixel": [
+              156,
+              153
+            ],
+            "actual_mitten_alpha": 237,
+            "gear_alpha_at_sample": {
+              "ski_l": 0,
+              "ski_r": 0,
+              "pole_l": 0,
+              "pole_r": 172
+            },
+            "ground_edge_y": 234,
+            "gap_px": 80
+          }
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        28.419000933706815,
+        36.06395891690009,
+        40.61140289449113,
+        0.0,
+        40.61140289449113,
+        36.06395891690009,
+        28.419000933706815,
+        0.0
+      ]
+    },
+    {
+      "skin": "ski_a",
+      "name": "finish",
+      "count": 6,
+      "rgba_colors": 64,
+      "runtime_rgba_colors": 64,
+      "reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "upper_arm_r": 0,
+              "secondary": 1.1682550269259515
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                71.0,
+                158.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 88,
+              "pole_bbox": [
+                64,
+                154,
+                83,
+                232
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.0,
+                151.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 49,
+              "pole_bbox": [
+                152,
+                147,
+                171,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 23.85,
+              "forearm_hand_l": 30.6,
+              "upper_arm_r": -5.4,
+              "secondary": -2.4317449730740486
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                49.534437787516154,
+                131.96969488959724
+              ],
+              "actual_mitten_pole_overlap_pixels": 97,
+              "pole_bbox": [
+                43,
+                128,
+                62,
+                206
+              ]
+            },
+            "r": {
+              "world_grip": [
+                162.37993277865587,
+                148.67130148398812
+              ],
+              "actual_mitten_pole_overlap_pixels": 48,
+              "pole_bbox": [
+                155,
+                145,
+                174,
+                223
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 53,
+              "forearm_hand_l": 68,
+              "upper_arm_r": -12,
+              "secondary": -6.8317449730740485
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                55.59182502197001,
+                95.16312178980195
+              ],
+              "actual_mitten_pole_overlap_pixels": 87,
+              "pole_bbox": [
+                49,
+                92,
+                68,
+                169
+              ]
+            },
+            "r": {
+              "world_grip": [
+                166.19012737713464,
+                145.40949233834237
+              ],
+              "actual_mitten_pole_overlap_pixels": 46,
+              "pole_bbox": [
+                159,
+                142,
+                178,
+                220
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 39.75,
+              "forearm_hand_l": 51.0,
+              "upper_arm_r": -9.0,
+              "secondary": -4.8317449730740485
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                48.53851639935186,
+                110.40332717027603
+              ],
+              "actual_mitten_pole_overlap_pixels": 87,
+              "pole_bbox": [
+                42,
+                107,
+                61,
+                185
+              ]
+            },
+            "r": {
+              "world_grip": [
+                164.5049070401767,
+                146.94647590609478
+              ],
+              "actual_mitten_pole_overlap_pixels": 49,
+              "pole_bbox": [
+                158,
+                143,
+                176,
+                221
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 15.899999999999999,
+              "forearm_hand_l": 20.4,
+              "upper_arm_r": -3.5999999999999996,
+              "secondary": -1.2317449730740484
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                54.271007148091215,
+                142.2641399869061
+              ],
+              "actual_mitten_pole_overlap_pixels": 80,
+              "pole_bbox": [
+                47,
+                139,
+                66,
+                216
+              ]
+            },
+            "r": {
+              "world_grip": [
+                161.27786397643484,
+                149.48280700267185
+              ],
+              "actual_mitten_pole_overlap_pixels": 48,
+              "pole_bbox": [
+                154,
+                146,
+                173,
+                224
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "upper_arm_r": 0,
+              "secondary": 1.1682550269259515
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                115,
+                223
+              ],
+              "world_contact": [
+                115.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 36,
+              "board_bbox": [
+                22,
+                212,
+                134,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                147,
+                209
+              ],
+              "world_contact": [
+                147.0,
+                209.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 38,
+              "board_bbox": [
+                128,
+                198,
+                240,
+                235
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                71.0,
+                158.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 88,
+              "pole_bbox": [
+                64,
+                154,
+                83,
+                232
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.0,
+                151.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 49,
+              "pole_bbox": [
+                152,
+                147,
+                171,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            22,
+            15,
+            240,
+            249
+          ],
+          "no_clipping": true
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        5.544000933706816,
+        5.891048085901027,
+        4.0435340802987865,
+        5.553571428571429,
+        4.650501867413632,
+        0.0
+      ]
+    },
+    {
+      "skin": "ski_a",
+      "name": "settlement_cheer",
+      "count": 8,
+      "rgba_colors": 64,
+      "runtime_rgba_colors": 64,
+      "reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "upper_arm_r": 0,
+              "secondary": 1.1682550269259515
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            63,
+            15,
+            165,
+            224
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 15.899999999999999,
+              "forearm_hand_l": 20.4,
+              "upper_arm_r": -3.5999999999999996,
+              "secondary": -1.2317449730740484
+            },
+            "lift": 1,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            -1
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            47,
+            14,
+            167,
+            223
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 39.75,
+              "forearm_hand_l": 51.0,
+              "upper_arm_r": -9.0,
+              "secondary": -4.8317449730740485
+            },
+            "lift": 2,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            -2
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -2.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            42,
+            13,
+            169,
+            222
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 53,
+              "forearm_hand_l": 68,
+              "upper_arm_r": -12,
+              "secondary": -6.8317449730740485
+            },
+            "lift": 3,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            -3
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -3.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            48,
+            12,
+            171,
+            221
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 47.7,
+              "forearm_hand_l": 61.2,
+              "upper_arm_r": -10.8,
+              "secondary": -6.031744973074049
+            },
+            "lift": 3,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            -3
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -3.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            45,
+            12,
+            170,
+            221
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 29.150000000000002,
+              "forearm_hand_l": 37.400000000000006,
+              "upper_arm_r": -6.6000000000000005,
+              "secondary": -3.231744973074049
+            },
+            "lift": 2,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            -2
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -2.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            41,
+            13,
+            168,
+            222
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 6,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 10.600000000000001,
+              "forearm_hand_l": 13.600000000000001,
+              "upper_arm_r": -2.4000000000000004,
+              "secondary": -0.4317449730740486
+            },
+            "lift": 1,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            -1
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            52,
+            14,
+            166,
+            223
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 7,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "upper_arm_r": 0,
+              "secondary": 1.1682550269259515
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            63,
+            15,
+            165,
+            224
+          ],
+          "no_clipping": true
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        10.56797839506173,
+        12.880787037037036,
+        10.568287037037036,
+        2.1331018518518516,
+        11.519521604938271,
+        11.753317901234569,
+        9.449382716049383,
+        0.0
+      ]
+    },
+    {
+      "skin": "ski_b",
+      "name": "straight",
+      "count": 6,
+      "rgba_colors": 64,
+      "runtime_rgba_colors": 64,
+      "reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "torso": 0.0,
+              "upper_arm_l": 0.0,
+              "upper_arm_r": -0.0,
+              "secondary": 1.1682550269259515
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                113,
+                223
+              ],
+              "world_contact": [
+                113.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 44,
+              "board_bbox": [
+                20,
+                212,
+                132,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                148,
+                210
+              ],
+              "world_contact": [
+                148.0,
+                210.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 41,
+              "board_bbox": [
+                129,
+                199,
+                241,
+                236
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                71.0,
+                158.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 89,
+              "pole_bbox": [
+                64,
+                154,
+                83,
+                232
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.0,
+                151.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 74,
+              "pole_bbox": [
+                152,
+                147,
+                171,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            20,
+            15,
+            241,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "torso": 0.4330127018922193,
+              "upper_arm_l": 1.212435565298214,
+              "upper_arm_r": -1.12583302491977,
+              "secondary": 2.977114171187311
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                113,
+                223
+              ],
+              "world_contact": [
+                113.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 44,
+              "board_bbox": [
+                20,
+                212,
+                132,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                148,
+                210
+              ],
+              "world_contact": [
+                148.0,
+                210.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 41,
+              "board_bbox": [
+                129,
+                199,
+                241,
+                236
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                69.98643698412235,
+                157.06749102811793
+              ],
+              "actual_mitten_pole_overlap_pixels": 82,
+              "pole_bbox": [
+                61,
+                153,
+                80,
+                231
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.74760868053326,
+                150.82613217083735
+              ],
+              "actual_mitten_pole_overlap_pixels": 73,
+              "pole_bbox": [
+                154,
+                147,
+                172,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            20,
+            15,
+            241,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "torso": 0.43301270189221935,
+              "upper_arm_l": 1.2124355652982142,
+              "upper_arm_r": -1.1258330249197703,
+              "secondary": 1.8088591442613602
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                113,
+                223
+              ],
+              "world_contact": [
+                113.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 44,
+              "board_bbox": [
+                20,
+                212,
+                132,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                148,
+                210
+              ],
+              "world_contact": [
+                148.0,
+                210.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 41,
+              "board_bbox": [
+                129,
+                199,
+                241,
+                236
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                69.98643698412235,
+                157.0674910281179
+              ],
+              "actual_mitten_pole_overlap_pixels": 82,
+              "pole_bbox": [
+                61,
+                153,
+                80,
+                231
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.74760868053326,
+                150.82613217083735
+              ],
+              "actual_mitten_pole_overlap_pixels": 73,
+              "pole_bbox": [
+                154,
+                147,
+                172,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            20,
+            15,
+            241,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "torso": 6.123233995736766e-17,
+              "upper_arm_l": 1.7145055188062944e-16,
+              "upper_arm_r": -1.5920408388915593e-16,
+              "secondary": -1.1682550269259508
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                113,
+                223
+              ],
+              "world_contact": [
+                113.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 44,
+              "board_bbox": [
+                20,
+                212,
+                132,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                148,
+                210
+              ],
+              "world_contact": [
+                148.0,
+                210.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 41,
+              "board_bbox": [
+                129,
+                199,
+                241,
+                236
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                71.0,
+                158.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 89,
+              "pole_bbox": [
+                64,
+                154,
+                83,
+                232
+              ]
+            },
+            "r": {
+              "world_grip": [
+                159.0,
+                151.0
+              ],
+              "actual_mitten_pole_overlap_pixels": 74,
+              "pole_bbox": [
+                152,
+                147,
+                171,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            20,
+            15,
+            241,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "torso": -0.43301270189221924,
+              "upper_arm_l": -1.2124355652982137,
+              "upper_arm_r": 1.12583302491977,
+              "secondary": -2.9771141711873104
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                113,
+                223
+              ],
+              "world_contact": [
+                113.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 44,
+              "board_bbox": [
+                20,
+                212,
+                132,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                148,
+                210
+              ],
+              "world_contact": [
+                148.0,
+                210.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 41,
+              "board_bbox": [
+                129,
+                199,
+                241,
+                236
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                72.03566539325655,
+                158.89620427403153
+              ],
+              "actual_mitten_pole_overlap_pixels": 89,
+              "pole_bbox": [
+                67,
+                155,
+                86,
+                233
+              ]
+            },
+            "r": {
+              "world_grip": [
+                158.24822876720788,
+                151.1707425094806
+              ],
+              "actual_mitten_pole_overlap_pixels": 65,
+              "pole_bbox": [
+                151,
+                148,
+                170,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            20,
+            15,
+            241,
+            249
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "torso": -0.4330127018922193,
+              "upper_arm_l": -1.212435565298214,
+              "upper_arm_r": 1.12583302491977,
+              "secondary": -1.808859144261358
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": true,
+            "poles": true
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {
+            "l": {
+              "source_contact": [
+                113,
+                223
+              ],
+              "world_contact": [
+                113.0,
+                223.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 44,
+              "board_bbox": [
+                20,
+                212,
+                132,
+                249
+              ]
+            },
+            "r": {
+              "source_contact": [
+                148,
+                210
+              ],
+              "world_contact": [
+                148.0,
+                210.0
+              ],
+              "same_parent_transform": true,
+              "actual_boot_board_overlap_pixels": 41,
+              "board_bbox": [
+                129,
+                199,
+                241,
+                236
+              ]
+            }
+          },
+          "mitten_pole_contacts": {
+            "l": {
+              "world_grip": [
+                72.03566539325656,
+                158.89620427403153
+              ],
+              "actual_mitten_pole_overlap_pixels": 89,
+              "pole_bbox": [
+                67,
+                155,
+                86,
+                233
+              ]
+            },
+            "r": {
+              "world_grip": [
+                158.24822876720788,
+                151.1707425094806
+              ],
+              "actual_mitten_pole_overlap_pixels": 65,
+              "pole_bbox": [
+                151,
+                148,
+                170,
+                225
+              ]
+            }
+          },
+          "bbox": [
+            20,
+            15,
+            241,
+            249
+          ],
+          "no_clipping": true
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        1.67296918767507,
+        0.08887721755368815,
+        1.7875816993464053,
+        1.06687675070028,
+        0.06034080298786181,
+        1.20687441643324
+      ]
+    },
+    {
+      "skin": "ski_b",
+      "name": "settlement_cheer",
+      "count": 8,
+      "rgba_colors": 64,
+      "runtime_rgba_colors": 64,
+      "reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "upper_arm_r": 0,
+              "secondary": 1.1682550269259515
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            63,
+            15,
+            168,
+            224
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 15.899999999999999,
+              "forearm_hand_l": 20.4,
+              "upper_arm_r": -3.5999999999999996,
+              "secondary": -1.2317449730740484
+            },
+            "lift": 1,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            -1
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            47,
+            14,
+            168,
+            223
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 39.75,
+              "forearm_hand_l": 51.0,
+              "upper_arm_r": -9.0,
+              "secondary": -4.8317449730740485
+            },
+            "lift": 2,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            -2
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -2.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            41,
+            13,
+            171,
+            222
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 53,
+              "forearm_hand_l": 68,
+              "upper_arm_r": -12,
+              "secondary": -6.8317449730740485
+            },
+            "lift": 3,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            -3
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -3.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            48,
+            12,
+            173,
+            221
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 47.7,
+              "forearm_hand_l": 61.2,
+              "upper_arm_r": -10.8,
+              "secondary": -6.031744973074049
+            },
+            "lift": 3,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            -3
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -3.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            44,
+            12,
+            172,
+            221
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 29.150000000000002,
+              "forearm_hand_l": 37.400000000000006,
+              "upper_arm_r": -6.6000000000000005,
+              "secondary": -3.231744973074049
+            },
+            "lift": 2,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            -2
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -2.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            41,
+            13,
+            170,
+            222
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 6,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 10.600000000000001,
+              "forearm_hand_l": 13.600000000000001,
+              "upper_arm_r": -2.4000000000000004,
+              "secondary": -0.4317449730740486
+            },
+            "lift": 1,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            -1
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              -1.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            51,
+            14,
+            168,
+            223
+          ],
+          "no_clipping": true
+        },
+        {
+          "frame": 7,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "upper_arm_r": 0,
+              "secondary": 1.1682550269259515
+            },
+            "lift": 0,
+            "torso_slump": 0,
+            "skis": false,
+            "poles": false
+          },
+          "head_translation": [
+            -14,
+            0
+          ],
+          "head_rigid_integer_translation": true,
+          "head_matrix": [
+            [
+              1.0,
+              0.0,
+              -14.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "head_and_expression_same_rigid_matrix": true,
+          "head_determinant": 1.0,
+          "fall": {},
+          "boot_board_contacts": {},
+          "mitten_pole_contacts": {},
+          "bbox": [
+            63,
+            15,
+            168,
+            224
+          ],
+          "no_clipping": true
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        10.457098765432098,
+        12.428935185185185,
+        10.165817901234568,
+        1.9751543209876543,
+        11.431327160493828,
+        11.410185185185185,
+        9.53888888888889,
+        0.0
+      ]
+    }
+  ],
+  "static_assets": 12,
+  "not_claimed": [
+    "formal game implementation",
+    "on-device performance",
+    "user visual acceptance"
+  ]
+}

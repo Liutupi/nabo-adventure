@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_resources_icons_spirit__p0",
   "width": 16,
   "height": 16,
@@ -37,5 +37,15 @@
       "sha256": "60c72ccb77938680166bc162a5a19be792c34036aced67fa34e66ae760533886"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/resources/icons/spirit",
+      "logical_symbol": "adv_assets_ui_resources_icons_spirit__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

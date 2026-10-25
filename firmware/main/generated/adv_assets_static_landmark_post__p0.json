@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_landmark_post__p0",
   "width": 96,
   "height": 96,
@@ -41,5 +41,15 @@
       "sha256": "7f91c03cc1d4c0faeb1990b7c91d7d927e74d192347d67c089a7dcf9ed107623"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/landmark/post",
+      "logical_symbol": "adv_assets_static_landmark_post__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

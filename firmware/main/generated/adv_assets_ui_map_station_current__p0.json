@@ -1,27 +1,26 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_map_station_current__p0",
   "width": 48,
   "height": 40,
   "palette_rgb565": [
     0,
-    8649,
     45672,
-    50577,
-    63185
+    57082,
+    65502
   ],
   "background_rgb888": null,
   "key_interval": 8,
   "keys": [
     0
   ],
-  "data_bytes": 340,
-  "table_bytes": 176,
+  "data_bytes": 320,
+  "table_bytes": 174,
   "frame_sha256": [
-    "03af4daa22bbfd40ac1720ba6b07c6ddbb88b2ca977cbb4c3637958e7012806d"
+    "5296ab74f9b58c3a55a9e45da50145b70e6f09ba7cf7c5bda832c40fd32689fc"
   ],
   "source_sha256": [
-    "3155700bf4b261039b09484e34a14faa33b7cb6b31c86157c588da71d42f89aa"
+    "2f5fd5ea63e474105953bf3c9ab5ac56775d153b5efa1e3c6242ecf97ab071c5"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,8 +34,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\station-current.png",
-      "sha256": "a161e7004b57812e9c4654eea799a1d7e1e623a2ae7d2fdea8e47bf34d9338f4"
+      "sha256": "01638dff0f1174de9deb52a5e2fa70110dcd1a55d6cc0539fdaf385fc0a99287"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/map/station-current",
+      "logical_symbol": "adv_assets_ui_map_station_current__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

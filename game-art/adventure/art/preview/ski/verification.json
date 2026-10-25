@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "clips": 9,
+  "character_frames": 56,
+  "checks": [
+    {
+      "skin": "ski_a",
+      "name": "fall",
+      "count": 8,
+      "passed": true,
+      "retained_face_cap_rgb_exact_without_resampling": false,
+      "rigid_positive_determinant_head": true
+    },
+    {
+      "skin": "ski_a",
+      "name": "finish",
+      "count": 6,
+      "passed": true,
+      "retained_face_cap_rgb_exact_without_resampling": true,
+      "rigid_positive_determinant_head": false
+    },
+    {
+      "skin": "ski_a",
+      "name": "jump",
+      "count": 6,
+      "passed": true,
+      "retained_face_cap_rgb_exact_without_resampling": true,
+      "rigid_positive_determinant_head": false
+    },
+    {
+      "skin": "ski_a",
+      "name": "lean_left",
+      "count": 4,
+      "passed": true,
+      "retained_face_cap_rgb_exact_without_resampling": true,
+      "rigid_positive_determinant_head": false
+    },
+    {
+      "skin": "ski_a",
+      "name": "lean_right",
+      "count": 4,
+      "passed": true,
+      "retained_face_cap_rgb_exact_without_resampling": true,
+      "rigid_positive_determinant_head": false
+    },
+    {
+      "skin": "ski_a",
+      "name": "settlement_cheer",
+      "count": 8,
+      "passed": true,
+      "retained_face_cap_rgb_exact_without_resampling": true,
+      "rigid_positive_determinant_head": false
+    },
+    {
+      "skin": "ski_a",
+      "name": "straight",
+      "count": 6,
+      "passed": true,
+      "retained_face_cap_rgb_exact_without_resampling": true,
+      "rigid_positive_determinant_head": false
+    },
+    {
+      "skin": "ski_b",
+      "name": "settlement_cheer",
+      "count": 8,
+      "passed": true,
+      "retained_face_cap_rgb_exact_without_resampling": true,
+      "rigid_positive_determinant_head": false
+    },
+    {
+      "skin": "ski_b",
+      "name": "straight",
+      "count": 6,
+      "passed": true,
+      "retained_face_cap_rgb_exact_without_resampling": true,
+      "rigid_positive_determinant_head": false
+    }
+  ],
+  "verified_boot_board_contacts": 80,
+  "minimum_actual_boot_board_overlap": 35,
+  "verified_mitten_pole_contacts": 80,
+  "minimum_actual_mitten_pole_overlap": 46,
+  "retained_source_identity_rgb_exact": true,
+  "fall_head_rigid_rotation_with_bicubic_resampling": true,
+  "shared_snow_hashes_match": true,
+  "boundary": "Source identity pixels are unchanged. Non-fall masters preserve core RGB; fall rigidly rotates the same head and expression with explicit resampling. Quantized delivery/runtime is lossy; contacts are host artwork evidence, not gameplay/hardware acceptance."
+}

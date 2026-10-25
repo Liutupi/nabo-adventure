@@ -33,7 +33,7 @@
 
 ## 3. 预算
 
-以下是开发布局的整包规划，不代表旧布局设备可一次装下所有新游戏。当前共用旅行服 10 动作、地图/印章/图标与 UI 的实际行 RLE 和表总量见 `firmware/main/generated/adv_assets_generated.json`：travel 129,224 B、static 74,329 B、UI 73,709 B。此报告含按 C3 布局计算的结构体/目录，链接对齐及最终镜像大小须以新的 ELF/app 为准；welcome 一组 47,730 B 不能当作全部旅行服大小。
+以下是开发布局的整包规划，不代表旧布局设备可一次装下所有新游戏。字体/欢迎V2a候选的共用包实际RLE/表及C3结构体/目录估算见 `firmware/main/generated/adv_assets_generated.json`：travel167,547 B、static70,902 B、UI57,244 B。开机演员（含152B时间表）102,381 B另外与UI合计159,625 B，低于160KiB，未通过挪预算隐藏人物费用。编码器使用无损literal/最优关键帧和明确物理帧排序，原画面/曝光顺序/尺寸不变；链接对齐及最终镜像须另看ELF/app。当前候选app1,533,920 B，真实旧factory余497,696 B；SHA256见ART_PROGRESS/VALIDATION，尚待新候选真机。
 
 | 用途 | 额度 | 说明 |
 |---|---|---|

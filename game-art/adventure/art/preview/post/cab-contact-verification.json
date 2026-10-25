@@ -1,0 +1,685 @@
+{
+  "passed": true,
+  "actor_height_unchanged": 40,
+  "head_clearance_frames": 42,
+  "head_checks": [
+    {
+      "skin": "post_a",
+      "name": "idle",
+      "frame": 0,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "idle",
+      "frame": 1,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "idle",
+      "frame": 2,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "idle",
+      "frame": 3,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "idle",
+      "frame": 4,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "idle",
+      "frame": 5,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "whistle",
+      "frame": 0,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "whistle",
+      "frame": 1,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "whistle",
+      "frame": 2,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "whistle",
+      "frame": 3,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "whistle",
+      "frame": 4,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "whistle",
+      "frame": 5,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "throw",
+      "frame": 0,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "throw",
+      "frame": 1,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "throw",
+      "frame": 2,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "throw",
+      "frame": 3,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "throw",
+      "frame": 4,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "throw",
+      "frame": 5,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "hit",
+      "frame": 0,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "hit",
+      "frame": 1,
+      "head_bbox": [
+        11,
+        9,
+        35,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "hit",
+      "frame": 2,
+      "head_bbox": [
+        14,
+        9,
+        38,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "hit",
+      "frame": 3,
+      "head_bbox": [
+        12,
+        9,
+        36,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "hit",
+      "frame": 4,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "hit",
+      "frame": 5,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "delivered",
+      "frame": 0,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "delivered",
+      "frame": 1,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "delivered",
+      "frame": 2,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "delivered",
+      "frame": 3,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "delivered",
+      "frame": 4,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_a",
+      "name": "delivered",
+      "frame": 5,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_b",
+      "name": "idle",
+      "frame": 0,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_b",
+      "name": "idle",
+      "frame": 1,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_b",
+      "name": "idle",
+      "frame": 2,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_b",
+      "name": "idle",
+      "frame": 3,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_b",
+      "name": "idle",
+      "frame": 4,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_b",
+      "name": "idle",
+      "frame": 5,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_b",
+      "name": "delivered",
+      "frame": 0,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_b",
+      "name": "delivered",
+      "frame": 1,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_b",
+      "name": "delivered",
+      "frame": 2,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_b",
+      "name": "delivered",
+      "frame": 3,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_b",
+      "name": "delivered",
+      "frame": 4,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    },
+    {
+      "skin": "post_b",
+      "name": "delivered",
+      "frame": 5,
+      "head_bbox": [
+        13,
+        9,
+        37,
+        33
+      ],
+      "roof_clearance_px": 2,
+      "head_cab_overlap": 0,
+      "head_hidden_by_foreground": 0
+    }
+  ],
+  "cord_frames": 6,
+  "cord_contacts": [
+    {
+      "frame": 0,
+      "roof_anchor": [
+        12,
+        7
+      ],
+      "hand_contact": [
+        16,
+        48
+      ],
+      "visible_cord_pixels": 107,
+      "endpoint_on_opaque_glove": true,
+      "visible_handle_rim": true
+    },
+    {
+      "frame": 1,
+      "roof_anchor": [
+        12,
+        7
+      ],
+      "hand_contact": [
+        9,
+        45
+      ],
+      "visible_cord_pixels": 128,
+      "endpoint_on_opaque_glove": true,
+      "visible_handle_rim": true
+    },
+    {
+      "frame": 2,
+      "roof_anchor": [
+        12,
+        7
+      ],
+      "hand_contact": [
+        9,
+        36
+      ],
+      "visible_cord_pixels": 105,
+      "endpoint_on_opaque_glove": true,
+      "visible_handle_rim": true
+    },
+    {
+      "frame": 3,
+      "roof_anchor": [
+        12,
+        7
+      ],
+      "hand_contact": [
+        8,
+        40
+      ],
+      "visible_cord_pixels": 116,
+      "endpoint_on_opaque_glove": true,
+      "visible_handle_rim": true
+    },
+    {
+      "frame": 4,
+      "roof_anchor": [
+        12,
+        7
+      ],
+      "hand_contact": [
+        11,
+        47
+      ],
+      "visible_cord_pixels": 130,
+      "endpoint_on_opaque_glove": true,
+      "visible_handle_rim": true
+    },
+    {
+      "frame": 5,
+      "roof_anchor": [
+        12,
+        7
+      ],
+      "hand_contact": [
+        16,
+        48
+      ],
+      "visible_cord_pixels": 107,
+      "endpoint_on_opaque_glove": true,
+      "visible_handle_rim": true
+    }
+  ],
+  "coordinate_space": "locomotive native top-left; same canvas/anchor as body, before actor and foreground",
+  "actual_composition": "wheel/body/cord/actor/foreground",
+  "source_manifest_sha256": "42464721aae43aa0c7dc2aba7b55b4f6b4966f8ef61b2ecc23bcbce5a764636f"
+}

@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_map_footprints_backward__p0",
   "width": 10,
   "height": 10,
@@ -35,5 +35,15 @@
       "sha256": "1b288ae6af50dffcbe1856a21dc550bff4e4551896751e2f1f7becfab9465f6a"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/map/footprints-backward",
+      "logical_symbol": "adv_assets_ui_map_footprints_backward__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

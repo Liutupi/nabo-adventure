@@ -10,6 +10,7 @@
 #include "adv_sound.h"
 #include "adv_ui.h"
 #include "adv_ui_animation.h"
+#include "adv_boot_motion.h"
 #include "bsp_audio.h"
 #include "bsp_battery.h"
 #include "bsp_button.h"
@@ -386,6 +387,7 @@ static void adventure_task(void *arg)
     int64_t battery_at = 0;
     bool dirty = true;
     uint32_t last_ui_frame = UINT32_MAX;
+    unsigned last_boot_pose = UINT16_MAX;
     for (;;) {
         if (atomic_exchange(&s_overflow, false)) {
             ESP_LOGE(TAG, "input overflow; cancelling held actions");
@@ -404,6 +406,10 @@ static void adventure_task(void *arg)
         else if (s_owner == OWNER_SHELL) {
             uint32_t ui_frame = ms / 1000u * 12u + ms % 1000u * 12u / 1000u;
             if (ui_frame != last_ui_frame) { dirty = true; last_ui_frame = ui_frame; }
+            if (s_model.page == ADV_PAGE_COVER && adv_ui_boot_initial() && adv_boot_motion_enabled()) {
+                unsigned pose = adv_boot_motion_frame(adv_ui_boot_elapsed(ms));
+                if (pose != last_boot_pose) { dirty = true; last_boot_pose = pose; }
+            }
             // Fixed 60 Hz model steps; never more than a few to catch up after a slow frame.
             int steps = 0;
             while (us - s_step_us >= STEP_US && steps < 4) {

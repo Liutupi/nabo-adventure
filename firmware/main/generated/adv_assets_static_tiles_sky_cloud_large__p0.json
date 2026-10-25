@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_sky_cloud_large__p0",
   "width": 32,
   "height": 32,
@@ -14,7 +14,7 @@
   "keys": [
     0
   ],
-  "data_bytes": 196,
+  "data_bytes": 195,
   "table_bytes": 142,
   "frame_sha256": [
     "baa5735333649df98b33c7037725d8d6f15fe3b38d1a1ab96e18e991a35592a8"
@@ -37,5 +37,15 @@
       "sha256": "74c102a22c030810de0679fb4c27899b5b6d5e68fcb74e0d8d988251f5a770d6"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/sky/cloud-large",
+      "logical_symbol": "adv_assets_static_tiles_sky_cloud_large__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

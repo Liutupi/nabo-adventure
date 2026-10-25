@@ -27,6 +27,8 @@ class Resource:
     loop: bool = False
     color_limit: int = 64
     palette_group: str = ''
+    startup: bool = False
+    presentation_bytes: int = 0
     images: list = field(default_factory=list)
 
     @property
@@ -50,6 +52,7 @@ def pair(value, field_name, *, positive=False):
 
 
 def validate(resource):
+    resource.images.clear()
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_/-]*', resource.id): raise ValueError('Invalid stable resource id')
     if not resource.paths or len(resource.paths) != len(resource.hashes): raise ValueError('Explicit source/hash counts differ')
     if any(not 1 <= v <= 65535 for v in resource.size): raise ValueError('Canvas exceeds the C catalog size range')
@@ -97,8 +100,10 @@ def load_resources(art, groups):
                 fps, loop = animation['fps'], animation['loop']
                 if type(fps) is not int or not 1 <= fps <= 120 or type(loop) is not bool:
                     raise ValueError('Invalid explicit animation fps/loop')
+                startup = animation.get('startup', group == 'travel' and animation['name'] in ('welcome', 'welcome_v2'))
+                if type(startup) is not bool: raise ValueError('startup role must be boolean')
                 resources.append(Resource(f'{animation["skin"]}/{animation["name"]}', group, paths,
-                                          animation['runtime_sha256'], size, anchor, fps=fps, loop=loop))
+                                          animation['runtime_sha256'], size, anchor, fps=fps, loop=loop, startup=startup))
             if group in GAME_GROUPS:
                 for entry in manifest.get('assets', []):
                     resources.append(Resource('game/'+entry['id'], group, [scoped(art, entry['path'])], [entry['sha256']],
@@ -120,6 +125,15 @@ def load_resources(art, groups):
                 resources.append(Resource('static/'+entry['id'], group, [scoped(art, entry['path'])], [entry['sha256']],
                                           pair(entry['size'], 'static size', positive=True),
                                           pair(entry['anchor'], 'static anchor'), color_limit=entry['color_limit']))
+    if 'travel' in groups:
+        from generate_boot_presentation import read_presentation
+        selected = read_presentation(art)
+        if selected:
+            previous = [r for r in resources if r.group == 'travel' and r.startup and
+                        r.id.rsplit('/', 1)[-1] in ('welcome', 'welcome_v2')]
+            if len(previous) != 1: raise ValueError('Boot selection requires exactly one old startup welcome')
+            resources.remove(previous[0]); resources.append(selected.resource)
+            manifests.update(selected.dependencies)
     ids, symbols, shared = set(), set(), set()
     for resource in resources:
         if resource.id in ids or resource.symbol in symbols: raise ValueError('Duplicate id or C symbol collision')

@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_rail_wheat__p0",
   "width": 32,
   "height": 32,
@@ -14,7 +14,7 @@
   "keys": [
     0
   ],
-  "data_bytes": 460,
+  "data_bytes": 453,
   "table_bytes": 142,
   "frame_sha256": [
     "d529f11a9027667febff2ad7238a1f04308ffae3adf6622340ec1354142b5bb5"
@@ -37,5 +37,15 @@
       "sha256": "04111181a053208b7090595dc21a5a429dbf3cd8e9a8ab3b803da190c967d6a8"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/rail/wheat",
+      "logical_symbol": "adv_assets_static_tiles_rail_wheat__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

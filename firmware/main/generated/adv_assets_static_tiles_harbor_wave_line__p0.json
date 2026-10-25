@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_harbor_wave_line__p0",
   "width": 32,
   "height": 32,
@@ -35,5 +35,23 @@
       "sha256": "16297e2d826c2942b8ca05d504e486b3e7bd5830dd792db0c5b10c7f2c70d658"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/harbor/wave-line",
+      "logical_symbol": "adv_assets_static_tiles_harbor_wave_line__p0",
+      "offset": [
+        0,
+        0
+      ]
+    },
+    {
+      "resource_id": "static/tiles/sky/wind-ribbon",
+      "logical_symbol": "adv_assets_static_tiles_sky_wind_ribbon__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

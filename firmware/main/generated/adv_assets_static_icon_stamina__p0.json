@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_icon_stamina__p0",
   "width": 16,
   "height": 16,
@@ -14,7 +14,7 @@
   "keys": [
     0
   ],
-  "data_bytes": 144,
+  "data_bytes": 135,
   "table_bytes": 78,
   "frame_sha256": [
     "70ba66f6ae014443e22f982c60f913e338b81ba29e9f5c991e7bd5d2cf25641a"
@@ -37,5 +37,15 @@
       "sha256": "e0217a47fb71230d11e450493eca03c923f61fb74eed0a308e4a488088daeed0"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/icon/stamina",
+      "logical_symbol": "adv_assets_static_icon_stamina__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

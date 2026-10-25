@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_space_ring_planet__p0",
   "width": 32,
   "height": 32,
@@ -16,7 +16,7 @@
   "keys": [
     0
   ],
-  "data_bytes": 308,
+  "data_bytes": 302,
   "table_bytes": 146,
   "frame_sha256": [
     "ba96abc39d4acd127304d7c0723c665fd9440d9dff9269bbea3dbdcd7ba6dc4d"
@@ -39,5 +39,15 @@
       "sha256": "afc8a8d34165b0bebfc9d8557cd6b01dde9686c4b3377a58def77d4efcea6547"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/space/ring-planet",
+      "logical_symbol": "adv_assets_static_tiles_space_ring_planet__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

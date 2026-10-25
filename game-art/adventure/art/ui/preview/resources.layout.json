@@ -1,0 +1,351 @@
+{
+  "space": "native 240x320; text positions are ink top-left, derive C baseline from generated glyph metrics",
+  "dynamic_text": [
+    {
+      "fixture_text": "体力",
+      "anchor_xy": [
+        43,
+        46
+      ],
+      "ink_box": [
+        43,
+        46,
+        67,
+        59
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "氧气",
+      "anchor_xy": [
+        43,
+        80
+      ],
+      "ink_box": [
+        43,
+        80,
+        67,
+        93
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "蒸汽",
+      "anchor_xy": [
+        43,
+        114
+      ],
+      "ink_box": [
+        43,
+        114,
+        67,
+        128
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "精神",
+      "anchor_xy": [
+        43,
+        148
+      ],
+      "ink_box": [
+        43,
+        148,
+        67,
+        162
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "体温",
+      "anchor_xy": [
+        43,
+        182
+      ],
+      "ink_box": [
+        43,
+        182,
+        67,
+        195
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "热气",
+      "anchor_xy": [
+        43,
+        216
+      ],
+      "ink_box": [
+        43,
+        216,
+        67,
+        230
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "燃料",
+      "anchor_xy": [
+        43,
+        250
+      ],
+      "ink_box": [
+        43,
+        250,
+        67,
+        264
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "旅途资源",
+      "anchor_xy": [
+        20,
+        6
+      ],
+      "ink_box": [
+        20,
+        6,
+        92,
+        26
+      ],
+      "size_px": 18,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "left"
+    },
+    {
+      "fixture_text": "章 1/24",
+      "anchor_xy": [
+        226,
+        11
+      ],
+      "ink_box": [
+        185,
+        11,
+        226,
+        25
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "right"
+    },
+    {
+      "fixture_text": "资源归零，本局结束",
+      "anchor_xy": [
+        120,
+        300
+      ],
+      "ink_box": [
+        66,
+        300,
+        174,
+        314
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "center"
+    }
+  ],
+  "cards": [],
+  "assets": [
+    {
+      "path": "resources/icons/stamina.png",
+      "xy": [
+        18,
+        45
+      ]
+    },
+    {
+      "path": "resources/bar-frame.png",
+      "xy": [
+        91,
+        48
+      ]
+    },
+    {
+      "path": "resources/icons/oxygen.png",
+      "xy": [
+        18,
+        79
+      ]
+    },
+    {
+      "path": "resources/bar-frame.png",
+      "xy": [
+        91,
+        82
+      ]
+    },
+    {
+      "path": "resources/icons/steam.png",
+      "xy": [
+        18,
+        113
+      ]
+    },
+    {
+      "path": "resources/bar-frame.png",
+      "xy": [
+        91,
+        116
+      ]
+    },
+    {
+      "path": "resources/icons/spirit.png",
+      "xy": [
+        18,
+        147
+      ]
+    },
+    {
+      "path": "resources/bar-frame.png",
+      "xy": [
+        91,
+        150
+      ]
+    },
+    {
+      "path": "resources/icons/temperature.png",
+      "xy": [
+        18,
+        181
+      ]
+    },
+    {
+      "path": "resources/bar-frame.png",
+      "xy": [
+        91,
+        184
+      ]
+    },
+    {
+      "path": "resources/icons/hot-air.png",
+      "xy": [
+        18,
+        215
+      ]
+    },
+    {
+      "path": "resources/bar-frame.png",
+      "xy": [
+        91,
+        218
+      ]
+    },
+    {
+      "path": "resources/icons/fuel.png",
+      "xy": [
+        18,
+        249
+      ]
+    },
+    {
+      "path": "resources/bar-frame.png",
+      "xy": [
+        91,
+        252
+      ]
+    },
+    {
+      "path": "bars/top.png",
+      "xy": [
+        0,
+        0
+      ]
+    },
+    {
+      "path": "bars/bottom.png",
+      "xy": [
+        0,
+        290
+      ]
+    }
+  ],
+  "numbers": []
+}

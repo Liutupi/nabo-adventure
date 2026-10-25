@@ -1,0 +1,175 @@
+{
+  "space": "native 240x320; text positions are ink top-left, derive C baseline from generated glyph metrics",
+  "dynamic_text": [
+    {
+      "fixture_text": "休息一下",
+      "anchor_xy": [
+        120,
+        108
+      ],
+      "ink_box": [
+        84,
+        108,
+        156,
+        127
+      ],
+      "size_px": 18,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "center"
+    },
+    {
+      "fixture_text": "OK 继续",
+      "anchor_xy": [
+        120,
+        148
+      ],
+      "ink_box": [
+        91,
+        148,
+        150,
+        165
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "center"
+    },
+    {
+      "fixture_text": "下键重新开始",
+      "anchor_xy": [
+        120,
+        180
+      ],
+      "ink_box": [
+        84,
+        180,
+        156,
+        194
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "center"
+    },
+    {
+      "fixture_text": "小火车",
+      "anchor_xy": [
+        20,
+        6
+      ],
+      "ink_box": [
+        20,
+        6,
+        74,
+        25
+      ],
+      "size_px": 18,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "left"
+    },
+    {
+      "fixture_text": "暂停",
+      "anchor_xy": [
+        226,
+        11
+      ],
+      "ink_box": [
+        202,
+        11,
+        226,
+        25
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "right"
+    },
+    {
+      "fixture_text": "上键返回地图",
+      "anchor_xy": [
+        120,
+        300
+      ],
+      "ink_box": [
+        84,
+        300,
+        156,
+        314
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "center"
+    }
+  ],
+  "cards": [
+    {
+      "family": "popup",
+      "state": "normal",
+      "xy": [
+        24,
+        86
+      ],
+      "size": [
+        192,
+        142
+      ],
+      "dynamic_text": "#203849"
+    }
+  ],
+  "assets": [
+    {
+      "path": "bars/top.png",
+      "xy": [
+        0,
+        0
+      ]
+    },
+    {
+      "path": "bars/bottom.png",
+      "xy": [
+        0,
+        290
+      ]
+    }
+  ],
+  "numbers": []
+}

@@ -1,0 +1,689 @@
+{
+  "fps": 12,
+  "skins": {
+    "space_a": {
+      "cabin_idle": [
+        {
+          "frame": 0,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0.0,
+            "upper_arm_r": -0.0,
+            "utility_hose": 0.0,
+            "forearm_hand_r": 0.0
+          }
+        },
+        {
+          "frame": 1,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 1.0392304845413263,
+            "upper_arm_r": -0.8660254037844386,
+            "utility_hose": 1.5588457268119895,
+            "forearm_hand_r": -0.3999999999999999
+          }
+        },
+        {
+          "frame": 2,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 1.0392304845413265,
+            "upper_arm_r": -0.8660254037844387,
+            "utility_hose": 1.5588457268119897,
+            "forearm_hand_r": -1.2
+          }
+        },
+        {
+          "frame": 3,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 1.4695761589768238e-16,
+            "upper_arm_r": -1.2246467991473532e-16,
+            "utility_hose": 2.2043642384652358e-16,
+            "forearm_hand_r": -1.6
+          }
+        },
+        {
+          "frame": 4,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": -1.039230484541326,
+            "upper_arm_r": 0.8660254037844385,
+            "utility_hose": -1.5588457268119893,
+            "forearm_hand_r": -1.2000000000000004
+          }
+        },
+        {
+          "frame": 5,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": -1.0392304845413263,
+            "upper_arm_r": 0.8660254037844386,
+            "utility_hose": -1.5588457268119895,
+            "forearm_hand_r": -0.3999999999999999
+          }
+        }
+      ],
+      "jet": [
+        {
+          "frame": 0,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0.0,
+            "upper_arm_r": -0.0,
+            "forearm_hand_l": 0.0,
+            "forearm_hand_r": -0.0,
+            "utility_hose": 0.0
+          }
+        },
+        {
+          "frame": 1,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 5.0,
+            "upper_arm_r": -5.0,
+            "forearm_hand_l": 8.0,
+            "forearm_hand_r": -8.0,
+            "utility_hose": 4.0
+          }
+        },
+        {
+          "frame": 2,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 6.123233995736766e-16,
+            "upper_arm_r": -6.123233995736766e-16,
+            "forearm_hand_l": 9.797174393178826e-16,
+            "forearm_hand_r": -9.797174393178826e-16,
+            "utility_hose": 4.898587196589413e-16
+          }
+        },
+        {
+          "frame": 3,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": -5.0,
+            "upper_arm_r": 5.0,
+            "forearm_hand_l": -8.0,
+            "forearm_hand_r": 8.0,
+            "utility_hose": -4.0
+          }
+        }
+      ],
+      "land": [
+        {
+          "frame": 0,
+          "view": "front",
+          "angles": {
+            "thigh_l": 0.0,
+            "shin_foot_l": -0.0,
+            "thigh_r": -0.0,
+            "shin_foot_r": 0.0,
+            "upper_arm_l": 0.0,
+            "upper_arm_r": -0.0,
+            "utility_hose": 0.0
+          }
+        },
+        {
+          "frame": 1,
+          "view": "front",
+          "angles": {
+            "thigh_l": 5.877852522924732,
+            "shin_foot_l": -9.40456403667957,
+            "thigh_r": -5.877852522924732,
+            "shin_foot_r": 9.40456403667957,
+            "upper_arm_l": 4.702282018339785,
+            "upper_arm_r": -4.702282018339785,
+            "utility_hose": 1.7633557568774194
+          }
+        },
+        {
+          "frame": 2,
+          "view": "front",
+          "angles": {
+            "thigh_l": 9.510565162951535,
+            "shin_foot_l": -15.216904260722456,
+            "thigh_r": -9.510565162951535,
+            "shin_foot_r": 15.216904260722456,
+            "upper_arm_l": 7.608452130361228,
+            "upper_arm_r": -7.608452130361228,
+            "utility_hose": 2.8531695488854605
+          }
+        },
+        {
+          "frame": 3,
+          "view": "front",
+          "angles": {
+            "thigh_l": 9.510565162951536,
+            "shin_foot_l": -15.216904260722458,
+            "thigh_r": -9.510565162951536,
+            "shin_foot_r": 15.216904260722458,
+            "upper_arm_l": 7.608452130361229,
+            "upper_arm_r": -7.608452130361229,
+            "utility_hose": 2.853169548885461
+          }
+        },
+        {
+          "frame": 4,
+          "view": "front",
+          "angles": {
+            "thigh_l": 5.877852522924733,
+            "shin_foot_l": -9.404564036679572,
+            "thigh_r": -5.877852522924733,
+            "shin_foot_r": 9.404564036679572,
+            "upper_arm_l": 4.702282018339786,
+            "upper_arm_r": -4.702282018339786,
+            "utility_hose": 1.7633557568774196
+          }
+        },
+        {
+          "frame": 5,
+          "view": "front",
+          "angles": {
+            "thigh_l": 1.2246467991473533e-15,
+            "shin_foot_l": -1.959434878635765e-15,
+            "thigh_r": -1.2246467991473533e-15,
+            "shin_foot_r": 1.959434878635765e-15,
+            "upper_arm_l": 9.797174393178826e-16,
+            "upper_arm_r": -9.797174393178826e-16,
+            "utility_hose": 3.6739403974420594e-16
+          }
+        }
+      ],
+      "hard_land": [
+        {
+          "frame": 0,
+          "view": "front",
+          "angles": {
+            "thigh_l": 0,
+            "shin_foot_l": 0,
+            "thigh_r": 0,
+            "shin_foot_r": 0,
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "utility_hose": 0
+          }
+        },
+        {
+          "frame": 1,
+          "view": "front",
+          "angles": {
+            "thigh_l": 9.0,
+            "shin_foot_l": -15.0,
+            "thigh_r": -9.0,
+            "shin_foot_r": 15.0,
+            "upper_arm_l": 24.0,
+            "forearm_hand_l": 16.0,
+            "upper_arm_r": -20.0,
+            "forearm_hand_r": -11.0,
+            "utility_hose": 4.0
+          }
+        },
+        {
+          "frame": 2,
+          "view": "front",
+          "angles": {
+            "thigh_l": 18,
+            "shin_foot_l": -30,
+            "thigh_r": -18,
+            "shin_foot_r": 30,
+            "upper_arm_l": 48,
+            "forearm_hand_l": 32,
+            "upper_arm_r": -40,
+            "forearm_hand_r": -22,
+            "utility_hose": 8
+          }
+        },
+        {
+          "frame": 3,
+          "view": "front",
+          "angles": {
+            "thigh_l": 12.959999999999999,
+            "shin_foot_l": -21.599999999999998,
+            "thigh_r": -12.959999999999999,
+            "shin_foot_r": 21.599999999999998,
+            "upper_arm_l": 34.56,
+            "forearm_hand_l": 23.04,
+            "upper_arm_r": -28.799999999999997,
+            "forearm_hand_r": -15.84,
+            "utility_hose": 5.76
+          }
+        },
+        {
+          "frame": 4,
+          "view": "front",
+          "angles": {
+            "thigh_l": 7.56,
+            "shin_foot_l": -12.6,
+            "thigh_r": -7.56,
+            "shin_foot_r": 12.6,
+            "upper_arm_l": 20.16,
+            "forearm_hand_l": 13.44,
+            "upper_arm_r": -16.8,
+            "forearm_hand_r": -9.24,
+            "utility_hose": 3.36
+          }
+        },
+        {
+          "frame": 5,
+          "view": "front",
+          "angles": {
+            "thigh_l": 3.6,
+            "shin_foot_l": -6.0,
+            "thigh_r": -3.6,
+            "shin_foot_r": 6.0,
+            "upper_arm_l": 9.600000000000001,
+            "forearm_hand_l": 6.4,
+            "upper_arm_r": -8.0,
+            "forearm_hand_r": -4.4,
+            "utility_hose": 1.6
+          }
+        },
+        {
+          "frame": 6,
+          "view": "front",
+          "angles": {
+            "thigh_l": 1.2600000000000002,
+            "shin_foot_l": -2.1,
+            "thigh_r": -1.2600000000000002,
+            "shin_foot_r": 2.1,
+            "upper_arm_l": 3.3600000000000003,
+            "forearm_hand_l": 2.24,
+            "upper_arm_r": -2.8000000000000003,
+            "forearm_hand_r": -1.54,
+            "utility_hose": 0.56
+          }
+        },
+        {
+          "frame": 7,
+          "view": "front",
+          "angles": {
+            "thigh_l": 0,
+            "shin_foot_l": 0,
+            "thigh_r": 0,
+            "shin_foot_r": 0,
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "utility_hose": 0
+          }
+        }
+      ],
+      "plant_flag": [
+        {
+          "frame": 0,
+          "view": "front",
+          "angles": {
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "upper_arm_l": 0,
+            "utility_hose": 0
+          }
+        },
+        {
+          "frame": 1,
+          "view": "front",
+          "angles": {
+            "upper_arm_r": -9.5,
+            "forearm_hand_r": -3.75,
+            "upper_arm_l": 1.0,
+            "utility_hose": -0.75
+          }
+        },
+        {
+          "frame": 2,
+          "view": "front",
+          "angles": {
+            "upper_arm_r": -22.8,
+            "forearm_hand_r": -9,
+            "upper_arm_l": 2.4,
+            "utility_hose": -1.7999999999999998
+          }
+        },
+        {
+          "frame": 3,
+          "view": "front",
+          "angles": {
+            "upper_arm_r": -38,
+            "forearm_hand_r": -15,
+            "upper_arm_l": 4,
+            "utility_hose": -3
+          }
+        },
+        {
+          "frame": 4,
+          "view": "front",
+          "angles": {
+            "upper_arm_r": -33,
+            "forearm_hand_r": -8,
+            "upper_arm_l": 4,
+            "utility_hose": -3
+          }
+        },
+        {
+          "frame": 5,
+          "view": "front",
+          "angles": {
+            "upper_arm_r": -24,
+            "forearm_hand_r": 0,
+            "upper_arm_l": 2.6,
+            "utility_hose": -1.9500000000000002
+          }
+        },
+        {
+          "frame": 6,
+          "view": "front",
+          "angles": {
+            "upper_arm_r": -11.4,
+            "forearm_hand_r": -4.5,
+            "upper_arm_l": 1.2,
+            "utility_hose": -0.8999999999999999
+          }
+        },
+        {
+          "frame": 7,
+          "view": "front",
+          "angles": {
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "upper_arm_l": 0,
+            "utility_hose": 0
+          }
+        }
+      ],
+      "settlement_cheer": [
+        {
+          "frame": 0,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "utility_hose": 0
+          }
+        },
+        {
+          "frame": 1,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 28.0,
+            "forearm_hand_l": 9.0,
+            "upper_arm_r": -17.0,
+            "forearm_hand_r": -6.25,
+            "utility_hose": 1.0
+          }
+        },
+        {
+          "frame": 2,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 72.8,
+            "forearm_hand_l": 23.400000000000002,
+            "upper_arm_r": -44.2,
+            "forearm_hand_r": -16.25,
+            "utility_hose": 2.6
+          }
+        },
+        {
+          "frame": 3,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 112,
+            "forearm_hand_l": 36,
+            "upper_arm_r": -68,
+            "forearm_hand_r": -25,
+            "utility_hose": 4
+          }
+        },
+        {
+          "frame": 4,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 106.39999999999999,
+            "forearm_hand_l": 34.199999999999996,
+            "upper_arm_r": -64.6,
+            "forearm_hand_r": -23.75,
+            "utility_hose": 3.8
+          }
+        },
+        {
+          "frame": 5,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 67.2,
+            "forearm_hand_l": 21.599999999999998,
+            "upper_arm_r": -40.8,
+            "forearm_hand_r": -15.0,
+            "utility_hose": 2.4
+          }
+        },
+        {
+          "frame": 6,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 22.400000000000002,
+            "forearm_hand_l": 7.2,
+            "upper_arm_r": -13.600000000000001,
+            "forearm_hand_r": -5.0,
+            "utility_hose": 0.8
+          }
+        },
+        {
+          "frame": 7,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "utility_hose": 0
+          }
+        }
+      ]
+    },
+    "space_b": {
+      "cabin_idle": [
+        {
+          "frame": 0,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0.0,
+            "upper_arm_r": -0.0,
+            "utility_hose": 0.0,
+            "forearm_hand_r": 0.0
+          }
+        },
+        {
+          "frame": 1,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 1.0392304845413263,
+            "upper_arm_r": -0.8660254037844386,
+            "utility_hose": 1.5588457268119895,
+            "forearm_hand_r": -0.3999999999999999
+          }
+        },
+        {
+          "frame": 2,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 1.0392304845413265,
+            "upper_arm_r": -0.8660254037844387,
+            "utility_hose": 1.5588457268119897,
+            "forearm_hand_r": -1.2
+          }
+        },
+        {
+          "frame": 3,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 1.4695761589768238e-16,
+            "upper_arm_r": -1.2246467991473532e-16,
+            "utility_hose": 2.2043642384652358e-16,
+            "forearm_hand_r": -1.6
+          }
+        },
+        {
+          "frame": 4,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": -1.039230484541326,
+            "upper_arm_r": 0.8660254037844385,
+            "utility_hose": -1.5588457268119893,
+            "forearm_hand_r": -1.2000000000000004
+          }
+        },
+        {
+          "frame": 5,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": -1.0392304845413263,
+            "upper_arm_r": 0.8660254037844386,
+            "utility_hose": -1.5588457268119895,
+            "forearm_hand_r": -0.3999999999999999
+          }
+        }
+      ],
+      "jet": [
+        {
+          "frame": 0,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0.0,
+            "upper_arm_r": -0.0,
+            "forearm_hand_l": 0.0,
+            "forearm_hand_r": -0.0,
+            "utility_hose": 0.0
+          }
+        },
+        {
+          "frame": 1,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 5.0,
+            "upper_arm_r": -5.0,
+            "forearm_hand_l": 8.0,
+            "forearm_hand_r": -8.0,
+            "utility_hose": 4.0
+          }
+        },
+        {
+          "frame": 2,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 6.123233995736766e-16,
+            "upper_arm_r": -6.123233995736766e-16,
+            "forearm_hand_l": 9.797174393178826e-16,
+            "forearm_hand_r": -9.797174393178826e-16,
+            "utility_hose": 4.898587196589413e-16
+          }
+        },
+        {
+          "frame": 3,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": -5.0,
+            "upper_arm_r": 5.0,
+            "forearm_hand_l": -8.0,
+            "forearm_hand_r": 8.0,
+            "utility_hose": -4.0
+          }
+        }
+      ],
+      "settlement_cheer": [
+        {
+          "frame": 0,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "utility_hose": 0
+          }
+        },
+        {
+          "frame": 1,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 28.0,
+            "forearm_hand_l": 9.0,
+            "upper_arm_r": -17.0,
+            "forearm_hand_r": -6.25,
+            "utility_hose": 1.0
+          }
+        },
+        {
+          "frame": 2,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 72.8,
+            "forearm_hand_l": 23.400000000000002,
+            "upper_arm_r": -44.2,
+            "forearm_hand_r": -16.25,
+            "utility_hose": 2.6
+          }
+        },
+        {
+          "frame": 3,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 112,
+            "forearm_hand_l": 36,
+            "upper_arm_r": -68,
+            "forearm_hand_r": -25,
+            "utility_hose": 4
+          }
+        },
+        {
+          "frame": 4,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 106.39999999999999,
+            "forearm_hand_l": 34.199999999999996,
+            "upper_arm_r": -64.6,
+            "forearm_hand_r": -23.75,
+            "utility_hose": 3.8
+          }
+        },
+        {
+          "frame": 5,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 67.2,
+            "forearm_hand_l": 21.599999999999998,
+            "upper_arm_r": -40.8,
+            "forearm_hand_r": -15.0,
+            "utility_hose": 2.4
+          }
+        },
+        {
+          "frame": 6,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 22.400000000000002,
+            "forearm_hand_l": 7.2,
+            "upper_arm_r": -13.600000000000001,
+            "forearm_hand_r": -5.0,
+            "utility_hose": 0.8
+          }
+        },
+        {
+          "frame": 7,
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "utility_hose": 0
+          }
+        }
+      ]
+    }
+  }
+}

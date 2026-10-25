@@ -1,0 +1,272 @@
+{
+  "manifest_sha256": "e02927badea6222ca97a014b5f9adaaa0090405524c33b6238df2083fef42c0e",
+  "logical_events": 34,
+  "unique_runtime_frames": 32,
+  "canvas": [
+    74,
+    121
+  ],
+  "anchor": [
+    29,
+    121
+  ],
+  "visible_palette_colours": 48,
+  "binary_alpha": true,
+  "source_canvas": [
+    256,
+    256
+  ],
+  "source_clip_boundaries": "all alpha>=128 bboxes strictly inside source canvas",
+  "exact_ticks": 53,
+  "exact_seconds": 4.416666666666667,
+  "voice_unchanged": true,
+  "voice_sha256": "38b4eb8435d6a7915d17af2083a696acfa2660244be1bf7e65dc78251f0c468b",
+  "timeline_table_bytes": 152,
+  "closed_eye_ticks": 3,
+  "half_eye_ticks": 5,
+  "source_head_policy": "Official whole-head native expressions; rigid BICUBIC rotation, no mirror/nonuniform deformation or new mouth drawing",
+  "seams": [
+    {
+      "label": "ready",
+      "state": "closed",
+      "overlap_pixels": 5,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "bag-approach",
+      "state": "closed",
+      "overlap_pixels": 7,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "take-strap",
+      "state": "closed",
+      "overlap_pixels": 5,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "bag-anticipation",
+      "state": "closed",
+      "overlap_pixels": 9,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "look-up",
+      "state": "closed",
+      "overlap_pixels": 6,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "raise-to-hat",
+      "state": "closed",
+      "overlap_pixels": 6,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "hat-approach-bridge",
+      "state": "closed",
+      "overlap_pixels": 6,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "touch-brim",
+      "state": "closed",
+      "overlap_pixels": 7,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "hat-tip",
+      "state": "closed",
+      "overlap_pixels": 7,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "leave-brim-bridge",
+      "state": "closed",
+      "overlap_pixels": 4,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "release-hat",
+      "state": "closed",
+      "overlap_pixels": 8,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "palm-opening-bridge",
+      "state": "half",
+      "overlap_pixels": 21,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "open-palm",
+      "state": "open",
+      "overlap_pixels": 22,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "wave-out",
+      "state": "open",
+      "overlap_pixels": 23,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "wave-in",
+      "state": "open",
+      "overlap_pixels": 24,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "wave-change",
+      "state": "open",
+      "overlap_pixels": 23,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "wave-return",
+      "state": "open",
+      "overlap_pixels": 23,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "greet-open",
+      "state": "open",
+      "overlap_pixels": 22,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "lower-wave",
+      "state": "open",
+      "overlap_pixels": 23,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "offer-hand",
+      "state": "open",
+      "overlap_pixels": 64,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "invitation-bridge",
+      "state": "open",
+      "overlap_pixels": 58,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "invite",
+      "state": "open",
+      "overlap_pixels": 37,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "invite-hold",
+      "state": "open",
+      "overlap_pixels": 45,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "invite-nod",
+      "state": "open",
+      "overlap_pixels": 45,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "invite-rise",
+      "state": "open",
+      "overlap_pixels": 53,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "invitation-settle",
+      "state": "open",
+      "overlap_pixels": 53,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "withdraw",
+      "state": "open",
+      "overlap_pixels": 194,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "palm-closing-bridge",
+      "state": "half",
+      "overlap_pixels": 153,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "return-to-cuff",
+      "state": "closed",
+      "overlap_pixels": 6,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "toe-to-route",
+      "state": "closed",
+      "overlap_pixels": 8,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "departure-nod",
+      "state": "closed",
+      "overlap_pixels": 8,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "steady",
+      "state": "closed",
+      "overlap_pixels": 6,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "idle-arrival",
+      "state": "closed",
+      "overlap_pixels": 5,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    },
+    {
+      "label": "idle-hold",
+      "state": "closed",
+      "overlap_pixels": 5,
+      "closest_local_pixel_centres": 0.0,
+      "visible_gap_estimate_px": 0
+    }
+  ],
+  "max_local_source_seam_gap": 0,
+  "dynamic_review": "Native contacts viewed; continuous MP4 review delegated to root/host. Browser file:// attempt rejected by URL policy; no workaround attempted.",
+  "remaining_limits": "Fixed original neutral mouth and 2D limb pivots remain less expressive than prior Grok footage; no claim of matching its full deformation.",
+  "budget": "Not accepted against 160KiB yet; root/host lossless PoC owns current budget. Earlier packing JSON refers to prior 27-image V2, not this V2a."
+}

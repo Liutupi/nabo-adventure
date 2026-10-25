@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_travel_turn_right__p0",
   "width": 22,
   "height": 48,
@@ -79,7 +79,7 @@
     0,
     0
   ],
-  "data_bytes": 6168,
+  "data_bytes": 4761,
   "table_bytes": 1316,
   "frame_sha256": [
     "c1ca8a5bc8def9e235a5296d3e522d9560b0cc249f8b7387c445587c880bae54",
@@ -132,5 +132,15 @@
       "sha256": "b3ce32133dfa613776ea7bae89002287fe62b19f0c192d8ac3b969748514047d"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "travel/turn_right",
+      "logical_symbol": "adv_assets_travel_turn_right__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

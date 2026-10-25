@@ -1,0 +1,45 @@
+{
+  "calls": [
+    {
+      "skin": "night_a",
+      "source_sha256": "0a90f3c473778b2e9a1e9f02db53da1c107f0ee9805d632872b572853996588f",
+      "canvas": [
+        1774,
+        887
+      ],
+      "prompt": "games/night/source/night_a-prompt.txt",
+      "generator": "built-in image_gen image edit",
+      "references": [
+        "reference/nabo-idle-original.png",
+        "design/round1/v2/01-hiker-design-board.png"
+      ],
+      "alpha_zero_pixels": 685505,
+      "alpha_1_to_15_pixels": 34190,
+      "source_png_preserved": true,
+      "generated_head_discarded": true,
+      "final_head": "read-only common facing head + neutral expression; local collar exclusion only",
+      "animation": "deterministic source-pixel SVG layer transforms; no AI frame generation"
+    },
+    {
+      "skin": "night_b",
+      "source_sha256": "7d55e93e2dc253fd8257001d237b88a9cd17fc6329d603d8e37e85678e80d421",
+      "canvas": [
+        1774,
+        887
+      ],
+      "prompt": "games/night/source/night_b-prompt.txt",
+      "generator": "built-in image_gen image edit",
+      "references": [
+        "reference/nabo-idle-original.png",
+        "design/round1/v2/01-hiker-design-board.png"
+      ],
+      "alpha_zero_pixels": 692602,
+      "alpha_1_to_15_pixels": 51525,
+      "source_png_preserved": true,
+      "generated_head_discarded": true,
+      "final_head": "read-only common facing head + neutral expression; local collar exclusion only",
+      "animation": "deterministic source-pixel SVG layer transforms; no AI frame generation"
+    }
+  ],
+  "identity_acceptance": "no new user identity approval claimed; final heads reuse frozen approved common rig"
+}

@@ -1,0 +1,1391 @@
+{
+  "schema": "adventure-assets-package-v1",
+  "format": "adv-row-rle-v1",
+  "groups": {
+    "climb": {
+      "rle_bytes": 96584,
+      "table_bytes": 31154,
+      "descriptor_catalog_estimate_c3": 2563,
+      "resources": 29,
+      "pieces": 29,
+      "frames": 113,
+      "static_bytes_estimate_c3": 130301
+    }
+  },
+  "files": [
+    "adv_assets_catalog.c",
+    "adv_assets_catalog.h",
+    "adv_assets_climb_a_charge_left__p0.c",
+    "adv_assets_climb_a_charge_left__p0.h",
+    "adv_assets_climb_a_charge_left__p0.json",
+    "adv_assets_climb_a_charge_right__p0.c",
+    "adv_assets_climb_a_charge_right__p0.h",
+    "adv_assets_climb_a_charge_right__p0.json",
+    "adv_assets_climb_a_grip_idle_left__p0.c",
+    "adv_assets_climb_a_grip_idle_left__p0.h",
+    "adv_assets_climb_a_grip_idle_left__p0.json",
+    "adv_assets_climb_a_grip_idle_right__p0.c",
+    "adv_assets_climb_a_grip_idle_right__p0.h",
+    "adv_assets_climb_a_grip_idle_right__p0.json",
+    "adv_assets_climb_a_jump_left__p0.c",
+    "adv_assets_climb_a_jump_left__p0.h",
+    "adv_assets_climb_a_jump_left__p0.json",
+    "adv_assets_climb_a_jump_right__p0.c",
+    "adv_assets_climb_a_jump_right__p0.h",
+    "adv_assets_climb_a_jump_right__p0.json",
+    "adv_assets_climb_a_settlement_cheer__p0.c",
+    "adv_assets_climb_a_settlement_cheer__p0.h",
+    "adv_assets_climb_a_settlement_cheer__p0.json",
+    "adv_assets_climb_a_slide_left__p0.c",
+    "adv_assets_climb_a_slide_left__p0.h",
+    "adv_assets_climb_a_slide_left__p0.json",
+    "adv_assets_climb_a_slide_right__p0.c",
+    "adv_assets_climb_a_slide_right__p0.h",
+    "adv_assets_climb_a_slide_right__p0.json",
+    "adv_assets_climb_a_summit_cheer_left__p0.c",
+    "adv_assets_climb_a_summit_cheer_left__p0.h",
+    "adv_assets_climb_a_summit_cheer_left__p0.json",
+    "adv_assets_climb_a_summit_cheer_right__p0.c",
+    "adv_assets_climb_a_summit_cheer_right__p0.h",
+    "adv_assets_climb_a_summit_cheer_right__p0.json",
+    "adv_assets_climb_a_switch_grab_left__p0.c",
+    "adv_assets_climb_a_switch_grab_left__p0.h",
+    "adv_assets_climb_a_switch_grab_left__p0.json",
+    "adv_assets_climb_a_switch_grab_right__p0.c",
+    "adv_assets_climb_a_switch_grab_right__p0.h",
+    "adv_assets_climb_a_switch_grab_right__p0.json",
+    "adv_assets_climb_b_grip_idle_left__p0.c",
+    "adv_assets_climb_b_grip_idle_left__p0.h",
+    "adv_assets_climb_b_grip_idle_left__p0.json",
+    "adv_assets_climb_b_grip_idle_right__p0.c",
+    "adv_assets_climb_b_grip_idle_right__p0.h",
+    "adv_assets_climb_b_grip_idle_right__p0.json",
+    "adv_assets_climb_b_settlement_cheer__p0.c",
+    "adv_assets_climb_b_settlement_cheer__p0.h",
+    "adv_assets_climb_b_settlement_cheer__p0.json",
+    "adv_assets_game_climb_props_canteen__p0.c",
+    "adv_assets_game_climb_props_canteen__p0.h",
+    "adv_assets_game_climb_props_canteen__p0.json",
+    "adv_assets_game_climb_props_falling_rock__p0.c",
+    "adv_assets_game_climb_props_falling_rock__p0.h",
+    "adv_assets_game_climb_props_falling_rock__p0.json",
+    "adv_assets_game_climb_props_hold_fragile__p0.c",
+    "adv_assets_game_climb_props_hold_fragile__p0.h",
+    "adv_assets_game_climb_props_hold_fragile__p0.json",
+    "adv_assets_game_climb_props_hold_ice__p0.c",
+    "adv_assets_game_climb_props_hold_ice__p0.h",
+    "adv_assets_game_climb_props_hold_ice__p0.json",
+    "adv_assets_game_climb_props_hold_normal__p0.c",
+    "adv_assets_game_climb_props_hold_normal__p0.h",
+    "adv_assets_game_climb_props_hold_normal__p0.json",
+    "adv_assets_game_climb_shared_snow_drift__p0.c",
+    "adv_assets_game_climb_shared_snow_drift__p0.h",
+    "adv_assets_game_climb_shared_snow_drift__p0.json",
+    "adv_assets_game_climb_shared_snow_mound__p0.c",
+    "adv_assets_game_climb_shared_snow_mound__p0.h",
+    "adv_assets_game_climb_shared_snow_mound__p0.json",
+    "adv_assets_game_climb_tiles_cold_0__p0.c",
+    "adv_assets_game_climb_tiles_cold_0__p0.h",
+    "adv_assets_game_climb_tiles_cold_0__p0.json",
+    "adv_assets_game_climb_tiles_cold_1__p0.c",
+    "adv_assets_game_climb_tiles_cold_1__p0.h",
+    "adv_assets_game_climb_tiles_cold_1__p0.json",
+    "adv_assets_game_climb_tiles_grey_0__p0.c",
+    "adv_assets_game_climb_tiles_grey_0__p0.h",
+    "adv_assets_game_climb_tiles_grey_0__p0.json",
+    "adv_assets_game_climb_tiles_grey_1__p0.c",
+    "adv_assets_game_climb_tiles_grey_1__p0.h",
+    "adv_assets_game_climb_tiles_grey_1__p0.json",
+    "adv_assets_game_climb_tiles_snow_0__p0.c",
+    "adv_assets_game_climb_tiles_snow_0__p0.h",
+    "adv_assets_game_climb_tiles_snow_0__p0.json",
+    "adv_assets_game_climb_tiles_snow_1__p0.c",
+    "adv_assets_game_climb_tiles_snow_1__p0.h",
+    "adv_assets_game_climb_tiles_snow_1__p0.json",
+    "adv_assets_generated.json"
+  ],
+  "source_manifests_sha256": {
+    "climb-manifest.json": "d2eecac332e1f45e02bdba1591f5ef1474562cbc11978a7cf2c49b94e8cc3b71"
+  },
+  "source_frames": [
+    {
+      "id": "climb_a/charge_left",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\charge_left\\000.png",
+          "sha256": "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\charge_left\\001.png",
+          "sha256": "1980f428559bcdd206f34a2cd3bca5725fdbde2e111d71485d55b957e6831d6b"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\charge_left\\002.png",
+          "sha256": "04f8dc1d83ed706cbf3c222a4bb3988ee1b3d85ec076830c40dd1c7e21611c35"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\charge_left\\003.png",
+          "sha256": "9d85dfcc83f29be679ed2ad6ae62a36f2908da78d483388f18c40bee3c16c224"
+        }
+      ],
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_a_charge_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            60,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_a/charge_right",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\charge_right\\000.png",
+          "sha256": "98540983e42798164ca34de5ebc5fb309b213c1b49ffff9af3d13648bcf44c75"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\charge_right\\001.png",
+          "sha256": "e3fe80fea22495e3c6c42baa3523a5d559809a75d071f8dacd67c56a06c376ed"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\charge_right\\002.png",
+          "sha256": "3a441e2048478fae8abf9565f5c067db4c70e79eaf5ab713c5158485a102c9ac"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\charge_right\\003.png",
+          "sha256": "b081849a7a10d59830e8c048f6ac5a311572367bf4a6731cd41a216b9d5bf6a8"
+        }
+      ],
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_a_charge_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            60,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_a/grip_idle_left",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\grip_idle_left\\000.png",
+          "sha256": "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\grip_idle_left\\001.png",
+          "sha256": "0971d2fc7ec7c76ab98c97c546ba8aa13c8f8cfb88b154a95dba42e152ceefac"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\grip_idle_left\\002.png",
+          "sha256": "0971d2fc7ec7c76ab98c97c546ba8aa13c8f8cfb88b154a95dba42e152ceefac"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\grip_idle_left\\003.png",
+          "sha256": "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\grip_idle_left\\004.png",
+          "sha256": "d6bc0f65c4935d4f9e3f0c6b80f26c8e0efb95fd6800d488909c20886e035ef4"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\grip_idle_left\\005.png",
+          "sha256": "d6bc0f65c4935d4f9e3f0c6b80f26c8e0efb95fd6800d488909c20886e035ef4"
+        }
+      ],
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_a_grip_idle_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            60,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_a/grip_idle_right",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\grip_idle_right\\000.png",
+          "sha256": "98540983e42798164ca34de5ebc5fb309b213c1b49ffff9af3d13648bcf44c75"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\grip_idle_right\\001.png",
+          "sha256": "0a0e0935a59afe361dae8aa2695315b741c8890c8a3fffd6dc23e7f9d10b7bd8"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\grip_idle_right\\002.png",
+          "sha256": "0a0e0935a59afe361dae8aa2695315b741c8890c8a3fffd6dc23e7f9d10b7bd8"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\grip_idle_right\\003.png",
+          "sha256": "98540983e42798164ca34de5ebc5fb309b213c1b49ffff9af3d13648bcf44c75"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\grip_idle_right\\004.png",
+          "sha256": "dd0333cc99f307cd78886034c25ad70ee88f920f5c175c36477927d8b45b6ba6"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\grip_idle_right\\005.png",
+          "sha256": "dd0333cc99f307cd78886034c25ad70ee88f920f5c175c36477927d8b45b6ba6"
+        }
+      ],
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_a_grip_idle_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            60,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_a/jump_left",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\jump_left\\000.png",
+          "sha256": "9d85dfcc83f29be679ed2ad6ae62a36f2908da78d483388f18c40bee3c16c224"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\jump_left\\001.png",
+          "sha256": "8a2f04eb45d330dcd2b46a43ef8954bf056d1b17a4d6a2252152b1c8511b4fa5"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\jump_left\\002.png",
+          "sha256": "06121861475e3a4e276dbd6e756e62fc48c7c4a1d90e31522d90ef78a6ebd893"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\jump_left\\003.png",
+          "sha256": "a2b4cb10f104e7cf20a27e174c01322fd750a6649d40ec8b6b54e55d6581cbcc"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\jump_left\\004.png",
+          "sha256": "283e7fbea07009f19b277fe38f4c19f2be116b17f4b39e0db929d0375a269d1f"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\jump_left\\005.png",
+          "sha256": "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805"
+        }
+      ],
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_a_jump_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            60,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_a/jump_right",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\jump_right\\000.png",
+          "sha256": "b081849a7a10d59830e8c048f6ac5a311572367bf4a6731cd41a216b9d5bf6a8"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\jump_right\\001.png",
+          "sha256": "5376245fa78d0c80ad979867d91ffeec29549772409bf35fd47d854ad61f46cc"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\jump_right\\002.png",
+          "sha256": "fec72d6f0f55ebbe6cd3c11a1d4271637060ba57ed2c49101b1de96d9af9978c"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\jump_right\\003.png",
+          "sha256": "b2f5f53f0273f035cb7537c71c29a7b6d2113201ed0ed64457131399106830bc"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\jump_right\\004.png",
+          "sha256": "ea6cbf70ccff71e3fe72b340e07175383711408a5b556c2cf3c856674663ba9f"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\jump_right\\005.png",
+          "sha256": "98540983e42798164ca34de5ebc5fb309b213c1b49ffff9af3d13648bcf44c75"
+        }
+      ],
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_a_jump_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            60,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_a/settlement_cheer",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\settlement_cheer\\000.png",
+          "sha256": "a5b1f9eb7898d15fdb77bfd57c4f2e0d0ad795400be0192df9f3551354eba247"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\settlement_cheer\\001.png",
+          "sha256": "1de790f7d00ed9896d7d4fd3154304c9ef24ac606860bfcc6eb9985a9eeba91f"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\settlement_cheer\\002.png",
+          "sha256": "45e7da6c76837dd1b9bc95fb370cf0b52adfaecaa546dc39202598e0ded07a15"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\settlement_cheer\\003.png",
+          "sha256": "17724d400bb3727eefb0b05f77ce4573defad2827dab66ede8ec0c27fa7c9ffc"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\settlement_cheer\\004.png",
+          "sha256": "475bc296cb2b48587cd3fef5807414fe4f8dd7c41371ef265d465188c78dd8c3"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\settlement_cheer\\005.png",
+          "sha256": "2d0a02de988b6a506e13f002032bb7ba7fb019a6d97da4a260ad23a1b4bdf15c"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\settlement_cheer\\006.png",
+          "sha256": "f00a2d1229eacea796db5e35a3015596c2ce7f58463065012115ad9895189f39"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\settlement_cheer\\007.png",
+          "sha256": "a5b1f9eb7898d15fdb77bfd57c4f2e0d0ad795400be0192df9f3551354eba247"
+        }
+      ],
+      "canvas": [
+        72,
+        78
+      ],
+      "anchor": [
+        36,
+        75
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_a_settlement_cheer__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            72,
+            78
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_a/slide_left",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\slide_left\\000.png",
+          "sha256": "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\slide_left\\001.png",
+          "sha256": "4667a09bbb0e8dd1afebe53940cf7f17fcdeecdb6cd7795f1431eb3386208f1f"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\slide_left\\002.png",
+          "sha256": "ac056a69ac01efab48717bfed9660602c58474a2be7f4c0394153ee2e5dbf9f9"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\slide_left\\003.png",
+          "sha256": "ac056a69ac01efab48717bfed9660602c58474a2be7f4c0394153ee2e5dbf9f9"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\slide_left\\004.png",
+          "sha256": "4667a09bbb0e8dd1afebe53940cf7f17fcdeecdb6cd7795f1431eb3386208f1f"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\slide_left\\005.png",
+          "sha256": "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805"
+        }
+      ],
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_a_slide_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            60,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_a/slide_right",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\slide_right\\000.png",
+          "sha256": "98540983e42798164ca34de5ebc5fb309b213c1b49ffff9af3d13648bcf44c75"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\slide_right\\001.png",
+          "sha256": "2c3935bad3bacf0fe0150ea2b573a4e9ff8e8e0d63d1f5ab19de4f869958c7c8"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\slide_right\\002.png",
+          "sha256": "f8da83e114165ab9a079df4d1326b9e7bb5502f9a890e1dcc3dbb241b61dc3ac"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\slide_right\\003.png",
+          "sha256": "f8da83e114165ab9a079df4d1326b9e7bb5502f9a890e1dcc3dbb241b61dc3ac"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\slide_right\\004.png",
+          "sha256": "2c3935bad3bacf0fe0150ea2b573a4e9ff8e8e0d63d1f5ab19de4f869958c7c8"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\slide_right\\005.png",
+          "sha256": "98540983e42798164ca34de5ebc5fb309b213c1b49ffff9af3d13648bcf44c75"
+        }
+      ],
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_a_slide_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            60,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_a/summit_cheer_left",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_left\\000.png",
+          "sha256": "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_left\\001.png",
+          "sha256": "54c243d921ded23421bd8774355a002a77ce653e5e63feee4100e483b8904dd6"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_left\\002.png",
+          "sha256": "18f88e33c80a19bc4473694c64913b4a55974d9aeb2f4f2d7f43b9b2b973ff1f"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_left\\003.png",
+          "sha256": "972a6f22a7980c401a4e43c9719e3947fad1a0f5ae3cacd3333007342c9b4435"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_left\\004.png",
+          "sha256": "495c3a2e263ed44ba08aad185086171e35132d778c2a562ff9f6d6fc7e706f68"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_left\\005.png",
+          "sha256": "4880b641e76548d918e57c3ceb472e193d669a63b1769de744f2bc1bd812c4a9"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_left\\006.png",
+          "sha256": "a6ea3963bc046afa66e905a92356fd0896b89c8b64f775104babe76d7009616b"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_left\\007.png",
+          "sha256": "64286a98479c49f38d9828fad7c52c080f7b96ec260c9bc1a1af4509a0a98844"
+        }
+      ],
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_a_summit_cheer_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            60,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_a/summit_cheer_right",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_right\\000.png",
+          "sha256": "98540983e42798164ca34de5ebc5fb309b213c1b49ffff9af3d13648bcf44c75"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_right\\001.png",
+          "sha256": "dfe95420337c5d686c018d47b37fa3602dd621cb26f08c40ab33d35be50d89c3"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_right\\002.png",
+          "sha256": "a466073a0e37b5798ad7d3b1a3d491d74476a3b91015022ac491dabf6b7313d6"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_right\\003.png",
+          "sha256": "339f8823869c6e7f3479f518257ae381172857321c8e7aaa9793c865ea5d9af5"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_right\\004.png",
+          "sha256": "9dc29e95c1054c13918edf3ab7dcbb026c2efb6c72b7a2de7a3c7f5c747e8311"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_right\\005.png",
+          "sha256": "6ad89a2dc5bea7655d5087400de9dd609cfacf2444c710ceb0945111b7a815a9"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_right\\006.png",
+          "sha256": "b11e6daa91e16b7185eb231fd7fed00cffe79096f9ef1c7510d4003f4afdb422"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\summit_cheer_right\\007.png",
+          "sha256": "dc68a39cda757e9adade38256f5cb0428f2f99da0e04d05f93a2b58e176c02b8"
+        }
+      ],
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_a_summit_cheer_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            60,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_a/switch_grab_left",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\switch_grab_left\\000.png",
+          "sha256": "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\switch_grab_left\\001.png",
+          "sha256": "d5bcbbe18820d8fdc8ccfc91d8631548d6ff43a60437e827b1f3af5844ae83fa"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\switch_grab_left\\002.png",
+          "sha256": "5a49413fdd4ed3476f818de884b0fb4a9a0a4cabf327544a7b49a2677cda949f"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\switch_grab_left\\003.png",
+          "sha256": "b912bdfa1e1fd09b98698f9789c6f260d490fa785b4c6a1d8ca092bf1ce3f883"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\switch_grab_left\\004.png",
+          "sha256": "4de08df6648727c31b857fa89259b88290367f6ee4c97887cb9a37588d49159e"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\switch_grab_left\\005.png",
+          "sha256": "98540983e42798164ca34de5ebc5fb309b213c1b49ffff9af3d13648bcf44c75"
+        }
+      ],
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_a_switch_grab_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            60,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_a/switch_grab_right",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\switch_grab_right\\000.png",
+          "sha256": "98540983e42798164ca34de5ebc5fb309b213c1b49ffff9af3d13648bcf44c75"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\switch_grab_right\\001.png",
+          "sha256": "4de08df6648727c31b857fa89259b88290367f6ee4c97887cb9a37588d49159e"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\switch_grab_right\\002.png",
+          "sha256": "b912bdfa1e1fd09b98698f9789c6f260d490fa785b4c6a1d8ca092bf1ce3f883"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\switch_grab_right\\003.png",
+          "sha256": "5a49413fdd4ed3476f818de884b0fb4a9a0a4cabf327544a7b49a2677cda949f"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\switch_grab_right\\004.png",
+          "sha256": "d5bcbbe18820d8fdc8ccfc91d8631548d6ff43a60437e827b1f3af5844ae83fa"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_a\\switch_grab_right\\005.png",
+          "sha256": "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805"
+        }
+      ],
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_a_switch_grab_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            60,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_b/grip_idle_left",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\grip_idle_left\\000.png",
+          "sha256": "cfc2e5e93e73d6d1c9b65f4fda01971b901b0e9e810f24edec802820e9fb0514"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\grip_idle_left\\001.png",
+          "sha256": "eab392a3f285609fb13b81fec3cb860e807dda5fa57105aa84373422696622c7"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\grip_idle_left\\002.png",
+          "sha256": "eab392a3f285609fb13b81fec3cb860e807dda5fa57105aa84373422696622c7"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\grip_idle_left\\003.png",
+          "sha256": "cfc2e5e93e73d6d1c9b65f4fda01971b901b0e9e810f24edec802820e9fb0514"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\grip_idle_left\\004.png",
+          "sha256": "6f97407aa580abe50512bb2c76c26542a1ea8adfc8561c96b68fe913c0b42861"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\grip_idle_left\\005.png",
+          "sha256": "6f97407aa580abe50512bb2c76c26542a1ea8adfc8561c96b68fe913c0b42861"
+        }
+      ],
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_b_grip_idle_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            60,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_b/grip_idle_right",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\grip_idle_right\\000.png",
+          "sha256": "f4820f14e4d05ffec86609a13811e28acd0f1de4caabe170ee102b736831445c"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\grip_idle_right\\001.png",
+          "sha256": "2a920fe117589552c03339ffc19c495fd589932b217c801883858906e91843f9"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\grip_idle_right\\002.png",
+          "sha256": "2a920fe117589552c03339ffc19c495fd589932b217c801883858906e91843f9"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\grip_idle_right\\003.png",
+          "sha256": "f4820f14e4d05ffec86609a13811e28acd0f1de4caabe170ee102b736831445c"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\grip_idle_right\\004.png",
+          "sha256": "21b44026b46174f5d09e8b8b1778676def58a90f4fc8c30a92ff44173a2ddace"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\grip_idle_right\\005.png",
+          "sha256": "21b44026b46174f5d09e8b8b1778676def58a90f4fc8c30a92ff44173a2ddace"
+        }
+      ],
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": true,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_b_grip_idle_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            60,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climb_b/settlement_cheer",
+      "sources": [
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\settlement_cheer\\000.png",
+          "sha256": "3b19c57be7e7fb055c12ac327cae77867ab5a95612cc9d256224b4da133790f9"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\settlement_cheer\\001.png",
+          "sha256": "d6129b234b50d04af9822edaede72b0531935b563ba759669a0e4085d1cbb0c5"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\settlement_cheer\\002.png",
+          "sha256": "70e5daadb1e63601f67a455972d9cec5dc47712dd8808ed011bc7ff212e18ff5"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\settlement_cheer\\003.png",
+          "sha256": "86a6fd445fcf3bd24e5d30891d1ad6b69ad6b864d5d5a727a758f4be359fbf4d"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\settlement_cheer\\004.png",
+          "sha256": "467e10afa9a8919dd470a16a60f344402e38305de0a1a81b12414634f1c31d62"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\settlement_cheer\\005.png",
+          "sha256": "a64bebd94d3aba5437c019ebe6190bcf7ab119fb9b569a58209a265c1041fd6a"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\settlement_cheer\\006.png",
+          "sha256": "3dfdf43836af6bfe947ff2cf7750dd1cc684325205f2d92355a002abe8bc6663"
+        },
+        {
+          "path": "frames\\climb\\runtime\\climb_b\\settlement_cheer\\007.png",
+          "sha256": "3b19c57be7e7fb055c12ac327cae77867ab5a95612cc9d256224b4da133790f9"
+        }
+      ],
+      "canvas": [
+        72,
+        78
+      ],
+      "anchor": [
+        36,
+        75
+      ],
+      "fps": 12,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_climb_b_settlement_cheer__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            72,
+            78
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/climb/props/canteen",
+      "sources": [
+        {
+          "path": "games\\climb\\props\\canteen.png",
+          "sha256": "bfba8b159240837faab90737c4a0385c284b5f4d57a307ae3b75d42891ac2e9f"
+        }
+      ],
+      "canvas": [
+        16,
+        24
+      ],
+      "anchor": [
+        8,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_climb_props_canteen__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/climb/props/falling-rock",
+      "sources": [
+        {
+          "path": "games\\climb\\props\\falling-rock.png",
+          "sha256": "9f980c19382582a94a84cc7c7baac18963fdd9faf871c6543cd8defba38d0b9b"
+        }
+      ],
+      "canvas": [
+        24,
+        24
+      ],
+      "anchor": [
+        12,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_climb_props_falling_rock__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            24,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/climb/props/hold-fragile",
+      "sources": [
+        {
+          "path": "games\\climb\\props\\hold-fragile.png",
+          "sha256": "aae0726aa8c260e9dc00d228efd07bd7c3d431f46de5b95f2b1628602abdb327"
+        }
+      ],
+      "canvas": [
+        24,
+        20
+      ],
+      "anchor": [
+        12,
+        9
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_climb_props_hold_fragile__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            24,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/climb/props/hold-ice",
+      "sources": [
+        {
+          "path": "games\\climb\\props\\hold-ice.png",
+          "sha256": "8f67162906ee64cdce34bd3ed952131604d154d97cf2dc64506a29a6050e7ca5"
+        }
+      ],
+      "canvas": [
+        24,
+        20
+      ],
+      "anchor": [
+        12,
+        9
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_climb_props_hold_ice__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            24,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/climb/props/hold-normal",
+      "sources": [
+        {
+          "path": "games\\climb\\props\\hold-normal.png",
+          "sha256": "4ce379b03fc41658fd90014bcfa910b3d013b04bc603847536ff9adc369e70a1"
+        }
+      ],
+      "canvas": [
+        24,
+        20
+      ],
+      "anchor": [
+        12,
+        9
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_climb_props_hold_normal__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            24,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/climb/shared/snow-drift",
+      "sources": [
+        {
+          "path": "map\\tiles\\mountain\\snow-drift.png",
+          "sha256": "a0f7dbce9a93da1b7299e33c73b81745b4f1c37bd97c8781565009f2b3947033"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_climb_shared_snow_drift__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/climb/shared/snow-mound",
+      "sources": [
+        {
+          "path": "map\\tiles\\ski\\snow-mound.png",
+          "sha256": "1b94744c19c7bb95a7faf3c53bb9b3d410cdbf932aa690722797fe997928264e"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_climb_shared_snow_mound__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/climb/tiles/cold-0",
+      "sources": [
+        {
+          "path": "games\\climb\\tiles\\cold-0.png",
+          "sha256": "23a5d2ee7a213838ac4e3c33f3b32b773a321120ea3045b17d1fa8b5d9af1fe2"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_climb_tiles_cold_0__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/climb/tiles/cold-1",
+      "sources": [
+        {
+          "path": "games\\climb\\tiles\\cold-1.png",
+          "sha256": "77c4eacfda0501aa39c1fc5e98bf708429d94523cf1926252205ad3cb9c82a98"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_climb_tiles_cold_1__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/climb/tiles/grey-0",
+      "sources": [
+        {
+          "path": "games\\climb\\tiles\\grey-0.png",
+          "sha256": "b6115515c7e4cbc712cb948348a0009c67fd568a8b96285a30d6705effab8eae"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_climb_tiles_grey_0__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/climb/tiles/grey-1",
+      "sources": [
+        {
+          "path": "games\\climb\\tiles\\grey-1.png",
+          "sha256": "e5a2419f8bac1f715a3e0fbb52326bd1f2022280b6f74e30ff7cad7105d445e2"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_climb_tiles_grey_1__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/climb/tiles/snow-0",
+      "sources": [
+        {
+          "path": "games\\climb\\tiles\\snow-0.png",
+          "sha256": "580cfae318efbf40feaf576160ca11e1bdbbdb3b4323a0c4bea7ebfe4962e688"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_climb_tiles_snow_0__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/climb/tiles/snow-1",
+      "sources": [
+        {
+          "path": "games\\climb\\tiles\\snow-1.png",
+          "sha256": "8001e111789a0a4d2428f08883fb1729220d28f7b90e177adc87d17ed5cfc1e4"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_climb_tiles_snow_1__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    }
+  ],
+  "python_verified_frames": 113,
+  "production_c": {
+    "verified_frames": 113,
+    "verified_sprite_rows": 7072,
+    "verified_ninepatch_rows": 0,
+    "comparison": "generated C and production decoders vs indexed source"
+  },
+  "catalog": {
+    "patches": [],
+    "digit_tables": {},
+    "shared_ui_palette_rgb565": []
+  },
+  "ui_limit_bytes": 163840,
+  "linker_alignment_and_final_elf_measurement": "pending; RLE/tables exact, C3 descriptor estimates exclude linker padding/deduplication",
+  "acceptance": "host packing validation only; no device/physical artwork acceptance implied"
+}

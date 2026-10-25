@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_landmark_ski__p0",
   "width": 96,
   "height": 96,
@@ -18,7 +18,7 @@
   "keys": [
     0
   ],
-  "data_bytes": 1730,
+  "data_bytes": 1728,
   "table_bytes": 406,
   "frame_sha256": [
     "6d88910f3612248b4a2cc826b133bef7db024e7f66f520a9a119addfc68be624"
@@ -41,5 +41,15 @@
       "sha256": "a4d9f679d11503195225a51fd32af67fde6b7fa1316191cb40375ce8470efcfe"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/landmark/ski",
+      "logical_symbol": "adv_assets_static_landmark_ski__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

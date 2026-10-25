@@ -1,5 +1,6 @@
 """1x 240x320 screens assembled with the actual newly exported UI pieces."""
 from PIL import Image, ImageDraw
+import json
 from ui_assets_common import ART, OUT, image, rgba, SLICE_NAMES, render_nine, tiled_paste
 from ui_assets_art import source_character
 
@@ -9,26 +10,44 @@ class Screen:
         self.assets, self.fonts = assets, fonts
         self.canvas = image((240, 320), 'bg')
         self.draw = ImageDraw.Draw(self.canvas)
+        self.selected=[]
+        self.layout={'space':'native 240x320; text positions are ink top-left, derive C baseline from generated glyph metrics',
+                     'dynamic_text':[],'cards':[],'assets':[],'numbers':[]}
 
-    def paste(self, name, xy): self.canvas.alpha_composite(self.assets.load(name), xy)
-    def text(self, xy, label, size=12, color='ink', align='left'):
-        return self.fonts.text(self.canvas, xy, label, size, color, align)
+    def paste(self, name, xy):
+        self.canvas.alpha_composite(self.assets.load(name),xy);self.layout['assets'].append({'path':name,'xy':list(xy)})
+    def text(self, xy, label, size=12, color=None, align='left'):
+        if color is None:color='white' if any(x<=xy[0]<=x+w and y<=xy[1]<y+h for x,y,w,h in self.selected) else 'ink'
+        bounds=self.fonts.text(self.canvas,xy,label,size,color,align)
+        self.layout['dynamic_text'].append({'fixture_text':label,'anchor_xy':list(xy),'ink_box':bounds,'size_px':size,
+             'font':'NotoSansSC-Bold' if size>=16 else 'SourceHanSansCN-Medium','weight':700 if size>=16 else 500,
+             'color':rgba(color)[:3],'color_name':color,'align':align})
+        return bounds
 
     def card(self, xy, size, family='info', state='normal'):
         corner = 16 if family == 'popup' else 12
         pieces = {name: self.assets.load(f'cards/{family}/{state}/{name}.png') for name in SLICE_NAMES}
         self.canvas.alpha_composite(render_nine(pieces, size, corner), xy)
+        if state in ('selected','current'):self.selected.append((*xy,*size))
+        self.layout['cards'].append({'family':family,'state':state,'xy':list(xy),'size':list(size),
+                                    'dynamic_text':'#fffaf0' if state in ('selected','current') else '#203849'})
 
-    def bars(self, title, hint, right='章 1/24'):
+    def bars(self, title, hint, right='章 1/24',world=None):
         self.paste('bars/top.png', (0, 0)); self.paste('bars/bottom.png', (0, 290))
-        self.text((14, 8), title, 16, 'paper')
+        self.text((20, 6), title, 18, 'white')
+        if world:self.text((108,10),world,12,'white')
         self.text((226, 11), right, 12, 'paper', 'right')
         self.text((120, 300), hint, 12, 'paper', 'center')
 
     def character(self, center, foot, height=48):
-        source = ART / 'frames/travel/masters/idle/000.png'
-        sprite = source_character(source, height, 63)
-        self.canvas.alpha_composite(sprite, (center-sprite.width//2, foot-height))
+        name='idle' if height==48 else 'cheer' if height==72 else None
+        if name:
+            m=json.loads((ART/'manifest.json').read_text('utf-8'));entry=next(e for e in m['animations'] if e['skin']=='travel' and e['name']==name)
+            sprite=Image.open(ART/entry['runtime_frames'][0]).convert('RGBA');a=entry['runtime_anchor']
+            self.canvas.alpha_composite(sprite,(center-a[0],foot-a[1]))
+        else:
+            source=ART/'frames/travel/masters/idle/000.png';sprite=source_character(source,height,63)
+            self.canvas.alpha_composite(sprite,(center-sprite.width//2,foot-height))
 
     def resource(self, xy, fraction=3, low=False):
         self.paste('resources/bar-frame.png', xy)
@@ -36,6 +55,7 @@ class Screen:
         tiled_paste(self.canvas, tile, (xy[0]+2, xy[1]+2, xy[0]+2+124*fraction//4, xy[1]+8))
 
     def number(self, label, xy, height=36):
+        self.layout['numbers'].append({'fixture_text':str(label),'xy':list(xy),'height':height,'font':'Montserrat-Bold sprite digits'})
         x, y = xy
         for char in str(label):
             bitmap = self.assets.load(f'numbers/{height}/{"plus" if char == "+" else char}.png')
@@ -44,37 +64,47 @@ class Screen:
     def save(self, name):
         folder = OUT / 'preview'; folder.mkdir(parents=True, exist_ok=True)
         self.canvas.save(folder / f'{name}.png', optimize=True)
+        (folder/f'{name}.layout.json').write_text(json.dumps(self.layout,ensure_ascii=False,indent=2)+'\n','utf-8')
 
 
 def build_previews(assets, fonts):
-    screen = Screen(assets, fonts)
-    for x, y in ((146, 92), (121, 119), (97, 145), (85, 218), (120, 245)):
-        screen.paste('map/footprints-forward.png', (x, y))
-    screen.paste('map/station-locked.png', (140, 42)); screen.paste('map/lock.png', (156, 47))
-    screen.card((14, 42), (116, 56)); screen.text((23, 51), '小火车', 16); screen.text((23, 75), '需深潜铜章', 12, 'muted')
-    screen.paste('map/station-current.png', (52, 154)); screen.character(76, 178)
-    screen.card((111, 133), (114, 74), state='current')
-    screen.text((121, 143), '跳一跳', 16); screen.text((121, 168), '最佳 12')
-    for i, name in enumerate(('bronze', 'empty', 'empty')): screen.paste(f'map/stamp-{name}.png', (119+i*25, 186))
-    screen.text((77, 215), '当前位置', 12, align='center')
-    screen.card((14, 246), (112, 37)); screen.text((23, 255), '护照亭', 16)
-    screen.paste('map/station-unlocked.png', (138, 266))
-    screen.bars('冒险地图', '上 / 下移动   OK 进入'); screen.save('map')
+    # Same adv_path world geometry as the production map: POST above JUMP,
+    # KIOSK below, 112px slots. Only background gradients are program preview.
+    screen=Screen(assets,fonts)
+    ground=ImageDraw.Draw(screen.canvas)
+    anchors=[(64,(150,200,110)),(176,(246,226,180)),(288,(40,120,160))]
+    for y in range(32,290):
+        left,right=(anchors[0],anchors[1]) if y<=176 else (anchors[1],anchors[2])
+        t=max(0,min(112,y-left[0]));rgb=tuple(a+(b-a)*t//112 for a,b in zip(left[1],right[1]))
+        ground.line((0,y,239,y),fill=(*rgb,255))
+    for ax,ay,bx,by in [(160,64,80,176),(80,176,160,288)]:
+        for k in range(1,6):screen.paste('map/footprints-forward.png',(ax+(bx-ax)*k//6-5,ay+(by-ay)*k//6-5))
+    for node,station,title,open_,here in [((160,64),'post','小火车',False,False),((80,176),'jump','跳一跳',True,True),((160,288),'kiosk','护照亭',True,False)]:
+        x,y=node;landmark=Image.open(ART/f'map/landmarks/{station}.png').convert('RGBA')
+        screen.canvas.alpha_composite(landmark,(x-48,y-83))
+        screen.paste('map/station-current.png' if here else 'map/station-unlocked.png' if open_ else 'map/station-locked.png',(x-24,y-14))
+        cx=x+25 if x<120 else x-137;cy=y-26
+        screen.card((cx,cy),(112,52),state='current' if here else 'normal')
+        screen.text((cx+8,cy+8),title,16)
+        if here:
+            screen.paste('map/stamp-bronze.png',(cx+8,cy+30));screen.text((cx+104,cy+30),'12',12,align='right')
+        else:screen.text((cx+8,cy+30),'护照 · 设置' if station=='kiosk' else '需深潜铜章',12,'muted')
+    screen.character(80,191)
+    screen.bars('冒险地图','上 / 下移动   OK 进入',world='小镇');screen.save('map')
 
-    screen = Screen(assets, fonts)
-    tile = assets.load('passport/page-tile.png'); tiled_paste(screen.canvas, tile, (12, 32, 228, 290))
-    screen.paste('passport/header.png', (12, 32))
-    names = ('跳一跳', '深潜', '小火车', '萤火虫', '登山', '滑雪', '热气球', '太空')
-    for i, name in enumerate(names):
-        x, y = 14+(i % 2)*108, 56+(i//2)*52
-        screen.paste(f'passport/grid-{"current" if i == 0 else "normal"}.png', (x, y))
-        screen.text((x+12, y+9), name)
-        if i > 1: screen.paste('passport/locked-mask.png', (x, y))
+    screen=Screen(assets,fonts)
+    screen.paste('passport/header.png',(12,40));screen.text((224,48),'01 / 24',12,'muted','right')
+    names=('跳一跳','深潜','小火车','萤火虫','登山','滑雪','热气球','太空')
+    for i,name in enumerate(names):
+        x=12+(i%2)*112;y=70+(i//2)*54;selected=i==0;ink='white' if selected else 'ink'
+        screen.paste('passport/grid-current.png' if selected else 'passport/grid-normal.png',(x,y))
+        screen.text((x+8,y+8),name,16,ink)
+        if i>1:
+            screen.paste('passport/locked-mask.png',(x,y));screen.text((x+8,y+30),'未解锁',12,'muted')
         else:
-            if i == 0: screen.paste('map/stamp-bronze.png', (x+12, y+32))
-            screen.text((x+93, y+32), '12' if i == 0 else '0', align='right')
-    screen.text((120, 268), '距银章还差 13', align='center')
-    screen.bars('冒险护照', '上 / 下翻阅   OK 返回'); screen.save('passport')
+            if i==0:screen.paste('map/stamp-bronze.png',(x+8,y+30))
+            screen.text((x+96,y+30),'12' if selected else '0',12,ink,'right')
+    screen.bars('冒险护照','上 / 下翻阅   OK 返回','PASSPORT');screen.save('passport')
 
     screen = Screen(assets, fonts)
     screen.paste('wordmarks/post.png', (20, 42))
@@ -90,7 +120,7 @@ def build_previews(assets, fonts):
     screen = Screen(assets, fonts)
     screen.card((16, 44), (208, 237), 'popup')
     screen.text((32, 57), 'POST · 小火车')
-    screen.text((120, 89), '本局成绩', align='center'); screen.number('12', (92, 111))
+    screen.text((120,81),'本局成绩',18,align='center');screen.number('12',(92,111))
     screen.paste('labels/new-record.png', (84, 157)); screen.character(63, 251, 56)
     screen.text((111, 205), '最佳 12', 16)
     for i, name in enumerate(('bronze', 'silver', 'empty')): screen.paste(f'map/stamp-{name}.png', (112+i*29, 233))
@@ -131,10 +161,12 @@ def build_previews(assets, fonts):
 
     screen = Screen(assets, fonts)
     screen.card((24, 57), (192, 218), 'popup')
-    screen.text((120, 75), '新的旅途印章', 16, align='center')
-    screen.paste('stamps/ink-pad.png', (88, 111)); screen.paste('map/stamp-silver.png', (112, 135))
-    screen.text((120, 198), '小火车 · 银章', 16, align='center')
-    screen.text((120, 234), '解锁第二款服装', align='center')
+    screen.text((120,75),'新的旅途印章',18,align='center')
+    screen.paste('stamps/ink-pad.png',(88,120))
+    source=Image.open(ART/'stamps/post.png').convert('RGBA');stamp=Image.new('RGBA',source.size,rgba('silver'))
+    stamp.putalpha(source.getchannel('A'));screen.canvas.alpha_composite(stamp,(72,104))
+    screen.text((120,211),'小火车 · 银章',16,align='center')
+    screen.text((120,247),'解锁第二款服装',align='center')
     screen.bars('旅途盖章', 'OK 收下这枚章'); screen.save('stamp')
 
     screen = Screen(assets, fonts)

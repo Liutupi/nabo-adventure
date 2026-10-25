@@ -1,0 +1,238 @@
+{
+  "passed": true,
+  "character_clips": 8,
+  "character_frames": 50,
+  "shared_head_locked": true,
+  "svg_embedded_pixels_match": true,
+  "checks": [
+    {
+      "skin": "sky_a",
+      "name": "idle",
+      "count": 6,
+      "max_adjacent_rgba_mae": 1.2566860465116279,
+      "wrap_rgba_mae": 0.7630813953488372,
+      "source_face_not_redrawn": true,
+      "passed": true
+    },
+    {
+      "skin": "sky_a",
+      "name": "heat",
+      "count": 6,
+      "max_adjacent_rgba_mae": 13.138662790697675,
+      "wrap_rgba_mae": 0.0,
+      "source_face_not_redrawn": true,
+      "passed": true
+    },
+    {
+      "skin": "sky_a",
+      "name": "vent",
+      "count": 6,
+      "max_adjacent_rgba_mae": 8.117151162790698,
+      "wrap_rgba_mae": 0.0,
+      "source_face_not_redrawn": true,
+      "passed": true
+    },
+    {
+      "skin": "sky_a",
+      "name": "hit",
+      "count": 6,
+      "max_adjacent_rgba_mae": 45.16700581395349,
+      "wrap_rgba_mae": 0.0,
+      "source_face_not_redrawn": true,
+      "passed": true
+    },
+    {
+      "skin": "sky_a",
+      "name": "receive_stamp",
+      "count": 4,
+      "max_adjacent_rgba_mae": 14.744040697674418,
+      "wrap_rgba_mae": 0.0,
+      "source_face_not_redrawn": true,
+      "passed": true
+    },
+    {
+      "skin": "sky_a",
+      "name": "settlement_cheer",
+      "count": 8,
+      "max_adjacent_rgba_mae": 11.848720043572985,
+      "wrap_rgba_mae": 0.0,
+      "source_face_not_redrawn": true,
+      "passed": true
+    },
+    {
+      "skin": "sky_b",
+      "name": "idle",
+      "count": 6,
+      "max_adjacent_rgba_mae": 0.9372093023255814,
+      "wrap_rgba_mae": 0.8646802325581395,
+      "source_face_not_redrawn": true,
+      "passed": true
+    },
+    {
+      "skin": "sky_b",
+      "name": "settlement_cheer",
+      "count": 8,
+      "max_adjacent_rgba_mae": 8.449142156862745,
+      "wrap_rgba_mae": 0.0,
+      "source_face_not_redrawn": true,
+      "passed": true
+    }
+  ],
+  "quantization_errors": {
+    "sky_a/idle": {
+      "formal_head_mae": 4.29250059566357,
+      "runtime_head_mae": 3.825563583170728
+    },
+    "sky_a/heat": {
+      "formal_head_mae": 4.240149504158267,
+      "runtime_head_mae": 3.825563583170728
+    },
+    "sky_a/vent": {
+      "formal_head_mae": 4.304872179080663,
+      "runtime_head_mae": 3.825563583170728
+    },
+    "sky_a/hit": {
+      "formal_head_mae": 4.404356458185415,
+      "runtime_head_mae": 3.825563583170728
+    },
+    "sky_a/receive_stamp": {
+      "formal_head_mae": 4.286856683345246,
+      "runtime_head_mae": 3.825563583170728
+    },
+    "sky_a/settlement_cheer": {
+      "formal_head_mae": 4.422210169309734,
+      "runtime_head_mae": 4.106066443729184
+    },
+    "sky_b/idle": {
+      "formal_head_mae": 3.9394157088122608,
+      "runtime_head_mae": 3.8253968253968256
+    },
+    "sky_b/settlement_cheer": {
+      "formal_head_mae": 4.029199799826467,
+      "runtime_head_mae": 4.089684962502042
+    }
+  },
+  "control_hand_contacts": [
+    {
+      "action": "heat",
+      "index": 1,
+      "point": [
+        3,
+        31
+      ],
+      "character_RGBA": [
+        250,
+        212,
+        196,
+        255
+      ],
+      "distance_to_visible_hand_pixel": 0
+    },
+    {
+      "action": "heat",
+      "index": 2,
+      "point": [
+        5,
+        22
+      ],
+      "character_RGBA": [
+        252,
+        203,
+        187,
+        255
+      ],
+      "distance_to_visible_hand_pixel": 0
+    },
+    {
+      "action": "heat",
+      "index": 3,
+      "point": [
+        4,
+        26
+      ],
+      "character_RGBA": [
+        249,
+        229,
+        215,
+        255
+      ],
+      "distance_to_visible_hand_pixel": 0
+    },
+    {
+      "action": "heat",
+      "index": 4,
+      "point": [
+        5,
+        36
+      ],
+      "character_RGBA": [
+        252,
+        203,
+        187,
+        255
+      ],
+      "distance_to_visible_hand_pixel": 0
+    },
+    {
+      "action": "vent",
+      "index": 1,
+      "point": [
+        41,
+        32
+      ],
+      "character_RGBA": [
+        242,
+        187,
+        171,
+        255
+      ],
+      "distance_to_visible_hand_pixel": 0
+    },
+    {
+      "action": "vent",
+      "index": 2,
+      "point": [
+        40,
+        23
+      ],
+      "character_RGBA": [
+        250,
+        212,
+        196,
+        255
+      ],
+      "distance_to_visible_hand_pixel": 0
+    },
+    {
+      "action": "vent",
+      "index": 3,
+      "point": [
+        41,
+        28
+      ],
+      "character_RGBA": [
+        252,
+        203,
+        187,
+        255
+      ],
+      "distance_to_visible_hand_pixel": 0
+    },
+    {
+      "action": "vent",
+      "index": 4,
+      "point": [
+        38,
+        37
+      ],
+      "character_RGBA": [
+        242,
+        187,
+        171,
+        255
+      ],
+      "distance_to_visible_hand_pixel": 0
+    }
+  ],
+  "minimum_visual_review": "all character contacts and actual-size layered scenes inspected; no user/hardware approval implied"
+}

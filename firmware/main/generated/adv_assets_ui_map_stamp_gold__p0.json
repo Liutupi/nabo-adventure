@@ -1,26 +1,25 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_map_stamp_gold__p0",
   "width": 16,
   "height": 16,
   "palette_rgb565": [
     0,
-    8649,
     54567,
-    65433
+    65502
   ],
   "background_rgb888": null,
   "key_interval": 8,
   "keys": [
     0
   ],
-  "data_bytes": 164,
-  "table_bytes": 78,
+  "data_bytes": 128,
+  "table_bytes": 76,
   "frame_sha256": [
-    "7ae80e8730e00c021b2e09644436c8b034b59f9f5227d06c00456b2e7a3347c2"
+    "644173a0b0a651a8d004334907f1da2686a3386eb6134f650afabe892538a94e"
   ],
   "source_sha256": [
-    "2cef7dab9d443d056807d79311df9be2dca11a5c9c24bd07fa8438bcc7b0eedc"
+    "7f6368aa230e72a880f99658616524e8055118418dc46832962490106578a2db"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,8 +33,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\stamp-gold.png",
-      "sha256": "eae4ae327a6829b68d6239f676800b008f1fdf4443e90cdfa14053b004a348f1"
+      "sha256": "6c8ac5c09baa830d983e8485da8568bd98b10e5bcb3743839579a46264bd79e3"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/map/stamp-gold",
+      "logical_symbol": "adv_assets_ui_map_stamp_gold__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

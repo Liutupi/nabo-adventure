@@ -1,34 +1,408 @@
 {
   "schema": "adventure-assets-package-v1",
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "groups": {
     "static": {
-      "rle_bytes": 51906,
-      "table_bytes": 15332,
-      "descriptor_catalog_estimate_c3": 7091,
+      "rle_bytes": 49523,
+      "table_bytes": 14480,
+      "descriptor_catalog_estimate_c3": 6899,
       "resources": 78,
       "pieces": 78,
       "frames": 78,
-      "static_bytes_estimate_c3": 74329
+      "physical_sprites": 72,
+      "physical_frames": 72,
+      "interned_pieces": 6,
+      "static_bytes_estimate_c3": 70902
     },
     "travel": {
-      "rle_bytes": 106338,
-      "table_bytes": 22068,
-      "descriptor_catalog_estimate_c3": 818,
+      "rle_bytes": 136752,
+      "table_bytes": 29974,
+      "descriptor_catalog_estimate_c3": 821,
       "resources": 10,
       "pieces": 10,
-      "frames": 78,
-      "static_bytes_estimate_c3": 129224
+      "frames": 94,
+      "physical_sprites": 10,
+      "physical_frames": 94,
+      "interned_pieces": 0,
+      "static_bytes_estimate_c3": 167547
     },
     "ui": {
-      "rle_bytes": 47520,
-      "table_bytes": 14400,
-      "descriptor_catalog_estimate_c3": 11789,
+      "rle_bytes": 34111,
+      "table_bytes": 12462,
+      "descriptor_catalog_estimate_c3": 10671,
       "resources": 127,
       "pieces": 127,
       "frames": 127,
-      "static_bytes_estimate_c3": 73709
+      "physical_sprites": 92,
+      "physical_frames": 92,
+      "interned_pieces": 35,
+      "static_bytes_estimate_c3": 57244
     }
+  },
+  "tools_sha256": {
+    "tools/generate_adv_sprites.py": "eff40de537378ceda49cb3327d3b063b6a00d18559be793660cc447456a3f56a",
+    "tools/build_adventure_assets.py": "d9f63eb62e54304885d77edce908249c2b33e0fca9dcf98aab352e2b66f76e49",
+    "tools/adventure_assets_manifest.py": "1e526efecb93f4b4c8cb01e03a85ca281cb6c910b6bee5faf6423a88d6d5a747",
+    "tools/adventure_assets_emit.py": "59dbb6de5b6ad25006606cadfe6c9636ae6e4ca34eb058faa7d4223be34856cb",
+    "tools/adventure_assets_verify.py": "46bc8a4727cb94f50afebfb99c3f7470e8260550384bb07ab04b2c6569e8e106",
+    "tools/generate_boot_presentation.py": "c7741863a38640519927c7784d53e861adf0170f3222eb4d98af65b15d3f0282",
+    "firmware/main/adv_boot.h": "e66f156b261e439324ca60fd45108ce548ba9f8c74520f7be0dd14086e546fa6",
+    "firmware/main/adv_sprite.c": "8c2b37a5ac776ecae017af98b7123aa51031a1cd75ad4734e6fd8d5aba8506a1",
+    "firmware/main/adv_sprite.h": "3f44a9762bb4dacfe2724a54f261dfa98305726ae4c3b5def6377e6d012898ad",
+    "firmware/main/adv_ninepatch.c": "052cc42ae138c6c762904a5e26163a945d99dd44713ac98197440602c2c866db",
+    "firmware/main/adv_ninepatch.h": "438c7369f79703f2164bbc364a65532e135267f3e52cf5d1009b6af51cae79aa"
+  },
+  "generated_code_sha256": {
+    "adv_assets_catalog.c": "a95a29e325fdaf319c0155cad5fc33cd53d3d05bb1d4dccb31fe853b25baff42",
+    "adv_assets_catalog.h": "045bda6ae2668d6c708cbbcbe630f74e3d527ec186931ac34b657f23b6848193",
+    "adv_assets_static_icon_fuel__p0.c": "720b15835afa57be344fdd2cbc22e0d5faadd2c2f12b51e97cda0caa0396a32b",
+    "adv_assets_static_icon_fuel__p0.h": "5ae4ac45c738116e951e8d39ab73f79ac39715633558182040651a1f8ed2915b",
+    "adv_assets_static_icon_hot_air__p0.c": "ebf8928d5d036a156864a32972912a2a2baad8e0bf8e9a92eac13e2b116535a5",
+    "adv_assets_static_icon_hot_air__p0.h": "58cfb049528e478281f39af4aa3aba3070ce6d0467ea19de406b535eda1bf0e7",
+    "adv_assets_static_icon_oxygen__p0.c": "4b37de7fd71c98c1a951dae4d815e8273755f9a02d34f7ac33fa99a6ff385a92",
+    "adv_assets_static_icon_oxygen__p0.h": "176aa1b63d209f3de8346e1a8d5709a116a5e3f959301e5fba4d21acc89b0aa2",
+    "adv_assets_static_icon_spirit__p0.c": "e1d9cfed6e52b878b96fee815d449593baf5db5471bed77719c1e404e5dd473a",
+    "adv_assets_static_icon_spirit__p0.h": "ef09307bbfd0241bd1031d09673312d83b6890ed3dfbc0e9534776655b1bec7d",
+    "adv_assets_static_icon_stamina__p0.c": "564b8adfd8286873202293be0c6471b0c4d1201987343b4e5ee4419ee102f481",
+    "adv_assets_static_icon_stamina__p0.h": "cca57e8059e9615ffc00d677440b539a8d160f4437a427eb6a48fd99383ba413",
+    "adv_assets_static_icon_steam__p0.c": "4ae37afbaa3a2f5b0d1b2b68612564bebbf4119fb61019c78013fa89955eefd0",
+    "adv_assets_static_icon_steam__p0.h": "8bf4e5e78f30354054df181c1a19fddfcbf8cf86f716b9c3e34e96a4d796989c",
+    "adv_assets_static_icon_warmth__p0.c": "676f5c29d08c54f757973e8c49616bea7f19da0292c7f59a2de40fe61ae85384",
+    "adv_assets_static_icon_warmth__p0.h": "c16a143d9142d0a5744dabbd7f4113033e44e40dea902ba373649856d0c3680c",
+    "adv_assets_static_landmark_climb__p0.c": "5bb90fd5c244d2c8a157119db13c48ce8841728376eb4999741d2d6fa898b54e",
+    "adv_assets_static_landmark_climb__p0.h": "eb64a595a3165932c949179fc2839d597d521c2932ca3c31a8e34fd7fd6be2a5",
+    "adv_assets_static_landmark_dive__p0.c": "1fa8a53b9957597c2c03ddec379522e56b3d8bdd24caab97d75b1179c1c7d7bc",
+    "adv_assets_static_landmark_dive__p0.h": "c497ff0ebcb948af93004812ba84375c98268a341b38270c2fe47b7880869d5c",
+    "adv_assets_static_landmark_jump__p0.c": "8e070c72a260124e8322828f7679ad5b58ff678ce79a4d910eedf54d0a40df5d",
+    "adv_assets_static_landmark_jump__p0.h": "76b81c35f7c34f7e44686f3df4289707b80efb7d308bde17937a65223dfeedcb",
+    "adv_assets_static_landmark_kiosk__p0.c": "84a1b5c01138bbe971e6265feaa1e1d9adbfb35310b3a3465c79680e0996c464",
+    "adv_assets_static_landmark_kiosk__p0.h": "6b30d9a5cd303a4927eea2cda8f368a2d9a45549447ff67a043367844bacb107",
+    "adv_assets_static_landmark_night__p0.c": "0c520566bcd5eb4e207844e46eb89649255bcec0e382efc4e6a250533c1aff2a",
+    "adv_assets_static_landmark_night__p0.h": "ce79c0919c54d954674082384fa8f981269a3062d3dd265439e726143888c093",
+    "adv_assets_static_landmark_post__p0.c": "ca614c61d9797342cfd7d04078fc749b64a08b576a9ddc280fde2fe13d557dbf",
+    "adv_assets_static_landmark_post__p0.h": "1a942c89f8c366c676414521e118d9a8ec9b40dd0964d2594288d4163ea01c72",
+    "adv_assets_static_landmark_ski__p0.c": "02b7b4bee0d373ae8f4f0a814ef6090b673a93f6f8572443a9432f473fc30f3d",
+    "adv_assets_static_landmark_ski__p0.h": "713238866de3fee3390b34bcdbabd9df4b6c44a44516672cd10e04abb7cec96f",
+    "adv_assets_static_landmark_sky__p0.c": "7caa3f0bf157c016ec2ffc9bf64fe1225c82a60ed8b5e31fcd02c3bd6b14bdf1",
+    "adv_assets_static_landmark_sky__p0.h": "81b17f32dde681d8a15bde0806f411f05876797281dc75d8d894a1ae1dc05dac",
+    "adv_assets_static_landmark_space__p0.c": "6dff8ba47b2e88b3c33395d48c97ff081a5f35086a463fa6b54615ea0c02e1d0",
+    "adv_assets_static_landmark_space__p0.h": "01e9cfb90fab5ccd6bf1365f720fc2e61b321e3e0204e5e92a37849ef514eadd",
+    "adv_assets_static_stamp_climb__p0.c": "5412f85ba5d1dd3eefaa093eb19d29d3c3776799565b4c708a548455c0cbadab",
+    "adv_assets_static_stamp_climb__p0.h": "acf8ab770d4afcd3dfa7605721a416bb61a6cc02f0264a35446749e83d582d73",
+    "adv_assets_static_stamp_dive__p0.c": "7a552667fb8afb25acf332a0e0b46e36b2636ee66e2f45d5ef3539c8d64d7e1c",
+    "adv_assets_static_stamp_dive__p0.h": "68f811ea49bf752c2f54ba94cb52af0ee5ac597f746f9e0f15c750a9e93e62b3",
+    "adv_assets_static_stamp_jump__p0.c": "b2aa765106b561303adfad37035eb61c5d3e95a09d9059e184391ba58ed12661",
+    "adv_assets_static_stamp_jump__p0.h": "15c6061d3c908ea031322c52d003a0dd3933fa758034e786b1e8f425b85525a3",
+    "adv_assets_static_stamp_kiosk__p0.c": "7a54eade40c7218aa531539a3e4f19c923f51681a23197320f5f217f90c1b6a4",
+    "adv_assets_static_stamp_kiosk__p0.h": "b512d3f348347342be445e04da84a2e5c8c24394971221e806922b26c7a435a7",
+    "adv_assets_static_stamp_night__p0.c": "58b4cd2a9ca35fa98561f8ad8400e2f508926c80f518336359ef096e4e6aeb02",
+    "adv_assets_static_stamp_night__p0.h": "745c820342b0a8de35446b8a1786a9fb24eefa6189a0400596973a8a41a3d79c",
+    "adv_assets_static_stamp_post__p0.c": "577cbcadf17be86d8084a99a53dfe2139a958dda6780181784275458cee472fa",
+    "adv_assets_static_stamp_post__p0.h": "65ccb956b6040100ba6f2bf6256bd78bb4b7785f94ef08f3fab8a3cf4b01e606",
+    "adv_assets_static_stamp_ski__p0.c": "ca869750a23adf84fc4f69451f8766a06cc8fe9fee4b3ceb02a7f5d43aae102a",
+    "adv_assets_static_stamp_ski__p0.h": "9575d6f9eea3d20c2d78ab5e476604307184ef4db1a6efcfb14d7c2ac3f3f175",
+    "adv_assets_static_stamp_sky__p0.c": "39c76b01387ffffcdde3386787c3e7158e46dfa642c8fd77cf20cf26ae9773e1",
+    "adv_assets_static_stamp_sky__p0.h": "069f2870aa95a7250419e5344bcce0dcc2495cfc30e550743363cc8657c81774",
+    "adv_assets_static_stamp_space__p0.c": "7c758c66175429bccd7e594a48ed646ef82004896a6c3983cc1ac8d41882f912",
+    "adv_assets_static_stamp_space__p0.h": "37b7335edc3b17c8d5e4109fc98513f76553f91aeba8656f8c4cc85d225cdb4a",
+    "adv_assets_static_tiles_deep_sea_bubble_chain__p0.c": "86571800f7c7143a2aee7820d2f7e1e4403dbbc5ca37aaee0fce161c9770e5fe",
+    "adv_assets_static_tiles_deep_sea_bubble_chain__p0.h": "127b75b28a8d059c123efa6255d13af9d5ef7b4259b5f769aeb71d716e741e78",
+    "adv_assets_static_tiles_deep_sea_coral_fan__p0.c": "00fe2e533b4bb3068bd57e446d8abe5a7bff2f1490e6c08c6fca8d559954b4d3",
+    "adv_assets_static_tiles_deep_sea_coral_fan__p0.h": "2c74dd443899e36f7a598bcbfc293a848e5d183be40ebd388c59cfb4b2af4c5c",
+    "adv_assets_static_tiles_deep_sea_current_wave__p0.c": "4d2e95445217bedec5cc44e04e926891e599bec5d62e1fb21f3cbf62a0294bfa",
+    "adv_assets_static_tiles_deep_sea_current_wave__p0.h": "4154388ee21f7795fb9194d686d5c01ba9d352df89b5a26da7e77947ffb17ab8",
+    "adv_assets_static_tiles_deep_sea_sea_rock__p0.c": "1301edcd70632fdd3768f8bbdabd5e6d8db64f44499863054044dea4f809c2c8",
+    "adv_assets_static_tiles_deep_sea_sea_rock__p0.h": "48442e2baaf9bd54420ebb18de43cbccaea796e7461a44bb925048ba7943fa34",
+    "adv_assets_static_tiles_deep_sea_seaweed__p0.c": "89502e26bdedab1d0720ae2ca61772afaee9e8ecf3819f8622ef4491ecd607f9",
+    "adv_assets_static_tiles_deep_sea_seaweed__p0.h": "1f8e8e4dd4ffaa14076cf23d3674c1432a11fad954203c2ff18964a1db0d8d2f",
+    "adv_assets_static_tiles_deep_sea_shell__p0.c": "4f6aba1410cf92bf9219d5c6dd98b8d9b9863e1f7820123ba5ffeea73b128c22",
+    "adv_assets_static_tiles_deep_sea_shell__p0.h": "7de525f58fa917944b91efaa572460714d749c7221eba9a6eeddfb4af8b0a6d1",
+    "adv_assets_static_tiles_harbor_buoy__p0.c": "10618479f6efb4958f770ce7047811fe38193c08657a5d727bfd07387586c029",
+    "adv_assets_static_tiles_harbor_buoy__p0.h": "52ceb3a94fa64092896fdb51ceb199281e2b92fcd2d3eba111d174c70f353c39",
+    "adv_assets_static_tiles_harbor_dock_planks__p0.c": "e4696a7a9ca8eb5c6207057adb753d6e21e1ea50b6b47005bfc6f9e71ed08930",
+    "adv_assets_static_tiles_harbor_dock_planks__p0.h": "ca6c4d0f5b536abe1d600b693f2f7efe93c9b1fb47b151539f2737e6c551126e",
+    "adv_assets_static_tiles_harbor_mooring_post__p0.c": "f62d405d568d2174f03fd2fd33942344f209b385eef9e4fabdf5985b2cd67a9c",
+    "adv_assets_static_tiles_harbor_mooring_post__p0.h": "add07e7b750b3094f99ea77811263d65f9fb6ebd25c1aa32210a778a7b850c75",
+    "adv_assets_static_tiles_harbor_rope_coil__p0.c": "443d8dfbcc4cb52fce487da12d960e20b5fbefa351a19c5b728e77aa5c120e0b",
+    "adv_assets_static_tiles_harbor_rope_coil__p0.h": "b1599abd28369b7c4846ccea87c37c3f60821a4b1fee26cd3c17d23d6af286fe",
+    "adv_assets_static_tiles_harbor_wave_crest__p0.c": "31a905ce0d612cb5f7791d81136fa7e71a48acb905ffd391875d0a0244bd2b26",
+    "adv_assets_static_tiles_harbor_wave_crest__p0.h": "fd4487b314df752d1984f8d4b26244f238570320865258ec5768883ae03664e6",
+    "adv_assets_static_tiles_harbor_wave_line__p0.c": "c6f5c9847de6aacbc2ddfe3eacabb9996f6f90d40b3f65dfbf2d7cf03d4fe96a",
+    "adv_assets_static_tiles_harbor_wave_line__p0.h": "e24f79e1f361b379d8ee000099e2f5e38b3b414540fcbaaf869997c406368b65",
+    "adv_assets_static_tiles_mountain_ice_crystals__p0.c": "2e6e42205571b3c211a2d660706256de3239f32d7fc2b99fe5a789272bdfe235",
+    "adv_assets_static_tiles_mountain_ice_crystals__p0.h": "f14ca9fe11173e12e3bde589f1dcce72d99d20737bedc7c151e50a7b2b15b53d",
+    "adv_assets_static_tiles_mountain_ridge__p0.c": "9aec21ceec9603126697fe5cb3fb18d3b00049537800d81311d27314c9ed2c66",
+    "adv_assets_static_tiles_mountain_ridge__p0.h": "dc13904622d413fec94ce7552dd693b7589edbc233ff92f119541febde9d5e58",
+    "adv_assets_static_tiles_mountain_snow_drift__p0.c": "8fdb0920ccc44859b5095e595ad60765636178fb31951f2ec8ee2b4162b63dac",
+    "adv_assets_static_tiles_mountain_snow_drift__p0.h": "c173bb393f7441fa3830623489e663e766359ddb7b4e743bf4c3393ee207f0cc",
+    "adv_assets_static_tiles_mountain_snowcap_rock__p0.c": "ee2a29c3e651dcf7a05f87f17d69fc235113b406bf7c8ff51ccce2362fbf553d",
+    "adv_assets_static_tiles_mountain_snowcap_rock__p0.h": "263a0f997e8838eaeccfcb7ad5f50faf703035caf4a6acfaa702ec94c7759c64",
+    "adv_assets_static_tiles_mountain_young_pine__p0.c": "4b3cae5271cc2417321b036fe1038841b9c9f702486bfbf428d3a2cff83d2134",
+    "adv_assets_static_tiles_mountain_young_pine__p0.h": "f495b0079ac2d32ebd1443c8c99ca03c74694fa97603a406f5e06fad8ded5e2f",
+    "adv_assets_static_tiles_night_forest_branch__p0.c": "090490bc1204266685f7817b4a715acc6e296f15a3f0d60c7709f07c4d39cf5e",
+    "adv_assets_static_tiles_night_forest_branch__p0.h": "18b16675d7a914ad289af79cfbb5144ea5d3eb7514011e5b5a7eb49b09bfa1a0",
+    "adv_assets_static_tiles_night_forest_fern__p0.c": "e301e40b64aa62b3fbd3f44b72fe716bf747a904d93151fdecf5ab47d7871d85",
+    "adv_assets_static_tiles_night_forest_fern__p0.h": "3b4d707fa1b1755aa364e57558ded77d9e5b7e50c579fc45d992cb2575cf5442",
+    "adv_assets_static_tiles_night_forest_fireflies__p0.c": "6776af229fb09f50286435d7a848d5aee521141afa5aed54be4640b5735fdd33",
+    "adv_assets_static_tiles_night_forest_fireflies__p0.h": "3cd5c7131b5a72d15bb2495acd16d98baf6ecc6abd2512945bef7191e7672d18",
+    "adv_assets_static_tiles_night_forest_mushrooms__p0.c": "43df2fac509a41d3a834d3cc4542596d9ed3d9803bb156f1f80276359f29cab6",
+    "adv_assets_static_tiles_night_forest_mushrooms__p0.h": "1f4e40282d33986aff189287b7c8815bb062d841fe07ef2816bdd49b14840319",
+    "adv_assets_static_tiles_night_forest_shrub__p0.c": "e9e56591773dd21dfba2cd14c53169399f2f1f5708cd133af8c6361150b4fe77",
+    "adv_assets_static_tiles_night_forest_shrub__p0.h": "910fa0c2460dc3e8b2a55f75086228722740499fcccf4f6587b96f54971827be",
+    "adv_assets_static_tiles_night_forest_tree_canopy__p0.c": "9964e43553220a11f26eff267671452bc50cae79d630845668640913ed4b2de2",
+    "adv_assets_static_tiles_night_forest_tree_canopy__p0.h": "caeebeb0d8342e055d766c9a5c666e086cbc89dc2c8186f3b5609739477f9c94",
+    "adv_assets_static_tiles_rail_mail_sign__p0.c": "fc6de8c21c6dffa466de1ebd6d47767946d43687588fbf137a80c0381dc2c488",
+    "adv_assets_static_tiles_rail_mail_sign__p0.h": "2652f4a95192181aff870f2ff19d363ecced8cd1f154f4f2fe917cfaf51a2d3a",
+    "adv_assets_static_tiles_rail_rail_crossing__p0.c": "7e271a2b3961569b3db690d9582732038a8a3630992563611aadc6e74850b1bd",
+    "adv_assets_static_tiles_rail_rail_crossing__p0.h": "53d81ab621402cfb42bc76074e98e76cce3fbf5765f2b043962033c61e0542bf",
+    "adv_assets_static_tiles_rail_rail_straight__p0.c": "e85ecb4f9b4e5da28a2055d2cd3d994170fdb6509095fcb6ec045e9fc0477111",
+    "adv_assets_static_tiles_rail_rail_straight__p0.h": "e104d00b6c0d4a14ff858c85e8a906468652b3b1fc06e6f6aeddb9244f09178c",
+    "adv_assets_static_tiles_rail_telegraph_pole__p0.c": "c95af248cd45228324d51acf9ec27a6b2e4b6144377da220c6fe6e9605def4af",
+    "adv_assets_static_tiles_rail_telegraph_pole__p0.h": "a94046a4de9e120f4570a9514ac7cbf53746972e80370d7eb1af205545261347",
+    "adv_assets_static_tiles_rail_wheat__p0.c": "7e66cce9edcddc7cea6380791cd755e6a08d932e4f4662e2a0eed6f517c8cb32",
+    "adv_assets_static_tiles_rail_wheat__p0.h": "ee07e52271ead53c7b80428524f50a71b1d2a24eb9765ff6e1a683b1d9a6f9bb",
+    "adv_assets_static_tiles_ski_gate_poles__p0.c": "44b2e8f51878c6d91870e05ce57a3c01eb24506aaa545f8d104eb2bf3015101c",
+    "adv_assets_static_tiles_ski_gate_poles__p0.h": "da8848de8c53f840d65f4837074fbff0292e90f9d8ebc77a8ec0702451019415",
+    "adv_assets_static_tiles_ski_small_spruce__p0.c": "1532a637c29442d8333efa3cfbdb52053e7d4d47be8f87262b56075cc82490e1",
+    "adv_assets_static_tiles_ski_small_spruce__p0.h": "55943864ff6b569ab75f6a5fe8bf6ff9238392148d4accf16f422a351fe9532a",
+    "adv_assets_static_tiles_ski_snow_track__p0.c": "8b043b11915d37b41d1981c6564366287910a9f64799ad8b3b5435730f86ada6",
+    "adv_assets_static_tiles_ski_snow_track__p0.h": "98363a76c7fac8b6e30254f6873bbec0f6f45ea009e77be8f5837436c9bb5801",
+    "adv_assets_static_tiles_sky_bird_silhouette__p0.c": "22f5db3501e11938618a8866b3f2bb1c42df2743ac21607a26a73d22de354f0e",
+    "adv_assets_static_tiles_sky_bird_silhouette__p0.h": "8ffa9e87fac78e484ec14a4aa47e18f40dee79333f165e726a36b454f4859546",
+    "adv_assets_static_tiles_sky_cloud_chain__p0.c": "32499dbe97a28a22d5e5a91b0d2ff8552e24f73b39ac7ad8f7301106ea31d66d",
+    "adv_assets_static_tiles_sky_cloud_chain__p0.h": "10d2f93b42c09a260e64f2ab346f05a257c36bb69e68143b9e2834e33548286f",
+    "adv_assets_static_tiles_sky_cloud_large__p0.c": "0d51706cb97f2a637d37c5fef4a3c28a5644327118d0b3ad3cde3e080a8b7ff6",
+    "adv_assets_static_tiles_sky_cloud_large__p0.h": "d5329d047c3e02f03dfd640d4abf1f8c096d84ac9baebc69132ae7c4ff1caa07",
+    "adv_assets_static_tiles_sky_cloud_small__p0.c": "d888cb2c1a6735462ee5cdc45d8d76187ecb263232f527dd2f2608ec8187fdf6",
+    "adv_assets_static_tiles_sky_cloud_small__p0.h": "74214c6effd8791b9262fab2b362450da902188437189baad25693e23b6a8c63",
+    "adv_assets_static_tiles_sky_feather__p0.c": "783d0e5f18b716950d5610c41dc43a168b0ea60c4caf12fbbaea415f3a833091",
+    "adv_assets_static_tiles_sky_feather__p0.h": "9660c51f46fc912fd8e9fe78cbcd4831afade3ded07e32f9a8151af63cffd58d",
+    "adv_assets_static_tiles_space_asteroid__p0.c": "73f6849633d1b11986ff20f62f6dc423c9e9226d06bd59aa2f69005c9a37554c",
+    "adv_assets_static_tiles_space_asteroid__p0.h": "2f85b3b103d49c22a9dbbbae53fea79f169e3a858a925d4d30363dabc4aab30f",
+    "adv_assets_static_tiles_space_comet__p0.c": "3c39a7b54ace3c871f51094390153869e6ecc2a827f8696f6a30de9c07cef724",
+    "adv_assets_static_tiles_space_comet__p0.h": "b526df3755c5472692281eb565700cbb95f114450415331c47bf1272f8f66b3a",
+    "adv_assets_static_tiles_space_orbit_dots__p0.c": "16959322e243baac28b1ae1852dc034556a23d2d13dd9b1518e1142ce4e37c96",
+    "adv_assets_static_tiles_space_orbit_dots__p0.h": "69d04eedafd505b59d19e67650e998ddacada4fc4e12d1117be23da21d9a1453",
+    "adv_assets_static_tiles_space_ring_planet__p0.c": "f4d375f9dd7e7f1a78ce02b58ba4230d0dc5be01e8b542b9832dbc2260b29170",
+    "adv_assets_static_tiles_space_ring_planet__p0.h": "b23d1ac32c6266bb253b21b550103a756c00ce40d753cb146a7768548f8435ff",
+    "adv_assets_static_tiles_space_star_field__p0.c": "1f2dbc6add673bdeadc86794108558923fd6a5c2f8f0dd5b605ae5693f8e83cd",
+    "adv_assets_static_tiles_space_star_field__p0.h": "ba9742cb014aafbb5e425ce3c5a07b8f60838ad070f3d700e8d43591891e534f",
+    "adv_assets_static_tiles_town_bunting__p0.c": "245cdd2cc50173bff5786c968d06e0ac0d0e1c45c7e31c4052ee07e30429b50e",
+    "adv_assets_static_tiles_town_bunting__p0.h": "f5718aec309f2db7e2fdbe5441938dd6c44863efb825805e1f942fb0f6e37957",
+    "adv_assets_static_tiles_town_cobble_path__p0.c": "bdc170a08d18e853a11481f46ee6c7eeb01309ff8f78fdae8557ebc1ac798e81",
+    "adv_assets_static_tiles_town_cobble_path__p0.h": "e2c8834a44802123641b7d48aecf5a0b2403ff658663e11263b6404b4f11e4dd",
+    "adv_assets_static_tiles_town_flowerbed__p0.c": "7cc674f126043c395dbc4589fee4c1367240a9471505da834e50b37ba6cd1f2c",
+    "adv_assets_static_tiles_town_flowerbed__p0.h": "408164ba6f3b76b14a7a686a5e0e60b51f696178ffdc57cf80998a0c050182aa",
+    "adv_assets_static_tiles_town_red_roof__p0.c": "9504a16a2782784b77a80a4f2f4e1aeae6e639303707c02b04a2878554c1fe0c",
+    "adv_assets_static_tiles_town_red_roof__p0.h": "da2ced00119946198adfa2b470b58f6e94c7c0f35e8984e1ab82d6b9df127390",
+    "adv_assets_static_tiles_town_street_lamp__p0.c": "f2c57875b9baa673f54002f89028fbd6075736d7256121d22d4bc27b621d2bbd",
+    "adv_assets_static_tiles_town_street_lamp__p0.h": "37357f471663b226530958745ad69fdd3aad99a736e83700c9296094a380192a",
+    "adv_assets_static_tiles_town_window_box__p0.c": "27d2f5bf666021c551ed371557c91b82a4f9c891772ee3f18d883e0a736635fa",
+    "adv_assets_static_tiles_town_window_box__p0.h": "b39962a2c5b489e4caf4e7e6699105f08d465734926667c175a86989b7553259",
+    "adv_assets_travel_cheer__p0.c": "4d879e53b32b68ffbf215b7fe20e4232d0a40e0f7522fff739c2abc0cd80931e",
+    "adv_assets_travel_cheer__p0.h": "0f1302001c834b224ab30e0a2cc7f63fb1f5528b538e0928fb4f413907048ba1",
+    "adv_assets_travel_idle__p0.c": "76e1851ab97ddaa2b5452f4238ca9ad1ae524ed92ec8bfc4f2ed979307ce3594",
+    "adv_assets_travel_idle__p0.h": "daaeb777877ec23695a25aa991bcf114e7a464f63f19c4b78d2a0d4772235825",
+    "adv_assets_travel_sad__p0.c": "00b658df73ba5e0260f88d82c7a2d1959c6b8338918bfc96c03b057a7ac6d25e",
+    "adv_assets_travel_sad__p0.h": "5d7440dcaec83601bffafd0326c6405b26514840dea25282b3078e6277a22162",
+    "adv_assets_travel_turn_front_from_left__p0.c": "14a74f9b58e06cfabc26397c65765193a1bd10dbd8bcc13db05ae2995bc331a3",
+    "adv_assets_travel_turn_front_from_left__p0.h": "c1b7ea0d4ec6b57544e0689303774241e0470367b8717d6500de3ea1c36df743",
+    "adv_assets_travel_turn_front_from_right__p0.c": "26bddf874456308ca5de51781eb7ef4910420e08081c401bc49601b48efe9509",
+    "adv_assets_travel_turn_front_from_right__p0.h": "3b9a743775a8da59d29025b6f3f61b3f538e8098ede226d3850076b0844d6a4f",
+    "adv_assets_travel_turn_left__p0.c": "6e04a675f17fb15a1a3606b83b1cf493388dc6e4f1837176e5a3490dd6734f56",
+    "adv_assets_travel_turn_left__p0.h": "a70a5d42593118d7ce5ab3e94e1f70ef09d97efe725d1450ea3c8f8ef84d9a2f",
+    "adv_assets_travel_turn_right__p0.c": "76acbb9f9f9f435270c6a34d46efdc9df0418595356acaeba8f973a8d8d1f84d",
+    "adv_assets_travel_turn_right__p0.h": "bd7b1306ac219333a1155f1241cfc0357efa0b77a2faede2f604d6e957917a08",
+    "adv_assets_travel_walk_left__p0.c": "950462130ebace62a7e7003df0d973f4b858e1701db631f09965cd991cf6e5d6",
+    "adv_assets_travel_walk_left__p0.h": "d4d71d925a9c2f88e43f72ab96110b5d67a1573c2ac794f8e5bb986f645e480e",
+    "adv_assets_travel_walk_right__p0.c": "e03165df9820c9682d699071ca6a5156b155ded8fe01000c2356a2f2c6f45329",
+    "adv_assets_travel_walk_right__p0.h": "6921ab64acb6ce8b4969cc486f7759236262643ec6bea71cd69c9cfbf28f81da",
+    "adv_assets_travel_welcome_v2__p0.c": "822e53d18ef02b13ee9d32f73b39c740de843156256278d7579fcc28aa0c09d7",
+    "adv_assets_travel_welcome_v2__p0.h": "206e81df9bf61b92bcef87d94ec4340dc756e0e11ac632da7e7ce2cc8b6c360b",
+    "adv_assets_ui_bars_bottom__p0.c": "ecf4608ac28368af3bca3f8f105def12b738c01ff990dfcb337d18cb1231f9ab",
+    "adv_assets_ui_bars_bottom__p0.h": "b2961b37d1f8d78b862dd8241543ad19266c49dbaa04cbac8e36357fbe67b8ac",
+    "adv_assets_ui_bars_top__p0.c": "06fe5707261a22375bfe556df3e192881f0e7a5a8f861426f998693591fc8084",
+    "adv_assets_ui_bars_top__p0.h": "a5e2f0d5f2917ef9c1f317d05ac418cd80fa97ed51e0da6b23cacb12806bd386",
+    "adv_assets_ui_cards_info_current_bottom__p0.c": "4a221ef89f38a254f2538467ef40cf668b688452213142593d3c24b111016f90",
+    "adv_assets_ui_cards_info_current_bottom__p0.h": "c018924f03613d37967bd75c063ef97af3da297c553ed2f4781fa59d925a2005",
+    "adv_assets_ui_cards_info_current_bottom_left__p0.c": "65eb304d1d79b9302ec171f64ad745be1c742e0bc3c2d61e615bb8bd3da1ef0c",
+    "adv_assets_ui_cards_info_current_bottom_left__p0.h": "187d9baf3c222fbe736d858269c3ac4b788bcc8b056d5c22adaa5707d0227ce0",
+    "adv_assets_ui_cards_info_current_bottom_right__p0.c": "2b67c1c388b2d69cea3b8bd189762ffbfb0efa34499f5c00223e5b3272d6bf08",
+    "adv_assets_ui_cards_info_current_bottom_right__p0.h": "68b101b99dc13b239349d740f783bb94435c71cde3f84cce5e09065d9e314914",
+    "adv_assets_ui_cards_info_current_center__p0.c": "2d9c9ef94224a892fe5924ba1f7da6f7230b8e57528f4b26bd887575f5482b99",
+    "adv_assets_ui_cards_info_current_center__p0.h": "aa4eb1fd453cf30ffe2c2c32e30ca7c8811e7ab8e507e81a8dd3d049b85cac69",
+    "adv_assets_ui_cards_info_current_left__p0.c": "f939e33f4ab750576b0e81db3240c94cbc2d862ccdef31ec2e2b8f5bd2b8ab1a",
+    "adv_assets_ui_cards_info_current_left__p0.h": "b9c6863fcf30cc9a23a08762a317dfb3d45b0550757c8704701951ead0a5e90e",
+    "adv_assets_ui_cards_info_current_right__p0.c": "11a5300fa14abf92b60374514e723cf96b61f99881576dc7e4b306f5c6af0ec5",
+    "adv_assets_ui_cards_info_current_right__p0.h": "ea5778ec11793beed5b7744a6cd7540727d06f53aeb25722288594672503c61d",
+    "adv_assets_ui_cards_info_current_top_left__p0.c": "141bed8464f1088cd66ef45016d6b3d5b8bb92a41f149ec91cd10d294b748128",
+    "adv_assets_ui_cards_info_current_top_left__p0.h": "ce95b52b42bcb2823efa255f0c6cc8619a1d986dac69a584804fc424ef3bb037",
+    "adv_assets_ui_cards_info_current_top_right__p0.c": "29e8428a448d22a993b360ea0719064c83380e65c500ec7d436c7cab093be733",
+    "adv_assets_ui_cards_info_current_top_right__p0.h": "0bed78bd8f6a54a0478b91bcf6204a7583b4d8363a967d4b6819c43d21e6d4c8",
+    "adv_assets_ui_cards_info_normal_bottom__p0.c": "961e7ce2d0235551ffb343c88cf3937264a6c2c59b781384678d6d443471fe0d",
+    "adv_assets_ui_cards_info_normal_bottom__p0.h": "724f5a856b2989703718cb1198ec034b2222600694920fd0d679131179ddea6f",
+    "adv_assets_ui_cards_info_normal_bottom_left__p0.c": "2200dee4db533d5a663a1eef51c58726c2fbe2c5b03eb3a3062376d0e584d0b9",
+    "adv_assets_ui_cards_info_normal_bottom_left__p0.h": "c1507a46a01b3aa1241e2e625583c30d7a2b962c8ffffc9fc387fd974bd7f35b",
+    "adv_assets_ui_cards_info_normal_bottom_right__p0.c": "0e6b246f163f9ddc2aed787be76123634ef572bff0046482861377dd33073a30",
+    "adv_assets_ui_cards_info_normal_bottom_right__p0.h": "9d50ef6bc5079d044f79390105c7a48750f1b5a923b36b97b5c1e286cf89d284",
+    "adv_assets_ui_cards_info_normal_center__p0.c": "02d34f9e2ebcb44dd86643c75d560c761748bf286bfa12c7c610a936e5a1555f",
+    "adv_assets_ui_cards_info_normal_center__p0.h": "f12315653f622b0de5ba0330899c2adbf5386a67ed7f8f465c77d23381d6a1a7",
+    "adv_assets_ui_cards_info_normal_left__p0.c": "fd7b6fbb3dc1f99188feca830166d9a869418878a8636535576ccbc6ed76b890",
+    "adv_assets_ui_cards_info_normal_left__p0.h": "d8b106f202e18d8e2eb06984becf0cde74f2eb8e4b475b1676202ad19dc057e6",
+    "adv_assets_ui_cards_info_normal_top_left__p0.c": "87b3553a374a36c3b0d4e5f2a73747c6702717b1604b9fef83e2a91a6a793a22",
+    "adv_assets_ui_cards_info_normal_top_left__p0.h": "a70d3c2cd5c8220774382d458285503663f5ec9b141caf8485cf066a0b2f46c3",
+    "adv_assets_ui_cards_info_normal_top_right__p0.c": "b8c0e78d1ca473f4f9c01733737fc84ff527ca8a22cd552ad1b62894027aa386",
+    "adv_assets_ui_cards_info_normal_top_right__p0.h": "aabf46abb20bb11b37b8b34abf305987b7e4a9f41fe2725433cbce6b4f3e0896",
+    "adv_assets_ui_cards_popup_normal_bottom__p0.c": "aaca4363db3bc4f97a2537d909c614156d8e686fcd2f95627dee6e9a54502a8a",
+    "adv_assets_ui_cards_popup_normal_bottom__p0.h": "eb6a0ab56f64c37b0b33ed9763758936ba546b6f3dd9b35224554c5d8ff54d51",
+    "adv_assets_ui_cards_popup_normal_bottom_left__p0.c": "9e2fbc90c1c28aa715ddedcb05ad33d29e7bee5b5172a87ca69054f236f319bf",
+    "adv_assets_ui_cards_popup_normal_bottom_left__p0.h": "9d87093e933d5ae189fe24f84709b9287c4b9d2b775b4662ff7904a3aa92779c",
+    "adv_assets_ui_cards_popup_normal_bottom_right__p0.c": "6a353b0ea4237b02c6ebe3d37f271ee7f28c32be8159823d6867d7968a50328c",
+    "adv_assets_ui_cards_popup_normal_bottom_right__p0.h": "bd1bb4f9ab03c476753af09b7f893ed0a46dd62e62c6deff8eb0990a2b90d73d",
+    "adv_assets_ui_cards_popup_normal_left__p0.c": "cbcb42e0a7ccd0be654e64148cebfdc954c2a8d195954246f31ba22ff7e71ec6",
+    "adv_assets_ui_cards_popup_normal_left__p0.h": "4cf88e2bf19ce19d6e3bad874bc388d79a64106c4969fcc0c2cb066da5bdea6b",
+    "adv_assets_ui_cards_popup_normal_top_left__p0.c": "c82cc53bde49c38d8bdab477f4fe5b609b84a3423521d8e77f10c4993d6f7798",
+    "adv_assets_ui_cards_popup_normal_top_left__p0.h": "bda510ca86f997a3d2d07560c8263fee30b60eb4ba5c972b04589b989e5423d2",
+    "adv_assets_ui_cards_popup_normal_top_right__p0.c": "8ea66dfbcbe3be02fc4f3365a8a6b83a81883ab709857a0514370fa7d5e9ea19",
+    "adv_assets_ui_cards_popup_normal_top_right__p0.h": "13cc0e62a4ecdad010febc7e1aa76ae30ac8aec7fefcc8670306162a2725486f",
+    "adv_assets_ui_cover_background_bottom__p0.c": "70e3eceadd389f6ba4f0ea72e2dfc836cdb26e1cbf2580f08dd0fa6f8f08e303",
+    "adv_assets_ui_cover_background_bottom__p0.h": "626433032728f605c17c8224bc9b92777817c29f6e8687316266fdaaa348586f",
+    "adv_assets_ui_cover_background_top__p0.c": "e8c068956591e33a25f689d3dea55909370c91eb65a98cccc6e5fc1c6dfb0ca4",
+    "adv_assets_ui_cover_background_top__p0.h": "4dbc43691df7b207aca43af59c5962853f3e44157afd39690216c36675a06e7e",
+    "adv_assets_ui_labels_boot_caption__p0.c": "9274f1791b332b09cdf77013a793df046b688c2b99442c79221c96f1393447d0",
+    "adv_assets_ui_labels_boot_caption__p0.h": "a73993771562b3cf7f6ff4b29c3b3d2c3f510f52960acb3dd4cac59d54c7a2ed",
+    "adv_assets_ui_labels_new_record__p0.c": "98ccf299bd09697613675df0f4a459f79b2021cce60f1e9829706a135444bd97",
+    "adv_assets_ui_labels_new_record__p0.h": "c9d872639f7344e67a0f35ef3e8cdaaeacffd53ffe7006159515d5a4a7e3cc94",
+    "adv_assets_ui_labels_placeholder__p0.c": "f43c5573d12bb96e36f3efd8c783c89833727e7e8ba6e7081c4020a0c64060e2",
+    "adv_assets_ui_labels_placeholder__p0.h": "52ef9cc5b959b76698cd1ec14fe7e9b2e0261252ba4a2afd428098a20a498f66",
+    "adv_assets_ui_labels_press_start__p0.c": "714f2403734b082992edd1743cdf500fc1346bd02cfbf3840f86ddf1a75aee59",
+    "adv_assets_ui_labels_press_start__p0.h": "4073658fd42cc50db31f86a76681b64becff178748d639011a9fa423970557da",
+    "adv_assets_ui_labels_test_no_record__p0.c": "32af3e20d2e3b1f46a14efc1f0cf88389c5b6a4ad256eb529c9ffc0e0975770d",
+    "adv_assets_ui_labels_test_no_record__p0.h": "c125a7bbd6def0e94b05e1e88f0ee983acead8eda07b0ee30edc0db1f8c5c098",
+    "adv_assets_ui_map_footprints_backward__p0.c": "db7ff4373d05c78650b0fe26d57015f1062b8e0720431f978a81140de8e9ec0a",
+    "adv_assets_ui_map_footprints_backward__p0.h": "22f51492104d125db02bccd498ba260d4834c322b72194016071c5b89678e936",
+    "adv_assets_ui_map_footprints_forward__p0.c": "aa71b1f72f528db96aa5167d71c04f3de1bde90326575bdc4845d29604899e92",
+    "adv_assets_ui_map_footprints_forward__p0.h": "2483363542a92c81abcfa940e8b6842c3ca20830af138c04e13d414fd6cbf754",
+    "adv_assets_ui_map_lock__p0.c": "51d4c20859156183feb9071ce98fc2141eb929dc6e842588be2c7101b523daed",
+    "adv_assets_ui_map_lock__p0.h": "dc14ea086a77ef84df7c3ef190eaf5a18452ee1ad02a0e71430e193d0a7367f1",
+    "adv_assets_ui_map_stamp_bronze__p0.c": "5fb4704d5fea155b8457c9c970d1249bea9917693398cc2d8f5950826abc1d0f",
+    "adv_assets_ui_map_stamp_bronze__p0.h": "5b7355b0f7d0de8692b0f23d0474dcd1b16049a2ff4d3c74177b02f6044d20cc",
+    "adv_assets_ui_map_stamp_empty__p0.c": "0c0cd59b9487cd2a390dc448fbadaa43e45aedc628b3feab5c807b891434641a",
+    "adv_assets_ui_map_stamp_empty__p0.h": "1ea03a5139f0349912c33e2facd91eb890e432b09267405d1757a0875f24665e",
+    "adv_assets_ui_map_stamp_gold__p0.c": "310499c5b6691e89dd6917a35847268e246b6ab5a0123a4babe683e651d4dd89",
+    "adv_assets_ui_map_stamp_gold__p0.h": "f155fdfe21d9b23ffacb53c2687ac71ff5f967479182eb708595cadf7be35e24",
+    "adv_assets_ui_map_stamp_silver__p0.c": "38f575c2e2b3510b91db038a3565696395b146d555aaa6f880efd0f7c9aac51d",
+    "adv_assets_ui_map_stamp_silver__p0.h": "f50e287be535968bc66838022f2ecca0821ab227be3ce8b3122177108e340322",
+    "adv_assets_ui_map_station_current__p0.c": "7b7dc78b1f81c11e4833882a0da02bb05bf7cddde9ce12721d41015690835156",
+    "adv_assets_ui_map_station_current__p0.h": "45d65f2778cdad83d6047d2a0fad958d24900b9687980186869022c087496238",
+    "adv_assets_ui_map_station_locked__p0.c": "7503450f394290cb5c574badc779c39b3e3940898db5841f7f03ae08a934d0f1",
+    "adv_assets_ui_map_station_locked__p0.h": "31b7a04c28c1bf9f06fa47c5077ac68925a5e55067d3434916025af37f4f099a",
+    "adv_assets_ui_map_station_unlocked__p0.c": "b83f6861d5279fae2f0ef484455fc693706958e984c8051c2bd7d14ddc6169a7",
+    "adv_assets_ui_map_station_unlocked__p0.h": "5f563cd5e1310c60c3d64523b9e3e705b210cec26fa56a98d086ca9dca7238bb",
+    "adv_assets_ui_map_temporary_position_marker__p0.c": "a3cc6a73095d2113d7ad39ff70d7779ece701b01cd888bdc8d31eadcb969f072",
+    "adv_assets_ui_map_temporary_position_marker__p0.h": "c58463b745fa3f46b75056c1291a15fe4ed14bfcf31e5b6cb1210a6dbcd10df1",
+    "adv_assets_ui_numbers_20_0__p0.c": "03208b07aca4ac06097dbd9f45f9b356bc426f13ba7eacdd92c77d7c2f0042ac",
+    "adv_assets_ui_numbers_20_0__p0.h": "57b1948294a2d9ae463aff76e928df0bdf3e388e996f6b3e5a8ae6aa02ce1d51",
+    "adv_assets_ui_numbers_20_1__p0.c": "e227d82b04a9e94e93b129c2b82cfb8cefbefcea75c106f854465f4e51abaad6",
+    "adv_assets_ui_numbers_20_1__p0.h": "82f9df9f09ad213aefad3616a531e46ffebbfbab168ed8503a9f326274dde567",
+    "adv_assets_ui_numbers_20_2__p0.c": "d02d40d734e87b84eb348041ac24b05c0a7c53b1b739ec004fa9888aaaae24b0",
+    "adv_assets_ui_numbers_20_2__p0.h": "60cd83ea578ffc4dc26cdf35eb4de4369b084e78f0ad1c2c83f19b8369896ff1",
+    "adv_assets_ui_numbers_20_3__p0.c": "292bcaa915f21cf980be2a6cc7f1172c443af9ecb0d3dc3d9a7d2d62815cc949",
+    "adv_assets_ui_numbers_20_3__p0.h": "839f6dbd50618a8203b468f33787ce7a988c2b5eac6cbf8c3eec9a5d4f0c2a43",
+    "adv_assets_ui_numbers_20_4__p0.c": "6bbe686101336bd1186407f53df033a0a5812b55018ec4ce9e6a3ac1bc88551f",
+    "adv_assets_ui_numbers_20_4__p0.h": "e26d22aa29afac663497677bc59eb323461770feee379f120e83d25cc7089b5d",
+    "adv_assets_ui_numbers_20_5__p0.c": "2b11f5f5c715be1380a7f5532831a940eebd35595d5b2ff3b08bbda25eb3b509",
+    "adv_assets_ui_numbers_20_5__p0.h": "317dd53b651777d0a694593f1e897063f32883bd7f342e04af02b144c9bc3989",
+    "adv_assets_ui_numbers_20_6__p0.c": "7cf89e94fd6409c78079e2429caa7334885b94a4c002b837a6b428542c327999",
+    "adv_assets_ui_numbers_20_6__p0.h": "2308cb0a3b8692f11e8efbdfec9e1c472a14fe268f327d55d5cfe3ffaf7555b7",
+    "adv_assets_ui_numbers_20_7__p0.c": "2c04bd4990e27454cb02cba3f2521ba53152b8cf3b81ce6ad9c18d6efd6b0149",
+    "adv_assets_ui_numbers_20_7__p0.h": "43e81acd8b3f3c73c4ad6d11fba1ad90b3287bd07d78e6c2dce53f0b0fa32bda",
+    "adv_assets_ui_numbers_20_8__p0.c": "1a533d1d8085a06b53a3d691ba94abb43734570ec15f1b119274a1c271654bef",
+    "adv_assets_ui_numbers_20_8__p0.h": "26fdbf66556520df480c7249d55e24011d0cba5e1c455f861af17cd8853b4495",
+    "adv_assets_ui_numbers_20_9__p0.c": "692de1c7960498fc6d531c168dfda8c10ca978861f1bf96dea2abeac9221d0bf",
+    "adv_assets_ui_numbers_20_9__p0.h": "6758e88280a605e264cb5a746891eb7e40d333ab0f8ae3045f7961c83f957320",
+    "adv_assets_ui_numbers_20_m__p0.c": "e12f0be1d86e7ba0b7c0174dd6f74578a61df5413a99f4748540920530d23448",
+    "adv_assets_ui_numbers_20_m__p0.h": "67320c295020f9f57717fcd95354b4eb25b9cd0ea9599a90e800c535ddb867a6",
+    "adv_assets_ui_numbers_20_plus__p0.c": "ff9dc2969b7225a362162b45c99b4c45b647ce98e3db35079cbcbf2aa69f2aa9",
+    "adv_assets_ui_numbers_20_plus__p0.h": "1f9bea5e5884aea855aa3dd7e1a419aa4ce9cbb88af798f2f36a2995d63e4505",
+    "adv_assets_ui_numbers_36_0__p0.c": "ea5599479d50895a66713023112520f48f76a1915c550d4ec24baeee5d28ce33",
+    "adv_assets_ui_numbers_36_0__p0.h": "3f455321b444795471f9d65212744e99a63acdac9fc23317c26b8aa8ee37bb6e",
+    "adv_assets_ui_numbers_36_1__p0.c": "467ace05295923e741bc03ae94d2dea09dd1faee8857b9e0b5adcae8dfad98c9",
+    "adv_assets_ui_numbers_36_1__p0.h": "e7b6799e4c988f6c6a40c0b09bcb9cf4166de767c0b9033e4141e5f18d921cd4",
+    "adv_assets_ui_numbers_36_2__p0.c": "5209d68edaa85731e89edd544fd17c963c631652e7af6966bf84438ac254a9cf",
+    "adv_assets_ui_numbers_36_2__p0.h": "c3465c537a413dd44102568aa9a4eccc231f043f0fcd037376ff3c6fa15c6a8a",
+    "adv_assets_ui_numbers_36_3__p0.c": "26a7186347cbf11400c4a663617d764d1c5f039a935c1911d2f98969f8debe11",
+    "adv_assets_ui_numbers_36_3__p0.h": "98ec19c6dbfc3123e83c753fa77abdfad296488bcaa1f0815332d4a4b6cf5690",
+    "adv_assets_ui_numbers_36_4__p0.c": "8acee8ef617a0db264e30e21b13c6224a8653168b32546f01d122334f6971a07",
+    "adv_assets_ui_numbers_36_4__p0.h": "72705b5755782d7ae9d08e2bd17614b510f682c25198896d369a083b4bcf40b7",
+    "adv_assets_ui_numbers_36_5__p0.c": "f3f2145519a6db35ae3dbe335afe0d8094a43044470557a8cf7d3ba96fab6697",
+    "adv_assets_ui_numbers_36_5__p0.h": "8fe080fb73f523f5a010ab428928a6716ddd261a8f5ba7db88ab8a9c8cb69515",
+    "adv_assets_ui_numbers_36_6__p0.c": "fc7874747813668aa7b1fe02e2d4d04c1560c0a1a60997cf460c7099b32829c8",
+    "adv_assets_ui_numbers_36_6__p0.h": "e733df2f3a55b140f57a38d275ef1a38218603955a04b0fac557a16eafb7474d",
+    "adv_assets_ui_numbers_36_7__p0.c": "4e6e9be84dc3f56d1ddaf70ed03038e1452992bdc39ea257a3c66579ddace71a",
+    "adv_assets_ui_numbers_36_7__p0.h": "5a51c5220c4736250d9a13d6e831f6e03b5f9042a49602603cf5706d1223d354",
+    "adv_assets_ui_numbers_36_8__p0.c": "af75b08f5e809f9385731ca998d425055048eb36e5be0947604f1a03a9989afc",
+    "adv_assets_ui_numbers_36_8__p0.h": "583b427243f89ac9cc24f1f7bb77f70b9b2667df0e82b168ae8566d38d9ee07b",
+    "adv_assets_ui_numbers_36_9__p0.c": "44bff43486db5a92c02b7a92039fdeb84f982986cd0261693e90fd2d1d77844f",
+    "adv_assets_ui_numbers_36_9__p0.h": "cb58b3dceb798ff5f183309281e2388aac2b9259b35190de0be41e36722228a3",
+    "adv_assets_ui_numbers_36_m__p0.c": "9edc7ba753d8dd9941c2fafed2ba23c168a5ac5d63a661b69218676b8a3f7bf6",
+    "adv_assets_ui_numbers_36_m__p0.h": "59d334143ad490d58ec9e6100f78c5392498f1fd63d161d9bf0667b4aefef455",
+    "adv_assets_ui_numbers_36_plus__p0.c": "cdd6c714e60088dd992d7a3fc5e654569b29690aa170a36a4831603a2ebc4003",
+    "adv_assets_ui_numbers_36_plus__p0.h": "9088b5120a711539c323476eb91fff4dab0087ecb1380580d77348b42ddae2e0",
+    "adv_assets_ui_passport_grid_current__p0.c": "8f6cc4fa4d46d9e008a24ac6e88166fe19795992846297248576dfc6643b3223",
+    "adv_assets_ui_passport_grid_current__p0.h": "8993696b4123627bf6e44d816568b519045dbbc617fe8f4f9a02c9c9b3571057",
+    "adv_assets_ui_passport_grid_normal__p0.c": "01bb1367724ea5be299a6893293399cde591bfbe2ce376d6e6976db668947f41",
+    "adv_assets_ui_passport_grid_normal__p0.h": "ee9823141c3cc2cc3a5b458bed8f6468cadae428e0e94fc69e66f4d60612afb9",
+    "adv_assets_ui_passport_header__p0.c": "0fba61c57ef906f5f229af23e7bc63342bc87cccb3c3cbc26ed88b6445b4fbb4",
+    "adv_assets_ui_passport_header__p0.h": "25c19fb37dd2e5ad7d2442e1ed2b87962587ebdd985c7f7c177e0318fc654ec5",
+    "adv_assets_ui_passport_locked_mask__p0.c": "fca5fb306c67f937aacbe397f3710a133167b1e37a8e37bc605e33db7f39e5f9",
+    "adv_assets_ui_passport_locked_mask__p0.h": "513df11b4b601341dc3a0d21c6b7ac00284e88410eab094fcc88cd5477063284",
+    "adv_assets_ui_passport_page_tile__p0.c": "16db3022194c6be7bc0d62119575ef0205e586ff2dd2011e2d2796bc0de944c4",
+    "adv_assets_ui_passport_page_tile__p0.h": "971ac40493b43f0f04dec444a09f2035be33bcb55cbe1a77b3aa21083d21caff",
+    "adv_assets_ui_resources_bar_frame__p0.c": "b41e2edf2c6ff514243e5e0bf3dd860d8a481d9e203c49b9f6f3be3c07fdfd64",
+    "adv_assets_ui_resources_bar_frame__p0.h": "7683b8dfd766c084858638251d98402d7edb4f0e1823f27e7b6f470bf998a1bc",
+    "adv_assets_ui_resources_fill__p0.c": "1386449f297fa433a985018e177948ee1091a0bf7153861387c999daecee52b3",
+    "adv_assets_ui_resources_fill__p0.h": "4a69d9c6e2587b048c31f8cd43a2321442a387bc64119fcfa66a0de987dd32bc",
+    "adv_assets_ui_resources_fill_left_cap__p0.c": "fa844db76f9d9ca9df39380d940006844f421d8dd82b2a415fe7f3ca8a8bcc7c",
+    "adv_assets_ui_resources_fill_left_cap__p0.h": "788d3151bb80cf0f1ab87ab5726d0d0111abc3db9015c2e806cf13d02605d0fe",
+    "adv_assets_ui_resources_fill_right_cap__p0.c": "e2d0de9a99d082ce24936ed04d67ef94738121d87662a503cad34cd8e7b42166",
+    "adv_assets_ui_resources_fill_right_cap__p0.h": "fbeff1bab7b4a23adbdfb7b118ed6f1f9eee3d8bb585c6c89590e5f7d9f9bf43",
+    "adv_assets_ui_resources_icons_fuel__p0.c": "5cbaeb441f4c6e545e3e7ae8b1e6673e1be74b1f3752f9a4e41a1a57c56a4fe9",
+    "adv_assets_ui_resources_icons_fuel__p0.h": "4da5d1dc6ac29ac352bf6c06d438eac5663ca05fc075510d608ba9868199c2f1",
+    "adv_assets_ui_resources_icons_hot_air__p0.c": "d4307d5146e4505c45c248b47a3c0da3a0e5135400ad7e37c75dcb8c1c3ae712",
+    "adv_assets_ui_resources_icons_hot_air__p0.h": "d32ef2423a30c68efc98133789f94ff616c924b96e90d4b773207cfc8d822d99",
+    "adv_assets_ui_resources_icons_oxygen__p0.c": "a97befd5d847500cbc37a541f710d61124ac3cea1c7b0af3377c26226619cce8",
+    "adv_assets_ui_resources_icons_oxygen__p0.h": "997b7e363125101681ec3c3ded38fc12e09b426b875377b7afe8278d0baa5482",
+    "adv_assets_ui_resources_icons_spirit__p0.c": "6db660e6f97c7764014190c753ca14af338dd446e76396496f4bfd5d3200a576",
+    "adv_assets_ui_resources_icons_spirit__p0.h": "6c3ce58271505d74a0c532a57e20e0c093f076c25e390a5c60d597015a1fbae6",
+    "adv_assets_ui_resources_icons_stamina__p0.c": "bbdd83d5239ba0df59c46fd3d88ccb8be030a586593f1688b1f1f3ed088a65af",
+    "adv_assets_ui_resources_icons_stamina__p0.h": "d7ddc8c1ac28bd2903695180f8ea8a03968181ea9972cdc3e849829059cf82b5",
+    "adv_assets_ui_resources_icons_steam__p0.c": "845479e5c5ae9781a30cf015277b4530692cfcc344f1bc800a758298ff9cb9ef",
+    "adv_assets_ui_resources_icons_steam__p0.h": "f5c29460ed641588ca796e11c860c06e9c7450f88c73ef6046159dd5bdfcacc0",
+    "adv_assets_ui_resources_icons_temperature__p0.c": "39976838d813f90a25ba21e7da471de06fdac1dda9bbcf01613ce82f4b706b61",
+    "adv_assets_ui_resources_icons_temperature__p0.h": "f49099978d200d1f27ea975e3e886f24edc4fcd373cc64deaf574ce05960e05d",
+    "adv_assets_ui_resources_low_fill__p0.c": "c059295b4b88880301a6f06cb138f8c033b4dfcb679b2de43bb9887368dc5ccc",
+    "adv_assets_ui_resources_low_fill__p0.h": "c1b9488ce9daf797ac028b91cd076c2c2b2fa1ed4c4d28547577dd8b40083d02",
+    "adv_assets_ui_stamps_ink_pad__p0.c": "0959ef781822de09b857121c6d8240578de4932923949a37da2972adf9c769eb",
+    "adv_assets_ui_stamps_ink_pad__p0.h": "086c55726802ce961b53cbb683dd2fcb52fc3260997b002f344849cdcd3bb876",
+    "adv_assets_ui_wordmarks_climb__p0.c": "aa24b203a9e8695b42d376806537a2a3ed662bae635d6f5094ea53e057aaa74d",
+    "adv_assets_ui_wordmarks_climb__p0.h": "06495e707d93c15e7733997619fcce1860e3609bd82dbeb47f161c54420d79cb",
+    "adv_assets_ui_wordmarks_collection__p0.c": "15e1a5a507b17bb96cc4d112f02888dffa9acc0ec3d11228d06c39afd3f1352c",
+    "adv_assets_ui_wordmarks_collection__p0.h": "d77e45ff64c1fa2388af0063386c5efc0d8a732c4feb65199290bfadacb36109",
+    "adv_assets_ui_wordmarks_dive__p0.c": "464c81b5e0ec1d7d3d53cac687de9072c03dc05fd2be98cb545186835cfb0b09",
+    "adv_assets_ui_wordmarks_dive__p0.h": "5f99de28037199a22be1f093528cce899b6b57e129cfb4012d200e9963720f4a",
+    "adv_assets_ui_wordmarks_jump__p0.c": "8355a68bf2ef44c1397635d44540c9516ba2f07a37700559d88ca9da39579cc3",
+    "adv_assets_ui_wordmarks_jump__p0.h": "bf5bec1e9d9ef7ed5f41c79b2548e90cab11c660ea698add6d6686d2103d829f",
+    "adv_assets_ui_wordmarks_night__p0.c": "7d4671335e9de2653662d5058d6d3c22ba7811add6f0b0cd9a4b64ecb9df5cd0",
+    "adv_assets_ui_wordmarks_night__p0.h": "8c0da150e1a9edb5aa512803e2341ca5658939d60a169c33b028cc84e519c954",
+    "adv_assets_ui_wordmarks_post__p0.c": "0a09f79263f617ac6153209e4f986778fe82f01281476febf2696ac66685c111",
+    "adv_assets_ui_wordmarks_post__p0.h": "a7a7ac58211adc15c46d518c87f88fb0c1eddd6e9a2de4ef414eea039680daed",
+    "adv_assets_ui_wordmarks_ski__p0.c": "7c5add606380e07517453bbeeda3081353797c631bcbd7833ec4d7e96d616866",
+    "adv_assets_ui_wordmarks_ski__p0.h": "808760c1847e09ee8040943a11f56392817130c971e8d442437f4803231958a8",
+    "adv_assets_ui_wordmarks_sky__p0.c": "a60c011c847ed6736489e1dd0441cac5187494493deb1e74c3b3c4789b63e9bb",
+    "adv_assets_ui_wordmarks_sky__p0.h": "ee424a3f45b29c10e83bd54da91ba3450b643cc9079350b637cef319eebcf424",
+    "adv_assets_ui_wordmarks_space__p0.c": "35610faaeb53d8431441cf8fd2f019604a25ef4a46003b5eba55eea43380de4a",
+    "adv_assets_ui_wordmarks_space__p0.h": "a067bf0f871f61f3f2b111e8dba0c418658198550e4b7181c9753ab1386a6bd3"
   },
   "files": [
     "adv_assets_catalog.c",
@@ -150,9 +524,6 @@
     "adv_assets_static_tiles_mountain_ridge__p0.c",
     "adv_assets_static_tiles_mountain_ridge__p0.h",
     "adv_assets_static_tiles_mountain_ridge__p0.json",
-    "adv_assets_static_tiles_mountain_rock_face__p0.c",
-    "adv_assets_static_tiles_mountain_rock_face__p0.h",
-    "adv_assets_static_tiles_mountain_rock_face__p0.json",
     "adv_assets_static_tiles_mountain_snow_drift__p0.c",
     "adv_assets_static_tiles_mountain_snow_drift__p0.h",
     "adv_assets_static_tiles_mountain_snow_drift__p0.json",
@@ -192,9 +563,6 @@
     "adv_assets_static_tiles_rail_telegraph_pole__p0.c",
     "adv_assets_static_tiles_rail_telegraph_pole__p0.h",
     "adv_assets_static_tiles_rail_telegraph_pole__p0.json",
-    "adv_assets_static_tiles_rail_trackside_grass__p0.c",
-    "adv_assets_static_tiles_rail_trackside_grass__p0.h",
-    "adv_assets_static_tiles_rail_trackside_grass__p0.json",
     "adv_assets_static_tiles_rail_wheat__p0.c",
     "adv_assets_static_tiles_rail_wheat__p0.h",
     "adv_assets_static_tiles_rail_wheat__p0.json",
@@ -204,12 +572,6 @@
     "adv_assets_static_tiles_ski_small_spruce__p0.c",
     "adv_assets_static_tiles_ski_small_spruce__p0.h",
     "adv_assets_static_tiles_ski_small_spruce__p0.json",
-    "adv_assets_static_tiles_ski_snow_mound__p0.c",
-    "adv_assets_static_tiles_ski_snow_mound__p0.h",
-    "adv_assets_static_tiles_ski_snow_mound__p0.json",
-    "adv_assets_static_tiles_ski_snow_pine__p0.c",
-    "adv_assets_static_tiles_ski_snow_pine__p0.h",
-    "adv_assets_static_tiles_ski_snow_pine__p0.json",
     "adv_assets_static_tiles_ski_snow_track__p0.c",
     "adv_assets_static_tiles_ski_snow_track__p0.h",
     "adv_assets_static_tiles_ski_snow_track__p0.json",
@@ -228,18 +590,12 @@
     "adv_assets_static_tiles_sky_feather__p0.c",
     "adv_assets_static_tiles_sky_feather__p0.h",
     "adv_assets_static_tiles_sky_feather__p0.json",
-    "adv_assets_static_tiles_sky_wind_ribbon__p0.c",
-    "adv_assets_static_tiles_sky_wind_ribbon__p0.h",
-    "adv_assets_static_tiles_sky_wind_ribbon__p0.json",
     "adv_assets_static_tiles_space_asteroid__p0.c",
     "adv_assets_static_tiles_space_asteroid__p0.h",
     "adv_assets_static_tiles_space_asteroid__p0.json",
     "adv_assets_static_tiles_space_comet__p0.c",
     "adv_assets_static_tiles_space_comet__p0.h",
     "adv_assets_static_tiles_space_comet__p0.json",
-    "adv_assets_static_tiles_space_crater__p0.c",
-    "adv_assets_static_tiles_space_crater__p0.h",
-    "adv_assets_static_tiles_space_crater__p0.json",
     "adv_assets_static_tiles_space_orbit_dots__p0.c",
     "adv_assets_static_tiles_space_orbit_dots__p0.h",
     "adv_assets_static_tiles_space_orbit_dots__p0.json",
@@ -294,9 +650,9 @@
     "adv_assets_travel_walk_right__p0.c",
     "adv_assets_travel_walk_right__p0.h",
     "adv_assets_travel_walk_right__p0.json",
-    "adv_assets_travel_welcome__p0.c",
-    "adv_assets_travel_welcome__p0.h",
-    "adv_assets_travel_welcome__p0.json",
+    "adv_assets_travel_welcome_v2__p0.c",
+    "adv_assets_travel_welcome_v2__p0.h",
+    "adv_assets_travel_welcome_v2__p0.json",
     "adv_assets_ui_bars_bottom__p0.c",
     "adv_assets_ui_bars_bottom__p0.h",
     "adv_assets_ui_bars_bottom__p0.json",
@@ -321,9 +677,6 @@
     "adv_assets_ui_cards_info_current_right__p0.c",
     "adv_assets_ui_cards_info_current_right__p0.h",
     "adv_assets_ui_cards_info_current_right__p0.json",
-    "adv_assets_ui_cards_info_current_top__p0.c",
-    "adv_assets_ui_cards_info_current_top__p0.h",
-    "adv_assets_ui_cards_info_current_top__p0.json",
     "adv_assets_ui_cards_info_current_top_left__p0.c",
     "adv_assets_ui_cards_info_current_top_left__p0.h",
     "adv_assets_ui_cards_info_current_top_left__p0.json",
@@ -345,99 +698,12 @@
     "adv_assets_ui_cards_info_normal_left__p0.c",
     "adv_assets_ui_cards_info_normal_left__p0.h",
     "adv_assets_ui_cards_info_normal_left__p0.json",
-    "adv_assets_ui_cards_info_normal_right__p0.c",
-    "adv_assets_ui_cards_info_normal_right__p0.h",
-    "adv_assets_ui_cards_info_normal_right__p0.json",
-    "adv_assets_ui_cards_info_normal_top__p0.c",
-    "adv_assets_ui_cards_info_normal_top__p0.h",
-    "adv_assets_ui_cards_info_normal_top__p0.json",
     "adv_assets_ui_cards_info_normal_top_left__p0.c",
     "adv_assets_ui_cards_info_normal_top_left__p0.h",
     "adv_assets_ui_cards_info_normal_top_left__p0.json",
     "adv_assets_ui_cards_info_normal_top_right__p0.c",
     "adv_assets_ui_cards_info_normal_top_right__p0.h",
     "adv_assets_ui_cards_info_normal_top_right__p0.json",
-    "adv_assets_ui_cards_menu_disabled_bottom__p0.c",
-    "adv_assets_ui_cards_menu_disabled_bottom__p0.h",
-    "adv_assets_ui_cards_menu_disabled_bottom__p0.json",
-    "adv_assets_ui_cards_menu_disabled_bottom_left__p0.c",
-    "adv_assets_ui_cards_menu_disabled_bottom_left__p0.h",
-    "adv_assets_ui_cards_menu_disabled_bottom_left__p0.json",
-    "adv_assets_ui_cards_menu_disabled_bottom_right__p0.c",
-    "adv_assets_ui_cards_menu_disabled_bottom_right__p0.h",
-    "adv_assets_ui_cards_menu_disabled_bottom_right__p0.json",
-    "adv_assets_ui_cards_menu_disabled_center__p0.c",
-    "adv_assets_ui_cards_menu_disabled_center__p0.h",
-    "adv_assets_ui_cards_menu_disabled_center__p0.json",
-    "adv_assets_ui_cards_menu_disabled_left__p0.c",
-    "adv_assets_ui_cards_menu_disabled_left__p0.h",
-    "adv_assets_ui_cards_menu_disabled_left__p0.json",
-    "adv_assets_ui_cards_menu_disabled_right__p0.c",
-    "adv_assets_ui_cards_menu_disabled_right__p0.h",
-    "adv_assets_ui_cards_menu_disabled_right__p0.json",
-    "adv_assets_ui_cards_menu_disabled_top__p0.c",
-    "adv_assets_ui_cards_menu_disabled_top__p0.h",
-    "adv_assets_ui_cards_menu_disabled_top__p0.json",
-    "adv_assets_ui_cards_menu_disabled_top_left__p0.c",
-    "adv_assets_ui_cards_menu_disabled_top_left__p0.h",
-    "adv_assets_ui_cards_menu_disabled_top_left__p0.json",
-    "adv_assets_ui_cards_menu_disabled_top_right__p0.c",
-    "adv_assets_ui_cards_menu_disabled_top_right__p0.h",
-    "adv_assets_ui_cards_menu_disabled_top_right__p0.json",
-    "adv_assets_ui_cards_menu_normal_bottom__p0.c",
-    "adv_assets_ui_cards_menu_normal_bottom__p0.h",
-    "adv_assets_ui_cards_menu_normal_bottom__p0.json",
-    "adv_assets_ui_cards_menu_normal_bottom_left__p0.c",
-    "adv_assets_ui_cards_menu_normal_bottom_left__p0.h",
-    "adv_assets_ui_cards_menu_normal_bottom_left__p0.json",
-    "adv_assets_ui_cards_menu_normal_bottom_right__p0.c",
-    "adv_assets_ui_cards_menu_normal_bottom_right__p0.h",
-    "adv_assets_ui_cards_menu_normal_bottom_right__p0.json",
-    "adv_assets_ui_cards_menu_normal_center__p0.c",
-    "adv_assets_ui_cards_menu_normal_center__p0.h",
-    "adv_assets_ui_cards_menu_normal_center__p0.json",
-    "adv_assets_ui_cards_menu_normal_left__p0.c",
-    "adv_assets_ui_cards_menu_normal_left__p0.h",
-    "adv_assets_ui_cards_menu_normal_left__p0.json",
-    "adv_assets_ui_cards_menu_normal_right__p0.c",
-    "adv_assets_ui_cards_menu_normal_right__p0.h",
-    "adv_assets_ui_cards_menu_normal_right__p0.json",
-    "adv_assets_ui_cards_menu_normal_top__p0.c",
-    "adv_assets_ui_cards_menu_normal_top__p0.h",
-    "adv_assets_ui_cards_menu_normal_top__p0.json",
-    "adv_assets_ui_cards_menu_normal_top_left__p0.c",
-    "adv_assets_ui_cards_menu_normal_top_left__p0.h",
-    "adv_assets_ui_cards_menu_normal_top_left__p0.json",
-    "adv_assets_ui_cards_menu_normal_top_right__p0.c",
-    "adv_assets_ui_cards_menu_normal_top_right__p0.h",
-    "adv_assets_ui_cards_menu_normal_top_right__p0.json",
-    "adv_assets_ui_cards_menu_selected_bottom__p0.c",
-    "adv_assets_ui_cards_menu_selected_bottom__p0.h",
-    "adv_assets_ui_cards_menu_selected_bottom__p0.json",
-    "adv_assets_ui_cards_menu_selected_bottom_left__p0.c",
-    "adv_assets_ui_cards_menu_selected_bottom_left__p0.h",
-    "adv_assets_ui_cards_menu_selected_bottom_left__p0.json",
-    "adv_assets_ui_cards_menu_selected_bottom_right__p0.c",
-    "adv_assets_ui_cards_menu_selected_bottom_right__p0.h",
-    "adv_assets_ui_cards_menu_selected_bottom_right__p0.json",
-    "adv_assets_ui_cards_menu_selected_center__p0.c",
-    "adv_assets_ui_cards_menu_selected_center__p0.h",
-    "adv_assets_ui_cards_menu_selected_center__p0.json",
-    "adv_assets_ui_cards_menu_selected_left__p0.c",
-    "adv_assets_ui_cards_menu_selected_left__p0.h",
-    "adv_assets_ui_cards_menu_selected_left__p0.json",
-    "adv_assets_ui_cards_menu_selected_right__p0.c",
-    "adv_assets_ui_cards_menu_selected_right__p0.h",
-    "adv_assets_ui_cards_menu_selected_right__p0.json",
-    "adv_assets_ui_cards_menu_selected_top__p0.c",
-    "adv_assets_ui_cards_menu_selected_top__p0.h",
-    "adv_assets_ui_cards_menu_selected_top__p0.json",
-    "adv_assets_ui_cards_menu_selected_top_left__p0.c",
-    "adv_assets_ui_cards_menu_selected_top_left__p0.h",
-    "adv_assets_ui_cards_menu_selected_top_left__p0.json",
-    "adv_assets_ui_cards_menu_selected_top_right__p0.c",
-    "adv_assets_ui_cards_menu_selected_top_right__p0.h",
-    "adv_assets_ui_cards_menu_selected_top_right__p0.json",
     "adv_assets_ui_cards_popup_normal_bottom__p0.c",
     "adv_assets_ui_cards_popup_normal_bottom__p0.h",
     "adv_assets_ui_cards_popup_normal_bottom__p0.json",
@@ -447,18 +713,9 @@
     "adv_assets_ui_cards_popup_normal_bottom_right__p0.c",
     "adv_assets_ui_cards_popup_normal_bottom_right__p0.h",
     "adv_assets_ui_cards_popup_normal_bottom_right__p0.json",
-    "adv_assets_ui_cards_popup_normal_center__p0.c",
-    "adv_assets_ui_cards_popup_normal_center__p0.h",
-    "adv_assets_ui_cards_popup_normal_center__p0.json",
     "adv_assets_ui_cards_popup_normal_left__p0.c",
     "adv_assets_ui_cards_popup_normal_left__p0.h",
     "adv_assets_ui_cards_popup_normal_left__p0.json",
-    "adv_assets_ui_cards_popup_normal_right__p0.c",
-    "adv_assets_ui_cards_popup_normal_right__p0.h",
-    "adv_assets_ui_cards_popup_normal_right__p0.json",
-    "adv_assets_ui_cards_popup_normal_top__p0.c",
-    "adv_assets_ui_cards_popup_normal_top__p0.h",
-    "adv_assets_ui_cards_popup_normal_top__p0.json",
     "adv_assets_ui_cards_popup_normal_top_left__p0.c",
     "adv_assets_ui_cards_popup_normal_top_left__p0.h",
     "adv_assets_ui_cards_popup_normal_top_left__p0.json",
@@ -642,12 +899,6 @@
     "adv_assets_ui_resources_low_fill__p0.c",
     "adv_assets_ui_resources_low_fill__p0.h",
     "adv_assets_ui_resources_low_fill__p0.json",
-    "adv_assets_ui_resources_low_fill_left_cap__p0.c",
-    "adv_assets_ui_resources_low_fill_left_cap__p0.h",
-    "adv_assets_ui_resources_low_fill_left_cap__p0.json",
-    "adv_assets_ui_resources_low_fill_right_cap__p0.c",
-    "adv_assets_ui_resources_low_fill_right_cap__p0.h",
-    "adv_assets_ui_resources_low_fill_right_cap__p0.json",
     "adv_assets_ui_stamps_ink_pad__p0.c",
     "adv_assets_ui_stamps_ink_pad__p0.h",
     "adv_assets_ui_stamps_ink_pad__p0.json",
@@ -683,15 +934,18 @@
   "source_manifests_sha256": {
     "shared-static-manifest.json": "f48bb34259cd5f58eb04cdc94d1e95e130875b111888b85962955b9655a4c5c8",
     "manifest.json": "e62681862e7f1c656c547f5324ac0f1d8a462609afcb19ad4157041f7de2d9af",
-    "ui/ui-manifest.json": "609bd4b7d481fb90f36d7a2e95c8163cfe9203dbdb16248b71af543726e53f3e",
-    "ui/palette.json": "937c2d09f1ee0ee124b7c13f562b5ea8208a7901a9aa1a0637c5d1310b8de457"
+    "ui/ui-manifest.json": "093a972bcd5fd12ab2a12281216e06d861fc63222b3c98551630d6791c95e0d0",
+    "boot/selection.json": "97f8766bd5ba3c33aa46d5c31b32b4c3a32bb16bd2a37129ae3ca541321edc94",
+    "boot-v2-manifest.json": "e02927badea6222ca97a014b5f9adaaa0090405524c33b6238df2083fef42c0e",
+    "../audio/boot-welcome.wav": "38b4eb8435d6a7915d17af2083a696acfa2660244be1bf7e65dc78251f0c468b",
+    "ui/palette.json": "3b3dc6d793ac4eff3af34fc01f0d969f7eb6a5c0b5a6b967e66795103949fce0"
   },
   "source_frames": [
     {
       "id": "static/icon/fuel",
       "sources": [
         {
-          "path": "icons\\fuel.png",
+          "path": "icons/fuel.png",
           "sha256": "1939d939fed173896c0c461c50022b00b63ad37196e6842edb4cb1563536a0eb"
         }
       ],
@@ -723,7 +977,7 @@
       "id": "static/icon/hot-air",
       "sources": [
         {
-          "path": "icons\\hot-air.png",
+          "path": "icons/hot-air.png",
           "sha256": "d7bdc4337cafe9c0b57702cd7b273aa7ca67e42bd2a9c9c460b73195f8dfd210"
         }
       ],
@@ -755,7 +1009,7 @@
       "id": "static/icon/oxygen",
       "sources": [
         {
-          "path": "icons\\oxygen.png",
+          "path": "icons/oxygen.png",
           "sha256": "151bc515d53f73278a797eea165d7c110afd593dfd728e321f252f8c11e93d05"
         }
       ],
@@ -787,7 +1041,7 @@
       "id": "static/icon/spirit",
       "sources": [
         {
-          "path": "icons\\spirit.png",
+          "path": "icons/spirit.png",
           "sha256": "2f1a4e35393568cf45b38ee3b6a5fef8613fdd65e41baa5efbad87ecbf0bf45d"
         }
       ],
@@ -819,7 +1073,7 @@
       "id": "static/icon/stamina",
       "sources": [
         {
-          "path": "icons\\stamina.png",
+          "path": "icons/stamina.png",
           "sha256": "e0217a47fb71230d11e450493eca03c923f61fb74eed0a308e4a488088daeed0"
         }
       ],
@@ -851,7 +1105,7 @@
       "id": "static/icon/steam",
       "sources": [
         {
-          "path": "icons\\steam.png",
+          "path": "icons/steam.png",
           "sha256": "9a64d567d86a690751741ca1eaff31f66dd1acdbb7f71fcd9caddc03c4e0848d"
         }
       ],
@@ -883,7 +1137,7 @@
       "id": "static/icon/warmth",
       "sources": [
         {
-          "path": "icons\\warmth.png",
+          "path": "icons/warmth.png",
           "sha256": "026bc94edb20620b692cd9783999352b40a1911618e1d0fcc8d76b910a98793b"
         }
       ],
@@ -915,7 +1169,7 @@
       "id": "static/landmark/climb",
       "sources": [
         {
-          "path": "map\\landmarks\\climb.png",
+          "path": "map/landmarks/climb.png",
           "sha256": "ac128f0afb2902bdc9418a51d87068c238690d326125d664fbebe84cd5729c94"
         }
       ],
@@ -947,7 +1201,7 @@
       "id": "static/landmark/dive",
       "sources": [
         {
-          "path": "map\\landmarks\\dive.png",
+          "path": "map/landmarks/dive.png",
           "sha256": "d341b383c9798d8769e9d094f4b6c29e13667f7a8d155122036e4cd5d0f76809"
         }
       ],
@@ -979,7 +1233,7 @@
       "id": "static/landmark/jump",
       "sources": [
         {
-          "path": "map\\landmarks\\jump.png",
+          "path": "map/landmarks/jump.png",
           "sha256": "af2889591d7a04240f1cfc1faba86c9aaad4a6d63375b56afebffe6f2a119ec3"
         }
       ],
@@ -1011,7 +1265,7 @@
       "id": "static/landmark/kiosk",
       "sources": [
         {
-          "path": "map\\landmarks\\kiosk.png",
+          "path": "map/landmarks/kiosk.png",
           "sha256": "053f4bba2f368f5f9003d574f53b45e6b822751f503dd58f85249f6f6107e5a1"
         }
       ],
@@ -1043,7 +1297,7 @@
       "id": "static/landmark/night",
       "sources": [
         {
-          "path": "map\\landmarks\\night.png",
+          "path": "map/landmarks/night.png",
           "sha256": "5da7308a84004d0913c704e0fa887705992588adce23919e86715c1059464d1e"
         }
       ],
@@ -1075,7 +1329,7 @@
       "id": "static/landmark/post",
       "sources": [
         {
-          "path": "map\\landmarks\\post.png",
+          "path": "map/landmarks/post.png",
           "sha256": "7f91c03cc1d4c0faeb1990b7c91d7d927e74d192347d67c089a7dcf9ed107623"
         }
       ],
@@ -1107,7 +1361,7 @@
       "id": "static/landmark/ski",
       "sources": [
         {
-          "path": "map\\landmarks\\ski.png",
+          "path": "map/landmarks/ski.png",
           "sha256": "a4d9f679d11503195225a51fd32af67fde6b7fa1316191cb40375ce8470efcfe"
         }
       ],
@@ -1139,7 +1393,7 @@
       "id": "static/landmark/sky",
       "sources": [
         {
-          "path": "map\\landmarks\\sky.png",
+          "path": "map/landmarks/sky.png",
           "sha256": "835e69ed79dc5212399a229b2a398dd627f726f545e9c28cefcd4778961943f0"
         }
       ],
@@ -1171,7 +1425,7 @@
       "id": "static/landmark/space",
       "sources": [
         {
-          "path": "map\\landmarks\\space.png",
+          "path": "map/landmarks/space.png",
           "sha256": "6764b4f23eb63172419a6d00ab004dfffff02bf0e6f316481c00ac07bebb8bd1"
         }
       ],
@@ -1203,7 +1457,7 @@
       "id": "static/stamp/climb",
       "sources": [
         {
-          "path": "stamps\\climb.png",
+          "path": "stamps/climb.png",
           "sha256": "88cc990b806b516850cf9929ec8fe306d06d9accaa7b924a66f463e400595fa7"
         }
       ],
@@ -1235,7 +1489,7 @@
       "id": "static/stamp/dive",
       "sources": [
         {
-          "path": "stamps\\dive.png",
+          "path": "stamps/dive.png",
           "sha256": "2f1456b213066289080946789804bc40fe255b3938bed9a1fc048a1d49b04068"
         }
       ],
@@ -1267,7 +1521,7 @@
       "id": "static/stamp/jump",
       "sources": [
         {
-          "path": "stamps\\jump.png",
+          "path": "stamps/jump.png",
           "sha256": "d76db59ac0bdc7692a9a6b7c00c52be1f2afe8a562fb1762fda263b7a84f6f2c"
         }
       ],
@@ -1299,7 +1553,7 @@
       "id": "static/stamp/kiosk",
       "sources": [
         {
-          "path": "stamps\\kiosk.png",
+          "path": "stamps/kiosk.png",
           "sha256": "2595b0a6a69d31a51b5750b443a7a7cc6188edd2b930a7b8c152991f5042fc12"
         }
       ],
@@ -1331,7 +1585,7 @@
       "id": "static/stamp/night",
       "sources": [
         {
-          "path": "stamps\\night.png",
+          "path": "stamps/night.png",
           "sha256": "9261d81b449d013889b61dec07ac638f4608f93719a1b4e7b9b6b2f3139bb011"
         }
       ],
@@ -1363,7 +1617,7 @@
       "id": "static/stamp/post",
       "sources": [
         {
-          "path": "stamps\\post.png",
+          "path": "stamps/post.png",
           "sha256": "7bffc062959676414d6a193db220263e943383a54611d84cea3f147db6f3778c"
         }
       ],
@@ -1395,7 +1649,7 @@
       "id": "static/stamp/ski",
       "sources": [
         {
-          "path": "stamps\\ski.png",
+          "path": "stamps/ski.png",
           "sha256": "efb7f2f3fb4333e3e42e557d45f0580adcb3ae4ed94a59e89bdba5ff717fbdc6"
         }
       ],
@@ -1427,7 +1681,7 @@
       "id": "static/stamp/sky",
       "sources": [
         {
-          "path": "stamps\\sky.png",
+          "path": "stamps/sky.png",
           "sha256": "ba53e36b53eee0b10dec41c65d346f902d6e530f12850697fe507d7aed6f1ad6"
         }
       ],
@@ -1459,7 +1713,7 @@
       "id": "static/stamp/space",
       "sources": [
         {
-          "path": "stamps\\space.png",
+          "path": "stamps/space.png",
           "sha256": "339fbdcadd076e696d2d2595f5e9a8e657c8d09cbc6552de1e63e55037d2f07b"
         }
       ],
@@ -1491,7 +1745,7 @@
       "id": "static/tiles/deep-sea/bubble-chain",
       "sources": [
         {
-          "path": "map\\tiles\\deep-sea\\bubble-chain.png",
+          "path": "map/tiles/deep-sea/bubble-chain.png",
           "sha256": "0d9e83cc68bc23bb7ff7dc5d367b9221314c70819b6bd9a448215eec7d249015"
         }
       ],
@@ -1523,7 +1777,7 @@
       "id": "static/tiles/deep-sea/coral-fan",
       "sources": [
         {
-          "path": "map\\tiles\\deep-sea\\coral-fan.png",
+          "path": "map/tiles/deep-sea/coral-fan.png",
           "sha256": "84e4d5dbb2b070c2af9748e8ba4acf96ee1449df8c8acd464d5b0ce840829625"
         }
       ],
@@ -1555,7 +1809,7 @@
       "id": "static/tiles/deep-sea/current-wave",
       "sources": [
         {
-          "path": "map\\tiles\\deep-sea\\current-wave.png",
+          "path": "map/tiles/deep-sea/current-wave.png",
           "sha256": "0172b53ebd01b076bf1d20f843114afe3b4faaf41be3d0b68243728da21fcada"
         }
       ],
@@ -1587,7 +1841,7 @@
       "id": "static/tiles/deep-sea/sea-rock",
       "sources": [
         {
-          "path": "map\\tiles\\deep-sea\\sea-rock.png",
+          "path": "map/tiles/deep-sea/sea-rock.png",
           "sha256": "22143e9c9b949b0393e9c0a1f90d1f8bbc92f786448fd79e4320e41e5769530f"
         }
       ],
@@ -1619,7 +1873,7 @@
       "id": "static/tiles/deep-sea/seaweed",
       "sources": [
         {
-          "path": "map\\tiles\\deep-sea\\seaweed.png",
+          "path": "map/tiles/deep-sea/seaweed.png",
           "sha256": "d1e6cf9c833a1784774782b4da638acc65c45777787231e7213676a0de557061"
         }
       ],
@@ -1651,7 +1905,7 @@
       "id": "static/tiles/deep-sea/shell",
       "sources": [
         {
-          "path": "map\\tiles\\deep-sea\\shell.png",
+          "path": "map/tiles/deep-sea/shell.png",
           "sha256": "9f85cc928423214e0f275f59f793ac5f9e8ad6b3f64e9c382b9896f278307b60"
         }
       ],
@@ -1683,7 +1937,7 @@
       "id": "static/tiles/harbor/buoy",
       "sources": [
         {
-          "path": "map\\tiles\\harbor\\buoy.png",
+          "path": "map/tiles/harbor/buoy.png",
           "sha256": "8d526bdfdcb7680105726a7524e65fd70d075e6d45950361f1877b2b9561350b"
         }
       ],
@@ -1715,7 +1969,7 @@
       "id": "static/tiles/harbor/dock-planks",
       "sources": [
         {
-          "path": "map\\tiles\\harbor\\dock-planks.png",
+          "path": "map/tiles/harbor/dock-planks.png",
           "sha256": "548732a6ff55f112ae2cd4b88deb800caf3792df66b0f330d77f868604d4cf43"
         }
       ],
@@ -1747,7 +2001,7 @@
       "id": "static/tiles/harbor/mooring-post",
       "sources": [
         {
-          "path": "map\\tiles\\harbor\\mooring-post.png",
+          "path": "map/tiles/harbor/mooring-post.png",
           "sha256": "6d7202c4d584164ebe68373b2ab1c7bb039cd2e18265e0c29d8b0f1008b9c78a"
         }
       ],
@@ -1779,7 +2033,7 @@
       "id": "static/tiles/harbor/rope-coil",
       "sources": [
         {
-          "path": "map\\tiles\\harbor\\rope-coil.png",
+          "path": "map/tiles/harbor/rope-coil.png",
           "sha256": "c2b03b03ac8f74252fc2c9056a6541bba8a2a012a9e96f793d03993b6b67f3b1"
         }
       ],
@@ -1811,7 +2065,7 @@
       "id": "static/tiles/harbor/wave-crest",
       "sources": [
         {
-          "path": "map\\tiles\\harbor\\wave-crest.png",
+          "path": "map/tiles/harbor/wave-crest.png",
           "sha256": "aba54606bbc19471fdcbdcd209c42d7bea188a5e33f1db5d944106af4666d12d"
         }
       ],
@@ -1843,7 +2097,7 @@
       "id": "static/tiles/harbor/wave-line",
       "sources": [
         {
-          "path": "map\\tiles\\harbor\\wave-line.png",
+          "path": "map/tiles/harbor/wave-line.png",
           "sha256": "16297e2d826c2942b8ca05d504e486b3e7bd5830dd792db0c5b10c7f2c70d658"
         }
       ],
@@ -1875,7 +2129,7 @@
       "id": "static/tiles/mountain/ice-crystals",
       "sources": [
         {
-          "path": "map\\tiles\\mountain\\ice-crystals.png",
+          "path": "map/tiles/mountain/ice-crystals.png",
           "sha256": "d4226c2f39ab5f08a5c4fd40e4165ccb72bbbae3fa5248f522584016b738b886"
         }
       ],
@@ -1907,7 +2161,7 @@
       "id": "static/tiles/mountain/ridge",
       "sources": [
         {
-          "path": "map\\tiles\\mountain\\ridge.png",
+          "path": "map/tiles/mountain/ridge.png",
           "sha256": "aa8e0aa5f24a1f352fb4b628a7a9157e654a9174044461d2f33682916e3141b7"
         }
       ],
@@ -1939,7 +2193,7 @@
       "id": "static/tiles/mountain/rock-face",
       "sources": [
         {
-          "path": "map\\tiles\\mountain\\rock-face.png",
+          "path": "map/tiles/mountain/rock-face.png",
           "sha256": "22143e9c9b949b0393e9c0a1f90d1f8bbc92f786448fd79e4320e41e5769530f"
         }
       ],
@@ -1955,7 +2209,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_static_tiles_mountain_rock_face__p0",
+          "symbol": "adv_assets_static_tiles_deep_sea_sea_rock__p0",
           "offset": [
             0,
             0
@@ -1971,7 +2225,7 @@
       "id": "static/tiles/mountain/snow-drift",
       "sources": [
         {
-          "path": "map\\tiles\\mountain\\snow-drift.png",
+          "path": "map/tiles/mountain/snow-drift.png",
           "sha256": "a0f7dbce9a93da1b7299e33c73b81745b4f1c37bd97c8781565009f2b3947033"
         }
       ],
@@ -2003,7 +2257,7 @@
       "id": "static/tiles/mountain/snowcap-rock",
       "sources": [
         {
-          "path": "map\\tiles\\mountain\\snowcap-rock.png",
+          "path": "map/tiles/mountain/snowcap-rock.png",
           "sha256": "1b94744c19c7bb95a7faf3c53bb9b3d410cdbf932aa690722797fe997928264e"
         }
       ],
@@ -2035,7 +2289,7 @@
       "id": "static/tiles/mountain/young-pine",
       "sources": [
         {
-          "path": "map\\tiles\\mountain\\young-pine.png",
+          "path": "map/tiles/mountain/young-pine.png",
           "sha256": "b262291829ffa4226bdbe2f633b6d6455076861ea891f0b07072aae0bf266036"
         }
       ],
@@ -2067,7 +2321,7 @@
       "id": "static/tiles/night-forest/branch",
       "sources": [
         {
-          "path": "map\\tiles\\night-forest\\branch.png",
+          "path": "map/tiles/night-forest/branch.png",
           "sha256": "51059893db783042dd154b49336026d9b771f642d2b5fef1f88f70847d0aa03b"
         }
       ],
@@ -2099,7 +2353,7 @@
       "id": "static/tiles/night-forest/fern",
       "sources": [
         {
-          "path": "map\\tiles\\night-forest\\fern.png",
+          "path": "map/tiles/night-forest/fern.png",
           "sha256": "cad1f67de897a4180f540a3e0240ccf13b6443efaeee65542bcfa53af48ea6bc"
         }
       ],
@@ -2131,7 +2385,7 @@
       "id": "static/tiles/night-forest/fireflies",
       "sources": [
         {
-          "path": "map\\tiles\\night-forest\\fireflies.png",
+          "path": "map/tiles/night-forest/fireflies.png",
           "sha256": "e4f17f0b00d4a6c72e68a5db0ffdbba4e7b54a9150419604ddb6cd385203ceaf"
         }
       ],
@@ -2163,7 +2417,7 @@
       "id": "static/tiles/night-forest/mushrooms",
       "sources": [
         {
-          "path": "map\\tiles\\night-forest\\mushrooms.png",
+          "path": "map/tiles/night-forest/mushrooms.png",
           "sha256": "64d4cd3185035f67cc4ee697f7aa6b7be055175c9a3fdf03630af01b8732072e"
         }
       ],
@@ -2195,7 +2449,7 @@
       "id": "static/tiles/night-forest/shrub",
       "sources": [
         {
-          "path": "map\\tiles\\night-forest\\shrub.png",
+          "path": "map/tiles/night-forest/shrub.png",
           "sha256": "a852d0c7ce9aa1c9b3d21132da4b4a6395bb6a4c897437cc19da2af6f3e9b236"
         }
       ],
@@ -2227,7 +2481,7 @@
       "id": "static/tiles/night-forest/tree-canopy",
       "sources": [
         {
-          "path": "map\\tiles\\night-forest\\tree-canopy.png",
+          "path": "map/tiles/night-forest/tree-canopy.png",
           "sha256": "1eabc966d94af1e137a567ab95f96da811e16a88a36af59c3521e5369ce6b6dc"
         }
       ],
@@ -2259,7 +2513,7 @@
       "id": "static/tiles/rail/mail-sign",
       "sources": [
         {
-          "path": "map\\tiles\\rail\\mail-sign.png",
+          "path": "map/tiles/rail/mail-sign.png",
           "sha256": "30e596a3c7f394e9402ae66f826fa94d57f52801736b48fd117afb7d2f25e2b1"
         }
       ],
@@ -2291,7 +2545,7 @@
       "id": "static/tiles/rail/rail-crossing",
       "sources": [
         {
-          "path": "map\\tiles\\rail\\rail-crossing.png",
+          "path": "map/tiles/rail/rail-crossing.png",
           "sha256": "dd963d89203896cbc102e4941b1b16cb9c373a13b44079cb8c898f0bea6721f6"
         }
       ],
@@ -2323,7 +2577,7 @@
       "id": "static/tiles/rail/rail-straight",
       "sources": [
         {
-          "path": "map\\tiles\\rail\\rail-straight.png",
+          "path": "map/tiles/rail/rail-straight.png",
           "sha256": "0579917e1b4a0d82544cfee4618f07ddfb8490acdfe54f787433253f0a3484c2"
         }
       ],
@@ -2355,7 +2609,7 @@
       "id": "static/tiles/rail/telegraph-pole",
       "sources": [
         {
-          "path": "map\\tiles\\rail\\telegraph-pole.png",
+          "path": "map/tiles/rail/telegraph-pole.png",
           "sha256": "b68b63b27ecba2a4af139de37f3673495db544998a3f433e92ca58725a3e4dc6"
         }
       ],
@@ -2387,7 +2641,7 @@
       "id": "static/tiles/rail/trackside-grass",
       "sources": [
         {
-          "path": "map\\tiles\\rail\\trackside-grass.png",
+          "path": "map/tiles/rail/trackside-grass.png",
           "sha256": "cad1f67de897a4180f540a3e0240ccf13b6443efaeee65542bcfa53af48ea6bc"
         }
       ],
@@ -2403,7 +2657,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_static_tiles_rail_trackside_grass__p0",
+          "symbol": "adv_assets_static_tiles_night_forest_fern__p0",
           "offset": [
             0,
             0
@@ -2419,7 +2673,7 @@
       "id": "static/tiles/rail/wheat",
       "sources": [
         {
-          "path": "map\\tiles\\rail\\wheat.png",
+          "path": "map/tiles/rail/wheat.png",
           "sha256": "04111181a053208b7090595dc21a5a429dbf3cd8e9a8ab3b803da190c967d6a8"
         }
       ],
@@ -2451,7 +2705,7 @@
       "id": "static/tiles/ski/gate-poles",
       "sources": [
         {
-          "path": "map\\tiles\\ski\\gate-poles.png",
+          "path": "map/tiles/ski/gate-poles.png",
           "sha256": "f6786f666678472a52d8e93e6d0666cc7b443e3d710fed4ce1f019d3884acb26"
         }
       ],
@@ -2483,7 +2737,7 @@
       "id": "static/tiles/ski/small-spruce",
       "sources": [
         {
-          "path": "map\\tiles\\ski\\small-spruce.png",
+          "path": "map/tiles/ski/small-spruce.png",
           "sha256": "63eb3ddf8e8865f24445732cc82f4fdd27fdd49de5360c3f1461b609e7c226cd"
         }
       ],
@@ -2515,7 +2769,7 @@
       "id": "static/tiles/ski/snow-mound",
       "sources": [
         {
-          "path": "map\\tiles\\ski\\snow-mound.png",
+          "path": "map/tiles/ski/snow-mound.png",
           "sha256": "1b94744c19c7bb95a7faf3c53bb9b3d410cdbf932aa690722797fe997928264e"
         }
       ],
@@ -2531,7 +2785,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_static_tiles_ski_snow_mound__p0",
+          "symbol": "adv_assets_static_tiles_mountain_snowcap_rock__p0",
           "offset": [
             0,
             0
@@ -2547,7 +2801,7 @@
       "id": "static/tiles/ski/snow-pine",
       "sources": [
         {
-          "path": "map\\tiles\\ski\\snow-pine.png",
+          "path": "map/tiles/ski/snow-pine.png",
           "sha256": "63eb3ddf8e8865f24445732cc82f4fdd27fdd49de5360c3f1461b609e7c226cd"
         }
       ],
@@ -2563,7 +2817,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_static_tiles_ski_snow_pine__p0",
+          "symbol": "adv_assets_static_tiles_ski_small_spruce__p0",
           "offset": [
             0,
             0
@@ -2579,7 +2833,7 @@
       "id": "static/tiles/ski/snow-track",
       "sources": [
         {
-          "path": "map\\tiles\\ski\\snow-track.png",
+          "path": "map/tiles/ski/snow-track.png",
           "sha256": "9fc98cc1c143f19201eb40a9f409dc40265af600c24b02c0d562dc02d112c25a"
         }
       ],
@@ -2611,7 +2865,7 @@
       "id": "static/tiles/sky/bird-silhouette",
       "sources": [
         {
-          "path": "map\\tiles\\sky\\bird-silhouette.png",
+          "path": "map/tiles/sky/bird-silhouette.png",
           "sha256": "7212dde37b96452b1956083d0bc3b446875aafdb91587ed77763642ad6157e56"
         }
       ],
@@ -2643,7 +2897,7 @@
       "id": "static/tiles/sky/cloud-chain",
       "sources": [
         {
-          "path": "map\\tiles\\sky\\cloud-chain.png",
+          "path": "map/tiles/sky/cloud-chain.png",
           "sha256": "eaf72ff9705b239ec784438e262a9e2bd172872a7154b10fd2e3e4c2afaf8977"
         }
       ],
@@ -2675,7 +2929,7 @@
       "id": "static/tiles/sky/cloud-large",
       "sources": [
         {
-          "path": "map\\tiles\\sky\\cloud-large.png",
+          "path": "map/tiles/sky/cloud-large.png",
           "sha256": "74c102a22c030810de0679fb4c27899b5b6d5e68fcb74e0d8d988251f5a770d6"
         }
       ],
@@ -2707,7 +2961,7 @@
       "id": "static/tiles/sky/cloud-small",
       "sources": [
         {
-          "path": "map\\tiles\\sky\\cloud-small.png",
+          "path": "map/tiles/sky/cloud-small.png",
           "sha256": "57dc9901ca3b70c464d6615664b235e7fd8525c43ac9c99cda2f4b142f4c0906"
         }
       ],
@@ -2739,7 +2993,7 @@
       "id": "static/tiles/sky/feather",
       "sources": [
         {
-          "path": "map\\tiles\\sky\\feather.png",
+          "path": "map/tiles/sky/feather.png",
           "sha256": "134505217c36ee5e1df4f873a1400f7bad1514448a5a280f990895e76df98412"
         }
       ],
@@ -2771,7 +3025,7 @@
       "id": "static/tiles/sky/wind-ribbon",
       "sources": [
         {
-          "path": "map\\tiles\\sky\\wind-ribbon.png",
+          "path": "map/tiles/sky/wind-ribbon.png",
           "sha256": "16297e2d826c2942b8ca05d504e486b3e7bd5830dd792db0c5b10c7f2c70d658"
         }
       ],
@@ -2787,7 +3041,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_static_tiles_sky_wind_ribbon__p0",
+          "symbol": "adv_assets_static_tiles_harbor_wave_line__p0",
           "offset": [
             0,
             0
@@ -2803,7 +3057,7 @@
       "id": "static/tiles/space/asteroid",
       "sources": [
         {
-          "path": "map\\tiles\\space\\asteroid.png",
+          "path": "map/tiles/space/asteroid.png",
           "sha256": "0c3fd7d7a9eedb33a746ed3272af55162e9e0d75950ff849a2c320e7ca6ffc24"
         }
       ],
@@ -2835,7 +3089,7 @@
       "id": "static/tiles/space/comet",
       "sources": [
         {
-          "path": "map\\tiles\\space\\comet.png",
+          "path": "map/tiles/space/comet.png",
           "sha256": "ef10e490ecbb609f4bb008cffad1e5e16068ed70223ce19e7f7490d8ff38c024"
         }
       ],
@@ -2867,7 +3121,7 @@
       "id": "static/tiles/space/crater",
       "sources": [
         {
-          "path": "map\\tiles\\space\\crater.png",
+          "path": "map/tiles/space/crater.png",
           "sha256": "0c3fd7d7a9eedb33a746ed3272af55162e9e0d75950ff849a2c320e7ca6ffc24"
         }
       ],
@@ -2883,7 +3137,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_static_tiles_space_crater__p0",
+          "symbol": "adv_assets_static_tiles_space_asteroid__p0",
           "offset": [
             0,
             0
@@ -2899,7 +3153,7 @@
       "id": "static/tiles/space/orbit-dots",
       "sources": [
         {
-          "path": "map\\tiles\\space\\orbit-dots.png",
+          "path": "map/tiles/space/orbit-dots.png",
           "sha256": "badfff4f569a2bef3e8c81321e2e3e0f585fe335eba14b5e2058c8c00706f99f"
         }
       ],
@@ -2931,7 +3185,7 @@
       "id": "static/tiles/space/ring-planet",
       "sources": [
         {
-          "path": "map\\tiles\\space\\ring-planet.png",
+          "path": "map/tiles/space/ring-planet.png",
           "sha256": "afc8a8d34165b0bebfc9d8557cd6b01dde9686c4b3377a58def77d4efcea6547"
         }
       ],
@@ -2963,7 +3217,7 @@
       "id": "static/tiles/space/star-field",
       "sources": [
         {
-          "path": "map\\tiles\\space\\star-field.png",
+          "path": "map/tiles/space/star-field.png",
           "sha256": "13b53ccfabcb3bd9762942ace7426c4785ea6ffb2be1529caa0bf40452d92c9a"
         }
       ],
@@ -2995,7 +3249,7 @@
       "id": "static/tiles/town/bunting",
       "sources": [
         {
-          "path": "map\\tiles\\town\\bunting.png",
+          "path": "map/tiles/town/bunting.png",
           "sha256": "6da0b8085c835b4f6c75c0d240cd468ecd73298967f96d813cbbcc40bfa103d7"
         }
       ],
@@ -3027,7 +3281,7 @@
       "id": "static/tiles/town/cobble-path",
       "sources": [
         {
-          "path": "map\\tiles\\town\\cobble-path.png",
+          "path": "map/tiles/town/cobble-path.png",
           "sha256": "47bdc55799fdbbc0db59447b03834d9a72c3d322c5cbb69b3b7c2a8c5557503c"
         }
       ],
@@ -3059,7 +3313,7 @@
       "id": "static/tiles/town/flowerbed",
       "sources": [
         {
-          "path": "map\\tiles\\town\\flowerbed.png",
+          "path": "map/tiles/town/flowerbed.png",
           "sha256": "a0e603e41fcf5289f38b4f28d8778cb1316ed42af415251d851da4e39a93e38d"
         }
       ],
@@ -3091,7 +3345,7 @@
       "id": "static/tiles/town/red-roof",
       "sources": [
         {
-          "path": "map\\tiles\\town\\red-roof.png",
+          "path": "map/tiles/town/red-roof.png",
           "sha256": "83e638db8c492c9768a696269cb33ca7a13707e725b2691ca44d5cdeea61915d"
         }
       ],
@@ -3123,7 +3377,7 @@
       "id": "static/tiles/town/street-lamp",
       "sources": [
         {
-          "path": "map\\tiles\\town\\street-lamp.png",
+          "path": "map/tiles/town/street-lamp.png",
           "sha256": "4e328bd10bac49cc41f49bd1f9cb40c818b343ff4f4325ba6db5a7ecbec555bc"
         }
       ],
@@ -3155,7 +3409,7 @@
       "id": "static/tiles/town/window-box",
       "sources": [
         {
-          "path": "map\\tiles\\town\\window-box.png",
+          "path": "map/tiles/town/window-box.png",
           "sha256": "e744b9fc86bdcd2e1bee6d4080d5258a6d211dafb5bc5a30f87ee724b91ddd2c"
         }
       ],
@@ -3187,35 +3441,35 @@
       "id": "travel/cheer",
       "sources": [
         {
-          "path": "frames\\travel\\runtime\\cheer\\000.png",
+          "path": "frames/travel/runtime/cheer/000.png",
           "sha256": "783f4e55369fc46d682eeb5e5bcb1c9c04c18ceca20b82ddaa650066408cf45c"
         },
         {
-          "path": "frames\\travel\\runtime\\cheer\\001.png",
+          "path": "frames/travel/runtime/cheer/001.png",
           "sha256": "bf0dadd87c46de44b69320bf9e22a7ac7559095958ac97e5559025c0e9d6d3e7"
         },
         {
-          "path": "frames\\travel\\runtime\\cheer\\002.png",
+          "path": "frames/travel/runtime/cheer/002.png",
           "sha256": "7fb7b3642c91c6215618d3bfb73477bf927ba64587d8d03dad79645f6681e3ab"
         },
         {
-          "path": "frames\\travel\\runtime\\cheer\\003.png",
+          "path": "frames/travel/runtime/cheer/003.png",
           "sha256": "a9d344d304086e16a62ade6b916c106f59d8f1945056266c0c4285ca345fc7c3"
         },
         {
-          "path": "frames\\travel\\runtime\\cheer\\004.png",
+          "path": "frames/travel/runtime/cheer/004.png",
           "sha256": "1d149e49a52ffb41b5c46e21fbc694f049e4086912e454dcffa43dd725ac9f45"
         },
         {
-          "path": "frames\\travel\\runtime\\cheer\\005.png",
+          "path": "frames/travel/runtime/cheer/005.png",
           "sha256": "69b4264592427960907efb49e7f4e23e738ca5084b7d8c19540bec8c54725ce0"
         },
         {
-          "path": "frames\\travel\\runtime\\cheer\\006.png",
+          "path": "frames/travel/runtime/cheer/006.png",
           "sha256": "fe1e249aa9afc60fe37e3700f71aaaf6ba3a75549ac28acd0e2fd24dd37438f4"
         },
         {
-          "path": "frames\\travel\\runtime\\cheer\\007.png",
+          "path": "frames/travel/runtime/cheer/007.png",
           "sha256": "783f4e55369fc46d682eeb5e5bcb1c9c04c18ceca20b82ddaa650066408cf45c"
         }
       ],
@@ -3247,35 +3501,35 @@
       "id": "travel/idle",
       "sources": [
         {
-          "path": "frames\\travel\\runtime\\idle\\000.png",
+          "path": "frames/travel/runtime/idle/000.png",
           "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
         },
         {
-          "path": "frames\\travel\\runtime\\idle\\001.png",
+          "path": "frames/travel/runtime/idle/001.png",
           "sha256": "91b7c6c175296362168f4a26d496e09475c6ed91ec16cd58bc55eb115ac6411a"
         },
         {
-          "path": "frames\\travel\\runtime\\idle\\002.png",
+          "path": "frames/travel/runtime/idle/002.png",
           "sha256": "5bd861faaf02e9b5f7ab207d979b12e3fe1426115b085cebbedde2b5e5c3f7fd"
         },
         {
-          "path": "frames\\travel\\runtime\\idle\\003.png",
+          "path": "frames/travel/runtime/idle/003.png",
           "sha256": "670df0d2cc70675f343a77a091f3ad91eb71220e93a88b37938962f11151cb91"
         },
         {
-          "path": "frames\\travel\\runtime\\idle\\004.png",
+          "path": "frames/travel/runtime/idle/004.png",
           "sha256": "0c609893e3822fda0ac381003aee25688d2d3fc08a3ad68def9ce36b34cdb322"
         },
         {
-          "path": "frames\\travel\\runtime\\idle\\005.png",
+          "path": "frames/travel/runtime/idle/005.png",
           "sha256": "2858fbbfeb3b58e3929b8af1f3236194dc9f60990fb50ec6d9ea0cdbbb9e82ee"
         },
         {
-          "path": "frames\\travel\\runtime\\idle\\006.png",
+          "path": "frames/travel/runtime/idle/006.png",
           "sha256": "cb9ebf4e3f408836befe093c3295b48e617b7bb3dd098d6deefe4e164531285e"
         },
         {
-          "path": "frames\\travel\\runtime\\idle\\007.png",
+          "path": "frames/travel/runtime/idle/007.png",
           "sha256": "eaa1f9d16a52d10276122daea676a13ff2238dfdc8ec368c666a2f56caee6e31"
         }
       ],
@@ -3307,27 +3561,27 @@
       "id": "travel/sad",
       "sources": [
         {
-          "path": "frames\\travel\\runtime\\sad\\000.png",
+          "path": "frames/travel/runtime/sad/000.png",
           "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
         },
         {
-          "path": "frames\\travel\\runtime\\sad\\001.png",
+          "path": "frames/travel/runtime/sad/001.png",
           "sha256": "9c0f9db90c19ccbfca918160a4bee0ed7f4702a2319d97d4c310ac9e8e463e91"
         },
         {
-          "path": "frames\\travel\\runtime\\sad\\002.png",
+          "path": "frames/travel/runtime/sad/002.png",
           "sha256": "0755aeeae5a8ff672af04234f0d7fad2dc2351ab567af6b308d273fa66f4c4e5"
         },
         {
-          "path": "frames\\travel\\runtime\\sad\\003.png",
+          "path": "frames/travel/runtime/sad/003.png",
           "sha256": "0cf6f526075272e12aac3689bba0d3dd8e8da789b631869f2f493471fe34f941"
         },
         {
-          "path": "frames\\travel\\runtime\\sad\\004.png",
+          "path": "frames/travel/runtime/sad/004.png",
           "sha256": "847db55eeb1305255d1d09cf5a6b54a95134e1330886023f220ba20f6a317f99"
         },
         {
-          "path": "frames\\travel\\runtime\\sad\\005.png",
+          "path": "frames/travel/runtime/sad/005.png",
           "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
         }
       ],
@@ -3359,27 +3613,27 @@
       "id": "travel/turn_front_from_left",
       "sources": [
         {
-          "path": "frames\\travel\\runtime\\turn_front_from_left\\000.png",
+          "path": "frames/travel/runtime/turn_front_from_left/000.png",
           "sha256": "b200061ceaf388c7785f7a8ba9f2b48d52de00afba76aabb1231f3681b6dc101"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_front_from_left\\001.png",
+          "path": "frames/travel/runtime/turn_front_from_left/001.png",
           "sha256": "c9787d736b3ac94ec40d8633cf8f7f49c91af43326eab423906c3ba611dcfe77"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_front_from_left\\002.png",
+          "path": "frames/travel/runtime/turn_front_from_left/002.png",
           "sha256": "204158b84680ac9646a178caefe3b0a40f003571db80705b70babae1edf10411"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_front_from_left\\003.png",
+          "path": "frames/travel/runtime/turn_front_from_left/003.png",
           "sha256": "91c782a545237fa735dc65a1a802becd9fad053ae290eeaedc632a63610e95d5"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_front_from_left\\004.png",
+          "path": "frames/travel/runtime/turn_front_from_left/004.png",
           "sha256": "b9b0c01144d7eef0a9f0b1499fb3ad02394cd76c68852c6c455ef85d39a85602"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_front_from_left\\005.png",
+          "path": "frames/travel/runtime/turn_front_from_left/005.png",
           "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
         }
       ],
@@ -3411,27 +3665,27 @@
       "id": "travel/turn_front_from_right",
       "sources": [
         {
-          "path": "frames\\travel\\runtime\\turn_front_from_right\\000.png",
+          "path": "frames/travel/runtime/turn_front_from_right/000.png",
           "sha256": "b3ce32133dfa613776ea7bae89002287fe62b19f0c192d8ac3b969748514047d"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_front_from_right\\001.png",
+          "path": "frames/travel/runtime/turn_front_from_right/001.png",
           "sha256": "40e705c8e6b55ddfadfabab7a4df0ee515359d51a53577f1c2321ee0f157da81"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_front_from_right\\002.png",
+          "path": "frames/travel/runtime/turn_front_from_right/002.png",
           "sha256": "ccdd0f3ea45b412017afa929fceffd0f71127fd96a092417c5eb48cdb4d11196"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_front_from_right\\003.png",
+          "path": "frames/travel/runtime/turn_front_from_right/003.png",
           "sha256": "34764bb8a40ea4f0d54e9bd130b2a86f9b25d5f3a1a9b12de0ebbe5a8ec16f55"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_front_from_right\\004.png",
+          "path": "frames/travel/runtime/turn_front_from_right/004.png",
           "sha256": "e6d5538c7c10e122a082e8b2d7b12c0444c6150fd5c581a71eb6b1a782ea41eb"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_front_from_right\\005.png",
+          "path": "frames/travel/runtime/turn_front_from_right/005.png",
           "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
         }
       ],
@@ -3463,27 +3717,27 @@
       "id": "travel/turn_left",
       "sources": [
         {
-          "path": "frames\\travel\\runtime\\turn_left\\000.png",
+          "path": "frames/travel/runtime/turn_left/000.png",
           "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_left\\001.png",
+          "path": "frames/travel/runtime/turn_left/001.png",
           "sha256": "b9b0c01144d7eef0a9f0b1499fb3ad02394cd76c68852c6c455ef85d39a85602"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_left\\002.png",
+          "path": "frames/travel/runtime/turn_left/002.png",
           "sha256": "91c782a545237fa735dc65a1a802becd9fad053ae290eeaedc632a63610e95d5"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_left\\003.png",
+          "path": "frames/travel/runtime/turn_left/003.png",
           "sha256": "204158b84680ac9646a178caefe3b0a40f003571db80705b70babae1edf10411"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_left\\004.png",
+          "path": "frames/travel/runtime/turn_left/004.png",
           "sha256": "c9787d736b3ac94ec40d8633cf8f7f49c91af43326eab423906c3ba611dcfe77"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_left\\005.png",
+          "path": "frames/travel/runtime/turn_left/005.png",
           "sha256": "b200061ceaf388c7785f7a8ba9f2b48d52de00afba76aabb1231f3681b6dc101"
         }
       ],
@@ -3515,27 +3769,27 @@
       "id": "travel/turn_right",
       "sources": [
         {
-          "path": "frames\\travel\\runtime\\turn_right\\000.png",
+          "path": "frames/travel/runtime/turn_right/000.png",
           "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_right\\001.png",
+          "path": "frames/travel/runtime/turn_right/001.png",
           "sha256": "e6d5538c7c10e122a082e8b2d7b12c0444c6150fd5c581a71eb6b1a782ea41eb"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_right\\002.png",
+          "path": "frames/travel/runtime/turn_right/002.png",
           "sha256": "34764bb8a40ea4f0d54e9bd130b2a86f9b25d5f3a1a9b12de0ebbe5a8ec16f55"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_right\\003.png",
+          "path": "frames/travel/runtime/turn_right/003.png",
           "sha256": "ccdd0f3ea45b412017afa929fceffd0f71127fd96a092417c5eb48cdb4d11196"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_right\\004.png",
+          "path": "frames/travel/runtime/turn_right/004.png",
           "sha256": "40e705c8e6b55ddfadfabab7a4df0ee515359d51a53577f1c2321ee0f157da81"
         },
         {
-          "path": "frames\\travel\\runtime\\turn_right\\005.png",
+          "path": "frames/travel/runtime/turn_right/005.png",
           "sha256": "b3ce32133dfa613776ea7bae89002287fe62b19f0c192d8ac3b969748514047d"
         }
       ],
@@ -3567,35 +3821,35 @@
       "id": "travel/walk_left",
       "sources": [
         {
-          "path": "frames\\travel\\runtime\\walk_left\\000.png",
+          "path": "frames/travel/runtime/walk_left/000.png",
           "sha256": "b200061ceaf388c7785f7a8ba9f2b48d52de00afba76aabb1231f3681b6dc101"
         },
         {
-          "path": "frames\\travel\\runtime\\walk_left\\001.png",
+          "path": "frames/travel/runtime/walk_left/001.png",
           "sha256": "8c72c9862f2a5b1fdb9caf286b2edfc0b36e9db8e1bcc5666f1e72fca68512b5"
         },
         {
-          "path": "frames\\travel\\runtime\\walk_left\\002.png",
+          "path": "frames/travel/runtime/walk_left/002.png",
           "sha256": "0917444e6a5e6bf864bad96335b7aad4a74bad518798ad7438ae535fcb2c73cb"
         },
         {
-          "path": "frames\\travel\\runtime\\walk_left\\003.png",
+          "path": "frames/travel/runtime/walk_left/003.png",
           "sha256": "e9092c6998e9f4299ddbd33497cad5a0797a5e722f001b2f2d756dce04f14016"
         },
         {
-          "path": "frames\\travel\\runtime\\walk_left\\004.png",
+          "path": "frames/travel/runtime/walk_left/004.png",
           "sha256": "17fc9545a9ea162987bfadef67e68151689f51e2e07fd78ca16f12948a5e325d"
         },
         {
-          "path": "frames\\travel\\runtime\\walk_left\\005.png",
+          "path": "frames/travel/runtime/walk_left/005.png",
           "sha256": "0d62b6973f308cbf9e7ec2f420c7b1fceaaea970116455b975a9b35c7e9feb30"
         },
         {
-          "path": "frames\\travel\\runtime\\walk_left\\006.png",
+          "path": "frames/travel/runtime/walk_left/006.png",
           "sha256": "aa485192d455343fb91840952ca540284fdd4b653f67e11f86ae97b739052e24"
         },
         {
-          "path": "frames\\travel\\runtime\\walk_left\\007.png",
+          "path": "frames/travel/runtime/walk_left/007.png",
           "sha256": "c51384427e02050eef6aff8ce19b669b783873f7cdb9f2e3237faf2fad49f670"
         }
       ],
@@ -3627,35 +3881,35 @@
       "id": "travel/walk_right",
       "sources": [
         {
-          "path": "frames\\travel\\runtime\\walk_right\\000.png",
+          "path": "frames/travel/runtime/walk_right/000.png",
           "sha256": "b3ce32133dfa613776ea7bae89002287fe62b19f0c192d8ac3b969748514047d"
         },
         {
-          "path": "frames\\travel\\runtime\\walk_right\\001.png",
+          "path": "frames/travel/runtime/walk_right/001.png",
           "sha256": "a587ab7c55160b87b4c2def53ccde79ba279b7ed5e57e1f12688ecc1fad09952"
         },
         {
-          "path": "frames\\travel\\runtime\\walk_right\\002.png",
+          "path": "frames/travel/runtime/walk_right/002.png",
           "sha256": "842059518e11c4fe7701756cb115ff7476ec76973c15a464a5e321d869d672e3"
         },
         {
-          "path": "frames\\travel\\runtime\\walk_right\\003.png",
+          "path": "frames/travel/runtime/walk_right/003.png",
           "sha256": "7b6fce88e99f413fbeeae29f04a2172554263f75b5819b42eb67f2ab5530ca21"
         },
         {
-          "path": "frames\\travel\\runtime\\walk_right\\004.png",
+          "path": "frames/travel/runtime/walk_right/004.png",
           "sha256": "49f66f804f3af5651e30eaca5db259b8bafe273aa54b29990294efa17596c1c6"
         },
         {
-          "path": "frames\\travel\\runtime\\walk_right\\005.png",
+          "path": "frames/travel/runtime/walk_right/005.png",
           "sha256": "212d504e1da15a5831061da4a4f9925c83ab348dfd077a95f387b09ed09ef20a"
         },
         {
-          "path": "frames\\travel\\runtime\\walk_right\\006.png",
+          "path": "frames/travel/runtime/walk_right/006.png",
           "sha256": "1483048bcdac3fd0516a61075dbf20db6b7bb13b79ee9ee50cd780828ba7bf6b"
         },
         {
-          "path": "frames\\travel\\runtime\\walk_right\\007.png",
+          "path": "frames/travel/runtime/walk_right/007.png",
           "sha256": "d3850df752288b70eeff4a04fadb24784fee4f607c8bcc74ad933bdcab7559f1"
         }
       ],
@@ -3684,93 +3938,157 @@
       ]
     },
     {
-      "id": "travel/welcome",
+      "id": "travel/welcome_v2",
       "sources": [
         {
-          "path": "frames\\travel\\runtime\\welcome\\000.png",
-          "sha256": "54003cdebb7ff9f0b4185a2f1aa406fdbd0f71f60ec6416f6389b61d41fbf25b"
+          "path": "boot/v2/v2a/runtime/000.png",
+          "sha256": "2b8a8bd6615512667efbfe5738d51151fd633ef3bd2810d29c8318b07fdaaa66"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\001.png",
-          "sha256": "08d277a6893d4932611c561bc427ed75a718d2d40986f70120127fd00a7f06f3"
+          "path": "boot/v2/v2a/runtime/026.png",
+          "sha256": "434ab288d18cd7853ddf570ce0bf76b3ccb1998c496dec84bf4c964a54afabaf"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\002.png",
-          "sha256": "2a675813b885be1db314b966278c28760f3a693304a3abba2bc2564ce37274de"
+          "path": "boot/v2/v2a/runtime/017.png",
+          "sha256": "c13939d58feadb26b025a697bd2d5572a88e494d7f92dbd9552938f299f793a3"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\003.png",
-          "sha256": "0633c7224bf44b297f7976c62e4f47fcccd946173db52136adbab82e2ae24855"
+          "path": "boot/v2/v2a/runtime/016.png",
+          "sha256": "2ea7f833e33f61b6d61d14528ac206bb583d90604c4d2b199f614d09cafea0e2"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\004.png",
-          "sha256": "7dbe28401ae10fd7f49bfe0be25582bbb8cf421493ac189ded8ab9be2905ade9"
+          "path": "boot/v2/v2a/runtime/014.png",
+          "sha256": "a9c48d322ec04f588fc23645f355b761fd34838be1004a3b1ed5cce24806d924"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\005.png",
-          "sha256": "b7e3f5fda7d04f281a313a6ef1f6675b7077b869c27b243d6b4f74b172f4b6e6"
+          "path": "boot/v2/v2a/runtime/011.png",
+          "sha256": "f49a96d1c9703353f4b2741ce7a3e74e0679bf0cfd7b9148691694ad8f35e134"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\006.png",
-          "sha256": "55a07d56dc1e74bb53c5dc87ee30cccd64ab256b8f6295965a618a37e6b9f0f1"
+          "path": "boot/v2/v2a/runtime/018.png",
+          "sha256": "e91d50dc15550bd833a7fc963bb3b01efa435e1879c0c258a30c43adccaa7953"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\007.png",
-          "sha256": "5179a935cbb94f2d0152d651e640c695d1a97b4ed8692d96ec3bbb0a2e5d3c4d"
+          "path": "boot/v2/v2a/runtime/010.png",
+          "sha256": "5895770f3642a2e7a3acad3ce270db822f86a96acddce9e8f02f62e343b77a97"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\008.png",
-          "sha256": "a744e01f682e93f814849cbf6d0c8ed9b4878c56af7dafd89eaf789d6c4b39c9"
+          "path": "boot/v2/v2a/runtime/023.png",
+          "sha256": "de09825f0217679b9f606050d1987977f1ab28594e54583768bb2ff3740afcad"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\009.png",
-          "sha256": "52bd13f1dd8b0fde1597c2f8ac39219fb487e113e53deff33bde356afb002390"
+          "path": "boot/v2/v2a/runtime/022.png",
+          "sha256": "6751f9d1066bd851725372183e5c0c31b6802efdf595f7a81c989e4e6ea0bbc1"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\010.png",
-          "sha256": "97e5b59e240f19bc870ee1ab70fea64302efcc577aad2d035b2f11d166b28217"
+          "path": "boot/v2/v2a/runtime/021.png",
+          "sha256": "0ca9fcecfe409689f6f4abbcefa8c3737f9734b8e1922c7c466a1318d04415d2"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\011.png",
-          "sha256": "cab2d07b0d53db275aff8e3270fd451ff89c6588685d6f96011799a7cf221cf8"
+          "path": "boot/v2/v2a/runtime/002.png",
+          "sha256": "1a1963c642657cde85ebf4a3d7070179dd0cd52f0aa981b359a10d8d84090b9e"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\012.png",
-          "sha256": "02404cb15c65370b5b9c4275a664e660ae427b8826c5448ba64a4f45095a84d3"
+          "path": "boot/v2/v2a/runtime/003.png",
+          "sha256": "df53eba4c6f8709d5b3d24c135bbd1e0a21bb17cb975c80661d7db3aa9021050"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\013.png",
-          "sha256": "d3b65671f5d55694f7a0cac09fd4a805b96776475fcbbb8a0af9050b8d335161"
+          "path": "boot/v2/v2a/runtime/007.png",
+          "sha256": "38b19655c4a2e80f81ea4e0c8eb5dee2bbd4eac309b0ac16c374e5d2a52737e7"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\014.png",
-          "sha256": "0eeb3afeb3e161cfec091b9e6aa26353d83ab158f2b75071f5d6c849cdc86687"
+          "path": "boot/v2/v2a/runtime/008.png",
+          "sha256": "0e8556c92bd78131d4decd6dfa0c53d824d00db5526489a9dc902ddea0f4f3d0"
         },
         {
-          "path": "frames\\travel\\runtime\\welcome\\015.png",
-          "sha256": "180c494fe983f470ac36a6709729dacadd42b94d63b2656bfd48771060ba490f"
+          "path": "boot/v2/v2a/runtime/013.png",
+          "sha256": "5b9eff51e700a00e31b47cadcbad83092428cee26bb3bb574079cf479d65d6cb"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/028.png",
+          "sha256": "8889f33d12db684c67f3f8987da3ddb50c5ceaf325a13bafa795de6ffa92188b"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/027.png",
+          "sha256": "f569ae0de25e0cbef266b2e61cf25e4e32ce13ceb03243f1cd163234c10bd575"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/012.png",
+          "sha256": "e6b0b0ff0fdfffde219fb2f055b44b352e3c4b8921b4e2e68ebfa4bdfd6b8ec4"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/006.png",
+          "sha256": "71af5ee8362497b5c1fe8be2c4fd95c00eeb312d16a652a628361a8cfd3f73f5"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/009.png",
+          "sha256": "2c005f33cc1c9d11c9ed5b3b2ab13ad2e0ae278321da52402ea871f28e34aa04"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/031.png",
+          "sha256": "13525f0376d43301b7d874bf48c8ca8e8b34ed7cf761bd3f82522e9dc8a6a532"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/029.png",
+          "sha256": "fbc996f2286fd52843a6e86754ed1735a848fe7339823cbc7daa5505afa6e032"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/030.png",
+          "sha256": "c0a6456fab14459c9e012299ba4824de02e774346db2539cf081cb4eeafcb18d"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/020.png",
+          "sha256": "3015db28a24ea10e82a83008e5483eebbcd5dfeb5a7157cc2846f043ad19dac1"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/001.png",
+          "sha256": "432cf776739627032522bebcff241bb7d1432a07607957bad32fe2577f7c2ce2"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/004.png",
+          "sha256": "2e8e2c37fa3ae4d35439d212fb0ba9bbfaf1e188452996844b616e6e8fd629d8"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/019.png",
+          "sha256": "cb82ae443ec0b52cb233bf478c3d72a699af73df85d8a35c571b4e11e104f89e"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/025.png",
+          "sha256": "0fc1f7695ee5a1542f5b6c6e3a9d29e943cf05cd26c09fb03fe004f80b93c4b2"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/024.png",
+          "sha256": "56137bc97a97d6a020cf43354e688302261d6a2301e71fd0b20b13261312905e"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/015.png",
+          "sha256": "447f2602a137afb98e0ba6d38ad8d752fc7ba1ddcc9c391a109c58d0a3377ea2"
+        },
+        {
+          "path": "boot/v2/v2a/runtime/005.png",
+          "sha256": "f7824373dd2d9ea57e33f4fb1307160c26e83d6e9faf33aa9fdba199b14b5585"
         }
       ],
       "canvas": [
-        58,
-        120
+        74,
+        121
       ],
       "anchor": [
-        31,
-        120
+        29,
+        121
       ],
       "fps": 12,
-      "loop": true,
+      "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_travel_welcome__p0",
+          "symbol": "adv_assets_travel_welcome_v2__p0",
           "offset": [
             0,
             0
           ],
           "size": [
-            58,
-            120
+            74,
+            121
           ]
         }
       ]
@@ -3779,8 +4097,8 @@
       "id": "ui/bars/bottom",
       "sources": [
         {
-          "path": "ui\\bars\\bottom.png",
-          "sha256": "686913a7ad3d22c48931bcf848ab13427101be0f7d4e2913bff0a68cf3b6b179"
+          "path": "ui/bars/bottom.png",
+          "sha256": "9e32ad7bfb24e950318602b9fe0702ba9607c18f0f71338c8cb381300de49a6c"
         }
       ],
       "canvas": [
@@ -3811,8 +4129,8 @@
       "id": "ui/bars/top",
       "sources": [
         {
-          "path": "ui\\bars\\top.png",
-          "sha256": "e1cf8fc0c82575cc4f0e6158f3729222c7049cb0ef8e5966e46bc70dab6d5b69"
+          "path": "ui/bars/top.png",
+          "sha256": "817fe6882f094f3e3a9f7cbb3e9644604abcbf4aa1adb71c6ae34bb69bbafe41"
         }
       ],
       "canvas": [
@@ -3843,8 +4161,8 @@
       "id": "ui/cards/info/current/bottom",
       "sources": [
         {
-          "path": "ui\\cards\\info\\current\\bottom.png",
-          "sha256": "dcc0c3cfea32bce4c5a524271a854f514336ff315b831a84f3339fab40718017"
+          "path": "ui/cards/info/current/bottom.png",
+          "sha256": "608e989a3e2cbe2c24b279c8d6c7e2843dc60b8c50c2737bec1c330b797a4488"
         }
       ],
       "canvas": [
@@ -3875,8 +4193,8 @@
       "id": "ui/cards/info/current/bottom-left",
       "sources": [
         {
-          "path": "ui\\cards\\info\\current\\bottom-left.png",
-          "sha256": "5ebff4ecae598709ba8e22f9635319eed11425b94095d7cbbd91af5c211a0dfb"
+          "path": "ui/cards/info/current/bottom-left.png",
+          "sha256": "09878aa5c9969d5875808a9f76567f01d078729a408330cdf844f4087d694968"
         }
       ],
       "canvas": [
@@ -3907,8 +4225,8 @@
       "id": "ui/cards/info/current/bottom-right",
       "sources": [
         {
-          "path": "ui\\cards\\info\\current\\bottom-right.png",
-          "sha256": "6282be5920c728f248c8c6d332cce79fa20345c6a67d9997e15fe2f6af60ec68"
+          "path": "ui/cards/info/current/bottom-right.png",
+          "sha256": "ff622ec6b7a66f84928cd0daebec65dcb0c096bba0950a473414953caf6a5e39"
         }
       ],
       "canvas": [
@@ -3939,8 +4257,8 @@
       "id": "ui/cards/info/current/center",
       "sources": [
         {
-          "path": "ui\\cards\\info\\current\\center.png",
-          "sha256": "012e4aa21eb2ea19a72e08e167dd63d1da8b056c8f6414b6bb5af0da17d1970f"
+          "path": "ui/cards/info/current/center.png",
+          "sha256": "12fa29a64e90e18dd7acdf7f324d3b53c1b7eeb250c215df95895e720aaf7150"
         }
       ],
       "canvas": [
@@ -3971,8 +4289,8 @@
       "id": "ui/cards/info/current/left",
       "sources": [
         {
-          "path": "ui\\cards\\info\\current\\left.png",
-          "sha256": "d819bd12c38a0c36f59342c97e90c1de5d4931932f589c2864822cf9a4668f49"
+          "path": "ui/cards/info/current/left.png",
+          "sha256": "68dc3aa93d56c7e2479a1c3a63b16ea51cf88fcf20c28833b8544976bf052bf5"
         }
       ],
       "canvas": [
@@ -4003,8 +4321,8 @@
       "id": "ui/cards/info/current/right",
       "sources": [
         {
-          "path": "ui\\cards\\info\\current\\right.png",
-          "sha256": "ac7ba2ff624b9982ceb0be8e2fa6e20cc0b5b885ede16ea35c8063560698b3d9"
+          "path": "ui/cards/info/current/right.png",
+          "sha256": "c8e3be09a0c9839494a492dd08497a218c2c8e7ef73093ecb6eb40edfe70db0b"
         }
       ],
       "canvas": [
@@ -4035,8 +4353,8 @@
       "id": "ui/cards/info/current/top",
       "sources": [
         {
-          "path": "ui\\cards\\info\\current\\top.png",
-          "sha256": "c20ca633554d0429c36d9ee498632ca4bd608e4473df75e5f748e819ce04a325"
+          "path": "ui/cards/info/current/top.png",
+          "sha256": "608e989a3e2cbe2c24b279c8d6c7e2843dc60b8c50c2737bec1c330b797a4488"
         }
       ],
       "canvas": [
@@ -4051,7 +4369,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_info_current_top__p0",
+          "symbol": "adv_assets_ui_cards_info_current_bottom__p0",
           "offset": [
             0,
             0
@@ -4067,8 +4385,8 @@
       "id": "ui/cards/info/current/top-left",
       "sources": [
         {
-          "path": "ui\\cards\\info\\current\\top-left.png",
-          "sha256": "262d92591a6dcfa6bfc0c310de1eced53b59e03254c4ff46aab5028ae13862d4"
+          "path": "ui/cards/info/current/top-left.png",
+          "sha256": "499add3935de40c2600b4ebf44ec10c4fd09e23dc47cb2e364060f5533d0634e"
         }
       ],
       "canvas": [
@@ -4099,8 +4417,8 @@
       "id": "ui/cards/info/current/top-right",
       "sources": [
         {
-          "path": "ui\\cards\\info\\current\\top-right.png",
-          "sha256": "8ebef04da87b96561a39733d5bb2aa8c4e02e23746c8c61ac36f36909b8d65a4"
+          "path": "ui/cards/info/current/top-right.png",
+          "sha256": "56cc090fd81a2ee0fd56670849cfee18fce6022d77dc4caf973d4dacff68acce"
         }
       ],
       "canvas": [
@@ -4131,8 +4449,8 @@
       "id": "ui/cards/info/normal/bottom",
       "sources": [
         {
-          "path": "ui\\cards\\info\\normal\\bottom.png",
-          "sha256": "14834674124ca28b683d7b36070565c96f04aa5c97f6237f055c1f62faac25c7"
+          "path": "ui/cards/info/normal/bottom.png",
+          "sha256": "792cf1621679496ae6f5fe401741d5e5664ef4024b87a4e0889c16177facc911"
         }
       ],
       "canvas": [
@@ -4163,8 +4481,8 @@
       "id": "ui/cards/info/normal/bottom-left",
       "sources": [
         {
-          "path": "ui\\cards\\info\\normal\\bottom-left.png",
-          "sha256": "e00d625b93b3f1d4c4d79f52ebb586ea6995f91cf6e9511d0e1badd3c4888482"
+          "path": "ui/cards/info/normal/bottom-left.png",
+          "sha256": "3f5f7cb608198d2167285103979e5bfdb7445aa35d337ccd5e3993d8a4f74e0f"
         }
       ],
       "canvas": [
@@ -4195,8 +4513,8 @@
       "id": "ui/cards/info/normal/bottom-right",
       "sources": [
         {
-          "path": "ui\\cards\\info\\normal\\bottom-right.png",
-          "sha256": "72039f7a688ad80a14c7cf65643f9831064abba0488a90e2268be4f8ca83c393"
+          "path": "ui/cards/info/normal/bottom-right.png",
+          "sha256": "812dce855ddd0da089b9777b331726920b6e55690e4ebb939d44e6e2a1c97565"
         }
       ],
       "canvas": [
@@ -4227,8 +4545,8 @@
       "id": "ui/cards/info/normal/center",
       "sources": [
         {
-          "path": "ui\\cards\\info\\normal\\center.png",
-          "sha256": "f5dc936c16ff7e98ad6138b1b917e80a462d184256f9c578544725b069ccb01b"
+          "path": "ui/cards/info/normal/center.png",
+          "sha256": "d52d3f188c2ed22af72a1bb37a012e1da09414a79f732abdae686840058186e0"
         }
       ],
       "canvas": [
@@ -4259,8 +4577,8 @@
       "id": "ui/cards/info/normal/left",
       "sources": [
         {
-          "path": "ui\\cards\\info\\normal\\left.png",
-          "sha256": "b8b2a4c9159a38b1fd59703c9968b7912732ee6bf9129af545513126faf15682"
+          "path": "ui/cards/info/normal/left.png",
+          "sha256": "cc0873c87b7aeb8ebc975ccf1edc1d9c76eacf0e547001396506b3e239dda9da"
         }
       ],
       "canvas": [
@@ -4291,8 +4609,8 @@
       "id": "ui/cards/info/normal/right",
       "sources": [
         {
-          "path": "ui\\cards\\info\\normal\\right.png",
-          "sha256": "bd56843c1cf6493837547aeebfc5a6511b4a2cac4d6c1f2a973f2b340105ccec"
+          "path": "ui/cards/info/normal/right.png",
+          "sha256": "cc0873c87b7aeb8ebc975ccf1edc1d9c76eacf0e547001396506b3e239dda9da"
         }
       ],
       "canvas": [
@@ -4307,7 +4625,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_info_normal_right__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_left__p0",
           "offset": [
             0,
             0
@@ -4323,8 +4641,8 @@
       "id": "ui/cards/info/normal/top",
       "sources": [
         {
-          "path": "ui\\cards\\info\\normal\\top.png",
-          "sha256": "76f203136ba6afed2b5111651b33816b9c99194ea83373f108a7cfc26585daf2"
+          "path": "ui/cards/info/normal/top.png",
+          "sha256": "792cf1621679496ae6f5fe401741d5e5664ef4024b87a4e0889c16177facc911"
         }
       ],
       "canvas": [
@@ -4339,7 +4657,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_info_normal_top__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_bottom__p0",
           "offset": [
             0,
             0
@@ -4355,8 +4673,8 @@
       "id": "ui/cards/info/normal/top-left",
       "sources": [
         {
-          "path": "ui\\cards\\info\\normal\\top-left.png",
-          "sha256": "633860c0666e5ea01a07412e7a1fe85715ec6db49c14ff1b6fddccc9845344fb"
+          "path": "ui/cards/info/normal/top-left.png",
+          "sha256": "f31a4760643199833f6f9480795e1b715f32a9b6e93fcf5611ec7601fe481423"
         }
       ],
       "canvas": [
@@ -4387,8 +4705,8 @@
       "id": "ui/cards/info/normal/top-right",
       "sources": [
         {
-          "path": "ui\\cards\\info\\normal\\top-right.png",
-          "sha256": "b60aa576540ce8c74859b408c70c627474858a0b29a359a827cad4c82cbcaaba"
+          "path": "ui/cards/info/normal/top-right.png",
+          "sha256": "3c0d21fe70ed5f92dcd0fc98bfe51fd057772210d82346d0baf06e41560f9cff"
         }
       ],
       "canvas": [
@@ -4419,8 +4737,8 @@
       "id": "ui/cards/menu/disabled/bottom",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\disabled\\bottom.png",
-          "sha256": "fff5ce56dcd1b211a794b06c847ac3e92b768c32435167b7d68aa62c59a14dee"
+          "path": "ui/cards/menu/disabled/bottom.png",
+          "sha256": "792cf1621679496ae6f5fe401741d5e5664ef4024b87a4e0889c16177facc911"
         }
       ],
       "canvas": [
@@ -4435,7 +4753,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_disabled_bottom__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_bottom__p0",
           "offset": [
             0,
             0
@@ -4451,8 +4769,8 @@
       "id": "ui/cards/menu/disabled/bottom-left",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\disabled\\bottom-left.png",
-          "sha256": "e14b7022c8d4b20b56f0ec0979979cbace6506e502174c72e3284bf5a5a756f9"
+          "path": "ui/cards/menu/disabled/bottom-left.png",
+          "sha256": "3f5f7cb608198d2167285103979e5bfdb7445aa35d337ccd5e3993d8a4f74e0f"
         }
       ],
       "canvas": [
@@ -4467,7 +4785,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_disabled_bottom_left__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_bottom_left__p0",
           "offset": [
             0,
             0
@@ -4483,8 +4801,8 @@
       "id": "ui/cards/menu/disabled/bottom-right",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\disabled\\bottom-right.png",
-          "sha256": "b34122034b9581ba5cca8c6776ec5a329d03f3c4ac60e3010dd72e144cb3748a"
+          "path": "ui/cards/menu/disabled/bottom-right.png",
+          "sha256": "812dce855ddd0da089b9777b331726920b6e55690e4ebb939d44e6e2a1c97565"
         }
       ],
       "canvas": [
@@ -4499,7 +4817,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_disabled_bottom_right__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_bottom_right__p0",
           "offset": [
             0,
             0
@@ -4515,8 +4833,8 @@
       "id": "ui/cards/menu/disabled/center",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\disabled\\center.png",
-          "sha256": "21795790aac2d36ab224c84f61a9db1b4d8f61215869427361a55112765a2bec"
+          "path": "ui/cards/menu/disabled/center.png",
+          "sha256": "d52d3f188c2ed22af72a1bb37a012e1da09414a79f732abdae686840058186e0"
         }
       ],
       "canvas": [
@@ -4531,7 +4849,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_disabled_center__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_center__p0",
           "offset": [
             0,
             0
@@ -4547,8 +4865,8 @@
       "id": "ui/cards/menu/disabled/left",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\disabled\\left.png",
-          "sha256": "61cbd79a0c3394aca7075ee61a9ac2c471e2eac51ed95d2328480fe074c7fde4"
+          "path": "ui/cards/menu/disabled/left.png",
+          "sha256": "cc0873c87b7aeb8ebc975ccf1edc1d9c76eacf0e547001396506b3e239dda9da"
         }
       ],
       "canvas": [
@@ -4563,7 +4881,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_disabled_left__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_left__p0",
           "offset": [
             0,
             0
@@ -4579,8 +4897,8 @@
       "id": "ui/cards/menu/disabled/right",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\disabled\\right.png",
-          "sha256": "3bf8be8855a1d8b788d72a5a19bba9edd88a1e41845d58c41dbb528ce82601c0"
+          "path": "ui/cards/menu/disabled/right.png",
+          "sha256": "cc0873c87b7aeb8ebc975ccf1edc1d9c76eacf0e547001396506b3e239dda9da"
         }
       ],
       "canvas": [
@@ -4595,7 +4913,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_disabled_right__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_left__p0",
           "offset": [
             0,
             0
@@ -4611,8 +4929,8 @@
       "id": "ui/cards/menu/disabled/top",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\disabled\\top.png",
-          "sha256": "4c489f7921432c1edb6b47cad0abebf0533a008d37a65719ecf517c79118e06b"
+          "path": "ui/cards/menu/disabled/top.png",
+          "sha256": "792cf1621679496ae6f5fe401741d5e5664ef4024b87a4e0889c16177facc911"
         }
       ],
       "canvas": [
@@ -4627,7 +4945,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_disabled_top__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_bottom__p0",
           "offset": [
             0,
             0
@@ -4643,8 +4961,8 @@
       "id": "ui/cards/menu/disabled/top-left",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\disabled\\top-left.png",
-          "sha256": "8a3316b4c1e1c5e5bc37c9e1358145d5984adbe4451c033057ea2bb62a117e76"
+          "path": "ui/cards/menu/disabled/top-left.png",
+          "sha256": "f31a4760643199833f6f9480795e1b715f32a9b6e93fcf5611ec7601fe481423"
         }
       ],
       "canvas": [
@@ -4659,7 +4977,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_disabled_top_left__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_top_left__p0",
           "offset": [
             0,
             0
@@ -4675,8 +4993,8 @@
       "id": "ui/cards/menu/disabled/top-right",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\disabled\\top-right.png",
-          "sha256": "4caaf9a19603b5cb06f16c13cdf6dec5b145f59a46af540e95ccfc6130a3d650"
+          "path": "ui/cards/menu/disabled/top-right.png",
+          "sha256": "3c0d21fe70ed5f92dcd0fc98bfe51fd057772210d82346d0baf06e41560f9cff"
         }
       ],
       "canvas": [
@@ -4691,7 +5009,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_disabled_top_right__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_top_right__p0",
           "offset": [
             0,
             0
@@ -4707,8 +5025,8 @@
       "id": "ui/cards/menu/normal/bottom",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\normal\\bottom.png",
-          "sha256": "14834674124ca28b683d7b36070565c96f04aa5c97f6237f055c1f62faac25c7"
+          "path": "ui/cards/menu/normal/bottom.png",
+          "sha256": "792cf1621679496ae6f5fe401741d5e5664ef4024b87a4e0889c16177facc911"
         }
       ],
       "canvas": [
@@ -4723,7 +5041,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_normal_bottom__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_bottom__p0",
           "offset": [
             0,
             0
@@ -4739,8 +5057,8 @@
       "id": "ui/cards/menu/normal/bottom-left",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\normal\\bottom-left.png",
-          "sha256": "e00d625b93b3f1d4c4d79f52ebb586ea6995f91cf6e9511d0e1badd3c4888482"
+          "path": "ui/cards/menu/normal/bottom-left.png",
+          "sha256": "3f5f7cb608198d2167285103979e5bfdb7445aa35d337ccd5e3993d8a4f74e0f"
         }
       ],
       "canvas": [
@@ -4755,7 +5073,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_normal_bottom_left__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_bottom_left__p0",
           "offset": [
             0,
             0
@@ -4771,8 +5089,8 @@
       "id": "ui/cards/menu/normal/bottom-right",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\normal\\bottom-right.png",
-          "sha256": "72039f7a688ad80a14c7cf65643f9831064abba0488a90e2268be4f8ca83c393"
+          "path": "ui/cards/menu/normal/bottom-right.png",
+          "sha256": "812dce855ddd0da089b9777b331726920b6e55690e4ebb939d44e6e2a1c97565"
         }
       ],
       "canvas": [
@@ -4787,7 +5105,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_normal_bottom_right__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_bottom_right__p0",
           "offset": [
             0,
             0
@@ -4803,8 +5121,8 @@
       "id": "ui/cards/menu/normal/center",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\normal\\center.png",
-          "sha256": "f5dc936c16ff7e98ad6138b1b917e80a462d184256f9c578544725b069ccb01b"
+          "path": "ui/cards/menu/normal/center.png",
+          "sha256": "d52d3f188c2ed22af72a1bb37a012e1da09414a79f732abdae686840058186e0"
         }
       ],
       "canvas": [
@@ -4819,7 +5137,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_normal_center__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_center__p0",
           "offset": [
             0,
             0
@@ -4835,8 +5153,8 @@
       "id": "ui/cards/menu/normal/left",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\normal\\left.png",
-          "sha256": "b8b2a4c9159a38b1fd59703c9968b7912732ee6bf9129af545513126faf15682"
+          "path": "ui/cards/menu/normal/left.png",
+          "sha256": "cc0873c87b7aeb8ebc975ccf1edc1d9c76eacf0e547001396506b3e239dda9da"
         }
       ],
       "canvas": [
@@ -4851,7 +5169,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_normal_left__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_left__p0",
           "offset": [
             0,
             0
@@ -4867,8 +5185,8 @@
       "id": "ui/cards/menu/normal/right",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\normal\\right.png",
-          "sha256": "bd56843c1cf6493837547aeebfc5a6511b4a2cac4d6c1f2a973f2b340105ccec"
+          "path": "ui/cards/menu/normal/right.png",
+          "sha256": "cc0873c87b7aeb8ebc975ccf1edc1d9c76eacf0e547001396506b3e239dda9da"
         }
       ],
       "canvas": [
@@ -4883,7 +5201,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_normal_right__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_left__p0",
           "offset": [
             0,
             0
@@ -4899,8 +5217,8 @@
       "id": "ui/cards/menu/normal/top",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\normal\\top.png",
-          "sha256": "76f203136ba6afed2b5111651b33816b9c99194ea83373f108a7cfc26585daf2"
+          "path": "ui/cards/menu/normal/top.png",
+          "sha256": "792cf1621679496ae6f5fe401741d5e5664ef4024b87a4e0889c16177facc911"
         }
       ],
       "canvas": [
@@ -4915,7 +5233,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_normal_top__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_bottom__p0",
           "offset": [
             0,
             0
@@ -4931,8 +5249,8 @@
       "id": "ui/cards/menu/normal/top-left",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\normal\\top-left.png",
-          "sha256": "633860c0666e5ea01a07412e7a1fe85715ec6db49c14ff1b6fddccc9845344fb"
+          "path": "ui/cards/menu/normal/top-left.png",
+          "sha256": "f31a4760643199833f6f9480795e1b715f32a9b6e93fcf5611ec7601fe481423"
         }
       ],
       "canvas": [
@@ -4947,7 +5265,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_normal_top_left__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_top_left__p0",
           "offset": [
             0,
             0
@@ -4963,8 +5281,8 @@
       "id": "ui/cards/menu/normal/top-right",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\normal\\top-right.png",
-          "sha256": "b60aa576540ce8c74859b408c70c627474858a0b29a359a827cad4c82cbcaaba"
+          "path": "ui/cards/menu/normal/top-right.png",
+          "sha256": "3c0d21fe70ed5f92dcd0fc98bfe51fd057772210d82346d0baf06e41560f9cff"
         }
       ],
       "canvas": [
@@ -4979,7 +5297,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_normal_top_right__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_top_right__p0",
           "offset": [
             0,
             0
@@ -4995,8 +5313,8 @@
       "id": "ui/cards/menu/selected/bottom",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\selected\\bottom.png",
-          "sha256": "dcc0c3cfea32bce4c5a524271a854f514336ff315b831a84f3339fab40718017"
+          "path": "ui/cards/menu/selected/bottom.png",
+          "sha256": "608e989a3e2cbe2c24b279c8d6c7e2843dc60b8c50c2737bec1c330b797a4488"
         }
       ],
       "canvas": [
@@ -5011,7 +5329,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_selected_bottom__p0",
+          "symbol": "adv_assets_ui_cards_info_current_bottom__p0",
           "offset": [
             0,
             0
@@ -5027,8 +5345,8 @@
       "id": "ui/cards/menu/selected/bottom-left",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\selected\\bottom-left.png",
-          "sha256": "5ebff4ecae598709ba8e22f9635319eed11425b94095d7cbbd91af5c211a0dfb"
+          "path": "ui/cards/menu/selected/bottom-left.png",
+          "sha256": "09878aa5c9969d5875808a9f76567f01d078729a408330cdf844f4087d694968"
         }
       ],
       "canvas": [
@@ -5043,7 +5361,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_selected_bottom_left__p0",
+          "symbol": "adv_assets_ui_cards_info_current_bottom_left__p0",
           "offset": [
             0,
             0
@@ -5059,8 +5377,8 @@
       "id": "ui/cards/menu/selected/bottom-right",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\selected\\bottom-right.png",
-          "sha256": "6282be5920c728f248c8c6d332cce79fa20345c6a67d9997e15fe2f6af60ec68"
+          "path": "ui/cards/menu/selected/bottom-right.png",
+          "sha256": "ff622ec6b7a66f84928cd0daebec65dcb0c096bba0950a473414953caf6a5e39"
         }
       ],
       "canvas": [
@@ -5075,7 +5393,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_selected_bottom_right__p0",
+          "symbol": "adv_assets_ui_cards_info_current_bottom_right__p0",
           "offset": [
             0,
             0
@@ -5091,8 +5409,8 @@
       "id": "ui/cards/menu/selected/center",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\selected\\center.png",
-          "sha256": "012e4aa21eb2ea19a72e08e167dd63d1da8b056c8f6414b6bb5af0da17d1970f"
+          "path": "ui/cards/menu/selected/center.png",
+          "sha256": "12fa29a64e90e18dd7acdf7f324d3b53c1b7eeb250c215df95895e720aaf7150"
         }
       ],
       "canvas": [
@@ -5107,7 +5425,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_selected_center__p0",
+          "symbol": "adv_assets_ui_cards_info_current_center__p0",
           "offset": [
             0,
             0
@@ -5123,8 +5441,8 @@
       "id": "ui/cards/menu/selected/left",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\selected\\left.png",
-          "sha256": "d819bd12c38a0c36f59342c97e90c1de5d4931932f589c2864822cf9a4668f49"
+          "path": "ui/cards/menu/selected/left.png",
+          "sha256": "68dc3aa93d56c7e2479a1c3a63b16ea51cf88fcf20c28833b8544976bf052bf5"
         }
       ],
       "canvas": [
@@ -5139,7 +5457,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_selected_left__p0",
+          "symbol": "adv_assets_ui_cards_info_current_left__p0",
           "offset": [
             0,
             0
@@ -5155,8 +5473,8 @@
       "id": "ui/cards/menu/selected/right",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\selected\\right.png",
-          "sha256": "ac7ba2ff624b9982ceb0be8e2fa6e20cc0b5b885ede16ea35c8063560698b3d9"
+          "path": "ui/cards/menu/selected/right.png",
+          "sha256": "c8e3be09a0c9839494a492dd08497a218c2c8e7ef73093ecb6eb40edfe70db0b"
         }
       ],
       "canvas": [
@@ -5171,7 +5489,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_selected_right__p0",
+          "symbol": "adv_assets_ui_cards_info_current_right__p0",
           "offset": [
             0,
             0
@@ -5187,8 +5505,8 @@
       "id": "ui/cards/menu/selected/top",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\selected\\top.png",
-          "sha256": "c20ca633554d0429c36d9ee498632ca4bd608e4473df75e5f748e819ce04a325"
+          "path": "ui/cards/menu/selected/top.png",
+          "sha256": "608e989a3e2cbe2c24b279c8d6c7e2843dc60b8c50c2737bec1c330b797a4488"
         }
       ],
       "canvas": [
@@ -5203,7 +5521,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_selected_top__p0",
+          "symbol": "adv_assets_ui_cards_info_current_bottom__p0",
           "offset": [
             0,
             0
@@ -5219,8 +5537,8 @@
       "id": "ui/cards/menu/selected/top-left",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\selected\\top-left.png",
-          "sha256": "262d92591a6dcfa6bfc0c310de1eced53b59e03254c4ff46aab5028ae13862d4"
+          "path": "ui/cards/menu/selected/top-left.png",
+          "sha256": "499add3935de40c2600b4ebf44ec10c4fd09e23dc47cb2e364060f5533d0634e"
         }
       ],
       "canvas": [
@@ -5235,7 +5553,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_selected_top_left__p0",
+          "symbol": "adv_assets_ui_cards_info_current_top_left__p0",
           "offset": [
             0,
             0
@@ -5251,8 +5569,8 @@
       "id": "ui/cards/menu/selected/top-right",
       "sources": [
         {
-          "path": "ui\\cards\\menu\\selected\\top-right.png",
-          "sha256": "8ebef04da87b96561a39733d5bb2aa8c4e02e23746c8c61ac36f36909b8d65a4"
+          "path": "ui/cards/menu/selected/top-right.png",
+          "sha256": "56cc090fd81a2ee0fd56670849cfee18fce6022d77dc4caf973d4dacff68acce"
         }
       ],
       "canvas": [
@@ -5267,7 +5585,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_menu_selected_top_right__p0",
+          "symbol": "adv_assets_ui_cards_info_current_top_right__p0",
           "offset": [
             0,
             0
@@ -5283,8 +5601,8 @@
       "id": "ui/cards/popup/normal/bottom",
       "sources": [
         {
-          "path": "ui\\cards\\popup\\normal\\bottom.png",
-          "sha256": "d54fd5eb1726580e11b393715ebb2de10f00d7ac1cd42a2ef6bedbb1cdce6d8b"
+          "path": "ui/cards/popup/normal/bottom.png",
+          "sha256": "2515c9bbefa2eb20bcc293ba4e5b9c271e5b07faddd2ad7d5d3704238cf28997"
         }
       ],
       "canvas": [
@@ -5315,8 +5633,8 @@
       "id": "ui/cards/popup/normal/bottom-left",
       "sources": [
         {
-          "path": "ui\\cards\\popup\\normal\\bottom-left.png",
-          "sha256": "f7468ff16bbc39985eda11be75a59f2d7cff2ca250926f698f4328f46b5c7334"
+          "path": "ui/cards/popup/normal/bottom-left.png",
+          "sha256": "887553f2e87a1c294a054d94e0e6d35602810b8574ac76b5dab0a44526f2b343"
         }
       ],
       "canvas": [
@@ -5347,8 +5665,8 @@
       "id": "ui/cards/popup/normal/bottom-right",
       "sources": [
         {
-          "path": "ui\\cards\\popup\\normal\\bottom-right.png",
-          "sha256": "b30fd5216339d9c6adb7bb76fc4f3c442bee5b424aa09e68f0606af6fb167d79"
+          "path": "ui/cards/popup/normal/bottom-right.png",
+          "sha256": "f067c0eb8490ff5bae482e7a7ff3bd9fd35202f9bfd507c342ef0610bda782be"
         }
       ],
       "canvas": [
@@ -5379,8 +5697,8 @@
       "id": "ui/cards/popup/normal/center",
       "sources": [
         {
-          "path": "ui\\cards\\popup\\normal\\center.png",
-          "sha256": "f5dc936c16ff7e98ad6138b1b917e80a462d184256f9c578544725b069ccb01b"
+          "path": "ui/cards/popup/normal/center.png",
+          "sha256": "d52d3f188c2ed22af72a1bb37a012e1da09414a79f732abdae686840058186e0"
         }
       ],
       "canvas": [
@@ -5395,7 +5713,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_popup_normal_center__p0",
+          "symbol": "adv_assets_ui_cards_info_normal_center__p0",
           "offset": [
             0,
             0
@@ -5411,8 +5729,8 @@
       "id": "ui/cards/popup/normal/left",
       "sources": [
         {
-          "path": "ui\\cards\\popup\\normal\\left.png",
-          "sha256": "a0097f057f29063e83bf56f9d5222a19eaf7fabf8500e6566acf9e12f1b37099"
+          "path": "ui/cards/popup/normal/left.png",
+          "sha256": "bbb088a3ed944fbe92df79d5a372ca26ddd82cbffa0143a48f97efbb3e3e1f74"
         }
       ],
       "canvas": [
@@ -5443,8 +5761,8 @@
       "id": "ui/cards/popup/normal/right",
       "sources": [
         {
-          "path": "ui\\cards\\popup\\normal\\right.png",
-          "sha256": "c9c11bc70180414f25ee761968c09668b5ecfc2bf3d277a9a7a9bfa4540c333a"
+          "path": "ui/cards/popup/normal/right.png",
+          "sha256": "bbb088a3ed944fbe92df79d5a372ca26ddd82cbffa0143a48f97efbb3e3e1f74"
         }
       ],
       "canvas": [
@@ -5459,7 +5777,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_popup_normal_right__p0",
+          "symbol": "adv_assets_ui_cards_popup_normal_left__p0",
           "offset": [
             0,
             0
@@ -5475,8 +5793,8 @@
       "id": "ui/cards/popup/normal/top",
       "sources": [
         {
-          "path": "ui\\cards\\popup\\normal\\top.png",
-          "sha256": "6f75dd9f8acd1a566c65d71f1a6eef1fb73a11baadab1b6e392d0eaa9e4f677d"
+          "path": "ui/cards/popup/normal/top.png",
+          "sha256": "2515c9bbefa2eb20bcc293ba4e5b9c271e5b07faddd2ad7d5d3704238cf28997"
         }
       ],
       "canvas": [
@@ -5491,7 +5809,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_cards_popup_normal_top__p0",
+          "symbol": "adv_assets_ui_cards_popup_normal_bottom__p0",
           "offset": [
             0,
             0
@@ -5507,8 +5825,8 @@
       "id": "ui/cards/popup/normal/top-left",
       "sources": [
         {
-          "path": "ui\\cards\\popup\\normal\\top-left.png",
-          "sha256": "d80462dd413d1106fc9053d97b0c821e4f17dea8409f5f5f5a85c4a787f0330c"
+          "path": "ui/cards/popup/normal/top-left.png",
+          "sha256": "233de3aff9bf9b85fa19c5239a97770f41dff49615d7dbdfd542e6297561a379"
         }
       ],
       "canvas": [
@@ -5539,8 +5857,8 @@
       "id": "ui/cards/popup/normal/top-right",
       "sources": [
         {
-          "path": "ui\\cards\\popup\\normal\\top-right.png",
-          "sha256": "2d2a23bb3b1cdd9deb3eea9c797863c1aa501d5a3d4cae2db11f33c9622a1e67"
+          "path": "ui/cards/popup/normal/top-right.png",
+          "sha256": "fad744f92b46791aae66ac622c42d9a6c70d198708ee2093d0ab8b35df42abe0"
         }
       ],
       "canvas": [
@@ -5571,8 +5889,8 @@
       "id": "ui/cover-background-bottom",
       "sources": [
         {
-          "path": "ui\\cover-background-bottom.png",
-          "sha256": "94d45e5915ecc1450c64f75173c8e724c8f6a7c98cad42a40d4dd9076629bebf"
+          "path": "ui/cover-background-bottom.png",
+          "sha256": "d3656a8226942efd59a83576715b81b8d1e2497bbda3c09063e60dd41a89c432"
         }
       ],
       "canvas": [
@@ -5603,8 +5921,8 @@
       "id": "ui/cover-background-top",
       "sources": [
         {
-          "path": "ui\\cover-background-top.png",
-          "sha256": "62d9799d9ba0e63310dfd8a8832499a6423e27b90143e056e0893c904bc5398b"
+          "path": "ui/cover-background-top.png",
+          "sha256": "a48250308b755690963233360047009591f526d8d8ac210c3094766a62ae0fac"
         }
       ],
       "canvas": [
@@ -5635,8 +5953,8 @@
       "id": "ui/labels/boot-caption",
       "sources": [
         {
-          "path": "ui\\labels\\boot-caption.png",
-          "sha256": "34d99c5f2005a4447252cae415a8e5dbe2c08c63650da14e33eacda2bb354a7f"
+          "path": "ui/labels/boot-caption.png",
+          "sha256": "6af62457ae0012eda92b53e8a14ea1625b20c8251944434db6f0b38110139d14"
         }
       ],
       "canvas": [
@@ -5667,8 +5985,8 @@
       "id": "ui/labels/new-record",
       "sources": [
         {
-          "path": "ui\\labels\\new-record.png",
-          "sha256": "2392e19aba655abdad0637720cbf152aa91ea119822617f8096c97e5fac0ee28"
+          "path": "ui/labels/new-record.png",
+          "sha256": "7b662b238ff0499009671c44acef88ec7360001e3ec75375b9acd2edc04ea4a0"
         }
       ],
       "canvas": [
@@ -5699,8 +6017,8 @@
       "id": "ui/labels/placeholder",
       "sources": [
         {
-          "path": "ui\\labels\\placeholder.png",
-          "sha256": "38830fa775a685c3cf6cfcf0d4160bbddb3f3c1d86163bcd110bd8358f21212e"
+          "path": "ui/labels/placeholder.png",
+          "sha256": "09a0ed4768f5c1b6efdb6723ec4946d2c9cdb2b4b365c6946c469f422762e0c2"
         }
       ],
       "canvas": [
@@ -5731,13 +6049,13 @@
       "id": "ui/labels/press-start",
       "sources": [
         {
-          "path": "ui\\labels\\press-start.png",
-          "sha256": "b9053c3b86f083842c344895fe6f85a02fa0c709c391a82537e570fbcd23bd81"
+          "path": "ui/labels/press-start.png",
+          "sha256": "0cab8b3ee5bffcccc6b2dbe0f4972ee93514f02b82b7bd3b24ea059616b85731"
         }
       ],
       "canvas": [
-        168,
-        28
+        208,
+        34
       ],
       "anchor": [
         0,
@@ -5753,8 +6071,8 @@
             0
           ],
           "size": [
-            168,
-            28
+            208,
+            34
           ]
         }
       ]
@@ -5763,8 +6081,8 @@
       "id": "ui/labels/test-no-record",
       "sources": [
         {
-          "path": "ui\\labels\\test-no-record.png",
-          "sha256": "0ae4be25eceffead6fb79cf4cdee4e518ad24853e04b50f500d1174664910ae0"
+          "path": "ui/labels/test-no-record.png",
+          "sha256": "80eac3bd516ef99c01a908a211174b6db1700c6742f2ceec9fa7ccaedf7471c7"
         }
       ],
       "canvas": [
@@ -5795,7 +6113,7 @@
       "id": "ui/map/footprints-backward",
       "sources": [
         {
-          "path": "ui\\map\\footprints-backward.png",
+          "path": "ui/map/footprints-backward.png",
           "sha256": "1b288ae6af50dffcbe1856a21dc550bff4e4551896751e2f1f7becfab9465f6a"
         }
       ],
@@ -5827,7 +6145,7 @@
       "id": "ui/map/footprints-forward",
       "sources": [
         {
-          "path": "ui\\map\\footprints-forward.png",
+          "path": "ui/map/footprints-forward.png",
           "sha256": "37dd8aa8c0dedefccbe1c9c229bd52bc65ee1b98f320a684bf858f314be5d5fb"
         }
       ],
@@ -5859,8 +6177,8 @@
       "id": "ui/map/lock",
       "sources": [
         {
-          "path": "ui\\map\\lock.png",
-          "sha256": "b8514b70be05d9678c2ff20e37beb23cbedae4ec66b631c1e03df853613117d4"
+          "path": "ui/map/lock.png",
+          "sha256": "b340d12d645006f7be1a710984fb1c7e0ef70d4532840d91c5fc676339cc2b58"
         }
       ],
       "canvas": [
@@ -5891,8 +6209,8 @@
       "id": "ui/map/stamp-bronze",
       "sources": [
         {
-          "path": "ui\\map\\stamp-bronze.png",
-          "sha256": "9a7c98af42bc7df40a1266cfa5a73bd6f21078ffe645676ddbb3dd9350f1b1a3"
+          "path": "ui/map/stamp-bronze.png",
+          "sha256": "2cba07d10f610270caa869aff8ae0020ee1632d38cecd9e0f033a0d01497156a"
         }
       ],
       "canvas": [
@@ -5923,8 +6241,8 @@
       "id": "ui/map/stamp-empty",
       "sources": [
         {
-          "path": "ui\\map\\stamp-empty.png",
-          "sha256": "8258c407324e620ab7f6e84f718d71e0441625240b9f9de2272b092f4b663774"
+          "path": "ui/map/stamp-empty.png",
+          "sha256": "cab2a874fc2c9c7ee63b6e5d41eff652a2021c8d529e42f1fc1f26e3dd0ac39a"
         }
       ],
       "canvas": [
@@ -5955,8 +6273,8 @@
       "id": "ui/map/stamp-gold",
       "sources": [
         {
-          "path": "ui\\map\\stamp-gold.png",
-          "sha256": "eae4ae327a6829b68d6239f676800b008f1fdf4443e90cdfa14053b004a348f1"
+          "path": "ui/map/stamp-gold.png",
+          "sha256": "6c8ac5c09baa830d983e8485da8568bd98b10e5bcb3743839579a46264bd79e3"
         }
       ],
       "canvas": [
@@ -5987,8 +6305,8 @@
       "id": "ui/map/stamp-silver",
       "sources": [
         {
-          "path": "ui\\map\\stamp-silver.png",
-          "sha256": "da6046e7b6877d00831bafb235fdbd9a9e312aa64e38a0abdb1c38a1a32d3bba"
+          "path": "ui/map/stamp-silver.png",
+          "sha256": "4cfdc03b59757982d91b9852280965d1ffc560c4052dfed650a0920c8781e130"
         }
       ],
       "canvas": [
@@ -6019,8 +6337,8 @@
       "id": "ui/map/station-current",
       "sources": [
         {
-          "path": "ui\\map\\station-current.png",
-          "sha256": "a161e7004b57812e9c4654eea799a1d7e1e623a2ae7d2fdea8e47bf34d9338f4"
+          "path": "ui/map/station-current.png",
+          "sha256": "01638dff0f1174de9deb52a5e2fa70110dcd1a55d6cc0539fdaf385fc0a99287"
         }
       ],
       "canvas": [
@@ -6051,8 +6369,8 @@
       "id": "ui/map/station-locked",
       "sources": [
         {
-          "path": "ui\\map\\station-locked.png",
-          "sha256": "02da180e4b1898555f71a2a5df77a308fc188dbf3fe5860cc1231ce475e1093a"
+          "path": "ui/map/station-locked.png",
+          "sha256": "fe961d9ebbb17e30e79c27b2292c255a818563a607963f99b666638749b84afc"
         }
       ],
       "canvas": [
@@ -6083,8 +6401,8 @@
       "id": "ui/map/station-unlocked",
       "sources": [
         {
-          "path": "ui\\map\\station-unlocked.png",
-          "sha256": "76fd80a94e7ae73fdafac63cc72046b8bfd791c919a92996ffbc9a04fd02f54c"
+          "path": "ui/map/station-unlocked.png",
+          "sha256": "60b94b480cf38fb16e2a343cf702ffd18964d7e407b69743ba52e50c29a65e00"
         }
       ],
       "canvas": [
@@ -6115,8 +6433,8 @@
       "id": "ui/map/temporary-position-marker",
       "sources": [
         {
-          "path": "ui\\map\\temporary-position-marker.png",
-          "sha256": "b0e5b1efc5d6457ac040a0c22d13d3b3fdb76f4eb8aa664c6c26e96c8eb641bd"
+          "path": "ui/map/temporary-position-marker.png",
+          "sha256": "2d9f9968abae3cfc1c0de49735a995a1cf174e80b06eb8247de9b6ec7ef2f794"
         }
       ],
       "canvas": [
@@ -6147,12 +6465,12 @@
       "id": "ui/numbers/20/0",
       "sources": [
         {
-          "path": "ui\\numbers\\20\\0.png",
-          "sha256": "30cffe72cc7444e5550ecc479bd10433e50069df65dcfd2f45eeb1c3c2232a00"
+          "path": "ui/numbers/20/0.png",
+          "sha256": "a9a8318e0f0edac5b9f1a9ae17af122aff663ea46ff1060990a6863ef5c4b2cc"
         }
       ],
       "canvas": [
-        18,
+        23,
         20
       ],
       "anchor": [
@@ -6169,7 +6487,7 @@
             0
           ],
           "size": [
-            18,
+            23,
             20
           ]
         }
@@ -6179,12 +6497,12 @@
       "id": "ui/numbers/20/1",
       "sources": [
         {
-          "path": "ui\\numbers\\20\\1.png",
-          "sha256": "5d30a6e2cf87000da9768e07893b197e400cb7deb64c051e6db522f78f5a4d31"
+          "path": "ui/numbers/20/1.png",
+          "sha256": "0ce244e8a94285f7c69599e3afddcf89efc836f134bd62c7f0f793b3af8ff829"
         }
       ],
       "canvas": [
-        18,
+        16,
         20
       ],
       "anchor": [
@@ -6201,7 +6519,7 @@
             0
           ],
           "size": [
-            18,
+            16,
             20
           ]
         }
@@ -6211,12 +6529,12 @@
       "id": "ui/numbers/20/2",
       "sources": [
         {
-          "path": "ui\\numbers\\20\\2.png",
-          "sha256": "b9e886b71b65fd3f4427c104ef316da8cafa88430f68b7ad3065c18fe68eb5db"
+          "path": "ui/numbers/20/2.png",
+          "sha256": "151b9afd5df2456ed8b628e820b87cc5f300fa7c1ea4cbdeb8c985763a133dbc"
         }
       ],
       "canvas": [
-        18,
+        21,
         20
       ],
       "anchor": [
@@ -6233,7 +6551,7 @@
             0
           ],
           "size": [
-            18,
+            21,
             20
           ]
         }
@@ -6243,12 +6561,12 @@
       "id": "ui/numbers/20/3",
       "sources": [
         {
-          "path": "ui\\numbers\\20\\3.png",
-          "sha256": "691b873b4727bdc5a1098c0c5b0dd2eb83d6d4bac49ff10e4cd636e413c77b95"
+          "path": "ui/numbers/20/3.png",
+          "sha256": "4f56a0f36bce0e0c26d37bc667597d73d1e5050b24093470bc4886354cf875df"
         }
       ],
       "canvas": [
-        18,
+        20,
         20
       ],
       "anchor": [
@@ -6265,7 +6583,7 @@
             0
           ],
           "size": [
-            18,
+            20,
             20
           ]
         }
@@ -6275,12 +6593,12 @@
       "id": "ui/numbers/20/4",
       "sources": [
         {
-          "path": "ui\\numbers\\20\\4.png",
-          "sha256": "c25ca328d4fbaf657dc6a3cc9bb2466994bdf2db0a689192030ed81f7c751ca1"
+          "path": "ui/numbers/20/4.png",
+          "sha256": "55033f1240638ad331fbc3dd78e5d52ea86f9cbda968992da0822af5ed6deb35"
         }
       ],
       "canvas": [
-        18,
+        23,
         20
       ],
       "anchor": [
@@ -6297,7 +6615,7 @@
             0
           ],
           "size": [
-            18,
+            23,
             20
           ]
         }
@@ -6307,12 +6625,12 @@
       "id": "ui/numbers/20/5",
       "sources": [
         {
-          "path": "ui\\numbers\\20\\5.png",
-          "sha256": "bf833c6b99e29976933c87763e03a25fe1cbaf69fcb59296f90d9bc8e4653fbc"
+          "path": "ui/numbers/20/5.png",
+          "sha256": "4b329328fa10f99859e130e19ed7e6b54acfcdc4ddc2b672cd21871ddf0ec8cb"
         }
       ],
       "canvas": [
-        18,
+        21,
         20
       ],
       "anchor": [
@@ -6329,7 +6647,7 @@
             0
           ],
           "size": [
-            18,
+            21,
             20
           ]
         }
@@ -6339,12 +6657,12 @@
       "id": "ui/numbers/20/6",
       "sources": [
         {
-          "path": "ui\\numbers\\20\\6.png",
-          "sha256": "b4faaa326cd2e844f942bb7e580a2624e187e13dbaa0d9d5b8d81ac70b47babb"
+          "path": "ui/numbers/20/6.png",
+          "sha256": "e88261a9d0d776b48fc14b8442f937d7633b76de165ded51e59e4c76aa3fd3e6"
         }
       ],
       "canvas": [
-        18,
+        22,
         20
       ],
       "anchor": [
@@ -6361,7 +6679,7 @@
             0
           ],
           "size": [
-            18,
+            22,
             20
           ]
         }
@@ -6371,12 +6689,12 @@
       "id": "ui/numbers/20/7",
       "sources": [
         {
-          "path": "ui\\numbers\\20\\7.png",
-          "sha256": "36290b72cbf585ae0ad2dcfbc04108a9cf131994cbd2d6e8171f31964868ed96"
+          "path": "ui/numbers/20/7.png",
+          "sha256": "0abb28f6f3ea315549c5195915210dde5faedaf5824872ea3e66ab267d02410d"
         }
       ],
       "canvas": [
-        18,
+        21,
         20
       ],
       "anchor": [
@@ -6393,7 +6711,7 @@
             0
           ],
           "size": [
-            18,
+            21,
             20
           ]
         }
@@ -6403,12 +6721,12 @@
       "id": "ui/numbers/20/8",
       "sources": [
         {
-          "path": "ui\\numbers\\20\\8.png",
-          "sha256": "0dd3860fe49684cda6eb1f4634650dffb079a80d9aecac0ce3df374d0e1b3e25"
+          "path": "ui/numbers/20/8.png",
+          "sha256": "b734bc6e0f4cf81c5fc0d5447b4d51b9ce19da8096a8e1086a62fa29257b4c32"
         }
       ],
       "canvas": [
-        18,
+        22,
         20
       ],
       "anchor": [
@@ -6425,7 +6743,7 @@
             0
           ],
           "size": [
-            18,
+            22,
             20
           ]
         }
@@ -6435,12 +6753,12 @@
       "id": "ui/numbers/20/9",
       "sources": [
         {
-          "path": "ui\\numbers\\20\\9.png",
-          "sha256": "1a8ff73d9b3c718625ca1f2c1b9d5acd8cef84d88c55657e36d55496a1552f29"
+          "path": "ui/numbers/20/9.png",
+          "sha256": "90d6de64063ba451ece51afa6fcaee25fd9f1a34c08c9bae9e50530f9f643fc4"
         }
       ],
       "canvas": [
-        18,
+        22,
         20
       ],
       "anchor": [
@@ -6457,7 +6775,7 @@
             0
           ],
           "size": [
-            18,
+            22,
             20
           ]
         }
@@ -6467,12 +6785,12 @@
       "id": "ui/numbers/20/m",
       "sources": [
         {
-          "path": "ui\\numbers\\20\\m.png",
-          "sha256": "17c0586db8f4f394a436749adeb02405d707b8526cf063603da81cf0cef1f9c6"
+          "path": "ui/numbers/20/m.png",
+          "sha256": "d84b99c2a71987d16f3076044d21de9b425b9ada4883323ad46e46d2612a82e2"
         }
       ],
       "canvas": [
-        27,
+        33,
         20
       ],
       "anchor": [
@@ -6489,7 +6807,7 @@
             0
           ],
           "size": [
-            27,
+            33,
             20
           ]
         }
@@ -6499,12 +6817,12 @@
       "id": "ui/numbers/20/plus",
       "sources": [
         {
-          "path": "ui\\numbers\\20\\plus.png",
-          "sha256": "03ce10a1c1f90c2f6d02c466216304ade749329a48b4e01946469d303aed1d8b"
+          "path": "ui/numbers/20/plus.png",
+          "sha256": "dddff7189ae460af90f5a8f4b00f73030a89f51ae560787c52992bd1570caf56"
         }
       ],
       "canvas": [
-        18,
+        21,
         20
       ],
       "anchor": [
@@ -6521,7 +6839,7 @@
             0
           ],
           "size": [
-            18,
+            21,
             20
           ]
         }
@@ -6531,12 +6849,12 @@
       "id": "ui/numbers/36/0",
       "sources": [
         {
-          "path": "ui\\numbers\\36\\0.png",
-          "sha256": "8a7ea02f6220ad927be27e608efc9b684d3e8338227fddd525dc803a19553fee"
+          "path": "ui/numbers/36/0.png",
+          "sha256": "ee0cfb221562a61bf293119284e66d14a579b944e95a1e9afc6cca65eb43f76f"
         }
       ],
       "canvas": [
-        29,
+        37,
         36
       ],
       "anchor": [
@@ -6553,7 +6871,7 @@
             0
           ],
           "size": [
-            29,
+            37,
             36
           ]
         }
@@ -6563,12 +6881,12 @@
       "id": "ui/numbers/36/1",
       "sources": [
         {
-          "path": "ui\\numbers\\36\\1.png",
-          "sha256": "fa9ff1f28516ea297f878a0979efe3bee07bc42b85a062fdf33e999183b2c6c7"
+          "path": "ui/numbers/36/1.png",
+          "sha256": "a69152c68106e70142d64d493d57f0dcace13a06e29e6861acb8a528d3c067c7"
         }
       ],
       "canvas": [
-        29,
+        23,
         36
       ],
       "anchor": [
@@ -6585,7 +6903,7 @@
             0
           ],
           "size": [
-            29,
+            23,
             36
           ]
         }
@@ -6595,12 +6913,12 @@
       "id": "ui/numbers/36/2",
       "sources": [
         {
-          "path": "ui\\numbers\\36\\2.png",
-          "sha256": "be2a8a9a2c4c9067948e5743bcf61d112050586b2aba3ee5907421878cc2aa89"
+          "path": "ui/numbers/36/2.png",
+          "sha256": "26b4dc9400f8e8e56492902e2d09cd31f1eb58b6658740bec8718ac5efc2014c"
         }
       ],
       "canvas": [
-        29,
+        32,
         36
       ],
       "anchor": [
@@ -6617,7 +6935,7 @@
             0
           ],
           "size": [
-            29,
+            32,
             36
           ]
         }
@@ -6627,12 +6945,12 @@
       "id": "ui/numbers/36/3",
       "sources": [
         {
-          "path": "ui\\numbers\\36\\3.png",
-          "sha256": "9a541e98fd2e15cf95887c3a898b1bc09a8328355707376fbeb52af3f46a3a40"
+          "path": "ui/numbers/36/3.png",
+          "sha256": "7321b4e541d2016a4ecb6c648accea7d31b8609765664f3f2d2b3b8ec78c671e"
         }
       ],
       "canvas": [
-        29,
+        33,
         36
       ],
       "anchor": [
@@ -6649,7 +6967,7 @@
             0
           ],
           "size": [
-            29,
+            33,
             36
           ]
         }
@@ -6659,12 +6977,12 @@
       "id": "ui/numbers/36/4",
       "sources": [
         {
-          "path": "ui\\numbers\\36\\4.png",
-          "sha256": "b7783ed1863858ef6da98382af3302828e47425ff46d3dbc17039dfb30f8e0f8"
+          "path": "ui/numbers/36/4.png",
+          "sha256": "6f694cdbf7b2741f8c2c9df374f5069d5cfa26984579e8bfcab45adc4242a4c5"
         }
       ],
       "canvas": [
-        29,
+        37,
         36
       ],
       "anchor": [
@@ -6681,7 +6999,7 @@
             0
           ],
           "size": [
-            29,
+            37,
             36
           ]
         }
@@ -6691,12 +7009,12 @@
       "id": "ui/numbers/36/5",
       "sources": [
         {
-          "path": "ui\\numbers\\36\\5.png",
-          "sha256": "f986cfa7b35216e1fb372df6d4a93333a4f0e094758a87cb8337ada2aebf2899"
+          "path": "ui/numbers/36/5.png",
+          "sha256": "7ac311d5f2ddf16d9d3eef0192e5437b954f03c9930b2029f49054f0b10faf6f"
         }
       ],
       "canvas": [
-        29,
+        32,
         36
       ],
       "anchor": [
@@ -6713,7 +7031,7 @@
             0
           ],
           "size": [
-            29,
+            32,
             36
           ]
         }
@@ -6723,12 +7041,12 @@
       "id": "ui/numbers/36/6",
       "sources": [
         {
-          "path": "ui\\numbers\\36\\6.png",
-          "sha256": "2dde530f8b627667b31627e04a65997f32e9f7a5c076e374c46d7117fba3a474"
+          "path": "ui/numbers/36/6.png",
+          "sha256": "e0d61d3db478784228e9faae038fe50dd35982db43583e68a8c0f0a19ef0027e"
         }
       ],
       "canvas": [
-        29,
+        35,
         36
       ],
       "anchor": [
@@ -6745,7 +7063,7 @@
             0
           ],
           "size": [
-            29,
+            35,
             36
           ]
         }
@@ -6755,12 +7073,12 @@
       "id": "ui/numbers/36/7",
       "sources": [
         {
-          "path": "ui\\numbers\\36\\7.png",
-          "sha256": "8e807fd3d1657c4f0ea64c7388d99106a160eaf3ed56ea1dbb538cdb375a082a"
+          "path": "ui/numbers/36/7.png",
+          "sha256": "e6c02afea2c27ff9756dd5d86203958def76cc4c72f0a746586e09a0c0042239"
         }
       ],
       "canvas": [
-        29,
+        34,
         36
       ],
       "anchor": [
@@ -6777,7 +7095,7 @@
             0
           ],
           "size": [
-            29,
+            34,
             36
           ]
         }
@@ -6787,12 +7105,12 @@
       "id": "ui/numbers/36/8",
       "sources": [
         {
-          "path": "ui\\numbers\\36\\8.png",
-          "sha256": "1b6b1cad4fc942e00f37a06f9538c9d7aefceef772c7b540ce119ba6ab61fce9"
+          "path": "ui/numbers/36/8.png",
+          "sha256": "85284528eab1382c414dacea1c7ebdbaf174281f39cac0b2b643eaa684c7b27b"
         }
       ],
       "canvas": [
-        29,
+        36,
         36
       ],
       "anchor": [
@@ -6809,7 +7127,7 @@
             0
           ],
           "size": [
-            29,
+            36,
             36
           ]
         }
@@ -6819,12 +7137,12 @@
       "id": "ui/numbers/36/9",
       "sources": [
         {
-          "path": "ui\\numbers\\36\\9.png",
-          "sha256": "71104f589e3ffc6bf5fea658cf440878ef73fbad74d350ef4063131158e3e6d1"
+          "path": "ui/numbers/36/9.png",
+          "sha256": "c938edd1fcbd3232d9f6433dacb6339a13b4daf1291db4847d0680d4f876075e"
         }
       ],
       "canvas": [
-        29,
+        34,
         36
       ],
       "anchor": [
@@ -6841,7 +7159,7 @@
             0
           ],
           "size": [
-            29,
+            34,
             36
           ]
         }
@@ -6851,12 +7169,12 @@
       "id": "ui/numbers/36/m",
       "sources": [
         {
-          "path": "ui\\numbers\\36\\m.png",
-          "sha256": "42ceddd5b35007205707d79446d528edbf80bffe1cc05d967b514e6099798a6a"
+          "path": "ui/numbers/36/m.png",
+          "sha256": "c10a2193b5fa7b055dd971219cb4dd197e7a0bf9514de1a20a77c89e4558966e"
         }
       ],
       "canvas": [
-        45,
+        54,
         36
       ],
       "anchor": [
@@ -6873,7 +7191,7 @@
             0
           ],
           "size": [
-            45,
+            54,
             36
           ]
         }
@@ -6883,12 +7201,12 @@
       "id": "ui/numbers/36/plus",
       "sources": [
         {
-          "path": "ui\\numbers\\36\\plus.png",
-          "sha256": "160c80b16325a12ab6483086d2e5454bf7838911273695af7eafa212216a219e"
+          "path": "ui/numbers/36/plus.png",
+          "sha256": "be88b83984174d49ef3204bbee165a64f9e34880baa2dfffe1f01c0bf748c556"
         }
       ],
       "canvas": [
-        29,
+        32,
         36
       ],
       "anchor": [
@@ -6905,7 +7223,7 @@
             0
           ],
           "size": [
-            29,
+            32,
             36
           ]
         }
@@ -6915,8 +7233,8 @@
       "id": "ui/passport/grid-current",
       "sources": [
         {
-          "path": "ui\\passport\\grid-current.png",
-          "sha256": "067bbfdc7a4adbd3aebc3bc3eba1626ae76a8b0070850cd64a7cb00a90349d79"
+          "path": "ui/passport/grid-current.png",
+          "sha256": "de61515f7cb299a9cafd56fcee2ffd670dd4da4c4c182a8f5852cacec1284ad0"
         }
       ],
       "canvas": [
@@ -6947,8 +7265,8 @@
       "id": "ui/passport/grid-normal",
       "sources": [
         {
-          "path": "ui\\passport\\grid-normal.png",
-          "sha256": "775bbc5a7dd6f5a7436a201ccfe8c19ab21ca342c33b35817542960200e4fabe"
+          "path": "ui/passport/grid-normal.png",
+          "sha256": "3642d3de72e7ae0866e68a62734e9a873d40df7c2bed32c9511d02e12ad8be2a"
         }
       ],
       "canvas": [
@@ -6979,8 +7297,8 @@
       "id": "ui/passport/header",
       "sources": [
         {
-          "path": "ui\\passport\\header.png",
-          "sha256": "d8ce1a0ae5edd14c0ccb0b8afc879ebd2040a40d4292f4022ce30d419285e800"
+          "path": "ui/passport/header.png",
+          "sha256": "301a887c62d254e49fc8a237b6a47c2fecb6e95191bfbc3aa684ec15dc3e5b21"
         }
       ],
       "canvas": [
@@ -7011,8 +7329,8 @@
       "id": "ui/passport/locked-mask",
       "sources": [
         {
-          "path": "ui\\passport\\locked-mask.png",
-          "sha256": "7ee8724352e4959d77bfc4aa775a6f8aca22bd9d4e734bccd9bc944249d719bb"
+          "path": "ui/passport/locked-mask.png",
+          "sha256": "d066f67fd07dce0d466507993d8a8ff7fbd996be26a1679207b7186df9986146"
         }
       ],
       "canvas": [
@@ -7043,8 +7361,8 @@
       "id": "ui/passport/page-tile",
       "sources": [
         {
-          "path": "ui\\passport\\page-tile.png",
-          "sha256": "deb54c751f18f878ed77d36748e39362cf0a41565a76a9b49cbad23dc608d3a9"
+          "path": "ui/passport/page-tile.png",
+          "sha256": "d9b5aa36ace1be8c300661d6ce47618e78b63d15334062eda7b74f8ba8ff7e9f"
         }
       ],
       "canvas": [
@@ -7075,8 +7393,8 @@
       "id": "ui/resources/bar-frame",
       "sources": [
         {
-          "path": "ui\\resources\\bar-frame.png",
-          "sha256": "fcdf1d911cd1f372c79a4d6cd96a1884e74348fe61ba82ae3c6816b313985602"
+          "path": "ui/resources/bar-frame.png",
+          "sha256": "019b54aa3f180039d8bb27086582e5c7dbb9ab3a65d618fbf384de0c664b52be"
         }
       ],
       "canvas": [
@@ -7107,8 +7425,8 @@
       "id": "ui/resources/fill",
       "sources": [
         {
-          "path": "ui\\resources\\fill.png",
-          "sha256": "0e7812e442cab8ad2c0b3b13e2eaea23e9a9194846a2d5b00a3815204632c938"
+          "path": "ui/resources/fill.png",
+          "sha256": "76b1e986bd00991231a378d0dd6a8a759f1e71054251a31f1a69569b0cf71d93"
         }
       ],
       "canvas": [
@@ -7139,8 +7457,8 @@
       "id": "ui/resources/fill-left-cap",
       "sources": [
         {
-          "path": "ui\\resources\\fill-left-cap.png",
-          "sha256": "efa46f4554cf59436b5b0eadbae69ff53297bc9d818c0f9f5f2637a8e3475332"
+          "path": "ui/resources/fill-left-cap.png",
+          "sha256": "fd0b685c3b6ddb804d011cda92575f5c1d25716502ce1abb24bbbf7ec2c9063b"
         }
       ],
       "canvas": [
@@ -7171,8 +7489,8 @@
       "id": "ui/resources/fill-right-cap",
       "sources": [
         {
-          "path": "ui\\resources\\fill-right-cap.png",
-          "sha256": "deab853d0ed0a8936ffc39b86b0852601bf501da2f9628944ed9b0087d948db3"
+          "path": "ui/resources/fill-right-cap.png",
+          "sha256": "abeec19b08aec6152fe9777084d876677e56771af09322e1ad02027d99639093"
         }
       ],
       "canvas": [
@@ -7203,7 +7521,7 @@
       "id": "ui/resources/icons/fuel",
       "sources": [
         {
-          "path": "ui\\resources\\icons\\fuel.png",
+          "path": "ui/resources/icons/fuel.png",
           "sha256": "c782c1caea1d961d80c14ce152bec284eb7a232948cf108bf89bd3e40ce8d078"
         }
       ],
@@ -7235,8 +7553,8 @@
       "id": "ui/resources/icons/hot-air",
       "sources": [
         {
-          "path": "ui\\resources\\icons\\hot-air.png",
-          "sha256": "b19f58b5370e766b3e5a170e1d077b28d04173d4afbd2eba2349579212678f79"
+          "path": "ui/resources/icons/hot-air.png",
+          "sha256": "a7139afbaac89744e17c5359c18bcd7bf243d6847bb54181576a585284a15d62"
         }
       ],
       "canvas": [
@@ -7267,8 +7585,8 @@
       "id": "ui/resources/icons/oxygen",
       "sources": [
         {
-          "path": "ui\\resources\\icons\\oxygen.png",
-          "sha256": "db2e5cde83c3a0afaa0a13ad5d0273161977f54bbe5d47e9512f8deb6ef0a038"
+          "path": "ui/resources/icons/oxygen.png",
+          "sha256": "396b8e74ac5e2bc92982d106ec822f6373a52518f490221fe142a9812e88db5b"
         }
       ],
       "canvas": [
@@ -7299,7 +7617,7 @@
       "id": "ui/resources/icons/spirit",
       "sources": [
         {
-          "path": "ui\\resources\\icons\\spirit.png",
+          "path": "ui/resources/icons/spirit.png",
           "sha256": "60c72ccb77938680166bc162a5a19be792c34036aced67fa34e66ae760533886"
         }
       ],
@@ -7331,8 +7649,8 @@
       "id": "ui/resources/icons/stamina",
       "sources": [
         {
-          "path": "ui\\resources\\icons\\stamina.png",
-          "sha256": "e965610417a670e0f0bb1ecc86c4bd623438f605d9b118c764cb6c468fc1953c"
+          "path": "ui/resources/icons/stamina.png",
+          "sha256": "68626ba880f8f4b5e1ade1c2700e609f5d6ec2e0fd1252622b58808ab0c57c19"
         }
       ],
       "canvas": [
@@ -7363,8 +7681,8 @@
       "id": "ui/resources/icons/steam",
       "sources": [
         {
-          "path": "ui\\resources\\icons\\steam.png",
-          "sha256": "787a93ff6825eb9c151cec800f1de0b857a448c83246cd12864f182261322af3"
+          "path": "ui/resources/icons/steam.png",
+          "sha256": "4be2ef8ff5b002522692ac02b400b1f47f3817fb7bbf11d11f4082cf1a577c87"
         }
       ],
       "canvas": [
@@ -7395,8 +7713,8 @@
       "id": "ui/resources/icons/temperature",
       "sources": [
         {
-          "path": "ui\\resources\\icons\\temperature.png",
-          "sha256": "128e36fb7c0715dcd46043120333dabc83d58a1a1e47fd7a67b9b2c6517ba3e3"
+          "path": "ui/resources/icons/temperature.png",
+          "sha256": "c911aeda8f6c1e2e8870d7f8c95058e231c8bda5480ba1e5a6a831ae51b61760"
         }
       ],
       "canvas": [
@@ -7427,8 +7745,8 @@
       "id": "ui/resources/low-fill",
       "sources": [
         {
-          "path": "ui\\resources\\low-fill.png",
-          "sha256": "c802a64e44cc3e9969549ef5c84e3e6ebb4a84ab8a7703f2cb08547a6fb13d7d"
+          "path": "ui/resources/low-fill.png",
+          "sha256": "17c2fb5f5df323d7f63d5bc8f24742bb131441c21a8ad5f717af387ff08c157b"
         }
       ],
       "canvas": [
@@ -7459,8 +7777,8 @@
       "id": "ui/resources/low-fill-left-cap",
       "sources": [
         {
-          "path": "ui\\resources\\low-fill-left-cap.png",
-          "sha256": "efa46f4554cf59436b5b0eadbae69ff53297bc9d818c0f9f5f2637a8e3475332"
+          "path": "ui/resources/low-fill-left-cap.png",
+          "sha256": "fd0b685c3b6ddb804d011cda92575f5c1d25716502ce1abb24bbbf7ec2c9063b"
         }
       ],
       "canvas": [
@@ -7475,7 +7793,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_resources_low_fill_left_cap__p0",
+          "symbol": "adv_assets_ui_resources_fill_left_cap__p0",
           "offset": [
             0,
             0
@@ -7491,8 +7809,8 @@
       "id": "ui/resources/low-fill-right-cap",
       "sources": [
         {
-          "path": "ui\\resources\\low-fill-right-cap.png",
-          "sha256": "deab853d0ed0a8936ffc39b86b0852601bf501da2f9628944ed9b0087d948db3"
+          "path": "ui/resources/low-fill-right-cap.png",
+          "sha256": "abeec19b08aec6152fe9777084d876677e56771af09322e1ad02027d99639093"
         }
       ],
       "canvas": [
@@ -7507,7 +7825,7 @@
       "loop": false,
       "pieces": [
         {
-          "symbol": "adv_assets_ui_resources_low_fill_right_cap__p0",
+          "symbol": "adv_assets_ui_resources_fill_right_cap__p0",
           "offset": [
             0,
             0
@@ -7523,8 +7841,8 @@
       "id": "ui/stamps/ink-pad",
       "sources": [
         {
-          "path": "ui\\stamps\\ink-pad.png",
-          "sha256": "24a9028ec1a413b78495c138bcac9af748f8c65b6c8b04f87ed5ceffa51680a7"
+          "path": "ui/stamps/ink-pad.png",
+          "sha256": "38f6e2f57d30bd11e6d727e4aff4c2f34f780a23049a416135e144b0e67b6efb"
         }
       ],
       "canvas": [
@@ -7555,8 +7873,8 @@
       "id": "ui/wordmarks/climb",
       "sources": [
         {
-          "path": "ui\\wordmarks\\climb.png",
-          "sha256": "024e716e64bbdc6905f23bda403a056d6f9a54b9479adbd1ed2293a54cbf0578"
+          "path": "ui/wordmarks/climb.png",
+          "sha256": "311d3e321653014525668004b6bec954cf8338ff9893e0ebc69614ba5d7fef22"
         }
       ],
       "canvas": [
@@ -7587,8 +7905,8 @@
       "id": "ui/wordmarks/collection",
       "sources": [
         {
-          "path": "ui\\wordmarks\\collection.png",
-          "sha256": "c277e2fa7b91baf203238a460a92c5bfd111b2ba41b255a1b593a9b615924ca1"
+          "path": "ui/wordmarks/collection.png",
+          "sha256": "9c207a66c387feb99ab38787dc11870bb047d6e36deabd7c42c9162778ab3d39"
         }
       ],
       "canvas": [
@@ -7619,8 +7937,8 @@
       "id": "ui/wordmarks/dive",
       "sources": [
         {
-          "path": "ui\\wordmarks\\dive.png",
-          "sha256": "c5ea475f5ad173fde9bc148dba6e24631b01fd3c9f62f78e70bd5e19938c8753"
+          "path": "ui/wordmarks/dive.png",
+          "sha256": "1db11f5364b625345f5001714c30034876f3542f0ab895d60f7ce5937b69385d"
         }
       ],
       "canvas": [
@@ -7651,8 +7969,8 @@
       "id": "ui/wordmarks/jump",
       "sources": [
         {
-          "path": "ui\\wordmarks\\jump.png",
-          "sha256": "64a9f8d4ff4b6e2ad168b08dc9a5847731eb674307afed6d828bc9f70ead0aad"
+          "path": "ui/wordmarks/jump.png",
+          "sha256": "af3847bf24ed80b867d7747a52bf3d46180f8e46a5ecbe8daa76a1fe733950b9"
         }
       ],
       "canvas": [
@@ -7683,8 +8001,8 @@
       "id": "ui/wordmarks/night",
       "sources": [
         {
-          "path": "ui\\wordmarks\\night.png",
-          "sha256": "2dc0d27de86975e7d88f85acd28a0ffaaab0d990b124baf35c1c8b1e8f3b1320"
+          "path": "ui/wordmarks/night.png",
+          "sha256": "ba1d2a8f9efc3151ffc87024bdfeae2cb0975c3c9c8ff885efaeda0be85fa6e4"
         }
       ],
       "canvas": [
@@ -7715,8 +8033,8 @@
       "id": "ui/wordmarks/post",
       "sources": [
         {
-          "path": "ui\\wordmarks\\post.png",
-          "sha256": "a34c9d8b9c1676b147b2a2fc8ea58e9cb2858bf3d6ee5357ade53ddaf1e59f36"
+          "path": "ui/wordmarks/post.png",
+          "sha256": "72d6025198d510c41a9ffbeec5dd19c943de91d51331adb42b2ed3ba090e5cd0"
         }
       ],
       "canvas": [
@@ -7747,8 +8065,8 @@
       "id": "ui/wordmarks/ski",
       "sources": [
         {
-          "path": "ui\\wordmarks\\ski.png",
-          "sha256": "6a766c6bef724944fd745861dae097f5bc238e1a8a27e9a3fb4b69b7b87c2881"
+          "path": "ui/wordmarks/ski.png",
+          "sha256": "51f0b63a15702cad04f2e6b8ae73bbedb244717278cbf14603b96f24e73a0983"
         }
       ],
       "canvas": [
@@ -7779,8 +8097,8 @@
       "id": "ui/wordmarks/sky",
       "sources": [
         {
-          "path": "ui\\wordmarks\\sky.png",
-          "sha256": "4d6dc5aafdc5d83cd746bbe8bf6a93e690309d9e3dc709f5a0e066dd8aadc05a"
+          "path": "ui/wordmarks/sky.png",
+          "sha256": "893f514fe1937f6bc7b8013212a9ead4e9d18ef75ca612b1304ed2944b2d7682"
         }
       ],
       "canvas": [
@@ -7811,8 +8129,8 @@
       "id": "ui/wordmarks/space",
       "sources": [
         {
-          "path": "ui\\wordmarks\\space.png",
-          "sha256": "e2b554dcb5eaa876e184ab2883509cdce67e75f00b4e229e8c78a216410dce62"
+          "path": "ui/wordmarks/space.png",
+          "sha256": "7c91a87bfe33d5ff3607e6b0cbd9b0702fd416015e931556060c7b7a1eb5004e"
         }
       ],
       "canvas": [
@@ -7840,10 +8158,10 @@
       ]
     }
   ],
-  "python_verified_frames": 283,
+  "python_verified_frames": 299,
   "production_c": {
-    "verified_frames": 283,
-    "verified_sprite_rows": 11822,
+    "verified_frames": 299,
+    "verified_sprite_rows": 13780,
     "verified_ninepatch_rows": 912,
     "comparison": "generated C and production decoders vs indexed source"
   },
@@ -7888,21 +8206,39 @@
       8649,
       15375,
       17298,
-      29514,
+      25487,
+      35986,
+      38099,
       40276,
-      44173,
+      44406,
       45672,
+      46518,
       48007,
-      50577,
       54567,
-      56884,
-      59061,
-      63185,
-      65433,
+      56595,
+      57082,
+      63356,
       65502
     ]
   },
   "ui_limit_bytes": 163840,
+  "sprite_interning": {
+    "scope": "within each group only",
+    "comparison": "exact RGBA pixels, dimensions and ordered frame sequence",
+    "logical_pieces": 215,
+    "physical_sprites": 174,
+    "accounting": "RLE/tables/sprite32 per physical object; piece8 and record/id per logical use"
+  },
+  "startup_composition": {
+    "startup_ids": [
+      "travel/welcome_v2"
+    ],
+    "startup_actor_estimate_c3": 102381,
+    "presentation_table_bytes": 152,
+    "ui_assets_estimate_c3": 57244,
+    "combined_estimate_c3": 159625,
+    "complete_ui_group_present": true
+  },
   "linker_alignment_and_final_elf_measurement": "pending; RLE/tables exact, C3 descriptor estimates exclude linker padding/deduplication",
   "acceptance": "host packing validation only; no device/physical artwork acceptance implied"
 }

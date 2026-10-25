@@ -1,0 +1,4910 @@
+{
+  "clips": [
+    {
+      "skin": "climb_a",
+      "name": "grip_idle_left",
+      "frames": 6,
+      "master_adjacent_rgba_mae": [
+        0.30858612060546875,
+        0.0,
+        0.30858612060546875,
+        0.2830848693847656,
+        0.0,
+        0.2830848693847656
+      ],
+      "loop_wrap_mae": 0.2830848693847656,
+      "frame_reports": [
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 24.0,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 26.0,
+            "thigh_l": 26,
+            "shin_foot_l": -42,
+            "thigh_r": -12,
+            "shin_foot_r": 24,
+            "jacket_flap": -3.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              81
+            ],
+            "r": [
+              95,
+              123
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              151,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 25.039230484541328,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 24.960769515458672,
+            "thigh_l": 26,
+            "shin_foot_l": -42,
+            "thigh_r": -12,
+            "shin_foot_r": 24,
+            "jacket_flap": -1.2679491924311228
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              80
+            ],
+            "r": [
+              95,
+              124
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              151,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 25.039230484541328,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 24.960769515458672,
+            "thigh_l": 26,
+            "shin_foot_l": -42,
+            "thigh_r": -12,
+            "shin_foot_r": 24,
+            "jacket_flap": -1.2679491924311226
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              80
+            ],
+            "r": [
+              95,
+              124
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              151,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 24.0,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 26.0,
+            "thigh_l": 26,
+            "shin_foot_l": -42,
+            "thigh_r": -12,
+            "shin_foot_r": 24,
+            "jacket_flap": -2.9999999999999996
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              81
+            ],
+            "r": [
+              95,
+              123
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              151,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 22.960769515458672,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 27.039230484541328,
+            "thigh_l": 26,
+            "shin_foot_l": -42,
+            "thigh_r": -12,
+            "shin_foot_r": 24,
+            "jacket_flap": -4.732050807568877
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              82
+            ],
+            "r": [
+              95,
+              123
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              151,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 22.960769515458672,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 27.039230484541328,
+            "thigh_l": 26,
+            "shin_foot_l": -42,
+            "thigh_r": -12,
+            "shin_foot_r": 24,
+            "jacket_flap": -4.732050807568877
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              82
+            ],
+            "r": [
+              95,
+              123
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              151,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_a",
+      "name": "grip_idle_right",
+      "frames": 6,
+      "master_adjacent_rgba_mae": [
+        0.27288818359375,
+        0.0,
+        0.27288818359375,
+        0.28240966796875,
+        0.0,
+        0.28240966796875
+      ],
+      "loop_wrap_mae": 0.28240966796875,
+      "frame_reports": [
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -26.0,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -24.0,
+            "thigh_l": 12,
+            "shin_foot_l": -24,
+            "thigh_r": -26,
+            "shin_foot_r": 42,
+            "jacket_flap": 3.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              121
+            ],
+            "r": [
+              201,
+              82
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              105,
+              224
+            ],
+            "r": [
+              169,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            203,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -24.960769515458672,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -25.039230484541328,
+            "thigh_l": 12,
+            "shin_foot_l": -24,
+            "thigh_r": -26,
+            "shin_foot_r": 42,
+            "jacket_flap": 4.732050807568877
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              121
+            ],
+            "r": [
+              201,
+              81
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              105,
+              224
+            ],
+            "r": [
+              169,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            203,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -24.960769515458672,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -25.039230484541328,
+            "thigh_l": 12,
+            "shin_foot_l": -24,
+            "thigh_r": -26,
+            "shin_foot_r": 42,
+            "jacket_flap": 4.732050807568878
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              121
+            ],
+            "r": [
+              201,
+              81
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              105,
+              224
+            ],
+            "r": [
+              169,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            203,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -26.0,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -24.0,
+            "thigh_l": 12,
+            "shin_foot_l": -24,
+            "thigh_r": -26,
+            "shin_foot_r": 42,
+            "jacket_flap": 3.0000000000000004
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              121
+            ],
+            "r": [
+              201,
+              82
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              105,
+              224
+            ],
+            "r": [
+              169,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            203,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -27.039230484541328,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -22.960769515458672,
+            "thigh_l": 12,
+            "shin_foot_l": -24,
+            "thigh_r": -26,
+            "shin_foot_r": 42,
+            "jacket_flap": 1.267949192431123
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              120
+            ],
+            "r": [
+              201,
+              82
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              105,
+              224
+            ],
+            "r": [
+              169,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            203,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -27.039230484541328,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -22.960769515458672,
+            "thigh_l": 12,
+            "shin_foot_l": -24,
+            "thigh_r": -26,
+            "shin_foot_r": 42,
+            "jacket_flap": 1.2679491924311228
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              120
+            ],
+            "r": [
+              201,
+              82
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              105,
+              224
+            ],
+            "r": [
+              169,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            203,
+            225
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_a",
+      "name": "switch_grab_left",
+      "frames": 6,
+      "master_adjacent_rgba_mae": [
+        6.604545593261719,
+        16.767471313476562,
+        11.205223083496094,
+        16.286155700683594,
+        6.308734893798828,
+        19.219135284423828
+      ],
+      "loop_wrap_mae": null,
+      "frame_reports": [
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 26.0,
+            "thigh_r": -12.0,
+            "upper_arm_r": 67.0,
+            "jacket_flap": -3.0,
+            "forearm_hand_l": 24.0,
+            "forearm_hand_r": 26.0,
+            "shin_foot_r": 24.0,
+            "upper_arm_l": 104.0,
+            "shin_foot_l": -42.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              81
+            ],
+            "r": [
+              95,
+              123
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              151,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 24.544,
+            "thigh_r": -13.456000000000001,
+            "upper_arm_r": 49.216,
+            "jacket_flap": -2.3760000000000003,
+            "forearm_hand_l": 18.8,
+            "forearm_hand_r": 20.799999999999997,
+            "shin_foot_r": 36.45213454126452,
+            "upper_arm_l": 86.216,
+            "shin_foot_l": -50.70813454126451
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              43,
+              99
+            ],
+            "r": [
+              103,
+              141
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              90,
+              225
+            ],
+            "r": [
+              148,
+              225
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 41,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            42,
+            15,
+            173,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 21.072,
+            "thigh_r": -16.928,
+            "upper_arm_r": 6.807999999999986,
+            "jacket_flap": -0.8879999999999995,
+            "forearm_hand_l": 6.399999999999995,
+            "forearm_hand_r": 8.399999999999997,
+            "shin_foot_r": 47.455017293312764,
+            "upper_arm_l": 43.80799999999999,
+            "shin_foot_l": -52.78301729331277
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              60,
+              137
+            ],
+            "r": [
+              154,
+              161
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              99,
+              227
+            ],
+            "r": [
+              154,
+              227
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 16,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            50,
+            15,
+            174,
+            228
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 16.927999999999997,
+            "thigh_r": -21.072,
+            "upper_arm_r": -43.80799999999999,
+            "jacket_flap": 0.8879999999999999,
+            "forearm_hand_l": -8.399999999999999,
+            "forearm_hand_r": -6.4,
+            "shin_foot_r": 52.78301729331277,
+            "upper_arm_l": -6.808000000000007,
+            "shin_foot_l": -47.455017293312764
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              106,
+              161
+            ],
+            "r": [
+              198,
+              133
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              100,
+              228
+            ],
+            "r": [
+              156,
+              227
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            83,
+            15,
+            206,
+            229
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 13.456,
+            "thigh_r": -24.544,
+            "upper_arm_r": -86.21600000000002,
+            "jacket_flap": 2.3760000000000012,
+            "forearm_hand_l": -20.800000000000004,
+            "forearm_hand_r": -18.800000000000008,
+            "shin_foot_r": 50.70813454126452,
+            "upper_arm_l": -49.21600000000002,
+            "shin_foot_l": -36.45213454126452
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              154,
+              139
+            ],
+            "r": [
+              206,
+              91
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              108,
+              224
+            ],
+            "r": [
+              165,
+              225
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 8,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            208,
+            226
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 12.0,
+            "thigh_r": -26.0,
+            "upper_arm_r": -104.0,
+            "jacket_flap": 3.0,
+            "forearm_hand_l": -26.0,
+            "forearm_hand_r": -24.0,
+            "shin_foot_r": 42.0,
+            "upper_arm_l": -67.0,
+            "shin_foot_l": -24.000000000000004
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              121
+            ],
+            "r": [
+              201,
+              82
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              105,
+              224
+            ],
+            "r": [
+              169,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            203,
+            225
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_a",
+      "name": "switch_grab_right",
+      "frames": 6,
+      "master_adjacent_rgba_mae": [
+        6.308734893798828,
+        16.286155700683594,
+        11.205223083496094,
+        16.767471313476562,
+        6.604545593261719,
+        19.219135284423828
+      ],
+      "loop_wrap_mae": null,
+      "frame_reports": [
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 12.0,
+            "thigh_r": -26.0,
+            "upper_arm_r": -104.0,
+            "jacket_flap": 3.0,
+            "forearm_hand_l": -26.0,
+            "forearm_hand_r": -24.0,
+            "shin_foot_r": 42.0,
+            "upper_arm_l": -67.0,
+            "shin_foot_l": -24.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              121
+            ],
+            "r": [
+              201,
+              82
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              105,
+              224
+            ],
+            "r": [
+              169,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            203,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 13.456000000000001,
+            "thigh_r": -24.544,
+            "upper_arm_r": -86.216,
+            "jacket_flap": 2.3760000000000003,
+            "forearm_hand_l": -20.799999999999997,
+            "forearm_hand_r": -18.8,
+            "shin_foot_r": 50.70813454126451,
+            "upper_arm_l": -49.216,
+            "shin_foot_l": -36.45213454126452
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              154,
+              139
+            ],
+            "r": [
+              206,
+              91
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              108,
+              224
+            ],
+            "r": [
+              165,
+              225
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 8,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            208,
+            226
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 16.928,
+            "thigh_r": -21.072,
+            "upper_arm_r": -43.80799999999999,
+            "jacket_flap": 0.8879999999999995,
+            "forearm_hand_l": -8.399999999999997,
+            "forearm_hand_r": -6.399999999999995,
+            "shin_foot_r": 52.78301729331277,
+            "upper_arm_l": -6.807999999999986,
+            "shin_foot_l": -47.455017293312764
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              106,
+              161
+            ],
+            "r": [
+              198,
+              133
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              100,
+              228
+            ],
+            "r": [
+              156,
+              227
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            83,
+            15,
+            206,
+            229
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "thigh_l": 21.072,
+            "thigh_r": -16.927999999999997,
+            "upper_arm_r": 6.808000000000007,
+            "jacket_flap": -0.8879999999999999,
+            "forearm_hand_l": 6.4,
+            "forearm_hand_r": 8.399999999999999,
+            "shin_foot_r": 47.455017293312764,
+            "upper_arm_l": 43.80799999999999,
+            "shin_foot_l": -52.78301729331277
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              60,
+              137
+            ],
+            "r": [
+              154,
+              161
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              99,
+              227
+            ],
+            "r": [
+              154,
+              227
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 16,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            50,
+            15,
+            174,
+            228
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 24.544,
+            "thigh_r": -13.456,
+            "upper_arm_r": 49.21600000000002,
+            "jacket_flap": -2.3760000000000012,
+            "forearm_hand_l": 18.800000000000008,
+            "forearm_hand_r": 20.800000000000004,
+            "shin_foot_r": 36.45213454126452,
+            "upper_arm_l": 86.21600000000002,
+            "shin_foot_l": -50.70813454126452
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              43,
+              99
+            ],
+            "r": [
+              103,
+              141
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              90,
+              225
+            ],
+            "r": [
+              148,
+              225
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 41,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            42,
+            15,
+            173,
+            226
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 26.0,
+            "thigh_r": -12.0,
+            "upper_arm_r": 67.0,
+            "jacket_flap": -3.0,
+            "forearm_hand_l": 24.0,
+            "forearm_hand_r": 26.0,
+            "shin_foot_r": 24.000000000000004,
+            "upper_arm_l": 104.0,
+            "shin_foot_l": -42.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              81
+            ],
+            "r": [
+              95,
+              123
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              151,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_a",
+      "name": "charge_left",
+      "frames": 4,
+      "master_adjacent_rgba_mae": [
+        1.6951866149902344,
+        2.6175880432128906,
+        1.7488746643066406,
+        4.212589263916016
+      ],
+      "loop_wrap_mae": null,
+      "frame_reports": [
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 24.0,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 26.0,
+            "thigh_l": 26.0,
+            "shin_foot_l": -42.0,
+            "thigh_r": -12.0,
+            "shin_foot_r": 24.0,
+            "jacket_flap": -3.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              81
+            ],
+            "r": [
+              95,
+              123
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              151,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 26.074074074074073,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 23.925925925925927,
+            "thigh_l": 29.11111111111111,
+            "shin_foot_l": -46.666666666666664,
+            "thigh_r": -15.11111111111111,
+            "shin_foot_r": 28.666666666666664,
+            "jacket_flap": -1.962962962962963
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              80
+            ],
+            "r": [
+              95,
+              124
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              85,
+              222
+            ],
+            "r": [
+              153,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 35,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 29.925925925925924,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 20.074074074074076,
+            "thigh_l": 34.888888888888886,
+            "shin_foot_l": -55.33333333333333,
+            "thigh_r": -20.88888888888889,
+            "shin_foot_r": 37.33333333333333,
+            "jacket_flap": -0.0370370370370372
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              51,
+              79
+            ],
+            "r": [
+              95,
+              126
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              83,
+              221
+            ],
+            "r": [
+              155,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            50,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 32.0,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 18.0,
+            "thigh_l": 38.0,
+            "shin_foot_l": -60.0,
+            "thigh_r": -24.0,
+            "shin_foot_r": 42.0,
+            "jacket_flap": 1.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              52,
+              78
+            ],
+            "r": [
+              94,
+              127
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              83,
+              220
+            ],
+            "r": [
+              156,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            51,
+            15,
+            173,
+            224
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_a",
+      "name": "charge_right",
+      "frames": 4,
+      "master_adjacent_rgba_mae": [
+        1.605987548828125,
+        2.4721336364746094,
+        1.7060089111328125,
+        4.013469696044922
+      ],
+      "loop_wrap_mae": null,
+      "frame_reports": [
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -26.0,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -24.0,
+            "thigh_l": 12.0,
+            "shin_foot_l": -24.0,
+            "thigh_r": -26.0,
+            "shin_foot_r": 42.0,
+            "jacket_flap": 3.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              121
+            ],
+            "r": [
+              201,
+              82
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              105,
+              224
+            ],
+            "r": [
+              169,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            203,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -23.925925925925927,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -26.074074074074073,
+            "thigh_l": 15.11111111111111,
+            "shin_foot_l": -28.666666666666664,
+            "thigh_r": -29.11111111111111,
+            "shin_foot_r": 46.666666666666664,
+            "jacket_flap": 4.037037037037037
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              122
+            ],
+            "r": [
+              201,
+              81
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              104,
+              224
+            ],
+            "r": [
+              170,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            203,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -20.074074074074076,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -29.925925925925924,
+            "thigh_l": 20.88888888888889,
+            "shin_foot_l": -37.33333333333333,
+            "thigh_r": -34.888888888888886,
+            "shin_foot_r": 55.33333333333333,
+            "jacket_flap": 5.962962962962963
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              124
+            ],
+            "r": [
+              200,
+              80
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              102,
+              223
+            ],
+            "r": [
+              172,
+              221
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            202,
+            224
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -18.0,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -32.0,
+            "thigh_l": 24.0,
+            "shin_foot_l": -42.0,
+            "thigh_r": -38.0,
+            "shin_foot_r": 60.0,
+            "jacket_flap": 7.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              162,
+              125
+            ],
+            "r": [
+              200,
+              79
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              102,
+              222
+            ],
+            "r": [
+              172,
+              220
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 4,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            202,
+            223
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_a",
+      "name": "jump_left",
+      "frames": 6,
+      "master_adjacent_rgba_mae": [
+        5.128131866455078,
+        3.8398094177246094,
+        1.7702598571777344,
+        3.0511741638183594,
+        4.868389129638672,
+        4.212589263916016
+      ],
+      "loop_wrap_mae": null,
+      "frame_reports": [
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 38.0,
+            "thigh_r": -24.0,
+            "upper_arm_r": 67.0,
+            "jacket_flap": 1.0,
+            "forearm_hand_l": 32.0,
+            "forearm_hand_r": 18.0,
+            "shin_foot_r": 42.0,
+            "upper_arm_l": 104.0,
+            "shin_foot_l": -60.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              52,
+              78
+            ],
+            "r": [
+              94,
+              127
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              83,
+              220
+            ],
+            "r": [
+              156,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            51,
+            15,
+            173,
+            224
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 27.347435963320432,
+            "thigh_r": -13.347435963320432,
+            "upper_arm_r": 67.0,
+            "jacket_flap": -2.9427115137548387,
+            "forearm_hand_l": 38.22142302750968,
+            "forearm_hand_r": 11.778576972490324,
+            "shin_foot_r": 40.128,
+            "upper_arm_l": 104.0,
+            "shin_foot_l": -58.128
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              53,
+              76
+            ],
+            "r": [
+              94,
+              130
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              90,
+              226
+            ],
+            "r": [
+              147,
+              225
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 35,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            52,
+            15,
+            173,
+            227
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 18.559095739277538,
+            "thigh_r": -4.559095739277543,
+            "upper_arm_r": 67.0,
+            "jacket_flap": -6.114339097770921,
+            "forearm_hand_l": 40.59667819554184,
+            "forearm_hand_r": 9.40332180445816,
+            "shin_foot_r": 35.664,
+            "upper_arm_l": 104.0,
+            "shin_foot_l": -53.664
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              54,
+              75
+            ],
+            "r": [
+              94,
+              131
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              97,
+              228
+            ],
+            "r": [
+              140,
+              226
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 43,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            53,
+            15,
+            173,
+            229
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 15.007095739277538,
+            "thigh_r": -1.007095739277542,
+            "upper_arm_r": 67.0,
+            "jacket_flap": -7.298339097770922,
+            "forearm_hand_l": 38.228678195541846,
+            "forearm_hand_r": 11.771321804458154,
+            "shin_foot_r": 30.336,
+            "upper_arm_l": 104.0,
+            "shin_foot_l": -48.336
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              53,
+              76
+            ],
+            "r": [
+              94,
+              130
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              97,
+              229
+            ],
+            "r": [
+              140,
+              226
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 44,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            52,
+            15,
+            173,
+            230
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 17.843435963320424,
+            "thigh_r": -3.8434359633204274,
+            "upper_arm_r": 67.0,
+            "jacket_flap": -6.11071151375484,
+            "forearm_hand_l": 31.88542302750968,
+            "forearm_hand_r": 18.11457697249032,
+            "shin_foot_r": 25.872,
+            "upper_arm_l": 104.0,
+            "shin_foot_l": -43.872
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              52,
+              78
+            ],
+            "r": [
+              94,
+              127
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              94,
+              226
+            ],
+            "r": [
+              144,
+              226
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 42,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            51,
+            15,
+            173,
+            227
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 25.999999999999996,
+            "thigh_r": -11.999999999999998,
+            "upper_arm_r": 67.0,
+            "jacket_flap": -3.000000000000001,
+            "forearm_hand_l": 24.0,
+            "forearm_hand_r": 26.0,
+            "shin_foot_r": 24.0,
+            "upper_arm_l": 104.0,
+            "shin_foot_l": -42.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              81
+            ],
+            "r": [
+              95,
+              123
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              151,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_a",
+      "name": "jump_right",
+      "frames": 6,
+      "master_adjacent_rgba_mae": [
+        4.979347229003906,
+        3.7078781127929688,
+        1.7366828918457031,
+        2.8050384521484375,
+        4.617118835449219,
+        4.013469696044922
+      ],
+      "loop_wrap_mae": null,
+      "frame_reports": [
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 24.0,
+            "thigh_r": -38.0,
+            "upper_arm_r": -104.0,
+            "jacket_flap": 7.0,
+            "forearm_hand_l": -18.0,
+            "forearm_hand_r": -32.0,
+            "shin_foot_r": 60.0,
+            "upper_arm_l": -67.0,
+            "shin_foot_l": -42.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              162,
+              125
+            ],
+            "r": [
+              200,
+              79
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              102,
+              222
+            ],
+            "r": [
+              172,
+              220
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 4,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            202,
+            223
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 13.347435963320432,
+            "thigh_r": -27.347435963320432,
+            "upper_arm_r": -104.0,
+            "jacket_flap": 3.0572884862451617,
+            "forearm_hand_l": -11.778576972490324,
+            "forearm_hand_r": -38.22142302750968,
+            "shin_foot_r": 58.128,
+            "upper_arm_l": -67.0,
+            "shin_foot_l": -40.128
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              162,
+              128
+            ],
+            "r": [
+              198,
+              77
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              110,
+              224
+            ],
+            "r": [
+              165,
+              226
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            200,
+            227
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 4.559095739277543,
+            "thigh_r": -18.559095739277538,
+            "upper_arm_r": -104.0,
+            "jacket_flap": -0.11433909777092133,
+            "forearm_hand_l": -9.40332180445816,
+            "forearm_hand_r": -40.59667819554184,
+            "shin_foot_r": 53.664,
+            "upper_arm_l": -67.0,
+            "shin_foot_l": -35.664
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              162,
+              129
+            ],
+            "r": [
+              198,
+              76
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              116,
+              225
+            ],
+            "r": [
+              159,
+              229
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            200,
+            230
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 1.007095739277542,
+            "thigh_r": -15.007095739277538,
+            "upper_arm_r": -104.0,
+            "jacket_flap": -1.2983390977709224,
+            "forearm_hand_l": -11.771321804458154,
+            "forearm_hand_r": -38.228678195541846,
+            "shin_foot_r": 48.336,
+            "upper_arm_l": -67.0,
+            "shin_foot_l": -30.336
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              162,
+              128
+            ],
+            "r": [
+              198,
+              77
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              117,
+              225
+            ],
+            "r": [
+              158,
+              229
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            200,
+            230
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 3.8434359633204274,
+            "thigh_r": -17.843435963320424,
+            "upper_arm_r": -104.0,
+            "jacket_flap": -0.11071151375483979,
+            "forearm_hand_l": -18.11457697249032,
+            "forearm_hand_r": -31.88542302750968,
+            "shin_foot_r": 43.872,
+            "upper_arm_l": -67.0,
+            "shin_foot_l": -25.872
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              162,
+              125
+            ],
+            "r": [
+              200,
+              79
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              113,
+              225
+            ],
+            "r": [
+              163,
+              227
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            202,
+            228
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 11.999999999999998,
+            "thigh_r": -25.999999999999996,
+            "upper_arm_r": -104.0,
+            "jacket_flap": 2.999999999999999,
+            "forearm_hand_l": -26.0,
+            "forearm_hand_r": -24.0,
+            "shin_foot_r": 42.0,
+            "upper_arm_l": -67.0,
+            "shin_foot_l": -24.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              121
+            ],
+            "r": [
+              201,
+              82
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              105,
+              224
+            ],
+            "r": [
+              169,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            203,
+            225
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_a",
+      "name": "slide_left",
+      "frames": 6,
+      "master_adjacent_rgba_mae": [
+        5.343605041503906,
+        3.7123374938964844,
+        0.0,
+        3.7123374938964844,
+        5.343605041503906,
+        0.0
+      ],
+      "loop_wrap_mae": null,
+      "frame_reports": [
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104.0,
+            "forearm_hand_l": 24,
+            "upper_arm_r": 67.0,
+            "forearm_hand_r": 26,
+            "thigh_l": 26,
+            "shin_foot_l": -42.0,
+            "thigh_r": -12,
+            "shin_foot_r": 24.0,
+            "jacket_flap": -3.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              81
+            ],
+            "r": [
+              95,
+              123
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              151,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 93.41986545873549,
+            "forearm_hand_l": 24,
+            "upper_arm_r": 77.58013454126451,
+            "forearm_hand_r": 26,
+            "thigh_l": 26,
+            "shin_foot_l": -54.93127555043441,
+            "thigh_r": -12,
+            "shin_foot_r": 36.93127555043441,
+            "jacket_flap": 1.702282018339785
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              45,
+              89
+            ],
+            "r": [
+              93,
+              114
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              90,
+              226
+            ],
+            "r": [
+              148,
+              226
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 36,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            44,
+            15,
+            173,
+            227
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 86.88098270668723,
+            "forearm_hand_l": 24,
+            "upper_arm_r": 84.11901729331277,
+            "forearm_hand_r": 26,
+            "thigh_l": 26,
+            "shin_foot_l": -62.92324335849338,
+            "thigh_r": -12,
+            "shin_foot_r": 44.92324335849338,
+            "jacket_flap": 4.608452130361228
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              43,
+              96
+            ],
+            "r": [
+              93,
+              108
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              94,
+              227
+            ],
+            "r": [
+              143,
+              225
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 44,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            42,
+            15,
+            173,
+            228
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 86.88098270668723,
+            "forearm_hand_l": 24,
+            "upper_arm_r": 84.11901729331277,
+            "forearm_hand_r": 26,
+            "thigh_l": 26,
+            "shin_foot_l": -62.92324335849338,
+            "thigh_r": -12,
+            "shin_foot_r": 44.92324335849338,
+            "jacket_flap": 4.608452130361229
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              43,
+              96
+            ],
+            "r": [
+              93,
+              108
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              94,
+              227
+            ],
+            "r": [
+              143,
+              225
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 44,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            42,
+            15,
+            173,
+            228
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 93.41986545873549,
+            "forearm_hand_l": 24,
+            "upper_arm_r": 77.58013454126451,
+            "forearm_hand_r": 26,
+            "thigh_l": 26,
+            "shin_foot_l": -54.931275550434414,
+            "thigh_r": -12,
+            "shin_foot_r": 36.931275550434414,
+            "jacket_flap": 1.702282018339786
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              45,
+              89
+            ],
+            "r": [
+              93,
+              114
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              90,
+              226
+            ],
+            "r": [
+              148,
+              226
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 36,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            44,
+            15,
+            173,
+            227
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104.0,
+            "forearm_hand_l": 24,
+            "upper_arm_r": 67.0,
+            "forearm_hand_r": 26,
+            "thigh_l": 26,
+            "shin_foot_l": -42.0,
+            "thigh_r": -12,
+            "shin_foot_r": 24.000000000000004,
+            "jacket_flap": -2.999999999999999
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              81
+            ],
+            "r": [
+              95,
+              123
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              151,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_a",
+      "name": "slide_right",
+      "frames": 6,
+      "master_adjacent_rgba_mae": [
+        4.989433288574219,
+        3.5070343017578125,
+        0.0,
+        3.5070343017578125,
+        4.989433288574219,
+        0.0
+      ],
+      "loop_wrap_mae": null,
+      "frame_reports": [
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67.0,
+            "forearm_hand_l": -26,
+            "upper_arm_r": -104.0,
+            "forearm_hand_r": -24,
+            "thigh_l": 12,
+            "shin_foot_l": -24.0,
+            "thigh_r": -26,
+            "shin_foot_r": 42.0,
+            "jacket_flap": 3.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              121
+            ],
+            "r": [
+              201,
+              82
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              105,
+              224
+            ],
+            "r": [
+              169,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            203,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -77.58013454126451,
+            "forearm_hand_l": -26,
+            "upper_arm_r": -93.41986545873549,
+            "forearm_hand_r": -24,
+            "thigh_l": 12,
+            "shin_foot_l": -36.93127555043441,
+            "thigh_r": -26,
+            "shin_foot_r": 54.93127555043441,
+            "jacket_flap": 7.702282018339785
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              162,
+              112
+            ],
+            "r": [
+              204,
+              88
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              110,
+              225
+            ],
+            "r": [
+              165,
+              226
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 10,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            207,
+            227
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -84.11901729331277,
+            "forearm_hand_l": -26,
+            "upper_arm_r": -86.88098270668723,
+            "forearm_hand_r": -24,
+            "thigh_l": 12,
+            "shin_foot_l": -44.92324335849338,
+            "thigh_r": -26,
+            "shin_foot_r": 62.92324335849338,
+            "jacket_flap": 10.60845213036123
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              162,
+              105
+            ],
+            "r": [
+              206,
+              90
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              113,
+              224
+            ],
+            "r": [
+              162,
+              228
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 7,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            208,
+            229
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -84.11901729331277,
+            "forearm_hand_l": -26,
+            "upper_arm_r": -86.88098270668723,
+            "forearm_hand_r": -24,
+            "thigh_l": 12,
+            "shin_foot_l": -44.92324335849338,
+            "thigh_r": -26,
+            "shin_foot_r": 62.92324335849338,
+            "jacket_flap": 10.60845213036123
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              162,
+              105
+            ],
+            "r": [
+              206,
+              90
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              113,
+              224
+            ],
+            "r": [
+              162,
+              228
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 7,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            208,
+            229
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -77.58013454126451,
+            "forearm_hand_l": -26,
+            "upper_arm_r": -93.41986545873549,
+            "forearm_hand_r": -24,
+            "thigh_l": 12,
+            "shin_foot_l": -36.931275550434414,
+            "thigh_r": -26,
+            "shin_foot_r": 54.931275550434414,
+            "jacket_flap": 7.702282018339786
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              162,
+              112
+            ],
+            "r": [
+              204,
+              88
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              110,
+              225
+            ],
+            "r": [
+              165,
+              226
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 10,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            207,
+            227
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67.0,
+            "forearm_hand_l": -26,
+            "upper_arm_r": -104.0,
+            "forearm_hand_r": -24,
+            "thigh_l": 12,
+            "shin_foot_l": -24.000000000000004,
+            "thigh_r": -26,
+            "shin_foot_r": 42.0,
+            "jacket_flap": 3.000000000000001
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              121
+            ],
+            "r": [
+              201,
+              82
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              105,
+              224
+            ],
+            "r": [
+              169,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            203,
+            225
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_a",
+      "name": "summit_cheer_left",
+      "frames": 8,
+      "master_adjacent_rgba_mae": [
+        6.272289276123047,
+        7.433742523193359,
+        8.973068237304688,
+        8.807567596435547,
+        2.5478973388671875,
+        8.996601104736328,
+        9.640430450439453,
+        11.036983489990234
+      ],
+      "loop_wrap_mae": null,
+      "frame_reports": [
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 26.0,
+            "thigh_r": -12.0,
+            "upper_arm_r": 67.0,
+            "jacket_flap": -3.0,
+            "forearm_hand_l": 24.0,
+            "forearm_hand_r": 26.0,
+            "shin_foot_r": 24.0,
+            "upper_arm_l": 104.0,
+            "shin_foot_l": -42.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              81
+            ],
+            "r": [
+              95,
+              123
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              151,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 34,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 20.845481049562682,
+            "thigh_r": -9.620991253644315,
+            "upper_arm_r": 53.71720116618076,
+            "jacket_flap": -0.23582911782328786,
+            "forearm_hand_l": 19.24198250728863,
+            "forearm_hand_r": 20.845481049562682,
+            "shin_foot_r": 19.24198250728863,
+            "upper_arm_l": 83.38192419825073,
+            "shin_foot_l": -33.6734693877551
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              43,
+              102
+            ],
+            "r": [
+              100,
+              137
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              88,
+              222
+            ],
+            "r": [
+              151,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 41,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            42,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 10.233236151603501,
+            "thigh_r": -4.723032069970847,
+            "upper_arm_r": 15.937303758338352,
+            "jacket_flap": 2.7283993948474374,
+            "forearm_hand_l": 15.407754786988669,
+            "forearm_hand_r": 10.233236151603501,
+            "shin_foot_r": 9.446064139941694,
+            "upper_arm_l": 58.072805216674055,
+            "shin_foot_l": -16.530612244897963
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              47,
+              120
+            ],
+            "r": [
+              133,
+              158
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              94,
+              222
+            ],
+            "r": [
+              148,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 49,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            46,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 1.440233236151603,
+            "thigh_r": -0.6647230320699706,
+            "upper_arm_r": -43.90072138157368,
+            "jacket_flap": 4.708458802891625,
+            "forearm_hand_l": 28.53635557497671,
+            "forearm_hand_r": 1.440233236151603,
+            "shin_foot_r": 1.3294460641399413,
+            "upper_arm_l": 83.98079778826212,
+            "shin_foot_l": -2.3265306122448974
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              43,
+              97
+            ],
+            "r": [
+              185,
+              142
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              98,
+              221
+            ],
+            "r": [
+              145,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 58,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            42,
+            15,
+            199,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 0,
+            "thigh_r": 0,
+            "upper_arm_r": -68.24495385272765,
+            "jacket_flap": 4.874639560909118,
+            "forearm_hand_l": 38.99711648727295,
+            "forearm_hand_r": 0,
+            "shin_foot_r": 0,
+            "upper_arm_l": 112.11670990090971,
+            "shin_foot_l": 0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              58,
+              70
+            ],
+            "r": [
+              197,
+              122
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              99,
+              221
+            ],
+            "r": [
+              145,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 50,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            57,
+            15,
+            211,
+            224
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 0,
+            "thigh_r": 0,
+            "upper_arm_r": -65.1611624050943,
+            "jacket_flap": 3.9091574123401496,
+            "forearm_hand_l": 37.23494994576817,
+            "forearm_hand_r": 0,
+            "shin_foot_r": 0,
+            "upper_arm_l": 107.0504810940835,
+            "shin_foot_l": 0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              55,
+              74
+            ],
+            "r": [
+              196,
+              125
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              99,
+              221
+            ],
+            "r": [
+              145,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 55,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            53,
+            15,
+            210,
+            224
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 0,
+            "thigh_r": 0,
+            "upper_arm_r": -39.43240406445355,
+            "jacket_flap": 2.169418695587791,
+            "forearm_hand_l": 22.53280232254489,
+            "forearm_hand_r": 0,
+            "shin_foot_r": 0,
+            "upper_arm_l": 64.78180667731655,
+            "shin_foot_l": 0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              44,
+              117
+            ],
+            "r": [
+              183,
+              145
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              99,
+              221
+            ],
+            "r": [
+              145,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 61,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            43,
+            15,
+            197,
+            224
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "thigh_l": 0,
+            "thigh_r": 0,
+            "upper_arm_r": -8.572527594031473e-15,
+            "jacket_flap": 6.123233995736766e-16,
+            "forearm_hand_l": 4.898587196589413e-15,
+            "forearm_hand_r": 0,
+            "shin_foot_r": 0,
+            "upper_arm_l": 1.4083438190194563e-14,
+            "shin_foot_l": 0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              88,
+              160
+            ],
+            "r": [
+              151,
+              159
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              99,
+              221
+            ],
+            "r": [
+              145,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            82,
+            15,
+            173,
+            224
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_a",
+      "name": "summit_cheer_right",
+      "frames": 8,
+      "master_adjacent_rgba_mae": [
+        5.806362152099609,
+        8.01666259765625,
+        6.350093841552734,
+        8.021827697753906,
+        2.4285125732421875,
+        8.712535858154297,
+        9.300628662109375,
+        10.402202606201172
+      ],
+      "loop_wrap_mae": null,
+      "frame_reports": [
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 12.0,
+            "thigh_r": -26.0,
+            "upper_arm_r": -104.0,
+            "jacket_flap": 3.0,
+            "forearm_hand_l": -26.0,
+            "forearm_hand_r": -24.0,
+            "shin_foot_r": 42.0,
+            "upper_arm_l": -67.0,
+            "shin_foot_l": -24.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              161,
+              121
+            ],
+            "r": [
+              201,
+              82
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              105,
+              224
+            ],
+            "r": [
+              169,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 3,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            203,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 9.620991253644315,
+            "thigh_r": -20.845481049562682,
+            "upper_arm_r": -83.38192419825073,
+            "jacket_flap": 4.574666508998869,
+            "forearm_hand_l": -20.845481049562682,
+            "forearm_hand_r": -19.24198250728863,
+            "shin_foot_r": 33.6734693877551,
+            "upper_arm_l": -53.71720116618076,
+            "shin_foot_l": -19.24198250728863
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              156,
+              135
+            ],
+            "r": [
+              207,
+              93
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              106,
+              224
+            ],
+            "r": [
+              167,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 5,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            209,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 4.723032069970847,
+            "thigh_r": -10.233236151603501,
+            "upper_arm_r": -51.36590323874621,
+            "jacket_flap": 5.08991542983286,
+            "forearm_hand_l": -4.271545504556527,
+            "forearm_hand_r": -9.446064139941694,
+            "shin_foot_r": 16.530612244897963,
+            "upper_arm_l": -9.230401780410507,
+            "shin_foot_l": -9.446064139941694
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              119,
+              157
+            ],
+            "r": [
+              206,
+              126
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              109,
+              224
+            ],
+            "r": [
+              162,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 7,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            208,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 0.6647230320699706,
+            "thigh_r": -1.440233236151603,
+            "upper_arm_r": -53.37302458857076,
+            "jacket_flap": 5.040820318926611,
+            "forearm_hand_l": 25.766676274685167,
+            "forearm_hand_r": -1.3294460641399413,
+            "shin_foot_r": 2.3265306122448974,
+            "upper_arm_l": 74.50849458126504,
+            "shin_foot_l": -1.3294460641399413
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              54,
+              104
+            ],
+            "r": [
+              205,
+              127
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              111,
+              224
+            ],
+            "r": [
+              157,
+              221
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 6,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            41,
+            16,
+            207,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 0,
+            "thigh_r": 0,
+            "upper_arm_r": -68.24495385272765,
+            "jacket_flap": 4.874639560909118,
+            "forearm_hand_l": 38.99711648727295,
+            "forearm_hand_r": 0,
+            "shin_foot_r": 0,
+            "upper_arm_l": 112.11670990090971,
+            "shin_foot_l": 0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              72,
+              69
+            ],
+            "r": [
+              209,
+              114
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              112,
+              224
+            ],
+            "r": [
+              156,
+              221
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 5,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            57,
+            16,
+            211,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 0,
+            "thigh_r": 0,
+            "upper_arm_r": -65.1611624050943,
+            "jacket_flap": 3.9091574123401496,
+            "forearm_hand_l": 37.23494994576817,
+            "forearm_hand_r": 0,
+            "shin_foot_r": 0,
+            "upper_arm_l": 107.0504810940835,
+            "shin_foot_l": 0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              68,
+              72
+            ],
+            "r": [
+              208,
+              116
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              112,
+              224
+            ],
+            "r": [
+              156,
+              221
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 6,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            53,
+            16,
+            210,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 0,
+            "thigh_r": 0,
+            "upper_arm_r": -39.43240406445355,
+            "jacket_flap": 2.169418695587791,
+            "forearm_hand_l": 22.53280232254489,
+            "forearm_hand_r": 0,
+            "shin_foot_r": 0,
+            "upper_arm_l": 64.78180667731655,
+            "shin_foot_l": 0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              55,
+              119
+            ],
+            "r": [
+              198,
+              139
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              112,
+              224
+            ],
+            "r": [
+              156,
+              221
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 10,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            42,
+            16,
+            200,
+            225
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "thigh_l": 0,
+            "thigh_r": 0,
+            "upper_arm_r": -8.572527594031473e-15,
+            "jacket_flap": 6.123233995736766e-16,
+            "forearm_hand_l": 4.898587196589413e-15,
+            "forearm_hand_r": 0,
+            "shin_foot_r": 0,
+            "upper_arm_l": 1.4083438190194563e-14,
+            "shin_foot_l": 0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              109,
+              158
+            ],
+            "r": [
+              167,
+              160
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              112,
+              224
+            ],
+            "r": [
+              156,
+              221
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            83,
+            16,
+            172,
+            225
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_a",
+      "name": "settlement_cheer",
+      "frames": 8,
+      "master_adjacent_rgba_mae": [
+        7.443782806396484,
+        9.71371078491211,
+        8.801429748535156,
+        2.933818817138672,
+        9.056228637695312,
+        9.72064208984375,
+        6.402294158935547,
+        0.0
+      ],
+      "loop_wrap_mae": null,
+      "frame_reports": [
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "jacket_flap": 0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              96,
+              160
+            ],
+            "r": [
+              164,
+              160
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              103,
+              223
+            ],
+            "r": [
+              152,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            82,
+            15,
+            174,
+            224
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 28.75,
+            "forearm_hand_l": 10.0,
+            "upper_arm_r": -16.25,
+            "forearm_hand_r": -6.25,
+            "jacket_flap": 1.25
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              68,
+              147
+            ],
+            "r": [
+              180,
+              153
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              103,
+              223
+            ],
+            "r": [
+              152,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 15,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            57,
+            15,
+            188,
+            224
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 74.75,
+            "forearm_hand_l": 26.0,
+            "upper_arm_r": -42.25,
+            "forearm_hand_r": -16.25,
+            "jacket_flap": 3.25
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              51,
+              101
+            ],
+            "r": [
+              199,
+              131
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              103,
+              223
+            ],
+            "r": [
+              152,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 16,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            42,
+            15,
+            207,
+            224
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 115,
+            "forearm_hand_l": 40,
+            "upper_arm_r": -65,
+            "forearm_hand_r": -25,
+            "jacket_flap": 5
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              72,
+              64
+            ],
+            "r": [
+              205,
+              106
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              103,
+              223
+            ],
+            "r": [
+              152,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 16,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            59,
+            15,
+            212,
+            224
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 109.25,
+            "forearm_hand_l": 38.0,
+            "upper_arm_r": -61.75,
+            "forearm_hand_r": -23.75,
+            "jacket_flap": 4.75
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              67,
+              68
+            ],
+            "r": [
+              205,
+              110
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              103,
+              223
+            ],
+            "r": [
+              152,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 17,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            55,
+            15,
+            212,
+            224
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 69.0,
+            "forearm_hand_l": 24.0,
+            "upper_arm_r": -39.0,
+            "forearm_hand_r": -15.0,
+            "jacket_flap": 3.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              51,
+              108
+            ],
+            "r": [
+              197,
+              134
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              103,
+              223
+            ],
+            "r": [
+              152,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 17,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            43,
+            15,
+            205,
+            224
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 23.0,
+            "forearm_hand_l": 8.0,
+            "upper_arm_r": -13.0,
+            "forearm_hand_r": -5.0,
+            "jacket_flap": 1.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              73,
+              151
+            ],
+            "r": [
+              177,
+              155
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              103,
+              223
+            ],
+            "r": [
+              152,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 1,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            62,
+            15,
+            185,
+            224
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "jacket_flap": 0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              96,
+              160
+            ],
+            "r": [
+              164,
+              160
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              103,
+              223
+            ],
+            "r": [
+              152,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            82,
+            15,
+            174,
+            224
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_b",
+      "name": "grip_idle_left",
+      "frames": 6,
+      "master_adjacent_rgba_mae": [
+        0.2753753662109375,
+        0.0,
+        0.2753753662109375,
+        0.276885986328125,
+        0.0,
+        0.276885986328125
+      ],
+      "loop_wrap_mae": 0.276885986328125,
+      "frame_reports": [
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 24.0,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 26.0,
+            "thigh_l": 26,
+            "shin_foot_l": -42,
+            "thigh_r": -12,
+            "shin_foot_r": 24,
+            "jacket_flap": -3.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              78
+            ],
+            "r": [
+              96,
+              122
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              154,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            48,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 25.039230484541328,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 24.960769515458672,
+            "thigh_l": 26,
+            "shin_foot_l": -42,
+            "thigh_r": -12,
+            "shin_foot_r": 24,
+            "jacket_flap": -1.2679491924311228
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              79
+            ],
+            "r": [
+              96,
+              123
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              154,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 25.039230484541328,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 24.960769515458672,
+            "thigh_l": 26,
+            "shin_foot_l": -42,
+            "thigh_r": -12,
+            "shin_foot_r": 24,
+            "jacket_flap": -1.2679491924311226
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              79
+            ],
+            "r": [
+              96,
+              123
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              154,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            49,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 24.0,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 26.0,
+            "thigh_l": 26,
+            "shin_foot_l": -42,
+            "thigh_r": -12,
+            "shin_foot_r": 24,
+            "jacket_flap": -2.9999999999999996
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              78
+            ],
+            "r": [
+              96,
+              122
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              154,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            48,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 22.960769515458672,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 27.039230484541328,
+            "thigh_l": 26,
+            "shin_foot_l": -42,
+            "thigh_r": -12,
+            "shin_foot_r": 24,
+            "jacket_flap": -4.732050807568877
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              49,
+              78
+            ],
+            "r": [
+              96,
+              121
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              154,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            48,
+            15,
+            173,
+            225
+          ]
+        },
+        {
+          "view": "left",
+          "angles": {
+            "upper_arm_l": 104,
+            "forearm_hand_l": 22.960769515458672,
+            "upper_arm_r": 67,
+            "forearm_hand_r": 27.039230484541328,
+            "thigh_l": 26,
+            "shin_foot_l": -42,
+            "thigh_r": -12,
+            "shin_foot_r": 24,
+            "jacket_flap": -4.732050807568877
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              49,
+              78
+            ],
+            "r": [
+              96,
+              121
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              86,
+              222
+            ],
+            "r": [
+              154,
+              224
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "9a52d0bf1f5e2e300ac5f4bcd6d0cd4ff3d053a843106592ab33b12844d171dd",
+          "core_bbox": [
+            48,
+            15,
+            173,
+            225
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_b",
+      "name": "grip_idle_right",
+      "frames": 6,
+      "master_adjacent_rgba_mae": [
+        0.2550010681152344,
+        0.0,
+        0.2550010681152344,
+        0.24969863891601562,
+        0.0,
+        0.24969863891601562
+      ],
+      "loop_wrap_mae": 0.24969863891601562,
+      "frame_reports": [
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -26.0,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -24.0,
+            "thigh_l": 12,
+            "shin_foot_l": -24,
+            "thigh_r": -26,
+            "shin_foot_r": 42,
+            "jacket_flap": 3.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              160,
+              124
+            ],
+            "r": [
+              205,
+              76
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              104,
+              223
+            ],
+            "r": [
+              170,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            207,
+            224
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -24.960769515458672,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -25.039230484541328,
+            "thigh_l": 12,
+            "shin_foot_l": -24,
+            "thigh_r": -26,
+            "shin_foot_r": 42,
+            "jacket_flap": 4.732050807568877
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              160,
+              125
+            ],
+            "r": [
+              205,
+              75
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              104,
+              223
+            ],
+            "r": [
+              170,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            207,
+            224
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -24.960769515458672,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -25.039230484541328,
+            "thigh_l": 12,
+            "shin_foot_l": -24,
+            "thigh_r": -26,
+            "shin_foot_r": 42,
+            "jacket_flap": 4.732050807568878
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              160,
+              125
+            ],
+            "r": [
+              205,
+              75
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              104,
+              223
+            ],
+            "r": [
+              170,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            207,
+            224
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -26.0,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -24.0,
+            "thigh_l": 12,
+            "shin_foot_l": -24,
+            "thigh_r": -26,
+            "shin_foot_r": 42,
+            "jacket_flap": 3.0000000000000004
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              160,
+              124
+            ],
+            "r": [
+              205,
+              76
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              104,
+              223
+            ],
+            "r": [
+              170,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            207,
+            224
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -27.039230484541328,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -22.960769515458672,
+            "thigh_l": 12,
+            "shin_foot_l": -24,
+            "thigh_r": -26,
+            "shin_foot_r": 42,
+            "jacket_flap": 1.267949192431123
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              160,
+              124
+            ],
+            "r": [
+              205,
+              77
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              104,
+              223
+            ],
+            "r": [
+              170,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            207,
+            224
+          ]
+        },
+        {
+          "view": "right",
+          "angles": {
+            "upper_arm_l": -67,
+            "forearm_hand_l": -27.039230484541328,
+            "upper_arm_r": -104,
+            "forearm_hand_r": -22.960769515458672,
+            "thigh_l": 12,
+            "shin_foot_l": -24,
+            "thigh_r": -26,
+            "shin_foot_r": 42,
+            "jacket_flap": 1.2679491924311228
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              160,
+              124
+            ],
+            "r": [
+              205,
+              77
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              104,
+              223
+            ],
+            "r": [
+              170,
+              223
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "357fa1aaad70fee3201073af3467342f3f9b490d862e6b01bb83df4ff1ea11d5",
+          "core_bbox": [
+            85,
+            16,
+            207,
+            224
+          ]
+        }
+      ]
+    },
+    {
+      "skin": "climb_b",
+      "name": "settlement_cheer",
+      "frames": 8,
+      "master_adjacent_rgba_mae": [
+        6.6926116943359375,
+        8.388252258300781,
+        7.810123443603516,
+        2.518402099609375,
+        7.925819396972656,
+        8.394546508789062,
+        5.848613739013672,
+        0.0
+      ],
+      "loop_wrap_mae": null,
+      "frame_reports": [
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "jacket_flap": 0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              98,
+              161
+            ],
+            "r": [
+              161,
+              161
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              100,
+              222
+            ],
+            "r": [
+              152,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            83,
+            15,
+            174,
+            223
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 28.75,
+            "forearm_hand_l": 10.0,
+            "upper_arm_r": -16.25,
+            "forearm_hand_r": -6.25,
+            "jacket_flap": 1.25
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              69,
+              149
+            ],
+            "r": [
+              178,
+              154
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              100,
+              222
+            ],
+            "r": [
+              152,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            59,
+            15,
+            185,
+            223
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 74.75,
+            "forearm_hand_l": 26.0,
+            "upper_arm_r": -42.25,
+            "forearm_hand_r": -16.25,
+            "jacket_flap": 3.25
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              103
+            ],
+            "r": [
+              199,
+              133
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              100,
+              222
+            ],
+            "r": [
+              152,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            40,
+            15,
+            206,
+            223
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 115,
+            "forearm_hand_l": 40,
+            "upper_arm_r": -65,
+            "forearm_hand_r": -25,
+            "jacket_flap": 5
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              70,
+              64
+            ],
+            "r": [
+              206,
+              109
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              100,
+              222
+            ],
+            "r": [
+              152,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            59,
+            15,
+            214,
+            223
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 109.25,
+            "forearm_hand_l": 38.0,
+            "upper_arm_r": -61.75,
+            "forearm_hand_r": -23.75,
+            "jacket_flap": 4.75
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              65,
+              69
+            ],
+            "r": [
+              205,
+              113
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              100,
+              222
+            ],
+            "r": [
+              152,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            55,
+            15,
+            213,
+            223
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 69.0,
+            "forearm_hand_l": 24.0,
+            "upper_arm_r": -39.0,
+            "forearm_hand_r": -15.0,
+            "jacket_flap": 3.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              50,
+              109
+            ],
+            "r": [
+              197,
+              137
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              100,
+              222
+            ],
+            "r": [
+              152,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 1,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            41,
+            15,
+            204,
+            223
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 23.0,
+            "forearm_hand_l": 8.0,
+            "upper_arm_r": -13.0,
+            "forearm_hand_r": -5.0,
+            "jacket_flap": 1.0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              74,
+              152
+            ],
+            "r": [
+              175,
+              156
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              100,
+              222
+            ],
+            "r": [
+              152,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            64,
+            15,
+            182,
+            223
+          ]
+        },
+        {
+          "view": "front",
+          "angles": {
+            "upper_arm_l": 0,
+            "forearm_hand_l": 0,
+            "upper_arm_r": 0,
+            "forearm_hand_r": 0,
+            "jacket_flap": 0
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rigid": true,
+          "hand_contacts": {
+            "l": [
+              98,
+              161
+            ],
+            "r": [
+              161,
+              161
+            ]
+          },
+          "foot_contacts": {
+            "l": [
+              100,
+              222
+            ],
+            "r": [
+              152,
+              222
+            ]
+          },
+          "alpha_only_detached_cloth_pixels_removed": 0,
+          "frozen_head_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+          "core_bbox": [
+            83,
+            15,
+            174,
+            223
+          ]
+        }
+      ]
+    }
+  ],
+  "formal_frames": 100,
+  "alpha": [
+    0,
+    255
+  ],
+  "palette_policy": "shared per skin formal and per skin + size runtime",
+  "source_sha256": {
+    "climb_a": "0956c8dff4d7907ff8f554c264cc5211fc0131474dc82ac51ace13feb845ddce",
+    "climb_b": "03bca26ce30e62318631b82aa1014a835042be69a8f9e009527cc7e6ee01ec73"
+  }
+}

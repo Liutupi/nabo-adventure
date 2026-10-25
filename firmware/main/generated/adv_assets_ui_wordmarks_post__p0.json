@@ -1,27 +1,28 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_wordmarks_post__p0",
   "width": 200,
   "height": 80,
   "palette_rgb565": [
     0,
     8649,
-    44173,
+    38099,
     45672,
-    65433
+    56595,
+    65502
   ],
   "background_rgb888": null,
   "key_interval": 8,
   "keys": [
     0
   ],
-  "data_bytes": 2140,
-  "table_bytes": 336,
+  "data_bytes": 1377,
+  "table_bytes": 338,
   "frame_sha256": [
-    "4ee6973cc5b9db1b12433c2b2800a8ba90c2a662a776c5bd88f0d1c6f5d3981b"
+    "5ed15ad9999a563e12995a3d9f0ce4d3350cf1f0e857e01d589292c0cac82ef3"
   ],
   "source_sha256": [
-    "a80b84411a3349bac30681da916c089aa7f8c2cbe40f3d15bcff081f28bf85e1"
+    "e5fe8155222418c9c13b7dad8673540f65eb78a4bdbbaf2e84d74fb6d814008a"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,8 +36,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\wordmarks\\post.png",
-      "sha256": "a34c9d8b9c1676b147b2a2fc8ea58e9cb2858bf3d6ee5357ade53ddaf1e59f36"
+      "sha256": "72d6025198d510c41a9ffbeec5dd19c943de91d51331adb42b2ed3ba090e5cd0"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/wordmarks/post",
+      "logical_symbol": "adv_assets_ui_wordmarks_post__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

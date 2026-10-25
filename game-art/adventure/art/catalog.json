@@ -1,0 +1,5654 @@
+{
+  "schema": "nabo-adventure-art-catalog-v1",
+  "scope": "eleven art rounds; six new gameplay implementations remain separate",
+  "identity": {
+    "path": "reference/nabo-idle-original.png",
+    "sha256": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243"
+  },
+  "selected_travel_design": "design/round1/v2/01-hiker-design-board.png",
+  "selected_ui_theme": "ui/design/round3/01-passport",
+  "source_manifests_sha256": {
+    "manifest.json": "e62681862e7f1c656c547f5324ac0f1d8a462609afcb19ad4157041f7de2d9af",
+    "ui/ui-manifest.json": "093a972bcd5fd12ab2a12281216e06d861fc63222b3c98551630d6791c95e0d0",
+    "shared-static-manifest.json": "f48bb34259cd5f58eb04cdc94d1e95e130875b111888b85962955b9655a4c5c8",
+    "post-manifest.json": "42464721aae43aa0c7dc2aba7b55b4f6b4966f8ef61b2ecc23bcbce5a764636f",
+    "night-manifest.json": "d9d5b35ec4702fa5fd739b5224d1d5c0b933b72c5d272ade1f9c3a8e6679a0bb",
+    "climb-manifest.json": "d2eecac332e1f45e02bdba1591f5ef1474562cbc11978a7cf2c49b94e8cc3b71",
+    "ski-manifest.json": "ce917671979911b3aa2d645ab99a30bd605677497a4cb5e13649a51ab35c84fb",
+    "sky-manifest.json": "abfbc0ffd9e3e97e61295911ea5c65b3c65f988bcc2af9021247590b07b3ee98",
+    "space-manifest.json": "168d04124ab06e8d7e181a41c51e3eec91ba3e9f7dd5911fa8690a25e96fe789",
+    "boot/selection.json": "97f8766bd5ba3c33aa46d5c31b32b4c3a32bb16bd2a37129ae3ca541321edc94",
+    "boot-v2-manifest.json": "e02927badea6222ca97a014b5f9adaaa0090405524c33b6238df2083fef42c0e",
+    "../audio/boot-welcome.wav": "38b4eb8435d6a7915d17af2083a696acfa2660244be1bf7e65dc78251f0c468b",
+    "ui/palette.json": "3b3dc6d793ac4eff3af34fc01f0d969f7eb6a5c0b5a6b967e66795103949fce0"
+  },
+  "counts": {
+    "resources": 362,
+    "frames_including_static": 804
+  },
+  "resources": [
+    {
+      "id": "climb_a/charge_left",
+      "group": "climb",
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 4
+    },
+    {
+      "id": "climb_a/charge_right",
+      "group": "climb",
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 4
+    },
+    {
+      "id": "climb_a/grip_idle_left",
+      "group": "climb",
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 6
+    },
+    {
+      "id": "climb_a/grip_idle_right",
+      "group": "climb",
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 6
+    },
+    {
+      "id": "climb_a/jump_left",
+      "group": "climb",
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "climb_a/jump_right",
+      "group": "climb",
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "climb_a/settlement_cheer",
+      "group": "climb",
+      "canvas": [
+        72,
+        78
+      ],
+      "anchor": [
+        36,
+        75
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "climb_a/slide_left",
+      "group": "climb",
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "climb_a/slide_right",
+      "group": "climb",
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "climb_a/summit_cheer_left",
+      "group": "climb",
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "climb_a/summit_cheer_right",
+      "group": "climb",
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "climb_a/switch_grab_left",
+      "group": "climb",
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "climb_a/switch_grab_right",
+      "group": "climb",
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "climb_b/grip_idle_left",
+      "group": "climb",
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 6
+    },
+    {
+      "id": "climb_b/grip_idle_right",
+      "group": "climb",
+      "canvas": [
+        60,
+        65
+      ],
+      "anchor": [
+        30,
+        62
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 6
+    },
+    {
+      "id": "climb_b/settlement_cheer",
+      "group": "climb",
+      "canvas": [
+        72,
+        78
+      ],
+      "anchor": [
+        36,
+        75
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "game/climb/props/canteen",
+      "group": "climb",
+      "canvas": [
+        16,
+        24
+      ],
+      "anchor": [
+        8,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/climb/props/falling-rock",
+      "group": "climb",
+      "canvas": [
+        24,
+        24
+      ],
+      "anchor": [
+        12,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/climb/props/hold-fragile",
+      "group": "climb",
+      "canvas": [
+        24,
+        20
+      ],
+      "anchor": [
+        12,
+        9
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/climb/props/hold-ice",
+      "group": "climb",
+      "canvas": [
+        24,
+        20
+      ],
+      "anchor": [
+        12,
+        9
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/climb/props/hold-normal",
+      "group": "climb",
+      "canvas": [
+        24,
+        20
+      ],
+      "anchor": [
+        12,
+        9
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/climb/shared/snow-drift",
+      "group": "climb",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/climb/shared/snow-mound",
+      "group": "climb",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/climb/tiles/cold-0",
+      "group": "climb",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/climb/tiles/cold-1",
+      "group": "climb",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/climb/tiles/grey-0",
+      "group": "climb",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/climb/tiles/grey-1",
+      "group": "climb",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/climb/tiles/snow-0",
+      "group": "climb",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/climb/tiles/snow-1",
+      "group": "climb",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/night/glass_jar",
+      "group": "night",
+      "canvas": [
+        19,
+        37
+      ],
+      "anchor": [
+        9,
+        37
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/night/grass_00",
+      "group": "night",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/night/grass_01",
+      "group": "night",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/night/grass_02",
+      "group": "night",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/night/grass_03",
+      "group": "night",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/night/jar_glow",
+      "group": "night",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/night/tree_shadow_00",
+      "group": "night",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/night/tree_shadow_01",
+      "group": "night",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/night/tree_shadow_02",
+      "group": "night",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/night/tree_shadow_03",
+      "group": "night",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/cab-foreground",
+      "group": "post",
+      "canvas": [
+        96,
+        88
+      ],
+      "anchor": [
+        48,
+        81
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/carriage",
+      "group": "post",
+      "canvas": [
+        64,
+        48
+      ],
+      "anchor": [
+        32,
+        44
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/coal-pile",
+      "group": "post",
+      "canvas": [
+        32,
+        24
+      ],
+      "anchor": [
+        16,
+        23
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/cow",
+      "group": "post",
+      "canvas": [
+        48,
+        36
+      ],
+      "anchor": [
+        24,
+        34
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/envelope-blue",
+      "group": "post",
+      "canvas": [
+        32,
+        24
+      ],
+      "anchor": [
+        16,
+        12
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/envelope-gray",
+      "group": "post",
+      "canvas": [
+        32,
+        24
+      ],
+      "anchor": [
+        16,
+        12
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/envelope-green",
+      "group": "post",
+      "canvas": [
+        32,
+        24
+      ],
+      "anchor": [
+        16,
+        12
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/envelope-orange",
+      "group": "post",
+      "canvas": [
+        32,
+        24
+      ],
+      "anchor": [
+        16,
+        12
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/envelope-red",
+      "group": "post",
+      "canvas": [
+        32,
+        24
+      ],
+      "anchor": [
+        16,
+        12
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/envelope-yellow",
+      "group": "post",
+      "canvas": [
+        32,
+        24
+      ],
+      "anchor": [
+        16,
+        12
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/locomotive-body",
+      "group": "post",
+      "canvas": [
+        96,
+        88
+      ],
+      "anchor": [
+        48,
+        81
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/sheep",
+      "group": "post",
+      "canvas": [
+        40,
+        32
+      ],
+      "anchor": [
+        20,
+        28
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/station-platform-mask",
+      "group": "post",
+      "canvas": [
+        80,
+        56
+      ],
+      "anchor": [
+        40,
+        56
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/wheel-000",
+      "group": "post",
+      "canvas": [
+        96,
+        88
+      ],
+      "anchor": [
+        48,
+        81
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/wheel-001",
+      "group": "post",
+      "canvas": [
+        96,
+        88
+      ],
+      "anchor": [
+        48,
+        81
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/wheel-002",
+      "group": "post",
+      "canvas": [
+        96,
+        88
+      ],
+      "anchor": [
+        48,
+        81
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/props/wheel-003",
+      "group": "post",
+      "canvas": [
+        96,
+        88
+      ],
+      "anchor": [
+        48,
+        81
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/tiles/far-mountains",
+      "group": "post",
+      "canvas": [
+        96,
+        32
+      ],
+      "anchor": [
+        48,
+        32
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/tiles/rails",
+      "group": "post",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        32
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/tiles/sleepers",
+      "group": "post",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        32
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/tiles/track-fork",
+      "group": "post",
+      "canvas": [
+        64,
+        56
+      ],
+      "anchor": [
+        32,
+        36
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/post/tiles/track-straight",
+      "group": "post",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        32
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/ski/props/finish-arch",
+      "group": "ski",
+      "canvas": [
+        96,
+        88
+      ],
+      "anchor": [
+        48,
+        77
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/ski/props/gate-blue",
+      "group": "ski",
+      "canvas": [
+        64,
+        56
+      ],
+      "anchor": [
+        32,
+        52
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/ski/props/gate-red",
+      "group": "ski",
+      "canvas": [
+        64,
+        56
+      ],
+      "anchor": [
+        32,
+        52
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/ski/props/hot-cocoa-cabin",
+      "group": "ski",
+      "canvas": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        58
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/ski/props/pine-large",
+      "group": "ski",
+      "canvas": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/ski/props/pole",
+      "group": "ski",
+      "canvas": [
+        5,
+        24
+      ],
+      "anchor": [
+        2,
+        3
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/ski/props/ski-left",
+      "group": "ski",
+      "canvas": [
+        32,
+        10
+      ],
+      "anchor": [
+        25,
+        3
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/ski/props/ski-right",
+      "group": "ski",
+      "canvas": [
+        32,
+        10
+      ],
+      "anchor": [
+        7,
+        3
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/ski/shared/pine-small",
+      "group": "ski",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/ski/shared/snow-drift",
+      "group": "ski",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/ski/shared/snow-ground",
+      "group": "ski",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/ski/shared/snow-mogul",
+      "group": "ski",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/sky/basket_back",
+      "group": "sky",
+      "canvas": [
+        64,
+        10
+      ],
+      "anchor": [
+        32,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/sky/basket_front",
+      "group": "sky",
+      "canvas": [
+        64,
+        28
+      ],
+      "anchor": [
+        32,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/sky/burner",
+      "group": "sky",
+      "canvas": [
+        16,
+        12
+      ],
+      "anchor": [
+        8,
+        6
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/sky/cloud_00",
+      "group": "sky",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        26
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/sky/cloud_01",
+      "group": "sky",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/sky/cloud_02",
+      "group": "sky",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/sky/cloud_03",
+      "group": "sky",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        23
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/sky/controls_idle",
+      "group": "sky",
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/sky/envelope",
+      "group": "sky",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        94
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/sky/stamp",
+      "group": "sky",
+      "canvas": [
+        16,
+        20
+      ],
+      "anchor": [
+        8,
+        10
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/sky/thundercloud",
+      "group": "sky",
+      "canvas": [
+        48,
+        32
+      ],
+      "anchor": [
+        24,
+        29
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space/lander/back",
+      "group": "space",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        92
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space/lander/front",
+      "group": "space",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        92
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space/props/asteroid",
+      "group": "space",
+      "canvas": [
+        32,
+        28
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space/props/flag",
+      "group": "space",
+      "canvas": [
+        16,
+        28
+      ],
+      "anchor": [
+        2,
+        28
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space/props/fuel-can",
+      "group": "space",
+      "canvas": [
+        16,
+        24
+      ],
+      "anchor": [
+        8,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space/props/landing-pad",
+      "group": "space",
+      "canvas": [
+        96,
+        24
+      ],
+      "anchor": [
+        48,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space/tiles/lunar-0",
+      "group": "space",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space/tiles/lunar-1",
+      "group": "space",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space/tiles/lunar-2",
+      "group": "space",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "night_a/catch",
+      "group": "night",
+      "canvas": [
+        54,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "night_a/cheer",
+      "group": "night",
+      "canvas": [
+        56,
+        72
+      ],
+      "anchor": [
+        23,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "night_a/lift_jar",
+      "group": "night",
+      "canvas": [
+        54,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "night_a/move_left",
+      "group": "night",
+      "canvas": [
+        54,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 4
+    },
+    {
+      "id": "night_a/move_right",
+      "group": "night",
+      "canvas": [
+        54,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 4
+    },
+    {
+      "id": "night_a/seat_idle",
+      "group": "night",
+      "canvas": [
+        54,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 8
+    },
+    {
+      "id": "night_a/yawn",
+      "group": "night",
+      "canvas": [
+        54,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "night_b/catch",
+      "group": "night",
+      "canvas": [
+        53,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "night_b/cheer",
+      "group": "night",
+      "canvas": [
+        52,
+        72
+      ],
+      "anchor": [
+        21,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "night_b/lift_jar",
+      "group": "night",
+      "canvas": [
+        53,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "night_b/move_left",
+      "group": "night",
+      "canvas": [
+        53,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 4
+    },
+    {
+      "id": "night_b/move_right",
+      "group": "night",
+      "canvas": [
+        53,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 4
+    },
+    {
+      "id": "night_b/seat_idle",
+      "group": "night",
+      "canvas": [
+        53,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 8
+    },
+    {
+      "id": "night_b/yawn",
+      "group": "night",
+      "canvas": [
+        53,
+        56
+      ],
+      "anchor": [
+        20,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "night_shared/moth",
+      "group": "night",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        13
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 4
+    },
+    {
+      "id": "post_a/delivered",
+      "group": "post",
+      "canvas": [
+        36,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "post_a/hit",
+      "group": "post",
+      "canvas": [
+        36,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "post_a/idle",
+      "group": "post",
+      "canvas": [
+        36,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 6
+    },
+    {
+      "id": "post_a/settlement_cheer",
+      "group": "post",
+      "canvas": [
+        49,
+        72
+      ],
+      "anchor": [
+        27,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "post_a/throw",
+      "group": "post",
+      "canvas": [
+        36,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "post_a/whistle",
+      "group": "post",
+      "canvas": [
+        36,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "post_b/delivered",
+      "group": "post",
+      "canvas": [
+        36,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "post_b/idle",
+      "group": "post",
+      "canvas": [
+        36,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 6
+    },
+    {
+      "id": "post_props/wheel-cycle",
+      "group": "post",
+      "canvas": [
+        96,
+        88
+      ],
+      "anchor": [
+        48,
+        81
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 4
+    },
+    {
+      "id": "post_props/whistle-cord",
+      "group": "post",
+      "canvas": [
+        96,
+        88
+      ],
+      "anchor": [
+        48,
+        81
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "ski_a/fall",
+      "group": "ski",
+      "canvas": [
+        63,
+        68
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "ski_a/finish",
+      "group": "ski",
+      "canvas": [
+        63,
+        68
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "ski_a/jump",
+      "group": "ski",
+      "canvas": [
+        63,
+        68
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "ski_a/lean_left",
+      "group": "ski",
+      "canvas": [
+        63,
+        68
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 4
+    },
+    {
+      "id": "ski_a/lean_right",
+      "group": "ski",
+      "canvas": [
+        63,
+        68
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 4
+    },
+    {
+      "id": "ski_a/settlement_cheer",
+      "group": "ski",
+      "canvas": [
+        45,
+        72
+      ],
+      "anchor": [
+        30,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "ski_a/straight",
+      "group": "ski",
+      "canvas": [
+        63,
+        68
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 6
+    },
+    {
+      "id": "ski_b/settlement_cheer",
+      "group": "ski",
+      "canvas": [
+        45,
+        72
+      ],
+      "anchor": [
+        30,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "ski_b/straight",
+      "group": "ski",
+      "canvas": [
+        63,
+        68
+      ],
+      "anchor": [
+        32,
+        60
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 6
+    },
+    {
+      "id": "sky_a/heat",
+      "group": "sky",
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "sky_a/hit",
+      "group": "sky",
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "sky_a/idle",
+      "group": "sky",
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 6
+    },
+    {
+      "id": "sky_a/receive_stamp",
+      "group": "sky",
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 4
+    },
+    {
+      "id": "sky_a/settlement_cheer",
+      "group": "sky",
+      "canvas": [
+        51,
+        72
+      ],
+      "anchor": [
+        27,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "sky_a/vent",
+      "group": "sky",
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "sky_b/idle",
+      "group": "sky",
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 6
+    },
+    {
+      "id": "sky_b/settlement_cheer",
+      "group": "sky",
+      "canvas": [
+        51,
+        72
+      ],
+      "anchor": [
+        27,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "sky_props/bird",
+      "group": "sky",
+      "canvas": [
+        24,
+        20
+      ],
+      "anchor": [
+        12,
+        12
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 4
+    },
+    {
+      "id": "sky_props/heat_controls",
+      "group": "sky",
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "sky_props/vent_controls",
+      "group": "sky",
+      "canvas": [
+        43,
+        40
+      ],
+      "anchor": [
+        22,
+        40
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "space_a/cabin_idle",
+      "group": "space",
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 6
+    },
+    {
+      "id": "space_a/hard_land",
+      "group": "space",
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "space_a/jet",
+      "group": "space",
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 4
+    },
+    {
+      "id": "space_a/land",
+      "group": "space",
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "space_a/plant_flag",
+      "group": "space",
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "space_a/settlement_cheer",
+      "group": "space",
+      "canvas": [
+        73,
+        73
+      ],
+      "anchor": [
+        37,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "space_b/cabin_idle",
+      "group": "space",
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 6
+    },
+    {
+      "id": "space_b/jet",
+      "group": "space",
+      "canvas": [
+        57,
+        57
+      ],
+      "anchor": [
+        29,
+        56
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 4
+    },
+    {
+      "id": "space_b/settlement_cheer",
+      "group": "space",
+      "canvas": [
+        73,
+        73
+      ],
+      "anchor": [
+        37,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "static/icon/fuel",
+      "group": "static",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        8
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/icon/hot-air",
+      "group": "static",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        8
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/icon/oxygen",
+      "group": "static",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        8
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/icon/spirit",
+      "group": "static",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        8
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/icon/stamina",
+      "group": "static",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        8
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/icon/steam",
+      "group": "static",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        8
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/icon/warmth",
+      "group": "static",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        8,
+        8
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/landmark/climb",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/landmark/dive",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/landmark/jump",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/landmark/kiosk",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/landmark/night",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/landmark/post",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/landmark/ski",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/landmark/sky",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/landmark/space",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/stamp/climb",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/stamp/dive",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/stamp/jump",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/stamp/kiosk",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/stamp/night",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/stamp/post",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/stamp/ski",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/stamp/sky",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/stamp/space",
+      "group": "static",
+      "canvas": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/deep-sea/bubble-chain",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/deep-sea/coral-fan",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/deep-sea/current-wave",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/deep-sea/sea-rock",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/deep-sea/seaweed",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/deep-sea/shell",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/harbor/buoy",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/harbor/dock-planks",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/harbor/mooring-post",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/harbor/rope-coil",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/harbor/wave-crest",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/harbor/wave-line",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/mountain/ice-crystals",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/mountain/ridge",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/mountain/rock-face",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/mountain/snow-drift",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/mountain/snowcap-rock",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/mountain/young-pine",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/night-forest/branch",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/night-forest/fern",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/night-forest/fireflies",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/night-forest/mushrooms",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/night-forest/shrub",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/night-forest/tree-canopy",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/rail/mail-sign",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/rail/rail-crossing",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/rail/rail-straight",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/rail/telegraph-pole",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/rail/trackside-grass",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/rail/wheat",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/ski/gate-poles",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/ski/small-spruce",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/ski/snow-mound",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/ski/snow-pine",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/ski/snow-track",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/sky/bird-silhouette",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/sky/cloud-chain",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/sky/cloud-large",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/sky/cloud-small",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/sky/feather",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/sky/wind-ribbon",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/space/asteroid",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/space/comet",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/space/crater",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/space/orbit-dots",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/space/ring-planet",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/space/star-field",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/town/bunting",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/town/cobble-path",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/town/flowerbed",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/town/red-roof",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/town/street-lamp",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "static/tiles/town/window-box",
+      "group": "static",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        31
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "travel/cheer",
+      "group": "travel",
+      "canvas": [
+        43,
+        72
+      ],
+      "anchor": [
+        28,
+        72
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 8
+    },
+    {
+      "id": "travel/idle",
+      "group": "travel",
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 8
+    },
+    {
+      "id": "travel/sad",
+      "group": "travel",
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "travel/turn_front_from_left",
+      "group": "travel",
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "travel/turn_front_from_right",
+      "group": "travel",
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "travel/turn_left",
+      "group": "travel",
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "travel/turn_right",
+      "group": "travel",
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 6
+    },
+    {
+      "id": "travel/walk_left",
+      "group": "travel",
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 8
+    },
+    {
+      "id": "travel/walk_right",
+      "group": "travel",
+      "canvas": [
+        22,
+        48
+      ],
+      "anchor": [
+        11,
+        48
+      ],
+      "fps": 12,
+      "loop": true,
+      "frame_count": 8
+    },
+    {
+      "id": "travel/welcome_v2",
+      "group": "travel",
+      "canvas": [
+        74,
+        121
+      ],
+      "anchor": [
+        29,
+        121
+      ],
+      "fps": 12,
+      "loop": false,
+      "frame_count": 32
+    },
+    {
+      "id": "ui/bars/bottom",
+      "group": "ui",
+      "canvas": [
+        240,
+        30
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/bars/top",
+      "group": "ui",
+      "canvas": [
+        240,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/current/bottom",
+      "group": "ui",
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/current/bottom-left",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/current/bottom-right",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/current/center",
+      "group": "ui",
+      "canvas": [
+        8,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/current/left",
+      "group": "ui",
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/current/right",
+      "group": "ui",
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/current/top",
+      "group": "ui",
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/current/top-left",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/current/top-right",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/normal/bottom",
+      "group": "ui",
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/normal/bottom-left",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/normal/bottom-right",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/normal/center",
+      "group": "ui",
+      "canvas": [
+        8,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/normal/left",
+      "group": "ui",
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/normal/right",
+      "group": "ui",
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/normal/top",
+      "group": "ui",
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/normal/top-left",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/info/normal/top-right",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/disabled/bottom",
+      "group": "ui",
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/disabled/bottom-left",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/disabled/bottom-right",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/disabled/center",
+      "group": "ui",
+      "canvas": [
+        8,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/disabled/left",
+      "group": "ui",
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/disabled/right",
+      "group": "ui",
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/disabled/top",
+      "group": "ui",
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/disabled/top-left",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/disabled/top-right",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/normal/bottom",
+      "group": "ui",
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/normal/bottom-left",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/normal/bottom-right",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/normal/center",
+      "group": "ui",
+      "canvas": [
+        8,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/normal/left",
+      "group": "ui",
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/normal/right",
+      "group": "ui",
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/normal/top",
+      "group": "ui",
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/normal/top-left",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/normal/top-right",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/selected/bottom",
+      "group": "ui",
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/selected/bottom-left",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/selected/bottom-right",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/selected/center",
+      "group": "ui",
+      "canvas": [
+        8,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/selected/left",
+      "group": "ui",
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/selected/right",
+      "group": "ui",
+      "canvas": [
+        12,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/selected/top",
+      "group": "ui",
+      "canvas": [
+        8,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/selected/top-left",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/menu/selected/top-right",
+      "group": "ui",
+      "canvas": [
+        12,
+        12
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/popup/normal/bottom",
+      "group": "ui",
+      "canvas": [
+        8,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/popup/normal/bottom-left",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/popup/normal/bottom-right",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/popup/normal/center",
+      "group": "ui",
+      "canvas": [
+        8,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/popup/normal/left",
+      "group": "ui",
+      "canvas": [
+        16,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/popup/normal/right",
+      "group": "ui",
+      "canvas": [
+        16,
+        8
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/popup/normal/top",
+      "group": "ui",
+      "canvas": [
+        8,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/popup/normal/top-left",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cards/popup/normal/top-right",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cover-background-bottom",
+      "group": "ui",
+      "canvas": [
+        240,
+        64
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/cover-background-top",
+      "group": "ui",
+      "canvas": [
+        240,
+        256
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/labels/boot-caption",
+      "group": "ui",
+      "canvas": [
+        220,
+        24
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/labels/new-record",
+      "group": "ui",
+      "canvas": [
+        72,
+        24
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/labels/placeholder",
+      "group": "ui",
+      "canvas": [
+        88,
+        24
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/labels/press-start",
+      "group": "ui",
+      "canvas": [
+        208,
+        34
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/labels/test-no-record",
+      "group": "ui",
+      "canvas": [
+        96,
+        24
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/map/footprints-backward",
+      "group": "ui",
+      "canvas": [
+        10,
+        10
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/map/footprints-forward",
+      "group": "ui",
+      "canvas": [
+        10,
+        10
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/map/lock",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/map/stamp-bronze",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/map/stamp-empty",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/map/stamp-gold",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/map/stamp-silver",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/map/station-current",
+      "group": "ui",
+      "canvas": [
+        48,
+        40
+      ],
+      "anchor": [
+        24,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/map/station-locked",
+      "group": "ui",
+      "canvas": [
+        48,
+        40
+      ],
+      "anchor": [
+        24,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/map/station-unlocked",
+      "group": "ui",
+      "canvas": [
+        48,
+        40
+      ],
+      "anchor": [
+        24,
+        24
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/map/temporary-position-marker",
+      "group": "ui",
+      "canvas": [
+        32,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/20/0",
+      "group": "ui",
+      "canvas": [
+        23,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/20/1",
+      "group": "ui",
+      "canvas": [
+        16,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/20/2",
+      "group": "ui",
+      "canvas": [
+        21,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/20/3",
+      "group": "ui",
+      "canvas": [
+        20,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/20/4",
+      "group": "ui",
+      "canvas": [
+        23,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/20/5",
+      "group": "ui",
+      "canvas": [
+        21,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/20/6",
+      "group": "ui",
+      "canvas": [
+        22,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/20/7",
+      "group": "ui",
+      "canvas": [
+        21,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/20/8",
+      "group": "ui",
+      "canvas": [
+        22,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/20/9",
+      "group": "ui",
+      "canvas": [
+        22,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/20/m",
+      "group": "ui",
+      "canvas": [
+        33,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/20/plus",
+      "group": "ui",
+      "canvas": [
+        21,
+        20
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/36/0",
+      "group": "ui",
+      "canvas": [
+        37,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/36/1",
+      "group": "ui",
+      "canvas": [
+        23,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/36/2",
+      "group": "ui",
+      "canvas": [
+        32,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/36/3",
+      "group": "ui",
+      "canvas": [
+        33,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/36/4",
+      "group": "ui",
+      "canvas": [
+        37,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/36/5",
+      "group": "ui",
+      "canvas": [
+        32,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/36/6",
+      "group": "ui",
+      "canvas": [
+        35,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/36/7",
+      "group": "ui",
+      "canvas": [
+        34,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/36/8",
+      "group": "ui",
+      "canvas": [
+        36,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/36/9",
+      "group": "ui",
+      "canvas": [
+        34,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/36/m",
+      "group": "ui",
+      "canvas": [
+        54,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/numbers/36/plus",
+      "group": "ui",
+      "canvas": [
+        32,
+        36
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/passport/grid-current",
+      "group": "ui",
+      "canvas": [
+        104,
+        52
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/passport/grid-normal",
+      "group": "ui",
+      "canvas": [
+        104,
+        52
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/passport/header",
+      "group": "ui",
+      "canvas": [
+        216,
+        24
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/passport/locked-mask",
+      "group": "ui",
+      "canvas": [
+        104,
+        52
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/passport/page-tile",
+      "group": "ui",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/resources/bar-frame",
+      "group": "ui",
+      "canvas": [
+        128,
+        10
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/resources/fill",
+      "group": "ui",
+      "canvas": [
+        8,
+        6
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/resources/fill-left-cap",
+      "group": "ui",
+      "canvas": [
+        3,
+        10
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/resources/fill-right-cap",
+      "group": "ui",
+      "canvas": [
+        3,
+        10
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/resources/icons/fuel",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/resources/icons/hot-air",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/resources/icons/oxygen",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/resources/icons/spirit",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/resources/icons/stamina",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/resources/icons/steam",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/resources/icons/temperature",
+      "group": "ui",
+      "canvas": [
+        16,
+        16
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/resources/low-fill",
+      "group": "ui",
+      "canvas": [
+        8,
+        6
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/resources/low-fill-left-cap",
+      "group": "ui",
+      "canvas": [
+        3,
+        10
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/resources/low-fill-right-cap",
+      "group": "ui",
+      "canvas": [
+        3,
+        10
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/stamps/ink-pad",
+      "group": "ui",
+      "canvas": [
+        64,
+        64
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/wordmarks/climb",
+      "group": "ui",
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/wordmarks/collection",
+      "group": "ui",
+      "canvas": [
+        220,
+        90
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/wordmarks/dive",
+      "group": "ui",
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/wordmarks/jump",
+      "group": "ui",
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/wordmarks/night",
+      "group": "ui",
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/wordmarks/post",
+      "group": "ui",
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/wordmarks/ski",
+      "group": "ui",
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/wordmarks/sky",
+      "group": "ui",
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "ui/wordmarks/space",
+      "group": "ui",
+      "canvas": [
+        200,
+        80
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    }
+  ],
+  "production_c_evidence": {
+    "common": {
+      "groups": {
+        "static": {
+          "rle_bytes": 49523,
+          "table_bytes": 14480,
+          "descriptor_catalog_estimate_c3": 6899,
+          "resources": 78,
+          "pieces": 78,
+          "frames": 78,
+          "physical_sprites": 72,
+          "physical_frames": 72,
+          "interned_pieces": 6,
+          "static_bytes_estimate_c3": 70902
+        },
+        "travel": {
+          "rle_bytes": 136752,
+          "table_bytes": 29974,
+          "descriptor_catalog_estimate_c3": 821,
+          "resources": 10,
+          "pieces": 10,
+          "frames": 94,
+          "physical_sprites": 10,
+          "physical_frames": 94,
+          "interned_pieces": 0,
+          "static_bytes_estimate_c3": 167547
+        },
+        "ui": {
+          "rle_bytes": 34111,
+          "table_bytes": 12462,
+          "descriptor_catalog_estimate_c3": 10671,
+          "resources": 127,
+          "pieces": 127,
+          "frames": 127,
+          "physical_sprites": 92,
+          "physical_frames": 92,
+          "interned_pieces": 35,
+          "static_bytes_estimate_c3": 57244
+        }
+      },
+      "python_verified_frames": 299,
+      "production_c": {
+        "verified_frames": 299,
+        "verified_sprite_rows": 13780,
+        "verified_ninepatch_rows": 912,
+        "comparison": "generated C and production decoders vs indexed source"
+      }
+    },
+    "post": {
+      "groups": {
+        "post": {
+          "rle_bytes": 47971,
+          "table_bytes": 18460,
+          "descriptor_catalog_estimate_c3": 2833,
+          "resources": 32,
+          "pieces": 32,
+          "frames": 82,
+          "physical_sprites": 32,
+          "physical_frames": 82,
+          "interned_pieces": 0,
+          "static_bytes_estimate_c3": 69264
+        }
+      },
+      "python_verified_frames": 82,
+      "production_c": {
+        "verified_frames": 82,
+        "verified_sprite_rows": 4188,
+        "verified_ninepatch_rows": 0,
+        "comparison": "generated C and production decoders vs indexed source"
+      }
+    },
+    "night": {
+      "groups": {
+        "night": {
+          "rle_bytes": 136460,
+          "table_bytes": 23858,
+          "descriptor_catalog_estimate_c3": 2069,
+          "resources": 25,
+          "pieces": 25,
+          "frames": 98,
+          "physical_sprites": 25,
+          "physical_frames": 98,
+          "interned_pieces": 0,
+          "static_bytes_estimate_c3": 162387
+        }
+      },
+      "python_verified_frames": 98,
+      "production_c": {
+        "verified_frames": 98,
+        "verified_sprite_rows": 5349,
+        "verified_ninepatch_rows": 0,
+        "comparison": "generated C and production decoders vs indexed source"
+      }
+    },
+    "climb": {
+      "groups": {
+        "climb": {
+          "rle_bytes": 77013,
+          "table_bytes": 31154,
+          "descriptor_catalog_estimate_c3": 2563,
+          "resources": 29,
+          "pieces": 29,
+          "frames": 113,
+          "physical_sprites": 29,
+          "physical_frames": 113,
+          "interned_pieces": 0,
+          "static_bytes_estimate_c3": 110730
+        }
+      },
+      "python_verified_frames": 113,
+      "production_c": {
+        "verified_frames": 113,
+        "verified_sprite_rows": 7072,
+        "verified_ninepatch_rows": 0,
+        "comparison": "generated C and production decoders vs indexed source"
+      }
+    },
+    "ski": {
+      "groups": {
+        "ski": {
+          "rle_bytes": 77801,
+          "table_bytes": 19168,
+          "descriptor_catalog_estimate_c3": 1799,
+          "resources": 21,
+          "pieces": 21,
+          "frames": 68,
+          "physical_sprites": 21,
+          "physical_frames": 68,
+          "interned_pieces": 0,
+          "static_bytes_estimate_c3": 98768
+        }
+      },
+      "python_verified_frames": 68,
+      "production_c": {
+        "verified_frames": 68,
+        "verified_sprite_rows": 4372,
+        "verified_ninepatch_rows": 0,
+        "comparison": "generated C and production decoders vs indexed source"
+      }
+    },
+    "sky": {
+      "groups": {
+        "sky": {
+          "rle_bytes": 35152,
+          "table_bytes": 15352,
+          "descriptor_catalog_estimate_c3": 1800,
+          "resources": 22,
+          "pieces": 22,
+          "frames": 77,
+          "physical_sprites": 22,
+          "physical_frames": 77,
+          "interned_pieces": 0,
+          "static_bytes_estimate_c3": 52304
+        }
+      },
+      "python_verified_frames": 77,
+      "production_c": {
+        "verified_frames": 77,
+        "verified_sprite_rows": 3438,
+        "verified_ninepatch_rows": 0,
+        "comparison": "generated C and production decoders vs indexed source"
+      }
+    },
+    "space": {
+      "groups": {
+        "space": {
+          "rle_bytes": 46903,
+          "table_bytes": 17470,
+          "descriptor_catalog_estimate_c3": 1539,
+          "resources": 18,
+          "pieces": 18,
+          "frames": 67,
+          "physical_sprites": 18,
+          "physical_frames": 67,
+          "interned_pieces": 0,
+          "static_bytes_estimate_c3": 65912
+        }
+      },
+      "python_verified_frames": 67,
+      "production_c": {
+        "verified_frames": 67,
+        "verified_sprite_rows": 3954,
+        "verified_ninepatch_rows": 0,
+        "comparison": "generated C and production decoders vs indexed source"
+      }
+    }
+  },
+  "device": {
+    "common_candidate_sha256": "557607a2f468fed67f5e52adae2f008dd7b44fd5b9d52d94d16c72bb0fa97604",
+    "new_game_art_embedded_in_this_candidate": false,
+    "reason": "Independent game art packages await formal game integration; physical factory is 2,031,616 bytes."
+  },
+  "acceptance": "Source integrity and actual C decoder checks; visual/device checks are recorded separately in ART_PROGRESS and VALIDATION."
+}

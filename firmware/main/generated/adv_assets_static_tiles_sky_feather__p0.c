@@ -8,7 +8,7 @@ static const uint16_t adv_assets_static_tiles_sky_feather__p0_keys[] = {
 };
 static const uint32_t adv_assets_static_tiles_sky_feather__p0_rows[] = {
     0, 2, 4, 6, 12, 22, 32, 42, 52, 66, 80, 94, 108, 122, 136, 150, 164, 180, 196, 210,
-    224, 238, 254, 270, 284, 298, 312, 322, 328, 334, 340, 342, 344,
+    224, 238, 254, 270, 284, 297, 310, 320, 326, 332, 338, 340, 342,
 };
 static const uint8_t adv_assets_static_tiles_sky_feather__p0_data[] = {
     32, 0, 32, 0, 32, 0, 24, 0, 2, 1, 6, 0, 20, 0, 4, 1, 1, 4, 1, 1,
@@ -25,12 +25,12 @@ static const uint8_t adv_assets_static_tiles_sky_feather__p0_data[] = {
     1, 1, 10, 0, 8, 0, 1, 1, 4, 4, 1, 3, 7, 4, 1, 1, 10, 0, 8, 0,
     1, 1, 3, 4, 1, 3, 2, 4, 4, 2, 2, 1, 11, 0, 8, 0, 1, 1, 2, 4,
     1, 3, 3, 2, 3, 4, 1, 1, 13, 0, 7, 0, 1, 1, 2, 4, 1, 3, 5, 4,
-    2, 1, 14, 0, 7, 0, 1, 1, 1, 4, 1, 3, 5, 4, 1, 1, 16, 0, 7, 0,
-    1, 1, 1, 3, 1, 1, 3, 4, 2, 1, 17, 0, 8, 0, 1, 3, 1, 0, 3, 1,
-    19, 0, 7, 0, 1, 3, 24, 0, 6, 0, 1, 3, 25, 0, 5, 0, 1, 3, 26, 0,
-    32, 0, 32, 0,
+    2, 1, 14, 0, 7, 0, 0, 3, 1, 4, 3, 5, 4, 1, 1, 16, 0, 7, 0, 0,
+    3, 1, 3, 1, 3, 4, 2, 1, 17, 0, 8, 0, 1, 3, 1, 0, 3, 1, 19, 0,
+    7, 0, 1, 3, 24, 0, 6, 0, 1, 3, 25, 0, 5, 0, 1, 3, 26, 0, 32, 0,
+    32, 0,
 };
 const adv_sprite_t adv_assets_static_tiles_sky_feather__p0 = {
-    32, 32, 1, 5, 33, 344,
+    32, 32, 1, 5, 33, 342,
     adv_assets_static_tiles_sky_feather__p0_palette, adv_assets_static_tiles_sky_feather__p0_keys, adv_assets_static_tiles_sky_feather__p0_rows, adv_assets_static_tiles_sky_feather__p0_data
 };

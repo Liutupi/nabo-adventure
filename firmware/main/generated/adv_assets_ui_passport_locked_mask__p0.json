@@ -1,26 +1,25 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_passport_locked_mask__p0",
   "width": 104,
   "height": 52,
   "palette_rgb565": [
     0,
-    8649,
-    29514,
-    56884
+    25487,
+    65502
   ],
   "background_rgb888": null,
   "key_interval": 8,
   "keys": [
     0
   ],
-  "data_bytes": 660,
-  "table_bytes": 222,
+  "data_bytes": 200,
+  "table_bytes": 220,
   "frame_sha256": [
-    "7784232cbf0ca1f954981887fa1169c1736415664a809623055ce0da1b3cf3d5"
+    "d4f99604d2a6c1106568fa203c004ca5a6111ccc682173733f826e36791bedf8"
   ],
   "source_sha256": [
-    "feee77c769a1073c00833391039adaedc51243fb51319a16e3ee43191b543430"
+    "c4d2ced2471f8d881beea04f60cef4a04436a7ee460d2c928b72386de8232ccc"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,8 +33,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\passport\\locked-mask.png",
-      "sha256": "7ee8724352e4959d77bfc4aa775a6f8aca22bd9d4e734bccd9bc944249d719bb"
+      "sha256": "d066f67fd07dce0d466507993d8a8ff7fbd996be26a1679207b7186df9986146"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/passport/locked-mask",
+      "logical_symbol": "adv_assets_ui_passport_locked_mask__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

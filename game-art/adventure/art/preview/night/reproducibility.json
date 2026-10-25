@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "files_compared": 503,
+  "changed": [],
+  "method": "same environment two complete deterministic source-pixel builds; every owned output SHA compared",
+  "source_manifests_sha256": "d9d5b35ec4702fa5fd739b5224d1d5c0b933b72c5d272ade1f9c3a8e6679a0bb",
+  "tools": "bundled Python 3.12.14/Pillow 12.3/numpy; no generative frame calls",
+  "limits": "same-machine repeatability; not a cross-Pillow-version guarantee"
+}

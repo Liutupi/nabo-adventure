@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_landmark_sky__p0",
   "width": 96,
   "height": 96,
@@ -41,5 +41,15 @@
       "sha256": "835e69ed79dc5212399a229b2a398dd627f726f545e9c28cefcd4778961943f0"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/landmark/sky",
+      "logical_symbol": "adv_assets_static_landmark_sky__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

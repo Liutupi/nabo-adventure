@@ -1,12 +1,11 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_map_stamp_empty__p0",
   "width": 16,
   "height": 16,
   "palette_rgb565": [
     0,
-    44173,
-    65433
+    25487
   ],
   "background_rgb888": null,
   "key_interval": 8,
@@ -14,12 +13,12 @@
     0
   ],
   "data_bytes": 128,
-  "table_bytes": 76,
+  "table_bytes": 74,
   "frame_sha256": [
-    "953d66ce96aa6de8b4b2f8cc9b0637d6e8faaafaaa7e14e476d8589c48a424be"
+    "e7b86cfc1c1b93a7dd7b3a02f692e7b681a0cea8d82294faa3bea66c5ca9ae03"
   ],
   "source_sha256": [
-    "6bb8cd30ec928a7b78c83e4e1fbe531ed36f03135729b046290ad4727625869d"
+    "466b3b3ec1d66254658466ec635052b3c4ed55c06bfe31594eed347b4404a70b"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,8 +32,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\stamp-empty.png",
-      "sha256": "8258c407324e620ab7f6e84f718d71e0441625240b9f9de2272b092f4b663774"
+      "sha256": "cab2a874fc2c9c7ee63b6e5d41eff652a2021c8d529e42f1fc1f26e3dd0ac39a"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/map/stamp-empty",
+      "logical_symbol": "adv_assets_ui_map_stamp_empty__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

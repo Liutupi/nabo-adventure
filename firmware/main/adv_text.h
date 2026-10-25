@@ -36,6 +36,8 @@ typedef enum { NT_ALIGN_LEFT, NT_ALIGN_CENTER, NT_ALIGN_RIGHT } nt_align_t;
 bool nt_text_layout(nt_glyph_pool_t *pool, nt_text_t *t, const lv_font_t *font, const char *utf8, int x, int y,
                     nt_align_t align);
 int nt_text_width(const lv_font_t *font, const char *utf8);
+// Tight visible ascent from the actual generated glyph metrics, not point size.
+int nt_text_ascent(const lv_font_t *font, const char *utf8);
 // Blends row y, columns [x0, x1) of the text into native RGB565 pixels.
 void nt_text_row(const nt_glyph_pool_t *pool, const nt_text_t *t, int y, int x0, int x1, uint16_t *row,
                  uint16_t color);

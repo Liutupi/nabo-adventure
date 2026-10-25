@@ -77,6 +77,20 @@ int nt_text_width(const lv_font_t* font, const char* s) {
     return w;
 }
 
+int nt_text_ascent(const lv_font_t* font, const char* s) {
+    if (!font || !font->dsc || !s) return 0;
+    const lv_font_fmt_txt_dsc_t* f = (const lv_font_fmt_txt_dsc_t*)font->dsc;
+    int ascent = 0;
+    while (*s) {
+        uint32_t gid = glyph_id(f, next_utf8(&s));
+        if (!gid) continue;
+        const lv_font_fmt_txt_glyph_dsc_t* glyph = &f->glyph_dsc[gid];
+        int top = glyph->box_h + glyph->ofs_y;
+        if (top > ascent) ascent = top;
+    }
+    return ascent;
+}
+
 bool nt_text_layout(nt_glyph_pool_t* pool, nt_text_t* t, const lv_font_t* font, const char* s, int x, int y,
                     nt_align_t align) {
     const lv_font_fmt_txt_dsc_t* f = (const lv_font_fmt_txt_dsc_t*)font->dsc;

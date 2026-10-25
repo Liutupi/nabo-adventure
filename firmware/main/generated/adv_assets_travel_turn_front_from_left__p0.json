@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_travel_turn_front_from_left__p0",
   "width": 22,
   "height": 48,
@@ -79,7 +79,7 @@
     0,
     0
   ],
-  "data_bytes": 6456,
+  "data_bytes": 4860,
   "table_bytes": 1316,
   "frame_sha256": [
     "279592af18e570ee51a6de6b28306c74c07d0fb2fc88eec24e1dc013c2409de8",
@@ -132,5 +132,15 @@
       "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "travel/turn_front_from_left",
+      "logical_symbol": "adv_assets_travel_turn_front_from_left__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

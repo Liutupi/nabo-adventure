@@ -1,25 +1,24 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_passport_page_tile__p0",
   "width": 32,
   "height": 32,
   "palette_rgb565": [
     0,
-    56884,
-    65433
+    65502
   ],
   "background_rgb888": null,
   "key_interval": 8,
   "keys": [
     0
   ],
-  "data_bytes": 112,
-  "table_bytes": 140,
+  "data_bytes": 64,
+  "table_bytes": 138,
   "frame_sha256": [
-    "ff9e5fc9c2dc5d4d692d4b25fd26381eb7639824752daedd64b6f10011719d87"
+    "5a648d8015900d89664e00e125df179636301a2d8fa191c1aa2bd9358ea53a69"
   ],
   "source_sha256": [
-    "24ba60e99d2b86b90d890f21629662638c3052be47513fd3db183fd5cf634702"
+    "e2cbc14c43ab2023f677b20ff05316b670f78548b5269c8487426c1a1bf12a3a"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,8 +32,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\passport\\page-tile.png",
-      "sha256": "deb54c751f18f878ed77d36748e39362cf0a41565a76a9b49cbad23dc608d3a9"
+      "sha256": "d9b5aa36ace1be8c300661d6ce47618e78b63d15334062eda7b74f8ba8ff7e9f"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/passport/page-tile",
+      "logical_symbol": "adv_assets_ui_passport_page_tile__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

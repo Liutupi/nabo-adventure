@@ -1,36 +1,30 @@
-# 复古护照手账 UI 素材包（第 5 轮）
+# 生产 UI · typography v2
 
-用户已选第 3 轮方向①。这里提供与该方向一致的原生像素部件、字标和分层封面；不修改固件界面，不代表新镜像或真机已经验收。`design/round3/` 原候选保留。
+这是在已选复古护照方向上的第二版生产素材。上一版完整保存在899d275检查点；`design/round3/`与`design/refinement-v2/`原审阅稿保留。本次只改UI图像及其生成工具，未改手写固件、共享人物/游戏包或设备。尚待主任务真实C打包与渲染接入，不把Pillow组合图称为设备截图。
 
-所有部件共用 `palette.json` 的 15 个可见颜色，透明索引另占一位；不包含人物独立调色板。中文用已验证的思源黑体 Medium，SHA256 与 `firmware/tools/collection-fonts.json` 一致；界面字号 12/16/18 px。数字图是用同一字体直接在最终像素画布栅格化的独立 20/36 px 高资产，没有把大图缩成小字。
+先看`preview/core-3-1x.png`（封面、真实纵向站点布局、护照）和`preview/all-13-1x.png`；13张单页均240×320，已逐张实际检查。另有`preview/nine-slice/contact.png`，展示6种状态各48×32/240×120两种尺寸，四角原像素与内部无缝平铺检查通过。
 
-`ui-manifest.json` 是本 UI 包的独立清单，不是全项目总清单。每项含 `name/path/size/palette`、透明标记、色数限制、SHA256、是否实际打包。`pack:false` 的大图/九宫格母版仅供编辑与审阅，不应重复装入固件。
+保留奶白纸色、海军蓝和邮戳红，去掉多重土黄细框、格子底纹和无意义编号。选中菜单/当前信息卡/当前护照格为海军蓝实底+4px红侧条；所有动态标题、分数、提示在选中状态必须用奶白`#fffaf0`。普通字`#203849`，次要字`#60707a`。真实共享部件14可见色，完整声明调色板16可见色（含字体边缘备用色），透明另占一位，低于32色。
 
-- `cards/menu/`：normal / selected / disabled；12×12 四角。
-- `cards/info/`：normal / current；12×12 四角。
-- `cards/popup/normal/`：16×16 四角。
-- 每组有九张独立图：`top-left/top/top-right/left/center/right/bottom-left/bottom/bottom-right.png`；边与中心按原像素平铺，四角不缩放。`atlas.png` 是可编辑母版，不重复打包。
-- `bars/`：高 32 顶栏、高 30 底栏。`resources/`：高 10 的资源框、可平铺填充/低值填充和端帽、七种 16×16 图标。
-- `passport/`：32×32、两色可平铺底纹，104×52 普通/当前格框与独立未解锁遮罩。
-- `numbers/20/`、`numbers/36/`：0–9、m、+，含逐字 advance；每图不超过 8 色。
-- `labels/`：新纪录、测试不记录、占位关卡，以及独立开机文案与出发按钮。
-- `map/`：三态站点底座、正反脚印、16×16 锁和小章槽；`stamps/ink-pad.png` 为印泥底纹。
-- `wordmarks/`：独立透明合集字标与八个游戏字标，各自不超过 16 色。动态成绩、提示和名字不烘焙进背景。
+中文16/18标题使用核对过的静态Noto Sans SC Bold700，12正文为原SourceHanSansCN-Medium500；固定英文品牌/20与36高数字用Montserrat Bold700。`fonts/sources.json`保留原文件路径、SHA、full name、版本、字重、OFL和fsType；`fonts/bold16-subset.txt`/`bold18-subset.txt`供root生成4bpp C子集。字体文件本身未复制或转换分发，完整许可文本在`licenses/`。当前`adv_text.c`固定4bpp，不把未实现的2bpp当作生产方案。
 
-## 开机封面分层契约
+`wordmarks/collection.png`是220×90透明字标：38px NABO、12px字距ADVENTURE、26px完整“NABO 的冒险之旅”，无字旅行旗；4色。8个游戏字标200×80，26px粗中文+14pxMontserrat英文，不超过16色。静态标签文字单独PNG；动态名字、最佳、未解锁等由程序字库写。
 
-完整制作时会提供 `cover-background.png`：没有 NABO、字标或按钮，只含海/镇/雪山/太空地图缩影；人物和字标另叠。底部 y=270..319 保持纯纸色留白。
+现有137项API路径保持，六组九宫格命名不变：menu normal/selected/disabled、info normal/current四角12×12；popup normal四角16×16；边与中心8px平铺。`atlas.png`仅编辑、pack=false。顶栏32、底栏30、资源条10；护照格仍104×52；数字仍20/36高、0–9/m/+和advance；三标签≤100×24；锁≤16、脚印≤10、底座48×40、印泥64。
 
-NABO 单独放 `cover-character.png`（240×320 合成位置层）和 `cover-character-sprite.png`（实际小图）。已批准的旅行服像素直接采样，最终可使用 `welcome120` 的原像素及原锚点；没有重画头、脸、白帽或眼镜。人物与地图不烘焙在一起移动。
+护照`locked-mask.png`现在只有锁图形，不再烘焙深色“未解锁”横条；程序需按状态在相对(8,30)写未解锁，选中时用奶白。格框不重复烘焙章槽，程序只画实际章，避免二重圆点。
 
-`cover-illustration.png` 是背景 + 独立字标 + 独立人物的静态效果参考。`preview/cover.png` 再叠“NABO,陪你冒险”和“按 OK 出发”，每层按清单位置合成必须逐像素相同。语音由主程序独立集成，不包含在此 UI 图像包里。
+封面严格分层：`cover-background.png`没有人物、标题、文案或按钮，海/小镇/雪山/太空为原生UI缩影；底部270..320纯纸色。实际打包背景top240×256/bottom240×64，offset(0,0)/(0,256)。独立字标放(10,12)；原样welcome000的人物根点(120,266)，不重画、不缩放、不重新量化；caption(10,270)，208×34按钮(16,284)。完整背景/人物位置层/静态合成均pack=false，只有背景分片、字标和标签进入UI包。`verify_ui_assets.py`核对所有层重建逐像素一致；封面含NABO56色，低于64。
 
-长 320 的背景按 `cover-background-top.png`（240×256）和 `cover-background-bottom.png`（240×64）提供实际打包片段，避免超出当前精灵单边 256 的限制。完整背景和完整参考图不重复打包。
+接入合同在`integration-tokens.json`。地图预览按实际adv_path位置：小火车在上、跳一跳居中、护照亭在下，节点间112px，左右交替，世界地面是程序预览渐变而非新增背景素材。保留生产camera/traveler、9世界上下关系和上下键，不能把预览的可见节点写死成地图。当前/邻站卡112×52，title Bold16墨迹相对(8,8)、次行Medium12相对(8,30)，成绩右对齐x104，选中一律奶白。护照建议格位x12/124、y70/124/178/232。所有其他页面的动态文字位置、字体、颜色、对齐和数字位置还写在`preview/*.layout.json`；这里的坐标是墨迹左上，不是C基线。C基线应由实际生成字形box_h/ofs_y推导并经真实渲染核验。
 
-## 复现与验证
+Python使用生产同格式adv-row-rle-v1逐项量测（不按相同SHA去重藏掉重复数组）：RLE36,008B+表14,310B+C3目录/描述符估算11,791B=62,109B。加当前welcome47,730B为109,839B，低于163,840B，角色没有挪到travel组后不计。可给替换启动角色的额度为101,731B；新boot-v2必须替换旧welcome成本重测，不能沿用本数字。主任务最终还需真实C解码/整包RLE和ELF测量；动态C字库继续单列app，不重复扣UI图像预算。
 
-在仓库根运行 `python game-art/adventure/tools/build_ui_assets.py`；制作中的地图未齐时可加 `--parts-only`。若指定正式 welcome120 帧，必须同时给 `--character <路径> --character-anchor <x> <y>`，保留其原像素和锚点，不进行二次缩放或量化。
+复现：
 
-再运行 `python game-art/adventure/tools/verify_ui_assets.py`。程序核对所有 PNG 的色数、尺寸、SHA、透明边界、九宫格两组目标尺寸与原角像素、封面图层重建。`preview/` 的单屏均为 240×320、1 倍像素，`screens-1x.png` 只是整屏拼接。
+```powershell
+python game-art/adventure/tools/build_ui_assets.py --character game-art/adventure/art/frames/travel/runtime/welcome/000.png --character-anchor 31 120
+python game-art/adventure/tools/verify_ui_assets.py
+```
 
-`ui-qa.json` 和清单预算使用逐行 RLE（计行表/调色板/小型头部并去重）的**明确估计**，不是 PNG 文件大小，也不是已经编入固件的最终字节数。实际 C/RLE 包大小由主任务打包后实测，必须 ≤160 KiB。预览、候选和无损母版不计入固件包。
+`ui-manifest.json`逐项记录name/path/size/palette/SHA/color_limit/pack；`ui-qa.json`为像素/结构宿主结果。`row_rle_estimate_bytes_deduplicated`仅保留旧的粗略历史估算字段，预算应使用`actual_static_estimate_c3`及`ui_plus_current_boot_estimate`，不把PNG大小或Python解码等同生产C通过。

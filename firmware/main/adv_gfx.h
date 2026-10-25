@@ -74,6 +74,7 @@ bool ag_band(ag_t *g, int y, int h, uint16_t top, uint16_t bottom);
 bool ag_rect(ag_t *g, int x, int y, int w, int h, int r, uint16_t fill, uint8_t alpha, uint16_t line, int line_w);
 bool ag_circle(ag_t *g, int cx, int cy, int r, uint16_t fill, uint8_t alpha, uint16_t line, int line_w);
 bool ag_text(ag_t *g, const lv_font_t *font, const char *utf8, int x, int baseline, nt_align_t align, uint16_t color);
+bool ag_text_top(ag_t *g, const lv_font_t *font, const char *utf8, int x, int ink_top, nt_align_t align, uint16_t color);
 bool ag_tri(ag_t *g, int cx, int cy, int size, bool up, uint16_t color);
 bool ag_glow(ag_t *g, int cx, int cy, int r, uint16_t color);
 bool ag_bitmap(ag_t *g, const uint16_t *pixels, int x, int y, int w, int h);

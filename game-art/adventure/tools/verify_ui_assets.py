@@ -12,6 +12,9 @@ def equal(first, second):
 
 def main():
     manifest = json.loads((OUT / 'ui-manifest.json').read_text('utf-8'))
+    declared=json.loads((OUT/manifest['shared_ui_palette']['path']).read_text('utf-8'))
+    palette_values={tuple(bytes.fromhex(value.lstrip('#'))) for value in declared.values()}
+    assert len(palette_values)+1<=32
     seen, shared, unique = set(), set(), {}
     for entry in manifest['assets']:
         path = OUT / entry['path']
@@ -30,7 +33,7 @@ def main():
         if entry['pack']:
             assert max(bitmap.size) <= 256, f'Split large assets for the actual sprite packer: {entry["path"]}'
             unique.setdefault(entry['sha256'], rle_estimate(bitmap))
-    assert shared <= {rgba(name)[:3] for name in COLORS}
+    assert shared <= palette_values
     assert len(shared)+1 <= 32
     for component in manifest['nine_slice']:
         folder = OUT / component['path']; corner = component['corner_px']
@@ -64,6 +67,7 @@ def main():
         reference = Image.open(OUT / cover['flattened_reference']).convert('RGBA')
         assert equal(combined, reference), 'Cover layers differ from flattened reference'
         assert len(set(pixels(reference))) <= 64
+        assert equal(Image.open(OUT/'cover-character-sprite.png'),Image.open(OUT.parent/cover['character_source'])), 'Cover role pixels changed'
         assert set(pixels(background.crop((0, 270, 240, 320)))) == {rgba('paper')}
         for key in ('caption', 'start_button'):
             component = cover[key]
@@ -75,11 +79,15 @@ def main():
               'assets': len(manifest['assets']), 'shared_ui_visible_colors': len(shared),
               'nine_slice': '6 families/states; 48x32 and 240x120; original corners, no interior gaps',
               'font': manifest['font'], 'cover_layer_assembly': 'pixel_equal' if cover else 'pending map/character art',
+              'fonts':manifest.get('fonts'), 'selected_dynamic_text':manifest.get('selected_dynamic_text'),
               'preview_screen_count': len(manifest['preview_screens'])+bool(cover),
               'row_rle_estimate_bytes_deduplicated': estimate, 'packed_limit_bytes': 160*1024,
-              'actual_firmware_pack_measurement': 'pending integration; this is an explicit estimate, not PNG byte size'}
+              'actual_python_codec_measurement':manifest['budget'],
+              'actual_firmware_pack_measurement':'pending root C integration; Python streams/tables measured, no C pass inferred'}
     (OUT / 'ui-qa.json').write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', 'utf-8')
-    print(json.dumps(report, ensure_ascii=False))
+    print(json.dumps({'status':report['status'],'assets':report['assets'],'shared_ui_visible_colors':len(shared),
+        'preview_screen_count':report['preview_screen_count'],'cover_layer_assembly':report['cover_layer_assembly'],
+        'ui_plus_current_boot_estimate':manifest['budget']['ui_plus_current_boot_estimate']},ensure_ascii=True))
 
 
 if __name__ == '__main__':

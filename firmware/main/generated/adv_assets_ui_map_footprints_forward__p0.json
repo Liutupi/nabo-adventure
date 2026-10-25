@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_map_footprints_forward__p0",
   "width": 10,
   "height": 10,
@@ -35,5 +35,15 @@
       "sha256": "37dd8aa8c0dedefccbe1c9c229bd52bc65ee1b98f320a684bf858f314be5d5fb"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/map/footprints-forward",
+      "logical_symbol": "adv_assets_ui_map_footprints_forward__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

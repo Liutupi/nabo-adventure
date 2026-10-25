@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-25",
+  "calls": 2,
+  "independent_frame_generation": false,
+  "records": [
+    {
+      "skin": "ski_a",
+      "path": "games/ski/source/ski-a-master.png",
+      "sha256": "1d9ee3833e9a34c6c3513e6ed3d7db6cf02c840d94bca4fd45f9fa6268ee1a46",
+      "size": [
+        1024,
+        1536
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "intent": "identity-preserve costume master, genuine elevated rear-three-quarter body",
+      "transparent_background": true,
+      "generated_file": "exec-53184208-e588-4b01-8561-a02e8df6acbf.png",
+      "prompt": "ski-a-prompt.txt",
+      "runtime_head": "Frozen common/left; generated head ignored except ski_a goggles accessory cutout",
+      "alpha_zero": 950306
+    },
+    {
+      "skin": "ski_b",
+      "path": "games/ski/source/ski-b-master.png",
+      "sha256": "6812f66d3094966da07d1c7d8bab490a12147955d880d88b1bbdd53a43f20942",
+      "size": [
+        1024,
+        1536
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "intent": "identity-preserve costume master, genuine elevated rear-three-quarter body",
+      "transparent_background": true,
+      "generated_file": "exec-6855b88f-d900-46ad-9dda-94b81bcf726f.png",
+      "prompt": "ski-b-prompt.txt",
+      "runtime_head": "Frozen common/left; generated head ignored except ski_a goggles accessory cutout",
+      "alpha_zero": 928703
+    }
+  ],
+  "identity_reference": "reference/nabo-idle-original.png",
+  "selected_travel": "design/round1/v2/01-hiker-design-board.png",
+  "review": "Full transparent source figures and genuine back view reviewed; user artwork acceptance not implied."
+}

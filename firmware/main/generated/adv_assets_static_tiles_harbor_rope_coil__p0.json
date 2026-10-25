@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_harbor_rope_coil__p0",
   "width": 32,
   "height": 32,
@@ -14,7 +14,7 @@
   "keys": [
     0
   ],
-  "data_bytes": 408,
+  "data_bytes": 407,
   "table_bytes": 142,
   "frame_sha256": [
     "c7186197a7aa44203c34416c7ed61a6bdbdee58ca11a07f13adbf0a039aec6af"
@@ -37,5 +37,15 @@
       "sha256": "c2b03b03ac8f74252fc2c9056a6541bba8a2a012a9e96f793d03993b6b67f3b1"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/harbor/rope-coil",
+      "logical_symbol": "adv_assets_static_tiles_harbor_rope_coil__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-25",
+  "calls": 2,
+  "independent_frame_generation": false,
+  "records": [
+    {
+      "skin": "post_a",
+      "path": "games/post/source/post-a-master.png",
+      "sha256": "a533a3976c3e2cae31b9e860860e1b0bd81b9b1488eaff5e70fded85bfac3f93",
+      "size": [
+        1254,
+        1254
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "intent": "identity-preserve clothing edit",
+      "transparent_background": true,
+      "generated_file": "exec-63820d7a-db6d-456b-8660-632f4e43d50d.png",
+      "prompt": "post-a-prompt.txt",
+      "identity_reference": "reference/nabo-idle-original.png",
+      "selected_travel_reference": "design/round1/v2/01-hiker-design-board.png",
+      "head_use": "Generated head is retained only in provenance master; runtime will reuse immutable common/front head and neutral expression.",
+      "acceptance": "Agent inspected full output against original; human artwork acceptance not implied."
+    },
+    {
+      "skin": "post_b",
+      "path": "games/post/source/post-b-master.png",
+      "sha256": "5adbe4af4f2d8532b066138576382b179e8daec6ea4099f985233ce3db14d899",
+      "size": [
+        1254,
+        1254
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "intent": "identity-preserve clothing edit",
+      "transparent_background": true,
+      "generated_file": "exec-53422336-950a-4773-9448-0558d3f7b3d4.png",
+      "prompt": "post-b-prompt.txt",
+      "identity_reference": "reference/nabo-idle-original.png",
+      "selected_travel_reference": "design/round1/v2/01-hiker-design-board.png",
+      "head_use": "Generated head is retained only in provenance master; runtime will reuse immutable common/front head and neutral expression.",
+      "acceptance": "Agent inspected full output against original; human artwork acceptance not implied."
+    }
+  ]
+}

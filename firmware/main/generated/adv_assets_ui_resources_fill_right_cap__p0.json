@@ -1,12 +1,12 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_resources_fill_right_cap__p0",
   "width": 3,
   "height": 10,
   "palette_rgb565": [
     0,
     8649,
-    65433
+    65502
   ],
   "background_rgb888": null,
   "key_interval": 8,
@@ -19,7 +19,7 @@
     "ede0e374ae2ef97987e192b811032302c55aef5657ea9a266c2fe65e021ace62"
   ],
   "source_sha256": [
-    "0c4cae5488932f20987871a12fa932e237f248246a8b9c67d25015c5d5409123"
+    "b93040540a139260193932a62f6749c094c237e7f9d11973f00195f9dac60be7"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,8 +33,26 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\fill-right-cap.png",
-      "sha256": "deab853d0ed0a8936ffc39b86b0852601bf501da2f9628944ed9b0087d948db3"
+      "sha256": "abeec19b08aec6152fe9777084d876677e56771af09322e1ad02027d99639093"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/resources/fill-right-cap",
+      "logical_symbol": "adv_assets_ui_resources_fill_right_cap__p0",
+      "offset": [
+        0,
+        0
+      ]
+    },
+    {
+      "resource_id": "ui/resources/low-fill-right-cap",
+      "logical_symbol": "adv_assets_ui_resources_low_fill_right_cap__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

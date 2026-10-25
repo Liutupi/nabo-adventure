@@ -1,0 +1,595 @@
+{
+  "space": "native 240x320; text positions are ink top-left, derive C baseline from generated glyph metrics",
+  "dynamic_text": [
+    {
+      "fixture_text": "01 / 24",
+      "anchor_xy": [
+        224,
+        48
+      ],
+      "ink_box": [
+        185,
+        48,
+        224,
+        60
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        96,
+        112,
+        122
+      ],
+      "color_name": "muted",
+      "align": "right"
+    },
+    {
+      "fixture_text": "跳一跳",
+      "anchor_xy": [
+        20,
+        78
+      ],
+      "ink_box": [
+        20,
+        78,
+        68,
+        94
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "left"
+    },
+    {
+      "fixture_text": "12",
+      "anchor_xy": [
+        108,
+        100
+      ],
+      "ink_box": [
+        94,
+        100,
+        108,
+        109
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "right"
+    },
+    {
+      "fixture_text": "深潜",
+      "anchor_xy": [
+        132,
+        78
+      ],
+      "ink_box": [
+        132,
+        78,
+        164,
+        94
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "0",
+      "anchor_xy": [
+        220,
+        100
+      ],
+      "ink_box": [
+        213,
+        100,
+        220,
+        109
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "right"
+    },
+    {
+      "fixture_text": "小火车",
+      "anchor_xy": [
+        20,
+        132
+      ],
+      "ink_box": [
+        20,
+        132,
+        68,
+        149
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "未解锁",
+      "anchor_xy": [
+        20,
+        154
+      ],
+      "ink_box": [
+        20,
+        154,
+        56,
+        168
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        96,
+        112,
+        122
+      ],
+      "color_name": "muted",
+      "align": "left"
+    },
+    {
+      "fixture_text": "萤火虫",
+      "anchor_xy": [
+        132,
+        132
+      ],
+      "ink_box": [
+        132,
+        132,
+        180,
+        149
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "未解锁",
+      "anchor_xy": [
+        132,
+        154
+      ],
+      "ink_box": [
+        132,
+        154,
+        168,
+        168
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        96,
+        112,
+        122
+      ],
+      "color_name": "muted",
+      "align": "left"
+    },
+    {
+      "fixture_text": "登山",
+      "anchor_xy": [
+        20,
+        186
+      ],
+      "ink_box": [
+        20,
+        186,
+        52,
+        202
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "未解锁",
+      "anchor_xy": [
+        20,
+        208
+      ],
+      "ink_box": [
+        20,
+        208,
+        56,
+        222
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        96,
+        112,
+        122
+      ],
+      "color_name": "muted",
+      "align": "left"
+    },
+    {
+      "fixture_text": "滑雪",
+      "anchor_xy": [
+        132,
+        186
+      ],
+      "ink_box": [
+        132,
+        186,
+        164,
+        203
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "未解锁",
+      "anchor_xy": [
+        132,
+        208
+      ],
+      "ink_box": [
+        132,
+        208,
+        168,
+        222
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        96,
+        112,
+        122
+      ],
+      "color_name": "muted",
+      "align": "left"
+    },
+    {
+      "fixture_text": "热气球",
+      "anchor_xy": [
+        20,
+        240
+      ],
+      "ink_box": [
+        20,
+        240,
+        68,
+        257
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "未解锁",
+      "anchor_xy": [
+        20,
+        262
+      ],
+      "ink_box": [
+        20,
+        262,
+        56,
+        276
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        96,
+        112,
+        122
+      ],
+      "color_name": "muted",
+      "align": "left"
+    },
+    {
+      "fixture_text": "太空",
+      "anchor_xy": [
+        132,
+        240
+      ],
+      "ink_box": [
+        132,
+        240,
+        164,
+        257
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "未解锁",
+      "anchor_xy": [
+        132,
+        262
+      ],
+      "ink_box": [
+        132,
+        262,
+        168,
+        276
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        96,
+        112,
+        122
+      ],
+      "color_name": "muted",
+      "align": "left"
+    },
+    {
+      "fixture_text": "冒险护照",
+      "anchor_xy": [
+        20,
+        6
+      ],
+      "ink_box": [
+        20,
+        6,
+        92,
+        26
+      ],
+      "size_px": 18,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "left"
+    },
+    {
+      "fixture_text": "PASSPORT",
+      "anchor_xy": [
+        226,
+        11
+      ],
+      "ink_box": [
+        165,
+        11,
+        226,
+        20
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "right"
+    },
+    {
+      "fixture_text": "上 / 下翻阅   OK 返回",
+      "anchor_xy": [
+        120,
+        300
+      ],
+      "ink_box": [
+        64,
+        300,
+        176,
+        313
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "center"
+    }
+  ],
+  "cards": [],
+  "assets": [
+    {
+      "path": "passport/header.png",
+      "xy": [
+        12,
+        40
+      ]
+    },
+    {
+      "path": "passport/grid-current.png",
+      "xy": [
+        12,
+        70
+      ]
+    },
+    {
+      "path": "map/stamp-bronze.png",
+      "xy": [
+        20,
+        100
+      ]
+    },
+    {
+      "path": "passport/grid-normal.png",
+      "xy": [
+        124,
+        70
+      ]
+    },
+    {
+      "path": "passport/grid-normal.png",
+      "xy": [
+        12,
+        124
+      ]
+    },
+    {
+      "path": "passport/locked-mask.png",
+      "xy": [
+        12,
+        124
+      ]
+    },
+    {
+      "path": "passport/grid-normal.png",
+      "xy": [
+        124,
+        124
+      ]
+    },
+    {
+      "path": "passport/locked-mask.png",
+      "xy": [
+        124,
+        124
+      ]
+    },
+    {
+      "path": "passport/grid-normal.png",
+      "xy": [
+        12,
+        178
+      ]
+    },
+    {
+      "path": "passport/locked-mask.png",
+      "xy": [
+        12,
+        178
+      ]
+    },
+    {
+      "path": "passport/grid-normal.png",
+      "xy": [
+        124,
+        178
+      ]
+    },
+    {
+      "path": "passport/locked-mask.png",
+      "xy": [
+        124,
+        178
+      ]
+    },
+    {
+      "path": "passport/grid-normal.png",
+      "xy": [
+        12,
+        232
+      ]
+    },
+    {
+      "path": "passport/locked-mask.png",
+      "xy": [
+        12,
+        232
+      ]
+    },
+    {
+      "path": "passport/grid-normal.png",
+      "xy": [
+        124,
+        232
+      ]
+    },
+    {
+      "path": "passport/locked-mask.png",
+      "xy": [
+        124,
+        232
+      ]
+    },
+    {
+      "path": "bars/top.png",
+      "xy": [
+        0,
+        0
+      ]
+    },
+    {
+      "path": "bars/bottom.png",
+      "xy": [
+        0,
+        290
+      ]
+    }
+  ],
+  "numbers": []
+}

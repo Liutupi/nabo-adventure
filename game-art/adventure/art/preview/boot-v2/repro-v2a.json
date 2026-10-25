@@ -1,0 +1,10 @@
+{
+  "source_manifest_sha256": "e02927badea6222ca97a014b5f9adaaa0090405524c33b6238df2083fef42c0e",
+  "logical_poses_equal": 34,
+  "unique_runtime_images_equal": 32,
+  "rgba_bytes_equal": true,
+  "png_source_hashes_unchanged": true,
+  "reproduction": "Original sources -> same rigid rig -> same 120px sample -> same 48-colour quantization",
+  "output_boundary": "Only temporary source/rig copies inside boot/v2; frozen runtime PNGs and manifest not overwritten",
+  "note": "UI and MP4 source timing unchanged; this verifies character PNG reproducibility, not subjective acting acceptance."
+}

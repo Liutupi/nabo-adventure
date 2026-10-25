@@ -1,0 +1,136 @@
+{
+  "native_heads": [
+    {
+      "name": "open",
+      "path": "boot/v2/source/head-open.png",
+      "sha256": "a7bc78cdaa5c2030ddfd94ee3cefb9c1c897223745a5d17871a1cf88230d2c0f",
+      "source": "reference/nabo-idle.png",
+      "source_sha256": "c63575691d15220e8d6fafdab911a10767a5fc1c13925992dbd10e3a5e93d3fa",
+      "source_frame": 0,
+      "source_cell": [
+        0,
+        0,
+        224,
+        224
+      ],
+      "sampling": {
+        "size": [
+          123,
+          123
+        ],
+        "paste": [
+          66,
+          9
+        ]
+      },
+      "mask": "RGB-black backdrop excluded; y150..163 only original warm neck/face pixels, no doctor coat"
+    },
+    {
+      "name": "half",
+      "path": "boot/v2/source/head-half.png",
+      "sha256": "d6db209ea99aa51b607adc3206de7c938621482610a74fa0a3bb5dea8983e903",
+      "source": "reference/nabo-idle.png",
+      "source_sha256": "c63575691d15220e8d6fafdab911a10767a5fc1c13925992dbd10e3a5e93d3fa",
+      "source_frame": 1,
+      "source_cell": [
+        224,
+        0,
+        448,
+        224
+      ],
+      "sampling": {
+        "size": [
+          123,
+          123
+        ],
+        "paste": [
+          66,
+          9
+        ]
+      },
+      "mask": "RGB-black backdrop excluded; y150..163 only original warm neck/face pixels, no doctor coat"
+    },
+    {
+      "name": "closed",
+      "path": "boot/v2/source/head-closed.png",
+      "sha256": "10a46f228f0a642884e66fc666e7bda8c8b6c68bd387191730d48ce4406ee09e",
+      "source": "reference/nabo-idle.png",
+      "source_sha256": "c63575691d15220e8d6fafdab911a10767a5fc1c13925992dbd10e3a5e93d3fa",
+      "source_frame": 2,
+      "source_cell": [
+        448,
+        0,
+        672,
+        224
+      ],
+      "sampling": {
+        "size": [
+          123,
+          123
+        ],
+        "paste": [
+          66,
+          9
+        ]
+      },
+      "mask": "RGB-black backdrop excluded; y150..163 only original warm neck/face pixels, no doctor coat"
+    }
+  ],
+  "palm": {
+    "path": "boot/v2/source/palm-open.png",
+    "sha256": "1988956f08230d179bd42b2245b04974d0f1a8c299294ce21561f22ca21fc0da",
+    "source_video": "D:\\AI PASSPORT XIAOZHI\\nabo-sound-lab\\game-art\\soundlab\\grok-clips\\S-WELCOME.mp4",
+    "source_video_sha256": "d950a0a1799683741466cce73b3a8208dd207ffd665c257c31fecca58d144002",
+    "timestamp_s": 3.65,
+    "frame_size": [
+      960,
+      960
+    ],
+    "roi": [
+      638,
+      158,
+      774,
+      354
+    ],
+    "frame_sha256": "2b37db8ebff939176befc0bb3fe0a3d0eb48e2330c70256ffddc9e6c2adee584",
+    "size": [
+      19,
+      28
+    ],
+    "wrist_anchor": [
+      12,
+      27
+    ],
+    "extraction": "Original skin and adjacent source outline, largest connected component; alpha-only removal of green/backdrop; no new fingers, cuff or headphones"
+  },
+  "half_palm": {
+    "path": "boot/v2/source/palm-half.png",
+    "sha256": "b7570fb9db53f64250144e3f568cf0583027bbd425286382c21543cc48d0e6dd",
+    "source_video": "D:\\AI PASSPORT XIAOZHI\\nabo-sound-lab\\game-art\\soundlab\\grok-clips\\S-WELCOME.mp4",
+    "source_video_sha256": "d950a0a1799683741466cce73b3a8208dd207ffd665c257c31fecca58d144002",
+    "timestamp_s": 3.25,
+    "frame_size": [
+      960,
+      960
+    ],
+    "roi": [
+      674,
+      250,
+      792,
+      434
+    ],
+    "frame_sha256": "baa100685a874f21dd99d4c5930b28951303f86f3cad27c52768ba6b80b43725",
+    "size": [
+      17,
+      26
+    ],
+    "wrist_anchor": [
+      9,
+      24
+    ],
+    "extraction": "Original skin and adjacent source outline, largest connected component; alpha-only removal of green/backdrop; no new fingers, cuff or headphones",
+    "additional_alpha_mask": "Original pink cuff excluded at source y>=406 where B>G; y>=425 removed. Wrist registered at original source (736.5,419.8)."
+  },
+  "identity_policy": "Official native three-expression NABO head; no generated face. Frozen common files unchanged.",
+  "expression_boundary": "Whole registered head variants are used; no eye fragment pasted into a different face"
+}

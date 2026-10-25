@@ -1,0 +1,88 @@
+{
+  "source_manifest_sha256": "1c30db1c649db343126522c3c359c8290ada9d1fd410dc8ca50d46a6148e9b34",
+  "groups": {
+    "boot_v2": {
+      "rle_bytes": 96348,
+      "table_bytes": 13328,
+      "descriptor_catalog_estimate_c3": 82,
+      "resources": 1,
+      "pieces": 1,
+      "frames": 27,
+      "static_bytes_estimate_c3": 109758
+    },
+    "ui": {
+      "rle_bytes": 35136,
+      "table_bytes": 12462,
+      "descriptor_catalog_estimate_c3": 10671,
+      "resources": 127,
+      "pieces": 127,
+      "frames": 127,
+      "static_bytes_estimate_c3": 58269
+    }
+  },
+  "unique_runtime_frames": 27,
+  "logical_events": 29,
+  "extra_timeline_table_bytes": 132,
+  "combined_ui_boot_and_timeline_bytes": 168159,
+  "limit_bytes": 163840,
+  "within_limit": false,
+  "compared_with_root_ui62109": {
+    "ui_bytes": 62109,
+    "total_bytes": 171999
+  },
+  "production_c": {
+    "verified_frames": 154,
+    "verified_sprite_rows": 6471,
+    "verified_ninepatch_rows": 912,
+    "comparison": "generated C and production decoders vs indexed source"
+  },
+  "ui_source_hashes": {
+    "ui/ui-manifest.json": "093a972bcd5fd12ab2a12281216e06d861fc63222b3c98551630d6791c95e0d0",
+    "ui/palette.json": "3b3dc6d793ac4eff3af34fc01f0d969f7eb6a5c0b5a6b967e66795103949fce0"
+  },
+  "decoder_sha256": "4ecd053e0041babc8cd405d06e56fda61515e472660b0c3944b3e9977bb5a58e",
+  "timeline_header_sha256": "77356755b1eb671dc9795fe59493a3a3718c29108fdb7af7f68aaa0511a7456a",
+  "ui_interning": {
+    "enabled": true,
+    "aliased_resources": 35,
+    "aliases": {
+      "ui/cards/info/current/top": "ui/cards/info/current/bottom",
+      "ui/cards/info/normal/right": "ui/cards/info/normal/left",
+      "ui/cards/info/normal/top": "ui/cards/info/normal/bottom",
+      "ui/cards/menu/disabled/bottom": "ui/cards/info/normal/bottom",
+      "ui/cards/menu/disabled/bottom-left": "ui/cards/info/normal/bottom-left",
+      "ui/cards/menu/disabled/bottom-right": "ui/cards/info/normal/bottom-right",
+      "ui/cards/menu/disabled/center": "ui/cards/info/normal/center",
+      "ui/cards/menu/disabled/left": "ui/cards/info/normal/left",
+      "ui/cards/menu/disabled/right": "ui/cards/info/normal/left",
+      "ui/cards/menu/disabled/top": "ui/cards/info/normal/bottom",
+      "ui/cards/menu/disabled/top-left": "ui/cards/info/normal/top-left",
+      "ui/cards/menu/disabled/top-right": "ui/cards/info/normal/top-right",
+      "ui/cards/menu/normal/bottom": "ui/cards/info/normal/bottom",
+      "ui/cards/menu/normal/bottom-left": "ui/cards/info/normal/bottom-left",
+      "ui/cards/menu/normal/bottom-right": "ui/cards/info/normal/bottom-right",
+      "ui/cards/menu/normal/center": "ui/cards/info/normal/center",
+      "ui/cards/menu/normal/left": "ui/cards/info/normal/left",
+      "ui/cards/menu/normal/right": "ui/cards/info/normal/left",
+      "ui/cards/menu/normal/top": "ui/cards/info/normal/bottom",
+      "ui/cards/menu/normal/top-left": "ui/cards/info/normal/top-left",
+      "ui/cards/menu/normal/top-right": "ui/cards/info/normal/top-right",
+      "ui/cards/menu/selected/bottom": "ui/cards/info/current/bottom",
+      "ui/cards/menu/selected/bottom-left": "ui/cards/info/current/bottom-left",
+      "ui/cards/menu/selected/bottom-right": "ui/cards/info/current/bottom-right",
+      "ui/cards/menu/selected/center": "ui/cards/info/current/center",
+      "ui/cards/menu/selected/left": "ui/cards/info/current/left",
+      "ui/cards/menu/selected/right": "ui/cards/info/current/right",
+      "ui/cards/menu/selected/top": "ui/cards/info/current/bottom",
+      "ui/cards/menu/selected/top-left": "ui/cards/info/current/top-left",
+      "ui/cards/menu/selected/top-right": "ui/cards/info/current/top-right",
+      "ui/cards/popup/normal/center": "ui/cards/info/normal/center",
+      "ui/cards/popup/normal/right": "ui/cards/popup/normal/left",
+      "ui/cards/popup/normal/top": "ui/cards/popup/normal/bottom",
+      "ui/resources/low-fill-left-cap": "ui/resources/fill-left-cap",
+      "ui/resources/low-fill-right-cap": "ui/resources/fill-right-cap"
+    },
+    "implementation_boundary": "Preview-local wrapper only; global production emitter unchanged and needs root integration if selected"
+  },
+  "boundary": "RLE/table bytes exact; C3 catalog estimates exclude linker padding. Final ELF and on-device acting are pending. No shared generated files written."
+}

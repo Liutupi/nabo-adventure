@@ -1,0 +1,5032 @@
+{
+  "skins": {
+    "night_a": {
+      "motions": {
+        "seat_idle": {
+          "reports": [
+            {
+              "index": 0,
+              "pose": {
+                "torso": 0.0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 1,
+              "pose": {
+                "torso": 0.28284271247461906,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.08414010541134,
+                170.9113498415624
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.999987815327953,
+                  -0.004936516547910956,
+                  1.0135455303437624
+                ],
+                [
+                  0.004936516547910956,
+                  0.999987815327953,
+                  -0.6293762603629602
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                84,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 2,
+              "pose": {
+                "torso": 0.4,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.11912007236823,
+                170.87475159264497
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9999756307053947,
+                  -0.0069812602979615525,
+                  1.434277630791584
+                ],
+                [
+                  0.0069812602979615525,
+                  0.9999756307053947,
+                  -0.8886056127450104
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                84,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 3,
+              "pose": {
+                "torso": 0.28284271247461906,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.08414010541134,
+                170.9113498415624
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.999987815327953,
+                  -0.004936516547910956,
+                  1.0135455303437624
+                ],
+                [
+                  0.004936516547910956,
+                  0.999987815327953,
+                  -0.6293762603629602
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                84,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 4,
+              "pose": {
+                "torso": 4.898587196589413e-17,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  -8.5496475276524005e-19,
+                  0.0
+                ],
+                [
+                  8.5496475276524005e-19,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 5,
+              "pose": {
+                "torso": -0.282842712474619,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                118.91629854278237,
+                171.08906443728722
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.999987815327953,
+                  0.0049365165479109555,
+                  -1.0104262542997162
+                ],
+                [
+                  -0.0049365165479109555,
+                  0.999987815327953,
+                  0.6343719759022406
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                173,
+                141
+              ]
+            },
+            {
+              "index": 6,
+              "pose": {
+                "torso": -0.4,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                118.88175722223754,
+                171.12607696337156
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9999756307053947,
+                  0.0069812602979615525,
+                  -1.4280390913726535
+                ],
+                [
+                  -0.0069812602979615525,
+                  0.9999756307053947,
+                  0.8985970235331422
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                82,
+                55,
+                173,
+                141
+              ]
+            },
+            {
+              "index": 7,
+              "pose": {
+                "torso": -0.28284271247461906,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                118.91629854278237,
+                171.08906443728722
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.999987815327953,
+                  0.004936516547910956,
+                  -1.0104262542997162
+                ],
+                [
+                  -0.004936516547910956,
+                  0.999987815327953,
+                  0.6343719759022406
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                173,
+                141
+              ]
+            }
+          ],
+          "contact": "preview/night/night_a-seat_idle-contact.png"
+        },
+        "move_left": {
+          "reports": [
+            {
+              "index": 0,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ],
+              "facing_weight": 0,
+              "independent_facing_source": "left",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            },
+            {
+              "index": 1,
+              "pose": {
+                "torso": -1.5,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -1
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                118.56116002920614,
+                171.47701054495727
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 1,
+              "head_matrix": [
+                [
+                  0.9996573249755573,
+                  0.026176948307873153,
+                  -5.32241199998532
+                ],
+                [
+                  -0.026176948307873153,
+                  0.9996573249755573,
+                  2.4208977634185374
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                81,
+                55,
+                171,
+                141
+              ],
+              "facing_weight": 0.7,
+              "independent_facing_source": "left",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            },
+            {
+              "index": 2,
+              "pose": {
+                "torso": 1.0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -1
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.29943239661878,
+                170.68844586647023
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 1,
+              "head_matrix": [
+                [
+                  0.9998476951563913,
+                  -0.01745240643728351,
+                  3.5972383396250365
+                ],
+                [
+                  0.01745240643728351,
+                  0.9998476951563913,
+                  -3.2026855310325004
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                85,
+                55,
+                176,
+                141
+              ],
+              "facing_weight": 0.7,
+              "independent_facing_source": "left",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            },
+            {
+              "index": 3,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ],
+              "facing_weight": 0,
+              "independent_facing_source": "left",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            }
+          ],
+          "contact": "preview/night/night_a-move_left-contact.png"
+        },
+        "move_right": {
+          "reports": [
+            {
+              "index": 0,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ],
+              "facing_weight": 0,
+              "independent_facing_source": "right",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            },
+            {
+              "index": 1,
+              "pose": {
+                "torso": 1.5,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -1
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.4511762716738,
+                170.5346404058738
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 1,
+              "head_matrix": [
+                [
+                  0.9996573249755573,
+                  -0.026176948307873153,
+                  5.410136806242662
+                ],
+                [
+                  0.026176948307873153,
+                  0.9996573249755573,
+                  -4.280401003397003
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                86,
+                55,
+                176,
+                141
+              ],
+              "facing_weight": 0.7,
+              "independent_facing_source": "right",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            },
+            {
+              "index": 2,
+              "pose": {
+                "torso": -1.0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -1
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                118.70605057775114,
+                171.31673249821245
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 1,
+              "head_matrix": [
+                [
+                  0.9998476951563913,
+                  0.01745240643728351,
+                  -3.5582482996612157
+                ],
+                [
+                  -0.01745240643728351,
+                  0.9998476951563913,
+                  1.2651305169120803
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                81,
+                55,
+                172,
+                141
+              ],
+              "facing_weight": 0.7,
+              "independent_facing_source": "right",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            },
+            {
+              "index": 3,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ],
+              "facing_weight": 0,
+              "independent_facing_source": "right",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            }
+          ],
+          "contact": "preview/night/night_a-move_right-contact.png"
+        },
+        "catch": {
+          "reports": [
+            {
+              "index": 0,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_l": 0,
+                "forearm_l": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 1,
+              "pose": {
+                "torso": 19.25,
+                "head_nod": 0,
+                "raise_amount": 0.55,
+                "bob": 0,
+                "upper_l": 79.75,
+                "forearm_l": 37.400000000000006,
+                "upper_r": -2.75,
+                "forearm_r": -2.2
+              },
+              "core_bbox": [
+                72,
+                63,
+                205,
+                224
+              ],
+              "jar_opening": [
+                87.3397886070513,
+                112.38728413225391
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9440890203927842,
+                  -0.3296906452627873,
+                  74.74318766859503
+                ],
+                [
+                  0.3296906452627873,
+                  0.9440890203927842,
+                  -30.738651774157546
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                118,
+                63,
+                205,
+                148
+              ]
+            },
+            {
+              "index": 2,
+              "pose": {
+                "torso": 35,
+                "head_nod": 0,
+                "raise_amount": 1,
+                "bob": 0,
+                "upper_l": 145,
+                "forearm_l": 68,
+                "upper_r": -5,
+                "forearm_r": -4
+              },
+              "core_bbox": [
+                75,
+                63,
+                230,
+                224
+              ],
+              "jar_opening": [
+                157.24088142079432,
+                62.629799944066974
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": -6,
+              "head_matrix": [
+                [
+                  0.8191520442889918,
+                  -0.573576436351046,
+                  140.7317077829735
+                ],
+                [
+                  0.573576436351046,
+                  0.8191520442889918,
+                  -36.34395293217722
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                145,
+                71,
+                230,
+                153
+              ]
+            },
+            {
+              "index": 3,
+              "pose": {
+                "torso": 22.75,
+                "head_nod": 0,
+                "raise_amount": 0.65,
+                "bob": 0,
+                "upper_l": 94.25,
+                "forearm_l": 44.2,
+                "upper_r": -3.25,
+                "forearm_r": -2.6
+              },
+              "core_bbox": [
+                75,
+                66,
+                210,
+                224
+              ],
+              "jar_opening": [
+                95.83060116732582,
+                95.59293750800123
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9222009716704518,
+                  -0.3867109616368206,
+                  89.2340227617304
+                ],
+                [
+                  0.3867109616368206,
+                  0.9222009716704518,
+                  -33.55020228195565
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                125,
+                66,
+                210,
+                150
+              ]
+            },
+            {
+              "index": 4,
+              "pose": {
+                "torso": 7.0,
+                "head_nod": 0,
+                "raise_amount": 0.2,
+                "bob": 0,
+                "upper_l": 29.0,
+                "forearm_l": 13.600000000000001,
+                "upper_r": -1.0,
+                "forearm_r": -0.8
+              },
+              "core_bbox": [
+                68,
+                56,
+                186,
+                224
+              ],
+              "jar_opening": [
+                98.5738557214412,
+                163.56573665381907
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.992546151641322,
+                  -0.12186934340514748,
+                  25.937307987966022
+                ],
+                [
+                  0.12186934340514748,
+                  0.992546151641322,
+                  -14.07123704232987
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                96,
+                56,
+                186,
+                143
+              ]
+            },
+            {
+              "index": 5,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_l": 0,
+                "forearm_l": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            }
+          ],
+          "contact": "preview/night/night_a-catch-contact.png"
+        },
+        "lift_jar": {
+          "reports": [
+            {
+              "index": 0,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_l": 0,
+                "forearm_l": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 1,
+              "pose": {
+                "torso": 15.75,
+                "head_nod": 0,
+                "raise_amount": 0.45,
+                "bob": 0,
+                "upper_l": 65.25,
+                "forearm_l": 30.6,
+                "upper_r": -2.25,
+                "forearm_r": -1.8
+              },
+              "core_bbox": [
+                69,
+                61,
+                200,
+                224
+              ],
+              "jar_opening": [
+                84.55019673341067,
+                129.83004069642158
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9624552364536473,
+                  -0.27144044986507426,
+                  60.451021956273365
+                ],
+                [
+                  0.27144044986507426,
+                  0.9624552364536473,
+                  -27.047701055727202
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                112,
+                61,
+                200,
+                146
+              ]
+            },
+            {
+              "index": 2,
+              "pose": {
+                "torso": 31.5,
+                "head_nod": 0,
+                "raise_amount": 0.9,
+                "bob": 0,
+                "upper_l": 130.5,
+                "forearm_l": 61.2,
+                "upper_r": -4.5,
+                "forearm_r": -3.6
+              },
+              "core_bbox": [
+                75,
+                66,
+                224,
+                224
+              ],
+              "jar_opening": [
+                137.0791187968723,
+                66.33210389077408
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": -3,
+              "head_matrix": [
+                [
+                  0.8526401643540923,
+                  -0.5224985647159488,
+                  125.9742647294457
+                ],
+                [
+                  0.5224985647159488,
+                  0.8526401643540923,
+                  -36.671049976230364
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                139,
+                70,
+                224,
+                152
+              ]
+            },
+            {
+              "index": 3,
+              "pose": {
+                "torso": 35,
+                "head_nod": 0,
+                "raise_amount": 1,
+                "bob": 0,
+                "upper_l": 145,
+                "forearm_l": 68,
+                "upper_r": -5,
+                "forearm_r": -4
+              },
+              "core_bbox": [
+                75,
+                63,
+                230,
+                224
+              ],
+              "jar_opening": [
+                157.24088142079432,
+                62.629799944066974
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": -6,
+              "head_matrix": [
+                [
+                  0.8191520442889918,
+                  -0.573576436351046,
+                  140.7317077829735
+                ],
+                [
+                  0.573576436351046,
+                  0.8191520442889918,
+                  -36.34395293217722
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                145,
+                71,
+                230,
+                153
+              ]
+            },
+            {
+              "index": 4,
+              "pose": {
+                "torso": 24.5,
+                "head_nod": 0,
+                "raise_amount": 0.7,
+                "bob": 0,
+                "upper_l": 101.5,
+                "forearm_l": 47.599999999999994,
+                "upper_r": -3.5,
+                "forearm_r": -2.8
+              },
+              "core_bbox": [
+                75,
+                67,
+                214,
+                224
+              ],
+              "jar_opening": [
+                102.09858118307949,
+                88.09854420358907
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9099612708765432,
+                  -0.414693242656239,
+                  96.53707207233147
+                ],
+                [
+                  0.414693242656239,
+                  0.9099612708765432,
+                  -34.62279558968996
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                128,
+                67,
+                214,
+                151
+              ]
+            },
+            {
+              "index": 5,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_l": 0,
+                "forearm_l": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            }
+          ],
+          "contact": "preview/night/night_a-lift_jar-contact.png"
+        },
+        "yawn": {
+          "reports": [
+            {
+              "index": 0,
+              "pose": {
+                "torso": 0.0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 1,
+              "pose": {
+                "torso": 0.39,
+                "head_nod": 0.8999999999999999,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 33.6,
+                "forearm_r": 34.199999999999996
+              },
+              "core_bbox": [
+                75,
+                56,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.11613142502549,
+                170.8778726557405
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9999768339346702,
+                  -0.006806731520561792,
+                  1.3915384865568192
+                ],
+                [
+                  0.006806731520561792,
+                  0.9999768339346702,
+                  0.13346424269538493
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                84,
+                56,
+                174,
+                142
+              ]
+            },
+            {
+              "index": 2,
+              "pose": {
+                "torso": 1.04,
+                "head_nod": 2.4000000000000004,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 89.60000000000001,
+                "forearm_r": 91.2
+              },
+              "core_bbox": [
+                75,
+                57,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.31152245388854,
+                170.6760927588286
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9998352674223817,
+                  -0.01815042749949478,
+                  3.7056225523325796
+                ],
+                [
+                  0.01815042749949478,
+                  0.9998352674223817,
+                  -0.2898140066788286
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                85,
+                57,
+                176,
+                143
+              ]
+            },
+            {
+              "index": 3,
+              "pose": {
+                "torso": 1.3,
+                "head_nod": 3,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 112,
+                "forearm_r": 114
+              },
+              "core_bbox": [
+                75,
+                58,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.39031770292871,
+                170.59600363720406
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9997426093226983,
+                  -0.022687333572781358,
+                  4.615787388396454
+                ],
+                [
+                  0.022687333572781358,
+                  0.9997426093226983,
+                  0.14801421949891447
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                86,
+                58,
+                176,
+                144
+              ]
+            },
+            {
+              "index": 4,
+              "pose": {
+                "torso": 0.7150000000000001,
+                "head_nod": 1.6500000000000001,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 61.60000000000001,
+                "forearm_r": 62.7
+              },
+              "core_bbox": [
+                75,
+                57,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.2135407986501,
+                170.77670562642805
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9999221369902471,
+                  -0.012478780263208747,
+                  2.5431588586797456
+                ],
+                [
+                  0.012478780263208747,
+                  0.9999221369902471,
+                  0.4185223172891255
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                84,
+                57,
+                175,
+                143
+              ]
+            },
+            {
+              "index": 5,
+              "pose": {
+                "torso": 0.0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            }
+          ],
+          "contact": "preview/night/night_a-yawn-contact.png"
+        },
+        "cheer": {
+          "reports": [
+            {
+              "index": 0,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 1,
+              "pose": {
+                "torso": -0.5,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -0.5,
+                "upper_r": -13.25,
+                "forearm_r": -13.5
+              },
+              "core_bbox": [
+                75,
+                56,
+                188,
+                224
+              ],
+              "jar_opening": [
+                118.85233428137256,
+                171.65772494687982
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 1,
+              "head_matrix": [
+                [
+                  0.9999619230641713,
+                  0.008726535498373935,
+                  -1.7840659293805743
+                ],
+                [
+                  -0.008726535498373935,
+                  0.9999619230641713,
+                  0.6248023156367424
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                82,
+                56,
+                173,
+                142
+              ]
+            },
+            {
+              "index": 2,
+              "pose": {
+                "torso": -1.4,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -1.4,
+                "upper_r": -37.099999999999994,
+                "forearm_r": -37.8
+              },
+              "core_bbox": [
+                75,
+                55,
+                204,
+                224
+              ],
+              "jar_opening": [
+                118.5900261553436,
+                171.04485388046766
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 1,
+              "head_matrix": [
+                [
+                  0.9997014897811831,
+                  0.024432178152653153,
+                  -4.970387213285335
+                ],
+                [
+                  -0.024432178152653153,
+                  0.9997014897811831,
+                  1.7885133983970776
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                81,
+                55,
+                171,
+                141
+              ]
+            },
+            {
+              "index": 3,
+              "pose": {
+                "torso": -2,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -2,
+                "upper_r": -53,
+                "forearm_r": -54
+              },
+              "core_bbox": [
+                75,
+                55,
+                206,
+                224
+              ],
+              "jar_opening": [
+                118.41767366971376,
+                171.6385468813204
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 2,
+              "head_matrix": [
+                [
+                  0.9993908270190958,
+                  0.03489949670250097,
+                  -7.0764226824569505
+                ],
+                [
+                  -0.03489949670250097,
+                  0.9993908270190958,
+                  2.5920160390055003
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                80,
+                55,
+                170,
+                141
+              ]
+            },
+            {
+              "index": 4,
+              "pose": {
+                "torso": -1.8,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -1.8,
+                "upper_r": -47.7,
+                "forearm_r": -48.6
+              },
+              "core_bbox": [
+                75,
+                56,
+                206,
+                224
+              ],
+              "jar_opening": [
+                118.47489900908866,
+                171.77378213718885
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 2,
+              "head_matrix": [
+                [
+                  0.9995065603657316,
+                  0.03141075907812829,
+                  -6.376045337829936
+                ],
+                [
+                  -0.03141075907812829,
+                  0.9995065603657316,
+                  2.321732287025452
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                80,
+                56,
+                171,
+                141
+              ]
+            },
+            {
+              "index": 5,
+              "pose": {
+                "torso": -1.1,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -1.1,
+                "upper_r": -29.150000000000002,
+                "forearm_r": -29.700000000000003
+              },
+              "core_bbox": [
+                75,
+                55,
+                200,
+                224
+              ],
+              "jar_opening": [
+                118.67696066101568,
+                171.24868685712647
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 1,
+              "head_matrix": [
+                [
+                  0.9998157121216442,
+                  0.01919744239968967,
+                  -3.911886843506835
+                ],
+                [
+                  -0.01919744239968967,
+                  0.9998157121216442,
+                  1.3950516422232169
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                81,
+                55,
+                172,
+                141
+              ]
+            },
+            {
+              "index": 6,
+              "pose": {
+                "torso": -0.3,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -0.3,
+                "upper_r": -7.949999999999999,
+                "forearm_r": -8.1
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                118.9112353544122,
+                170.7944803807593
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9999862922474267,
+                  0.00523596383141958,
+                  -1.07161799311163
+                ],
+                [
+                  -0.00523596383141958,
+                  0.9999862922474267,
+                  0.37301345969923433
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                173,
+                141
+              ]
+            },
+            {
+              "index": 7,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                75,
+                55,
+                183,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            }
+          ],
+          "contact": "preview/night/night_a-cheer-contact.png"
+        }
+      },
+      "continuity": {
+        "move_left": {
+          "boundary_first_last_rgba_mae": [
+            0.0,
+            0.0
+          ],
+          "runtime_metrics": [
+            {
+              "bbox": [
+                2,
+                0,
+                38,
+                56
+              ],
+              "centroid": [
+                19.671987230646447,
+                29.353551476456506
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                4,
+                0,
+                39,
+                56
+              ],
+              "centroid": [
+                19.615139442231076,
+                28.90756972111554
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                4,
+                0,
+                39,
+                56
+              ],
+              "centroid": [
+                20.462460063897762,
+                28.91773162939297
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                0,
+                38,
+                56
+              ],
+              "centroid": [
+                19.671987230646447,
+                29.353551476456506
+              ],
+              "sole_y": 56
+            }
+          ],
+          "root_translation_policy": "program applies eased 12px seated scoot",
+          "body_face_policy": "rigid original head; source views registered then blended during 4-frame scoot"
+        },
+        "move_right": {
+          "boundary_first_last_rgba_mae": [
+            0.0,
+            0.0
+          ],
+          "runtime_metrics": [
+            {
+              "bbox": [
+                2,
+                0,
+                38,
+                56
+              ],
+              "centroid": [
+                19.671987230646447,
+                29.353551476456506
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                19.62369057211926,
+                29.038678485092667
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                18.86623690572119,
+                29.065269943593876
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                0,
+                38,
+                56
+              ],
+              "centroid": [
+                19.671987230646447,
+                29.353551476456506
+              ],
+              "sole_y": 56
+            }
+          ],
+          "root_translation_policy": "program applies eased 12px seated scoot",
+          "body_face_policy": "rigid original head; source views registered then blended during 4-frame scoot"
+        },
+        "catch": {
+          "boundary_first_last_rgba_mae": [
+            0.0,
+            0.0
+          ],
+          "runtime_metrics": [
+            {
+              "bbox": [
+                2,
+                0,
+                38,
+                56
+              ],
+              "centroid": [
+                19.671987230646447,
+                29.353551476456506
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                3,
+                45,
+                56
+              ],
+              "centroid": [
+                25.493985565356855,
+                29.29270248596632
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                2,
+                54,
+                56
+              ],
+              "centroid": [
+                31.71298593879239,
+                29.212572373862695
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                4,
+                47,
+                56
+              ],
+              "centroid": [
+                26.753413654618473,
+                29.424096385542168
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                1,
+                1,
+                39,
+                56
+              ],
+              "centroid": [
+                21.66455194290246,
+                29.450436161776366
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                0,
+                38,
+                56
+              ],
+              "centroid": [
+                19.671987230646447,
+                29.353551476456506
+              ],
+              "sole_y": 56
+            }
+          ],
+          "root_translation_policy": "fixed root",
+          "body_face_policy": "single original head slice, no per-frame redraw"
+        },
+        "lift_jar": {
+          "boundary_first_last_rgba_mae": [
+            0.0,
+            0.0
+          ],
+          "runtime_metrics": [
+            {
+              "bbox": [
+                2,
+                0,
+                38,
+                56
+              ],
+              "centroid": [
+                19.671987230646447,
+                29.353551476456506
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                0,
+                2,
+                43,
+                56
+              ],
+              "centroid": [
+                24.237639553429027,
+                29.241626794258373
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                4,
+                52,
+                56
+              ],
+              "centroid": [
+                30.308752025931927,
+                29.287682333873583
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                2,
+                54,
+                56
+              ],
+              "centroid": [
+                31.71298593879239,
+                29.212572373862695
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                4,
+                48,
+                56
+              ],
+              "centroid": [
+                27.431672025723472,
+                29.442122186495176
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                0,
+                38,
+                56
+              ],
+              "centroid": [
+                19.671987230646447,
+                29.353551476456506
+              ],
+              "sole_y": 56
+            }
+          ],
+          "root_translation_policy": "fixed root",
+          "body_face_policy": "single original head slice, no per-frame redraw"
+        },
+        "yawn": {
+          "boundary_first_last_rgba_mae": [
+            0.0,
+            0.0
+          ],
+          "runtime_metrics": [
+            {
+              "bbox": [
+                2,
+                0,
+                38,
+                56
+              ],
+              "centroid": [
+                19.671987230646447,
+                29.353551476456506
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                0,
+                38,
+                56
+              ],
+              "centroid": [
+                19.442227763923526,
+                29.15544472152951
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                1,
+                38,
+                56
+              ],
+              "centroid": [
+                19.639004149377595,
+                29.34771784232365
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                1,
+                38,
+                56
+              ],
+              "centroid": [
+                19.73223140495868,
+                29.455371900826446
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                1,
+                38,
+                56
+              ],
+              "centroid": [
+                19.565505804311776,
+                29.308457711442784
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                2,
+                0,
+                38,
+                56
+              ],
+              "centroid": [
+                19.671987230646447,
+                29.353551476456506
+              ],
+              "sole_y": 56
+            }
+          ],
+          "root_translation_policy": "fixed root",
+          "body_face_policy": "single original head slice, no per-frame redraw"
+        }
+      }
+    },
+    "night_b": {
+      "motions": {
+        "seat_idle": {
+          "reports": [
+            {
+              "index": 0,
+              "pose": {
+                "torso": 0.0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 1,
+              "pose": {
+                "torso": 0.28284271247461906,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.08414010541134,
+                170.9113498415624
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.999987815327953,
+                  -0.004936516547910956,
+                  1.0135455303437624
+                ],
+                [
+                  0.004936516547910956,
+                  0.999987815327953,
+                  -0.6293762603629602
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                84,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 2,
+              "pose": {
+                "torso": 0.4,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.11912007236823,
+                170.87475159264497
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9999756307053947,
+                  -0.0069812602979615525,
+                  1.434277630791584
+                ],
+                [
+                  0.0069812602979615525,
+                  0.9999756307053947,
+                  -0.8886056127450104
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                84,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 3,
+              "pose": {
+                "torso": 0.28284271247461906,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.08414010541134,
+                170.9113498415624
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.999987815327953,
+                  -0.004936516547910956,
+                  1.0135455303437624
+                ],
+                [
+                  0.004936516547910956,
+                  0.999987815327953,
+                  -0.6293762603629602
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                84,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 4,
+              "pose": {
+                "torso": 4.898587196589413e-17,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  -8.5496475276524005e-19,
+                  0.0
+                ],
+                [
+                  8.5496475276524005e-19,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 5,
+              "pose": {
+                "torso": -0.282842712474619,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                118.91629854278237,
+                171.08906443728722
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.999987815327953,
+                  0.0049365165479109555,
+                  -1.0104262542997162
+                ],
+                [
+                  -0.0049365165479109555,
+                  0.999987815327953,
+                  0.6343719759022406
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                173,
+                141
+              ]
+            },
+            {
+              "index": 6,
+              "pose": {
+                "torso": -0.4,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                118.88175722223754,
+                171.12607696337156
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9999756307053947,
+                  0.0069812602979615525,
+                  -1.4280390913726535
+                ],
+                [
+                  -0.0069812602979615525,
+                  0.9999756307053947,
+                  0.8985970235331422
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                82,
+                55,
+                173,
+                141
+              ]
+            },
+            {
+              "index": 7,
+              "pose": {
+                "torso": -0.28284271247461906,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                118.91629854278237,
+                171.08906443728722
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.999987815327953,
+                  0.004936516547910956,
+                  -1.0104262542997162
+                ],
+                [
+                  -0.004936516547910956,
+                  0.999987815327953,
+                  0.6343719759022406
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                173,
+                141
+              ]
+            }
+          ],
+          "contact": "preview/night/night_b-seat_idle-contact.png"
+        },
+        "move_left": {
+          "reports": [
+            {
+              "index": 0,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ],
+              "facing_weight": 0,
+              "independent_facing_source": "left",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            },
+            {
+              "index": 1,
+              "pose": {
+                "torso": -1.5,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -1
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                118.56116002920614,
+                171.47701054495727
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 1,
+              "head_matrix": [
+                [
+                  0.9996573249755573,
+                  0.026176948307873153,
+                  -5.32241199998532
+                ],
+                [
+                  -0.026176948307873153,
+                  0.9996573249755573,
+                  2.4208977634185374
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                81,
+                55,
+                171,
+                141
+              ],
+              "facing_weight": 0.7,
+              "independent_facing_source": "left",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            },
+            {
+              "index": 2,
+              "pose": {
+                "torso": 1.0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -1
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.29943239661878,
+                170.68844586647023
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 1,
+              "head_matrix": [
+                [
+                  0.9998476951563913,
+                  -0.01745240643728351,
+                  3.5972383396250365
+                ],
+                [
+                  0.01745240643728351,
+                  0.9998476951563913,
+                  -3.2026855310325004
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                85,
+                55,
+                176,
+                141
+              ],
+              "facing_weight": 0.7,
+              "independent_facing_source": "left",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            },
+            {
+              "index": 3,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ],
+              "facing_weight": 0,
+              "independent_facing_source": "left",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            }
+          ],
+          "contact": "preview/night/night_b-move_left-contact.png"
+        },
+        "move_right": {
+          "reports": [
+            {
+              "index": 0,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ],
+              "facing_weight": 0,
+              "independent_facing_source": "right",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            },
+            {
+              "index": 1,
+              "pose": {
+                "torso": 1.5,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -1
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.4511762716738,
+                170.5346404058738
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 1,
+              "head_matrix": [
+                [
+                  0.9996573249755573,
+                  -0.026176948307873153,
+                  5.410136806242662
+                ],
+                [
+                  0.026176948307873153,
+                  0.9996573249755573,
+                  -4.280401003397003
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                86,
+                55,
+                176,
+                141
+              ],
+              "facing_weight": 0.7,
+              "independent_facing_source": "right",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            },
+            {
+              "index": 2,
+              "pose": {
+                "torso": -1.0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -1
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                118.70605057775114,
+                171.31673249821245
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 1,
+              "head_matrix": [
+                [
+                  0.9998476951563913,
+                  0.01745240643728351,
+                  -3.5582482996612157
+                ],
+                [
+                  -0.01745240643728351,
+                  0.9998476951563913,
+                  1.2651305169120803
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                81,
+                55,
+                172,
+                141
+              ],
+              "facing_weight": 0.7,
+              "independent_facing_source": "right",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            },
+            {
+              "index": 3,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ],
+              "facing_weight": 0,
+              "independent_facing_source": "right",
+              "eye_midpoint_registration": true,
+              "mirrored": false
+            }
+          ],
+          "contact": "preview/night/night_b-move_right-contact.png"
+        },
+        "catch": {
+          "reports": [
+            {
+              "index": 0,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_l": 0,
+                "forearm_l": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 1,
+              "pose": {
+                "torso": 19.25,
+                "head_nod": 0,
+                "raise_amount": 0.55,
+                "bob": 0,
+                "upper_l": 79.75,
+                "forearm_l": 37.400000000000006,
+                "upper_r": -2.75,
+                "forearm_r": -2.2
+              },
+              "core_bbox": [
+                73,
+                63,
+                205,
+                224
+              ],
+              "jar_opening": [
+                87.3397886070513,
+                112.38728413225391
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9440890203927842,
+                  -0.3296906452627873,
+                  74.74318766859503
+                ],
+                [
+                  0.3296906452627873,
+                  0.9440890203927842,
+                  -30.738651774157546
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                118,
+                63,
+                205,
+                148
+              ]
+            },
+            {
+              "index": 2,
+              "pose": {
+                "torso": 35,
+                "head_nod": 0,
+                "raise_amount": 1,
+                "bob": 0,
+                "upper_l": 145,
+                "forearm_l": 68,
+                "upper_r": -5,
+                "forearm_r": -4
+              },
+              "core_bbox": [
+                79,
+                65,
+                230,
+                224
+              ],
+              "jar_opening": [
+                157.24088142079432,
+                64.62979994406697
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": -4,
+              "head_matrix": [
+                [
+                  0.8191520442889918,
+                  -0.573576436351046,
+                  140.7317077829735
+                ],
+                [
+                  0.573576436351046,
+                  0.8191520442889918,
+                  -36.34395293217722
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                145,
+                73,
+                230,
+                155
+              ]
+            },
+            {
+              "index": 3,
+              "pose": {
+                "torso": 22.75,
+                "head_nod": 0,
+                "raise_amount": 0.65,
+                "bob": 0,
+                "upper_l": 94.25,
+                "forearm_l": 44.2,
+                "upper_r": -3.25,
+                "forearm_r": -2.6
+              },
+              "core_bbox": [
+                79,
+                66,
+                210,
+                224
+              ],
+              "jar_opening": [
+                95.83060116732582,
+                95.59293750800123
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9222009716704518,
+                  -0.3867109616368206,
+                  89.2340227617304
+                ],
+                [
+                  0.3867109616368206,
+                  0.9222009716704518,
+                  -33.55020228195565
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                125,
+                66,
+                210,
+                150
+              ]
+            },
+            {
+              "index": 4,
+              "pose": {
+                "torso": 7.0,
+                "head_nod": 0,
+                "raise_amount": 0.2,
+                "bob": 0,
+                "upper_l": 29.0,
+                "forearm_l": 13.600000000000001,
+                "upper_r": -1.0,
+                "forearm_r": -0.8
+              },
+              "core_bbox": [
+                69,
+                56,
+                186,
+                224
+              ],
+              "jar_opening": [
+                98.5738557214412,
+                163.56573665381907
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.992546151641322,
+                  -0.12186934340514748,
+                  25.937307987966022
+                ],
+                [
+                  0.12186934340514748,
+                  0.992546151641322,
+                  -14.07123704232987
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                96,
+                56,
+                186,
+                143
+              ]
+            },
+            {
+              "index": 5,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_l": 0,
+                "forearm_l": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            }
+          ],
+          "contact": "preview/night/night_b-catch-contact.png"
+        },
+        "lift_jar": {
+          "reports": [
+            {
+              "index": 0,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_l": 0,
+                "forearm_l": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 1,
+              "pose": {
+                "torso": 15.75,
+                "head_nod": 0,
+                "raise_amount": 0.45,
+                "bob": 0,
+                "upper_l": 65.25,
+                "forearm_l": 30.6,
+                "upper_r": -2.25,
+                "forearm_r": -1.8
+              },
+              "core_bbox": [
+                72,
+                61,
+                200,
+                224
+              ],
+              "jar_opening": [
+                84.55019673341067,
+                129.83004069642158
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9624552364536473,
+                  -0.27144044986507426,
+                  60.451021956273365
+                ],
+                [
+                  0.27144044986507426,
+                  0.9624552364536473,
+                  -27.047701055727202
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                112,
+                61,
+                200,
+                146
+              ]
+            },
+            {
+              "index": 2,
+              "pose": {
+                "torso": 31.5,
+                "head_nod": 0,
+                "raise_amount": 0.9,
+                "bob": 0,
+                "upper_l": 130.5,
+                "forearm_l": 61.2,
+                "upper_r": -4.5,
+                "forearm_r": -3.6
+              },
+              "core_bbox": [
+                79,
+                68,
+                224,
+                224
+              ],
+              "jar_opening": [
+                137.0791187968723,
+                68.33210389077408
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": -1,
+              "head_matrix": [
+                [
+                  0.8526401643540923,
+                  -0.5224985647159488,
+                  125.9742647294457
+                ],
+                [
+                  0.5224985647159488,
+                  0.8526401643540923,
+                  -36.671049976230364
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                139,
+                72,
+                224,
+                154
+              ]
+            },
+            {
+              "index": 3,
+              "pose": {
+                "torso": 35,
+                "head_nod": 0,
+                "raise_amount": 1,
+                "bob": 0,
+                "upper_l": 145,
+                "forearm_l": 68,
+                "upper_r": -5,
+                "forearm_r": -4
+              },
+              "core_bbox": [
+                79,
+                65,
+                230,
+                224
+              ],
+              "jar_opening": [
+                157.24088142079432,
+                64.62979994406697
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": -4,
+              "head_matrix": [
+                [
+                  0.8191520442889918,
+                  -0.573576436351046,
+                  140.7317077829735
+                ],
+                [
+                  0.573576436351046,
+                  0.8191520442889918,
+                  -36.34395293217722
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                145,
+                73,
+                230,
+                155
+              ]
+            },
+            {
+              "index": 4,
+              "pose": {
+                "torso": 24.5,
+                "head_nod": 0,
+                "raise_amount": 0.7,
+                "bob": 0,
+                "upper_l": 101.5,
+                "forearm_l": 47.599999999999994,
+                "upper_r": -3.5,
+                "forearm_r": -2.8
+              },
+              "core_bbox": [
+                79,
+                67,
+                214,
+                224
+              ],
+              "jar_opening": [
+                102.09858118307949,
+                88.09854420358907
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9099612708765432,
+                  -0.414693242656239,
+                  96.53707207233147
+                ],
+                [
+                  0.414693242656239,
+                  0.9099612708765432,
+                  -34.62279558968996
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                128,
+                67,
+                214,
+                151
+              ]
+            },
+            {
+              "index": 5,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_l": 0,
+                "forearm_l": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            }
+          ],
+          "contact": "preview/night/night_b-lift_jar-contact.png"
+        },
+        "yawn": {
+          "reports": [
+            {
+              "index": 0,
+              "pose": {
+                "torso": 0.0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 1,
+              "pose": {
+                "torso": 0.39,
+                "head_nod": 0.8999999999999999,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 33.6,
+                "forearm_r": 34.199999999999996
+              },
+              "core_bbox": [
+                79,
+                56,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.11613142502549,
+                170.8778726557405
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9999768339346702,
+                  -0.006806731520561792,
+                  1.3915384865568192
+                ],
+                [
+                  0.006806731520561792,
+                  0.9999768339346702,
+                  0.13346424269538493
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                84,
+                56,
+                174,
+                142
+              ]
+            },
+            {
+              "index": 2,
+              "pose": {
+                "torso": 1.04,
+                "head_nod": 2.4000000000000004,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 89.60000000000001,
+                "forearm_r": 91.2
+              },
+              "core_bbox": [
+                79,
+                57,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.31152245388854,
+                170.6760927588286
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9998352674223817,
+                  -0.01815042749949478,
+                  3.7056225523325796
+                ],
+                [
+                  0.01815042749949478,
+                  0.9998352674223817,
+                  -0.2898140066788286
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                85,
+                57,
+                176,
+                143
+              ]
+            },
+            {
+              "index": 3,
+              "pose": {
+                "torso": 1.3,
+                "head_nod": 3,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 112,
+                "forearm_r": 114
+              },
+              "core_bbox": [
+                79,
+                58,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.39031770292871,
+                170.59600363720406
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9997426093226983,
+                  -0.022687333572781358,
+                  4.615787388396454
+                ],
+                [
+                  0.022687333572781358,
+                  0.9997426093226983,
+                  0.14801421949891447
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                86,
+                58,
+                176,
+                144
+              ]
+            },
+            {
+              "index": 4,
+              "pose": {
+                "torso": 0.7150000000000001,
+                "head_nod": 1.6500000000000001,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 61.60000000000001,
+                "forearm_r": 62.7
+              },
+              "core_bbox": [
+                79,
+                57,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.2135407986501,
+                170.77670562642805
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9999221369902471,
+                  -0.012478780263208747,
+                  2.5431588586797456
+                ],
+                [
+                  0.012478780263208747,
+                  0.9999221369902471,
+                  0.4185223172891255
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                84,
+                57,
+                175,
+                143
+              ]
+            },
+            {
+              "index": 5,
+              "pose": {
+                "torso": 0.0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            }
+          ],
+          "contact": "preview/night/night_b-yawn-contact.png"
+        },
+        "cheer": {
+          "reports": [
+            {
+              "index": 0,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            },
+            {
+              "index": 1,
+              "pose": {
+                "torso": -0.5,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -0.5,
+                "upper_r": -13.25,
+                "forearm_r": -13.5
+              },
+              "core_bbox": [
+                79,
+                56,
+                191,
+                224
+              ],
+              "jar_opening": [
+                118.85233428137256,
+                171.65772494687982
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 1,
+              "head_matrix": [
+                [
+                  0.9999619230641713,
+                  0.008726535498373935,
+                  -1.7840659293805743
+                ],
+                [
+                  -0.008726535498373935,
+                  0.9999619230641713,
+                  0.6248023156367424
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                82,
+                56,
+                173,
+                142
+              ]
+            },
+            {
+              "index": 2,
+              "pose": {
+                "torso": -1.4,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -1.4,
+                "upper_r": -37.099999999999994,
+                "forearm_r": -37.8
+              },
+              "core_bbox": [
+                79,
+                55,
+                201,
+                224
+              ],
+              "jar_opening": [
+                118.5900261553436,
+                171.04485388046766
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 1,
+              "head_matrix": [
+                [
+                  0.9997014897811831,
+                  0.024432178152653153,
+                  -4.970387213285335
+                ],
+                [
+                  -0.024432178152653153,
+                  0.9997014897811831,
+                  1.7885133983970776
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                81,
+                55,
+                171,
+                141
+              ]
+            },
+            {
+              "index": 3,
+              "pose": {
+                "torso": -2,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -2,
+                "upper_r": -53,
+                "forearm_r": -54
+              },
+              "core_bbox": [
+                79,
+                55,
+                199,
+                224
+              ],
+              "jar_opening": [
+                118.41767366971376,
+                171.6385468813204
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 2,
+              "head_matrix": [
+                [
+                  0.9993908270190958,
+                  0.03489949670250097,
+                  -7.0764226824569505
+                ],
+                [
+                  -0.03489949670250097,
+                  0.9993908270190958,
+                  2.5920160390055003
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                80,
+                55,
+                170,
+                141
+              ]
+            },
+            {
+              "index": 4,
+              "pose": {
+                "torso": -1.8,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -1.8,
+                "upper_r": -47.7,
+                "forearm_r": -48.6
+              },
+              "core_bbox": [
+                79,
+                56,
+                200,
+                224
+              ],
+              "jar_opening": [
+                118.47489900908866,
+                171.77378213718885
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 2,
+              "head_matrix": [
+                [
+                  0.9995065603657316,
+                  0.03141075907812829,
+                  -6.376045337829936
+                ],
+                [
+                  -0.03141075907812829,
+                  0.9995065603657316,
+                  2.321732287025452
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                80,
+                56,
+                171,
+                141
+              ]
+            },
+            {
+              "index": 5,
+              "pose": {
+                "torso": -1.1,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -1.1,
+                "upper_r": -29.150000000000002,
+                "forearm_r": -29.700000000000003
+              },
+              "core_bbox": [
+                79,
+                55,
+                199,
+                224
+              ],
+              "jar_opening": [
+                118.67696066101568,
+                171.24868685712647
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 1,
+              "head_matrix": [
+                [
+                  0.9998157121216442,
+                  0.01919744239968967,
+                  -3.911886843506835
+                ],
+                [
+                  -0.01919744239968967,
+                  0.9998157121216442,
+                  1.3950516422232169
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                81,
+                55,
+                172,
+                141
+              ]
+            },
+            {
+              "index": 6,
+              "pose": {
+                "torso": -0.3,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": -0.3,
+                "upper_r": -7.949999999999999,
+                "forearm_r": -8.1
+              },
+              "core_bbox": [
+                79,
+                55,
+                187,
+                224
+              ],
+              "jar_opening": [
+                118.9112353544122,
+                170.7944803807593
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  0.9999862922474267,
+                  0.00523596383141958,
+                  -1.07161799311163
+                ],
+                [
+                  -0.00523596383141958,
+                  0.9999862922474267,
+                  0.37301345969923433
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                173,
+                141
+              ]
+            },
+            {
+              "index": 7,
+              "pose": {
+                "torso": 0,
+                "head_nod": 0,
+                "raise_amount": 0,
+                "bob": 0,
+                "upper_r": 0,
+                "forearm_r": 0
+              },
+              "core_bbox": [
+                79,
+                55,
+                182,
+                224
+              ],
+              "jar_opening": [
+                119.0,
+                171.0
+              ],
+              "head_source_sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+              "head_expression_transform_identical": true,
+              "source_pixels_not_redrawn": true,
+              "jar_world_rotation_degrees": 0,
+              "ground_compensation_y": 0,
+              "head_matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "head_core_bbox": [
+                83,
+                55,
+                174,
+                141
+              ]
+            }
+          ],
+          "contact": "preview/night/night_b-cheer-contact.png"
+        }
+      },
+      "continuity": {
+        "move_left": {
+          "boundary_first_last_rgba_mae": [
+            0.0,
+            0.0
+          ],
+          "runtime_metrics": [
+            {
+              "bbox": [
+                3,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                19.531177829099306,
+                29.63125481139338
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                4,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                18.71664050235479,
+                29.198587127158557
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                4,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                19.5375,
+                29.0609375
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                3,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                19.531177829099306,
+                29.63125481139338
+              ],
+              "sole_y": 56
+            }
+          ],
+          "root_translation_policy": "program applies eased 12px seated scoot",
+          "body_face_policy": "rigid original head; source views registered then blended during 4-frame scoot"
+        },
+        "move_right": {
+          "boundary_first_last_rgba_mae": [
+            0.0,
+            0.0
+          ],
+          "runtime_metrics": [
+            {
+              "bbox": [
+                3,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                19.531177829099306,
+                29.63125481139338
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                1,
+                0,
+                35,
+                56
+              ],
+              "centroid": [
+                18.667699457784664,
+                29.49961270333075
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                1,
+                0,
+                35,
+                56
+              ],
+              "centroid": [
+                17.88312693498452,
+                29.562693498452013
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                3,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                19.531177829099306,
+                29.63125481139338
+              ],
+              "sole_y": 56
+            }
+          ],
+          "root_translation_policy": "program applies eased 12px seated scoot",
+          "body_face_policy": "rigid original head; source views registered then blended during 4-frame scoot"
+        },
+        "catch": {
+          "boundary_first_last_rgba_mae": [
+            0.0,
+            0.0
+          ],
+          "runtime_metrics": [
+            {
+              "bbox": [
+                3,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                19.531177829099306,
+                29.63125481139338
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                1,
+                3,
+                44,
+                56
+              ],
+              "centroid": [
+                25.12972972972973,
+                29.727413127413126
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                3,
+                3,
+                53,
+                56
+              ],
+              "centroid": [
+                31.12728719172633,
+                30.353221957040574
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                3,
+                4,
+                46,
+                56
+              ],
+              "centroid": [
+                26.365967365967364,
+                29.89044289044289
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                0,
+                0,
+                38,
+                56
+              ],
+              "centroid": [
+                21.388505747126437,
+                29.693486590038315
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                3,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                19.531177829099306,
+                29.63125481139338
+              ],
+              "sole_y": 56
+            }
+          ],
+          "root_translation_policy": "fixed root",
+          "body_face_policy": "single original head slice, no per-frame redraw"
+        },
+        "lift_jar": {
+          "boundary_first_last_rgba_mae": [
+            0.0,
+            0.0
+          ],
+          "runtime_metrics": [
+            {
+              "bbox": [
+                3,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                19.531177829099306,
+                29.63125481139338
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                1,
+                2,
+                42,
+                56
+              ],
+              "centroid": [
+                24.02084942084942,
+                29.80926640926641
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                3,
+                4,
+                51,
+                56
+              ],
+              "centroid": [
+                29.66306027820711,
+                30.363987635239567
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                3,
+                3,
+                53,
+                56
+              ],
+              "centroid": [
+                31.12728719172633,
+                30.353221957040574
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                3,
+                4,
+                47,
+                56
+              ],
+              "centroid": [
+                27.055944055944057,
+                29.933177933177934
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                3,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                19.531177829099306,
+                29.63125481139338
+              ],
+              "sole_y": 56
+            }
+          ],
+          "root_translation_policy": "fixed root",
+          "body_face_policy": "single original head slice, no per-frame redraw"
+        },
+        "yawn": {
+          "boundary_first_last_rgba_mae": [
+            0.0,
+            0.0
+          ],
+          "runtime_metrics": [
+            {
+              "bbox": [
+                3,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                19.531177829099306,
+                29.63125481139338
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                3,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                19.056726094003242,
+                29.24554294975689
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                3,
+                1,
+                37,
+                56
+              ],
+              "centroid": [
+                19.16652994257588,
+                29.369975389663658
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                3,
+                1,
+                37,
+                56
+              ],
+              "centroid": [
+                19.24468085106383,
+                29.53027823240589
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                3,
+                1,
+                37,
+                56
+              ],
+              "centroid": [
+                19.082372322899506,
+                29.46457990115321
+              ],
+              "sole_y": 56
+            },
+            {
+              "bbox": [
+                3,
+                0,
+                37,
+                56
+              ],
+              "centroid": [
+                19.531177829099306,
+                29.63125481139338
+              ],
+              "sole_y": 56
+            }
+          ],
+          "root_translation_policy": "fixed root",
+          "body_face_policy": "single original head slice, no per-frame redraw"
+        }
+      }
+    }
+  },
+  "known_limits": [
+    "Seated scoot uses 4 source-view blended frames; full-size mid-turn softness is disclosed.",
+    "Catch uses a 35 degree whole-upper-body lean to place the jar opening above the cap without stretching arm pixels.",
+    "Yawn is a hand-to-mouth/head-nod gesture with the immutable neutral mouth, not a redrawn open-mouth expression.",
+    "Occluded garment underlays copy adjacent original clothing pixels; they are technical completion, not ground-truth hidden anatomy."
+  ]
+}

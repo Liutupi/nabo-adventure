@@ -1,0 +1,62 @@
+{
+  "manifest_sha256": "d9d5b35ec4702fa5fd739b5224d1d5c0b933b72c5d272ade1f9c3a8e6679a0bb",
+  "background_rgb": [
+    24,
+    48,
+    60
+  ],
+  "world_index": 4,
+  "static_resources": 10,
+  "dynamic_prop_frames": 4,
+  "outputs": {
+    "delivery-static-dynamic-1x.png": [
+      640,
+      448
+    ],
+    "delivery-scene-00-1x.png": [
+      240,
+      320
+    ],
+    "delivery-scene-01-1x.png": [
+      240,
+      320
+    ],
+    "delivery-scene-02-1x.png": [
+      240,
+      320
+    ],
+    "delivery-scene-03-1x.png": [
+      240,
+      320
+    ],
+    "delivery-scenes-1x.png": [
+      960,
+      344
+    ]
+  },
+  "source_images": {
+    "games/night/tiles/grass_00.png": "f2dfcb99c5c2a501bf784611900de348dbc6e5b77dbb3a9d8ccc655263a3a6ba",
+    "games/night/tiles/grass_01.png": "31db72f6f667f9fef7cf465a2f117412f5b0b4aafdc7d85fbfd2f01c351dc7a7",
+    "games/night/tiles/grass_02.png": "6082c63af9d885dcf434e879a93d80054e98c95a4e85ec2f9df9c61198342d25",
+    "games/night/tiles/grass_03.png": "05ee04f17b0964af227b2007acf74e7cbddf62f3ca706dc13e4471b8826b424e",
+    "games/night/tiles/tree_shadow_00.png": "f2c1256abc58f1009ca28cdd096a1e6761182e36b62450cb1cc1af1234b04256",
+    "games/night/tiles/tree_shadow_01.png": "386b269b6e2a6d05b1a5fc4233d7d458ded976ebc3293e484200219610f2bab7",
+    "games/night/tiles/tree_shadow_02.png": "2a0712067782e1566241bd1bc37e477e39b704b3e69553dcb43038078ecae196",
+    "games/night/tiles/tree_shadow_03.png": "eb258485aff0ecbcba170826d06a78cc28b0c0c2b6294f45948cc57b56ff9a72",
+    "games/night/props/jar_glow.png": "0ff1ff51dd1b6eba99bdf27a5caae6c37a8b386378ec4d02c98987cbce0cbf57",
+    "games/night/props/glass_jar.png": "bf3863697df2f5d763634c550964c1082ce2b1a93bb31c85e5f7c35372a63640",
+    "games/night/moth/000.png": "2d5b84b6e04443325a10f17cb2dc764a6556aa7a0fa53edbea04ed4c1e4ef897",
+    "games/night/moth/001.png": "9f74aaacb985b955a258fc55abff3dd9aee89af6e3b8d9a0669e091fa430ba95",
+    "games/night/moth/002.png": "2a677bf528f0682d037ec7601e8fff00745115bfbd701ca8b195eaabfa294999",
+    "games/night/moth/003.png": "9f74aaacb985b955a258fc55abff3dd9aee89af6e3b8d9a0669e091fa430ba95"
+  },
+  "native_size": true,
+  "source_resize": false,
+  "source_redraw": false,
+  "composition": "alpha paste of existing runtime/static pixels; SKY full-scene pixel crops preserve existing rope continuity",
+  "scope": "review evidence, not gameplay/device acceptance",
+  "all_source_files_checked": 710,
+  "source_tree_aggregate_sha256": "583158876e02ebd86d43d37f7e133345a9088b7bb9c4940153fab06725cb6ede",
+  "all_source_sha_unchanged": true,
+  "reproduction_script_sha256": "bcb84dc2483ff4753e8c3f6883b849f9702543585fc50f81a55907b591cf629d"
+}

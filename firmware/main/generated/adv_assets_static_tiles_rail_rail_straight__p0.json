@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_rail_rail_straight__p0",
   "width": 32,
   "height": 32,
@@ -14,7 +14,7 @@
   "keys": [
     0
   ],
-  "data_bytes": 608,
+  "data_bytes": 552,
   "table_bytes": 142,
   "frame_sha256": [
     "7512234eeb3b517798b61042e36e076736a5729452620d96ae2ecd6e613ffc39"
@@ -37,5 +37,15 @@
       "sha256": "0579917e1b4a0d82544cfee4618f07ddfb8490acdfe54f787433253f0a3484c2"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/rail/rail-straight",
+      "logical_symbol": "adv_assets_static_tiles_rail_rail_straight__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

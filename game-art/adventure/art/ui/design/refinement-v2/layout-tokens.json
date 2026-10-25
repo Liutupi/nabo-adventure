@@ -1,0 +1,127 @@
+{
+  "schema": "nabo-ui-refinement-v2-layout-tokens",
+  "map_preview_scope": "typography/card layout demonstration only; not a replacement for the nine-world vertical map",
+  "fixture_values": "12 best / 1 of24 are layout examples, not current hardware NVS. Production binds all strings to adv_model state.",
+  "preserve_production": {
+    "path_order": "adv_path[] unchanged",
+    "world_y": "120 + (8 - path_index) * 112",
+    "node_x": "path_index % 2 ? 160 : 80",
+    "camera": "existing camera()/traveler() including animated turns and walk",
+    "navigation": "UP/DOWN follow adv_path; do not bind two static mockup nodes",
+    "world_ground_and_landmarks": "existing WORLD[] gradient, frozen landmark/decor, scroll geometry unchanged"
+  },
+  "safe_bars": {
+    "top": [
+      0,
+      32
+    ],
+    "bottom": [
+      290,
+      320
+    ]
+  },
+  "header": {
+    "title": {
+      "font": "bold18",
+      "ink": "#fffaf0",
+      "x": 20,
+      "ink_top": 8,
+      "text": "冒险地图"
+    },
+    "world": {
+      "font": "existing medium12",
+      "ink": "#fffaf0",
+      "x": 104,
+      "ink_top": 11,
+      "max_width": 56
+    },
+    "count": {
+      "font": "latin12 or existing numeric12",
+      "ink": "#fffaf0",
+      "right": 224,
+      "ink_top": 11
+    }
+  },
+  "station_cards": {
+    "coordinate_space": "node_screen=(node_x(i),world_y(i)-cam)",
+    "box": {
+      "x": "node_x<120 ? node_x+25 : node_x-137",
+      "y": "node_y-26",
+      "width": 112,
+      "height": 52
+    },
+    "selected": {
+      "fill": "#203849",
+      "accent_left_px": 4,
+      "accent": "#b64c43",
+      "text": "#fffaf0",
+      "secondary_text": "#fffaf0",
+      "border": null
+    },
+    "normal": {
+      "fill": "#fffaf0",
+      "text": "#203849",
+      "secondary_text": "#60707a",
+      "border": null
+    },
+    "locked": {
+      "text": "#60707a",
+      "selected_text": "#fffaf0"
+    },
+    "title": {
+      "font": "bold16",
+      "ink_xy_relative": [
+        8,
+        8
+      ],
+      "max_ink_height": 18
+    },
+    "secondary": {
+      "font": "existing medium12",
+      "ink_xy_relative": [
+        8,
+        30
+      ],
+      "max_ink_height": 14
+    },
+    "best": {
+      "font": "numeric12",
+      "right_relative": 104,
+      "ink_top_relative": 30
+    },
+    "stamps": {
+      "center_x_relative": [
+        13,
+        24,
+        35
+      ],
+      "center_y_relative": 37,
+      "radius": 4
+    },
+    "padding_px": 8,
+    "font_baseline_rule": "ink_top + actual generated glyph box_h + ofs_y; verify in real C renderer, not nominal point size"
+  },
+  "cover": {
+    "wordmark_xy": [
+      10,
+      12
+    ],
+    "wordmark_size": [
+      220,
+      88
+    ],
+    "character_root": [
+      120,
+      266
+    ],
+    "caption_ink_top": 270,
+    "button": [
+      16,
+      284,
+      208,
+      34
+    ],
+    "button_text": "#fffaf0"
+  },
+  "selected_dynamic_text": "cream #fffaf0 for titles, scores and secondary labels; never navy on navy"
+}

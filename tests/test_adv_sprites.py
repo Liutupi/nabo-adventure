@@ -99,8 +99,11 @@ class Sprites(unittest.TestCase):
         asset = asset_for(palette, packed)
         self.assertLessEqual(len(palette), 64)
         self.assertTrue(any(k != f for f, k in enumerate(packed['keys'])))
-        self.assertEqual(packed['keys'][8], 8)
-        self.assertEqual(packed['keys'][16], 16)
+        for f, key in enumerate(packed['keys']):
+            self.assertLessEqual(key, f)
+            self.assertLess(f - key, packer.KEY_INTERVAL)
+            self.assertEqual(packed['keys'][key], key)
+            self.assertEqual(packed['keys'][key:f + 1], [key] * (f - key + 1))
         order = list(range(len(frames))); random.Random(8).shuffle(order)
         for f in order:
             self.assertEqual(packer.decode(packed, f), frames[f])
@@ -143,6 +146,7 @@ class Sprites(unittest.TestCase):
         subprocess.run(args, check=True, capture_output=True)
         self.assertEqual(before, [Path(str(output) + ext).read_bytes() for ext in ('.h', '.c', '.json')])
         report = json.loads(before[2]); self.assertEqual(report['verified_frames'], 10)
+        self.assertEqual(report['format'], packer.FORMAT)
         library = self.folder / 'generated.dll'
         self.compile(library, [Path(str(output) + '.c')])
         lib = C.CDLL(str(library))

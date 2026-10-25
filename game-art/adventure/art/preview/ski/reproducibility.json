@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "files_compared": 327,
+  "changed": [],
+  "manifest_sha256": "ce917671979911b3aa2d645ab99a30bd605677497a4cb5e13649a51ab35c84fb",
+  "method": "two complete deterministic builds including production C frame/row comparison",
+  "tools": "bundled Python3.12.14/Pillow12.3.0/numpy2.3.5 and portable w64devkit gcc16.2.0",
+  "cross_library_version_guarantee": false,
+  "new_imagegen_frames": 0
+}

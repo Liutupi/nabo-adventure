@@ -1,0 +1,391 @@
+{
+  "space": "native 240x320; text positions are ink top-left, derive C baseline from generated glyph metrics",
+  "dynamic_text": [
+    {
+      "fixture_text": "小火车",
+      "anchor_xy": [
+        31,
+        46
+      ],
+      "ink_box": [
+        31,
+        46,
+        79,
+        63
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "需深潜铜章",
+      "anchor_xy": [
+        31,
+        68
+      ],
+      "ink_box": [
+        31,
+        68,
+        91,
+        82
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        96,
+        112,
+        122
+      ],
+      "color_name": "muted",
+      "align": "left"
+    },
+    {
+      "fixture_text": "跳一跳",
+      "anchor_xy": [
+        113,
+        158
+      ],
+      "ink_box": [
+        113,
+        158,
+        161,
+        174
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "left"
+    },
+    {
+      "fixture_text": "12",
+      "anchor_xy": [
+        209,
+        180
+      ],
+      "ink_box": [
+        195,
+        180,
+        209,
+        189
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "right"
+    },
+    {
+      "fixture_text": "护照亭",
+      "anchor_xy": [
+        31,
+        270
+      ],
+      "ink_box": [
+        31,
+        270,
+        79,
+        288
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "left"
+    },
+    {
+      "fixture_text": "护照 · 设置",
+      "anchor_xy": [
+        31,
+        292
+      ],
+      "ink_box": [
+        31,
+        292,
+        97,
+        306
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        96,
+        112,
+        122
+      ],
+      "color_name": "muted",
+      "align": "left"
+    },
+    {
+      "fixture_text": "冒险地图",
+      "anchor_xy": [
+        20,
+        6
+      ],
+      "ink_box": [
+        20,
+        6,
+        92,
+        25
+      ],
+      "size_px": 18,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "left"
+    },
+    {
+      "fixture_text": "小镇",
+      "anchor_xy": [
+        108,
+        10
+      ],
+      "ink_box": [
+        108,
+        10,
+        132,
+        24
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "left"
+    },
+    {
+      "fixture_text": "章 1/24",
+      "anchor_xy": [
+        226,
+        11
+      ],
+      "ink_box": [
+        185,
+        11,
+        226,
+        25
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "right"
+    },
+    {
+      "fixture_text": "上 / 下移动   OK 进入",
+      "anchor_xy": [
+        120,
+        300
+      ],
+      "ink_box": [
+        64,
+        300,
+        176,
+        314
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "center"
+    }
+  ],
+  "cards": [
+    {
+      "family": "info",
+      "state": "normal",
+      "xy": [
+        23,
+        38
+      ],
+      "size": [
+        112,
+        52
+      ],
+      "dynamic_text": "#203849"
+    },
+    {
+      "family": "info",
+      "state": "current",
+      "xy": [
+        105,
+        150
+      ],
+      "size": [
+        112,
+        52
+      ],
+      "dynamic_text": "#fffaf0"
+    },
+    {
+      "family": "info",
+      "state": "normal",
+      "xy": [
+        23,
+        262
+      ],
+      "size": [
+        112,
+        52
+      ],
+      "dynamic_text": "#203849"
+    }
+  ],
+  "assets": [
+    {
+      "path": "map/footprints-forward.png",
+      "xy": [
+        141,
+        77
+      ]
+    },
+    {
+      "path": "map/footprints-forward.png",
+      "xy": [
+        128,
+        96
+      ]
+    },
+    {
+      "path": "map/footprints-forward.png",
+      "xy": [
+        115,
+        115
+      ]
+    },
+    {
+      "path": "map/footprints-forward.png",
+      "xy": [
+        101,
+        133
+      ]
+    },
+    {
+      "path": "map/footprints-forward.png",
+      "xy": [
+        88,
+        152
+      ]
+    },
+    {
+      "path": "map/footprints-forward.png",
+      "xy": [
+        88,
+        189
+      ]
+    },
+    {
+      "path": "map/footprints-forward.png",
+      "xy": [
+        101,
+        208
+      ]
+    },
+    {
+      "path": "map/footprints-forward.png",
+      "xy": [
+        115,
+        227
+      ]
+    },
+    {
+      "path": "map/footprints-forward.png",
+      "xy": [
+        128,
+        245
+      ]
+    },
+    {
+      "path": "map/footprints-forward.png",
+      "xy": [
+        141,
+        264
+      ]
+    },
+    {
+      "path": "map/station-locked.png",
+      "xy": [
+        136,
+        50
+      ]
+    },
+    {
+      "path": "map/station-current.png",
+      "xy": [
+        56,
+        162
+      ]
+    },
+    {
+      "path": "map/stamp-bronze.png",
+      "xy": [
+        113,
+        180
+      ]
+    },
+    {
+      "path": "map/station-unlocked.png",
+      "xy": [
+        136,
+        274
+      ]
+    },
+    {
+      "path": "bars/top.png",
+      "xy": [
+        0,
+        0
+      ]
+    },
+    {
+      "path": "bars/bottom.png",
+      "xy": [
+        0,
+        290
+      ]
+    }
+  ],
+  "numbers": []
+}

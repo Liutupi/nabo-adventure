@@ -9,6 +9,7 @@ idf_component_register(
     SRCS
         ${ADV_GENERATED}
         "adv_boot.c"
+        "adv_boot_motion.c"
         "adv_demo.c"
         "adv_gfx.c"
         "adv_main.c"
@@ -47,7 +48,7 @@ idf_component_register(
         "nabo_poster_font_28.c"
         "nabo_poster_font_48.c"
         "nabo_ui_font_18.c"
-    INCLUDE_DIRS "."
+    INCLUDE_DIRS "." "generated"
     REQUIRES bsp lvgl esp_lcd esp_timer nvs_flash esp_rom
     EMBED_FILES "jump_sprites.bin" "jump_sounds.bin" "adv_boot_voice.wav"
 )

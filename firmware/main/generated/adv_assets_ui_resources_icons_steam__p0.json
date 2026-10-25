@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_resources_icons_steam__p0",
   "width": 16,
   "height": 16,
@@ -7,7 +7,7 @@
     0,
     8649,
     15375,
-    29514
+    25487
   ],
   "background_rgb888": null,
   "key_interval": 8,
@@ -20,7 +20,7 @@
     "0838185e1fc44d5da3d2cd6f39e4fea7d20df0beb2b2a99e70b4720cf8f24628"
   ],
   "source_sha256": [
-    "579e8ac49848ca6d56842df864e9c04de1a01d03e17476717223a401a81663b4"
+    "41f1ff7b1fb17f8ab52f2d809ec2e7e12d6b6576dd668da661f533b1a5e54e01"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,8 +34,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\icons\\steam.png",
-      "sha256": "787a93ff6825eb9c151cec800f1de0b857a448c83246cd12864f182261322af3"
+      "sha256": "4be2ef8ff5b002522692ac02b400b1f47f3817fb7bbf11d11f4082cf1a577c87"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/resources/icons/steam",
+      "logical_symbol": "adv_assets_ui_resources_icons_steam__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

@@ -1,12 +1,11 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_resources_low_fill__p0",
   "width": 8,
   "height": 6,
   "palette_rgb565": [
     0,
-    45672,
-    48007
+    45672
   ],
   "background_rgb888": null,
   "key_interval": 8,
@@ -14,12 +13,12 @@
     0
   ],
   "data_bytes": 12,
-  "table_bytes": 36,
+  "table_bytes": 34,
   "frame_sha256": [
-    "13015f2adf5a6f8985fbee604b345ed6191ec277be9480d3b5f0cc62b48bbb68"
+    "5bf90435cd45d0475cbb0ace7e7e3a672ed2a3a4984ad3e8624d8878725a9c2e"
   ],
   "source_sha256": [
-    "68f641f31ba54c770d356681598f938e219f00fb8caade8acd77a5c9fd6e17c4"
+    "db462e4b5004e7dbe69de1d18359e8477a88aef967bf02a3770876d76a7c298a"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,8 +32,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\low-fill.png",
-      "sha256": "c802a64e44cc3e9969549ef5c84e3e6ebb4a84ab8a7703f2cb08547a6fb13d7d"
+      "sha256": "17c2fb5f5df323d7f63d5bc8f24742bb131441c21a8ad5f717af387ff08c157b"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/resources/low-fill",
+      "logical_symbol": "adv_assets_ui_resources_low_fill__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

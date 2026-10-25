@@ -1,0 +1,1260 @@
+{
+  "version": 1,
+  "canvas": [
+    256,
+    256
+  ],
+  "anchors": {
+    "half": [
+      128,
+      160
+    ],
+    "full": [
+      128,
+      224
+    ]
+  },
+  "fps": 12,
+  "common_head": [
+    {
+      "name": "head",
+      "path": "rig/common/front/head.png",
+      "sha256": "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+      "pivot": [
+        128,
+        97
+      ],
+      "parent": "rigid_head",
+      "local_alpha_mask": "rig/post/head-garment-exclusion-mask.png"
+    },
+    {
+      "name": "expression_neutral",
+      "path": "rig/common/front/expression_neutral.png",
+      "sha256": "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd",
+      "pivot": [
+        128,
+        97
+      ],
+      "parent": "rigid_head",
+      "local_alpha_mask": "rig/post/head-garment-exclusion-mask.png"
+    }
+  ],
+  "common_source_sha256": "c4526e8e1562c5f43053556fc6e8605d74db261dca1f095ec429a2492d702c9b",
+  "draw_order": [
+    "thigh_l",
+    "shin_foot_l",
+    "thigh_r",
+    "shin_foot_r",
+    "upper_arm_l",
+    "forearm_hand_l",
+    "upper_arm_r",
+    "forearm_hand_r",
+    "torso",
+    "secondary",
+    "collar",
+    "head"
+  ],
+  "identity_policy": "No generated master head is used. Common front head and neutral expression share one rigid integer translation; never mirror or redraw.",
+  "garment_exclusion": {
+    "preserve_all_rows": [
+      0,
+      93
+    ],
+    "preserve_neck_rect": [
+      121,
+      94,
+      137,
+      100
+    ],
+    "reason": "Frozen head slice includes old travel collar at its bottom; POST alpha-only mask excludes that garment. Common files and all retained RGB remain unchanged."
+  },
+  "representation": "New costume raster pixels in editable SVG wrappers plus explicit joint masks; no new vector character.",
+  "skins": {
+    "post_a": {
+      "source": "games/post/source/post-a-master.png",
+      "source_sha256": "a533a3976c3e2cae31b9e860860e1b0bd81b9b1488eaff5e70fded85bfac3f93",
+      "sampling": {
+        "core_bbox": [
+          355,
+          46,
+          888,
+          1222
+        ],
+        "sampling_bbox": [
+          353,
+          44,
+          890,
+          1224
+        ],
+        "scale": 0.17687074829931973,
+        "sampled_size": [
+          95,
+          209
+        ],
+        "paste_xy": [
+          81,
+          16
+        ],
+        "canvas": [
+          256,
+          256
+        ],
+        "anchor": [
+          128,
+          224
+        ],
+        "core_height": 208,
+        "alpha_policy": "Source RGBA retained; core threshold only chooses crop; final export thresholds alpha at 128."
+      },
+      "parts": {
+        "secondary": {
+          "source_sha256": "a533a3976c3e2cae31b9e860860e1b0bd81b9b1488eaff5e70fded85bfac3f93",
+          "parent": "torso",
+          "pivot": [
+            136,
+            110
+          ],
+          "polygon": [
+            [
+              130,
+              108
+            ],
+            [
+              138,
+              109
+            ],
+            [
+              143,
+              124
+            ],
+            [
+              136,
+              122
+            ]
+          ],
+          "source_overlap_circles": [],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_a/secondary.png",
+          "svg": "rig/post/skins/post_a/secondary.svg",
+          "mask": "rig/post/skins/post_a/secondary-mask.png",
+          "sha256": "be3d1ca0cc5f24029e9ee55f8645e381d8ab383bf58051334a5f856b2421d4a8",
+          "bbox": [
+            130,
+            108,
+            144,
+            125
+          ]
+        },
+        "collar": {
+          "source_sha256": "a533a3976c3e2cae31b9e860860e1b0bd81b9b1488eaff5e70fded85bfac3f93",
+          "parent": "torso",
+          "pivot": [
+            128,
+            103
+          ],
+          "polygon": [
+            [
+              118,
+              98
+            ],
+            [
+              138,
+              98
+            ],
+            [
+              144,
+              111
+            ],
+            [
+              134,
+              116
+            ],
+            [
+              115,
+              111
+            ]
+          ],
+          "source_overlap_circles": [],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_a/collar.png",
+          "svg": "rig/post/skins/post_a/collar.svg",
+          "mask": "rig/post/skins/post_a/collar-mask.png",
+          "sha256": "2bc11f0e0443805a7d2180ec8010bf28cf46df663a192b00d5d926cd1c1d5f35",
+          "bbox": [
+            115,
+            98,
+            145,
+            116
+          ]
+        },
+        "upper_arm_l": {
+          "source_sha256": "a533a3976c3e2cae31b9e860860e1b0bd81b9b1488eaff5e70fded85bfac3f93",
+          "parent": "torso",
+          "pivot": [
+            111,
+            108
+          ],
+          "polygon": [
+            [
+              104,
+              103
+            ],
+            [
+              118,
+              105
+            ],
+            [
+              111,
+              128
+            ],
+            [
+              104,
+              147
+            ],
+            [
+              85,
+              145
+            ],
+            [
+              88,
+              120
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                111,
+                108
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_a/upper_arm_l.png",
+          "svg": "rig/post/skins/post_a/upper_arm_l.svg",
+          "mask": "rig/post/skins/post_a/upper_arm_l-mask.png",
+          "sha256": "cf8c8a547fca44735a3b1a22b54bb176773a5e7be7f7d4b5501f905213ff3ba3",
+          "bbox": [
+            91,
+            103,
+            118,
+            148
+          ]
+        },
+        "forearm_hand_l": {
+          "source_sha256": "a533a3976c3e2cae31b9e860860e1b0bd81b9b1488eaff5e70fded85bfac3f93",
+          "parent": "upper_arm_l",
+          "pivot": [
+            98,
+            140
+          ],
+          "polygon": [
+            [
+              84,
+              134
+            ],
+            [
+              106,
+              134
+            ],
+            [
+              108,
+              153
+            ],
+            [
+              105,
+              173
+            ],
+            [
+              84,
+              173
+            ],
+            [
+              82,
+              149
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                98,
+                140
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": true,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_a/forearm_hand_l.png",
+          "svg": "rig/post/skins/post_a/forearm_hand_l.svg",
+          "mask": "rig/post/skins/post_a/forearm_hand_l-mask.png",
+          "sha256": "3059b0d8159f1e573274098164b26adbb0af218ae2112e8c19b468017e767c05",
+          "bbox": [
+            90,
+            134,
+            109,
+            175
+          ],
+          "grip_point": [
+            96,
+            161
+          ]
+        },
+        "upper_arm_r": {
+          "source_sha256": "a533a3976c3e2cae31b9e860860e1b0bd81b9b1488eaff5e70fded85bfac3f93",
+          "parent": "torso",
+          "pivot": [
+            148,
+            108
+          ],
+          "polygon": [
+            [
+              141,
+              104
+            ],
+            [
+              154,
+              101
+            ],
+            [
+              172,
+              121
+            ],
+            [
+              174,
+              146
+            ],
+            [
+              153,
+              147
+            ],
+            [
+              144,
+              126
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                148,
+                108
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_a/upper_arm_r.png",
+          "svg": "rig/post/skins/post_a/upper_arm_r.svg",
+          "mask": "rig/post/skins/post_a/upper_arm_r-mask.png",
+          "sha256": "c2677d31ed80b58bed6fdb7cb5851e4ee597fbb58e95d563fa4ce3d8e7e06fe2",
+          "bbox": [
+            142,
+            103,
+            170,
+            148
+          ]
+        },
+        "forearm_hand_r": {
+          "source_sha256": "a533a3976c3e2cae31b9e860860e1b0bd81b9b1488eaff5e70fded85bfac3f93",
+          "parent": "upper_arm_r",
+          "pivot": [
+            161,
+            140
+          ],
+          "polygon": [
+            [
+              153,
+              135
+            ],
+            [
+              177,
+              133
+            ],
+            [
+              178,
+              155
+            ],
+            [
+              175,
+              174
+            ],
+            [
+              153,
+              174
+            ],
+            [
+              151,
+              149
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                161,
+                140
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": true,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_a/forearm_hand_r.png",
+          "svg": "rig/post/skins/post_a/forearm_hand_r.svg",
+          "mask": "rig/post/skins/post_a/forearm_hand_r-mask.png",
+          "sha256": "0aeb3f87aaeeefba4f1b0bde83c943c901a9a985a56b77eb9d562b675a079c18",
+          "bbox": [
+            151,
+            134,
+            171,
+            175
+          ]
+        },
+        "thigh_l": {
+          "source_sha256": "a533a3976c3e2cae31b9e860860e1b0bd81b9b1488eaff5e70fded85bfac3f93",
+          "parent": "root",
+          "pivot": [
+            115,
+            157
+          ],
+          "polygon": [
+            [
+              0,
+              153
+            ],
+            [
+              128,
+              153
+            ],
+            [
+              128,
+              188
+            ],
+            [
+              0,
+              188
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                115,
+                157
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_a/thigh_l.png",
+          "svg": "rig/post/skins/post_a/thigh_l.svg",
+          "mask": "rig/post/skins/post_a/thigh_l-mask.png",
+          "sha256": "72bdcbfb4e1cbc68a574621c9ce4247c1d0803c134750839e264792567786c99",
+          "bbox": [
+            97,
+            151,
+            129,
+            189
+          ]
+        },
+        "shin_foot_l": {
+          "source_sha256": "a533a3976c3e2cae31b9e860860e1b0bd81b9b1488eaff5e70fded85bfac3f93",
+          "parent": "thigh_l",
+          "pivot": [
+            115,
+            183
+          ],
+          "polygon": [
+            [
+              0,
+              180
+            ],
+            [
+              128,
+              180
+            ],
+            [
+              128,
+              256
+            ],
+            [
+              0,
+              256
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                115,
+                183
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_a/shin_foot_l.png",
+          "svg": "rig/post/skins/post_a/shin_foot_l.svg",
+          "mask": "rig/post/skins/post_a/shin_foot_l-mask.png",
+          "sha256": "dccf9202d30b96e839e00390c26f84a7d3f7604a7022e11fc5155831737118f0",
+          "bbox": [
+            93,
+            177,
+            129,
+            225
+          ]
+        },
+        "thigh_r": {
+          "source_sha256": "a533a3976c3e2cae31b9e860860e1b0bd81b9b1488eaff5e70fded85bfac3f93",
+          "parent": "root",
+          "pivot": [
+            141,
+            157
+          ],
+          "polygon": [
+            [
+              127,
+              153
+            ],
+            [
+              256,
+              153
+            ],
+            [
+              256,
+              188
+            ],
+            [
+              127,
+              188
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                141,
+                157
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_a/thigh_r.png",
+          "svg": "rig/post/skins/post_a/thigh_r.svg",
+          "mask": "rig/post/skins/post_a/thigh_r-mask.png",
+          "sha256": "e661d48ba2cf45d0636cad839aa6d11389f9ebb39f39096d59c0cc70d2a615b1",
+          "bbox": [
+            129,
+            151,
+            176,
+            189
+          ]
+        },
+        "shin_foot_r": {
+          "source_sha256": "a533a3976c3e2cae31b9e860860e1b0bd81b9b1488eaff5e70fded85bfac3f93",
+          "parent": "thigh_r",
+          "pivot": [
+            141,
+            183
+          ],
+          "polygon": [
+            [
+              127,
+              180
+            ],
+            [
+              256,
+              180
+            ],
+            [
+              256,
+              256
+            ],
+            [
+              127,
+              256
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                141,
+                183
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_a/shin_foot_r.png",
+          "svg": "rig/post/skins/post_a/shin_foot_r.svg",
+          "mask": "rig/post/skins/post_a/shin_foot_r-mask.png",
+          "sha256": "8d71fa63db4f9fc73c8a2c4147e2e4c494cb8c017644f88aafaf722fb3a1cf4c",
+          "bbox": [
+            129,
+            177,
+            168,
+            225
+          ]
+        },
+        "torso": {
+          "source_sha256": "a533a3976c3e2cae31b9e860860e1b0bd81b9b1488eaff5e70fded85bfac3f93",
+          "parent": "root",
+          "pivot": [
+            128,
+            155
+          ],
+          "polygon": null,
+          "source_overlap_circles": [
+            [
+              [
+                111,
+                108
+              ],
+              8
+            ],
+            [
+              [
+                148,
+                108
+              ],
+              8
+            ],
+            [
+              [
+                128,
+                103
+              ],
+              8
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_a/torso.png",
+          "svg": "rig/post/skins/post_a/torso.svg",
+          "mask": "rig/post/skins/post_a/torso-mask.png",
+          "sha256": "65ec367a10c95b519a376d751caba23497ae7f579dba904cbfb85e5b5caf2ef7",
+          "bbox": [
+            104,
+            95,
+            156,
+            153
+          ]
+        }
+      }
+    },
+    "post_b": {
+      "source": "games/post/source/post-b-master.png",
+      "source_sha256": "5adbe4af4f2d8532b066138576382b179e8daec6ea4099f985233ce3db14d899",
+      "sampling": {
+        "core_bbox": [
+          354,
+          47,
+          888,
+          1225
+        ],
+        "sampling_bbox": [
+          352,
+          45,
+          890,
+          1227
+        ],
+        "scale": 0.1765704584040747,
+        "sampled_size": [
+          95,
+          209
+        ],
+        "paste_xy": [
+          81,
+          16
+        ],
+        "canvas": [
+          256,
+          256
+        ],
+        "anchor": [
+          128,
+          224
+        ],
+        "core_height": 208,
+        "alpha_policy": "Source RGBA retained; core threshold only chooses crop; final export thresholds alpha at 128."
+      },
+      "parts": {
+        "secondary": {
+          "source_sha256": "5adbe4af4f2d8532b066138576382b179e8daec6ea4099f985233ce3db14d899",
+          "parent": "torso",
+          "pivot": [
+            147,
+            141
+          ],
+          "polygon": [
+            [
+              135,
+              139
+            ],
+            [
+              149,
+              135
+            ],
+            [
+              157,
+              143
+            ],
+            [
+              157,
+              158
+            ],
+            [
+              143,
+              161
+            ],
+            [
+              136,
+              153
+            ]
+          ],
+          "source_overlap_circles": [],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_b/secondary.png",
+          "svg": "rig/post/skins/post_b/secondary.svg",
+          "mask": "rig/post/skins/post_b/secondary-mask.png",
+          "sha256": "95eff410a1493e195026ab60a9ac645801c2612d99996f6ede755dbb97de67c0",
+          "bbox": [
+            135,
+            135,
+            158,
+            162
+          ]
+        },
+        "collar": {
+          "source_sha256": "5adbe4af4f2d8532b066138576382b179e8daec6ea4099f985233ce3db14d899",
+          "parent": "torso",
+          "pivot": [
+            128,
+            103
+          ],
+          "polygon": [
+            [
+              118,
+              98
+            ],
+            [
+              138,
+              98
+            ],
+            [
+              144,
+              111
+            ],
+            [
+              134,
+              116
+            ],
+            [
+              115,
+              111
+            ]
+          ],
+          "source_overlap_circles": [],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_b/collar.png",
+          "svg": "rig/post/skins/post_b/collar.svg",
+          "mask": "rig/post/skins/post_b/collar-mask.png",
+          "sha256": "26e5c114302dd381cebc72caaa4f5bdbc0421015e097f7303a0808e5790a9026",
+          "bbox": [
+            115,
+            98,
+            145,
+            117
+          ]
+        },
+        "upper_arm_l": {
+          "source_sha256": "5adbe4af4f2d8532b066138576382b179e8daec6ea4099f985233ce3db14d899",
+          "parent": "torso",
+          "pivot": [
+            111,
+            108
+          ],
+          "polygon": [
+            [
+              104,
+              103
+            ],
+            [
+              118,
+              105
+            ],
+            [
+              111,
+              128
+            ],
+            [
+              104,
+              147
+            ],
+            [
+              85,
+              145
+            ],
+            [
+              88,
+              120
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                111,
+                108
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_b/upper_arm_l.png",
+          "svg": "rig/post/skins/post_b/upper_arm_l.svg",
+          "mask": "rig/post/skins/post_b/upper_arm_l-mask.png",
+          "sha256": "43f043263d1cb8f724a475a896f0f66dce2d451fc109bdfce598aeae207a01ab",
+          "bbox": [
+            90,
+            102,
+            118,
+            148
+          ]
+        },
+        "forearm_hand_l": {
+          "source_sha256": "5adbe4af4f2d8532b066138576382b179e8daec6ea4099f985233ce3db14d899",
+          "parent": "upper_arm_l",
+          "pivot": [
+            98,
+            140
+          ],
+          "polygon": [
+            [
+              84,
+              134
+            ],
+            [
+              106,
+              134
+            ],
+            [
+              108,
+              153
+            ],
+            [
+              105,
+              173
+            ],
+            [
+              84,
+              173
+            ],
+            [
+              82,
+              149
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                98,
+                140
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_b/forearm_hand_l.png",
+          "svg": "rig/post/skins/post_b/forearm_hand_l.svg",
+          "mask": "rig/post/skins/post_b/forearm_hand_l-mask.png",
+          "sha256": "860dcf39b1ddbf3301e24c9390277a460912604049a04bd4e6af3ea599212856",
+          "bbox": [
+            89,
+            134,
+            109,
+            174
+          ],
+          "grip_point": [
+            96,
+            161
+          ]
+        },
+        "upper_arm_r": {
+          "source_sha256": "5adbe4af4f2d8532b066138576382b179e8daec6ea4099f985233ce3db14d899",
+          "parent": "torso",
+          "pivot": [
+            148,
+            108
+          ],
+          "polygon": [
+            [
+              141,
+              104
+            ],
+            [
+              154,
+              101
+            ],
+            [
+              172,
+              121
+            ],
+            [
+              174,
+              146
+            ],
+            [
+              153,
+              147
+            ],
+            [
+              144,
+              126
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                148,
+                108
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_b/upper_arm_r.png",
+          "svg": "rig/post/skins/post_b/upper_arm_r.svg",
+          "mask": "rig/post/skins/post_b/upper_arm_r-mask.png",
+          "sha256": "35a6201db6bf87566afea8d9e731fa309a413be880fcc1e51d5e78883886ed78",
+          "bbox": [
+            142,
+            103,
+            172,
+            147
+          ]
+        },
+        "forearm_hand_r": {
+          "source_sha256": "5adbe4af4f2d8532b066138576382b179e8daec6ea4099f985233ce3db14d899",
+          "parent": "upper_arm_r",
+          "pivot": [
+            161,
+            140
+          ],
+          "polygon": [
+            [
+              153,
+              135
+            ],
+            [
+              177,
+              133
+            ],
+            [
+              178,
+              155
+            ],
+            [
+              175,
+              174
+            ],
+            [
+              153,
+              174
+            ],
+            [
+              151,
+              149
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                161,
+                140
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_b/forearm_hand_r.png",
+          "svg": "rig/post/skins/post_b/forearm_hand_r.svg",
+          "mask": "rig/post/skins/post_b/forearm_hand_r-mask.png",
+          "sha256": "e6450dbad97a8435113e4a2abd5dd25770cab339934ad6d06448bd8f437030ad",
+          "bbox": [
+            152,
+            134,
+            172,
+            175
+          ]
+        },
+        "thigh_l": {
+          "source_sha256": "5adbe4af4f2d8532b066138576382b179e8daec6ea4099f985233ce3db14d899",
+          "parent": "root",
+          "pivot": [
+            115,
+            157
+          ],
+          "polygon": [
+            [
+              0,
+              153
+            ],
+            [
+              128,
+              153
+            ],
+            [
+              128,
+              188
+            ],
+            [
+              0,
+              188
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                115,
+                157
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_b/thigh_l.png",
+          "svg": "rig/post/skins/post_b/thigh_l.svg",
+          "mask": "rig/post/skins/post_b/thigh_l-mask.png",
+          "sha256": "2c246e14493dc132e8948f34d393176f22bfa27ade6ffb391c6b893cd0f90f3d",
+          "bbox": [
+            98,
+            151,
+            129,
+            189
+          ]
+        },
+        "shin_foot_l": {
+          "source_sha256": "5adbe4af4f2d8532b066138576382b179e8daec6ea4099f985233ce3db14d899",
+          "parent": "thigh_l",
+          "pivot": [
+            115,
+            183
+          ],
+          "polygon": [
+            [
+              0,
+              180
+            ],
+            [
+              128,
+              180
+            ],
+            [
+              128,
+              256
+            ],
+            [
+              0,
+              256
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                115,
+                183
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_b/shin_foot_l.png",
+          "svg": "rig/post/skins/post_b/shin_foot_l.svg",
+          "mask": "rig/post/skins/post_b/shin_foot_l-mask.png",
+          "sha256": "3abf887965676ca8bace96b150a31ae15ae8e784ea5860f38ff2d282ccaf1a58",
+          "bbox": [
+            93,
+            177,
+            129,
+            225
+          ]
+        },
+        "thigh_r": {
+          "source_sha256": "5adbe4af4f2d8532b066138576382b179e8daec6ea4099f985233ce3db14d899",
+          "parent": "root",
+          "pivot": [
+            141,
+            157
+          ],
+          "polygon": [
+            [
+              127,
+              153
+            ],
+            [
+              256,
+              153
+            ],
+            [
+              256,
+              188
+            ],
+            [
+              127,
+              188
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                141,
+                157
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_b/thigh_r.png",
+          "svg": "rig/post/skins/post_b/thigh_r.svg",
+          "mask": "rig/post/skins/post_b/thigh_r-mask.png",
+          "sha256": "0cf9fc1cfa4703de5c10f0ffaa4c31d5fb01bede7a5f423c20567da214670938",
+          "bbox": [
+            129,
+            151,
+            159,
+            189
+          ]
+        },
+        "shin_foot_r": {
+          "source_sha256": "5adbe4af4f2d8532b066138576382b179e8daec6ea4099f985233ce3db14d899",
+          "parent": "thigh_r",
+          "pivot": [
+            141,
+            183
+          ],
+          "polygon": [
+            [
+              127,
+              180
+            ],
+            [
+              256,
+              180
+            ],
+            [
+              256,
+              256
+            ],
+            [
+              127,
+              256
+            ]
+          ],
+          "source_overlap_circles": [
+            [
+              [
+                141,
+                183
+              ],
+              6
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_b/shin_foot_r.png",
+          "svg": "rig/post/skins/post_b/shin_foot_r.svg",
+          "mask": "rig/post/skins/post_b/shin_foot_r-mask.png",
+          "sha256": "5ea988a6cd627cd8c120c4b4f0a367ac95740fc818d4095a39490b397e60b1e1",
+          "bbox": [
+            129,
+            177,
+            172,
+            225
+          ]
+        },
+        "torso": {
+          "source_sha256": "5adbe4af4f2d8532b066138576382b179e8daec6ea4099f985233ce3db14d899",
+          "parent": "root",
+          "pivot": [
+            128,
+            155
+          ],
+          "polygon": null,
+          "source_overlap_circles": [
+            [
+              [
+                111,
+                108
+              ],
+              8
+            ],
+            [
+              [
+                148,
+                108
+              ],
+              8
+            ],
+            [
+              [
+                128,
+                103
+              ],
+              8
+            ]
+          ],
+          "original_pink_fingertip_completion": false,
+          "pixel_policy": "Original normalized clothing RGB under explicit mask; source head excluded",
+          "raster": "rig/post/skins/post_b/torso.png",
+          "svg": "rig/post/skins/post_b/torso.svg",
+          "mask": "rig/post/skins/post_b/torso-mask.png",
+          "sha256": "ad61ab22470b53f3b16bae9ea0c7e1c305383f6eee78c18488d60cbed842a324",
+          "bbox": [
+            104,
+            95,
+            156,
+            153
+          ]
+        }
+      }
+    }
+  },
+  "cab_attachment": {
+    "coordinate_space": "locomotive native top-left (96x88)",
+    "driver_chest": [
+      25,
+      49
+    ],
+    "window": [
+      10,
+      8,
+      39,
+      49
+    ],
+    "roof_pulley": [
+      12,
+      7
+    ],
+    "grip_bone": "forearm_hand_l",
+    "source_grip_xy": [
+      96,
+      161
+    ],
+    "animated_contact": "post-manifest animations: post_props/whistle-cord.contacts",
+    "layering": "wheel/body/cord/actor/foreground; use cord frame0 when not whistling"
+  }
+}

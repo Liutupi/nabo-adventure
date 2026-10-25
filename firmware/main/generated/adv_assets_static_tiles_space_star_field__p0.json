@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_space_star_field__p0",
   "width": 32,
   "height": 32,
@@ -37,5 +37,15 @@
       "sha256": "13b53ccfabcb3bd9762942ace7426c4785ea6ffb2be1529caa0bf40452d92c9a"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/space/star-field",
+      "logical_symbol": "adv_assets_static_tiles_space_star_field__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

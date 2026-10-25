@@ -35,8 +35,9 @@ static void draw_hud(ag_t *g, const adv_model_t *m)
     int w = status.resource * 124 / ADV_RESOURCE_MAX;
     if (w > 0) ag_rect(g, 38, 13, w, 6, 0, status.resource < ADV_RESOURCE_MAX / 4 ? UI_RED : ADV_ASSETS_UI_TEAL, 255, 0, 0);
     char score[16];
-    snprintf(score, sizeof(score), "%u", (unsigned)status.score);
-    ag_text(g, &nabo_poster_font_28, score, 230, 29, NT_ALIGN_RIGHT, UI_WHITE);
+    if (status.score > 9999) snprintf(score, sizeof(score), "9999+");
+    else snprintf(score, sizeof(score), "%u", (unsigned)status.score);
+    ui_number_tint(g, score, 20, 230, 6, NT_ALIGN_RIGHT, UI_WHITE);
 }
 
 static void draw_title(ag_t *g, const adv_model_t *m, const adv_station_t *st, int s)
@@ -44,9 +45,9 @@ static void draw_title(ag_t *g, const adv_model_t *m, const adv_station_t *st, i
     ui_header(g, st->world, NULL);
     char wordmark[64];
     snprintf(wordmark, sizeof(wordmark), "ui/wordmarks/%s", st->id);
-    ui_art(g, wordmark, 0, 20, 38);
+    ui_art(g, wordmark, 0, 20, 42);
     if (st->placeholder) {
-        ui_art(g, "ui/labels/placeholder", 0, 76, 120);
+        ui_art(g, "ui/labels/placeholder", 0, 76, 128);
     }
     uint32_t earned = adv_earned(m);
     for (int tier = 0; tier < 3; tier++) {
@@ -75,7 +76,8 @@ static void draw_result(ag_t *g, const adv_model_t *m, int s)
     draw_card(g, 60, 200);
     ag_text(g, &collection_font_16, "本局成绩", 120, 88, NT_ALIGN_CENTER, UI_INK);
     char line[32];
-    snprintf(line, sizeof(line), "%u", (unsigned)status.score);
+    if (status.score > 9999) snprintf(line, sizeof(line), "9999+");
+    else snprintf(line, sizeof(line), "%u", (unsigned)status.score);
     ui_number(g, line, 36, 120, 106, NT_ALIGN_CENTER);
     if (m->record) {
         ui_art(g, m->test ? "ui/labels/test-no-record" : "ui/labels/new-record", 0, m->test ? 72 : 84, 150);

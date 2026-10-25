@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_stamp_climb__p0",
   "width": 96,
   "height": 96,
@@ -12,7 +12,7 @@
   "keys": [
     0
   ],
-  "data_bytes": 2060,
+  "data_bytes": 2058,
   "table_bytes": 394,
   "frame_sha256": [
     "424eadd1b3749f2e8350e73e1245e14c5457e98d46a8685200a8d2c268950b47"
@@ -35,5 +35,15 @@
       "sha256": "88cc990b806b516850cf9929ec8fe306d06d9accaa7b924a66f463e400595fa7"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/stamp/climb",
+      "logical_symbol": "adv_assets_static_stamp_climb__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

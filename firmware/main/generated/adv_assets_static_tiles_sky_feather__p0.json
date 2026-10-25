@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_sky_feather__p0",
   "width": 32,
   "height": 32,
@@ -15,7 +15,7 @@
   "keys": [
     0
   ],
-  "data_bytes": 344,
+  "data_bytes": 342,
   "table_bytes": 144,
   "frame_sha256": [
     "93a34118a6ceaa6930aca644f34842db622e83436f0791fcec7feaf3ec4c5fa2"
@@ -38,5 +38,15 @@
       "sha256": "134505217c36ee5e1df4f873a1400f7bad1514448a5a280f990895e76df98412"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/sky/feather",
+      "logical_symbol": "adv_assets_static_tiles_sky_feather__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "character_clips": 8,
+  "character_frames": 50,
+  "cab_clearance_frames": 42,
+  "fixed_roof_cord_frames": 6,
+  "shared_source_head_rgb_preserved": true,
+  "all_svg_slices_match_png": true,
+  "checks": [
+    {
+      "skin": "post_a",
+      "name": "delivered",
+      "frames": 6,
+      "source_face_cap_rgb_preserved": true,
+      "neutral_endpoints_equal": true,
+      "passed": true
+    },
+    {
+      "skin": "post_a",
+      "name": "hit",
+      "frames": 6,
+      "source_face_cap_rgb_preserved": true,
+      "neutral_endpoints_equal": true,
+      "passed": true
+    },
+    {
+      "skin": "post_a",
+      "name": "idle",
+      "frames": 6,
+      "source_face_cap_rgb_preserved": true,
+      "neutral_endpoints_equal": false,
+      "passed": true
+    },
+    {
+      "skin": "post_a",
+      "name": "settlement_cheer",
+      "frames": 8,
+      "source_face_cap_rgb_preserved": true,
+      "neutral_endpoints_equal": true,
+      "passed": true
+    },
+    {
+      "skin": "post_a",
+      "name": "throw",
+      "frames": 6,
+      "source_face_cap_rgb_preserved": true,
+      "neutral_endpoints_equal": false,
+      "passed": true
+    },
+    {
+      "skin": "post_a",
+      "name": "whistle",
+      "frames": 6,
+      "source_face_cap_rgb_preserved": true,
+      "neutral_endpoints_equal": true,
+      "passed": true
+    },
+    {
+      "skin": "post_b",
+      "name": "delivered",
+      "frames": 6,
+      "source_face_cap_rgb_preserved": true,
+      "neutral_endpoints_equal": true,
+      "passed": true
+    },
+    {
+      "skin": "post_b",
+      "name": "idle",
+      "frames": 6,
+      "source_face_cap_rgb_preserved": true,
+      "neutral_endpoints_equal": false,
+      "passed": true
+    }
+  ],
+  "caveat": "Identity RGB checks apply to high-color masters; formal/runtime palette reduction is explicitly lossy. Host checks do not imply user acceptance."
+}

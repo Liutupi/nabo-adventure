@@ -1,0 +1,21 @@
+{
+  "path": "preview/boot-v2/welcome-v2-production-ui-voice.mp4",
+  "sha256": "0522be5ed6321935554064643467c04dc9b46d58b1088b96484ac0b3bc07327f",
+  "native_canvas": [
+    240,
+    320
+  ],
+  "fps": 12,
+  "video_frames": 53,
+  "exact_video_seconds": 4.416666666666667,
+  "declared_timeline_ms": 4417,
+  "voice_start_ms": 1400,
+  "voice_end_ms": 4090.625,
+  "voice_source_sha256": "38b4eb8435d6a7915d17af2083a696acfa2660244be1bf7e65dc78251f0c468b",
+  "voice_unchanged": true,
+  "source_manifest_sha256": "118ceba83eeec77ff5cee3ef138d988a7252aa93a8320c8ced0ce2998f237020",
+  "presentation": "Identical 29-event / 27-unique-image timeline and screen anchor120,266; no preview-only movement",
+  "ffmpeg_path": "C:\\Users\\pc\\Documents\\Codex\\2026-10-10\\h\\work\\packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+  "ffmpeg_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "codec_note": "Lossy H264/AAC preview only; PNG/C decoder checks remain the pixel authority"
+}

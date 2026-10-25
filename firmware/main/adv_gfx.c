@@ -94,6 +94,11 @@ bool ag_text(ag_t *g, const lv_font_t *font, const char *utf8, int x, int baseli
     return true;
 }
 
+bool ag_text_top(ag_t *g, const lv_font_t *font, const char *utf8, int x, int ink_top, nt_align_t align, uint16_t color)
+{
+    return ag_text(g, font, utf8, x, ink_top + nt_text_ascent(font, utf8), align, color);
+}
+
 bool ag_tri(ag_t *g, int cx, int cy, int size, bool up, uint16_t color)
 {
     ag_op_t *op = add(g, AG_TRI, cx - size, cy - size, cx + size + 1, cy + size + 1);

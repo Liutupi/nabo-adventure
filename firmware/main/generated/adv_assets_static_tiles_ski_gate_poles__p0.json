@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_ski_gate_poles__p0",
   "width": 32,
   "height": 32,
@@ -37,5 +37,15 @@
       "sha256": "f6786f666678472a52d8e93e6d0666cc7b443e3d710fed4ce1f019d3884acb26"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/ski/gate-poles",
+      "logical_symbol": "adv_assets_static_tiles_ski_gate_poles__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

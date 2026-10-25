@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_town_bunting__p0",
   "width": 32,
   "height": 32,
@@ -15,7 +15,7 @@
   "keys": [
     0
   ],
-  "data_bytes": 280,
+  "data_bytes": 271,
   "table_bytes": 144,
   "frame_sha256": [
     "01ef67e4022a0c886ab59dee087a1cc5791704c27dc46a00ffaee3bf8fa6a081"
@@ -38,5 +38,15 @@
       "sha256": "6da0b8085c835b4f6c75c0d240cd468ecd73298967f96d813cbbcc40bfa103d7"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/town/bunting",
+      "logical_symbol": "adv_assets_static_tiles_town_bunting__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

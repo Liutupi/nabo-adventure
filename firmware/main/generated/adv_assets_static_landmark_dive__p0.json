@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_landmark_dive__p0",
   "width": 96,
   "height": 96,
@@ -42,5 +42,15 @@
       "sha256": "d341b383c9798d8769e9d094f4b6c29e13667f7a8d155122036e4cd5d0f76809"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/landmark/dive",
+      "logical_symbol": "adv_assets_static_landmark_dive__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

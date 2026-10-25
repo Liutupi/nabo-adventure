@@ -1,0 +1,2536 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "skin": "post_a",
+      "name": "idle",
+      "frames": 6,
+      "formal_colors": 64,
+      "runtime_colors": 64,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0.0,
+              "upper_arm_r": -0.0,
+              "secondary": 0.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 100,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0.606217782649107,
+              "upper_arm_r": -0.5196152422706631,
+              "secondary": 1.9847427807915405
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 102,
+            "forearm_hand_r/upper_arm_r": 119
+          },
+          "grip_xy": [
+            95,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0.6062177826491071,
+              "upper_arm_r": -0.5196152422706632,
+              "secondary": 1.20590609617424
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 102,
+            "forearm_hand_r/upper_arm_r": 119
+          },
+          "grip_xy": [
+            95,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 8.572527594031472e-17,
+              "upper_arm_r": -7.347880794884119e-17,
+              "secondary": -0.7788366846173006
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 100,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": -0.6062177826491069,
+              "upper_arm_r": 0.519615242270663,
+              "secondary": -1.9847427807915403
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 106,
+            "forearm_hand_l/upper_arm_l": 94,
+            "forearm_hand_r/upper_arm_r": 111
+          },
+          "grip_xy": [
+            97,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": -0.606217782649107,
+              "upper_arm_r": 0.5196152422706631,
+              "secondary": -1.2059060961742387
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 106,
+            "forearm_hand_l/upper_arm_l": 94,
+            "forearm_hand_r/upper_arm_r": 111
+          },
+          "grip_xy": [
+            97,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        1.2223958333333333,
+        0.0038194444444444443,
+        1.237673611111111,
+        0.6897569444444445,
+        0.028125,
+        0.7102430555555556
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "passed": true
+    },
+    {
+      "skin": "post_a",
+      "name": "whistle",
+      "frames": 6,
+      "formal_colors": 64,
+      "runtime_colors": 64,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "secondary": 0.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 100,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 12.6,
+              "forearm_hand_l": 49.5,
+              "secondary": -1.021163315382699
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": true
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 81,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 79,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            72,
+            144
+          ],
+          "bbox": [
+            63,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 28,
+              "forearm_hand_l": 110,
+              "secondary": -3.221163315382699
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": true
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 73,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 57,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            72,
+            113
+          ],
+          "bbox": [
+            60,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 20.16,
+              "forearm_hand_l": 79.2,
+              "secondary": -2.1011633153826987
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": true
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 77,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 69,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            67,
+            128
+          ],
+          "bbox": [
+            55,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 7.28,
+              "forearm_hand_l": 28.6,
+              "secondary": -0.261163315382699
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": true
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 85,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 91,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            80,
+            154
+          ],
+          "bbox": [
+            74,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "secondary": 0.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 100,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        9.714756944444444,
+        11.606423611111111,
+        7.499479166666666,
+        10.7609375,
+        6.3277777777777775,
+        0.0
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "passed": true
+    },
+    {
+      "skin": "post_a",
+      "name": "throw",
+      "frames": 6,
+      "formal_colors": 64,
+      "runtime_colors": 64,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "secondary": 0.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": true,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 100,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            79,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": -10,
+              "forearm_hand_l": 20,
+              "secondary": 3.028836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": true,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 90,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 95,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            98,
+            162
+          ],
+          "bbox": [
+            81,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 15,
+              "forearm_hand_l": 40,
+              "secondary": 5.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": true,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 82,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 84,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            72,
+            146
+          ],
+          "bbox": [
+            55,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 70,
+              "forearm_hand_l": -45,
+              "secondary": 4.3788366846173
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 42,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 109,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            66,
+            125
+          ],
+          "bbox": [
+            61,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 25,
+              "forearm_hand_l": -10,
+              "secondary": 2.078836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 74,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 103,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            78,
+            151
+          ],
+          "bbox": [
+            75,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "secondary": 0.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 100,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        2.859722222222222,
+        13.93142361111111,
+        17.320833333333333,
+        14.844965277777778,
+        11.961979166666667,
+        1.5140625
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "passed": true
+    },
+    {
+      "skin": "post_a",
+      "name": "hit",
+      "frames": 6,
+      "formal_colors": 64,
+      "runtime_colors": 64,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "torso": 0,
+              "upper_arm_l": 0,
+              "upper_arm_r": 0,
+              "forearm_hand_l": 0,
+              "secondary": 0.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 100,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "torso": -6,
+              "upper_arm_l": 10,
+              "upper_arm_r": -8,
+              "forearm_hand_l": 6,
+              "secondary": -9.221163315382698
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            -6,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 83,
+            "upper_arm_r/torso": 101,
+            "forearm_hand_l/upper_arm_l": 98,
+            "forearm_hand_r/upper_arm_r": 113
+          },
+          "grip_xy": [
+            85,
+            161
+          ],
+          "bbox": [
+            77,
+            15,
+            175,
+            160
+          ]
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "torso": 6,
+              "upper_arm_l": -10,
+              "upper_arm_r": 8,
+              "forearm_hand_l": -6,
+              "secondary": 10.778836684617302
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            6,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 86,
+            "upper_arm_r/torso": 105,
+            "forearm_hand_l/upper_arm_l": 101,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            107,
+            160
+          ],
+          "bbox": [
+            89,
+            15,
+            180,
+            160
+          ]
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "torso": -3.5999999999999996,
+              "upper_arm_l": 6.0,
+              "upper_arm_r": -4.8,
+              "forearm_hand_l": 3.5999999999999996,
+              "secondary": -5.221163315382699
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            -4,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 86,
+            "upper_arm_r/torso": 104,
+            "forearm_hand_l/upper_arm_l": 103,
+            "forearm_hand_r/upper_arm_r": 111
+          },
+          "grip_xy": [
+            90,
+            161
+          ],
+          "bbox": [
+            79,
+            15,
+            172,
+            160
+          ]
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "torso": 1.2000000000000002,
+              "upper_arm_l": -2.0,
+              "upper_arm_r": 1.6,
+              "forearm_hand_l": -1.2000000000000002,
+              "secondary": 2.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            1,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 93,
+            "upper_arm_r/torso": 100,
+            "forearm_hand_l/upper_arm_l": 98,
+            "forearm_hand_r/upper_arm_r": 116
+          },
+          "grip_xy": [
+            98,
+            161
+          ],
+          "bbox": [
+            84,
+            15,
+            175,
+            160
+          ]
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "torso": 0,
+              "upper_arm_l": 0,
+              "upper_arm_r": 0,
+              "forearm_hand_l": 0,
+              "secondary": 0.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 100,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        32.53836805555556,
+        47.92534722222222,
+        41.37135416666667,
+        26.43003472222222,
+        5.854340277777778,
+        0.0
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "passed": true
+    },
+    {
+      "skin": "post_a",
+      "name": "delivered",
+      "frames": 6,
+      "formal_colors": 64,
+      "runtime_colors": 64,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "upper_arm_r": 0,
+              "secondary": 0.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 100,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 29.25,
+              "forearm_hand_l": 47.25,
+              "upper_arm_r": -0.9,
+              "secondary": -1.921163315382699
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 72,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 81,
+            "forearm_hand_r/upper_arm_r": 113
+          },
+          "grip_xy": [
+            63,
+            133
+          ],
+          "bbox": [
+            52,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 65,
+              "forearm_hand_l": 105,
+              "upper_arm_r": -2,
+              "secondary": -5.221163315382699
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 44,
+            "upper_arm_r/torso": 106,
+            "forearm_hand_l/upper_arm_l": 60,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            75,
+            89
+          ],
+          "bbox": [
+            63,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 46.8,
+              "forearm_hand_l": 75.6,
+              "upper_arm_r": -1.44,
+              "secondary": -3.541163315382699
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 58,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 71,
+            "forearm_hand_r/upper_arm_r": 113
+          },
+          "grip_xy": [
+            62,
+            107
+          ],
+          "bbox": [
+            50,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 16.900000000000002,
+              "forearm_hand_l": 27.3,
+              "upper_arm_r": -0.52,
+              "secondary": -0.781163315382699
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 80,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 91,
+            "forearm_hand_r/upper_arm_r": 119
+          },
+          "grip_xy": [
+            73,
+            148
+          ],
+          "bbox": [
+            66,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "upper_arm_r": 0,
+              "secondary": 0.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 100,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        13.259201388888888,
+        15.892708333333333,
+        12.866493055555555,
+        14.773784722222222,
+        11.305729166666667,
+        0.0
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "passed": true
+    },
+    {
+      "skin": "post_a",
+      "name": "settlement_cheer",
+      "frames": 8,
+      "formal_colors": 64,
+      "runtime_colors": 64,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "upper_arm_r": 0,
+              "forearm_hand_r": 0,
+              "secondary": 0.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 100,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            225
+          ]
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 19.6,
+              "forearm_hand_l": 30.800000000000004,
+              "upper_arm_r": -5.040000000000001,
+              "forearm_hand_r": -8.4,
+              "secondary": -0.9011633153826991
+            },
+            "shift": [
+              0,
+              -1
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            -1
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 77,
+            "upper_arm_r/torso": 103,
+            "forearm_hand_l/upper_arm_l": 89,
+            "forearm_hand_r/upper_arm_r": 115
+          },
+          "grip_xy": [
+            71,
+            145
+          ],
+          "bbox": [
+            63,
+            14,
+            175,
+            224
+          ]
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 53.2,
+              "forearm_hand_l": 83.6,
+              "upper_arm_r": -13.68,
+              "forearm_hand_r": -22.8,
+              "secondary": -3.7811633153826993
+            },
+            "shift": [
+              0,
+              -3
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            -3
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 52,
+            "upper_arm_r/torso": 99,
+            "forearm_hand_l/upper_arm_l": 69,
+            "forearm_hand_r/upper_arm_r": 113
+          },
+          "grip_xy": [
+            65,
+            97
+          ],
+          "bbox": [
+            53,
+            12,
+            189,
+            222
+          ]
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 70,
+              "forearm_hand_l": 110,
+              "upper_arm_r": -18,
+              "forearm_hand_r": -30,
+              "secondary": -5.221163315382699
+            },
+            "shift": [
+              0,
+              -4
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            -4
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 42,
+            "upper_arm_r/torso": 95,
+            "forearm_hand_l/upper_arm_l": 55,
+            "forearm_hand_r/upper_arm_r": 111
+          },
+          "grip_xy": [
+            78,
+            82
+          ],
+          "bbox": [
+            65,
+            11,
+            195,
+            221
+          ]
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 63.0,
+              "forearm_hand_l": 99.0,
+              "upper_arm_r": -16.2,
+              "forearm_hand_r": -27.0,
+              "secondary": -4.6211633153827
+            },
+            "shift": [
+              0,
+              -3
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            -3
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 49,
+            "upper_arm_r/torso": 98,
+            "forearm_hand_l/upper_arm_l": 60,
+            "forearm_hand_r/upper_arm_r": 115
+          },
+          "grip_xy": [
+            72,
+            87
+          ],
+          "bbox": [
+            61,
+            12,
+            193,
+            222
+          ]
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 38.5,
+              "forearm_hand_l": 60.50000000000001,
+              "upper_arm_r": -9.9,
+              "forearm_hand_r": -16.5,
+              "secondary": -2.521163315382699
+            },
+            "shift": [
+              0,
+              -1
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            -1
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 62,
+            "upper_arm_r/torso": 101,
+            "forearm_hand_l/upper_arm_l": 75,
+            "forearm_hand_r/upper_arm_r": 113
+          },
+          "grip_xy": [
+            60,
+            119
+          ],
+          "bbox": [
+            48,
+            14,
+            183,
+            224
+          ]
+        },
+        {
+          "frame": 6,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 11.200000000000001,
+              "forearm_hand_l": 17.6,
+              "upper_arm_r": -2.88,
+              "forearm_hand_r": -4.8,
+              "secondary": -0.18116331538269892
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 83,
+            "upper_arm_r/torso": 105,
+            "forearm_hand_l/upper_arm_l": 98,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            80,
+            154
+          ],
+          "bbox": [
+            75,
+            15,
+            174,
+            225
+          ]
+        },
+        {
+          "frame": 7,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "upper_arm_r": 0,
+              "forearm_hand_r": 0,
+              "secondary": 0.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 91,
+            "upper_arm_r/torso": 107,
+            "forearm_hand_l/upper_arm_l": 100,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            225
+          ]
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        14.756164965986395,
+        23.219883786848072,
+        14.832837301587302,
+        9.836663832199546,
+        22.716765873015873,
+        17.44125566893424,
+        7.817460317460317,
+        0.0
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "passed": true
+    },
+    {
+      "skin": "post_b",
+      "name": "idle",
+      "frames": 6,
+      "formal_colors": 64,
+      "runtime_colors": 63,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0.0,
+              "upper_arm_r": -0.0,
+              "secondary": 0.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 98,
+            "upper_arm_r/torso": 113,
+            "forearm_hand_l/upper_arm_l": 110,
+            "forearm_hand_r/upper_arm_r": 115
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0.606217782649107,
+              "upper_arm_r": -0.5196152422706631,
+              "secondary": 1.9847427807915405
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 98,
+            "upper_arm_r/torso": 113,
+            "forearm_hand_l/upper_arm_l": 114,
+            "forearm_hand_r/upper_arm_r": 117
+          },
+          "grip_xy": [
+            95,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0.6062177826491071,
+              "upper_arm_r": -0.5196152422706632,
+              "secondary": 1.20590609617424
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 98,
+            "upper_arm_r/torso": 113,
+            "forearm_hand_l/upper_arm_l": 114,
+            "forearm_hand_r/upper_arm_r": 117
+          },
+          "grip_xy": [
+            95,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 8.572527594031472e-17,
+              "upper_arm_r": -7.347880794884119e-17,
+              "secondary": -0.7788366846173006
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 98,
+            "upper_arm_r/torso": 113,
+            "forearm_hand_l/upper_arm_l": 110,
+            "forearm_hand_r/upper_arm_r": 115
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": -0.6062177826491069,
+              "upper_arm_r": 0.519615242270663,
+              "secondary": -1.9847427807915403
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 98,
+            "upper_arm_r/torso": 111,
+            "forearm_hand_l/upper_arm_l": 107,
+            "forearm_hand_r/upper_arm_r": 111
+          },
+          "grip_xy": [
+            97,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": -0.606217782649107,
+              "upper_arm_r": 0.5196152422706631,
+              "secondary": -1.2059060961742387
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 98,
+            "upper_arm_r/torso": 111,
+            "forearm_hand_l/upper_arm_l": 107,
+            "forearm_hand_r/upper_arm_r": 111
+          },
+          "grip_xy": [
+            97,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        0.7328125,
+        0.0390625,
+        0.7605902777777778,
+        0.19826388888888888,
+        0.0359375,
+        0.23229166666666667
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "passed": true
+    },
+    {
+      "skin": "post_b",
+      "name": "delivered",
+      "frames": 6,
+      "formal_colors": 64,
+      "runtime_colors": 63,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "upper_arm_r": 0,
+              "secondary": 0.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 98,
+            "upper_arm_r/torso": 113,
+            "forearm_hand_l/upper_arm_l": 110,
+            "forearm_hand_r/upper_arm_r": 115
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 1,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 29.25,
+              "forearm_hand_l": 47.25,
+              "upper_arm_r": -0.9,
+              "secondary": -1.921163315382699
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 75,
+            "upper_arm_r/torso": 113,
+            "forearm_hand_l/upper_arm_l": 101,
+            "forearm_hand_r/upper_arm_r": 113
+          },
+          "grip_xy": [
+            63,
+            133
+          ],
+          "bbox": [
+            53,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 2,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 65,
+              "forearm_hand_l": 105,
+              "upper_arm_r": -2,
+              "secondary": -5.221163315382699
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 51,
+            "upper_arm_r/torso": 112,
+            "forearm_hand_l/upper_arm_l": 83,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            75,
+            89
+          ],
+          "bbox": [
+            63,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 3,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 46.8,
+              "forearm_hand_l": 75.6,
+              "upper_arm_r": -1.44,
+              "secondary": -3.541163315382699
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 64,
+            "upper_arm_r/torso": 112,
+            "forearm_hand_l/upper_arm_l": 87,
+            "forearm_hand_r/upper_arm_r": 114
+          },
+          "grip_xy": [
+            62,
+            107
+          ],
+          "bbox": [
+            50,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 4,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 16.900000000000002,
+              "forearm_hand_l": 27.3,
+              "upper_arm_r": -0.52,
+              "secondary": -0.781163315382699
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 86,
+            "upper_arm_r/torso": 113,
+            "forearm_hand_l/upper_arm_l": 106,
+            "forearm_hand_r/upper_arm_r": 117
+          },
+          "grip_xy": [
+            73,
+            148
+          ],
+          "bbox": [
+            67,
+            15,
+            174,
+            160
+          ]
+        },
+        {
+          "frame": 5,
+          "keyframe": {
+            "angles": {
+              "upper_arm_l": 0,
+              "forearm_hand_l": 0,
+              "upper_arm_r": 0,
+              "secondary": 0.778836684617301
+            },
+            "shift": [
+              0,
+              0
+            ],
+            "head_offset": [
+              0,
+              0
+            ],
+            "envelope": false,
+            "rope": false
+          },
+          "head_translation": [
+            0,
+            0
+          ],
+          "head_rotation_degrees": 0,
+          "head_rigid_integer_translation": true,
+          "head_source_sha256": [
+            "1aafebe7f9a18b6cf64f70cf5edf376e1e83428d4cf11966c4bfbf29185b82da",
+            "7ea2b22b297926805a84879073d9abec9ab057df42aa771b4c50982d0b0514cd"
+          ],
+          "joint_overlap_pixels": {
+            "upper_arm_l/torso": 98,
+            "upper_arm_r/torso": 113,
+            "forearm_hand_l/upper_arm_l": 110,
+            "forearm_hand_r/upper_arm_r": 115
+          },
+          "grip_xy": [
+            96,
+            161
+          ],
+          "bbox": [
+            83,
+            15,
+            174,
+            160
+          ]
+        }
+      ],
+      "runtime_adjacent_rgba_mae": [
+        7.918229166666666,
+        9.929166666666667,
+        8.425173611111111,
+        10.22829861111111,
+        7.1171875,
+        0.0
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "passed": true
+    }
+  ],
+  "static_assets": 22,
+  "native_background": [
+    148,
+    202,
+    106
+  ],
+  "source_frame_policy": "256 RGBA, immutable head pixels, source cutouts then shared palette",
+  "not_claimed": [
+    "new gameplay",
+    "firmware integration",
+    "on-device motion",
+    "human visual acceptance"
+  ]
+}

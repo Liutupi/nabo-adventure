@@ -1,12 +1,12 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_resources_bar_frame__p0",
   "width": 128,
   "height": 10,
   "palette_rgb565": [
     0,
     8649,
-    65433
+    65502
   ],
   "background_rgb888": null,
   "key_interval": 8,
@@ -19,7 +19,7 @@
     "a58c6c99a0c8f58bd12b3e06b10d51339ad538e496f609b3bd6dbeac581a011f"
   ],
   "source_sha256": [
-    "a5902505018441ee24aedce3a43764bf53836269adbee3082ded870ee051a0ab"
+    "8af995bc63fcc0490a79bae81e75c67995ef4953a200eb30fbc77f5a6cca1394"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,8 +33,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\bar-frame.png",
-      "sha256": "fcdf1d911cd1f372c79a4d6cd96a1884e74348fe61ba82ae3c6816b313985602"
+      "sha256": "019b54aa3f180039d8bb27086582e5c7dbb9ab3a65d618fbf384de0c664b52be"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/resources/bar-frame",
+      "logical_symbol": "adv_assets_ui_resources_bar_frame__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

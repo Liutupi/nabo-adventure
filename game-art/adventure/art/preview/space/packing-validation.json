@@ -1,0 +1,89 @@
+{
+  "schema": "adventure-assets-package-v1",
+  "format": "adv-row-rle-v2",
+  "groups": {
+    "space": {
+      "rle_bytes": 46903,
+      "table_bytes": 17470,
+      "descriptor_catalog_estimate_c3": 1539,
+      "resources": 18,
+      "pieces": 18,
+      "frames": 67,
+      "physical_sprites": 18,
+      "physical_frames": 67,
+      "interned_pieces": 0,
+      "static_bytes_estimate_c3": 65912
+    }
+  },
+  "python_verified_frames": 67,
+  "production_c": {
+    "verified_frames": 67,
+    "verified_sprite_rows": 3954,
+    "verified_ninepatch_rows": 0,
+    "comparison": "generated C and production decoders vs indexed source"
+  },
+  "source_manifests_sha256": {
+    "space-manifest.json": "168d04124ab06e8d7e181a41c51e3eec91ba3e9f7dd5911fa8690a25e96fe789"
+  },
+  "tools_sha256": {
+    "tools/generate_adv_sprites.py": "eff40de537378ceda49cb3327d3b063b6a00d18559be793660cc447456a3f56a",
+    "tools/build_adventure_assets.py": "d9f63eb62e54304885d77edce908249c2b33e0fca9dcf98aab352e2b66f76e49",
+    "tools/adventure_assets_manifest.py": "1e526efecb93f4b4c8cb01e03a85ca281cb6c910b6bee5faf6423a88d6d5a747",
+    "tools/adventure_assets_emit.py": "59dbb6de5b6ad25006606cadfe6c9636ae6e4ca34eb058faa7d4223be34856cb",
+    "tools/adventure_assets_verify.py": "46bc8a4727cb94f50afebfb99c3f7470e8260550384bb07ab04b2c6569e8e106",
+    "tools/generate_boot_presentation.py": "c7741863a38640519927c7784d53e861adf0170f3222eb4d98af65b15d3f0282",
+    "firmware/main/adv_boot.h": "e66f156b261e439324ca60fd45108ce548ba9f8c74520f7be0dd14086e546fa6",
+    "firmware/main/adv_sprite.c": "8c2b37a5ac776ecae017af98b7123aa51031a1cd75ad4734e6fd8d5aba8506a1",
+    "firmware/main/adv_sprite.h": "3f44a9762bb4dacfe2724a54f261dfa98305726ae4c3b5def6377e6d012898ad",
+    "firmware/main/adv_ninepatch.c": "052cc42ae138c6c762904a5e26163a945d99dd44713ac98197440602c2c866db",
+    "firmware/main/adv_ninepatch.h": "438c7369f79703f2164bbc364a65532e135267f3e52cf5d1009b6af51cae79aa"
+  },
+  "generated_code_sha256": {
+    "adv_assets_catalog.c": "728b8d0379d2662cb6bb5909f931ad9f22af30afa7fd6bd23e493189744691db",
+    "adv_assets_catalog.h": "ee8f4af4190ef3d2468fab401aa2cf2944b8d45a7d0271ad744cc0849c7e9288",
+    "adv_assets_game_space_lander_back__p0.c": "a2b0168c1a44eed05f3bbe1beb76d86dfff202ff4fed1fe9cfaa1f720bd8f895",
+    "adv_assets_game_space_lander_back__p0.h": "6869f4177d7b46ffa98dc2eaee9068f4b9e3dcdd6e7d603d280df345889052d2",
+    "adv_assets_game_space_lander_front__p0.c": "ceae12913a2b1917dcf1c148c4cd2072fa36061581454d1429a674e02cc2b24e",
+    "adv_assets_game_space_lander_front__p0.h": "880d7f3dccb015315f663c9252b56702cd8e8f08169dda3237f0aefba126707e",
+    "adv_assets_game_space_props_asteroid__p0.c": "c6b80e9e24f047fb026e43696325fc125baebeb5b7d06968572aa519a5193a35",
+    "adv_assets_game_space_props_asteroid__p0.h": "a2f0282819061d84aed81a51f7710d1cb7897af798aab7895ecc70b58a845115",
+    "adv_assets_game_space_props_flag__p0.c": "dfc010345cb0961cac0360a0a2feb406861e70495557d60b874a08288fc990ac",
+    "adv_assets_game_space_props_flag__p0.h": "7dae9f3582a056f6bc059e9c994ccd47230b8efbfed294ab8e4323b83be7214f",
+    "adv_assets_game_space_props_fuel_can__p0.c": "b1b1eb855b204d7765437fa6979b869edefa7d23516f0bd157c0f168479c503d",
+    "adv_assets_game_space_props_fuel_can__p0.h": "b4f24ec72b5775e9cb2c7ae870b31ea4af55a1404946fe5168819910c2fc0560",
+    "adv_assets_game_space_props_landing_pad__p0.c": "b2374a714ac5eaa2eb85ce02b4dfa1a65b673b284f820dd0c8a207d9a6edc8df",
+    "adv_assets_game_space_props_landing_pad__p0.h": "1d15ddf469397b899903bd07731780c09aac5f4523abb3433d3c7721010f2417",
+    "adv_assets_game_space_tiles_lunar_0__p0.c": "030e2686a93634994ce07337dd392ecc4d8b3599ec7afdb223494b4f823720b5",
+    "adv_assets_game_space_tiles_lunar_0__p0.h": "021f50da7d6ba294338992f651a1e51596a5ad17c5d2354260029f2d32c8b257",
+    "adv_assets_game_space_tiles_lunar_1__p0.c": "6a2981962cf1d37d50860cef8db9d8c38c42412097e3e0e12814430fcae8a26b",
+    "adv_assets_game_space_tiles_lunar_1__p0.h": "13ab2a38fe6fefd7e32c07a2a2ed6e9aede7838129faa2f7149f583410e75dd5",
+    "adv_assets_game_space_tiles_lunar_2__p0.c": "19bfdca7a95331e93f1860132fcd71fd0257a34754f0a8e9ea9143ee6e3fa4d1",
+    "adv_assets_game_space_tiles_lunar_2__p0.h": "57e5de0b16d867917c9bbd6764e4466eb43d11f3b9e344883bd60bf76f1e294f",
+    "adv_assets_space_a_cabin_idle__p0.c": "804c396180263c6e80a953b9df5676360e6b79aaae5ae416534275faf79e071f",
+    "adv_assets_space_a_cabin_idle__p0.h": "b5b224be1f099db858940b0d3c2e78fdf6bdb65c3f3e8254076d7dbda570247b",
+    "adv_assets_space_a_hard_land__p0.c": "98c5068411bef38d2870fa1d200f6b06ba281a984d6f8da97246781fd75239d6",
+    "adv_assets_space_a_hard_land__p0.h": "4cad9f1e113287456c6a582f7e05ec7d32043cb5af4d8ce475ac3b41112aa7c4",
+    "adv_assets_space_a_jet__p0.c": "09b12ec893e0112bbec44f025007d9a7576a22c486897a25681ade1290c37b38",
+    "adv_assets_space_a_jet__p0.h": "c86d1052b57b5c1e8d6819d36e41b5ee36fcb2e5a708166cf2ee7761d0701a36",
+    "adv_assets_space_a_land__p0.c": "94a7df1bdcdd679a2a967284dcb0d99221f779bc0c646dca30f94fe78956c6e7",
+    "adv_assets_space_a_land__p0.h": "ab5dcf542c8bfc63b5be319e6d0356bf155de7ca725085c2c7b3d0983c59ea2d",
+    "adv_assets_space_a_plant_flag__p0.c": "f1fc3c3bf9c7abd20b76b2a89c0311c6005392a74801cd0001cecda078f63e3c",
+    "adv_assets_space_a_plant_flag__p0.h": "f751c86e01887464c1e16fbfef7442a652b14c6e7f154775b7e7080004d72fbe",
+    "adv_assets_space_a_settlement_cheer__p0.c": "f4f470df25954bce13fd5e081582a490ba6323b91cc9195b8e735ef5f1a087a6",
+    "adv_assets_space_a_settlement_cheer__p0.h": "f0f8e3ac577f05ebd65d246a1c2aaa8e72a69515ec4dc07665d01510dad63bdc",
+    "adv_assets_space_b_cabin_idle__p0.c": "ba6f07318a84d898038e255be427a60cf4fb9f84d349ac5362e85340b472b10f",
+    "adv_assets_space_b_cabin_idle__p0.h": "db65282d9b2eecad3f652ffec8354b8cdc0d711afc08b4d15ee57f23a8fbfcb8",
+    "adv_assets_space_b_jet__p0.c": "4895048f4778a6508464abbc0c5914b9ac184d1c606be091191a4c1b4916b2d2",
+    "adv_assets_space_b_jet__p0.h": "25819d1b2826a142aa54db7d983a8ce098315bbbfe704a6a49e586b26e1520f3",
+    "adv_assets_space_b_settlement_cheer__p0.c": "34e93ca3b60f1df6ba309269f8537018f9ab7250cdca485622ba3e61a7d1621f",
+    "adv_assets_space_b_settlement_cheer__p0.h": "9381ec994402d3e1e80d9ff4c33d63caa6394a288c2ec29644c18ea5182662ce"
+  },
+  "sprite_interning": {
+    "scope": "within each group only",
+    "comparison": "exact RGBA pixels, dimensions and ordered frame sequence",
+    "logical_pieces": 18,
+    "physical_sprites": 18,
+    "accounting": "RLE/tables/sprite32 per physical object; piece8 and record/id per logical use"
+  },
+  "acceptance": "host packing validation only; no device/physical artwork acceptance implied"
+}

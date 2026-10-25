@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_deep_sea_seaweed__p0",
   "width": 32,
   "height": 32,
@@ -13,7 +13,7 @@
   "keys": [
     0
   ],
-  "data_bytes": 534,
+  "data_bytes": 517,
   "table_bytes": 140,
   "frame_sha256": [
     "08439de06e8e94ec47078639ec63456ccdd40cac9a4b27b1056a3fa5bc580c37"
@@ -36,5 +36,15 @@
       "sha256": "d1e6cf9c833a1784774782b4da638acc65c45777787231e7213676a0de557061"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/deep-sea/seaweed",
+      "logical_symbol": "adv_assets_static_tiles_deep_sea_seaweed__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

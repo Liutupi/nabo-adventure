@@ -8,7 +8,7 @@ static const uint16_t adv_assets_static_tiles_sky_cloud_large__p0_keys[] = {
 };
 static const uint32_t adv_assets_static_tiles_sky_cloud_large__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 12, 14, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130,
-    140, 154, 164, 170, 180, 182, 184, 186, 188, 190, 192, 194, 196,
+    140, 153, 163, 169, 179, 181, 183, 185, 187, 189, 191, 193, 195,
 };
 static const uint8_t adv_assets_static_tiles_sky_cloud_large__p0_data[] = {
     32, 0, 32, 0, 32, 0, 32, 0, 32, 0, 32, 0, 32, 0, 15, 0, 2, 1, 15, 0,
@@ -18,11 +18,11 @@ static const uint8_t adv_assets_static_tiles_sky_cloud_large__p0_data[] = {
     5, 0, 6, 1, 14, 3, 3, 1, 4, 0, 4, 0, 1, 1, 23, 3, 1, 1, 3, 0,
     4, 0, 1, 1, 24, 3, 1, 1, 2, 0, 3, 0, 1, 1, 25, 3, 1, 1, 2, 0,
     2, 0, 1, 1, 27, 3, 1, 1, 1, 0, 2, 0, 1, 1, 27, 3, 1, 1, 1, 0,
-    2, 0, 1, 1, 1, 3, 25, 2, 1, 3, 1, 1, 1, 0, 3, 0, 1, 1, 25, 2,
-    1, 1, 2, 0, 3, 0, 27, 2, 2, 0, 3, 0, 3, 2, 22, 1, 2, 2, 2, 0,
-    32, 0, 32, 0, 32, 0, 32, 0, 32, 0, 32, 0, 32, 0, 32, 0,
+    2, 0, 1, 1, 1, 3, 25, 2, 0, 3, 3, 1, 0, 3, 0, 1, 1, 25, 2, 1,
+    1, 2, 0, 3, 0, 27, 2, 2, 0, 3, 0, 3, 2, 22, 1, 2, 2, 2, 0, 32,
+    0, 32, 0, 32, 0, 32, 0, 32, 0, 32, 0, 32, 0, 32, 0,
 };
 const adv_sprite_t adv_assets_static_tiles_sky_cloud_large__p0 = {
-    32, 32, 1, 4, 33, 196,
+    32, 32, 1, 4, 33, 195,
     adv_assets_static_tiles_sky_cloud_large__p0_palette, adv_assets_static_tiles_sky_cloud_large__p0_keys, adv_assets_static_tiles_sky_cloud_large__p0_rows, adv_assets_static_tiles_sky_cloud_large__p0_data
 };

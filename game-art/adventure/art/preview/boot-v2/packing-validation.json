@@ -1,0 +1,46 @@
+{
+  "source_manifest_sha256": "1c30db1c649db343126522c3c359c8290ada9d1fd410dc8ca50d46a6148e9b34",
+  "groups": {
+    "boot_v2": {
+      "rle_bytes": 96348,
+      "table_bytes": 13328,
+      "descriptor_catalog_estimate_c3": 82,
+      "resources": 1,
+      "pieces": 1,
+      "frames": 27,
+      "static_bytes_estimate_c3": 109758
+    },
+    "ui": {
+      "rle_bytes": 36008,
+      "table_bytes": 14310,
+      "descriptor_catalog_estimate_c3": 11791,
+      "resources": 127,
+      "pieces": 127,
+      "frames": 127,
+      "static_bytes_estimate_c3": 62109
+    }
+  },
+  "unique_runtime_frames": 27,
+  "logical_events": 29,
+  "extra_timeline_table_bytes": 132,
+  "combined_ui_boot_and_timeline_bytes": 171999,
+  "limit_bytes": 163840,
+  "within_limit": false,
+  "compared_with_root_ui62109": {
+    "ui_bytes": 62109,
+    "total_bytes": 171999
+  },
+  "production_c": {
+    "verified_frames": 154,
+    "verified_sprite_rows": 6471,
+    "verified_ninepatch_rows": 912,
+    "comparison": "generated C and production decoders vs indexed source"
+  },
+  "ui_source_hashes": {
+    "ui/ui-manifest.json": "093a972bcd5fd12ab2a12281216e06d861fc63222b3c98551630d6791c95e0d0",
+    "ui/palette.json": "3b3dc6d793ac4eff3af34fc01f0d969f7eb6a5c0b5a6b967e66795103949fce0"
+  },
+  "decoder_sha256": "4ecd053e0041babc8cd405d06e56fda61515e472660b0c3944b3e9977bb5a58e",
+  "timeline_header_sha256": "77356755b1eb671dc9795fe59493a3a3718c29108fdb7af7f68aaa0511a7456a",
+  "boundary": "RLE/table bytes exact; C3 catalog estimates exclude linker padding. Final ELF and on-device acting are pending. No shared generated files written."
+}

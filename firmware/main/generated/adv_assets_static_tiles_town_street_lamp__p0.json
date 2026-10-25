@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_town_street_lamp__p0",
   "width": 32,
   "height": 32,
@@ -39,5 +39,15 @@
       "sha256": "4e328bd10bac49cc41f49bd1f9cb40c818b343ff4f4325ba6db5a7ecbec555bc"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/town/street-lamp",
+      "logical_symbol": "adv_assets_static_tiles_town_street_lamp__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

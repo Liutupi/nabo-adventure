@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_travel_idle__p0",
   "width": 22,
   "height": 48,
@@ -81,7 +81,7 @@
     0,
     0
   ],
-  "data_bytes": 2884,
+  "data_bytes": 2444,
   "table_bytes": 1712,
   "frame_sha256": [
     "c1ca8a5bc8def9e235a5296d3e522d9560b0cc249f8b7387c445587c880bae54",
@@ -146,5 +146,15 @@
       "sha256": "eaa1f9d16a52d10276122daea676a13ff2238dfdc8ec368c666a2f56caee6e31"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "travel/idle",
+      "logical_symbol": "adv_assets_travel_idle__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

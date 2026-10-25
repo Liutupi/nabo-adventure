@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_harbor_buoy__p0",
   "width": 32,
   "height": 32,
@@ -38,5 +38,15 @@
       "sha256": "8d526bdfdcb7680105726a7524e65fd70d075e6d45950361f1877b2b9561350b"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/harbor/buoy",
+      "logical_symbol": "adv_assets_static_tiles_harbor_buoy__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

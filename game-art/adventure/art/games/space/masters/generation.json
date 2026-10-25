@@ -1,0 +1,31 @@
+{
+  "method": "actual built-in imagegen costume edits, then immutable common-head rig",
+  "references": [
+    {
+      "path": "reference/nabo-idle-original.png",
+      "sha256": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243"
+    },
+    {
+      "path": "design/round1/v2/01-hiker-design-board.png",
+      "sha256": "3ed446475284c3d1b75ba78a41d75922935ee928bc91ba51fccbd7d8a13a1060"
+    }
+  ],
+  "outputs": [
+    {
+      "skin": "space_a",
+      "path": "games/space/masters/space_a-three-views.png",
+      "sha256": "092e8abdd4a653918366585e5134d0d70012d4e21f513a867a9d9df072e8c44a",
+      "prompt": "games/space/masters/space_a-prompt.txt",
+      "prompt_sha256": "acd9786473584f24ad7f97409ab26b6b362456b0ebf81d163e470b95d0810a46"
+    },
+    {
+      "skin": "space_b",
+      "path": "games/space/masters/space_b-three-views.png",
+      "sha256": "857f9504c3ca413830565a3c516834c30324562f6ec83522a8cbd33199efebcb",
+      "prompt": "games/space/masters/space_b-prompt.txt",
+      "prompt_sha256": "78652985689f8d1fd3ea9c3cbfece9fa4aa8f8b3e6f6410592481c37ff24661c"
+    }
+  ],
+  "generated_head_usage": "discarded; shared approved head is the animation identity source",
+  "user_acceptance": "not claimed"
+}

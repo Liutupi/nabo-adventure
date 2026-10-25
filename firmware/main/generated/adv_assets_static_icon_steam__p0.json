@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_icon_steam__p0",
   "width": 16,
   "height": 16,
@@ -37,5 +37,15 @@
       "sha256": "9a64d567d86a690751741ca1eaff31f66dd1acdbb7f71fcd9caddc03c4e0848d"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/icon/steam",
+      "logical_symbol": "adv_assets_static_icon_steam__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

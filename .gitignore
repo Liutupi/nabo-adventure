@@ -5,6 +5,8 @@ preview/
 !game-art/adventure/art/preview/**
 !game-art/adventure/art/ui/preview/
 !game-art/adventure/art/ui/preview/**
+# Per-game host verification copies are reproducible; keep their reports/previews.
+game-art/adventure/art/preview/*/generated-c/
 *.zip
 # macOS / editor noise (the source volume writes AppleDouble files)
 ._*

@@ -1,26 +1,25 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_resources_icons_stamina__p0",
   "width": 16,
   "height": 16,
   "palette_rgb565": [
     0,
     8649,
-    45672,
-    63185
+    45672
   ],
   "background_rgb888": null,
   "key_interval": 8,
   "keys": [
     0
   ],
-  "data_bytes": 166,
-  "table_bytes": 78,
+  "data_bytes": 160,
+  "table_bytes": 76,
   "frame_sha256": [
-    "e80d28c0dfbea42d30e01c274a8a93f46f00519aa9060265a75e61306459cb0b"
+    "2e736f19d3fb7f6bdc0965eb3912b3144f3f3c498c43e14718521fe923354d21"
   ],
   "source_sha256": [
-    "78c2c77c6529f6eb42010eff10dea3ec2665cff2e64ff3a11049a967ca6be040"
+    "069bc77f6ebfe0da06507140fd82b88342573a84e2566401ffd2f9714dd178d5"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,8 +33,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\icons\\stamina.png",
-      "sha256": "e965610417a670e0f0bb1ecc86c4bd623438f605d9b118c764cb6c468fc1953c"
+      "sha256": "68626ba880f8f4b5e1ade1c2700e609f5d6ec2e0fd1252622b58808ab0c57c19"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/resources/icons/stamina",
+      "logical_symbol": "adv_assets_ui_resources_icons_stamina__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

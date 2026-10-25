@@ -1,0 +1,40 @@
+"""NIGHT-only coordinate and motion contracts; shared travel is strictly read-only."""
+from pathlib import Path
+ART=Path(__file__).resolve().parents[1]/'art'
+RIG=ART/'rig/night'
+GAME=ART/'games/night'
+PREVIEW=ART/'preview/night'
+FACING={'front':(0,600),'left':(600,1180),'right':(1180,1774)}
+SOURCE={
+ 'night_a':{'sha256':'0a90f3c473778b2e9a1e9f02db53da1c107f0ee9805d632872b572853996588f',
+            'necks':{'front':(320,437),'left':(889,437),'right':(1487,442)},'head_widths':{'front':450,'left':455,'right':450}},
+ 'night_b':{'sha256':'7d55e93e2dc253fd8257001d237b88a9cd17fc6329d603d8e37e85678e80d421',
+            'necks':{'front':(331,419),'left':(900,431),'right':(1500,431)},'head_widths':{'front':430,'left':445,'right':430}},
+}
+ANCHOR=(128,224)
+HEAD_SHIFT=(0,40)
+ANIMS={
+ 'seat_idle':{'facing':'front','count':8,'height':56,'loop':True},
+ 'move_left':{'facing':'left','count':4,'height':56,'loop':False},
+ 'move_right':{'facing':'right','count':4,'height':56,'loop':False},
+ 'catch':{'facing':'front','count':6,'height':56,'loop':False},
+ 'lift_jar':{'facing':'front','count':6,'height':56,'loop':False},
+ 'yawn':{'facing':'front','count':6,'height':56,'loop':False},
+ 'cheer':{'facing':'front','count':8,'height':72,'loop':False},
+}
+PIVOTS={'torso':(128,205),'upper_l':(103,150),'forearm_l':(96,180),
+        'upper_r':(153,150),'forearm_r':(165,181),'legs':(128,210),
+        'jar':(118,189),'collar':(128,142),'hem':(132,200)}
+# All masks are technical source-pixel partitions, not character illustrations.
+POLYS={
+ 'jar':[(110,173),(127,173),(128,202),(110,203)],
+ 'forearm_l':[(94,176),(111,176),(118,190),(110,198),(96,191)],
+ 'upper_l':[(98,146),(111,151),(106,171),(101,183),(92,183),(89,164)],
+ 'forearm_r':[(154,176),(179,176),(181,203),(164,205),(156,192)],
+ 'upper_r':[(147,147),(160,146),(173,177),(171,185),(160,186),(153,167)],
+ 'legs':[(0,190),(256,190),(256,256),(0,256)],
+ 'collar':[(111,137),(146,137),(151,151),(128,159),(107,150)],
+ 'hem':[(122,191),(145,191),(146,198),(120,198)],
+}
+ORDER=['torso','hem','legs','upper_l','upper_r','collar','head','expression','jar','forearm_l','forearm_r']
+FOREST='#18303c'

@@ -1,26 +1,26 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_labels_press_start__p0",
-  "width": 168,
-  "height": 28,
+  "width": 208,
+  "height": 34,
   "palette_rgb565": [
     0,
     8649,
-    45672,
-    63185
+    38099,
+    65502
   ],
   "background_rgb888": null,
   "key_interval": 8,
   "keys": [
     0
   ],
-  "data_bytes": 896,
-  "table_bytes": 126,
+  "data_bytes": 958,
+  "table_bytes": 150,
   "frame_sha256": [
-    "1f79bc6a0b56c02f654fb0d8fe48aa70b0e9ec32467b3bf319ea1e093d936fa9"
+    "eeabe32e3bef2a1ca51086a2a4be9ab685641c8f41da3bff8ea9e96a577cb91b"
   ],
   "source_sha256": [
-    "596ccd33ef4953a83ee3552626829ee310904125d4d1b235321ee4398d4e8038"
+    "2cee5667ca89ab1b05d95a2ba875b6ed987042969d6171662275247a13df80bc"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,8 +34,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\labels\\press-start.png",
-      "sha256": "b9053c3b86f083842c344895fe6f85a02fa0c709c391a82537e570fbcd23bd81"
+      "sha256": "0cab8b3ee5bffcccc6b2dbe0f4972ee93514f02b82b7bd3b24ea059616b85731"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/labels/press-start",
+      "logical_symbol": "adv_assets_ui_labels_press_start__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

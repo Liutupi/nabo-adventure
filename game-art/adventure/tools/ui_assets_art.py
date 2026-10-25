@@ -61,77 +61,42 @@ def source_character(path, height=120, colors=48):
 
 
 def build_cover(assets, fonts, character_path=None, character_anchor=None):
-    background = image((240, 320), 'paper'); d = ImageDraw.Draw(background)
-    # The cover is a travel scrapbook: four native-size map vignettes, not a
-    # scaled screenshot. The middle vertical corridor leaves room for NABO.
-    d.rectangle((5, 5, 234, 267), outline=rgba('line'), width=2)
-    for y in range(15, 261, 20):
-        d.ellipse((2, y, 8, y+6), fill=rgba('shadow'), outline=rgba('line'), width=1)
-    sources = []
-    worlds = [('space', '太空', (14, 105, 88, 173)), ('mountain', '雪山', (152, 105, 226, 173)),
-              ('town', '小镇', (14, 185, 88, 257)), ('deep-sea', '深海', (152, 185, 226, 257))]
-    for world, label, box in worlds:
-        tile, path = world_tile(world)
-        sources.append({'path': str(path.relative_to(ART)), 'sha256': sha(path)})
-        base = {'space': 'ink', 'mountain': 'paper', 'town': 'bg', 'deep-sea': 'blue'}[world]
-        d.rectangle((box[0], box[1], box[2]-1, box[3]-1), fill=rgba(base))
-        tiled_paste(background, tile, box)
-        d.rectangle((box[0], box[1], box[2]-1, box[3]-1), outline=rgba('ink'), width=2)
-        # Native 96px landmarks are clipped by the postcard window, never scaled.
-        landmark_name = {'deep-sea': 'dive', 'town': 'kiosk', 'mountain': 'climb', 'space': 'space'}[world]
-        landmark_path = ART / f'map/landmarks/{landmark_name}.png'
-        if landmark_path.exists():
-            landmark = Image.open(landmark_path).convert('RGBA')
-            crop_x = (96-(box[2]-box[0]))//2
-            crop = landmark.crop((crop_x, 96-(box[3]-box[1]), crop_x+box[2]-box[0], 96))
-            background.alpha_composite(crop, (box[0], box[1]))
-            sources.append({'path': str(landmark_path.relative_to(ART)), 'sha256': sha(landmark_path)})
-        tag = image((34, 18), 'paper'); fonts.text(tag, (17, 2), label, 12, align='center')
-        background.alpha_composite(tag, (box[0]+4, box[1]+4))
-    # These are footer *layout slots*. No character, logo or caption is baked in.
-    d.rectangle((0, 270, 239, 319), fill=rgba('paper'))
-    assets.save('cover-background.png', background, group='cover', limit=64, pack=False,
-                contains_character=False, source_art=sources, reserved_logo=[10, 8, 230, 98],
-                reserved_character=[78, 138, 162, 266], reserved_footer=[0, 270, 240, 320])
-    assets.save('cover-background-top.png', background.crop((0, 0, 240, 256)), group='cover', limit=64,
-                draw_offset=[0, 0])
-    assets.save('cover-background-bottom.png', background.crop((0, 256, 240, 320)), group='cover', limit=64,
-                draw_offset=[0, 256])
-    if character_path:
-        character_path = Path(character_path).resolve()
-        hero = Image.open(character_path).convert('RGBA')
-        assert character_anchor is not None, 'Approved runtime frame requires its documented anchor'
-        assert len({p[:3] for p in pixels(hero) if p[3]}) <= 48
-        assert {p[3] for p in pixels(hero)} <= {0, 255}
-        anchor = character_anchor
-    else:
-        character_path = ART / 'frames/travel/masters/idle/000.png'
-        hero = source_character(character_path, 120, 48)
-        anchor = (hero.width//2, hero.height)
-    layer = image((240, 320))
-    xy = (120-anchor[0], 266-anchor[1])
-    layer.alpha_composite(hero, xy)
-    assets.save('cover-character.png', layer, group='character', limit=64, pack=False,
-                source=str(character_path.relative_to(ART)), source_sha256=sha(character_path),
-                source_anchor=list(anchor),
-                note='Static composition reference; firmware may use the separate welcome120 animation')
-    assets.save('cover-character-sprite.png', hero, group='character', limit=64, pack=False, draw_offset=list(xy),
-                note='Reference only; use manifest travel/welcome animation in firmware')
-    logo = assets.load('wordmarks/collection.png')
-    composed = background.copy(); composed.alpha_composite(logo, (10, 8)); composed.alpha_composite(layer)
-    assets.save('cover-illustration.png', composed, group='cover', limit=64, pack=False,
-                composition=['cover-background.png', 'wordmarks/collection.png@10,8', 'cover-character.png'],
-                reserved_footer=[0, 270, 240, 320])
-    preview = composed.copy()
-    preview.alpha_composite(assets.load('labels/boot-caption.png'), (10, 270))
-    preview.alpha_composite(assets.load('labels/press-start.png'), (36, 292))
-    target = OUT / 'preview'; target.mkdir(parents=True, exist_ok=True)
-    preview.save(target / 'cover.png', optimize=True)
-    return {'background': 'cover-background.png', 'character': 'cover-character.png',
-            'flattened_reference': 'cover-illustration.png', 'logo': 'wordmarks/collection.png',
-            'logo_offset': [10, 8], 'character_foot_anchor': [120, 266], 'character_height': 120,
-            'character_source': str(character_path.relative_to(ART)), 'character_source_sha256': sha(character_path),
-            'character_source_anchor': list(anchor),
-            'caption': {'text': 'NABO,陪你冒险', 'path': 'labels/boot-caption.png', 'offset': [10, 270]},
-            'start_button': {'path': 'labels/press-start.png', 'offset': [36, 292]},
-            'layer_assembly': 'exact; see verify_ui_assets.py', 'source_art': sources}
+    background=image((240,320),'paper');d=ImageDraw.Draw(background);sources=[]
+    d.polygon([(16,226),(43,222),(82,234),(89,262),(16,262)],fill=rgba('blue'))
+    d.line([(17,236),(30,232),(44,236),(58,231)],fill=rgba('paper'),width=2)
+    d.line([(20,251),(34,246),(49,249)],fill=rgba('paper'),width=2)
+    for path,xy in [('map/tiles/mountain/snowcap-rock.png',(20,163)),('map/tiles/town/red-roof.png',(180,218))]:
+        bitmap=Image.open(ART/path).convert('RGBA');background.alpha_composite(bitmap,xy)
+        sources.append({'path':path,'sha256':sha(ART/path)})
+    d.ellipse((185,151,209,175),fill=rgba('ink'))
+    d.arc((180,158,215,168),0,330,fill=rgba('gold'),width=2)
+    d.rectangle((216,145,218,147),fill=rgba('gold'));d.rectangle((175,180,177,182),fill=rgba('accent'))
+    d.rectangle((0,270,239,319),fill=rgba('paper'))
+    assets.save('cover-background.png',background,group='cover',limit=64,pack=False,
+        contains_character=False,source_art=sources,reserved_logo=[10,12,230,102],
+        reserved_character=[78,138,162,266],reserved_footer=[0,270,240,320])
+    assets.save('cover-background-top.png',background.crop((0,0,240,256)),group='cover',limit=64,draw_offset=[0,0])
+    assets.save('cover-background-bottom.png',background.crop((0,256,240,320)),group='cover',limit=64,draw_offset=[0,256])
+    if not character_path:
+        character_path=ART/'frames/travel/runtime/welcome/000.png';character_anchor=(31,120)
+    character_path=Path(character_path).resolve();hero=Image.open(character_path).convert('RGBA')
+    assert character_anchor is not None and len({p[:3] for p in pixels(hero) if p[3]})<=48
+    assert {p[3] for p in pixels(hero)}<={0,255}
+    anchor=character_anchor;layer=image((240,320));xy=(120-anchor[0],266-anchor[1]);layer.alpha_composite(hero,xy)
+    assets.save('cover-character.png',layer,group='character',limit=64,pack=False,
+        source=str(character_path.relative_to(ART)),source_sha256=sha(character_path),source_anchor=list(anchor),
+        note='Reference only; separate animation is counted in the combined UI+boot budget')
+    assets.save('cover-character-sprite.png',hero,group='character',limit=64,pack=False,draw_offset=list(xy),
+        note='Unmodified approved runtime pixels; no rescale/recolor')
+    composed=background.copy();composed.alpha_composite(assets.load('wordmarks/collection.png'),(10,12));composed.alpha_composite(layer)
+    assets.save('cover-illustration.png',composed,group='cover',limit=64,pack=False,
+        composition=['cover-background.png','wordmarks/collection.png@10,12','cover-character.png'],reserved_footer=[0,270,240,320])
+    preview=composed.copy();preview.alpha_composite(assets.load('labels/boot-caption.png'),(10,270))
+    preview.alpha_composite(assets.load('labels/press-start.png'),(16,284))
+    target=OUT/'preview';target.mkdir(parents=True,exist_ok=True);preview.save(target/'cover.png',optimize=True)
+    return {'background':'cover-background.png','character':'cover-character.png','flattened_reference':'cover-illustration.png',
+        'logo':'wordmarks/collection.png','logo_offset':[10,12],'character_foot_anchor':[120,266],'character_height':120,
+        'character_source':str(character_path.relative_to(ART)),'character_source_sha256':sha(character_path),
+        'character_source_anchor':list(anchor),'caption':{'text':'NABO,陪你冒险','path':'labels/boot-caption.png','offset':[10,270]},
+        'start_button':{'path':'labels/press-start.png','offset':[16,284]},'layer_assembly':'exact; verify_ui_assets.py',
+        'source_art':sources,'character_budget_policy':'include welcome animation with UI; do not hide it in travel group'}

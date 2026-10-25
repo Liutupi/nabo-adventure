@@ -1,0 +1,224 @@
+{
+  "space": "native 240x320; text positions are ink top-left, derive C baseline from generated glyph metrics",
+  "dynamic_text": [
+    {
+      "fixture_text": "冒险护照",
+      "anchor_xy": [
+        120,
+        80
+      ],
+      "ink_box": [
+        88,
+        80,
+        152,
+        98
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "center"
+    },
+    {
+      "fixture_text": "设置",
+      "anchor_xy": [
+        120,
+        140
+      ],
+      "ink_box": [
+        104,
+        140,
+        136,
+        156
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "center"
+    },
+    {
+      "fixture_text": "返回地图",
+      "anchor_xy": [
+        120,
+        200
+      ],
+      "ink_box": [
+        88,
+        200,
+        152,
+        217
+      ],
+      "size_px": 16,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "center"
+    },
+    {
+      "fixture_text": "每一站，都是新的印记",
+      "anchor_xy": [
+        120,
+        259
+      ],
+      "ink_box": [
+        60,
+        259,
+        180,
+        273
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "center"
+    },
+    {
+      "fixture_text": "护照亭",
+      "anchor_xy": [
+        20,
+        6
+      ],
+      "ink_box": [
+        20,
+        6,
+        74,
+        26
+      ],
+      "size_px": 18,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "left"
+    },
+    {
+      "fixture_text": "章 1/24",
+      "anchor_xy": [
+        226,
+        11
+      ],
+      "ink_box": [
+        185,
+        11,
+        226,
+        25
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "right"
+    },
+    {
+      "fixture_text": "上 / 下选择   OK 确认",
+      "anchor_xy": [
+        120,
+        300
+      ],
+      "ink_box": [
+        64,
+        300,
+        176,
+        314
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "center"
+    }
+  ],
+  "cards": [
+    {
+      "family": "menu",
+      "state": "selected",
+      "xy": [
+        16,
+        65
+      ],
+      "size": [
+        208,
+        48
+      ],
+      "dynamic_text": "#fffaf0"
+    },
+    {
+      "family": "menu",
+      "state": "normal",
+      "xy": [
+        16,
+        125
+      ],
+      "size": [
+        208,
+        48
+      ],
+      "dynamic_text": "#203849"
+    },
+    {
+      "family": "menu",
+      "state": "normal",
+      "xy": [
+        16,
+        185
+      ],
+      "size": [
+        208,
+        48
+      ],
+      "dynamic_text": "#203849"
+    }
+  ],
+  "assets": [
+    {
+      "path": "bars/top.png",
+      "xy": [
+        0,
+        0
+      ]
+    },
+    {
+      "path": "bars/bottom.png",
+      "xy": [
+        0,
+        290
+      ]
+    }
+  ],
+  "numbers": []
+}

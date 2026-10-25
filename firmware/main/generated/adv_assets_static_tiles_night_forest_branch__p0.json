@@ -1,5 +1,5 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_static_tiles_night_forest_branch__p0",
   "width": 32,
   "height": 32,
@@ -14,7 +14,7 @@
   "keys": [
     0
   ],
-  "data_bytes": 318,
+  "data_bytes": 315,
   "table_bytes": 142,
   "frame_sha256": [
     "09588652b1c489fca7a020b69e077e6a96b52914d24480f8a2dbdb4319151910"
@@ -37,5 +37,15 @@
       "sha256": "51059893db783042dd154b49336026d9b771f642d2b5fef1f88f70847d0aa03b"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "static/tiles/night-forest/branch",
+      "logical_symbol": "adv_assets_static_tiles_night_forest_branch__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

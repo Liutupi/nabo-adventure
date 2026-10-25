@@ -1,0 +1,243 @@
+{
+  "checks": [
+    {
+      "from": [
+        "climb_a",
+        "grip_idle_left",
+        0
+      ],
+      "to": [
+        "climb_a",
+        "charge_left",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "charge_left",
+        -1
+      ],
+      "to": [
+        "climb_a",
+        "jump_left",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "jump_left",
+        -1
+      ],
+      "to": [
+        "climb_a",
+        "grip_idle_left",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "slide_left",
+        -1
+      ],
+      "to": [
+        "climb_a",
+        "grip_idle_left",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "grip_idle_left",
+        0
+      ],
+      "to": [
+        "climb_a",
+        "slide_left",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "grip_idle_left",
+        0
+      ],
+      "to": [
+        "climb_a",
+        "switch_grab_left",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "switch_grab_left",
+        -1
+      ],
+      "to": [
+        "climb_a",
+        "grip_idle_right",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "grip_idle_left",
+        0
+      ],
+      "to": [
+        "climb_a",
+        "summit_cheer_left",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "grip_idle_right",
+        0
+      ],
+      "to": [
+        "climb_a",
+        "charge_right",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "charge_right",
+        -1
+      ],
+      "to": [
+        "climb_a",
+        "jump_right",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "jump_right",
+        -1
+      ],
+      "to": [
+        "climb_a",
+        "grip_idle_right",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "slide_right",
+        -1
+      ],
+      "to": [
+        "climb_a",
+        "grip_idle_right",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "grip_idle_right",
+        0
+      ],
+      "to": [
+        "climb_a",
+        "slide_right",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "grip_idle_right",
+        0
+      ],
+      "to": [
+        "climb_a",
+        "switch_grab_right",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "switch_grab_right",
+        -1
+      ],
+      "to": [
+        "climb_a",
+        "grip_idle_left",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "grip_idle_right",
+        0
+      ],
+      "to": [
+        "climb_a",
+        "summit_cheer_right",
+        0
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_a",
+        "settlement_cheer",
+        0
+      ],
+      "to": [
+        "climb_a",
+        "settlement_cheer",
+        -1
+      ],
+      "formal_and_runtime_pixel_equal": true
+    },
+    {
+      "from": [
+        "climb_b",
+        "settlement_cheer",
+        0
+      ],
+      "to": [
+        "climb_b",
+        "settlement_cheer",
+        -1
+      ],
+      "formal_and_runtime_pixel_equal": true
+    }
+  ],
+  "notes": [
+    "Summit cheer ends at neutral in its wall-facing view; renderer should hold final pose or explicitly turn before front settlement.",
+    "Switch head uses separately supplied left/front/right source views, never a mirror.",
+    "Game engine applies world motion, collision displacement, and scrolling; these clips contain limb poses only."
+  ]
+}

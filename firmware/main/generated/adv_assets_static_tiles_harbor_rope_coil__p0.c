@@ -8,7 +8,7 @@ static const uint16_t adv_assets_static_tiles_harbor_rope_coil__p0_keys[] = {
 };
 static const uint32_t adv_assets_static_tiles_harbor_rope_coil__p0_rows[] = {
     0, 2, 4, 6, 8, 10, 16, 22, 32, 42, 56, 70, 88, 106, 128, 150, 176, 202, 228, 250,
-    272, 290, 308, 322, 336, 348, 364, 376, 388, 394, 404, 406, 408,
+    272, 290, 308, 322, 336, 348, 364, 376, 388, 394, 403, 405, 407,
 };
 static const uint8_t adv_assets_static_tiles_harbor_rope_coil__p0_data[] = {
     32, 0, 32, 0, 32, 0, 32, 0, 32, 0, 13, 0, 7, 2, 12, 0, 11, 0, 11, 2,
@@ -30,10 +30,10 @@ static const uint8_t adv_assets_static_tiles_harbor_rope_coil__p0_data[] = {
     6, 0, 8, 0, 2, 2, 4, 0, 5, 2, 4, 0, 2, 2, 7, 0, 8, 0, 3, 2,
     11, 0, 3, 2, 1, 3, 6, 0, 10, 0, 3, 2, 7, 0, 3, 2, 1, 0, 2, 1,
     1, 3, 5, 0, 11, 0, 11, 2, 3, 0, 2, 1, 2, 3, 3, 0, 13, 0, 7, 2,
-    7, 0, 2, 1, 1, 3, 2, 0, 27, 0, 4, 1, 1, 0, 27, 0, 1, 1, 1, 0,
-    1, 1, 2, 0, 32, 0, 32, 0,
+    7, 0, 2, 1, 1, 3, 2, 0, 27, 0, 4, 1, 1, 0, 27, 0, 0, 5, 1, 0,
+    1, 0, 0, 32, 0, 32, 0,
 };
 const adv_sprite_t adv_assets_static_tiles_harbor_rope_coil__p0 = {
-    32, 32, 1, 4, 33, 408,
+    32, 32, 1, 4, 33, 407,
     adv_assets_static_tiles_harbor_rope_coil__p0_palette, adv_assets_static_tiles_harbor_rope_coil__p0_keys, adv_assets_static_tiles_harbor_rope_coil__p0_rows, adv_assets_static_tiles_harbor_rope_coil__p0_data
 };

@@ -1,0 +1,226 @@
+{
+  "space": "native 240x320; text positions are ink top-left, derive C baseline from generated glyph metrics",
+  "dynamic_text": [
+    {
+      "fixture_text": "5",
+      "anchor_xy": [
+        56,
+        242
+      ],
+      "ink_box": [
+        53,
+        242,
+        60,
+        251
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "center"
+    },
+    {
+      "fixture_text": "12",
+      "anchor_xy": [
+        120,
+        242
+      ],
+      "ink_box": [
+        113,
+        242,
+        127,
+        251
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "center"
+    },
+    {
+      "fixture_text": "25",
+      "anchor_xy": [
+        184,
+        242
+      ],
+      "ink_box": [
+        177,
+        242,
+        191,
+        251
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "center"
+    },
+    {
+      "fixture_text": "最佳 0",
+      "anchor_xy": [
+        120,
+        261
+      ],
+      "ink_box": [
+        103,
+        261,
+        137,
+        273
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        32,
+        56,
+        73
+      ],
+      "color_name": "ink",
+      "align": "center"
+    },
+    {
+      "fixture_text": "小火车",
+      "anchor_xy": [
+        20,
+        6
+      ],
+      "ink_box": [
+        20,
+        6,
+        74,
+        25
+      ],
+      "size_px": 18,
+      "font": "NotoSansSC-Bold",
+      "weight": 700,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "white",
+      "align": "left"
+    },
+    {
+      "fixture_text": "第 03 站",
+      "anchor_xy": [
+        226,
+        11
+      ],
+      "ink_box": [
+        182,
+        11,
+        226,
+        24
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "right"
+    },
+    {
+      "fixture_text": "OK 出发   上键返回",
+      "anchor_xy": [
+        120,
+        300
+      ],
+      "ink_box": [
+        70,
+        300,
+        171,
+        314
+      ],
+      "size_px": 12,
+      "font": "SourceHanSansCN-Medium",
+      "weight": 500,
+      "color": [
+        255,
+        250,
+        240
+      ],
+      "color_name": "paper",
+      "align": "center"
+    }
+  ],
+  "cards": [
+    {
+      "family": "info",
+      "state": "normal",
+      "xy": [
+        16,
+        207
+      ],
+      "size": [
+        208,
+        76
+      ],
+      "dynamic_text": "#203849"
+    }
+  ],
+  "assets": [
+    {
+      "path": "wordmarks/post.png",
+      "xy": [
+        20,
+        42
+      ]
+    },
+    {
+      "path": "map/stamp-bronze.png",
+      "xy": [
+        48,
+        218
+      ]
+    },
+    {
+      "path": "map/stamp-silver.png",
+      "xy": [
+        112,
+        218
+      ]
+    },
+    {
+      "path": "map/stamp-gold.png",
+      "xy": [
+        176,
+        218
+      ]
+    },
+    {
+      "path": "bars/top.png",
+      "xy": [
+        0,
+        0
+      ]
+    },
+    {
+      "path": "bars/bottom.png",
+      "xy": [
+        0,
+        290
+      ]
+    }
+  ],
+  "numbers": []
+}

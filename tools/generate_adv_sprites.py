@@ -9,6 +9,7 @@ explicit matte. Output: <output>.c, .h and an auditable .json packing report.
 from __future__ import annotations
 
 import argparse
+from collections import deque
 import hashlib
 import json
 from pathlib import Path
@@ -17,6 +18,7 @@ import re
 from PIL import Image
 
 MAX_SIDE, KEY_INTERVAL, INHERIT = 256, 8, 64
+FORMAT = 'adv-row-rle-v2'  # Old v1 run-only streams remain readable.
 
 
 def pixels_of(image):
@@ -75,7 +77,7 @@ def index_frames(images, background=None):
     return palette, [bytes(0 if v is None else lookup[v] for v in frame) for frame in pixels]
 
 
-def rle(row):
+def _rle_legacy(row):
     result = bytearray()
     x = 0
     while x < len(row):
@@ -87,50 +89,135 @@ def rle(row):
     return bytes(result)
 
 
+def rle(row):
+    """Shortest run/literal mixture; keep v1 bytes when lengths tie.
+
+    Backward DP chooses a run or a literal of at most 255 indices. Extending a
+    same-value run costs nothing and cannot increase the remaining stream size.
+    A monotone queue finds the cheapest literal suffix in linear time. Ties
+    prefer runs, then longer tokens, so repeated builds produce identical bytes.
+    """
+    n = len(row)
+    cost, choice, repeats = [0] * (n + 1), [None] * n, [1] * n
+    suffixes = deque()
+    for x in range(n - 1, -1, -1):
+        if x + 1 < n and row[x] == row[x + 1]:
+            repeats[x] = min(255, repeats[x + 1] + 1)
+        j = x + 1
+        candidate = (cost[j] + j, -j)
+        while suffixes and suffixes[-1] >= candidate:
+            suffixes.pop()
+        suffixes.append(candidate)
+        while -suffixes[0][1] > x + 255:
+            suffixes.popleft()
+        length = -suffixes[0][1] - x
+        run = repeats[x]
+        best = min((2 + cost[x + run], 0, -run),
+                   (suffixes[0][0] + 2 - x, 1, -length))
+        cost[x], kind, negative_length = best
+        choice[x] = (kind, -negative_length)
+    result, x = bytearray(), 0
+    while x < n:
+        literal, length = choice[x]
+        if literal:
+            result.extend((0, length))
+            result.extend(row[x:x + length])
+        else:
+            result.extend((length, row[x]))
+        x += length
+    legacy = _rle_legacy(row)
+    return bytes(result) if len(result) < len(legacy) else legacy
+
+
 def pack(width, height, frames):
+    """Choose minimum-byte key blocks without reordering any physical frames.
+
+    A block is one key plus 0..7 deltas. Since each delta refers to the previous
+    frame, its cost is independent of the block's start. DP tries all eight
+    possible starts; row tables and descriptor size do not change.
+    """
     if not 1 <= width <= MAX_SIDE or not 1 <= height <= MAX_SIDE or not 1 <= len(frames) <= 65535:
         raise ValueError('invalid clip dimensions or frame count')
     if any(len(frame) != width * height or any(v >= 64 for v in frame) for frame in frames):
         raise ValueError('incorrect indexed frame size')
-    keys, rows, data = [], [], bytearray()
-    key = 0
+    full, delta = [], [None]
     for f, frame in enumerate(frames):
-        full = [rle(frame[y * width:(y + 1) * width]) for y in range(height)]
-        encoded = full
-        if f and f - key < KEY_INTERVAL:
-            delta = bytes(INHERIT if a == b else a for a, b in zip(frame, frames[f - 1]))
-            diff = [rle(delta[y * width:(y + 1) * width]) for y in range(height)]
-            if sum(map(len, diff)) < sum(map(len, full)):
-                encoded = diff
-            else:
-                key = f
-        else:
-            key = f
-        keys.append(key)
-        for row in encoded:
+        full.append([rle(frame[y * width:(y + 1) * width]) for y in range(height)])
+        if f:
+            pixels = bytes(INHERIT if a == b else a for a, b in zip(frame, frames[f - 1]))
+            delta.append([rle(pixels[y * width:(y + 1) * width]) for y in range(height)])
+    full_cost, prefix = [sum(map(len, rows)) for rows in full], [0]
+    for rows in delta[1:]:
+        prefix.append(prefix[-1] + sum(map(len, rows)))
+    costs, starts = [], []
+    for end in range(len(frames)):
+        cost, _, key = min(((costs[k - 1] if k else 0) + full_cost[k] + prefix[end] - prefix[k], -k, k)
+                           for k in range(max(0, end - KEY_INTERVAL + 1), end + 1))
+        costs.append(cost)
+        starts.append(key)
+    keys, end = [0] * len(frames), len(frames) - 1
+    while end >= 0:
+        key = starts[end]
+        keys[key:end + 1] = [key] * (end - key + 1)
+        end = key - 1
+    rows, data = [], bytearray()
+    for f, key in enumerate(keys):
+        for row in full[f] if f == key else delta[f]:
             rows.append(len(data))
             data.extend(row)
         rows.append(len(data))
     return {'width': width, 'height': height, 'keys': keys, 'rows': rows, 'data': bytes(data)}
 
 
-def decode(asset, frame):
-    """Independent reference unpacker used by the generator's mandatory round trip."""
+def decode_row(asset, frame, y, palette_size=64, capacity=MAX_SIDE):
+    """Strict reference parser for both v1 runs and v2 literals, matching C."""
     w, h = asset['width'], asset['height']
-    result = bytearray(w * h)
-    for f in range(asset['keys'][frame], frame + 1):
-        for y in range(h):
-            row = f * (h + 1) + y
-            start, end = asset['rows'][row:row + 2]
-            x = 0
-            for p in range(start, end, 2):
-                count, value = asset['data'][p:p + 2]
+    keys, rows, data = asset['keys'], asset['rows'], asset['data']
+    if not (1 <= w <= MAX_SIDE and 1 <= h <= MAX_SIDE and 1 <= palette_size <= 64
+            and 1 <= len(keys) <= 65535 and 0 <= frame < len(keys) and 0 <= y < h
+            and capacity >= w and len(rows) == len(keys) * (h + 1)):
+        raise ValueError('invalid sprite metadata or capacity')
+    key = keys[frame]
+    if (key < 0 or key > frame or frame - key >= KEY_INTERVAL or keys[key] != key
+            or any(keys[f] != key for f in range(key, frame + 1))):
+        raise ValueError('invalid key schedule')
+    out = bytearray(w)
+    for f in range(key, frame + 1):
+        at = f * (h + 1) + y
+        p, end = rows[at:at + 2]
+        if not 0 <= p <= end <= len(data):
+            raise ValueError('row outside data bounds')
+        x = 0
+        while p < end:
+            if end - p < 2:
+                raise ValueError('truncated row token')
+            count, value = data[p:p + 2]
+            p += 2
+            if count:
+                values = bytes([value]) * count
+            else:
+                count = value
+                if not count or count > end - p:
+                    raise ValueError('empty or truncated literal')
+                values = data[p:p + count]
+                p += count
+            if count > w - x:
+                raise ValueError('row exceeds width')
+            for value in values:
+                if ((value >= palette_size and value != INHERIT) or (value == INHERIT and f == key)):
+                    raise ValueError('invalid palette index or key inheritance')
                 if value != INHERIT:
-                    result[y * w + x:y * w + x + count] = bytes([value]) * count
-                x += count
-            if x != w:
-                raise ValueError('RLE row has the wrong width')
-    return bytes(result)
+                    out[x] = value
+                x += 1
+        if x != w:
+            raise ValueError('row has the wrong width')
+    return bytes(out)
+
+
+def decode(asset, frame, palette_size=64):
+    """Mandatory round trip after quantization; checks metadata even at height 0."""
+    first = decode_row(asset, frame, 0, palette_size)
+    return first + b''.join(decode_row(asset, frame, y, palette_size) for y in range(1, asset['height']))
 
 
 def c_array(ctype, name, values):
@@ -154,10 +241,10 @@ def generate(paths, output, name, background=None):
     w, h = images[0].size
     asset = pack(w, h, frames)
     for f, expected in enumerate(frames):
-        if decode(asset, f) != expected:
+        if decode(asset, f, len(palette)) != expected:
             raise ValueError(f'packed frame {f} differs from the indexed reference')
     report = {
-        'format': 'adv-row-rle-v1', 'name': name, 'width': w, 'height': h,
+        'format': FORMAT, 'name': name, 'width': w, 'height': h,
         'palette_rgb565': palette, 'background_rgb888': background,
         'key_interval': KEY_INTERVAL, 'keys': asset['keys'],
         'data_bytes': len(asset['data']),

@@ -1,27 +1,28 @@
 {
-  "format": "adv-row-rle-v1",
+  "format": "adv-row-rle-v2",
   "name": "adv_assets_ui_wordmarks_jump__p0",
   "width": 200,
   "height": 80,
   "palette_rgb565": [
     0,
     8649,
-    44173,
+    38099,
     45672,
-    65433
+    56595,
+    65502
   ],
   "background_rgb888": null,
   "key_interval": 8,
   "keys": [
     0
   ],
-  "data_bytes": 2432,
-  "table_bytes": 336,
+  "data_bytes": 1561,
+  "table_bytes": 338,
   "frame_sha256": [
-    "7305404cc142b6532466845f81b5a710cec5bfe62c86cae6878848983e735665"
+    "f56b71f54b67d66ddd39f3317c93a2a3cfac4783c96046b9e26304cc5973bdfa"
   ],
   "source_sha256": [
-    "93dd4b43e2d06bd855a9a5510d7797ae0d5c1a5dfff5856e98e82cb33be64100"
+    "845511c14b7487785046b06fafb823f6917d6c5fec991ce298f6a32f9bb06cc3"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,8 +36,18 @@
   "original_sources": [
     {
       "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\wordmarks\\jump.png",
-      "sha256": "64a9f8d4ff4b6e2ad168b08dc9a5847731eb674307afed6d828bc9f70ead0aad"
+      "sha256": "af3847bf24ed80b867d7747a52bf3d46180f8e46a5ecbe8daa76a1fe733950b9"
     }
   ],
-  "descriptor_bytes_c3": 32
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "ui/wordmarks/jump",
+      "logical_symbol": "adv_assets_ui_wordmarks_jump__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
 }

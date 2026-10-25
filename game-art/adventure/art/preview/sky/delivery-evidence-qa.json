@@ -1,0 +1,75 @@
+{
+  "manifest_sha256": "abfbc0ffd9e3e97e61295911ea5c65b3c65f988bcc2af9021247590b07b3ee98",
+  "background_rgb": [
+    140,
+    200,
+    250
+  ],
+  "world_index": 7,
+  "static_resources": 11,
+  "dynamic_prop_frames": 16,
+  "outputs": {
+    "delivery-static-dynamic-1x.png": [
+      960,
+      720
+    ],
+    "delivery-scene-00-1x.png": [
+      240,
+      320
+    ],
+    "delivery-scene-01-1x.png": [
+      240,
+      320
+    ],
+    "delivery-scene-02-1x.png": [
+      240,
+      320
+    ],
+    "delivery-scene-03-1x.png": [
+      240,
+      320
+    ],
+    "delivery-scenes-1x.png": [
+      960,
+      344
+    ]
+  },
+  "source_images": {
+    "games/sky/props/envelope.png": "4e2e3719faa7bcf8c53cdb155503c29b385ed7ff624585b82266bf9d8c92e4e1",
+    "games/sky/props/basket_front.png": "711c10341677d84d6df2b80910c2bb6940d0a6dfd31632801e1135447c550af2",
+    "games/sky/props/basket_back.png": "980df5635f2987a40c765f075b52bb1e3577f2a9935bb09de0c8ba953d40d4cd",
+    "games/sky/tiles/cloud_00.png": "e1b142421d1d00bb36e59f1be5ac72f763c4c59a8bc9731d5123e68a99baaafb",
+    "games/sky/tiles/cloud_01.png": "f21466f9e0cf425ebb8a9af635b3ac6688bca29d4400d1d0c9514f5c5454e183",
+    "games/sky/tiles/cloud_02.png": "0219df6a5658ea813ccbcce9477fcd72c84c50a0d128f25095162cdc729408e9",
+    "games/sky/tiles/cloud_03.png": "410f1784f867f368ba0d40d7b2f81ca4aa71551b91e0f291ac61604330d50166",
+    "games/sky/props/thundercloud.png": "c164b0b5ed215d08c19b0f2fe4611f6937430907a0a79aef2edd826a832e67d5",
+    "games/sky/props/stamp.png": "55475e6fbb5c1b404192ffa80b7341bc236a62674a4684b1a8521d7ed4ca9c3f",
+    "games/sky/props/burner.png": "a41126c580a93568677340ac730a1c96abdf7414b08a8020eb5e4c5895f617bb",
+    "games/sky/props/controls_idle.png": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212",
+    "games/sky/controls/heat/000.png": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212",
+    "games/sky/controls/heat/001.png": "9ce09ba23d67a9fd973de54d1375ae3e500f9a86cdfea279beffe959031df46d",
+    "games/sky/controls/heat/002.png": "80b08151e4f3e1746589009cecb487de2e5cf4b2764fc59ec1a7e1c705e64bf5",
+    "games/sky/controls/heat/003.png": "57aecc9ea9b33819b673011ee81e5cd542b0b647d7112f062ffe3ee0e40f4f0a",
+    "games/sky/controls/heat/004.png": "6ee3a7e5515de2859c3c174d431df8ce3c989119d27877e15dc56cd2c20a92b5",
+    "games/sky/controls/heat/005.png": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212",
+    "games/sky/controls/vent/000.png": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212",
+    "games/sky/controls/vent/001.png": "35b844bb5316dc03f446c7c739ec36225a69f6ce42c4b598a2cbc0ec5cead9bb",
+    "games/sky/controls/vent/002.png": "3aec911f188f14d8ff59f7f164f0fb7584072c9cfde94c22c4c2da69ef35a8ea",
+    "games/sky/controls/vent/003.png": "154fc5d7fda369bb73de1ad06a762037d1650bd83a2cdf35badf94259ff44a45",
+    "games/sky/controls/vent/004.png": "66a81e5ee83408f9a1fe90d6957350313d13b9da597be9be1887141a46d0a76e",
+    "games/sky/controls/vent/005.png": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212",
+    "games/sky/bird/000.png": "86f8cc02a3f7d06e4d76878c44f2df68b5f197f08c772b5e84bfcd4be52089e0",
+    "games/sky/bird/001.png": "5f2d6de4ae31821f69ff242ede40281dd824c9a05f138db235cbe4a7fc1123b0",
+    "games/sky/bird/002.png": "1535e6d655a914b353cbabece243ea2884beab81d4d84f800db920df4e717a1b",
+    "games/sky/bird/003.png": "4b29322b94ad99763bdcc2e97a1c998f01692b17caa822995b447e93729d9195"
+  },
+  "native_size": true,
+  "source_resize": false,
+  "source_redraw": false,
+  "composition": "alpha paste of existing runtime/static pixels; SKY full-scene pixel crops preserve existing rope continuity",
+  "scope": "review evidence, not gameplay/device acceptance",
+  "all_source_files_checked": 710,
+  "source_tree_aggregate_sha256": "583158876e02ebd86d43d37f7e133345a9088b7bb9c4940153fab06725cb6ede",
+  "all_source_sha_unchanged": true,
+  "reproduction_script_sha256": "bcb84dc2483ff4753e8c3f6883b849f9702543585fc50f81a55907b591cf629d"
+}

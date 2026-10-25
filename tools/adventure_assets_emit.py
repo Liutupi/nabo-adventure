@@ -1,4 +1,5 @@
-"""Reuse adv-row-rle-v1 and emit stable immutable sprite/patch/catalog symbols."""
+"""Emit stable immutable row-RLE sprite/patch/catalog symbols."""
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -15,30 +16,51 @@ def fragments(resource):
 
 
 def emit_sprites(resources, folder):
-    pieces = []
+    pieces, interned = [], {}
     for resource in resources:
         for piece_index, (x, y, images) in enumerate(fragments(resource)):
-            symbol = f'{resource.symbol}__p{piece_index}'
+            logical_symbol = f'{resource.symbol}__p{piece_index}'
+            # Exact RGBA, dimensions and ordered frames, within one cost group.
+            # Anchors/fps/offsets belong to logical catalog records, not sprites.
+            signature = (resource.group, images[0].size, len(images),
+                         tuple(hashlib.sha256(im.tobytes()).digest() for im in images))
+            candidates = interned.setdefault(signature, [])
+            canonical = next((p for p in candidates if all(a.tobytes() == b.tobytes()
+                              for a, b in zip(images, p['images']))), None)
+            palette, indexed = index_frames(images)
+            if canonical is not None:
+                if palette != canonical['palette'] or indexed != canonical['frames']:
+                    raise ValueError('Identical RGBA sprite produced different indexed frames')
+                canonical['report']['logical_uses'].append({'resource_id': resource.id,
+                                                           'logical_symbol': logical_symbol, 'offset': [x, y]})
+                pieces.append({'resource': resource, 'symbol': canonical['symbol'], 'logical_symbol': logical_symbol,
+                               'offset': (x, y), 'images': images, 'palette': palette, 'frames': indexed,
+                               'report': canonical['report']})
+                continue
+            symbol = logical_symbol
             paths = []
             snapshots = folder / '_inputs' / symbol
             snapshots.mkdir(parents=True)
             for frame, bitmap in enumerate(images):
                 path = snapshots / f'{frame:05}.png'; bitmap.save(path); paths.append(path)
-            palette, indexed = index_frames(images)
             encoded = pack(images[0].width, images[0].height, indexed)
             if any(decode(encoded, f) != frame for f, frame in enumerate(indexed)):
                 raise ValueError('Python RLE decode differs from reference')
             report = generate(paths, folder/symbol, symbol)
-            if report['frame_sha256'] != [__import__('hashlib').sha256(frame).hexdigest() for frame in indexed]:
+            if report['frame_sha256'] != [hashlib.sha256(frame).hexdigest() for frame in indexed]:
                 raise ValueError('Generator input/reference mismatch')
             # Actual C3 adv_sprite_t layout: 4*u16 + 2*u32 + 4 pointers = 32 bytes.
             report.update(resource_id=resource.id, group=resource.group, symbol=symbol,
                           offset=[x, y], original_sources=[{'path': str(p), 'sha256': s}
                                                          for p, s in zip(resource.paths, resource.hashes)],
-                          descriptor_bytes_c3=32)
-            (folder/f'{symbol}.json').write_text(json.dumps(report, indent=2)+'\n', 'utf-8')
-            pieces.append({'resource': resource, 'symbol': symbol, 'offset': (x, y), 'images': images,
-                           'palette': palette, 'frames': indexed, 'report': report})
+                          descriptor_bytes_c3=32,
+                          logical_uses=[{'resource_id': resource.id, 'logical_symbol': logical_symbol, 'offset': [x, y]}])
+            piece = {'resource': resource, 'symbol': symbol, 'logical_symbol': logical_symbol,
+                     'offset': (x, y), 'images': images, 'palette': palette, 'frames': indexed, 'report': report}
+            pieces.append(piece); candidates.append(piece)
+    for candidates in interned.values():
+        for physical in candidates:
+            (folder/f'{physical["symbol"]}.json').write_text(json.dumps(physical['report'], indent=2)+'\n', 'utf-8')
     return pieces
 
 
@@ -68,7 +90,7 @@ extern const size_t adv_assets_ui_palette_count;
 
 def emit_catalog(resources, pieces, folder, ui):
     sources, header = ['#include "adv_assets_catalog.h"', '#include <string.h>'], [HEADER]
-    for piece in pieces: sources.append(f'#include "{piece["symbol"]}.h"')
+    for symbol in dict.fromkeys(piece['symbol'] for piece in pieces): sources.append(f'#include "{symbol}.h"')
     by_resource = {r.id: [p for p in pieces if p['resource'] is r] for r in resources}
     for resource in resources:
         sources.append(f'static const adv_asset_piece_t {resource.symbol}__pieces[] = {{')

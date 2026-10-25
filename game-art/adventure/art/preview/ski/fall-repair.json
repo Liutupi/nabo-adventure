@@ -1,0 +1,456 @@
+{
+  "passed": true,
+  "manifest_sha256": "ce917671979911b3aa2d645ab99a30bd605677497a4cb5e13649a51ab35c84fb",
+  "head_angles_degrees": [
+    0,
+    12,
+    36,
+    62,
+    62,
+    36,
+    12,
+    0
+  ],
+  "root_shifts": [
+    [
+      0,
+      0
+    ],
+    [
+      -4,
+      9
+    ],
+    [
+      -12,
+      26
+    ],
+    [
+      -20,
+      43
+    ],
+    [
+      -20,
+      43
+    ],
+    [
+      -12,
+      26
+    ],
+    [
+      -4,
+      9
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "mitten_adjacent_displacements_runtime_px": [
+    4.123105625617661,
+    8.06225774829855,
+    9.219544457292887,
+    0.0,
+    9.219544457292887,
+    8.06225774829855,
+    4.123105625617661
+  ],
+  "max_mitten_displacement_runtime_px": 9.219544457292887,
+  "neutral_endpoints_equal_saved_straight0": true,
+  "snow_contact_frames": [
+    3,
+    4
+  ],
+  "snow_contact_gap_runtime_px": 0,
+  "other_clips": {
+    "nonfall_master_files_compared": 48,
+    "changed": [],
+    "runtime72_files_unchanged": 16
+  },
+  "frames": [
+    {
+      "index": 0,
+      "phase": "neutral",
+      "pitch_degrees": 0,
+      "root_shift": [
+        0,
+        0
+      ],
+      "formal_mitten_edge": [
+        156,
+        154
+      ],
+      "runtime_mitten_edge": [
+        39,
+        41
+      ],
+      "head_matrix": [
+        [
+          1.0,
+          0.0,
+          -14.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_positive_rigid_determinant": 1.0,
+      "no_clipping": true
+    },
+    {
+      "index": 1,
+      "phase": "lose-balance",
+      "pitch_degrees": 12,
+      "root_shift": [
+        -4,
+        9
+      ],
+      "formal_mitten_edge": [
+        160,
+        168
+      ],
+      "runtime_mitten_edge": [
+        40,
+        45
+      ],
+      "head_matrix": [
+        [
+          0.9781476007338057,
+          -0.20791169081775934,
+          16.990326686137365
+        ],
+        [
+          0.20791169081775934,
+          0.9781476007338057,
+          -15.910720464221338
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_positive_rigid_determinant": 1.0,
+      "no_clipping": true
+    },
+    {
+      "index": 2,
+      "phase": "tumble",
+      "pitch_degrees": 36,
+      "root_shift": [
+        -12,
+        26
+      ],
+      "formal_mitten_edge": [
+        162,
+        198
+      ],
+      "runtime_mitten_edge": [
+        41,
+        53
+      ],
+      "head_matrix": [
+        [
+          0.8090169943749475,
+          -0.5877852522924731,
+          90.49261761804802
+        ],
+        [
+          0.5877852522924731,
+          0.8090169943749475,
+          -24.527411445518258
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_positive_rigid_determinant": 1.0000000000000002,
+      "no_clipping": true
+    },
+    {
+      "index": 3,
+      "phase": "snow-contact",
+      "pitch_degrees": 62,
+      "root_shift": [
+        -20,
+        43
+      ],
+      "formal_mitten_edge": [
+        157,
+        234
+      ],
+      "runtime_mitten_edge": [
+        39,
+        62
+      ],
+      "head_matrix": [
+        [
+          0.46947156278589086,
+          -0.8829475928589269,
+          174.1257967613936
+        ],
+        [
+          0.8829475928589269,
+          0.46947156278589086,
+          4.620506702158753
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_positive_rigid_determinant": 1.0,
+      "no_clipping": true,
+      "runtime_sample": [
+        39,
+        61
+      ],
+      "actual_runtime_RGBA": [
+        50,
+        35,
+        34,
+        255
+      ],
+      "runtime_mitten_alpha": 215,
+      "runtime_gear_alpha": {
+        "ski_l": 0,
+        "ski_r": 0,
+        "pole_l": 0,
+        "pole_r": 105
+      },
+      "snow_edge_gap_px": 0
+    },
+    {
+      "index": 4,
+      "phase": "snow-contact",
+      "pitch_degrees": 62,
+      "root_shift": [
+        -20,
+        43
+      ],
+      "formal_mitten_edge": [
+        157,
+        234
+      ],
+      "runtime_mitten_edge": [
+        39,
+        62
+      ],
+      "head_matrix": [
+        [
+          0.46947156278589086,
+          -0.8829475928589269,
+          174.1257967613936
+        ],
+        [
+          0.8829475928589269,
+          0.46947156278589086,
+          4.620506702158753
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_positive_rigid_determinant": 1.0,
+      "no_clipping": true,
+      "runtime_sample": [
+        39,
+        61
+      ],
+      "actual_runtime_RGBA": [
+        50,
+        35,
+        34,
+        255
+      ],
+      "runtime_mitten_alpha": 215,
+      "runtime_gear_alpha": {
+        "ski_l": 0,
+        "ski_r": 0,
+        "pole_l": 0,
+        "pole_r": 105
+      },
+      "snow_edge_gap_px": 0
+    },
+    {
+      "index": 5,
+      "phase": "push-up",
+      "pitch_degrees": 36,
+      "root_shift": [
+        -12,
+        26
+      ],
+      "formal_mitten_edge": [
+        162,
+        198
+      ],
+      "runtime_mitten_edge": [
+        41,
+        53
+      ],
+      "head_matrix": [
+        [
+          0.8090169943749475,
+          -0.5877852522924731,
+          90.49261761804802
+        ],
+        [
+          0.5877852522924731,
+          0.8090169943749475,
+          -24.527411445518258
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_positive_rigid_determinant": 1.0000000000000002,
+      "no_clipping": true
+    },
+    {
+      "index": 6,
+      "phase": "regain-balance",
+      "pitch_degrees": 12,
+      "root_shift": [
+        -4,
+        9
+      ],
+      "formal_mitten_edge": [
+        160,
+        168
+      ],
+      "runtime_mitten_edge": [
+        40,
+        45
+      ],
+      "head_matrix": [
+        [
+          0.9781476007338057,
+          -0.20791169081775934,
+          16.990326686137365
+        ],
+        [
+          0.20791169081775934,
+          0.9781476007338057,
+          -15.910720464221338
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_positive_rigid_determinant": 1.0,
+      "no_clipping": true
+    },
+    {
+      "index": 7,
+      "phase": "neutral",
+      "pitch_degrees": 0,
+      "root_shift": [
+        0,
+        0
+      ],
+      "formal_mitten_edge": [
+        156,
+        154
+      ],
+      "runtime_mitten_edge": [
+        39,
+        41
+      ],
+      "head_matrix": [
+        [
+          1.0,
+          0.0,
+          -14.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "head_positive_rigid_determinant": 1.0,
+      "no_clipping": true
+    }
+  ],
+  "rigid_resampling_measurements": [
+    {
+      "frame": 0,
+      "method": "bicubic rigid warp vs nearest source-pixel warp, opaque head interior",
+      "samples": 5172,
+      "rgb_mae_0_to_255": 0.0,
+      "max_channel_delta": 0
+    },
+    {
+      "frame": 1,
+      "method": "bicubic rigid warp vs nearest source-pixel warp, opaque head interior",
+      "samples": 5077,
+      "rgb_mae_0_to_255": 10.20372923642571,
+      "max_channel_delta": 154
+    },
+    {
+      "frame": 2,
+      "method": "bicubic rigid warp vs nearest source-pixel warp, opaque head interior",
+      "samples": 5068,
+      "rgb_mae_0_to_255": 10.125098658247829,
+      "max_channel_delta": 149
+    },
+    {
+      "frame": 3,
+      "method": "bicubic rigid warp vs nearest source-pixel warp, opaque head interior",
+      "samples": 5083,
+      "rgb_mae_0_to_255": 10.069512754934749,
+      "max_channel_delta": 147
+    },
+    {
+      "frame": 4,
+      "method": "bicubic rigid warp vs nearest source-pixel warp, opaque head interior",
+      "samples": 5083,
+      "rgb_mae_0_to_255": 10.069512754934749,
+      "max_channel_delta": 147
+    },
+    {
+      "frame": 5,
+      "method": "bicubic rigid warp vs nearest source-pixel warp, opaque head interior",
+      "samples": 5068,
+      "rgb_mae_0_to_255": 10.125098658247829,
+      "max_channel_delta": 149
+    },
+    {
+      "frame": 6,
+      "method": "bicubic rigid warp vs nearest source-pixel warp, opaque head interior",
+      "samples": 5077,
+      "rgb_mae_0_to_255": 10.20372923642571,
+      "max_channel_delta": 154
+    },
+    {
+      "frame": 7,
+      "method": "bicubic rigid warp vs nearest source-pixel warp, opaque head interior",
+      "samples": 5172,
+      "rgb_mae_0_to_255": 0.0,
+      "max_channel_delta": 0
+    }
+  ],
+  "pose": "actual 62 degree rigid whole-body/face tumble, folded knees and25 degree lifted far board; mitten catches shared snow lip before pushing back to neutral",
+  "pixel_boundary": "Original source files/RGB are unchanged. Fall rotates the head/neutral expression/cap/glasses together with bicubic resampling; source-to-target RGB equality is not claimed.",
+  "logic_boundary": "native-size host slope playback and C decoder validation; no gameplay collision, input or hardware acceptance claimed"
+}
