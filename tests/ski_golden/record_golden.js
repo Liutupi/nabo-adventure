@@ -1,22 +1,30 @@
-// Record SKI rules before the C port. All values are integers.
-const fs=require('fs'),path=require('path'),K=require('../../game-art/adventure/prototype/adv_ski.js');
-const {driver}=require('../ski_policy.js');
-function record(seed,kind,count){
-  let g=K.start(seed),r={seed,actions:[],states:[]},rng={rng:seed^0x51ba7e},next=driver(kind==='fuzz'?'casual':kind,seed);
-  const step=input=>{r.actions.push([input.ok_down||0,input.ok_up||0,input.up_down||0,input.down_down||0,input.down_up||0,input.ok_held||0,input.down_held||0,input.up_held||0]);K.step(g,input);r.states.push(K.view(g));};
-  for(let i=0;i<count;i++){
-    if(kind==='fuzz'){
-      if(g.over){const s=K.random(rng);g=K.start(s);next=driver('casual',s);r.actions.push(['reset',s]);r.states.push(K.view(g));}
-      const bits=K.random(rng);
-      if(bits%13===0){const pressed=(bits>>5)&1;K.upEvent(g,!!pressed);r.actions.push(['up',pressed]);r.states.push(K.view(g));continue;}
-      if(bits%5<3)step(next(g));
-      else step({ok_down:bits%7===0?1:0,ok_held:(bits>>8)&1,up_held:(bits>>9)&1,down_held:(bits>>10)&1});
-    }else{step(next(g));if(g.over)break;}
+// Record SKI V2 rules (game-art/adventure/prototype/adv_ski.js) for the C port. All values are integers.
+// Every step stores an FNV-1a hash of the full C-order state; every 120th step and the last store it whole.
+const fs = require('fs'), path = require('path'), S = require('../../game-art/adventure/prototype/adv_ski.js');
+const { driver } = require('../ski_policy.js');
+const seenFx = new Set();
+function hash(v) { let h = 0x811c9dc5; for (const x of v) { const u = x >>> 0; for (let k = 0; k < 32; k += 8) { h ^= (u >>> k) & 255; h = Math.imul(h, 0x01000193) >>> 0; } } return h; }
+const bits = i => [i.ok_down || 0, i.ok_up || 0, i.up_down || 0, i.down_down || 0, i.down_up || 0, i.ok_held || 0, i.down_held || 0, i.up_held || 0];
+function record(seed, kind, count) {
+  let g = S.start(seed), next = driver(kind === 'fuzz' ? 'casual' : kind, seed);
+  const r = { seed, actions: [], hashes: [], states: {} }, rng = { rng: seed ^ 0x51ba7e };
+  const keep = () => { const v = S.view(g); r.hashes.push(hash(v)); if (r.hashes.length % 120 === 0) r.states[r.hashes.length - 1] = v; };
+  const step = input => { r.actions.push(bits(input)); S.step(g, input); for (const e of g.fx) if (e.kind) seenFx.add(e.kind); keep(); };
+  for (let i = 0; i < count; i++) {
+    if (kind === 'fuzz') {
+      if (g.over) { const s = S.random(rng); g = S.start(s); next = driver('casual', s); r.actions.push(['reset', s]); keep(); }
+      const b = S.random(rng);
+      if (b % 5 < 3) step(next(g));
+      else step({ ok_down: b % 17 === 0 ? 1 : 0, up_down: b % 19 === 0 ? 1 : 0, down_down: b % 7 === 0 ? 1 : 0, ok_held: (b >> 8) & 1, up_held: (b >> 9) & 1, down_held: (b >> 10) & 1 });
+    } else { step(next(g)); if (g.over) { for (let k = 0; k < 3; k++) step({}); break; } }
   }
-  return r;
+  r.last = S.view(g); return r;
 }
-const traces={idle:record(1,'idle',3000),wiggle:record(2,'wiggle',3000),casual:record(3,'casual',20000),skilled:record(5,'skilled',20000),expert:record(4,'expert',20000),fuzz:record(779,'fuzz',6000)};
-const seen=(m)=>Object.values(traces).some(t=>t.states.some(s=>s[22]===m));
-for(const [what,m] of Object.entries(K.MSG))if(m&&!seen(m))throw Error('SKI traces must cover '+what);
-if(traces.expert.states.at(-1)[2]<45)throw Error('expert trace should reach gold');
-for(const [name,trace] of Object.entries(traces)){fs.writeFileSync(path.join(__dirname,name+'.json'),JSON.stringify(trace)+'\n');console.log(name,trace.actions.length,'steps',trace.states.at(-1)[2]);}
+const traces = { idle: record(1, 'idle', 4000), spam: record(2, 'spam', 4000), wiggle: record(6, 'wiggle', 4000),
+  casual: record(3, 'casual', 12000), skilled: record(4, 'skilled', 14000), fuzz: record(779, 'fuzz', 12000) };
+for (const [what, kind] of Object.entries(S.FX)) if (kind !== S.FX.SPIN && !seenFx.has(kind)) throw Error('SKI traces must cover fx ' + what);
+for (const [name, trace] of Object.entries(traces)) {
+  trace.states[trace.hashes.length - 1] = trace.last; delete trace.last;
+  fs.writeFileSync(path.join(__dirname, name + '.json'), JSON.stringify(trace) + '\n');
+  console.log(name, trace.actions.length, 'steps', trace.states[trace.hashes.length - 1][2]);
+}

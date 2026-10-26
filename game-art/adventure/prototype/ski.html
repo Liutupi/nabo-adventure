@@ -58,12 +58,12 @@
     </div>
   </aside>
 </main>
-<script src="adv_ski_v2.js"></script>
-<script src="adv_ski_v2_draw.js"></script>
+<script src="adv_ski.js"></script>
+<script src="adv_ski_draw.js"></script>
 <script>
 (async () => {
   'use strict';
-  const N = AdvSkiV2, D = AdvSkiV2Draw, cv = document.getElementById('game'), c = cv.getContext('2d');
+  const N = AdvSki, D = AdvSkiDraw, cv = document.getElementById('game'), c = cv.getContext('2d');
   await D.load();
   const held = { left: 0, mid: 0, right: 0 }, edges = { left: 0, mid: 0, right: 0 };
   let phase = 'TITLE', g = N.start(1), seed = (Date.now() & 0xffff) | 1, countdown = 0, vt = 0, phaseT = 0, midHeld = 0, swallowMid = false;

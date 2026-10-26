@@ -230,19 +230,23 @@ static void late_phase(int which,int station,uint32_t score,int *res,int *over,u
     if(which==11){model.phase=ADV_END;model.t=60;*res=0;*over=1;}
     if(which==12||which==13){model.phase=ADV_RESULT;*pscore=which==13?UINT32_MAX:score;model.best[station]=*pscore;model.record=which==12;model.test=false;}
 }
-// SKI: 0 straight, 1 lean, 2 jump, 3 tree fall, 4 bump, 5 dense course, 6 gate pass, 7 cocoa, 8.. phases.
+// SKI V2: 0 straight, 1 carving, 2 hop, 3 tree crash, 4 kicker spin, 5 dense course, 6 gate pass + section,
+// 7 avalanche close in fog, 8.. phases (title, ready, pause, end, result, max-record).
 void host_ski_case(int which)
 {
     adv_ski_t *p=late_open(6);adv_ski_start(p,4321);
-    adv_input_t none={0},right={.down_held=1},jump={.ok_down=1,.ok_held=1};
-    for(int i=0;i<90;i++)adv_ski_step(p,&none);
-    if(which==1)for(int i=0;i<16;i++)adv_ski_step(p,&right);
-    if(which==2){adv_ski_step(p,&jump);for(int i=0;i<14;i++)adv_ski_step(p,&none);}
-    if(which==3||which==4){p->fall=which==3?30:12;p->message=which==3?SKI_MSG_TREE:SKI_MSG_BUMP;p->feedback=50;p->res=which==3?600:820;}
-    if(which==5)for(int i=0;i<ADV_SKI_CAP;i++)p->objs[i]=(adv_ski_obj_t){1+i%6,30+(i*53)%180,p->pos+10+i*22,0};
-    if(which==6){p->score=12;p->message=SKI_MSG_PASS;p->feedback=40;}
-    if(which==7){p->message=SKI_MSG_COCOA;p->feedback=40;p->objs[0]=(adv_ski_obj_t){SKI_CABIN,150,p->pos+60,0};}
-    late_phase(which,6,31,&p->res,&p->over,&p->score);
+    adv_input_t none={0},right={.up_held=1},jump={.down_down=1};
+    for(int i=0;i<200;i++)adv_ski_step(p,&none);
+    int top=p->y>>8;
+    if(which==1)for(int i=0;i<20;i++)adv_ski_step(p,&right);
+    if(which==2){adv_ski_step(p,&jump);for(int i=0;i<12;i++)adv_ski_step(p,&none);}
+    if(which==3){p->objs[0]=(adv_ski_obj_t){SKI_TREE,p->x>>8,top+2,0};for(int i=0;i<8;i++)adv_ski_step(p,&none);}
+    if(which==4){p->objs[0]=(adv_ski_obj_t){SKI_KICKER,p->x>>8,top+2,0};for(int i=0;i<4;i++)adv_ski_step(p,&none);adv_ski_step(p,&jump);for(int i=0;i<10;i++)adv_ski_step(p,&none);}
+    if(which==5){top=p->y>>8;for(int i=0;i<ADV_SKI_OBJS;i++)p->objs[i]=(adv_ski_obj_t){1+i%8,24+(i*61)%276,top-60+i*10,0};p->combo=17;p->flow=400;
+        for(int i=0;i<ADV_SKI_FX;i++)p->fx[i]=(adv_ski_fx_t){i==0?SKI_FX_SECTION:SKI_FX_GATE,60+i*40,62,i==0?SKI_SEC_PARK:50,10};}
+    if(which==6){p->objs[0]=(adv_ski_obj_t){SKI_GATE_RED,p->x>>8,top+2,0};for(int i=0;i<3;i++)adv_ski_step(p,&none);p->fx[5]=(adv_ski_fx_t){SKI_FX_SECTION,160,100,SKI_SEC_SLALOM,8};}
+    if(which==7){p->section=SKI_SEC_FOG;p->section_t=300;p->aval=p->y-(40<<8);adv_ski_step(p,&none);}
+    late_phase(which,6,1268,&p->res,&p->over,&p->score);
 }
 // SKY: 0 drifting, 1 heating, 2 venting, 3 hit, 4 stamp, 5 dense sky, 6 low over treetops, 7 warm current.
 void host_sky_case(int which)

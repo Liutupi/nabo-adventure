@@ -34,7 +34,7 @@
     { id: 'post', cn: '小火车', en: 'POST', world: '铁路平原', res: '蒸汽', kind: 2, th: [5, 12, 25], placeholder: false },
     { id: 'night', cn: '萤火虫', en: 'NIGHT', world: '夜林', res: '光', kind: 2, th: [100, 300, 800], placeholder: false },
     { id: 'climb', cn: '登山', en: 'CLIMB', world: '雪山', res: '体力', kind: 2, th: [50, 150, 300], placeholder: false },
-    { id: 'ski', cn: '滑雪', en: 'SKI', world: '雪坡', res: '体温', kind: 2, th: [10, 25, 45], placeholder: false },
+    { id: 'ski', cn: '滑雪', en: 'SKI', world: '雪坡', res: '雪崩', kind: 2, th: [300, 1000, 2500], placeholder: false },
     { id: 'sky', cn: '热气球', en: 'SKY', world: '云端', res: '热气', kind: 2, th: [200, 500, 1000], placeholder: false },
     { id: 'space', cn: '太空', en: 'SPACE', world: '太空', res: '燃料', kind: 2, th: [300, 600, 900], placeholder: false },
   ];
@@ -218,12 +218,13 @@
   function gameMapKey(btn, ev) { return btn === BTN.UP && ev === EV.DOUBLE; }
   function engine(station){return [null,null,null,Post,Night,Climb,Ski,Sky,Space][station]||Demo;}
   // Games where UP is held to move: only two genuinely short UP taps may leave for the map.
-  // NIGHT V2 runs on held UP all the time, so it leaves only from its pause page (long middle DOWN).
-  const holdsUp=station=>station===6||station===8;
-  // Pause: NIGHT long middle DOWN, SKI long OK, SPACE two short DOWN taps, everyone else long UP.
+  // V2 landscape games (NIGHT, SKI) hold UP all the time: middle DOWN starts/resumes/pauses (long),
+  // left OK restarts from pause, and the map is reached only from the pause page.
+  const v2=station=>station===4||station===6;
+  const holdsUp=station=>station===8;
+  // Pause: V2 games long middle DOWN, SPACE two short DOWN taps, everyone else long UP.
   function pauseKey(s,btn,ev){
-    if(s.station===4)return btn===BTN.DOWN&&ev===EV.LONG;
-    if(s.station===6)return btn===BTN.OK&&ev===EV.LONG;
+    if(v2(s.station))return btn===BTN.DOWN&&ev===EV.LONG;
     if(s.station===8)return btn===BTN.DOWN&&ev===EV.DOUBLE&&s.game.downTaps>=2;
     return btn===BTN.UP&&ev===EV.LONG;
   }
@@ -238,9 +239,9 @@
 
   function sessionEvent(m, btn, ev) {
     const s = m.session;
-    const confirm=s.station===4?BTN.DOWN:BTN.OK,restart=s.station===4?BTN.OK:BTN.DOWN;
+    const confirm=v2(s.station)?BTN.DOWN:BTN.OK,restart=v2(s.station)?BTN.OK:BTN.DOWN;
     if(gameMapKey(btn,ev)) {
-      if(s.station===4&&s.phase===PHASE.PLAY)return;
+      if(v2(s.station)&&s.phase===PHASE.PLAY)return;
       if(holdsUp(s.station)&&s.phase===PHASE.PLAY&&s.game.shortTaps<2)return;
       if(s.phase===PHASE.END)recordResult(m);
       cue(m,CUE.BACK);toMap(m);return;

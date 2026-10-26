@@ -2,10 +2,13 @@
 
 
 
-## 2026-10-26 14:15 SKI V2「雪崩速降」G0/G1 已交，等用户试玩
+## 2026-10-26 14:27 SKI V2「雪崩速降」已接入固件（云端，未上机）
 
-- 概念、键位、数值：`game-art/adventure/SKI_V2_CONCEPT.md`；试玩页 `prototype/ski_v2.html`。只用现有滑雪 A 款素材 + 程序画的跳台/冰面/雪崩，不需要 Grok。
-- 规则一开始就是整数，用户认可后照 NIGHT V2 的路子移植（golden 用每步哈希）。**用户认可前 Codex 不要动 SKI 的 C、素材或 V1。**
+- 用户 14:27 试玩后回复“可以”。V2 替换 V1，只用现有滑雪 A 款素材 + 程序画的跳台/冰面/雪崩，不需要 Grok。设计、键位、文件、验证边界：**`game-art/adventure/SKI_DESIGN.md`**。
+- 外壳：NIGHT 与 SKI 统一为“V2 横屏手势”（`adv_model.c`/`adv_core.js` 的 `v2()`）：中键开始/继续、长按中键暂停、左键在暂停页重来、游戏中上键不回地图、暂停页双击上回地图。门槛 300/1000/2500。
+- 云端：263 项宿主检查通过；app 1,619,744 B，预算 PASS，扣 352 KiB 后余 51,424 B。
+- **Codex 下一步（Windows，可与 NIGHT 一起做）**：`build.ps1` 重建 → 保护式升级 → `tools/smoke_night.py` 与 `tools/smoke_late_games.py`（SKI 段已改成 V2 手势；SKY/SPACE 不变）→ 记录两款帧率与 heap → 交给用户实玩。帧率明显低于 25fps 先报告再优化，不擅自改玩法数值。
+- 下一款按 REDESIGN_V2：SPACE → SKY → CLIMB，同样先 G0/G1 给用户试玩；现有素材能做好就不交 Grok。
 
 ## 2026-10-26 13:46 NIGHT V2 已接入固件（云端，未上机）——Codex 从这里接手
 

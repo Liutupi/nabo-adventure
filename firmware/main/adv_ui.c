@@ -228,7 +228,7 @@ void adv_ui_draw(const adv_model_t *m, uint32_t ms, int battery, int mv)
     s_millis = ms;
     if (!s_gfx) return;
     ag_t *g = s_gfx;
-    s_landscape=m->page==ADV_PAGE_SESSION&&(m->station==3||m->station==4);
+    s_landscape=m->page==ADV_PAGE_SESSION&&(m->station==3||m->station==4||m->station==6);
     (void)ag_viewport(g,s_landscape?320:240,s_landscape?240:320);
     switch (m->page) {
     case ADV_PAGE_COVER: ag_begin(g, UI_SCENE_COVER); draw_cover(g, m); break;

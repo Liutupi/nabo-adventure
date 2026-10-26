@@ -19,7 +19,7 @@ const adv_station_t adv_station[ADV_STATIONS] = {
     {"post", "小火车", "POST", "铁路平原", "蒸汽", ADV_KIND_SESSION, false, {5, 12, 25}, C565(230, 90, 70), &adv_post_game},
     {"night", "萤火虫", "NIGHT", "夜林", "光", ADV_KIND_SESSION, false, {100, 300, 800}, C565(200, 230, 90), &adv_night_game},
     {"climb", "登山", "CLIMB", "雪山", "体力", ADV_KIND_SESSION, false, {50, 150, 300}, C565(150, 170, 200), &adv_climb_game},
-    {"ski", "滑雪", "SKI", "雪坡", "体温", ADV_KIND_SESSION, false, {10, 25, 45}, C565(110, 170, 240), &adv_ski_game},
+    {"ski", "滑雪", "SKI", "雪坡", "雪崩", ADV_KIND_SESSION, false, {300, 1000, 2500}, C565(110, 170, 240), &adv_ski_game},
     {"sky", "热气球", "SKY", "云端", "热气", ADV_KIND_SESSION, false, {200, 500, 1000}, C565(250, 160, 190), &adv_sky_game},
     {"space", "太空", "SPACE", "太空", "燃料", ADV_KIND_SESSION, false, {300, 600, 900}, C565(170, 140, 250), &adv_space_game},
 };

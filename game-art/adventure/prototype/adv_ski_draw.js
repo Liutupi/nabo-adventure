@@ -2,10 +2,10 @@
 // avalanche are procedural. No sprite rotation or mirroring, so the firmware can draw the same thing.
 (function (root) {
   'use strict';
-  const S = root.AdvSkiV2, K = S.K, T = S.T, W = K.W, H = K.H, NY = K.NABO_Y;
+  const S = root.AdvSki, K = S.K, T = S.T, W = K.W, H = K.H, NY = K.NABO_Y;
   const img = new Map(), clips = new Map(), props = new Map();
   async function load(base = '../art/') {
-    const inline = root.SKI_V2_SPRITES;
+    const inline = root.SKI_SPRITES;
     const manifest = inline ? inline.manifest : await (await fetch(base + 'ski-manifest.json')).json();
     const want = new Set();
     for (const c of manifest.animations) if (c.skin === 'ski_a') { clips.set(c.name, c); c.runtime_frames.forEach(p => want.add(p)); }
@@ -163,5 +163,5 @@
       }
     }
   }
-  root.AdvSkiV2Draw = { load, draw };
+  root.AdvSkiDraw = { load, draw };
 })(window);

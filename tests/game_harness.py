@@ -50,3 +50,29 @@ def replay(lib, State, game, trace, extra=lambda g: []):
         if actual != expected:
             return i, [(j, a, e) for j, (a, e) in enumerate(zip(actual, expected)) if a != e][:6]
     return None
+
+
+def fnv(words):
+    """FNV-1a over the little-endian bytes of each 32-bit word (tests/*_golden hashed traces)."""
+    h = 0x811c9dc5
+    for w in words:
+        u = w & 0xffffffff
+        for k in (0, 8, 16, 24):
+            h ^= (u >> k) & 255
+            h = (h * 0x01000193) & 0xffffffff
+    return h
+
+
+def replay_hashed(lib, State, game, trace):
+    """Replays a hashed trace; returns None or (first differing step, checkpoint hint)."""
+    g = State()
+    start, step = getattr(lib, f'adv_{game}_start'), getattr(lib, f'adv_{game}_step')
+    start(ctypes.byref(g), trace['seed'])
+    for i, action in enumerate(trace['actions']):
+        if action[0] == 'reset': start(ctypes.byref(g), action[1])
+        else: step(ctypes.byref(g), ctypes.byref(Input(*action)))
+        actual = view(g)
+        if fnv(actual) != trace['hashes'][i]:
+            return i, min((int(k) for k in trace['states'] if int(k) >= i), default=None)
+        if str(i) in trace['states'] and actual != trace['states'][str(i)]: return i, 'checkpoint'
+    return None

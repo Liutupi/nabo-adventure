@@ -185,8 +185,7 @@ class Renderer(unittest.TestCase):
 
     def test_ski_sky_space_scenes_and_phases_are_incremental(self):
         self.new([0,50,600,25,60,300,45,1000,0],seen=0x7fffff)
-        games={'ski':('straight','lean','jump','tree','bump','dense','gate','cocoa'),
-               'sky':('drift','heat','vent','hit','stamp','dense','low','warm'),
+        games={'sky':('drift','heat','vent','hit','stamp','dense','low','warm'),
                'space':('fall','engine','side','landed','flag','crash','objects','round5')}
         phases=('title','ready','pause','end','result','max-record')
         for game,names in games.items():
@@ -200,6 +199,21 @@ class Renderer(unittest.TestCase):
                 self.ev(button,PRESS);self.steps(12);self.ev(button,RELEASE)
             for _ in range(2):self.ev(UP,PRESS);self.ev(UP,RELEASE);self.ev(UP,CLICK)
             self.ev(UP,DOUBLE);self.assertIn(self.lib.host_page(),(1,5))
+
+    def test_ski_v2_scenes_fit_the_op_budget_and_leave_only_from_pause(self):
+        self.new([0,50,600,25,60,300,0,0,0],seen=0x7fffff)
+        names=('straight','carve','hop','crash','spin','dense','gate','avalanche-fog','title','ready','pause','end','result','max-record')
+        for which,name in enumerate(names):
+            self.lib.host_ski_case(which);self.check('SKI '+name);self.save('ski-'+name+'.png',True)
+            self.assertEqual((self.lib.adv_ui_width(),self.lib.adv_ui_height()),(320,240))
+        self.lib.host_ski_case(0)
+        for _ in range(10):self.steps(3)
+        self.check('SKI scrolling')
+        self.ev(UP,PRESS);self.ev(UP,RELEASE);self.ev(UP,CLICK);self.ev(UP,DOUBLE)
+        self.assertEqual(self.lib.host_page(),7,'Double UP while playing must not leave SKI V2')
+        self.ev(DOWN,PRESS);self.ev(DOWN,LONG);self.ev(DOWN,RELEASE)
+        self.assertEqual(self.lib.host_phase(),3)
+        self.ev(UP,DOUBLE);self.assertEqual(self.lib.host_page(),1)
 
     def test_night_v2_scenes_fit_the_op_budget_and_leave_only_from_pause(self):
         self.new([0,50,600,25,0,0,0,0,0],seen=0xffffff)

@@ -1,6 +1,6 @@
-// SKI V2 balance probe: node tests/ski_v2_sim.js [seeds]
+// SKI V2 balance probe: node tests/ski_sim.js [seeds]
 'use strict';
-const S = require('../prototype/adv_ski_v2.js'), { driver } = require('../../../tests/ski_v2_policy.js');
+const S = require('../prototype/adv_ski.js'), { driver } = require('../../../tests/ski_policy.js');
 const seeds = +(process.argv[2] || 60);
 for (const kind of ['idle', 'spam', 'wiggle', 'casual', 'skilled']) {
   const rows = [];

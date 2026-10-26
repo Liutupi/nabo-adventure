@@ -166,11 +166,11 @@ class Mutations(unittest.TestCase):
         ('adv_model.c', 'if (!m->test) {', 'if (true) {'),
         # Every station now runs a formal game; the placeholder engine is no longer reachable, so its
         # mutants were retired. The hold-to-move games guard their exits and pause gestures instead.
-        ('adv_model.c', 'static bool holds_up(int station) { return station == 6 || station == 8; }',
+        ('adv_model.c', 'static bool holds_up(int station) { return station == 8; }',
          'static bool holds_up(int station) { return station == 6; }'),
-        ('adv_model.c', 'if(m->station==4&&m->phase==ADV_PLAY)return;', 'if(m->station==4&&m->phase==ADV_PAUSE)return;'),
-        ('adv_model.c', "if (m->station == 6) return b == ADV_BTN_OK && e == ADV_EV_LONG;",
-         "if (m->station == 6) return b == ADV_BTN_UP && e == ADV_EV_LONG;"),
+        ('adv_model.c', 'if(v2(m->station)&&m->phase==ADV_PLAY)return;', 'if(v2(m->station)&&m->phase==ADV_PAUSE)return;'),
+        ('adv_model.c', 'static bool v2(int station) { return station == 4 || station == 6; }',
+         'static bool v2(int station) { return station == 4; }'),
         ('adv_model.c', '((adv_space_t *)m->game)->down_taps >= 2', '((adv_space_t *)m->game)->down_taps >= 1'),
     ]
 
