@@ -1,5 +1,12 @@
 # 交接本
 
+
+## 2026-10-26 13:29 用户回复“可以”→ NIGHT V2 G0/G1 已交
+
+- 决定记录在 `docs/REDESIGN_V2.md` 第 7 节：长按中键暂停、暂停页双击上键回地图；NIGHT 先做；V1 保留；**容量方案未定，G2 前必须问**。
+- NIGHT V2 概念与浏览器原型：`game-art/adventure/NIGHT_V2_CONCEPT.md`、`prototype/night_v2.html`、`adv_night_v2*.js`、`tests/night_v2_sim.js`、`tools/build_night_v2_artifact.py`。
+- **Codex 不要**开始 NIGHT V2 的 C 移植、素材打包或 Grok 任务书，直到用户试玩认可 G1。
+
 ## 2026-10-26 13:22 用户反馈：萤火虫起五款重做（V2），先读这里
 
 用户实玩 ddd1f50d 后反馈：从萤火虫开始游戏性不足甚至无聊（对比深潜）；美术/UI 不行，人物动作僵硬像贴片人；需要左右操作的必须横屏；动作交给 Grok；对 Codex 要求提高。规划与质量门见 **[REDESIGN_V2.md](REDESIGN_V2.md)**，Grok 动作总表见 `game-art/adventure/art/grok-handoff/V2-ACTIONS.md`。
