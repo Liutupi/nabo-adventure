@@ -1,0 +1,463 @@
+{
+  "date": "2026-10-26",
+  "candidate_sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8",
+  "status": "HOST AND SERIAL PASS; SETTINGS SLEEP/WAKE CONFIRMED; HUMAN GAME ACCEPTANCE PENDING",
+  "upstream": "origin/main6bbb013, approved rocket G1 plus Windows C integration",
+  "host": {
+    "tests": 279,
+    "seconds": 177.863,
+    "passed": true,
+    "windows_idf": "6.0.2",
+    "render_pixel_proof": {
+      "status": "PASS: ROUNDED-SPAN AND PACKED-MARK OPTIMIZATIONS RETAIN ALL BASELINE PIXELS",
+      "count": 134,
+      "pixels": 10466112
+    },
+    "production_c": {
+      "verified_frames": 630,
+      "verified_sprite_rows": 30576,
+      "verified_ninepatch_rows": 912,
+      "comparison": "generated C and production decoders vs indexed source"
+    },
+    "fonts": {
+      "collection_font_12": "7d5fbb20016882f2aedeacbcbb865d2e7bb319eb58d956863f0de1c99eda5656",
+      "collection_font_16": "b18da001dd3708b0efe1ba2d1754144ca2f0e58a44be5e78c12a2ebe2c7c2e3e",
+      "collection_font_18": "fd73517adf389f9afc6bd2634dfef2270bcbc392e35ff560c8be0d84a008588e"
+    }
+  },
+  "budget": {
+    "app_sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8",
+    "app_bytes": 1815984,
+    "physical_factory_bytes": 2031616,
+    "free_bytes": 215632,
+    "reserve_bytes": 212992,
+    "permanent_reserve_bytes": 65536,
+    "future_game_reserve_bytes": 147456,
+    "future_games_reserved_bytes": {
+      "sky": 73728,
+      "climb": 73728
+    },
+    "remaining_after_reserve_bytes": 2640,
+    "budget_profile_sha256": "1a8094bef97416774f012f5049ff695c3b3b1c6573603b0c6b821269ba8fa320",
+    "opening_bytes": 221831,
+    "opening_limit_bytes": 229376,
+    "status": "PASS"
+  },
+  "device": {
+    "app_only_flashed": true,
+    "protected_bytes_verified": true,
+    "receipt": "20261026-174813-463692-receipt.json",
+    "normal_progress": {
+      "best": [
+        0,
+        132,
+        5888,
+        8,
+        518,
+        27,
+        367,
+        208,
+        349
+      ],
+      "seen": 16776831,
+      "stamps": 22
+    },
+    "night": {
+      "candidate_sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8",
+      "status": "PASS: SERIAL NIGHT ONLY",
+      "memory": {
+        "heap": {
+          "before": 263688,
+          "after": 263688,
+          "minimum": 263688,
+          "maximum": 263688
+        },
+        "largest": {
+          "before": 114688,
+          "after": 114688,
+          "minimum": 114688,
+          "maximum": 114688
+        }
+      },
+      "rounds": 10,
+      "warmup_rounds": 1,
+      "normal_mode_restored": true,
+      "durable_progress_unchanged": true,
+      "physical_checks": "User feel (swing timing, darkness readability, frame rate), sound and sleep/wake still required",
+      "played_round": {
+        "score": 5,
+        "seconds": 34.203999999997905,
+        "end_phases": [
+          4,
+          5
+        ],
+        "whiffs": 0,
+        "caught": 5
+      }
+    },
+    "late_games": {
+      "status": "PASS: SERIAL LIFECYCLE AND NATURAL ENDINGS ONLY",
+      "normal_mode_restored": true,
+      "games": {
+        "ski": {
+          "memory": {
+            "heap": {
+              "before": 263688,
+              "after": 263688,
+              "minimum": 263688,
+              "maximum": 263688
+            },
+            "largest": {
+              "before": 114688,
+              "after": 114688,
+              "minimum": 114688,
+              "maximum": 114688
+            }
+          },
+          "rounds": 10,
+          "warmup_rounds": 1,
+          "natural_round": {
+            "score": 57,
+            "seconds": 20.39100000000326,
+            "phases": [
+              2,
+              4,
+              5
+            ],
+            "start_resource": 670,
+            "end_resource": 0,
+            "quiet_sample": {
+              "seconds": 3.00800000000163,
+              "frames": 118,
+              "fps": 39.22872340423407,
+              "scope": "one initial idle 3-second window with only two status snapshots; not worst-case performance"
+            }
+          }
+        },
+        "sky": {
+          "memory": {
+            "heap": {
+              "before": 263688,
+              "after": 263688,
+              "minimum": 263688,
+              "maximum": 263688
+            },
+            "largest": {
+              "before": 114688,
+              "after": 114688,
+              "minimum": 114688,
+              "maximum": 114688
+            }
+          },
+          "rounds": 10,
+          "warmup_rounds": 1,
+          "natural_round": {
+            "score": 46,
+            "seconds": 7.171999999991385,
+            "phases": [
+              2,
+              4,
+              5
+            ],
+            "start_resource": 1000,
+            "end_resource": 0,
+            "quiet_sample": {
+              "seconds": 3.0234999999956926,
+              "frames": 151,
+              "fps": 49.942120059604804,
+              "scope": "one initial idle 3-second window with only two status snapshots; not worst-case performance"
+            }
+          }
+        },
+        "space": {
+          "memory": {
+            "heap": {
+              "before": 263688,
+              "after": 263688,
+              "minimum": 263688,
+              "maximum": 263688
+            },
+            "largest": {
+              "before": 114688,
+              "after": 114688,
+              "minimum": 114688,
+              "maximum": 114688
+            }
+          },
+          "rounds": 10,
+          "warmup_rounds": 1,
+          "natural_round": {
+            "score": 1100,
+            "seconds": 80.59399999998277,
+            "phases": [
+              2,
+              4,
+              5
+            ],
+            "start_resource": 1000,
+            "end_resource": 483,
+            "quiet_sample": {
+              "seconds": 3.007999999987078,
+              "frames": 217,
+              "fps": 72.14095744711842,
+              "scope": "one initial idle 3-second window with only two status snapshots; not worst-case performance"
+            }
+          }
+        }
+      }
+    },
+    "rocket_play": {
+      "seconds": 97.21899999998277,
+      "modes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "zones": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "score": 5284,
+      "successful_landing": true,
+      "landings": 1
+    },
+    "legacy": {
+      "jump": {
+        "rounds": 10,
+        "warmup_rounds": 1,
+        "memory": {
+          "heap": {
+            "before": 263688,
+            "after": 263688,
+            "minimum": 263688,
+            "maximum": 263688
+          },
+          "largest": {
+            "before": 114688,
+            "after": 114688,
+            "minimum": 114688,
+            "maximum": 114688
+          }
+        }
+      },
+      "dive": {
+        "rounds": 10,
+        "warmup_rounds": 1,
+        "memory": {
+          "heap": {
+            "before": 263600,
+            "after": 263600,
+            "minimum": 263600,
+            "maximum": 263600
+          },
+          "largest": {
+            "before": 114688,
+            "after": 114688,
+            "minimum": 114688,
+            "maximum": 114688
+          }
+        }
+      }
+    },
+    "boot": {
+      "candidate_sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8",
+      "status": "PASS: SILENT BOOT SAMPLING AND NORMAL COVER LIFECYCLE",
+      "terminal_boot_stats": {
+        "boot_frames": 73,
+        "boot_skipped": 0,
+        "boot_last": 72,
+        "boot_elapsed_ms": 6004
+      },
+      "all_73_poses_submitted": true,
+      "submitted_pose_interval_fps": 11.992005329780147,
+      "minimum_cover_heap": 88928,
+      "minimum_cover_largest": 32768,
+      "cover_cycle_count": 10,
+      "map_heap": {
+        "minimum": 263688,
+        "maximum": 263688
+      },
+      "map_largest": {
+        "minimum": 114688,
+        "maximum": 114688
+      }
+    },
+    "nvs": {
+      "app_sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8",
+      "bytes": 24576,
+      "identical_to_this_upgrade_backup": true,
+      "sha256": "69d2d19e06bec3922d50dc8031ce073b5b2e3319e6c7cb818a8dbf36951a450c",
+      "receipt": "20261026-174813-463692-receipt.json"
+    },
+    "space_frame_samples": {
+      "candidate_sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8",
+      "status": "PASS: FRAME MEASUREMENT ONLY",
+      "samples": [
+        {
+          "case": "ascent",
+          "attempt": 1,
+          "fps": 28.7745989746007,
+          "seconds": 3.0235000000102445,
+          "draw_us": 34849,
+          "draw_max_us": 73624,
+          "heap": 152184,
+          "largest": 73728,
+          "altitude_px": 573,
+          "hull": 3,
+          "scope": "Fresh natural round for each 3-second no-polling window; compositor draw count, not optical timing or all worst cases"
+        },
+        {
+          "case": "right",
+          "attempt": 1,
+          "fps": 28.443856457925065,
+          "seconds": 3.0234999999811407,
+          "draw_us": 33786,
+          "draw_max_us": 72916,
+          "heap": 152184,
+          "largest": 73728,
+          "altitude_px": 557,
+          "hull": 2,
+          "scope": "Fresh natural round for each 3-second no-polling window; compositor draw count, not optical timing or all worst cases"
+        },
+        {
+          "case": "left",
+          "attempt": 1,
+          "fps": 28.113113940701833,
+          "seconds": 3.0235000000102445,
+          "draw_us": 33781,
+          "draw_max_us": 73643,
+          "heap": 152184,
+          "largest": 73728,
+          "altitude_px": 573,
+          "hull": 3,
+          "scope": "Fresh natural round for each 3-second no-polling window; compositor draw count, not optical timing or all worst cases"
+        }
+      ],
+      "invalid_windows": [],
+      "normal_mode_restored": true,
+      "target_fps": 25,
+      "target_met": true
+    },
+    "night_frame_samples": {
+      "candidate_sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8",
+      "status": "PASS: FRAME MEASUREMENT ONLY",
+      "samples": [
+        {
+          "case": "walk",
+          "seconds": 3.515499999979511,
+          "fps": 29.01436495536751,
+          "frames": 102,
+          "draw_us": 29401,
+          "draw_max_us": 38341,
+          "heap": 200384,
+          "largest": 114688,
+          "light": 630,
+          "tick": 213,
+          "event": 0,
+          "visible_flies": 4,
+          "scope": "Two status snapshots around a 3.5-second no-polling interval; compositor draw count, not optical timing or all worst cases"
+        },
+        {
+          "case": "run",
+          "seconds": 3.5234999999956926,
+          "fps": 28.664680005711215,
+          "frames": 101,
+          "draw_us": 33345,
+          "draw_max_us": 38341,
+          "heap": 200384,
+          "largest": 114688,
+          "light": 356,
+          "tick": 439,
+          "event": 0,
+          "visible_flies": 17,
+          "scope": "Two status snapshots around a 3.5-second no-polling interval; compositor draw count, not optical timing or all worst cases"
+        },
+        {
+          "case": "slow",
+          "seconds": 3.5155000000086147,
+          "fps": 29.867728630278112,
+          "frames": 105,
+          "draw_us": 32271,
+          "draw_max_us": 38341,
+          "heap": 200384,
+          "largest": 114688,
+          "light": 255,
+          "tick": 665,
+          "event": 0,
+          "visible_flies": 6,
+          "scope": "Two status snapshots around a 3.5-second no-polling interval; compositor draw count, not optical timing or all worst cases"
+        },
+        {
+          "case": "first-firefly-tide",
+          "seconds": 3.5234999999956926,
+          "fps": 29.79991485742255,
+          "frames": 105,
+          "draw_us": 35193,
+          "draw_max_us": 39629,
+          "heap": 200384,
+          "largest": 114688,
+          "light": 172,
+          "tick": 1224,
+          "event": 1,
+          "visible_flies": 19,
+          "scope": "Two status snapshots around a 3.5-second no-polling interval; compositor draw count, not optical timing or all worst cases"
+        }
+      ],
+      "speaker": "OFF verified before upgrade",
+      "normal_mode_restored": true,
+      "fps_median": 29.40713990639503,
+      "minimum_sample_fps": 28.664680005711215,
+      "target_fps": 25,
+      "target_met": true
+    },
+    "audio": "Not listened to; persistent silence request, speaker OFF before the upgrade",
+    "sleep_wake": {
+      "temporary_sleep_s": 30,
+      "settings_saved": false,
+      "disconnect_observed": true,
+      "wake_observed": true,
+      "normal_mode_restored": true,
+      "progress_unchanged": true,
+      "durable_sleep_s": 300
+    },
+    "nvs_after_sleep": {
+      "app_sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8",
+      "bytes": 24576,
+      "identical_to_this_upgrade_backup": true,
+      "sha256": "69d2d19e06bec3922d50dc8031ce073b5b2e3319e6c7cb818a8dbf36951a450c",
+      "receipt": "20261026-174813-463692-receipt.json"
+    },
+    "serial_coverage": {
+      "games_tested": [
+        "jump",
+        "dive",
+        "night-v2",
+        "ski-v2",
+        "sky-v1",
+        "space-v2"
+      ],
+      "post_and_climb": "Not rerun on this exact candidate; earlier results remain historical"
+    }
+  },
+  "human_acceptance": {
+    "controls_and_readability": "pending",
+    "rocket_successful_landing": "pending",
+    "sleep_wake": {
+      "status": "PASS: user confirmed",
+      "user_report": "约30秒熄屏，上键能回到封面",
+      "scope": "Temporary 30-second settings-page test only; each active game not individually tested"
+    },
+    "audio": "not tested; muted"
+  },
+  "local_logs": [
+    "private/night-smoke/20261026-175203.json",
+    "private/late-games-smoke/20261026-175340.json",
+    "private/space-smoke/20261026-175826.json",
+    "private/legacy-smoke-8897cd9e/20261026-180011-213781.json",
+    "private/run-v2-suite-8897cd9e-attempt2.log"
+  ],
+  "boundary": "Serial injected buttons, compositor captures and draw counters do not certify physical buttons, optical frame rate, enjoyment or sound."
+}

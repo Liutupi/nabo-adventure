@@ -65,6 +65,7 @@ class Renderer(unittest.TestCase):
         lib.host_fail_caps.argtypes = [ctypes.c_size_t]
         lib.adv_ui_staging_bytes.restype = ctypes.c_uint32
         lib.ui_space_staging_bytes.restype = ctypes.c_uint32
+        lib.ui_space_cache_bytes.restype = ctypes.c_uint32
         lib.adv_boot_motion_enabled.restype = ctypes.c_bool
         class BootStats(ctypes.Structure):
             _fields_=[(name,ctypes.c_uint32) for name in ('frames','skipped','last_frame','elapsed_ms')]
@@ -159,6 +160,21 @@ class Renderer(unittest.TestCase):
         self.assertEqual(self.lib.ui_space_staging_bytes(),0)
         self.lib.host_space_case(1);self.check('SPACE re-entry');self.lib.host_close()
         self.assertEqual(self.lib.ui_space_staging_bytes(),0)
+
+    def test_space_cloud_cache_is_exact_with_failure_retry_and_exit(self):
+        self.new([0]*9,seen=0xffffff);self.lib.host_space_case(1)
+        # Each context holds one pointer and two ints; device pointers are 32-bit.
+        size=39680+32*(ctypes.sizeof(ctypes.c_void_p)+8)
+        self.lib.host_fail_caps(size);self.lib.host_draw()
+        self.assertEqual(self.lib.ui_space_cache_bytes(),0)
+        original=self.snapshot();self.lib.host_full()
+        self.assertEqual(self.lib.ui_space_cache_bytes(),size)
+        self.assertEqual(self.snapshot(),original)
+        self.check('cloud cache exact incremental composition')
+        self.ev(DOWN,LONG);self.ev(UP,DOUBLE)
+        self.assertEqual(self.lib.ui_space_cache_bytes(),0)
+        self.lib.host_space_case(1);self.lib.host_full();self.lib.host_close()
+        self.assertEqual(self.lib.ui_space_cache_bytes(),0)
 
     def test_every_screen(self):
         self.new([0, 12, 350, 7, 0, 0, 0, 0, 0], seen=0b11011001)

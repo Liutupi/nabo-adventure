@@ -1,7 +1,7 @@
 {
   "date": "2026-10-26",
   "candidate_sha256": "6d7f499b7174a0f359fa87d4b08a7e947b74fc80f5a33011b7883589f71b6747",
-  "status": "HOST PASS; CANDIDATE DEVICE VALIDATION PENDING",
+  "status": "HOST PASS; DEVICE FRAME TARGET NOT MET",
   "host": {
     "tests": 278,
     "seconds": 144.661,
@@ -18,17 +18,65 @@
     "physical_factory_bytes": 2031616,
     "free_bytes": 216736,
     "permanent_reserve_bytes": 65536,
-    "future_games_reserved_bytes": {"sky": 73728, "climb": 73728},
+    "future_games_reserved_bytes": {
+      "sky": 73728,
+      "climb": 73728
+    },
     "remaining_after_reserve_bytes": 3744,
     "budget_profile_sha256": "1a8094bef97416774f012f5049ff695c3b3b1c6573603b0c6b821269ba8fa320",
     "status": "PASS"
   },
   "device": {
-    "this_candidate_flashed": false,
-    "frame_samples": "pending",
-    "serial_lifecycle": "pending",
-    "protected_bytes_after_upgrade": "pending",
-    "previous_installed_sha256": "0ce4b83736ad0b0ce976789bed0eabeeafec3b55491b62e1b97edde93c423893"
+    "this_candidate_flashed": true,
+    "frame_samples": {
+      "candidate_sha256": "6d7f499b7174a0f359fa87d4b08a7e947b74fc80f5a33011b7883589f71b6747",
+      "status": "PASS: FRAME MEASUREMENT ONLY",
+      "samples": [
+        {
+          "case": "ascent",
+          "fps": 21.11166089406688,
+          "seconds": 3.0314999999827705,
+          "draw_us": 39486,
+          "draw_max_us": 71768,
+          "heap": 193212,
+          "largest": 114688,
+          "altitude_px": 557,
+          "hull": 3,
+          "scope": "3-second no-polling window; compositor draw count, not optical timing or all worst cases"
+        },
+        {
+          "case": "right",
+          "fps": 22.917007693579098,
+          "seconds": 3.05449999999837,
+          "draw_us": 48305,
+          "draw_max_us": 71768,
+          "heap": 193212,
+          "largest": 114688,
+          "altitude_px": 941,
+          "hull": 3,
+          "scope": "3-second no-polling window; compositor draw count, not optical timing or all worst cases"
+        },
+        {
+          "case": "left",
+          "fps": 21.388614676054743,
+          "seconds": 3.0389999999752035,
+          "draw_us": 47966,
+          "draw_max_us": 71768,
+          "heap": 193212,
+          "largest": 114688,
+          "altitude_px": 1388,
+          "hull": 2,
+          "scope": "3-second no-polling window; compositor draw count, not optical timing or all worst cases"
+        }
+      ],
+      "normal_mode_restored": true,
+      "target_fps": 25,
+      "target_met": false
+    },
+    "serial_lifecycle": "stopped after frame target failure; normal mode restored",
+    "protected_bytes_after_upgrade": "PASS: app-only write and full protected-byte comparison",
+    "previous_installed_sha256": "0ce4b83736ad0b0ce976789bed0eabeeafec3b55491b62e1b97edde93c423893",
+    "receipt": "20261026-173823-965151-receipt.json"
   },
   "human_acceptance": {
     "controls_and_readability": "pending",

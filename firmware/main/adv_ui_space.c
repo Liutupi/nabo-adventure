@@ -1,6 +1,7 @@
 // SPACE V2: native 320x240 rocket journey; painted layers retain source pixels.
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "esp_heap_caps.h"
 #include "adv_space.h"
 #include "adv_ui_internal.h"
@@ -16,7 +17,63 @@ static int min_i(int a,int b){return a<b?a:b;}
 static int max_i(int a,int b){return a>b?a:b;}
 static void text(ag_t *g,const char *s,int x,int y,int size,nt_align_t align,uint16_t col)
 {ag_text_top(g,size==18?&collection_font_18:size==16?&collection_font_16:&collection_font_12,s,x,y,align,col);}
-static void put(ag_t *g,const char *id,int x,int y){ui_art_frame_anchor(g,id,0,x,y);}
+// Cache the three repeatedly tiled cloud layers as lossless four-bit indices.
+// Palette zero stays transparent; allocation failure uses the original decoder.
+typedef struct {const adv_sprite_t *s;uint8_t *pixels;} cloud_piece_t;
+typedef struct {const cloud_piece_t *piece;int x,y;} cloud_draw_t;
+static struct {uint8_t *data;cloud_piece_t piece[6];cloud_draw_t *draw;unsigned used;} s_cloud;
+#define CLOUD_PIXELS_BYTES 39680u
+#define CLOUD_DRAW_COUNT 32u
+#define CLOUD_CACHE_BYTES (CLOUD_PIXELS_BYTES+CLOUD_DRAW_COUNT*sizeof(cloud_draw_t))
+static const char *const cloud_ids[]={"game/space-v2/bg/cloud-a","game/space-v2/bg/cloud-b","game/space-v2/bg/cloud-far"};
+uint32_t ui_space_cache_bytes(void){return s_cloud.data?CLOUD_CACHE_BYTES:0;}
+static void cloud_prepare(void)
+{
+    if(s_cloud.data)return;
+    uint8_t *data=heap_caps_malloc(CLOUD_CACHE_BYTES,MALLOC_CAP_INTERNAL);if(!data)return;
+    memset(data,0,CLOUD_PIXELS_BYTES);unsigned offset=0;
+    for(unsigned n=0;n<3;n++){
+        const adv_asset_record_t *a=adv_assets_find(cloud_ids[n]);if(!a||a->piece_count!=2)goto fail;
+        for(unsigned i=0;i<2;i++){
+            const adv_sprite_t *s=a->pieces[i].sprite;unsigned bytes=((unsigned)s->width*s->height+1)/2;
+            if(s->palette_size>16||s->width%2||offset+bytes>CLOUD_PIXELS_BYTES)goto fail;
+            s_cloud.piece[n*2+i]=(cloud_piece_t){s,data+offset};uint8_t row[ADV_SPRITE_MAX_SIDE];
+            for(unsigned y=0;y<s->height;y++){
+                if(!adv_sprite_row(s,0,y,row,sizeof(row)))goto fail;
+                for(unsigned x=0;x<s->width;x+=2)data[offset+(y*s->width+x)/2]=row[x]|(row[x+1]<<4);
+            }
+            offset+=bytes;
+        }
+    }
+    s_cloud.data=data;s_cloud.draw=(cloud_draw_t *)(data+CLOUD_PIXELS_BYTES);return;
+fail:free(data);
+}
+static void cloud_row(const void *ctx,int y,int x0,int x1,uint16_t *row)
+{
+    const cloud_draw_t *d=ctx;const adv_sprite_t *s=d->piece->s;
+    int first=max_i(x0,d->x),last=min_i(x1,d->x+s->width);
+    const uint8_t *src=d->piece->pixels+(y-d->y)*s->width/2;
+    for(int x=first;x<last;x++){
+        unsigned sx=(unsigned)(x-d->x),index=(src[sx/2]>>((sx&1)*4))&15;
+        if(index)row[x-x0]=s->palette[index];
+    }
+}
+static void put(ag_t *g,const char *id,int x,int y)
+{
+    if(s_cloud.data)for(unsigned n=0;n<3;n++)if(!strcmp(id,cloud_ids[n])){
+        const adv_asset_record_t *a=adv_assets_find(id);
+        if(s_cloud.used+2>CLOUD_DRAW_COUNT)break;
+        for(unsigned i=0;i<2;i++){
+            const adv_asset_piece_t *p=&a->pieces[i];int xx=x-a->anchor_x+p->x,yy=y-a->anchor_y+p->y;
+            int first=max_i(0,yy),last=min_i(240,yy+p->sprite->height);if(first>=last)continue;
+            cloud_draw_t *d=&s_cloud.draw[s_cloud.used++];*d=(cloud_draw_t){&s_cloud.piece[n*2+i],xx,yy};
+            uint32_t key=hash((uint32_t)xx)^hash((uint32_t)yy+65536u)^n*2u^i;
+            ag_rows_region(g,cloud_row,d,first,last,key);
+        }
+        return;
+    }
+    ui_art_frame_anchor(g,id,0,x,y);
+}
 static void crew(ag_t *g,const char *action,unsigned f,int x,int y)
 {char id[48];snprintf(id,sizeof(id),"space_a/%s",action);ui_art_frame_anchor(g,id,f,x,y);}
 // Batch tiny stars, trails, warning lines and weather into one row operation.
@@ -25,7 +82,7 @@ typedef struct {uint32_t x:9,w:9,y:8;uint32_t h:8,c:16,a:8;} mark_t;
 _Static_assert(sizeof(mark_t)==8,"Clipped screen marks must occupy two aligned words");
 static struct {mark_t *m;unsigned n,first,groups;bool overflow;} s_marks;
 uint32_t ui_space_staging_bytes(void){return s_marks.m?1024u*sizeof(mark_t):0;}
-void ui_space_close(void){free(s_marks.m);s_marks.m=NULL;s_marks.n=s_marks.first=s_marks.groups=0;}
+void ui_space_close(void){free(s_cloud.data);memset(&s_cloud,0,sizeof(s_cloud));free(s_marks.m);s_marks.m=NULL;s_marks.n=s_marks.first=s_marks.groups=0;}
 typedef struct {unsigned first,last;} mark_group_t;
 static mark_group_t s_mark_groups[4];
 static void mark(int x,int y,int w,int h,uint16_t c,int alpha)
@@ -232,6 +289,7 @@ void ui_draw_space_session(ag_t *g,const adv_model_t *m)
         ag_rect(g,0,0,320,240,0,INK,255,0,0);text(g,"内存不足",160,74,18,NT_ALIGN_CENTER,RED);
         text(g,"长按中键暂停",160,114,16,NT_ALIGN_CENTER,WHITE);text(g,"暂停后双击右键返回",160,148,12,NT_ALIGN_CENTER,WHITE);g->overflow=true;return;
     }
+    cloud_prepare();s_cloud.used=0;
     if(m->phase==ADV_TITLE){
         backdrop(g,0,vt);rocket(g,p,vt,false);flush_marks(g);ag_rect(g,0,0,320,96,0,INK,205,0,0);
         text(g,"火箭登月",160,15,18,NT_ALIGN_CENTER,WHITE);text(g,"左移 · 中键加速/关键时刻按 · 右移",160,48,12,NT_ALIGN_CENTER,WHITE);

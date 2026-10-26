@@ -5791,7 +5791,7 @@
     }
   },
   "device": {
-    "common_candidate_sha256": "6d7f499b7174a0f359fa87d4b08a7e947b74fc80f5a33011b7883589f71b6747",
+    "common_candidate_sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8",
     "new_game_art_embedded_in_this_candidate": true,
     "integrated_game_groups": [
       "climb",

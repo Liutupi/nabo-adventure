@@ -1,0 +1,45 @@
+{
+  "schema": "nabo-adventure-checkpoint-v1",
+  "date": "2026-10-26",
+  "release": false,
+  "status": "HOST AND SERIAL PASS; SETTINGS SLEEP/WAKE CONFIRMED; HUMAN GAME ACCEPTANCE PENDING",
+  "files": [
+    {
+      "path": "nabo-adventure-8897cd9e-candidate.bin",
+      "bytes": 1815984,
+      "sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8",
+      "flash_offset": "0x10000",
+      "contains_nvs_or_old_assets": false
+    }
+  ],
+  "budget": {
+    "app_sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8",
+    "app_bytes": 1815984,
+    "physical_factory_bytes": 2031616,
+    "free_bytes": 215632,
+    "reserve_bytes": 212992,
+    "permanent_reserve_bytes": 65536,
+    "future_game_reserve_bytes": 147456,
+    "future_games_reserved_bytes": {
+      "sky": 73728,
+      "climb": 73728
+    },
+    "remaining_after_reserve_bytes": 2640,
+    "budget_profile_sha256": "1a8094bef97416774f012f5049ff695c3b3b1c6573603b0c6b821269ba8fa320",
+    "opening_bytes": 221831,
+    "opening_limit_bytes": 229376,
+    "status": "PASS"
+  },
+  "human_acceptance": {
+    "controls_and_readability": "pending",
+    "rocket_successful_landing": "pending",
+    "sleep_wake": {
+      "status": "PASS: user confirmed",
+      "user_report": "约30秒熄屏，上键能回到封面",
+      "scope": "Temporary 30-second settings-page test only; each active game not individually tested"
+    },
+    "audio": "not tested; muted"
+  },
+  "validation": "../../../validation/v0.1.0-v2-8897cd9e.json",
+  "rule": "Exact app only. Keep NVS/boot/PHY and every byte at0x200000..0x800000. No merged image or flash erase."
+}
