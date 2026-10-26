@@ -1,121 +1,182 @@
-"""Replay the actual JS rules against C, including catch timing and native jar geometry."""
+"""NIGHT V2: replay the JS rules (prototype/adv_night.js) against production C step by step,
+plus rule edges and mutations. Goldens store an FNV-1a hash of the full state per step."""
 import ctypes
 import json
-from pathlib import Path
-import subprocess
 import tempfile
 import unittest
-from host_tools import CC,SHARED_EXPORT,unload_library
-ROOT=Path(__file__).resolve().parents[1];BOARD=ROOT/'firmware/main'
-FIELDS=['rng','tick','score','res','over','lane','x','from_x','move','move_dir','next','drain_acc','cast','cooldown','good','bad','feedback','message','cue','misses','caught_x','caught_y','spawn_blocked','bag','bag_left','last_lane','escaped','left_hold','right_hold','short_taps']
-class Bug(ctypes.Structure):_fields_=[(name,ctypes.c_int32) for name in ('type','x','base_y','lane','phase','age')]
-class Night(ctypes.Structure):_fields_=[(name,ctypes.c_uint32 if i<3 else ctypes.c_int32) for i,name in enumerate(FIELDS)]+[('bugs',Bug*8)]
-class Input(ctypes.Structure):_fields_=[(name,ctypes.c_uint8) for name in ('ok_down','ok_up','up_down','down_down','down_up','ok_held','down_held','up_held')]
-def build(folder,mutation=None):
-    folder=Path(folder)
-    for name in ('adv_night.c','adv_night.h'):
-        source=(BOARD/name).read_text('utf-8')
-        if mutation and mutation[0]==name:
-            assert mutation[1] in source;source=source.replace(mutation[1],mutation[2],1)
-        (folder/name).write_text(source,'utf-8')
-    target=folder/'night.dll'
-    subprocess.run([CC,'-std=c11','-O2','-shared',SHARED_EXPORT,'-Wall','-Wextra','-Werror','-I',str(folder),'-I',str(BOARD),str(folder/'adv_night.c'),'-o',str(target)],check=True)
-    lib=ctypes.CDLL(str(target));lib.adv_night_start.argtypes=[ctypes.POINTER(Night),ctypes.c_uint32]
-    lib.adv_night_step.argtypes=[ctypes.POINTER(Night),ctypes.POINTER(Input)];lib.adv_night_target.argtypes=[ctypes.POINTER(Night)];lib.adv_night_interval.argtypes=[ctypes.POINTER(Night)]
-    return lib
-def view(lib,g):return [getattr(g,k) for k in FIELDS]+[getattr(e,k) for e in g.bugs for k,_ in Bug._fields_]+[lib.adv_night_target(ctypes.byref(g)),lib.adv_night_interval(ctypes.byref(g))]
-def replay(lib,trace):
-    g=Night();lib.adv_night_start(ctypes.byref(g),trace['seed'])
-    for i,(action,expected) in enumerate(zip(trace['actions'],trace['states'])):
-        if action[0]=='reset':lib.adv_night_start(ctypes.byref(g),action[1])
-        else:lib.adv_night_step(ctypes.byref(g),ctypes.byref(Input(*action)))
-        actual=view(lib,g)
-        if actual!=expected:return i,actual,expected
+from game_harness import ROOT, Input, build
+from host_tools import unload_library
+
+HEAD = ['rng', 'tick', 'score', 'res', 'over', 'cue', 'light', 'x', 'screen', 'gait', 'stun', 'stun_kind', 'swing', 'swing_caught',
+        'last_swing', 'burst', 'combo', 'caught', 'meter', 'bursts', 'event', 'event_t', 'next_group', 'next_root', 'next_owl', 'last_loss',
+        'max_combo', 'whiffs', 'trips', 'owl_hits', 'owl_near', 'moth_hits', 'missed', 'golds', 'multi', 'swings', 'presses',
+        'roots_passed', 'blocked', 'fx_head']
+FLIES, MOTHS, ROOTS, OWLS, FXN = 40, 12, 6, 4, 6
+LOSS = len(HEAD)
+FLY0 = LOSS + 6
+MOTH0 = FLY0 + FLIES*7
+ROOT0 = MOTH0 + MOTHS*6
+OWL0 = ROOT0 + ROOTS*3
+FX0 = OWL0 + OWLS*3
+WORDS = FX0 + FXN*5
+F = {n: i for i, n in enumerate(HEAD)}
+
+
+def fnv(words):
+    h = 0x811c9dc5
+    for w in words:
+        u = w & 0xffffffff
+        for k in (0, 8, 16, 24):
+            h ^= (u >> k) & 255
+            h = (h * 0x01000193) & 0xffffffff
+    return h
+
+
+def view(g):
+    return [v & 0xffffffff if i < 3 else v for i, v in enumerate(g.w)]
+
+
+def replay(lib, State, trace):
+    g = State()
+    lib.adv_night_start(ctypes.byref(g), trace['seed'])
+    for i, action in enumerate(trace['actions']):
+        if action[0] == 'reset': lib.adv_night_start(ctypes.byref(g), action[1])
+        else: lib.adv_night_step(ctypes.byref(g), ctypes.byref(Input(*action)))
+        actual = view(g)
+        if fnv(actual) != trace['hashes'][i]:
+            near = min((int(k) for k in trace['states'] if int(k) >= i), default=None)
+            return i, near
+        if str(i) in trace['states'] and actual != trace['states'][str(i)]: return i, 'checkpoint'
     return None
+
 
 class NightModel(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.temp=tempfile.TemporaryDirectory();cls.lib=build(cls.temp.name)
-        cls.traces={p.stem:json.loads(p.read_text('utf-8')) for p in (ROOT/'tests/night_golden').glob('*.json')}
+        cls.temp = tempfile.TemporaryDirectory()
+        cls.lib, cls.State = build(cls.temp.name, 'night', WORDS)
+        cls.traces = {p.stem: json.loads(p.read_text('utf-8')) for p in (ROOT/'tests/night_golden').glob('*.json')}
+
     @classmethod
-    def tearDownClass(cls):unload_library(cls.lib._handle);cls.temp.cleanup()
-    def new(self):
-        g=Night();self.lib.adv_night_start(ctypes.byref(g),1);g.next=10000;return g
-    def step(self,g,**bits):self.lib.adv_night_step(ctypes.byref(g),ctypes.byref(Input(**bits)))
-    def bug(self,g,kind=1,dx=0,dy=0):g.bugs[0]=Bug(kind,(g.x+10+dx)*60,163+dy,g.lane,16,0)
-    def test_all_goldens_and_derived_catch_hints_match(self):
-        self.assertEqual(set(self.traces),{'idle','drive','mistakes','fuzz'});self.assertEqual(ctypes.sizeof(Night),312)
-        for name,trace in self.traces.items():
-            with self.subTest(name=name):self.assertIsNone(replay(self.lib,trace))
-    def test_idle_resource_is_exactly40seconds(self):
-        g=self.new()
-        for _ in range(2399):self.step(g)
-        self.assertEqual((g.res,g.over),(1,0));self.step(g);self.assertEqual((g.res,g.over,g.tick),(0,1,2400))
-    def test_moves_use_actual_position_and_respect_edges(self):
-        g=self.new()
-        for _ in range(5):self.step(g,ok_held=1)
-        self.assertEqual(g.x,160);self.step(g,ok_held=1);self.assertEqual(g.x,155)
-        for _ in range(40):self.step(g,ok_held=1)
-        self.assertEqual(g.x,54);self.step(g);self.assertEqual(g.move,0)
-        for _ in range(60):self.step(g,up_held=1)
-        self.assertEqual((g.x,g.lane),(266,2));self.step(g);self.assertEqual(g.move,0)
-    def test_capture_uses_press_position_before_the_bug_moves(self):
-        g=self.new();self.bug(g,dx=26);self.assertEqual(self.lib.adv_night_target(ctypes.byref(g)),0)
-        self.step(g,down_down=1);self.assertEqual((g.score,g.caught_x,g.message),(1,196,2));self.assertEqual(g.bugs[0].type,0)
-        g=self.new();self.step(g,ok_down=1);self.bug(g);self.step(g,down_down=1);self.assertEqual(g.score,1)
-    def test_empty_cast_and_held_ok_do_not_auto_catch(self):
-        g=self.new();self.bug(g,dx=27);self.step(g,down_down=1);self.assertEqual((g.score,g.misses,g.message,g.res),(0,1,1,1000))
-        g=self.new();self.bug(g)
-        for _ in range(8):self.step(g,down_held=1)
-        self.assertEqual(g.score,0);self.step(g,down_down=1);self.assertEqual(g.score,1)
-    def test_moth_penalty_caps_resource_and_ends_the_round(self):
-        g=self.new();g.res=300;self.bug(g,2);self.step(g,down_down=1);self.assertEqual((g.res,g.score,g.message,g.over),(50,0,3,0))
-        g=self.new();g.res=250;self.bug(g,2);self.step(g,down_down=1);self.assertEqual((g.res,g.over,g.cue),(0,1,8))
-    def test_fixed_capacity_never_overwrites_live_bugs(self):
-        g=self.new();g.next=1
-        for i in range(8):g.bugs[i]=Bug(1,(30+i*20)*60,163,i%3,16,0)
-        self.step(g);self.assertEqual(g.spawn_blocked,1);self.assertTrue(all(e.type==1 for e in g.bugs))
-    def test_gold_threshold_is_reachable_without_empty_casts(self):
-        end=self.traces['drive']['states'][-1];self.assertGreaterEqual(end[2],60);self.assertEqual((end[3],end[4],end[19]),(0,1,0))
-    def test_catch_hotspot_matches_the_authored_jar_peak(self):
-        manifest=json.loads((ROOT/'game-art/adventure/art/night-manifest.json').read_text('utf-8'))
-        clip=next(a for a in manifest['animations'] if a['skin']=='night_a' and a['name']=='catch')
-        x,y=clip['runtime_jar_opening'][2];ax,ay=clip['runtime_anchor']
-        self.assertEqual((round(x-ax),216+round(y-ay)),(10,163))
-    def test_unsigned_score_and_clock_do_not_wrap_into_invalid_difficulty(self):
-        g=self.new();g.score=0xffffffff;g.tick=0xffffffff;self.bug(g);self.step(g,down_down=1)
-        self.assertEqual((g.score,g.tick),(0xffffffff,0));self.assertEqual(self.lib.adv_night_interval(ctypes.byref(g)),204)
+    def tearDownClass(cls):
+        unload_library(cls.lib._handle); cls.temp.cleanup()
 
-    def test_camping_any_grove_cannot_earn_bronze(self):
-        for seed in range(1,9):
-            for lane,x in enumerate((54,160,266)):
-                g=Night();self.lib.adv_night_start(ctypes.byref(g),seed);g.lane=lane;g.x=g.from_x=x
-                for _ in range(6000):
-                    target=self.lib.adv_night_target(ctypes.byref(g))
-                    self.step(g,down_down=int(target>=0 and g.bugs[target].type==1 and g.cooldown<=1))
-                    if g.over:break
-                self.assertTrue(g.over);self.assertLess(g.score,15,(seed,lane,g.score));self.assertEqual(g.x,x);self.assertGreater(g.escaped,0)
+    def new(self, seed=1):
+        g = self.State(); self.lib.adv_night_start(ctypes.byref(g), seed); return g
 
-    def test_each_bag_visits_every_grove_and_bugs_expire_without_crossing(self):
-        g=self.new();lanes=[]
-        for _ in range(12):
-            g.next=1;self.step(g);fly=next(e for e in g.bugs if e.type==1);lanes.append(fly.lane)
-            self.assertEqual(sum(e.type==1 for e in g.bugs),1,'A moth must never replace a firefly opportunity')
-            g.next=10000
-            for _ in range(107):
-                for bug in g.bugs:
-                    if bug.type:self.assertLessEqual(abs(bug.x//60-((54,160,266)[bug.lane]+10)),10)
-                self.step(g)
-            self.assertFalse(any(e.type for e in g.bugs))
-        for i in range(0,len(lanes),3):self.assertEqual(set(lanes[i:i+3]),{0,1,2})
-        self.assertTrue(all(a!=b for a,b in zip(lanes,lanes[1:])))
-    def test_mutants_are_caught_by_recorded_rules(self):
-        mutations=[('adv_night.c','g->drain_acc+=25','g->drain_acc+=24'),('adv_night.c','g->res+=60','g->res+=59'),('adv_night.c','g->res-=250','g->res-=200'),('adv_night.h','#define ADV_NIGHT_RX 26','#define ADV_NIGHT_RX 25')]
-        for mutation in mutations:
-            with self.subTest(mutation=mutation),tempfile.TemporaryDirectory() as folder:
-                lib=build(folder,mutation)
-                try:self.assertTrue(any(replay(lib,t) is not None for t in self.traces.values()))
-                finally:unload_library(lib._handle)
+    def step(self, g, n=1, **bits):
+        for _ in range(n): self.lib.adv_night_step(ctypes.byref(g), ctypes.byref(Input(**bits)))
 
-if __name__=='__main__':unittest.main()
+    def quiet(self, g):
+        g.w[F['next_group']] = g.w[F['next_root']] = 1 << 30
+
+    def fly(self, g, slot, x, y, kind=1):
+        g.w[FLY0+slot*7:FLY0+slot*7+7] = (kind, x << 8, y, 0, 0, 0, 0)
+
+    def test_all_goldens_match(self):
+        self.assertEqual(set(self.traces), {'idle', 'spam', 'mistakes', 'casual', 'skilled', 'fuzz'})
+        self.assertEqual(ctypes.sizeof(self.State), WORDS*4)
+        for name, trace in self.traces.items():
+            with self.subTest(name=name): self.assertIsNone(replay(self.lib, self.State, trace))
+
+    def test_light_runs_out_without_play_and_running_costs_more(self):
+        walk, run = self.new(), self.new()
+        self.quiet(walk); self.quiet(run)
+        self.step(walk, 600); self.step(run, 600, up_held=1)
+        self.assertGreater(walk.w[F['light']], run.w[F['light']])
+        self.assertGreater(run.w[F['x']], walk.w[F['x']])
+        while not walk.w[F['over']]: self.step(walk)
+        self.assertEqual((walk.w[F['res']], walk.w[F['cue']], walk.w[F['light']]), (0, 8, 0))
+        tick = walk.w[F['tick']]; self.step(walk, 5)
+        self.assertEqual(walk.w[F['tick']], tick)
+
+    def test_net_catches_inside_arc_only_during_active_frames(self):
+        g = self.new(); self.quiet(g)
+        x = g.w[F['x']] >> 8
+        self.fly(g, 0, x + 20 + 2, 158)           # inside the arc
+        self.fly(g, 1, x + 20 + 40, 158)          # outside
+        self.step(g, 1, down_down=1)
+        self.assertEqual(g.w[F['caught']], 0)     # frame 0 of the swing is wind-up
+        self.step(g, 4)
+        self.assertEqual((g.w[F['caught']], g.w[F['combo']], g.w[F['score']]), (1, 1, 1))
+        self.assertEqual(g.w[FLY0+7], 1)
+        self.step(g, 20)
+        self.assertEqual(g.w[F['whiffs']], 0)
+
+    def test_whiff_breaks_combo_and_costs_light(self):
+        g = self.new(); self.quiet(g); g.w[F['combo']] = 9
+        light = g.w[F['light']]
+        self.step(g, 1, down_down=1); self.step(g, 17)
+        self.assertEqual((g.w[F['whiffs']], g.w[F['combo']]), (1, 0))
+        self.assertLess(g.w[F['light']], light - 16000)
+
+    def test_multiplier_and_gold(self):
+        g = self.new(); self.quiet(g); g.w[F['combo']] = 11
+        x = g.w[F['x']] >> 8
+        self.fly(g, 0, x + 21, 158, kind=2)
+        self.step(g, 1, down_down=1); self.step(g, 4)
+        self.assertEqual((g.w[F['score']], g.w[F['meter']]), (5*3, 5))
+
+    def test_root_trips_only_at_a_run(self):
+        for held, tripped in ((dict(up_held=1), 1), ({}, 0), (dict(ok_held=1), 0)):
+            g = self.new(); self.quiet(g)
+            x = g.w[F['x']] >> 8
+            g.w[ROOT0:ROOT0+3] = (x + 20, 12, 1)
+            self.step(g, 40, **held)
+            self.assertEqual(g.w[F['trips']], tripped, held)
+            self.assertEqual(g.w[F['roots_passed']], 1 - tripped, held)
+
+    def test_burst_needs_full_meter_and_double_tap(self):
+        g = self.new(); self.quiet(g)
+        x = g.w[F['x']] >> 8
+        for i in range(5): self.fly(g, i, x + 100 + i*20, 120)
+        g.w[F['meter']] = 29
+        self.step(g, 1, down_down=1); self.step(g, 2); self.step(g, 1, down_down=1)
+        self.assertEqual(g.w[F['bursts']], 0)
+        g = self.new(); self.quiet(g)
+        for i in range(5): self.fly(g, i, x + 100 + i*20, 120)
+        g.w[F['meter']] = 30
+        self.step(g, 1, down_down=1); self.step(g, 17); self.step(g, 1, down_down=1)
+        self.assertEqual(g.w[F['bursts']], 0)      # too slow: second tap starts a new swing
+        self.step(g, 2); self.step(g, 1, down_down=1)
+        self.assertEqual((g.w[F['bursts']], g.w[F['caught']], g.w[F['meter']]), (1, 5, 5))
+        for gap, burst in ((16, 1), (17, 0)):      # the second tap may come exactly DOUBLE frames later
+            g = self.new(); self.quiet(g); g.w[F['meter']] = 30
+            self.step(g, 1, down_down=1); self.step(g, gap - 1); self.step(g, 1, down_down=1)
+            self.assertEqual(g.w[F['bursts']], burst, gap)
+
+    def test_owl_hits_where_the_ring_was_and_changing_pace_dodges(self):
+        for held, hit in (({}, 1), (dict(up_held=1), 0)):
+            g = self.new(); self.quiet(g)
+            g.w[OWL0:OWL0+3] = (g.w[F['x']] + 294*96, 96, 1)
+            self.step(g, 96, **held)
+            self.assertEqual(g.w[F['owl_hits']], hit, held)
+
+    def test_events_rotate(self):
+        g = self.new(); self.quiet(g)
+        seen = []
+        for _ in range(900 + 1500*3):
+            self.step(g); g.w[F['light']] = 1000000
+            if g.w[F['event']] and (not seen or seen[-1] != g.w[F['event']]): seen.append(g.w[F['event']])
+        self.assertEqual(seen, [1, 2, 3, 1])
+
+    def test_skilled_trace_scores_well(self):
+        last = self.traces['skilled']['states'][str(len(self.traces['skilled']['hashes'])-1)]
+        self.assertGreater(last[F['score']], 1000)
+
+    def test_mutations_are_caught(self):
+        for mutation in [('adv_night.c', 'age >= ADV_NIGHT_SWING_ON && age <= ADV_NIGHT_SWING_OFF', 'age >= ADV_NIGHT_SWING_ON && age < ADV_NIGHT_SWING_OFF'),
+                         ('adv_night.c', 'return 1 + imin(4, g->combo / 6);', 'return 1 + imin(4, g->combo / 5);'),
+                         ('adv_night.c', 'return DECAY * (9000 +', 'return DECAY * (9100 +'),
+                         ('adv_night.c', 'METER_STEP = 12', 'METER_STEP = 11'),
+                         ('adv_night.c', 'int rr = 15 + rnd(g, 9);\n                int sign = rnd(g, 2) ? -1 : 1;', 'int sign = rnd(g, 2) ? -1 : 1;\n                int rr = 15 + rnd(g, 9);'),
+                         ('adv_night.c', 'm->y += adv_night_isin(ai * 13 / 10)', 'm->y += adv_night_isin(ai * 4 / 3)'),
+                         ('adv_night.h', '#define ADV_NIGHT_NET_R 31', '#define ADV_NIGHT_NET_R 30')]:
+            with self.subTest(mutation=mutation[1]), tempfile.TemporaryDirectory() as folder:
+                lib, State = build(folder, 'night', WORDS, mutation=mutation)
+                try: self.assertTrue(any(replay(lib, State, t) for t in self.traces.values()), mutation)
+                finally: unload_library(lib._handle)
+
+
+if __name__ == '__main__':
+    unittest.main()

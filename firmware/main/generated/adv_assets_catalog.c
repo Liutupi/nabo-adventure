@@ -26,16 +26,6 @@
 #include "adv_assets_game_climb_tiles_grey_1__p0.h"
 #include "adv_assets_game_climb_tiles_snow_0__p0.h"
 #include "adv_assets_game_climb_tiles_snow_1__p0.h"
-#include "adv_assets_game_night_glass_jar__p0.h"
-#include "adv_assets_game_night_grass_00__p0.h"
-#include "adv_assets_game_night_grass_01__p0.h"
-#include "adv_assets_game_night_grass_02__p0.h"
-#include "adv_assets_game_night_grass_03__p0.h"
-#include "adv_assets_game_night_jar_glow__p0.h"
-#include "adv_assets_game_night_tree_shadow_00__p0.h"
-#include "adv_assets_game_night_tree_shadow_01__p0.h"
-#include "adv_assets_game_night_tree_shadow_02__p0.h"
-#include "adv_assets_game_night_tree_shadow_03__p0.h"
 #include "adv_assets_game_post_props_cab_foreground__p0.h"
 #include "adv_assets_game_post_props_carriage__p0.h"
 #include "adv_assets_game_post_props_coal_pile__p0.h"
@@ -90,14 +80,6 @@
 #include "adv_assets_game_space_tiles_lunar_0__p0.h"
 #include "adv_assets_game_space_tiles_lunar_1__p0.h"
 #include "adv_assets_game_space_tiles_lunar_2__p0.h"
-#include "adv_assets_night_a_catch__p0.h"
-#include "adv_assets_night_a_cheer__p0.h"
-#include "adv_assets_night_a_lift_jar__p0.h"
-#include "adv_assets_night_a_move_left__p0.h"
-#include "adv_assets_night_a_move_right__p0.h"
-#include "adv_assets_night_a_seat_idle__p0.h"
-#include "adv_assets_night_a_yawn__p0.h"
-#include "adv_assets_night_shared_moth__p0.h"
 #include "adv_assets_post_a_delivered__p0.h"
 #include "adv_assets_post_a_hit__p0.h"
 #include "adv_assets_post_a_idle__p0.h"
@@ -374,36 +356,6 @@ static const adv_asset_piece_t adv_assets_game_climb_tiles_snow_0__pieces[] = {
 static const adv_asset_piece_t adv_assets_game_climb_tiles_snow_1__pieces[] = {
     {&adv_assets_game_climb_tiles_snow_1__p0, 0, 0},
 };
-static const adv_asset_piece_t adv_assets_game_night_glass_jar__pieces[] = {
-    {&adv_assets_game_night_glass_jar__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_game_night_grass_00__pieces[] = {
-    {&adv_assets_game_night_grass_00__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_game_night_grass_01__pieces[] = {
-    {&adv_assets_game_night_grass_01__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_game_night_grass_02__pieces[] = {
-    {&adv_assets_game_night_grass_02__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_game_night_grass_03__pieces[] = {
-    {&adv_assets_game_night_grass_03__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_game_night_jar_glow__pieces[] = {
-    {&adv_assets_game_night_jar_glow__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_game_night_tree_shadow_00__pieces[] = {
-    {&adv_assets_game_night_tree_shadow_00__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_game_night_tree_shadow_01__pieces[] = {
-    {&adv_assets_game_night_tree_shadow_01__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_game_night_tree_shadow_02__pieces[] = {
-    {&adv_assets_game_night_tree_shadow_02__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_game_night_tree_shadow_03__pieces[] = {
-    {&adv_assets_game_night_tree_shadow_03__p0, 0, 0},
-};
 static const adv_asset_piece_t adv_assets_game_post_props_cab_foreground__pieces[] = {
     {&adv_assets_game_post_props_cab_foreground__p0, 0, 0},
 };
@@ -565,30 +517,6 @@ static const adv_asset_piece_t adv_assets_game_space_tiles_lunar_1__pieces[] = {
 };
 static const adv_asset_piece_t adv_assets_game_space_tiles_lunar_2__pieces[] = {
     {&adv_assets_game_space_tiles_lunar_2__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_a_catch__pieces[] = {
-    {&adv_assets_night_a_catch__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_a_cheer__pieces[] = {
-    {&adv_assets_night_a_cheer__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_a_lift_jar__pieces[] = {
-    {&adv_assets_night_a_lift_jar__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_a_move_left__pieces[] = {
-    {&adv_assets_night_a_move_left__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_a_move_right__pieces[] = {
-    {&adv_assets_night_a_move_right__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_a_seat_idle__pieces[] = {
-    {&adv_assets_night_a_seat_idle__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_a_yawn__pieces[] = {
-    {&adv_assets_night_a_yawn__p0, 0, 0},
-};
-static const adv_asset_piece_t adv_assets_night_shared_moth__pieces[] = {
-    {&adv_assets_night_shared_moth__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_post_a_delivered__pieces[] = {
     {&adv_assets_post_a_delivered__p0, 0, 0},
@@ -1334,16 +1262,6 @@ const adv_asset_record_t adv_assets_catalog[] = {
     {"game/climb/tiles/grey-1", adv_assets_game_climb_tiles_grey_1__pieces, 1, 32, 32, 0, 0, 0, false},
     {"game/climb/tiles/snow-0", adv_assets_game_climb_tiles_snow_0__pieces, 1, 32, 32, 0, 0, 0, false},
     {"game/climb/tiles/snow-1", adv_assets_game_climb_tiles_snow_1__pieces, 1, 32, 32, 0, 0, 0, false},
-    {"game/night/glass_jar", adv_assets_game_night_glass_jar__pieces, 1, 19, 37, 9, 37, 0, false},
-    {"game/night/grass_00", adv_assets_game_night_grass_00__pieces, 1, 32, 32, 16, 31, 0, false},
-    {"game/night/grass_01", adv_assets_game_night_grass_01__pieces, 1, 32, 32, 16, 31, 0, false},
-    {"game/night/grass_02", adv_assets_game_night_grass_02__pieces, 1, 32, 32, 16, 31, 0, false},
-    {"game/night/grass_03", adv_assets_game_night_grass_03__pieces, 1, 32, 32, 16, 31, 0, false},
-    {"game/night/jar_glow", adv_assets_game_night_jar_glow__pieces, 1, 32, 32, 16, 16, 0, false},
-    {"game/night/tree_shadow_00", adv_assets_game_night_tree_shadow_00__pieces, 1, 32, 32, 16, 31, 0, false},
-    {"game/night/tree_shadow_01", adv_assets_game_night_tree_shadow_01__pieces, 1, 32, 32, 16, 31, 0, false},
-    {"game/night/tree_shadow_02", adv_assets_game_night_tree_shadow_02__pieces, 1, 32, 32, 16, 31, 0, false},
-    {"game/night/tree_shadow_03", adv_assets_game_night_tree_shadow_03__pieces, 1, 32, 32, 16, 31, 0, false},
     {"game/post/props/cab-foreground", adv_assets_game_post_props_cab_foreground__pieces, 1, 96, 88, 48, 81, 0, false},
     {"game/post/props/carriage", adv_assets_game_post_props_carriage__pieces, 1, 64, 48, 32, 44, 0, false},
     {"game/post/props/coal-pile", adv_assets_game_post_props_coal_pile__pieces, 1, 32, 24, 16, 23, 0, false},
@@ -1398,14 +1316,6 @@ const adv_asset_record_t adv_assets_catalog[] = {
     {"game/space/tiles/lunar-0", adv_assets_game_space_tiles_lunar_0__pieces, 1, 32, 32, 0, 0, 0, false},
     {"game/space/tiles/lunar-1", adv_assets_game_space_tiles_lunar_1__pieces, 1, 32, 32, 0, 0, 0, false},
     {"game/space/tiles/lunar-2", adv_assets_game_space_tiles_lunar_2__pieces, 1, 32, 32, 0, 0, 0, false},
-    {"night_a/catch", adv_assets_night_a_catch__pieces, 1, 54, 56, 20, 56, 12, false},
-    {"night_a/cheer", adv_assets_night_a_cheer__pieces, 1, 56, 72, 23, 72, 12, false},
-    {"night_a/lift_jar", adv_assets_night_a_lift_jar__pieces, 1, 54, 56, 20, 56, 12, false},
-    {"night_a/move_left", adv_assets_night_a_move_left__pieces, 1, 54, 56, 20, 56, 12, false},
-    {"night_a/move_right", adv_assets_night_a_move_right__pieces, 1, 54, 56, 20, 56, 12, false},
-    {"night_a/seat_idle", adv_assets_night_a_seat_idle__pieces, 1, 54, 56, 20, 56, 12, true},
-    {"night_a/yawn", adv_assets_night_a_yawn__pieces, 1, 54, 56, 20, 56, 12, false},
-    {"night_shared/moth", adv_assets_night_shared_moth__pieces, 1, 16, 16, 8, 13, 12, true},
     {"post_a/delivered", adv_assets_post_a_delivered__pieces, 1, 36, 40, 22, 40, 12, false},
     {"post_a/hit", adv_assets_post_a_hit__pieces, 1, 36, 40, 22, 40, 12, false},
     {"post_a/idle", adv_assets_post_a_idle__pieces, 1, 36, 40, 22, 40, 12, true},
@@ -1660,32 +1570,32 @@ const adv_ninepatch_t adv_assets_patch_info_normal = {{&adv_assets_ui_cards_info
 const adv_ninepatch_t adv_assets_patch_info_current = {{&adv_assets_ui_cards_info_current_top_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_top_right__p0, &adv_assets_ui_cards_info_current_left__p0, &adv_assets_ui_cards_info_current_center__p0, &adv_assets_ui_cards_info_current_right__p0, &adv_assets_ui_cards_info_current_bottom_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_bottom_right__p0}};
 const adv_ninepatch_t adv_assets_patch_popup_normal = {{&adv_assets_ui_cards_popup_normal_top_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_top_right__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_info_normal_center__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_popup_normal_bottom_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_bottom_right__p0}};
 const adv_asset_digit_t adv_assets_digits_36[] = {
-    {48, &adv_assets_catalog[297], 36},
-    {49, &adv_assets_catalog[298], 22},
-    {50, &adv_assets_catalog[299], 31},
-    {51, &adv_assets_catalog[300], 32},
-    {52, &adv_assets_catalog[301], 36},
-    {53, &adv_assets_catalog[302], 31},
-    {54, &adv_assets_catalog[303], 34},
-    {55, &adv_assets_catalog[304], 33},
-    {56, &adv_assets_catalog[305], 35},
-    {57, &adv_assets_catalog[306], 33},
-    {109, &adv_assets_catalog[307], 53},
-    {43, &adv_assets_catalog[308], 31},
+    {48, &adv_assets_catalog[279], 36},
+    {49, &adv_assets_catalog[280], 22},
+    {50, &adv_assets_catalog[281], 31},
+    {51, &adv_assets_catalog[282], 32},
+    {52, &adv_assets_catalog[283], 36},
+    {53, &adv_assets_catalog[284], 31},
+    {54, &adv_assets_catalog[285], 34},
+    {55, &adv_assets_catalog[286], 33},
+    {56, &adv_assets_catalog[287], 35},
+    {57, &adv_assets_catalog[288], 33},
+    {109, &adv_assets_catalog[289], 53},
+    {43, &adv_assets_catalog[290], 31},
 };
 const adv_asset_digit_t adv_assets_digits_20[] = {
-    {48, &adv_assets_catalog[285], 22},
-    {49, &adv_assets_catalog[286], 15},
-    {50, &adv_assets_catalog[287], 20},
-    {51, &adv_assets_catalog[288], 19},
-    {52, &adv_assets_catalog[289], 22},
-    {53, &adv_assets_catalog[290], 20},
-    {54, &adv_assets_catalog[291], 21},
-    {55, &adv_assets_catalog[292], 20},
-    {56, &adv_assets_catalog[293], 21},
-    {57, &adv_assets_catalog[294], 21},
-    {109, &adv_assets_catalog[295], 32},
-    {43, &adv_assets_catalog[296], 20},
+    {48, &adv_assets_catalog[267], 22},
+    {49, &adv_assets_catalog[268], 15},
+    {50, &adv_assets_catalog[269], 20},
+    {51, &adv_assets_catalog[270], 19},
+    {52, &adv_assets_catalog[271], 22},
+    {53, &adv_assets_catalog[272], 20},
+    {54, &adv_assets_catalog[273], 21},
+    {55, &adv_assets_catalog[274], 20},
+    {56, &adv_assets_catalog[275], 21},
+    {57, &adv_assets_catalog[276], 21},
+    {109, &adv_assets_catalog[277], 32},
+    {43, &adv_assets_catalog[278], 20},
 };
 const uint16_t adv_assets_ui_palette[] = {8649, 15375, 17298, 25487, 35986, 38099, 40276, 44406, 45672, 46518, 48007, 54567, 56595, 57082, 63356, 65502};
 const size_t adv_assets_ui_palette_count = 16;

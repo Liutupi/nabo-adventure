@@ -32,7 +32,7 @@
     { id: 'jump', cn: '跳一跳', en: 'JUMP', world: '小镇', res: '体力', kind: 1, th: [10, 25, 50], placeholder: false },
     { id: 'dive', cn: '深潜', en: 'DIVE', world: '深海', res: '氧气', kind: 1, th: [100, 300, 600], placeholder: false },
     { id: 'post', cn: '小火车', en: 'POST', world: '铁路平原', res: '蒸汽', kind: 2, th: [5, 12, 25], placeholder: false },
-    { id: 'night', cn: '萤火虫', en: 'NIGHT', world: '夜林', res: '精神', kind: 2, th: [15, 35, 60], placeholder: false },
+    { id: 'night', cn: '萤火虫', en: 'NIGHT', world: '夜林', res: '光', kind: 2, th: [100, 300, 800], placeholder: false },
     { id: 'climb', cn: '登山', en: 'CLIMB', world: '雪山', res: '体力', kind: 2, th: [50, 150, 300], placeholder: false },
     { id: 'ski', cn: '滑雪', en: 'SKI', world: '雪坡', res: '体温', kind: 2, th: [10, 25, 45], placeholder: false },
     { id: 'sky', cn: '热气球', en: 'SKY', world: '云端', res: '热气', kind: 2, th: [200, 500, 1000], placeholder: false },
@@ -218,7 +218,8 @@
   function gameMapKey(btn, ev) { return btn === BTN.UP && ev === EV.DOUBLE; }
   function engine(station){return [null,null,null,Post,Night,Climb,Ski,Sky,Space][station]||Demo;}
   // Games where UP is held to move: only two genuinely short UP taps may leave for the map.
-  const holdsUp=station=>station===4||station===6||station===8;
+  // NIGHT V2 runs on held UP all the time, so it leaves only from its pause page (long middle DOWN).
+  const holdsUp=station=>station===6||station===8;
   // Pause: NIGHT long middle DOWN, SKI long OK, SPACE two short DOWN taps, everyone else long UP.
   function pauseKey(s,btn,ev){
     if(s.station===4)return btn===BTN.DOWN&&ev===EV.LONG;
@@ -239,6 +240,7 @@
     const s = m.session;
     const confirm=s.station===4?BTN.DOWN:BTN.OK,restart=s.station===4?BTN.OK:BTN.DOWN;
     if(gameMapKey(btn,ev)) {
+      if(s.station===4&&s.phase===PHASE.PLAY)return;
       if(holdsUp(s.station)&&s.phase===PHASE.PLAY&&s.game.shortTaps<2)return;
       if(s.phase===PHASE.END)recordResult(m);
       cue(m,CUE.BACK);toMap(m);return;

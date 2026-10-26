@@ -163,16 +163,28 @@ void host_night_case(int which)
 {
     if(model.in_session&&model.station!=4)adv_event(&model,ADV_BTN_UP,ADV_EV_DOUBLE);
     if(!model.in_session){model.test=true;model.page=ADV_PAGE_MAP;adv_test_open(&model,4);}
-    model.phase=ADV_PLAY;adv_night_t *p=model.game;adv_night_start(p,1234);p->next=10000;p->tick=10;
-    if(which==1){adv_input_t input={.ok_held=1};for(int i=0;i<10;i++)adv_night_step(p,&input);}
-    if(which==2||which==3)p->bugs[0]=(adv_night_bug_t){which==2?NIGHT_FIREFLY:NIGHT_MOTH,(p->x+ADV_NIGHT_JAR_DX)*60,ADV_NIGHT_JAR_Y,1,16,0};
-    if(which>=4&&which<=6){p->cast=20;p->feedback=60;p->message=which-3;p->score=6;p->caught_x=170;p->caught_y=163;if(which==5)p->good=60;if(which==6){p->bad=60;p->res=200;}}
-    if(which==7)for(int i=0;i<ADV_NIGHT_CAP;i++)p->bugs[i]=(adv_night_bug_t){i%2+1,(30+i*36)*60,153+i%3*8,i%3,i*7,i*3};
+    // V2 scenes from the real rules: 0 walk, 1 run with a group ahead, 2 swing catching, 3 moth + gold,
+    // 4 low light with a root, 5 owl ring, 6 burst, 7 event banner, 8 title, 9 ready, 10 pause, 11 end,
+    // 12 result record, 13 max result, 14 dense swarm (op budget).
+    model.phase=ADV_PLAY;adv_night_t *p=model.game;adv_night_start(p,1234);
+    adv_input_t walk={0},run={.up_held=1},swing={.down_down=1};
+    for(int i=0;i<200;i++)adv_night_step(p,which==1?&run:&walk);
+    int32_t base=p->x>>8;
+    if(which>=2&&which<=4){p->flies[0]=(adv_night_fly_t){1,(base+ADV_NIGHT_NET_DX+4)<<8,158,0,0,0,0};p->flies[1]=(adv_night_fly_t){1,(base+60)<<8,140,10,0,300,0};}
+    if(which==2){adv_night_step(p,&swing);for(int i=0;i<5;i++)adv_night_step(p,&walk);p->combo=13;}
+    if(which==3){p->flies[2]=(adv_night_fly_t){2,(base+120)<<8,150,0,0,0,0};p->moths[0]=(adv_night_moth_t){3,(base+136)<<8,146<<8,0,18,700};p->moths[1]=(adv_night_moth_t){3,(base+108)<<8,156<<8,128<<8,18,-700};}
+    if(which==4){p->light=90000;p->roots[0]=(adv_night_root_t){base+40,14,1};p->roots[1]=(adv_night_root_t){base+150,14,1};}
+    if(which==5){p->owls[0]=(adv_night_owl_t){(base+70)<<8,40,1};p->owls[1]=(adv_night_owl_t){(base+150)<<8,12,1};}
+    if(which==6){p->meter=adv_night_meter_full(p);p->last_swing=(int32_t)p->tick;adv_night_step(p,&swing);for(int i=0;i<6;i++)adv_night_step(p,&walk);}
+    if(which==7){p->event=NIGHT_EV_SWARM;p->event_t=400;p->fx[0]=(adv_night_fx_t){NIGHT_FX_EVENT,0,0,NIGHT_EV_SWARM,20};}
+    if(which==14)for(int i=0;i<ADV_NIGHT_FLIES;i++)p->flies[i]=(adv_night_fly_t){1+(i%9==0),(base-100+i*9)<<8,110+i%7*10,20,i*1600,400,0};
+    if(which==14)for(int i=0;i<ADV_NIGHT_FX;i++)p->fx[i]=(adv_night_fx_t){i==0?NIGHT_FX_EVENT:NIGHT_FX_FLY,base+i*30,150,i==0?1:3,10};
+    if(which==14){p->owls[0]=(adv_night_owl_t){(base+90)<<8,20,1};p->owls[1]=(adv_night_owl_t){(base+200)<<8,50,1};for(int i=0;i<ADV_NIGHT_ROOTS;i++)p->roots[i]=(adv_night_root_t){base-60+i*60,12,1};for(int i=0;i<ADV_NIGHT_MOTHS;i++)p->moths[i]=(adv_night_moth_t){0,(base-60+i*30)<<8,120<<8,0,16,600};p->combo=30;p->meter=adv_night_meter_full(p);}
     if(which==8)model.phase=ADV_TITLE;
     if(which==9){model.phase=ADV_READY;model.t=120;}
     if(which==10)model.phase=ADV_PAUSE;
-    if(which==11){model.phase=ADV_END;model.t=60;p->res=0;p->over=1;}
-    if(which>=12){model.phase=ADV_RESULT;p->score=which==13?UINT32_MAX:68;model.best[4]=p->score;model.record=which==12;model.test=false;}
+    if(which==11){model.phase=ADV_END;model.t=60;p->light=0;p->res=0;p->over=1;}
+    if(which==12||which==13){model.phase=ADV_RESULT;p->score=which==13?UINT32_MAX:1268;p->caught=412;p->max_combo=57;p->bursts=3;p->last_loss=NIGHT_LOSS_OWL;model.best[4]=p->score;model.record=which==12;model.test=false;}
 }
 
 // CLIMB scenes: 0 idle, 1 switch mid-air, 2 charging, 3 jump, 4 slide after a hit, 5 fragile/ice/canteen,

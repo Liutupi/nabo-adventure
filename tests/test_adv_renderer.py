@@ -201,21 +201,19 @@ class Renderer(unittest.TestCase):
             for _ in range(2):self.ev(UP,PRESS);self.ev(UP,RELEASE);self.ev(UP,CLICK)
             self.ev(UP,DOUBLE);self.assertIn(self.lib.host_page(),(1,5))
 
-    def test_night_native_scenes_and_every_session_phase_are_incremental(self):
+    def test_night_v2_scenes_fit_the_op_budget_and_leave_only_from_pause(self):
         self.new([0,50,600,25,0,0,0,0,0],seen=0xffffff)
-        names=('idle','move','ready-to-catch','moth','empty','caught','bad','dense','title','ready','pause','end','result','max-record')
+        names=('walk','run','swing','moth-gold','low-light','owl','burst','event','title','ready','pause','end','result','max-record','dense')
         for case,name in enumerate(names):
             self.lib.host_night_case(case);self.check('NIGHT '+name);self.save('night-'+name+'.png',True)
-            if name=='title':
-                source=Image.open(ROOT/'game-art/adventure/art/ui/wordmarks/night.png').convert('RGB')
-                expected=[((r>>3)*255//31,(g>>2)*255//63,(b>>3)*255//31) for r,g,b in source.getdata()]
-                self.assertEqual(list(self.view_image().crop((16,36,216,116)).getdata()),expected,'Native wordmark lettering/paper must be preserved pixel for pixel')
             self.assertEqual((self.lib.adv_ui_width(),self.lib.adv_ui_height()),(320,240))
-        self.lib.host_night_case(7);self.check('NIGHT fixed backdrop');before=self.view_image().crop((0,54,320,110)).tobytes()
+        self.lib.host_night_case(0);self.check('NIGHT play')
         for _ in range(20):self.steps(3)
-        self.assertEqual(before,self.view_image().crop((0,54,320,110)).tobytes())
-        self.assertLess(self.last_incremental_bytes,240*200*2,'Fixed-camera motion should not transmit the whole screen')
-        for _ in range(2):self.ev(UP,PRESS);self.ev(UP,RELEASE);self.ev(UP,CLICK)
+        self.check('NIGHT scrolling')
+        self.ev(UP,PRESS);self.ev(UP,RELEASE);self.ev(UP,CLICK);self.ev(UP,DOUBLE)
+        self.assertEqual(self.lib.host_page(),7,'Double UP while playing must not leave NIGHT V2')
+        self.ev(DOWN,PRESS);self.ev(DOWN,LONG);self.ev(DOWN,RELEASE)
+        self.assertEqual(self.lib.host_phase(),3)
         self.ev(UP,DOUBLE);self.assertEqual(self.lib.host_page(),1)
         self.assertEqual((self.lib.adv_ui_width(),self.lib.adv_ui_height()),(240,320))
 

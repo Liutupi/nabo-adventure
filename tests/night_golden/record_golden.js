@@ -1,27 +1,27 @@
-// Record the rules before C implementation. All values are integers.
-const fs=require('fs'),path=require('path'),N=require('../../game-art/adventure/prototype/adv_night.js');
-const {drive}=require('../night_policy.js');
-function record(seed,kind,count){
-  let g=N.start(seed),r={seed,actions:[],states:[]},rng={rng:seed^0x51ba7e};
-  const step=input=>{r.actions.push([input.ok_down||0,input.ok_up||0,input.up_down||0,input.down_down||0,input.down_up||0,input.ok_held||0,input.down_held||0,input.up_held||0]);N.step(g,input);r.states.push(N.view(g));};
-  for(let i=0;i<count;i++){
-    if(kind==='drive'||kind==='mistakes'){
-      let input=drive(g);
-      if(kind==='mistakes'){
-        const moth=g.bugs.find(e=>e.type===N.TYPE.MOTH),target=N.target(g);
-        if(target>=0&&g.bugs[target].type===N.TYPE.MOTH&&g.cooldown<=1)input={down_down:1};
-        else if(moth&&Math.abs(N.POS[moth.lane]-g.x)>8)input=N.POS[moth.lane]<g.x?{ok_held:1}:{up_held:1};
-      }
-      step(input);if(g.over)break;
-    }
-    else if(kind==='fuzz'){
-      if(g.over){const next=N.random(rng);g=N.start(next);r.actions.push(['reset',next]);r.states.push(N.view(g));}
-      const bits=N.random(rng);step({ok_down:bits%17===0?1:0,ok_held:(bits>>6)&1,up_down:bits%43===0?1:0,down_down:bits%37===0?1:0,down_held:(bits>>9)&1,up_held:(bits>>10)&1});
-    }else step({});
+// Record NIGHT V2 rules (game-art/adventure/prototype/adv_night.js) for the C port. All values are integers.
+const fs = require('fs'), path = require('path'), N = require('../../game-art/adventure/prototype/adv_night.js');
+const { driver } = require('../night_policy.js');
+const seenFx = new Set();
+function hash(v) { let h = 0x811c9dc5; for (const x of v) { const u = x >>> 0; for (let k = 0; k < 32; k += 8) { h ^= (u >>> k) & 255; h = Math.imul(h, 0x01000193) >>> 0; } } return h; }
+const bits = i => [i.ok_down || 0, i.ok_up || 0, i.up_down || 0, i.down_down || 0, i.down_up || 0, i.ok_held || 0, i.down_held || 0, i.up_held || 0];
+function record(seed, kind, count) {
+  let g = N.start(seed), next = driver(kind === 'fuzz' ? 'casual' : kind, seed);
+  // Every step stores an FNV-1a hash of the full C-order state; every 120th step and the last store it whole.
+  const r = { seed, actions: [], hashes: [], states: {} }, rng = { rng: seed ^ 0x51ba7e };
+  const keep = () => { const v = N.view(g); r.hashes.push(hash(v)); if (r.hashes.length % 120 === 0) r.states[r.hashes.length - 1] = v; };
+  const step = input => { r.actions.push(bits(input)); N.step(g, input); for (const e of g.fx) if (e.kind) seenFx.add(e.kind); keep(); };
+  for (let i = 0; i < count; i++) {
+    if (kind === 'fuzz') {
+      if (g.over) { const s = N.random(rng); g = N.start(s); next = driver('casual', s); r.actions.push(['reset', s]); keep(); }
+      const b = N.random(rng);
+      if (b % 5 < 3) step(next(g));
+      else step({ ok_down: b % 17 === 0 ? 1 : 0, up_down: b % 19 === 0 ? 1 : 0, down_down: b % 7 === 0 ? 1 : 0, ok_held: (b >> 8) & 1, up_held: (b >> 9) & 1, down_held: (b >> 10) & 1 });
+    } else { step(next(g)); if (g.over) { for (let k = 0; k < 3; k++) step({}); break; } }
   }
-  return r;
+  r.last = N.view(g); return r;
 }
-for(const [name,trace] of Object.entries({idle:record(1,'idle',2500),drive:record(2,'drive',24000),mistakes:record(3,'mistakes',6000),fuzz:record(779,'fuzz',9000)})){
-  if(name==='mistakes'&&!trace.states.some(s=>s[17]===3))throw Error('Mistake trace must actually catch a moth');
-  fs.writeFileSync(path.join(__dirname,name+'.json'),JSON.stringify(trace)+'\n');console.log(name,trace.actions.length,'steps');
-}
+const traces = { idle: record(1, 'idle', 3000), spam: record(2, 'spam', 6000), mistakes: record(3, 'mistakes', 12000),
+  casual: record(5, 'casual', 12000), skilled: record(4, 'skilled', 12000), fuzz: record(779, 'fuzz', 9000) };
+for (const [what, kind] of Object.entries(N.FX)) if (!seenFx.has(kind)) throw Error('NIGHT traces must cover fx ' + what);
+for (const [name, trace] of Object.entries(traces)) {
+  trace.states[trace.hashes.length - 1] = trace.last; delete trace.last; fs.writeFileSync(path.join(__dirname, name + '.json'), JSON.stringify(trace) + '\n'); console.log(name, trace.actions.length, 'steps', trace.states[trace.hashes.length - 1][2]); }

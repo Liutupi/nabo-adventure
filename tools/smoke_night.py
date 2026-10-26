@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Exercise NIGHT through guarded real inputs; never writes fabricated progress."""
+"""Exercise NIGHT V2 through guarded real inputs; never writes fabricated progress.
+
+Runs one round with real middle-key taps, then N enter/run/slow/pause/return cycles.
+UP never leaves while playing; the map is reached from the pause page."""
 import argparse
 from datetime import datetime
 import json
@@ -11,36 +14,40 @@ from smoke_post import BufferedPort,restore,tap,edge
 
 ROOT=Path(__file__).resolve().parents[1]
 
+QSIN=(0,101,201,301,401,501,601,700,799,897,995,1092,1189,1285,1380,1474,1567,1660,1751,1842,1931,2019,2106,2191,2276,2359,
+      2440,2520,2598,2675,2751,2824,2896,2967,3035,3102,3166,3229,3290,3349,3406,3461,3513,3564,3612,3659,3703,3745,3784,3822,
+      3857,3889,3920,3948,3973,3996,4017,4036,4052,4065,4076,4085,4091,4095,4096)
+NET_DX,NET_Y,NET_R=20,158,28   # NET_R is 3 px inside the rule radius to absorb serial latency
+
+def isin(i):
+    i&=255
+    return QSIN[i] if i<64 else QSIN[128-i] if i<128 else -QSIN[i-128] if i<192 else -QSIN[256-i]
+
+def fly_y(f,tick):
+    _,_,base,amp,ph,freq,_=f;v=amp*isin(((ph+tick*freq)&0xffffffff)>>8)
+    return base+(abs(v)//4096)*(1 if v>=0 else -1)
+
 def query(link):
     link.send('>night.status');until=time.monotonic()+8;retry=time.monotonic()+.5
     while time.monotonic()<until:
         line=link.read()
         if line.startswith('@night '):
             state=json.loads(line[7:])
-            if not all(type(state.get(k)) is int for k in ('tick','score','res','over','lane','x','move','cooldown','target','interval')):
+            if not all(type(state.get(k)) is int for k in ('tick','score','res','over','light','x','gait','stun','swing','meter','need','last_swing')):
                 raise SmokeError('Invalid NIGHT status')
-            if len(state.get('bugs',[]))!=8 or any(len(b)!=6 for b in state['bugs']):raise SmokeError('Invalid NIGHT objects')
+            if any(len(f)!=7 for f in state.get('flies',[])) or len(state['flies'])>40:raise SmokeError('Invalid NIGHT objects')
             return state
         if time.monotonic()>=retry:link.send('>night.status');retry=time.monotonic()+.5
     raise SmokeError('No NIGHT telemetry')
 
-def drive(g):
-    """Use the public HUD predicate and visible objects, as in night_policy.js."""
-    target=g['target']
-    if target>=0 and g['bugs'][target][0]==1 and g['cooldown']<=1:return 1
-    best=None
-    for bug in g['bugs']:
-        if bug[0]!=1:continue
-        lane=bug[3];travel=(abs((54,160,266)[lane]-g['x'])+4)//5+6
-        if 108-bug[5]<travel+2:continue
-        cost=108-bug[5]+travel*.2
-        if best is None or cost<best[0]:best=(cost,lane)
-    return (2 if (54,160,266)[best[1]]<g['x'] else 0) if best and abs((54,160,266)[best[1]]-g['x'])>8 else None
-
-def quick_return(link):
-    # Two genuinely short presses; movement presses must never satisfy this.
-    for _ in range(2):edge(link,0,True);edge(link,0,False)
-    link.key('double_up')
+def drive(g,lead=6):
+    """Swing when a visible firefly will sit inside the net arc a few frames from now (walking pace)."""
+    if g['swing'] or g['stun']:return False
+    nx=(g['x']>>8)+NET_DX+(294*lead>>8)
+    for f in g['flies']:
+        dx=((f[1]+f[6]*lead)>>8)-nx;dy=fly_y(f,g['tick']+lead)-NET_Y
+        if dx*dx+dy*dy<=NET_R*NET_R:return True
+    return False
 
 def enter(link):
     state=link.status()
@@ -56,34 +63,27 @@ def enter(link):
         time.sleep(.15)
     raise SmokeError('NIGHT countdown stalled')
 
-def play(link,target=15):
-    first=enter(link);start=time.monotonic();checked=start;last_score=-1;profile=[];phases=[];held=None
-    while time.monotonic()-start<220:
+def play(link,target=5):
+    """Walk (no held keys) and swing at reachable fireflies until the light runs out."""
+    enter(link);start=time.monotonic();checked=start;last_score=-1;profile=[];phases=[]
+    while time.monotonic()-start<240:
         p=query(link)
-        if p['score']!=last_score:
-            print(f'NIGHT score={p["score"]} spirit={p["res"]}',flush=True);last_score=p['score']
+        if p['score']!=last_score:print(f'NIGHT score={p["score"]} light={p["res"]}',flush=True);last_score=p['score']
         if p['over']:
-            if held is not None:edge(link,held,False);held=None
             latest=link.expect(7);phases.append(latest['phase'])
             if latest['phase']==5:
                 if p['score']<target:raise SmokeError('NIGHT ended before target')
-                return {'score':p['score'],'seconds':time.monotonic()-start,'end_phases':sorted(set(phases)),
-                        'profile':profile,'misses':p['misses']}
+                return {'score':p['score'],'seconds':time.monotonic()-start,'end_phases':sorted(set(phases)),'profile':profile,
+                        'whiffs':p['whiffs'],'caught':p['caught']}
             time.sleep(.1);continue
-        button=drive(p) if p['score']<target else None
-        desired=button if button in (0,2) else None
-        if held!=desired:
-            if held is not None:edge(link,held,False)
-            held=desired
-            if held is not None:edge(link,held,True)
-        if button==1:tap(link,1)
+        if drive(p):tap(link,1)
         now=time.monotonic()
         if now-checked>=1:
             state=link.expect(7)
             if state['heap']<60000 or state['largest']<30000:raise SmokeError('Insufficient active-game heap')
             profile.append({'time':now-start,'frames':state['frames'],'draw_us':state['draw_us'],'bytes':state['bytes']})
             checked=now
-        time.sleep(.04)
+        time.sleep(.02)
     raise SmokeError('NIGHT did not end')
 
 def main():
@@ -108,30 +108,28 @@ def main():
             result['play']=play(link);link.key('double_up');link.map();samples=[]
             for count in range(args.rounds+1):
                 enter(link)
-                link.key('up');state=link.expect(7)
-                if state['phase']!=2:raise SmokeError('Single UP left play')
-                edge(link,2,True);time.sleep(.55);edge(link,2,False);p=query(link)
-                if p['lane']!=0 or p['x']!=54:raise SmokeError('Physical left OK did not finish left slide')
-                for _ in range(2):edge(link,0,True);time.sleep(.22);edge(link,0,False);time.sleep(.04)
-                link.key('double_up');state=link.expect(7);p=query(link)
-                if state['phase']!=2 or p['x']<=54:raise SmokeError('Repeated held-right movement caused an exit')
-                edge(link,0,True);time.sleep(.85);link.key('long_up');edge(link,0,False);state=link.expect(7)
-                if state['phase']!=2 or query(link)['x']!=266:raise SmokeError('Held right stopped or paused before the edge')
+                for _ in range(2):edge(link,0,True);edge(link,0,False)
+                link.key('double_up');state=link.expect(7)
+                if state['phase']!=2:raise SmokeError('UP taps/double UP left NIGHT V2 while playing')
+                edge(link,0,True);time.sleep(.5);p=query(link);edge(link,0,False)
+                if p['gait']!=2:raise SmokeError('Held UP did not run')
+                edge(link,2,True);time.sleep(.4);p=query(link);edge(link,2,False)
+                if p['gait']!=0:raise SmokeError('Held OK did not slow down')
                 link.key('long_down');state=link.expect(7)
                 if state['phase']!=3:raise SmokeError('Long middle DOWN did not pause')
                 tick=query(link)['tick'];time.sleep(.4)
                 if query(link)['tick']!=tick:raise SmokeError('Paused game advanced')
-                link.key('long_up');state=link.expect(7)
-                if state['phase']!=3:raise SmokeError('Long UP left pause')
                 link.key('down');state=link.expect(7)
                 if state['phase']!=2:raise SmokeError('Middle DOWN did not resume')
-                quick_return(link);samples.append(link.map())
+                link.key('long_down');state=link.expect(7)
+                if state['phase']!=3:raise SmokeError('Second pause failed')
+                link.key('double_up');samples.append(link.map())
             result['memory']=analyse_memory(samples)
             restored=restore(link)
             if restored['test'] or (restored['best'],restored['seen'])!=before:raise SmokeError('Durable progress changed')
             result.update(status='PASS: SERIAL NIGHT ONLY',rounds=args.rounds,warmup_rounds=1,
                           normal_mode_restored=True,durable_progress_unchanged=True,
-                          physical_checks='User buttons, catch timing, costume, sound and sleep/wake still required')
+                          physical_checks='User feel (swing timing, darkness readability, frame rate), sound and sleep/wake still required')
         except Exception as error:
             result.update(status='FAIL',error=str(error))
             # Only restore state when this tool actually acquired test ownership.

@@ -37,7 +37,7 @@ def replay(lib, trace):
     """Returns None when every state matches, else a description of the first mismatch."""
     best = (ctypes.c_uint32 * 9)(*trace['best'])
     lib.host_new(trace['seed'], best, trace['seen'], *trace['settings'])
-    buf = ctypes.create_string_buffer(2048)
+    buf = ctypes.create_string_buffer(65536)
     for i, (action, want) in enumerate(zip(trace['actions'], trace['states'])):
         kind = action[0]
         if kind == 'e': fx = lib.host_event(action[1], action[2])
@@ -109,7 +109,7 @@ class GoldenTraces(unittest.TestCase):
         self.assertEqual(self.lib.host_awards(),0xe00)
         self.assertTrue(self.lib.host_is_unlocked(5))
         self.assertFalse(self.lib.host_is_unlocked(6))
-        buf=ctypes.create_string_buffer(2048);self.lib.host_snapshot(buf,len(buf))
+        buf=ctypes.create_string_buffer(65536);self.lib.host_snapshot(buf,len(buf))
         self.assertEqual(json.loads(buf.value)['best'][4],12)
         self.lib.host_new(12,best,0,70,80,300,1)
         self.assertEqual(self.lib.host_awards(),0)
@@ -119,7 +119,7 @@ class GoldenTraces(unittest.TestCase):
         self.lib.host_new(5,(ctypes.c_uint32*9)(*([0]*9)),0xffffff,70,80,300,1)
         self.lib.host_event(2,1);self.lib.host_test(1);self.lib.host_test_open(4)
         def state():
-            buf=ctypes.create_string_buffer(2048);self.lib.host_snapshot(buf,len(buf));return json.loads(buf.value)
+            buf=ctypes.create_string_buffer(65536);self.lib.host_snapshot(buf,len(buf));return json.loads(buf.value)
         self.lib.host_event(2,1);self.assertEqual(state()['session'][1],0,'Left OK must not start')
         self.lib.host_event(1,1);self.assertEqual(state()['session'][1],1)
         self.lib.host_steps(180);self.lib.host_event(1,3);self.assertEqual(state()['session'][1],3)
@@ -128,18 +128,22 @@ class GoldenTraces(unittest.TestCase):
         self.lib.host_event(2,1);self.assertEqual(state()['session'][1],5)
         self.lib.host_event(1,1);self.assertEqual(state()['session'][1],1)
 
-    def test_night_movement_presses_are_not_counted_as_exit_taps(self):
-        for first,second in ((12,12),(12,0),(0,12)):
-            self.lib.host_new(5,(ctypes.c_uint32*9)(*([0]*9)),0xffffff,70,80,300,1)
-            self.lib.host_event(2,1);self.lib.host_test(1);self.lib.host_test_open(4);self.lib.host_event(1,1);self.lib.host_steps(180)
-            for length in (first,second):
-                self.lib.host_event(0,0);self.lib.host_steps(length);self.lib.host_event(0,4);self.lib.host_event(0,1)
-            self.lib.host_event(0,2)
-            buf=ctypes.create_string_buffer(2048);self.lib.host_snapshot(buf,len(buf));state=json.loads(buf.value)
-            self.assertEqual(state['page'],7,(first,second));self.assertGreater(state['game'][6],160)
-            self.lib.host_event(0,3);self.lib.host_snapshot(buf,len(buf));self.assertEqual(json.loads(buf.value)['session'][1],2,'Held right must not pause')
-            for _ in range(2):self.lib.host_event(0,0);self.lib.host_event(0,4);self.lib.host_event(0,1)
-            self.lib.host_event(0,2);self.lib.host_snapshot(buf,len(buf));self.assertEqual(json.loads(buf.value)['page'],1)
+    def test_night_v2_up_runs_and_never_leaves_while_playing(self):
+        # NIGHT V2 runs on held UP; short taps, double taps and long holds all stay in the round.
+        self.lib.host_new(5,(ctypes.c_uint32*9)(*([0]*9)),0xffffff,70,80,300,1)
+        self.lib.host_event(2,1);self.lib.host_test(1);self.lib.host_test_open(4);self.lib.host_event(1,1);self.lib.host_steps(180)
+        buf=ctypes.create_string_buffer(65536)
+        def state():
+            self.lib.host_snapshot(buf,len(buf));return json.loads(buf.value)
+        x0=state()['game'][7]
+        self.lib.host_event(0,0);self.lib.host_steps(30);self.lib.host_event(0,3);self.lib.host_event(0,4)
+        for _ in range(2):self.lib.host_event(0,0);self.lib.host_event(0,4);self.lib.host_event(0,1)
+        self.lib.host_event(0,2)
+        now=state();self.assertEqual((now['page'],now['session'][1]),(7,2))
+        self.assertGreater(now['game'][7]-x0,30*294,'Held UP must run')
+        self.lib.host_event(1,0);self.lib.host_event(1,3);self.lib.host_event(1,4)
+        self.assertEqual(state()['session'][1],3,'Long middle pauses')
+        self.lib.host_event(0,2);self.assertEqual(state()['page'],1,'Double UP leaves from the pause page')
 
     def test_stamps_follow_bests(self):
         # A finished journey shows each stamp once and never takes one back.
@@ -162,8 +166,9 @@ class Mutations(unittest.TestCase):
         ('adv_model.c', 'if (!m->test) {', 'if (true) {'),
         # Every station now runs a formal game; the placeholder engine is no longer reachable, so its
         # mutants were retired. The hold-to-move games guard their exits and pause gestures instead.
-        ('adv_model.c', 'static bool holds_up(int station) { return station == 4 || station == 6 || station == 8; }',
-         'static bool holds_up(int station) { return station == 4 || station == 6; }'),
+        ('adv_model.c', 'static bool holds_up(int station) { return station == 6 || station == 8; }',
+         'static bool holds_up(int station) { return station == 6; }'),
+        ('adv_model.c', 'if(m->station==4&&m->phase==ADV_PLAY)return;', 'if(m->station==4&&m->phase==ADV_PAUSE)return;'),
         ('adv_model.c', "if (m->station == 6) return b == ADV_BTN_OK && e == ADV_EV_LONG;",
          "if (m->station == 6) return b == ADV_BTN_UP && e == ADV_EV_LONG;"),
         ('adv_model.c', '((adv_space_t *)m->game)->down_taps >= 2', '((adv_space_t *)m->game)->down_taps >= 1'),

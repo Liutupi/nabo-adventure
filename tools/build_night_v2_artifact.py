@@ -8,7 +8,7 @@ from pathlib import Path
 
 ADV = Path(__file__).resolve().parents[1] / 'game-art/adventure'
 out = Path(sys.argv[1]) if len(sys.argv) > 1 else ADV.parents[1] / 'private/night_v2_artifact.html'
-html = (ADV / 'prototype/night_v2.html').read_text('utf-8')
+html = (ADV / 'prototype/night.html').read_text('utf-8')
 manifest = json.loads((ADV / 'art/manifest.json').read_text('utf-8'))
 clips = [c for c in manifest['animations'] if c['skin'] == 'travel' and c['name'] in ('walk_right', 'sad', 'cheer')]
 files = {p: 'data:image/png;base64,' + base64.b64encode((ADV / 'art' / p).read_bytes()).decode() for c in clips for p in c['runtime_frames']}
@@ -18,7 +18,7 @@ for tag in (r'<!doctype html>\s*', r'<html[^>]*>\s*', r'</?head>\s*', r'</?body>
     html = re.sub(tag, '', html, flags=re.I)
 html = html.replace('<title>', '<meta name="claude:viewport-fit-sides" content="cover">\n<title>', 1)
 inline = lambda name: '<script>\n' + (ADV / 'prototype' / name).read_text('utf-8').replace('</script', '<\\/script') + '\n</script>'
-html = html.replace('<script src="adv_night_v2.js"></script>', '<script>' + sprites + '</script>\n' + inline('adv_night_v2.js'))
-html = html.replace('<script src="adv_night_v2_draw.js"></script>', inline('adv_night_v2_draw.js'))
+html = html.replace('<script src="adv_night.js"></script>', '<script>' + sprites + '</script>\n' + inline('adv_night.js'))
+html = html.replace('<script src="adv_night_draw.js"></script>', inline('adv_night_draw.js'))
 assert 'src="adv_' not in html
 out.parent.mkdir(parents=True, exist_ok=True); out.write_text(html, 'utf-8'); print(out, len(html))

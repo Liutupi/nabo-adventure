@@ -7,7 +7,7 @@ const path = require('path');
 const A = require('../../game-art/adventure/prototype/adv_core.js');
 
 const { BTN, EV, FX } = A;
-const {drive:driveNight}=require('../night_policy.js');
+const {driver:nightDriver}=require('../night_policy.js');
 const {driver:climbDriver}=require('../climb_policy.js');
 const LATE={6:require('../ski_policy.js').driver,7:require('../sky_policy.js').driver,8:require('../space_policy.js').driver};
 // The pause gesture of each shell game (NIGHT long DOWN, SKI long OK, SPACE two short DOWN taps, others long UP).
@@ -71,12 +71,15 @@ function playPost(r,hits,misses,waitResult=true) {
   while(waitResult&&r.m.session.phase===A.PHASE.END)r.steps(20);
 }
 
+let driveNight=null;
 function playNight(r,hits,waitResult=true){
+  driveNight=nightDriver('skilled',r.m.session.seed||1);
   if(r.m.session.phase===A.PHASE.TITLE||r.m.session.phase===A.PHASE.RESULT)r.click(BTN.DOWN);
   while(r.m.session.phase===A.PHASE.READY)r.steps(30);
   let guard=0;
   while(r.m.session.phase===A.PHASE.PLAY&&guard++<24000){
     const g=r.m.session.game,input=g.score<hits?driveNight(g):{};
+    if(input.down_down&&r.m.held&(1<<BTN.DOWN))r.ev(BTN.DOWN,EV.RELEASE);
     for(const [button,want] of [[BTN.OK,!!input.ok_held],[BTN.UP,!!input.up_held]]){
       const was=!!(r.m.held&(1<<button));if(was!==want)r.ev(button,want?EV.PRESS:EV.RELEASE);
     }
@@ -183,8 +186,8 @@ function journey() {
   r.double(BTN.UP);                    // result -> map (stamps)
   r.click(BTN.OK); r.click(BTN.OK);    // post bronze and silver
   r.click(BTN.UP); r.click(BTN.OK);    // night title
-  r.test(1); r.click(BTN.OK); playDemo(r, 15, 4); r.test(0);   // test mode never saves
-  r.click(BTN.OK); playDemo(r, 35, 4);   // NIGHT's actual silver line
+  r.test(1); r.click(BTN.DOWN); playDemo(r, 15, 4); r.test(0);   // test mode never saves
+  r.click(BTN.DOWN); playDemo(r, 300, 4);   // NIGHT's actual silver line
   r.double(BTN.UP); r.click(BTN.OK); r.click(BTN.OK);
   r.long(BTN.OK);                      // passport from the map
   for (let i = 0; i < 9; i++) r.click(BTN.UP);
@@ -248,6 +251,11 @@ function gameReturns() {
     else r.long(BTN.UP);
     if(r.m.page!==A.PAGE.SESSION||r.m.session.phase!==phase)throw Error('Single/long UP unexpectedly returned or changed a phase');
     r.double(BTN.UP);
+    if(station===4&&phase===A.PHASE.PLAY){
+      // NIGHT V2 (user decision 2026-10-26): UP is the run key, so the map is reached from the pause page.
+      if(r.m.page!==A.PAGE.SESSION||r.m.session.phase!==A.PHASE.PLAY)throw Error('NIGHT V2 left while playing');
+      pause(r,station);r.double(BTN.UP);
+    }
     if(r.m.page!==A.PAGE.MAP||r.m.session)throw Error('Double UP did not close the game');
   }
   for(const station of [1,2]) {

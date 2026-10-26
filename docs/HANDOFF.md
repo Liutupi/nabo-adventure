@@ -1,11 +1,14 @@
 # 交接本
 
 
-## 2026-10-26 13:29 用户回复“可以”→ NIGHT V2 G0/G1 已交
+## 2026-10-26 13:46 NIGHT V2 已接入固件（云端，未上机）——Codex 从这里接手
 
-- 决定记录在 `docs/REDESIGN_V2.md` 第 7 节：长按中键暂停、暂停页双击上键回地图；NIGHT 先做；V1 保留；**容量方案未定，G2 前必须问**。
-- NIGHT V2 概念与浏览器原型：`game-art/adventure/NIGHT_V2_CONCEPT.md`、`prototype/night_v2.html`、`adv_night_v2*.js`、`tests/night_v2_sim.js`、`tools/build_night_v2_artifact.py`。
-- **Codex 不要**开始 NIGHT V2 的 C 移植、素材打包或 Grok 任务书，直到用户试玩认可 G1。
+- 用户 13:45 认可 V2 试玩（“这个设计比之前的好多了”），13:46 决定**本款现有素材够用就不交 Grok 做视频**。所以 NIGHT 跳过 G2，直接接入；V1 已被替换（git 历史可回退）。
+- 设计、键位、平衡、文件清单与验证边界：**`game-art/adventure/NIGHT_DESIGN.md`**。键位：左按住慢走、右按住小跑、中点按挥罐/满能量双击放光/长按暂停；**游戏中任何上键手势不回地图，暂停页双击上键回地图**（`docs/GAME_CONTROLS.md` 末节）。
+- 素材：NIGHT 只用共用 `travel/walk_right|sad|cheer`；V1 坐姿精灵不再打包（命令见 `tools/ADVENTURE_ASSETS.md`）。门槛改为 100/300/800。
+- 云端：263 项宿主检查通过；IDF6.0.2 构建 app 1,612,048 B（比 ddd1f50d 小约 48 KB），预算 PASS，扣 352 KiB 后余 59,120 B。云端 SHA 不可刷。
+- **Codex 下一步（Windows）**：拉取 → `build.ps1` 重建 → 保护式升级 → `python tools/smoke_night.py --port … --app … --sha256 … --receipt …`（新版：真实中键挥罐打完一局，再 10 轮“进场/右键跑/左键慢/长按中暂停/冻结/继续/再暂停/双击上回地图”，并确认游戏中双击上不退出）→ 记录帧率（整屏重画 + 逐像素压暗，最需要关注）、heap → 交给用户实玩挥罐手感与黑暗可读性。帧率若明显低于 25fps，先报告再优化（可把压暗改成按行跨度批处理），不要擅自改玩法数值。
+- 其余四款（SKI → SPACE → SKY → CLIMB）仍按 REDESIGN_V2 走 G0/G1；容量方案仍未定，需要 Grok 动作的款在 G2 前必须问用户。
 
 ## 2026-10-26 13:22 用户反馈：萤火虫起五款重做（V2），先读这里
 

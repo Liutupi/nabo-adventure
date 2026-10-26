@@ -5,7 +5,6 @@
 #include "adv_demo.h"
 #include "adv_model.h"
 #include "adv_post_view.h"
-#include "adv_night_view.h"
 #include "adv_climb_view.h"
 #include "adv_space.h"
 
@@ -54,8 +53,8 @@ int host_snapshot(char *out, int size)
             for(int i=0;i<POST_VALUES;i++)n+=snprintf(out+n,size-n,"%s%lld",i?",":"",(long long)values[i]);
             return n+snprintf(out+n,size-n,"]}");
         }
-        if(m->station>=6){
-            // SKI/SKY/SPACE states are 3 uint32 + int32 words, the same order as their JS view().
+        if(m->station>=6||m->station==4){
+            // NIGHT/SKI/SKY/SPACE states are 3 uint32 + int32 words, the same order as their JS view().
             size_t words=adv_station[m->station].game->state_size/4;const int32_t *w=m->game;
             n+=snprintf(out+n,size-n,"\"game\":[");
             for(size_t i=0;i<words;i++)n+=snprintf(out+n,size-n,"%s%lld",i?",":"",i<3?(long long)(uint32_t)w[i]:(long long)w[i]);
@@ -66,12 +65,6 @@ int host_snapshot(char *out, int size)
             int64_t values[CLIMB_VALUES];climb_values(m->game,values);
             n+=snprintf(out+n,size-n,"\"game\":[");
             for(int i=0;i<CLIMB_VALUES;i++)n+=snprintf(out+n,size-n,"%s%lld",i?",":"",(long long)values[i]);
-            return n+snprintf(out+n,size-n,"]}");
-        }
-        if(m->station==4){
-            int64_t values[NIGHT_VALUES];night_values(m->game,values);
-            n+=snprintf(out+n,size-n,"\"game\":[");
-            for(int i=0;i<NIGHT_VALUES;i++)n+=snprintf(out+n,size-n,"%s%lld",i?",":"",(long long)values[i]);
             return n+snprintf(out+n,size-n,"]}");
         }
         const adv_demo_t *g = m->game;

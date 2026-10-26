@@ -7,7 +7,7 @@ $env:CC='D:\nabo-passport-tools\w64devkit\bin\gcc.exe'
 python tools/build_adventure_assets.py --verify-c
 ```
 
-Integrated game groups (pass both `--group X --integrated-game X`): `post`, `night`, `climb`. Firmware regeneration command: `python tools/build_adventure_assets.py --group travel --group ui --group static --group post --group night --group climb --integrated-game post --integrated-game night --integrated-game climb --verify-c`. Generated files are always written with CRLF so every host produces the same bytes.
+Integrated game groups (pass both `--group X --integrated-game X`): `post`, `climb`, `ski`, `sky`, `space` (NIGHT V2 draws its NABO from the shared travel frames, so its V1 seated art is no longer packed). Firmware regeneration command: `python tools/build_adventure_assets.py --group travel --group ui --group static --group post --group climb --group ski --group sky --group space --integrated-game post --integrated-game climb --integrated-game ski --integrated-game sky --integrated-game space --verify-c`. Generated files are always written with CRLF so every host produces the same bytes.
 
 Default groups are `travel`, `ui`, and `static`; repeat `--group` to select a subset. `--art` and `--output` support isolated test/CI directories. The default output is `firmware/main/generated/`. The script does not modify CMake, handwritten firmware, the art manifests, device state or private data.
 
