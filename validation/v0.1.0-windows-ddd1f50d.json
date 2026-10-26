@@ -206,12 +206,19 @@
     },
     "post_muted_fps_median": 26.169819371291297,
     "night_muted_fps_median": 28.443113772443525,
-    "compositor_identical_pixels": 76800
+    "compositor_identical_pixels": 76800,
+    "sleep_probe": {
+      "temporary_sleep_s": 30,
+      "settings_saved": false,
+      "disconnect_observed": true,
+      "wake_observed": false,
+      "status": "AWAITING PHYSICAL WAKE"
+    }
   },
   "human_acceptance": {
     "new_cover": "pending",
     "climb_ski_sky_space": "pending",
-    "sleep_wake_on_this_image": "pending",
+    "sleep_wake_on_this_image": "USB disconnect observed; physical screen/wake confirmation pending",
     "audio": "not tested; user requested silence"
   },
   "remaining": [
