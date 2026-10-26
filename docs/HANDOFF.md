@@ -3,9 +3,11 @@
 
 
 
-## 2026-10-26 14:44 SPACE V2「月面跳跳」G0/G1 已交，等用户试玩
+## 2026-10-26 15:17 SPACE V2「火箭登月」G0/G1 已交，等用户试玩
 
-- 概念、键位、数值：`game-art/adventure/SPACE_V2_CONCEPT.md`；试玩页 `prototype/space_v2.html`。只用现有太空 A 款素材，不需要 Grok。主引擎改为点按，长按中键暂停与 NIGHT/SKI 一致。
+- 用户改需求：最终关做成火箭从发射到登月的一整段旅程，紧张刺激、交互丰富、不用 Grok、背景要有丰富图景。“月面跳跳”作废。
+- 概念、流程、数值、固件代价：`game-art/adventure/SPACE_V2_CONCEPT.md`；试玩页 `prototype/space_v2.html`；背景由 `tools/paint_space_v2.py` 离线绘制（29 张，`art/space-v2/`）。
+- 热气球、登山的 V2 还没开始（顺序见 REDESIGN_V2，用户 15:13 问起，选择先做太空）。
 - **用户认可前 Codex 不要动 SPACE 的 C、素材或 V1。**
 
 ## 2026-10-26 14:27 SKI V2「雪崩速降」已接入固件（云端，未上机）

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<title>月面跳跳 V2</title>
+<title>火箭登月 V2</title>
 <style>
   :root { --bg:#f3efe6; --panel:#fffaf0; --ink:#1d2541; --muted:#6b6f80; --line:#d9d2c3; --btn:#2a3150; --btn-ink:#f6ead9; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#12141f; --panel:#1b1e2d; --ink:#ece6da; --muted:#9a9cab; --line:#2e3247; --btn:#3a4166; } }
@@ -32,30 +32,31 @@
   <div class="badge">
     <canvas id="game" width="320" height="240"></canvas>
     <div class="keys">
-      <button class="key" data-k="left">◀<small>OK · 左喷</small></button>
-      <button class="key" data-k="mid">●<small>下键 · 点按主引擎</small></button>
-      <button class="key" data-k="right">▶<small>上键 · 右喷</small></button>
+      <button class="key" data-k="left">◀<small>OK · 左移</small></button>
+      <button class="key" data-k="mid">●<small>下键 · 加速/关键时刻</small></button>
+      <button class="key" data-k="right">▶<small>上键 · 右移</small></button>
     </div>
   </div>
   <aside>
     <div class="panel">
-      <h1>月面跳跳 · SPACE V2 试玩（G1）</h1>
-      <p>工牌横拿，三个键从左到右：<b>◀ 左喷</b>、<b>● 主引擎</b>、<b>▶ 右喷</b>。键盘 <b>A / S / D</b> 或 <b>← ↓ →</b>，空格也是主引擎。</p>
+      <h1>火箭登月 · SPACE V2 试玩（G1）</h1>
+      <p>工牌横拿，三个键从左到右：<b>◀ 左移</b>、<b>● 加速 / 关键时刻</b>、<b>▶ 右移</b>。键盘 <b>A / S / D</b> 或 <b>← ↓ →</b>，空格也是中键。</p>
       <ul>
-        <li>主引擎是<b>点按</b>的：按一下往上推一下，一下一下地喷，像拍皮球一样控制下落速度。</li>
-        <li>按住左右键用侧喷平移。燃料是体力，一直在消耗，喷气更费。</li>
-        <li>往右飞到下一个着陆台，<b>慢慢落</b>、两只脚都落在台上才算着陆：加分、加燃料、NABO 下来插旗。</li>
-        <li>宽台 ×1 最安全；窄台 ×2、×3 多在山脊上，分高但补的燃料少。连续着陆不摔会叠倍率。</li>
-        <li>落太快、落在台外、被陨石砸中都会摔：扣一大块燃料，回到上一站。</li>
-        <li>空中漂着的燃料罐可以顺路去拿。</li>
-        <li>每 25 秒一个事件：流星雨（顶上先出感叹号）、太阳风、低重力、月夜。</li>
+        <li><b>点火</b>：指针在绿区时按中键，点亮三台发动机，越准起飞越猛。</li>
+        <li><b>升空</b>：左右躲鸟群、飞机、气球；雷暴云先出虚线预警再劈闪电；侧风会推你。屏幕边上闪红箭头＝有东西要横穿过来。</li>
+        <li><b>中键加速</b>：更快，护盾能撞碎鸟、气球、太空垃圾；但费燃料、会升温，在大气层里过热会掉一格船体。</li>
+        <li><b>一级分离</b>：指针扫到绿区按中键，时机好补满燃料、提速。</li>
+        <li><b>冲出大气层</b>：极光环穿过去加分降温；高空急流会把你往一边推。</li>
+        <li><b>太空</b>：卫星、太空垃圾、小行星带；然后跟节拍按三下中键做地月转移点火。</li>
+        <li><b>登月</b>：登月舱分离，点按中键反推减速，左右对准着陆台，慢慢落地。NABO 出舱插旗＝通关。</li>
+        <li>燃料一直在耗，船体只有三格。星星、燃料罐、修理包顺路拿；擦着障碍飞过有加分。</li>
         <li><b>长按 ●</b> 暂停；暂停中 ● 继续、◀ 重来、双击 ▶ 回标题（工牌上是回地图）。</li>
       </ul>
-      <p>着陆器、NABO 的舱内和插旗动作、着陆台旗子、燃料罐、陨石都是现有素材；月面、火焰是程序画的。</p>
+      <p>背景是程序绘制的整幅场景（<code>tools/paint_space_v2.py</code>），NABO 舱内画面、登月舱和插旗用现有太空素材。</p>
     </div>
     <div class="panel">
       <h2>每局数据 <button class="small" id="copy">复制给 Claude</button></h2>
-      <table><thead><tr><th>#</th><th>分</th><th>秒</th><th>按键/分</th><th>站</th><th>完美</th><th>摔</th></tr></thead><tbody id="rows"></tbody></table>
+      <table><thead><tr><th>#</th><th>分</th><th>秒</th><th>按键/分</th><th>km</th><th>登月</th><th>完美</th></tr></thead><tbody id="rows"></tbody></table>
     </div>
   </aside>
 </main>
@@ -88,11 +89,11 @@
   addEventListener('blur', () => { for (const k in held) press(k, 0); if (phase === 'PLAY') set('PAUSE'); });
 
   function logRound() {
-    const keys = ['hops', 'perfect', 'crashes', 'cans', 'bestChunk'];
-    const r = { seed: g.seed, score: g.score, sec: Math.round(g.tick / 60), ppm: Math.round(g.presses / (g.tick / 3600)) };
+    const keys = ['win', 'hull', 'stars', 'near', 'perfects', 'rings', 'cans', 'hits', 'sepQ', 'tliQ', 'ignScore'];
+    const r = { seed: g.rng, score: g.score, sec: Math.round(g.tick / 60), ppm: Math.round(g.presses / (g.tick / 3600)), km: Math.round((g.alt >> 8) * .02), fuel: g.fuel };
     for (const k of keys) r[k] = g[k];
     rounds.push(r);
-    document.getElementById('rows').insertAdjacentHTML('afterbegin', `<tr><td>${rounds.length}</td><td>${r.score}</td><td>${r.sec}</td><td>${r.ppm}</td><td>${r.hops}</td><td>${r.perfect}</td><td>${r.crashes}</td></tr>`);
+    document.getElementById('rows').insertAdjacentHTML('afterbegin', `<tr><td>${rounds.length}</td><td>${r.score}</td><td>${r.sec}</td><td>${r.ppm}</td><td>${r.km}</td><td>${r.win ? '✓' : '—'}</td><td>${r.perfects}</td></tr>`);
     if (g.score > best) { best = g.score; try { localStorage.setItem('space_v2_best', best); } catch (e) {} }
   }
   document.getElementById('copy').onclick = () => { const t = JSON.stringify(rounds); navigator.clipboard?.writeText(t).catch(() => {}); document.getElementById('copy').textContent = '已复制 ' + rounds.length + ' 局'; };
