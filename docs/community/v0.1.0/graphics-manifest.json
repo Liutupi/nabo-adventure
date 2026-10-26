@@ -1,0 +1,168 @@
+{
+  "version": "v0.1.0",
+  "ordered_images": [
+    "01-cover.png",
+    "02-passport.jpg",
+    "03-night-ski.jpg",
+    "04-rocket.jpg",
+    "05-controls.jpg"
+  ],
+  "cover_method": "Built-in image_gen, source identity and approved explorer reference; targeted title correction",
+  "detail_method": "Native SVG/HTML typesetting around unchanged production-C images; not device photography",
+  "series_references": [
+    "nabo-fortune/docs/community/v0.1.2/01-cover.png",
+    "nabo-sound-lab/docs/community/v0.2.0-preview.1/01-cover.png"
+  ],
+  "sources": {
+    "map-town.png": {
+      "sha256": "8699d8d9eb237422cf34718d5eec95fca13a1277fe2c1a77b9fe7e50ab067062",
+      "size": [
+        240,
+        320
+      ],
+      "kind": "production-C host render; demonstration data"
+    },
+    "passport.png": {
+      "sha256": "16928c18950c43f22e5bc36a679c9bcad96e8f2baa79a404716b2bfedc9c81da",
+      "size": [
+        240,
+        320
+      ],
+      "kind": "production-C host render; demonstration data"
+    },
+    "night-swing.png": {
+      "sha256": "62efeb2551cd79072f0d34ea56592ea8266dcbe7ab72746609ba18c62f77d42d",
+      "size": [
+        320,
+        240
+      ],
+      "kind": "production-C host render; demonstration data"
+    },
+    "ski-gate.png": {
+      "sha256": "f9950fd5e45a272349d03a85d5e9a2160d126bd3132947c0a76e7c2739c01045",
+      "size": [
+        320,
+        240
+      ],
+      "kind": "production-C host render; demonstration data"
+    },
+    "space-ignite.png": {
+      "sha256": "4633181702c9f21ca52fc3639d5c0f78a9fcf1e7e25450512c0481f4caa75f48",
+      "size": [
+        320,
+        240
+      ],
+      "kind": "production-C host render; demonstration data"
+    },
+    "space-ascent.png": {
+      "sha256": "dd2808551dfe5ac8752071b3e7a6fa4b8eb0e3f504894ec19d328cf32c6d7f7f",
+      "size": [
+        320,
+        240
+      ],
+      "kind": "production-C host render; demonstration data"
+    },
+    "space-transfer.png": {
+      "sha256": "213bb68567f2f82c84c68037d578d26839a10a1dd39f275159ddd308b8ccf274",
+      "size": [
+        320,
+        240
+      ],
+      "kind": "production-C host render; demonstration data"
+    },
+    "space-landed.png": {
+      "sha256": "ef7e9340bb0f1481ff0d53a2417ce00d003d119817b57a7ecf0f56398722b7fe",
+      "size": [
+        320,
+        240
+      ],
+      "kind": "production-C host render; demonstration data"
+    },
+    "jump.png": {
+      "sha256": "fd7aed56e5476992bbd92be7e3d9c37d8261339c6af29e947030e558373b343d",
+      "size": [
+        240,
+        320
+      ],
+      "kind": "production-C host render; demonstration data"
+    },
+    "dive-title-return.png": {
+      "sha256": "3f305916f84c5873465a88543732c0d7240659ac2c1489e7d075a6421168adc3",
+      "size": [
+        240,
+        320
+      ],
+      "kind": "production-C host render; demonstration data"
+    },
+    "post-ready-to-send.png": {
+      "sha256": "4bca20cf29c6f28990a45d16c80ae75c18c9bdf226a3d278a937c5080846cd59",
+      "size": [
+        320,
+        240
+      ],
+      "kind": "production-C host render; demonstration data"
+    }
+  },
+  "font_sha256": "d1961be1161ea1be08496c920862d06ea5c23a757628f4fd69368de1d9f51bed",
+  "status": "PASS: identity and text visually reviewed; four native C layouts exported with canvas clip; five images in3:4",
+  "final_images": [
+    {
+      "name": "01-cover.png",
+      "format": "PNG",
+      "size": [
+        1086,
+        1448
+      ],
+      "bytes": 2490329,
+      "sha256": "995aed9b3a94e0eacc645b9b46583cf542e7576ed747ddd43db5e768221cdb00"
+    },
+    {
+      "name": "02-passport.jpg",
+      "format": "JPEG",
+      "size": [
+        1080,
+        1440
+      ],
+      "bytes": 161311,
+      "sha256": "05313c1cba792a656c0fd463a43ae08dde5ce766e19b02a2b241572a2607a283"
+    },
+    {
+      "name": "03-night-ski.jpg",
+      "format": "JPEG",
+      "size": [
+        1080,
+        1440
+      ],
+      "bytes": 146949,
+      "sha256": "a22bd130789f96299439d2123e773bea3d0b0fe4456c6387dbfd477f0ea3e481"
+    },
+    {
+      "name": "04-rocket.jpg",
+      "format": "JPEG",
+      "size": [
+        1080,
+        1440
+      ],
+      "bytes": 205523,
+      "sha256": "35a0c5db22dc1a516360f13186a86950be7755deaab46ddb9fcad6e300f4ea92"
+    },
+    {
+      "name": "05-controls.jpg",
+      "format": "JPEG",
+      "size": [
+        1080,
+        1440
+      ],
+      "bytes": 165700,
+      "sha256": "23a658e928e4c8f4247c4cd2c9f94d35ac9b9d1dfd23dcc24ef9cac89e2f5325"
+    }
+  ],
+  "identity_authority": {
+    "path": "game-art/adventure/art/reference/nabo-idle-original.png",
+    "sha256": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243"
+  },
+  "approved_costume_reference": {
+    "path": "game-art/adventure/art/boot/v3/nabo-hero-start.png",
+    "sha256": "13bbdb3c0819c8226abc43893b22cc88dedf10156a266a2781ff6613347e4ec4"
+  }
+}

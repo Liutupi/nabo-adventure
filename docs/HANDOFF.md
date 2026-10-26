@@ -1,5 +1,13 @@
 # 交接本
 
+## AI Passport社区首版已公开：1662 / 3808
+
+用户要求“也在我的社区那里发布，封面照片与其他项目对齐、重新生成并写好玩法说明”。已在用户原账号土皮手动提交新玩法“NABO 冒险之旅 · 八站离线游戏”，分类游戏与互动/游戏合集；项目1662、修订3808。最初显示审核中，随后刷新工作台明确为**已发布**；从“复制链接”获得并实际打开了[公开详情](https://ai-passport.folotoy.cn/plays/1662/?v=3808-2)，五图与“安装最新版”入口可见。不要重复创建、撤回或催审。
+
+材料位于`docs/community/v0.1.0/`：1张内置image_gen重做的主视觉（锁定原NABO身份、已批准徒步服，文字遮挡定向修正），4张重新排版的生产C界面详情；深色/粗字/青金配色与声音实验室、赛博算命机系列对齐。五图均3:4，注明AI宣传插画或含演示数据的界面预览、非实物摄影。`COPY_ZH.md`与`listing-content.json`写明八款的目标、键位、结束条件、铜章解锁门槛、横屏暂停/返回，以及整包安装清存档和预览验证边界。提示词和图像来源哈希另附。
+
+已从实际保存页面重新下载全部五图（均900×1200 WebP），顺序/外观通过；保存文案四部分与本地一致。实际固件href为`/api/me/revisions/3808/firmware`，认证下载1,881,520B、SHA256 `2bca7adda06ea0b0e1cc3f4959781583983172c0b6163c2b1768c117e4b979d0`，与GitHub v0.1.0完整镜像逐字节一致，内部应用仍8897cd9e。公开页面已验证；匿名固件下载尚未独立测试。凭据`submission-status.json`、`image-validation.json`、`firmware-validation.json`、初始`submitted-review.jpg`及最终`published.jpg`，原始浏览器导出只留private。没有操作工牌或修改已发布固件。
+
 ## v0.1.0 首个公开预览固件发布
 
 用户已明确要求“更新github，然后发布第一版固件”。发布使用下方8897cd9e原应用，不重新编译、不再操作工牌；GitHub版本为`v0.1.0`、prerelease，三款实体手感等未验范围继续保留。安装说明`docs/INSTALL_v0.1.0.md`、发布说明`docs/RELEASE_v0.1.0.md`；工具`tools/package_release.py`和`tools/verify_release.py`只读预构建输入，8项打包保护检查通过。

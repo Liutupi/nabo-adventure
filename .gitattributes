@@ -10,6 +10,7 @@ game-art/adventure/tools/** -text whitespace=blank-at-eol,blank-at-eof,space-bef
 firmware/main/generated/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 # Preserve upstream font license bytes, including their original whitespace.
 game-art/adventure/art/**/licenses/*-OFL.txt -text -whitespace
+docs/community/**/assets/*-OFL.txt -text -whitespace
 *.png binary
 *.gif binary
 *.jpg binary

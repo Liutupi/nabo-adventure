@@ -1,0 +1,14 @@
+{
+  "status": "PASS: authenticated community firmware download equals GitHub v0.1.0 full image",
+  "project_id": 1662,
+  "revision_id": 3808,
+  "saved_firmware_href": "https://ai-passport.folotoy.cn/api/me/revisions/3808/firmware",
+  "bytes": 1881520,
+  "sha256": "2bca7adda06ea0b0e1cc3f4959781583983172c0b6163c2b1768c117e4b979d0",
+  "matches_github_release": true,
+  "authenticated_download_verified": true,
+  "anonymous_access": "not independently tested; authenticated saved-firmware download verified",
+  "app_sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8",
+  "public_page_url": "https://ai-passport.folotoy.cn/plays/1662/?v=3808-2",
+  "public_page_verified": true
+}

@@ -1,0 +1,67 @@
+{
+  "status": "PASS: all five saved WebP images match expected order and appearance",
+  "project_id": 1662,
+  "revision_id": 3808,
+  "images": [
+    {
+      "index": 0,
+      "source": "01-cover.png",
+      "saved_size": [
+        900,
+        1200
+      ],
+      "saved_bytes": 213330,
+      "saved_sha256": "bcf200688e63643fcb7ed7a61f1624587ff267d6b92a076f1e18451ba798a941",
+      "mean_absolute_error": 4.105062962962963,
+      "url": "https://ai-passport.folotoy.cn/api/me/revisions/3808/images/0?v=1"
+    },
+    {
+      "index": 1,
+      "source": "02-passport.jpg",
+      "saved_size": [
+        900,
+        1200
+      ],
+      "saved_bytes": 77548,
+      "saved_sha256": "6d5937319e87bbfb04895f6a2664daf9d7f8fbaac9fd5e0825a4d50515c1a447",
+      "mean_absolute_error": 1.6562783950617284,
+      "url": "https://ai-passport.folotoy.cn/api/me/revisions/3808/images/1?v=1"
+    },
+    {
+      "index": 2,
+      "source": "03-night-ski.jpg",
+      "saved_size": [
+        900,
+        1200
+      ],
+      "saved_bytes": 74374,
+      "saved_sha256": "af19b1df3d012d83e3ff358c5ea894dce997d3cd7a0300a7c9f772c6d6339a7a",
+      "mean_absolute_error": 1.4763348765432098,
+      "url": "https://ai-passport.folotoy.cn/api/me/revisions/3808/images/2?v=1"
+    },
+    {
+      "index": 3,
+      "source": "04-rocket.jpg",
+      "saved_size": [
+        900,
+        1200
+      ],
+      "saved_bytes": 106030,
+      "saved_sha256": "9ac98fc7e831db18502cdb2596d268df1ec526a95678ddff803288cd1ee4f6f0",
+      "mean_absolute_error": 2.0192824074074074,
+      "url": "https://ai-passport.folotoy.cn/api/me/revisions/3808/images/3?v=1"
+    },
+    {
+      "index": 4,
+      "source": "05-controls.jpg",
+      "saved_size": [
+        900,
+        1200
+      ],
+      "saved_bytes": 84914,
+      "saved_sha256": "ffb420df2a30d5901dbb2acc82604f65316434386edcbfe1a677da19cfcf2ebf",
+      "mean_absolute_error": 1.7024216049382714,
+      "url": "https://ai-passport.folotoy.cn/api/me/revisions/3808/images/4?v=1"
+    }
+  ]
+}
