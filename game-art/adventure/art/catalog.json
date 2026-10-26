@@ -5122,18 +5122,6 @@
           "interned_pieces": 0,
           "static_bytes_estimate_c3": 75316
         },
-        "night": {
-          "rle_bytes": 57163,
-          "table_bytes": 5924,
-          "descriptor_catalog_estimate_c3": 1508,
-          "resources": 18,
-          "pieces": 18,
-          "frames": 56,
-          "physical_sprites": 18,
-          "physical_frames": 56,
-          "interned_pieces": 0,
-          "static_bytes_estimate_c3": 64595
-        },
         "post": {
           "rle_bytes": 41331,
           "table_bytes": 8148,
@@ -5219,10 +5207,10 @@
           "static_bytes_estimate_c3": 41766
         }
       },
-      "python_verified_frames": 647,
+      "python_verified_frames": 591,
       "production_c": {
-        "verified_frames": 647,
-        "verified_sprite_rows": 30495,
+        "verified_frames": 591,
+        "verified_sprite_rows": 27626,
         "verified_ninepatch_rows": 912,
         "comparison": "generated C and production decoders vs indexed source"
       }
@@ -5367,17 +5355,19 @@
     }
   },
   "device": {
-    "common_candidate_sha256": "ddd1f50dfeb8eafd207292bdd27fc9de8d120713bee3fd65f03b69c04c444e9e",
+    "common_candidate_sha256": "0cbaaa94f0b9b41a86364d3bc3b49539372a8ce579431fd07b9912f449e60acb",
     "new_game_art_embedded_in_this_candidate": true,
     "integrated_game_groups": [
       "climb",
-      "night",
       "post",
       "ski",
       "sky",
       "space"
     ],
-    "reason": "Only explicitly integrated games are embedded; physical factory is 2,031,616 bytes."
+    "shared_art_game_groups": [
+      "night"
+    ],
+    "reason": "Dedicated groups and explicit common-art games are listed separately; physical factory is 2,031,616 bytes."
   },
   "acceptance": "Source integrity and actual C decoder checks; visual/device checks are recorded separately in ART_PROGRESS and VALIDATION."
 }

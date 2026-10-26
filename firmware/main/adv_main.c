@@ -486,7 +486,11 @@ static void adventure_task(void *arg)
             us - s_last_input_us > (int64_t)s_model.cfg.settings.sleep_seconds * 1000000) sleep_now();
         bool boot_pending=s_owner==OWNER_SHELL&&s_model.page==ADV_PAGE_COVER&&adv_ui_boot_initial()&&
                           ui_boot_video_pending(adv_ui_boot_elapsed((uint32_t)(esp_timer_get_time()/1000)));
-        vTaskDelay(pdMS_TO_TICKS(boot_pending?1:s_owner == OWNER_SHELL && s_model.page == ADV_PAGE_SESSION ? 5 : 10));
+        // The V2 renderer already spends most of its frame composing pixels.
+        // Yield one tick during play; retain the fixed 60 Hz simulation above.
+        bool v2_play=s_owner==OWNER_SHELL&&s_model.page==ADV_PAGE_SESSION&&s_model.phase==ADV_PLAY&&
+                     (s_model.station==4||s_model.station==6);
+        vTaskDelay(pdMS_TO_TICKS(boot_pending||v2_play?1:s_owner == OWNER_SHELL && s_model.page == ADV_PAGE_SESSION ? 5 : 10));
     }
 }
 

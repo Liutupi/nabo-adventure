@@ -21,6 +21,11 @@ static dark_t s_dark;
 static int isqrt_(int v) { int r = 0, b = 1 << 14; while (b > v) b >>= 2; while (b) { if (v >= r + b) { v -= r + b; r = (r >> 1) + b; } else r >>= 1; b >>= 2; } return r; }
 static int span(int r, int dy2) { return dy2 < r * r ? isqrt_(r * r - dy2) : -1; }
 static const uint8_t RING_PCT[6] = {50, 64, 77, 89, 100, 116}, RING_K[7] = {16, 13, 10, 8, 6, 4, 2};   // k/16 brightness
+// Ring geometry depends only on radius and absolute row distance, not the
+// background or jar position. Reuse exact integer widths across symmetric rows
+// and adjacent frames; no cached framebuffer or quantized light values.
+static uint16_t s_ring_radius[256];
+static int16_t s_ring_widths[256][6];
 static void dark_span(uint16_t *row,int x0,int x1,int first,int last,unsigned k)
 {
     if(first<x0)first=x0;
@@ -40,8 +45,14 @@ static void dark_span(uint16_t *row,int x0,int x1,int first,int last,unsigned k)
 static void dark_row(const void *ctx, int y, int x0, int x1, uint16_t *row)
 {
     const dark_t *d = ctx;
-    int dy2 = (y - d->jy) * (y - d->jy), w[6];
-    for (int i = 0; i < 6; i++) w[i] = span(d->r * RING_PCT[i] / 100, dy2);
+    int dy=abs(y-d->jy),dy2=dy*dy,w[6];
+    bool cached=dy<256&&d->r>=0&&d->r<65535;
+    if(cached&&s_ring_radius[dy]==d->r+1){
+        for(int i=0;i<6;i++)w[i]=s_ring_widths[dy][i];
+    }else{
+        for(int i=0;i<6;i++)w[i]=span(d->r*RING_PCT[i]/100,dy2);
+        if(cached){for(int i=0;i<6;i++)s_ring_widths[dy][i]=(int16_t)w[i];s_ring_radius[dy]=(uint16_t)(d->r+1);}
+    }
     if(w[5]<0){dark_span(row,x0,x1,x0,x1,2);return;}
     int left=x0;
     for(int level=6;level>=1;level--){

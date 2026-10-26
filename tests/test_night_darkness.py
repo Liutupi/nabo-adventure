@@ -11,7 +11,7 @@ class Darkness(unittest.TestCase):
   code=(ROOT/'firmware/main/adv_ui_night.c').read_text('utf-8')
   # Compile the actual production implementation, without the rest of the UI.
   shader=code[code.index('typedef struct { int jx'):code.index('static void pines')]
-  source=folder/'shader.c';source.write_text('#include <stdint.h>\n#include <stdlib.h>\n'+shader+
+  source=folder/'shader.c';source.write_text('#include <stdint.h>\n#include <stdlib.h>\n#include <stdbool.h>\n'+shader+
    '\nvoid host_dark(int jx,int jy,int r,int y,int x0,int x1,uint16_t *row){s_dark=(dark_t){jx,jy,r};dark_row(&s_dark,y,x0,x1,row);}\n','utf-8')
   library=folder/'shader.dll'
   subprocess.run([CC,'-std=c11','-O2','-shared',SHARED_EXPORT,'-Wall','-Wextra','-Werror',str(source),'-o',str(library)],check=True)

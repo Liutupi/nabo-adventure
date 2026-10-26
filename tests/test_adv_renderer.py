@@ -62,6 +62,8 @@ class Renderer(unittest.TestCase):
         lib.host_band.argtypes = [ctypes.c_uint16, ctypes.c_uint16]
         lib.host_draw_at.argtypes = [ctypes.c_uint32]
         lib.host_boot_start.argtypes = [ctypes.c_uint32]
+        lib.host_fail_caps.argtypes = [ctypes.c_size_t]
+        lib.adv_ui_staging_bytes.restype = ctypes.c_uint32
         lib.adv_boot_motion_enabled.restype = ctypes.c_bool
         class BootStats(ctypes.Structure):
             _fields_=[(name,ctypes.c_uint32) for name in ('frames','skipped','last_frame','elapsed_ms')]
@@ -115,6 +117,37 @@ class Renderer(unittest.TestCase):
     def steps(self, n):
         self.lib.host_steps(n)
         self.check(f'{n} steps')
+
+    def test_v2_landscape_dma_staging_is_fenced_and_released(self):
+        for game in ('night','ski'):
+            self.new([0]*9,seen=0xffffff)
+            getattr(self.lib,'host_'+game+'_case')(0)
+            self.check(game+' action pipeline')
+            self.assertEqual(self.lib.adv_ui_staging_bytes(),61440)
+            for _ in range(6):self.steps(5)
+            self.ev(DOWN,LONG)
+            self.assertEqual(self.lib.host_phase(),3)
+            self.ev(UP,DOUBLE)
+            self.assertIn(self.lib.host_page(),(1,5))
+            self.assertEqual(self.lib.adv_ui_staging_bytes(),0)
+            self.lib.host_close()
+            self.assertEqual(self.lib.adv_ui_staging_bytes(),0)
+
+    def test_v2_landscape_allocation_failure_keeps_identical_pixels(self):
+        for game in ('night','ski'):
+            self.new([0]*9,seen=0xffffff)
+            getattr(self.lib,'host_'+game+'_case')(0)
+            self.lib.host_fail_caps(61440)
+            self.lib.host_draw()
+            self.assertEqual(self.lib.adv_ui_staging_bytes(),0)
+            self.assertFalse(self.lib.host_overflow())
+            fallback=self.snapshot()
+            self.lib.host_full()
+            self.assertEqual(self.lib.adv_ui_staging_bytes(),61440)
+            self.assertFalse(self.lib.host_overflow())
+            self.assertEqual(fallback,self.snapshot())
+            self.ev(DOWN,LONG);self.ev(UP,DOUBLE)
+            self.assertEqual(self.lib.adv_ui_staging_bytes(),0)
 
     def test_every_screen(self):
         self.new([0, 12, 350, 7, 0, 0, 0, 0, 0], seen=0b11011001)

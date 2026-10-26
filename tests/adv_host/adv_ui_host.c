@@ -22,6 +22,8 @@ static adv_model_t model;
 static const uint16_t *pending_dma;
 static int dma_x0,dma_y0,dma_x1,dma_y1,dma_faults;
 static uint32_t dma_hash;
+size_t host_caps_fail_size;
+void host_fail_caps(size_t n){host_caps_fail_size=n;}
 static uint32_t hash_pixels(const uint16_t *p,int count)
 {uint32_t h=2166136261u;for(int i=0;i<count;i++)h=(h^p[i])*16777619u;return h;}
 static void drain_dma(void)
@@ -218,7 +220,11 @@ void host_climb_case(int which)
 
 static void *late_open(int station)
 {
-    if(model.in_session&&model.station!=station)adv_event(&model,ADV_BTN_UP,ADV_EV_DOUBLE);
+    if(model.in_session&&model.station!=station){
+        if((model.station==4||model.station==6)&&model.phase==ADV_PLAY)
+            adv_event(&model,ADV_BTN_DOWN,ADV_EV_LONG);
+        adv_event(&model,ADV_BTN_UP,ADV_EV_DOUBLE);
+    }
     if(!model.in_session){model.test=true;model.page=ADV_PAGE_MAP;adv_test_open(&model,station);}
     model.phase=ADV_PLAY;return model.game;
 }

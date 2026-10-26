@@ -35,7 +35,15 @@ void ag_init(ag_t *g, uint16_t *strip0, uint16_t *strip1, ag_send_fn send, void 
     g->ctx = ctx;
     g->full = true;
     g->width=AG_W;g->height=AG_H;
+    g->strip_rows=AG_STRIP;
     g->prev_scene_id = -1;
+}
+
+bool ag_strips(ag_t *g,uint16_t *strip0,uint16_t *strip1,unsigned rows)
+{
+    if(!g||!strip0||!strip1||(rows!=8&&rows!=16&&rows!=32))return false;
+    g->strip[0]=strip0;g->strip[1]=strip1;g->strip_rows=(uint16_t)rows;g->which=0;
+    return true;
 }
 
 bool ag_viewport(ag_t *g,int width,int height)
@@ -288,8 +296,8 @@ static void paint(ag_t *g, const ag_op_t *op, int y, int x0, int x1, uint16_t *r
 static void compose(ag_t *g, int x0, int y0, int x1, int y1)
 {
     int w = x1 - x0;
-    for (int y = y0; y < y1; y += AG_STRIP) {
-        int h = y + AG_STRIP < y1 ? AG_STRIP : y1 - y;
+    for (int y = y0; y < y1; y += g->strip_rows) {
+        int h = y + g->strip_rows < y1 ? g->strip_rows : y1 - y;
         uint16_t *px = g->strip[g->which];
         g->which ^= 1;
         memset(px, 0, (size_t)(w * h) * 2);

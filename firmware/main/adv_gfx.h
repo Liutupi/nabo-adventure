@@ -63,13 +63,15 @@ typedef struct {
     void *ctx;
     uint16_t *strip[2];
     int which;
-    uint16_t width,height;
+    uint16_t width,height,strip_rows;
     uint32_t bytes;           // pixel bytes sent by the last frame
     bool overflow;            // a builder ran out of ops or glyphs this frame (host tests)
 } ag_t;
 
 // Strip buffers: two of AG_MAX_W x AG_STRIP pixels, including landscape use.
 void ag_init(ag_t *g, uint16_t *strip0, uint16_t *strip1, ag_send_fn send, void *ctx);
+// Caller owns buffers of at least AG_MAX_W * rows pixels and fences prior DMA.
+bool ag_strips(ag_t *g,uint16_t *strip0,uint16_t *strip1,unsigned rows);
 bool ag_viewport(ag_t *g,int width,int height); // 240x320 or 320x240; invalidates on change
 void ag_begin(ag_t *g, int scene_id);   // starts a new display list; a new scene redraws everything
 void ag_invalidate(ag_t *g);

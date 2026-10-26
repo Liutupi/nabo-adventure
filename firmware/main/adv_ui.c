@@ -19,6 +19,10 @@
 
 static ag_t *s_gfx;
 static uint16_t *s_strip[2];
+#define ACTION_ROWS 32u
+#define ACTION_PIXELS (AG_MAX_W*ACTION_ROWS)
+static uint16_t *s_action_strips;
+static unsigned s_rotate_index;
 static bool s_capture;
 static bool s_capture_header,s_landscape;
 static uint32_t s_millis;
@@ -38,9 +42,10 @@ void adv_ui_capture_done(void) { s_capture = false; }
 void adv_ui_send(void *ctx, int x, int y, int w, int h, uint16_t *px)
 {
     (void)ctx;
-    // In the portrait cover only, the compositor has filled the OTHER strip
-    // while this transfer ran. Fence before enqueueing its next buffer.
-    finish_transfer();
+    bool action_pipeline=s_landscape&&s_pipeline&&s_action_strips;
+    // V2 uses one composition buffer and two alternating rotation/DMA buffers.
+    // Other screens retain their original double-buffer or blocking paths.
+    if(!action_pipeline)finish_transfer();
     if (s_capture) {
         if(!s_capture_header){printf("@cap_size %d %d\n",adv_ui_width(),adv_ui_height());s_capture_header=true;}
         const uint8_t *p = (const uint8_t *)px;
@@ -54,13 +59,15 @@ void adv_ui_send(void *ctx, int x, int y, int w, int h, uint16_t *px)
         }
     }
     if(s_landscape) {
-        // A pure 90-degree rotation, using the other idle strip. The physical
-        // panel stays portrait for legacy games; no framebuffer or mirroring.
-        uint16_t *rotated=s_strip[px==s_strip[0]?1:0];
+        // Rotate into an idle buffer; fence any previous DMA before submission.
+        // The physical panel stays portrait; no framebuffer or mirroring.
+        uint16_t *rotated=action_pipeline?s_action_strips+(1+s_rotate_index)*ACTION_PIXELS:s_strip[px==s_strip[0]?1:0];
+        if(action_pipeline)s_rotate_index^=1;
         for(int ly=0;ly<h;ly++)for(int lx=0;lx<w;lx++)rotated[(w-1-lx)*h+ly]=px[ly*w+lx];
+        finish_transfer();
         esp_lcd_panel_draw_bitmap(bsp_display_panel(),y,BSP_LCD_H-x-w,y+h,BSP_LCD_H-x,rotated);
     } else esp_lcd_panel_draw_bitmap(bsp_display_panel(), x, y, x + w, y + h, px);
-    if(s_pipeline&&!s_landscape)s_pending=true;
+    if(s_pipeline)s_pending=true;
     else esp_lcd_panel_io_tx_param(bsp_display_io(), 0x00, NULL, 0);
 }
 
@@ -87,6 +94,7 @@ void adv_ui_close(void)
     free(s_gfx);
     s_gfx = NULL;
     for (int i = 0; i < 2; i++) { free(s_strip[i]); s_strip[i] = NULL; }
+    free(s_action_strips);s_action_strips=NULL;s_rotate_index=0;
     s_capture = false;
     s_landscape=false;
 }
@@ -100,6 +108,7 @@ void adv_ui_invalidate(void)
 
 void adv_ui_capture(void) { adv_ui_invalidate(); s_capture = true;s_capture_header=false; }
 uint32_t adv_ui_bytes(void) { return s_gfx ? s_gfx->bytes : 0; }
+uint32_t adv_ui_staging_bytes(void){return s_action_strips?3u*ACTION_PIXELS*sizeof(uint16_t):0;}
 bool adv_ui_overflow(void) { return s_gfx && s_gfx->overflow; }
 int adv_ui_width(void) {return s_gfx?s_gfx->width:AG_W;}
 int adv_ui_height(void) {return s_gfx?s_gfx->height:AG_H;}
@@ -228,6 +237,14 @@ void adv_ui_draw(const adv_model_t *m, uint32_t ms, int battery, int mv)
     s_millis = ms;
     if (!s_gfx) return;
     ag_t *g = s_gfx;
+    finish_transfer();
+    bool action=m->page==ADV_PAGE_SESSION&&(m->station==4||m->station==6);
+    if(action&&!s_action_strips)
+        s_action_strips=heap_caps_malloc(3u*ACTION_PIXELS*sizeof(uint16_t),MALLOC_CAP_DMA|MALLOC_CAP_INTERNAL);
+    if(!action&&s_action_strips){free(s_action_strips);s_action_strips=NULL;s_rotate_index=0;}
+    bool action_pipeline=action&&s_action_strips&&!s_capture;
+    (void)ag_strips(g,action_pipeline?s_action_strips:s_strip[0],
+                   action_pipeline?s_action_strips:s_strip[1],action_pipeline?ACTION_ROWS:AG_STRIP);
     s_landscape=m->page==ADV_PAGE_SESSION&&(m->station==3||m->station==4||m->station==6);
     (void)ag_viewport(g,s_landscape?320:240,s_landscape?240:320);
     switch (m->page) {
@@ -243,9 +260,9 @@ void adv_ui_draw(const adv_model_t *m, uint32_t ms, int battery, int mv)
     case ADV_PAGE_SESSION: ui_draw_session(g, m); break;
     default: return;   // legacy games draw themselves
     }
-    // ag_flush alternates two DMA buffers. Legacy jump reuses one buffer and
-    // landscape rotation uses the other strip as scratch, so they stay blocking.
-    s_pipeline=m->page==ADV_PAGE_COVER&&!s_capture;
+    // The extra V2 buffers reduce command/fence overhead without changing LCD
+    // orientation, pixels, pins, or the legacy games' allocation requirements.
+    s_pipeline=(m->page==ADV_PAGE_COVER||action_pipeline)&&!s_capture;
     ag_flush(g);
     finish_transfer();s_pipeline=false;
     if(m->page==ADV_PAGE_COVER)ui_boot_video_did_flush();

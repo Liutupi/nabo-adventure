@@ -15,6 +15,7 @@ void adv_ui_draw(const adv_model_t *m, uint32_t ms, int battery, int battery_mv)
 void adv_ui_invalidate(void);
 void adv_ui_capture(void);          // the next frame is also printed as @cap lines
 uint32_t adv_ui_bytes(void);        // pixel bytes sent by the last frame
+uint32_t adv_ui_staging_bytes(void); // V2 landscape buffers, released on leaving
 bool adv_ui_overflow(void);         // the last frame ran out of ops or glyphs
 int adv_ui_width(void);
 int adv_ui_height(void);
