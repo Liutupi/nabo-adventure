@@ -29,7 +29,7 @@
   "human_acceptance": {
     "new_cover": "pending",
     "climb_ski_sky_space": "pending",
-    "sleep_wake_on_this_image": "USB disconnect observed; physical screen/wake confirmation pending",
+    "sleep_wake_on_this_image": "PASS: user confirmed screen off after about 30 seconds and physical UP restored the display",
     "audio": "not tested; user requested silence"
   },
   "validation": "../../../validation/v0.1.0-windows-ddd1f50d.json",

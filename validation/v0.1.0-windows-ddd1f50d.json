@@ -213,17 +213,43 @@
       "disconnect_observed": true,
       "wake_observed": false,
       "status": "AWAITING PHYSICAL WAKE"
+    },
+    "sleep_user_followup": {
+      "candidate_sha256": "ddd1f50dfeb8eafd207292bdd27fc9de8d120713bee3fd65f03b69c04c444e9e",
+      "date": "2026-10-26",
+      "user_confirmed": true,
+      "user_quote": "约30秒熄屏，上键能恢复",
+      "scope": "Temporary unsaved 30-second sleep selected on settings page; no per-game mid-session sleep certification",
+      "post_wake_serial": {
+        "page": 1,
+        "owner": 0,
+        "test": 0,
+        "best": [
+          0,
+          132,
+          5888,
+          8,
+          51,
+          11,
+          13,
+          12,
+          15
+        ],
+        "seen": 16776831,
+        "stamps": 22
+      },
+      "settings_scope": "Saved speaker OFF and 300 seconds verified before sleep; no reset or live NVS reread after wake because user was navigating",
+      "automatic_watch_scope": "Earlier 180-second watch saw USB disconnect but did not observe the later physical wake; original automated report retained"
     }
   },
   "human_acceptance": {
     "new_cover": "pending",
     "climb_ski_sky_space": "pending",
-    "sleep_wake_on_this_image": "USB disconnect observed; physical screen/wake confirmation pending",
+    "sleep_wake_on_this_image": "PASS: user confirmed screen off after about 30 seconds and physical UP restored the display",
     "audio": "not tested; user requested silence"
   },
   "remaining": [
     "Physical new-game controls, readability and feel",
-    "Visible sleep/wake",
     "B-skin capacity and selector",
     "Playable browser pages for SKI/SKY/SPACE",
     "Eight-gold home ending",
