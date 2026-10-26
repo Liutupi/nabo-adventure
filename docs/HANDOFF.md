@@ -1,6 +1,56 @@
 # 交接本
 
+## ★ 2026-10-26 15:29 Claude 云端交接给 Codex（从这里开始读）
 
+用户：“你额度快满了，你把做好的更新进 github，并写好交接，让 codex 可以接着你做。”以下为当前 main（本段所在提交）的完整状态。
+
+### V2 总进度（规划 `docs/REDESIGN_V2.md`，顺序 NIGHT → SKI → SPACE → SKY → CLIMB）
+
+| 站 | V2 名称 | 状态 | 文档 |
+|---|---|---|---|
+| 4 NIGHT | 萤火虫之夜 | **已接入固件（云端），待真机** | `game-art/adventure/NIGHT_DESIGN.md` |
+| 6 SKI | 雪崩速降 | **已接入固件（云端），待真机** | `game-art/adventure/SKI_DESIGN.md` |
+| 8 SPACE | 火箭登月 | **G1 浏览器试玩已交，等用户反馈**；固件仍是 V1 | `game-art/adventure/SPACE_V2_CONCEPT.md` |
+| 7 SKY | — | **未开始** | REDESIGN_V2 §4.4 只是初拟 |
+| 5 CLIMB | — | **未开始** | REDESIGN_V2 §4.2 只是初拟 |
+
+云端最后一次构建（含 NIGHT+SKI V2，SPACE 仍 V1）：app 1,619,744 B，`check_adventure_budget.py` PASS，扣 352 KiB 后余 51,424 B；263 项宿主检查通过。云端 SHA 不可刷。
+
+### 用户已确认的决定（不要再问）
+
+- 横屏 V2 统一手势（NIGHT、SKI 已实现，`adv_model.c`/`adv_core.js` 的 `v2()`）：左按住=左、右按住=右、中=主动作；**长按中键暂停**；暂停页中键继续、左键重来、**双击上键回地图**；游戏中任何上键手势都不回地图；标题/结算中键开始、双击上回地图。SPACE V2 落地时把站 8 加入 `v2()`。
+- **现有素材能做好就不交 Grok**（13:46）。NIGHT、SKI 都用现有帧；SPACE V2 用户明确要求不用 Grok（15:08），背景由程序离线绘制。
+- V1 已被替换的不再保留在固件里（git 历史可回退）；未重做的款 V1 继续可玩。
+- 容量方案仍未定：只有当某款确实需要大量新素材时再问用户（SPACE V2 背景估计 120–160 KB，接入前必须问：动用部分保留额，还是缩小背景）。
+
+### Codex 下一步（按优先级）
+
+1. **Windows 真机验证 NIGHT V2 + SKI V2**：拉取 → `build.ps1` 重建 → 保护式升级 → `tools/smoke_night.py`、`tools/smoke_late_games.py`（SKI 段已改 V2 手势，SKY/SPACE 段仍是 V1）→ 记录两款帧率（整屏滚动；NIGHT 有逐像素压暗）与 heap → 交给用户实玩。帧率明显低于 25 fps 先报告再优化（NIGHT 可把压暗改成按行跨度批处理），**不要擅自改玩法数值**。静音与“不打断用户对局”的旧约定继续有效。
+2. **等用户对 SPACE V2 试玩的反馈**（试玩页 `prototype/space_v2.html`，单文件版 `python tools/build_space_v2_artifact.py`）。用户认可后照 NIGHT/SKI 的路子接入：
+   - 把 `prototype/adv_space_v2.js` 改名为 `adv_space.js` 替换 V1（全局名 `AdvSpace`），`tests/space_v2_policy.js` → `tests/space_policy.js`（保留 `expert` 别名），外壳 `adv_core.js`/`adv_model.c` 的站 8 改用 `v2()` 手势（删掉 SPACE 的 `holds_up`/`down_taps` 特例）、门槛按概念文档改。
+   - C 端 `adv_space.c/.h` 逐行镜像 JS（注意每个随机数的调用顺序、`Math.trunc` 与 C 整除一致），`tests/space_golden/record_golden.js` 用**每步哈希 + 每 120 步全量**的格式（照 `tests/ski_golden`），`tests/test_adv_space.py` 用 `game_harness.replay_hashed` + 规则边界 + 变异。
+   - 画面 `adv_ui_space.c` 横屏（`adv_ui.c` 的 `s_landscape` 加站 8）；背景 PNG 已是限制调色板 + 1 位透明，需在 `tools/adventure_assets_manifest.py` 里把 `space-v2-manifest.json` 接成一个资产组再用 `build_adventure_assets.py` 打包；天空渐变用 `ag_band`、星空/尾焰/闪电/风线用矩形与 `ag_glow`；注意 `AG_MAX_OPS 128`，满场要有宿主截图测试证明无溢出。
+   - 先算容量：`check_adventure_budget.py` 不过就停下来问用户。
+3. **SKY、CLIMB 的 V2**：先查现有素材够不够（`art/sky-manifest.json`、`art/climb-manifest.json`），按 G0 概念 → G1 浏览器试玩（规则一开始就写整数）给用户玩，**用户认可前不写 C**。
+
+### 做法要点（NIGHT/SKI/SPACE 都这么做的）
+
+- 规则 JS = 标准答案，整数 60 Hz、mulberry32；浏览器试玩页与固件用同一份规则。试玩页右侧“复制给 Claude”可把每局数据带回来调平衡。
+- 平衡用 `tests/*_policy.js` 的机器人（idle/spam/casual/skilled，只看屏幕可见信息），探针脚本在 `game-art/adventure/tests/*_sim.js`；目标大致：不按约半分钟、乱按更短、普通 1–2 分钟。
+- 每款新文字都要重生字库：`python3 firmware/tools/generate_collection_fonts.py --converter <lv_font_conv.js> --font SourceHanSansCN-Medium.otf --heading-font NotoSansSC-Bold.otf`（见 `docs/BUILD.md`）。
+- 跑完 `python3 tools/run_tests.py` 后，非本次改动的 `docs/images/ui/*.png` 常被重新编码而像素不变——核对像素一致后 `git checkout` 还原，不要提交。
+- 试玩页单文件版输出到 `private/`（不提交），用户在 claude.ai 上看到的是 Claude 发布的副本。
+
+
+
+
+
+## 2026-10-26 15:17 SPACE V2「火箭登月」G0/G1 已交，等用户试玩
+
+- 用户改需求：最终关做成火箭从发射到登月的一整段旅程，紧张刺激、交互丰富、不用 Grok、背景要有丰富图景。“月面跳跳”作废。
+- 概念、流程、数值、固件代价：`game-art/adventure/SPACE_V2_CONCEPT.md`；试玩页 `prototype/space_v2.html`；背景由 `tools/paint_space_v2.py` 离线绘制（29 张，`art/space-v2/`）。
+- 热气球、登山的 V2 还没开始（顺序见 REDESIGN_V2，用户 15:13 问起，选择先做太空）。
+- **用户认可前 Codex 不要动 SPACE 的 C、素材或 V1。**
 
 ## 2026-10-26 14:27 SKI V2「雪崩速降」已接入固件（云端，未上机）
 

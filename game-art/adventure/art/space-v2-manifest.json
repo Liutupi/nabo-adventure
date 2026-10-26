@@ -1,0 +1,353 @@
+{
+ "schema": "space-v2-painted-v1",
+ "assets": [
+  {
+   "id": "space-v2/bg/launch-far",
+   "path": "space-v2/bg-launch-far.png",
+   "size": [
+    320,
+    120
+   ],
+   "anchor": [
+    0,
+    120
+   ]
+  },
+  {
+   "id": "space-v2/bg/launch-near",
+   "path": "space-v2/bg-launch-near.png",
+   "size": [
+    320,
+    150
+   ],
+   "anchor": [
+    0,
+    150
+   ]
+  },
+  {
+   "id": "space-v2/bg/cloud-a",
+   "path": "space-v2/bg-cloud-a.png",
+   "size": [
+    320,
+    96
+   ],
+   "anchor": [
+    0,
+    96
+   ]
+  },
+  {
+   "id": "space-v2/bg/cloud-b",
+   "path": "space-v2/bg-cloud-b.png",
+   "size": [
+    320,
+    96
+   ],
+   "anchor": [
+    0,
+    96
+   ]
+  },
+  {
+   "id": "space-v2/bg/cloud-far",
+   "path": "space-v2/bg-cloud-far.png",
+   "size": [
+    320,
+    56
+   ],
+   "anchor": [
+    0,
+    56
+   ]
+  },
+  {
+   "id": "space-v2/bg/cirrus",
+   "path": "space-v2/bg-cirrus.png",
+   "size": [
+    320,
+    48
+   ],
+   "anchor": [
+    0,
+    48
+   ]
+  },
+  {
+   "id": "space-v2/bg/aurora",
+   "path": "space-v2/bg-aurora.png",
+   "size": [
+    320,
+    120
+   ],
+   "anchor": [
+    0,
+    120
+   ]
+  },
+  {
+   "id": "space-v2/bg/earth-limb",
+   "path": "space-v2/bg-earth-limb.png",
+   "size": [
+    320,
+    130
+   ],
+   "anchor": [
+    0,
+    130
+   ]
+  },
+  {
+   "id": "space-v2/bg/nebula",
+   "path": "space-v2/bg-nebula.png",
+   "size": [
+    320,
+    220
+   ],
+   "anchor": [
+    0,
+    220
+   ]
+  },
+  {
+   "id": "space-v2/bg/moon-32",
+   "path": "space-v2/bg-moon-32.png",
+   "size": [
+    32,
+    32
+   ],
+   "anchor": [
+    16,
+    16
+   ]
+  },
+  {
+   "id": "space-v2/bg/moon-64",
+   "path": "space-v2/bg-moon-64.png",
+   "size": [
+    64,
+    64
+   ],
+   "anchor": [
+    32,
+    32
+   ]
+  },
+  {
+   "id": "space-v2/bg/moon-128",
+   "path": "space-v2/bg-moon-128.png",
+   "size": [
+    128,
+    128
+   ],
+   "anchor": [
+    64,
+    64
+   ]
+  },
+  {
+   "id": "space-v2/bg/lunar-surface",
+   "path": "space-v2/bg-lunar-surface.png",
+   "size": [
+    320,
+    120
+   ],
+   "anchor": [
+    0,
+    120
+   ]
+  },
+  {
+   "id": "space-v2/bg/station",
+   "path": "space-v2/bg-station.png",
+   "size": [
+    84,
+    34
+   ],
+   "anchor": [
+    42,
+    17
+   ]
+  },
+  {
+   "id": "space-v2/props/rocket-left",
+   "path": "space-v2/props-rocket-left.png",
+   "size": [
+    18,
+    46
+   ],
+   "anchor": [
+    9,
+    44
+   ]
+  },
+  {
+   "id": "space-v2/props/rocket",
+   "path": "space-v2/props-rocket.png",
+   "size": [
+    18,
+    46
+   ],
+   "anchor": [
+    9,
+    44
+   ]
+  },
+  {
+   "id": "space-v2/props/rocket-right",
+   "path": "space-v2/props-rocket-right.png",
+   "size": [
+    18,
+    46
+   ],
+   "anchor": [
+    9,
+    44
+   ]
+  },
+  {
+   "id": "space-v2/props/booster",
+   "path": "space-v2/props-booster.png",
+   "size": [
+    14,
+    30
+   ],
+   "anchor": [
+    7,
+    15
+   ]
+  },
+  {
+   "id": "space-v2/props/storm-cloud",
+   "path": "space-v2/props-storm-cloud.png",
+   "size": [
+    112,
+    60
+   ],
+   "anchor": [
+    56,
+    30
+   ]
+  },
+  {
+   "id": "space-v2/props/birds-0",
+   "path": "space-v2/props-birds-0.png",
+   "size": [
+    20,
+    10
+   ],
+   "anchor": [
+    10,
+    5
+   ]
+  },
+  {
+   "id": "space-v2/props/birds-1",
+   "path": "space-v2/props-birds-1.png",
+   "size": [
+    20,
+    10
+   ],
+   "anchor": [
+    10,
+    5
+   ]
+  },
+  {
+   "id": "space-v2/props/plane",
+   "path": "space-v2/props-plane.png",
+   "size": [
+    40,
+    14
+   ],
+   "anchor": [
+    20,
+    7
+   ]
+  },
+  {
+   "id": "space-v2/props/balloon",
+   "path": "space-v2/props-balloon.png",
+   "size": [
+    16,
+    26
+   ],
+   "anchor": [
+    8,
+    13
+   ]
+  },
+  {
+   "id": "space-v2/props/satellite",
+   "path": "space-v2/props-satellite.png",
+   "size": [
+    44,
+    18
+   ],
+   "anchor": [
+    22,
+    9
+   ]
+  },
+  {
+   "id": "space-v2/props/junk",
+   "path": "space-v2/props-junk.png",
+   "size": [
+    12,
+    10
+   ],
+   "anchor": [
+    6,
+    5
+   ]
+  },
+  {
+   "id": "space-v2/props/comet",
+   "path": "space-v2/props-comet.png",
+   "size": [
+    56,
+    18
+   ],
+   "anchor": [
+    8,
+    9
+   ]
+  },
+  {
+   "id": "space-v2/props/repair",
+   "path": "space-v2/props-repair.png",
+   "size": [
+    14,
+    14
+   ],
+   "anchor": [
+    7,
+    7
+   ]
+  },
+  {
+   "id": "space-v2/props/plane-left",
+   "path": "space-v2/props-plane-left.png",
+   "size": [
+    40,
+    14
+   ],
+   "anchor": [
+    20,
+    7
+   ]
+  },
+  {
+   "id": "space-v2/props/comet-right",
+   "path": "space-v2/props-comet-right.png",
+   "size": [
+    56,
+    18
+   ],
+   "anchor": [
+    48,
+    9
+   ]
+  }
+ ]
+}
