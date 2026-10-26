@@ -1,5 +1,11 @@
 # 维护约定
 
+> **2026-10-26 13:22 最高优先级：先读 `docs/REDESIGN_V2.md`。** 用户实玩后认为萤火虫起五款游戏性不足、动作僵硬像贴片人、UI 不行，要求重新设计。V2 规则：
+> 1. 在用户确认 REDESIGN_V2 第 7 节的决定前，不再打磨 NIGHT/CLIMB/SKI/SKY/SPACE 的 V1 玩法、动作或界面；V1 保留可回退。
+> 2. **NABO 的角色动作一律交 Grok**（覆盖下方 2026-10-25“先由 Codex 自行完成”的旧约定）；Codex 准备身份锁定输入与任务书、处理原片，不再用 SVG 部件骨骼做角色表演。
+> 3. 需要左右操作的游戏一律横屏（三键朝下：左=左、中=主要动作、右=右）。
+> 4. 每款按 G0 概念 → G1 浏览器可玩原型 → G2 动作 → G3 界面 → G4 固件过门，每道门都要用户明确认可；宿主测试通过不等于好玩。
+
 这是《NABO 的冒险之旅》独立离线游戏合集，不是小智固件。先读 `docs/HANDOFF.md` 和 `game-art/adventure/DESIGN.md`，按 nabo-passport-game skill 的流程工作。
 
 - 规则以 `game-art/adventure/prototype/adv_core.js` 为准：先改原型，重录 `tests/adv_golden`（`node tests/adv_golden/record_golden.js`），再改 C，跑 `python3 tools/run_tests.py`。
