@@ -1,35 +1,45 @@
-// SPACE V2 test players: they see the moon, the pads, the cans and the meteors that are on screen.
-const S = require('../game-art/adventure/prototype/adv_space_v2.js'), K = S.K;
+// SPACE V2 火箭登月 test players: they see what is on screen (objects above the rocket, gauges, the pad).
+const S = require('../game-art/adventure/prototype/adv_space_v2.js'), K = S.K, T = S.T;
+const GOOD = new Set([T.STAR, T.FUEL, T.REPAIR, T.RING]);
 function driver(kind, seed) {
   if (kind === 'expert') kind = 'skilled';
   let s = seed >>> 0; const r = () => (s = (Math.imul(s, 1103515245) + 12345) >>> 0) >>> 16;
   if (kind === 'idle') return () => ({});
-  if (kind === 'spam') return g => ({ down_down: g.tick % 12 === 0 ? 1 : 0, up_held: 1 });
-  const sloppy = kind === 'casual', margin = sloppy ? 40 : 30, land = sloppy ? 170 : 140;
-  let lastPulse = 0;
+  if (kind === 'spam') return g => ({ down_down: g.tick % 15 === 0 ? 1 : 0 });
+  const sloppy = kind === 'casual', slack = sloppy ? 10 : 3;
   return g => {
-    if (g.phase === S.PH.CRASHED) return {};
-    const x = g.x >> 8, feet = g.y >> 8, target = S.pad(g.seed, g.bestChunk + 1);
-    if (g.phase === S.PH.LANDED && g.phaseT < K.TAKEOFF_T + (sloppy ? 20 : 0)) return {};
-    const dx = target.x - x;
-    let top = 999;
-    for (let t = Math.min(x, target.x) - 40; t <= Math.max(x, target.x) + 40; t += 8) top = Math.min(top, S.ground(g.seed, t));
-    const cruise = Math.max(K.CEIL + 4, top - margin), near = Math.abs(dx) < (sloppy ? 14 : 8);
-    const want = near ? 0 : Math.max(-420, Math.min(420, dx * (sloppy ? 3 : 4)));
     const input = {};
-    let dodge = 0;                    // a meteor that will pass close to the lander soon: slide away from it
-    for (const m of g.rocks) if (m.live) for (let t = 0; t < (sloppy ? 25 : 45); t += 5) {
-      const mx = (m.x + m.vx * t) >> 8, my = (m.y + m.vy * t) >> 8, lx = (g.x + g.vx * t) >> 8, ly = ((g.y + g.vy * t) >> 8) - 44;
-      if (Math.abs(mx - lx) < 40 && Math.abs(my - ly) < 40) { dodge = mx > lx ? -1 : 1; break; }
+    if (g.mode === S.MODE.IGNITE) { if (Math.abs(S.gauge(g.modeT + 1) - 80) <= slack + (sloppy ? r() % 8 : 0)) input.down_down = 1; return input; }
+    if (g.mode === S.MODE.LAND) {
+      const x = g.lx >> 8, h = K.GROUND - (g.ly >> 8), dx = g.pad - x, want = Math.max(-300, Math.min(300, dx * 6));
+      if (g.lvx < want - 30) input.up_held = 1; else if (g.lvx > want + 30) input.ok_held = 1;
+      const limit = h > 120 ? 420 : h > 50 ? 240 : sloppy ? 200 : 110;
+      if (g.lvy > limit && g.tick % 3 === 0) input.down_down = 1;
+      return input;
     }
-    const goal = dodge ? dodge * 420 : want;
-    if (g.vx < goal - 30) input.up_held = 1; else if (g.vx > goal + 30) input.ok_held = 1;
-    let pulse;
-    if (!near && Math.abs(dx) > 50) pulse = feet > cruise ? g.vy > -60 : g.vy > 150;
-    else { const h = target.y - feet; pulse = h < 50 ? g.vy > land : h < 110 ? g.vy > (sloppy ? 260 : 320) : g.vy > (sloppy ? 420 : 560); }
-    if (g.phase === S.PH.LANDED) pulse = true;
-    if (sloppy && r() % 4 === 0) pulse = false;
-    if (pulse && g.tick - lastPulse >= (sloppy ? 6 : 4)) { input.down_down = 1; lastPulse = g.tick; }
+    if (g.mode !== S.MODE.FLY) return input;
+    if (g.sep === 1) { if (Math.abs(Math.trunc((g.sepT + 1) * 100 / K.SEP_T) - 78) <= (sloppy ? 9 : 2)) input.down_down = 1; }
+    else if (g.tli === 1) { const at = K.TLI_LEAD + g.tliHit * K.TLI_BEAT; if (g.tliT + 1 === at + (sloppy ? (r() % 9) - 4 : 0)) input.down_down = 1; }
+    const alt = g.alt >> 8, rx = g.x >> 8, sight = sloppy ? 110 : 190;
+    let target = rx, danger = 0;
+    // flee the nearest threat in sight; otherwise go for the nearest pickup
+    let threat = null, prize = null, smash = 0;
+    for (const o of g.objs) {
+      if (!o.type || o.done) continue;
+      const dy = o.y - alt; if (dy < -10 || dy > sight) continue;
+      const lead = Math.max(0, Math.trunc(dy * 256 / Math.max(200, g.v))), ox = ((o.x + (o.vx === 1 || o.vx === -1 ? 0 : o.vx) * lead) >> 8);
+      if (o.type === T.STORM) { if (o.state > 0 && o.state < 60) { threat = threat || { x: o.x >> 8, w: 26 }; } continue; }
+      if (o.type === T.GUST || o.type === T.JET) continue;
+      if (GOOD.has(o.type)) { if (!prize || dy < prize.dy) prize = { x: ox, dy }; continue; }
+      if (Math.abs(ox - rx) < S.R[o.type] + 24 && S.SMALL.has(o.type) && !sloppy && dy < 70 && g.heat < 500 && g.tick - g.lastBoost >= K.BOOST_GAP) { smash = 1; continue; }
+      if (Math.abs(ox - rx) < S.R[o.type] + 24 && (!threat || dy < threat.dy)) threat = { x: ox, w: S.R[o.type] + 26, dy };
+    }
+    if (threat) { danger = 1; target = threat.x > rx ? threat.x - threat.w : threat.x + threat.w; if (target < K.LEFT + 10) target = threat.x + threat.w; if (target > K.RIGHT - 10) target = threat.x - threat.w; }
+    else if (prize) target = prize.x;
+    if (sloppy && r() % 6 === 0) target = rx;
+    const want = Math.max(-600, Math.min(600, (target - rx) * 10)) - (g.push * 200);
+    if (g.vx < want - 40) input.up_held = 1; else if (g.vx > want + 40) input.ok_held = 1;
+    if (g.sep !== 1 && g.tli !== 1 && !input.down_down && (smash || (sloppy && !danger && g.heat < 500 && g.fuel > 40000 && g.tick - g.lastBoost > 150))) input.down_down = 1;
     return input;
   };
 }
