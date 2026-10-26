@@ -23,7 +23,7 @@
     "43d2166b13447565e89e43b47946d09b837c51a95c01499f5fb6f5eecf9261c6"
   ],
   "source_sha256": [
-    "8abb5d79a2823f5989244da660f29220ba11f7d56ba4b4eece4f72afd160b9d6"
+    "6d7202c4d584164ebe68373b2ab1c7bb039cd2e18265e0c29d8b0f1008b9c78a"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -36,7 +36,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/harbor/mooring-post.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\harbor\\mooring-post.png",
       "sha256": "6d7202c4d584164ebe68373b2ab1c7bb039cd2e18265e0c29d8b0f1008b9c78a"
     }
   ],

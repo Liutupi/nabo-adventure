@@ -23,7 +23,7 @@
     "f56b71f54b67d66ddd39f3317c93a2a3cfac4783c96046b9e26304cc5973bdfa"
   ],
   "source_sha256": [
-    "e071bdf3ee38ba52811bab21507c639516bd80ac2088cd300e9320b969791fc3"
+    "845511c14b7487785046b06fafb823f6917d6c5fec991ce298f6a32f9bb06cc3"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -36,7 +36,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/wordmarks/jump.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\wordmarks\\jump.png",
       "sha256": "af3847bf24ed80b867d7747a52bf3d46180f8e46a5ecbe8daa76a1fe733950b9"
     }
   ],

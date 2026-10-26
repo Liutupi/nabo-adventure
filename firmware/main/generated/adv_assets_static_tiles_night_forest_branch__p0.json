@@ -21,7 +21,7 @@
     "09588652b1c489fca7a020b69e077e6a96b52914d24480f8a2dbdb4319151910"
   ],
   "source_sha256": [
-    "90ccbdde979d92d9a08815afa0c6b8f91d116ebce79a3cad1bc3cbd153eebb79"
+    "51059893db783042dd154b49336026d9b771f642d2b5fef1f88f70847d0aa03b"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/night-forest/branch.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\night-forest\\branch.png",
       "sha256": "51059893db783042dd154b49336026d9b771f642d2b5fef1f88f70847d0aa03b"
     }
   ],

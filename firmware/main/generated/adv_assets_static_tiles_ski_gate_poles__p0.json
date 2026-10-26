@@ -21,7 +21,7 @@
     "48523f38e96888c47c9b831dc56f92518353559662988ab503cf852bc04c218b"
   ],
   "source_sha256": [
-    "86a6498944776082361c595a74cb5336e8fa5b19a00a05297907861a147f8112"
+    "f6786f666678472a52d8e93e6d0666cc7b443e3d710fed4ce1f019d3884acb26"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/ski/gate-poles.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\ski\\gate-poles.png",
       "sha256": "f6786f666678472a52d8e93e6d0666cc7b443e3d710fed4ce1f019d3884acb26"
     }
   ],

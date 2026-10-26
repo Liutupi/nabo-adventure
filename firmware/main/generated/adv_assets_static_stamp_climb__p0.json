@@ -19,7 +19,7 @@
     "424eadd1b3749f2e8350e73e1245e14c5457e98d46a8685200a8d2c268950b47"
   ],
   "source_sha256": [
-    "b17746a5797e9862286389c9dc17a7ea8d9100a93a63442882782fe5fd79103f"
+    "88cc990b806b516850cf9929ec8fe306d06d9accaa7b924a66f463e400595fa7"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/stamps/climb.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\stamps\\climb.png",
       "sha256": "88cc990b806b516850cf9929ec8fe306d06d9accaa7b924a66f463e400595fa7"
     }
   ],

@@ -23,7 +23,7 @@
     "ba96abc39d4acd127304d7c0723c665fd9440d9dff9269bbea3dbdcd7ba6dc4d"
   ],
   "source_sha256": [
-    "acd24479be7b09a57486ff34bdc38db3869879a26cf6e6d32d1c37ce33b2bb24"
+    "afc8a8d34165b0bebfc9d8557cd6b01dde9686c4b3377a58def77d4efcea6547"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -36,7 +36,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/space/ring-planet.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\space\\ring-planet.png",
       "sha256": "afc8a8d34165b0bebfc9d8557cd6b01dde9686c4b3377a58def77d4efcea6547"
     }
   ],

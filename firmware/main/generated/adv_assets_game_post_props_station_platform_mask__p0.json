@@ -19,7 +19,7 @@
     "82b15810c6a854711d64c29c433a0f26e558de0a07fd6b63ce7ac2524d455383"
   ],
   "source_sha256": [
-    "f702fbfc51a8d1edf4307c0a2a2c921d1976591741d6e7536611a5abf944fc6a"
+    "3cd4a5c821f1ac9673bd195242d8c46df44f27ce8078b322f074892f38963af2"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/station-platform-mask.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\station-platform-mask.png",
       "sha256": "3cd4a5c821f1ac9673bd195242d8c46df44f27ce8078b322f074892f38963af2"
     }
   ],

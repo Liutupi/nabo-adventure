@@ -26,7 +26,7 @@
     "6439b1122ee422e79e9d164c9cf8eaef243f828cae37b836273c6ed75173847d"
   ],
   "source_sha256": [
-    "77d794448968bbbcd1a4d0e993cae6544fcb28c70cdc68b419d944c3442a8bd5"
+    "2db50eea850e6b2f49f24d3031f2110fe7d7df4c1764645a338b75311a2bbfb7"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -39,7 +39,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/locomotive-body.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\locomotive-body.png",
       "sha256": "2db50eea850e6b2f49f24d3031f2110fe7d7df4c1764645a338b75311a2bbfb7"
     }
   ],

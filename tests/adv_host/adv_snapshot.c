@@ -58,7 +58,6 @@ int host_snapshot(char *out, int size)
             size_t words=adv_station[m->station].game->state_size/4;const int32_t *w=m->game;
             n+=snprintf(out+n,size-n,"\"game\":[");
             for(size_t i=0;i<words;i++)n+=snprintf(out+n,size-n,"%s%lld",i?",":"",i<3?(long long)(uint32_t)w[i]:(long long)w[i]);
-            if(m->station==8)n+=snprintf(out+n,size-n,",%d",adv_space_zone(m->game));
             return n+snprintf(out+n,size-n,"]}");
         }
         if(m->station==5){

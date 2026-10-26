@@ -95,12 +95,12 @@
     "ce23f1ba128e454afa48470698f1fce816a31d89c8329d8e64874ceec2e70bd2"
   ],
   "source_sha256": [
-    "28bbd1b93aec5a15b7ed8f33542a084bf88b7c4dbcf4f9465526493f0dc6b56d",
-    "962e462691efbfc16d1747c87128a2b124f22ac45e31fac6e8854f3687eb071f",
-    "5639f35bad5bcf268bd0fea84debc3d656b55dac590e776c317bd1ef6c85e01e",
-    "5639f35bad5bcf268bd0fea84debc3d656b55dac590e776c317bd1ef6c85e01e",
-    "962e462691efbfc16d1747c87128a2b124f22ac45e31fac6e8854f3687eb071f",
-    "28bbd1b93aec5a15b7ed8f33542a084bf88b7c4dbcf4f9465526493f0dc6b56d"
+    "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805",
+    "4667a09bbb0e8dd1afebe53940cf7f17fcdeecdb6cd7795f1431eb3386208f1f",
+    "ac056a69ac01efab48717bfed9660602c58474a2be7f4c0394153ee2e5dbf9f9",
+    "ac056a69ac01efab48717bfed9660602c58474a2be7f4c0394153ee2e5dbf9f9",
+    "4667a09bbb0e8dd1afebe53940cf7f17fcdeecdb6cd7795f1431eb3386208f1f",
+    "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805"
   ],
   "verified_frames": 6,
   "comparison": "lossless after shared RGB565 quantization",
@@ -113,27 +113,27 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/slide_left/000.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\climb\\runtime\\climb_a\\slide_left\\000.png",
       "sha256": "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/slide_left/001.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\climb\\runtime\\climb_a\\slide_left\\001.png",
       "sha256": "4667a09bbb0e8dd1afebe53940cf7f17fcdeecdb6cd7795f1431eb3386208f1f"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/slide_left/002.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\climb\\runtime\\climb_a\\slide_left\\002.png",
       "sha256": "ac056a69ac01efab48717bfed9660602c58474a2be7f4c0394153ee2e5dbf9f9"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/slide_left/003.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\climb\\runtime\\climb_a\\slide_left\\003.png",
       "sha256": "ac056a69ac01efab48717bfed9660602c58474a2be7f4c0394153ee2e5dbf9f9"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/slide_left/004.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\climb\\runtime\\climb_a\\slide_left\\004.png",
       "sha256": "4667a09bbb0e8dd1afebe53940cf7f17fcdeecdb6cd7795f1431eb3386208f1f"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/climb/runtime/climb_a/slide_left/005.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\climb\\runtime\\climb_a\\slide_left\\005.png",
       "sha256": "aaacb667f427deec37c8b26eaf61a1fbe3c61daf05e92bac230221ca977a9805"
     }
   ],

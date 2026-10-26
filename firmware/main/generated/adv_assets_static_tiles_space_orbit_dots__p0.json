@@ -22,7 +22,7 @@
     "bc454760778e4ae02a6b0f887347b700b852d3b1b7a66cbd4c902e0c594d5365"
   ],
   "source_sha256": [
-    "113893e7fb2f3763e2d12e7895011c79427a36eeb678bc078c28b7a954ac9b10"
+    "badfff4f569a2bef3e8c81321e2e3e0f585fe335eba14b5e2058c8c00706f99f"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/space/orbit-dots.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\space\\orbit-dots.png",
       "sha256": "badfff4f569a2bef3e8c81321e2e3e0f585fe335eba14b5e2058c8c00706f99f"
     }
   ],

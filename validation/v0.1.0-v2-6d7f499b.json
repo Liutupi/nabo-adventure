@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-26",
+  "candidate_sha256": "6d7f499b7174a0f359fa87d4b08a7e947b74fc80f5a33011b7883589f71b6747",
+  "status": "HOST PASS; CANDIDATE DEVICE VALIDATION PENDING",
+  "host": {
+    "tests": 278,
+    "seconds": 144.661,
+    "passed": true,
+    "windows_idf": "6.0.2",
+    "space_golden_steps": 35986,
+    "space_rule_mutations_detected": 6,
+    "unchanged_baseline_images": 134,
+    "unchanged_baseline_pixels": 10466112,
+    "incremental_equals_full_render": true
+  },
+  "budget": {
+    "app_bytes": 1814880,
+    "physical_factory_bytes": 2031616,
+    "free_bytes": 216736,
+    "permanent_reserve_bytes": 65536,
+    "future_games_reserved_bytes": {"sky": 73728, "climb": 73728},
+    "remaining_after_reserve_bytes": 3744,
+    "budget_profile_sha256": "1a8094bef97416774f012f5049ff695c3b3b1c6573603b0c6b821269ba8fa320",
+    "status": "PASS"
+  },
+  "device": {
+    "this_candidate_flashed": false,
+    "frame_samples": "pending",
+    "serial_lifecycle": "pending",
+    "protected_bytes_after_upgrade": "pending",
+    "previous_installed_sha256": "0ce4b83736ad0b0ce976789bed0eabeeafec3b55491b62e1b97edde93c423893"
+  },
+  "human_acceptance": {
+    "controls_and_readability": "pending",
+    "rocket_successful_landing": "pending",
+    "sleep_wake": "pending",
+    "audio": "not tested; persistent silence request"
+  },
+  "release": false,
+  "boundary": "Earlier device results are not acceptance of this exact candidate. SKY/CLIMB remain V1; their V2 growth allocations are reserved."
+}

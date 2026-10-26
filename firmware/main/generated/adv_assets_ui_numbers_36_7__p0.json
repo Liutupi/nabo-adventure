@@ -20,7 +20,7 @@
     "e9b5ff115895cd4b091689ff5b7d820ba275bac85c4d3203973819a9fcc77dd9"
   ],
   "source_sha256": [
-    "6c61a8dd6ae5de8039741d8953f59a71aef92328d72df65d32d24702f7a9cc87"
+    "84ad0b1716e51a2cb02b56f9d57d23d4b06fcd58aca711768b0e679f171c83d0"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/numbers/36/7.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\numbers\\36\\7.png",
       "sha256": "e6c02afea2c27ff9756dd5d86203958def76cc4c72f0a746586e09a0c0042239"
     }
   ],

@@ -20,7 +20,7 @@
     "0994c97101ff86c45cbd666107cf8766f10c0c320e39e561eed2b183e4a99164"
   ],
   "source_sha256": [
-    "3dc05f7757f9359842c4ff616215bf258f3243cbb7b117ebe220b8f0e5dce1f9"
+    "bd3f0430f600088343c86e4610f40dec6510105a326a8438567d8dfaa58df17e"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/resources/icons/hot-air.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\icons\\hot-air.png",
       "sha256": "a7139afbaac89744e17c5359c18bcd7bf243d6847bb54181576a585284a15d62"
     }
   ],

@@ -21,7 +21,7 @@
     "e700e46bc8361b339409d3ff3420652320f87b6d803762478afdc8ce1acbf5e4"
   ],
   "source_sha256": [
-    "14179597dcb5b6b99d9e2e0eac4575d4045a4018c2ac65fae9f7c86b38fee6d5"
+    "b262291829ffa4226bdbe2f633b6d6455076861ea891f0b07072aae0bf266036"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/mountain/young-pine.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\mountain\\young-pine.png",
       "sha256": "b262291829ffa4226bdbe2f633b6d6455076861ea891f0b07072aae0bf266036"
     }
   ],

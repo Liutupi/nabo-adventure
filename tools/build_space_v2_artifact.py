@@ -21,7 +21,7 @@ for tag in (r'<!doctype html>\s*', r'<html[^>]*>\s*', r'</?head>\s*', r'</?body>
     html = re.sub(tag, '', html, flags=re.I)
 html = html.replace('<title>', '<meta name="claude:viewport-fit-sides" content="cover">\n<title>', 1)
 inline = lambda name: '<script>\n' + (ADV / 'prototype' / name).read_text('utf-8').replace('</script', '<\\/script') + '\n</script>'
-html = html.replace('<script src="adv_space_v2.js"></script>', '<script>' + sprites + '</script>\n' + inline('adv_space_v2.js'))
+html = html.replace('<script src="adv_space.js"></script>', '<script>' + sprites + '</script>\n' + inline('adv_space.js'))
 html = html.replace('<script src="adv_space_v2_draw.js"></script>', inline('adv_space_v2_draw.js'))
 assert 'src="adv_' not in html
 out.parent.mkdir(parents=True, exist_ok=True); out.write_text(html, 'utf-8'); print(out, len(html))

@@ -20,7 +20,7 @@
     "e6b19f594bbae62a12fb50f91e3d150f282ee37c96a6cde25e55315851cdf99c"
   ],
   "source_sha256": [
-    "641d4b3ff30cab8194c7fbd4f4e4d8b76b3535f8e345110422d26c1e4f51499c"
+    "f5a2fa68b1fa72509679f19dbdcbbeef7fe39cd3b92739f156b6d7bb355889b9"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/resources/icons/fuel.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\icons\\fuel.png",
       "sha256": "c782c1caea1d961d80c14ce152bec284eb7a232948cf108bf89bd3e40ce8d078"
     }
   ],

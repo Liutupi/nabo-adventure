@@ -1,0 +1,58 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_props_rocket_right__p0",
+  "width": 18,
+  "height": 46,
+  "palette_rgb565": [
+    0,
+    10632,
+    10699,
+    19117,
+    32447,
+    41381,
+    44441,
+    55847,
+    57150,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 429,
+  "table_bytes": 116,
+  "frame_sha256": [
+    "93c40b461f1398def1bb519f9e66dc69b83dc060c948ae80ee07fada89aa249a"
+  ],
+  "source_sha256": [
+    "6472bf5f3e64d3101fcdcf08952c61057d626451406e124ee6d6e81835841f2d"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/props/rocket-right",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_props_rocket_right__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\props-rocket-right.png",
+      "sha256": "9c975d04a6d7d4c6eb835a904181ae8c62e469072e41bc88fe75d1e10c4872ab"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/props/rocket-right",
+      "logical_symbol": "adv_assets_game_space_v2_props_rocket_right__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

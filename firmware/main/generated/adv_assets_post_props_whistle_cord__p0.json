@@ -37,12 +37,12 @@
     "7c104fb7474f7f78697186097652f4b8f2cb5c2dc5de2c167679e78a55ea86f0"
   ],
   "source_sha256": [
-    "e41ae260e5a6cf315d81392a540343193fd37379d547a8b2286a68e74abe4d6b",
-    "14a3cb604d4f627f83b6a17d095f55fab4f21cd3fa3c53c237bebce07a3521a2",
-    "bd58841691e2425ce372123823fa76a88bbaa3f2293380c8cd73a4bd5add721b",
-    "6827279b688a95832e0937cff9f2b12945163c9cfacbd50004b7eadcf6cbecf5",
-    "480b7bed74a9d38703c49818f0a917edd03d905e8c85fb461d515ab6f1e60f04",
-    "e41ae260e5a6cf315d81392a540343193fd37379d547a8b2286a68e74abe4d6b"
+    "8507a6d664ffcc0564bf02fe366fb2af5c5fa583272c54def0f1cac679e55958",
+    "cea8c6e919f00d58386c620d4ca5f9802f8f766722e46a2863a520cbe02ca093",
+    "b8f6d88433cd49ed1843a1e348379eacd89b61af40b8286622b950115fb60af2",
+    "35954d620c34c90e820723558e2e211ce7fe0c19455f5464ad757056082d672b",
+    "fc1d7cb85cc66a148f4e1c207ae3f68dadc41822d83cd22b47fd95e023110378",
+    "8507a6d664ffcc0564bf02fe366fb2af5c5fa583272c54def0f1cac679e55958"
   ],
   "verified_frames": 6,
   "comparison": "lossless after shared RGB565 quantization",
@@ -55,27 +55,27 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/whistle-cord/000.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\whistle-cord\\000.png",
       "sha256": "8507a6d664ffcc0564bf02fe366fb2af5c5fa583272c54def0f1cac679e55958"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/whistle-cord/001.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\whistle-cord\\001.png",
       "sha256": "cea8c6e919f00d58386c620d4ca5f9802f8f766722e46a2863a520cbe02ca093"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/whistle-cord/002.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\whistle-cord\\002.png",
       "sha256": "b8f6d88433cd49ed1843a1e348379eacd89b61af40b8286622b950115fb60af2"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/whistle-cord/003.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\whistle-cord\\003.png",
       "sha256": "35954d620c34c90e820723558e2e211ce7fe0c19455f5464ad757056082d672b"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/whistle-cord/004.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\whistle-cord\\004.png",
       "sha256": "fc1d7cb85cc66a148f4e1c207ae3f68dadc41822d83cd22b47fd95e023110378"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/whistle-cord/005.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\whistle-cord\\005.png",
       "sha256": "8507a6d664ffcc0564bf02fe366fb2af5c5fa583272c54def0f1cac679e55958"
     }
   ],

@@ -21,7 +21,7 @@
     "5a86cbb6e2577b8917012256662fe3b9fab8ec28931a72171fadd81ec6dcd02a"
   ],
   "source_sha256": [
-    "fe7b4f7f20e532aa7c1c75c9ce182c9993eeca4129cfe9f38cd6db6307693252"
+    "77ac93fb867cb3a885c6489066c3a3446d579ac485649ea5eb84f12b68404e5d"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/ski/props/pole.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\ski\\props\\pole.png",
       "sha256": "77ac93fb867cb3a885c6489066c3a3446d579ac485649ea5eb84f12b68404e5d"
     }
   ],

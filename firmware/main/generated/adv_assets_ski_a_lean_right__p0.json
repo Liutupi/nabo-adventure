@@ -87,10 +87,10 @@
     "0c522fd090d5ca50c32bcc15fc99cc0c752363e5671686eac9418dbabc4e2cef"
   ],
   "source_sha256": [
-    "1640b3135af095ccbf597823f567e18d00053fd8ecc4146ecb2265069ee4f165",
-    "acc81260302dd267300820245dc58686c81107d81e5d97de4d73848b6cbdf7b4",
-    "764126ee83b76e5dc8136bca6ca756f3e9ebe9acbefc1619007ec6572a0f3eff",
-    "e823e624e47dab8420b72dae5d6b9abe8f4d443af2fc0e1e33a05874571e1441"
+    "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6",
+    "acb0cc8dd0cf7e5c141974a0635fc8a5463d0efdfd5faa41e052c76d07d33638",
+    "7bf8863536d9e1b5b87ff421038384860d7fa3852043ae31f9fe503810792267",
+    "ebf7d3fbd9b3749787fc6e832a73166536a07a401580d2155f240318dfdaac80"
   ],
   "verified_frames": 4,
   "comparison": "lossless after shared RGB565 quantization",
@@ -103,19 +103,19 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/lean_right/000.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\lean_right\\000.png",
       "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/lean_right/001.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\lean_right\\001.png",
       "sha256": "acb0cc8dd0cf7e5c141974a0635fc8a5463d0efdfd5faa41e052c76d07d33638"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/lean_right/002.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\lean_right\\002.png",
       "sha256": "7bf8863536d9e1b5b87ff421038384860d7fa3852043ae31f9fe503810792267"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/lean_right/003.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\lean_right\\003.png",
       "sha256": "ebf7d3fbd9b3749787fc6e832a73166536a07a401580d2155f240318dfdaac80"
     }
   ],

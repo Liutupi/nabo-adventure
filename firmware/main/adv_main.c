@@ -8,11 +8,13 @@
 #include "adv_model.h"
 #include "adv_post.h"
 #include "adv_night_debug.h"
+#include "adv_space_debug.h"
 #include "adv_climb_debug.h"
 #include "adv_ui_boot_video.h"
 #include "adv_persist.h"
 #include "adv_sound.h"
 #include "adv_ui.h"
+#include "adv_gfx.h"
 #include "adv_ui_animation.h"
 #include "adv_boot_motion.h"
 #include "bsp_audio.h"
@@ -305,8 +307,10 @@ static void diagnostic_open(const char *name)
 static void command(const char *line)
 {
     if (!strcmp(line, ">adv.status")) status();
+    else if(!strcmp(line,">adv.profile")){if(s_test){ag_profile_next();puts("@adv profiling=1");}else puts("@error profile requires test mode");}
     else if(!strcmp(line,">post.status"))post_status();
     else if(!strcmp(line,">night.status"))adv_night_debug(&s_model);
+    else if(!strcmp(line,">space.status"))adv_space_debug(&s_model);
     else if(!strcmp(line,">climb.status"))adv_climb_debug(&s_model);
     else if(!strcmp(line,">adv.practice=post")) {
         handle_fx(adv_practice_open(&s_model));
@@ -489,7 +493,7 @@ static void adventure_task(void *arg)
         // The V2 renderer already spends most of its frame composing pixels.
         // Yield one tick during play; retain the fixed 60 Hz simulation above.
         bool v2_play=s_owner==OWNER_SHELL&&s_model.page==ADV_PAGE_SESSION&&s_model.phase==ADV_PLAY&&
-                     (s_model.station==4||s_model.station==6);
+                     (s_model.station==4||s_model.station==6||s_model.station==8);
         vTaskDelay(pdMS_TO_TICKS(boot_pending||v2_play?1:s_owner == OWNER_SHELL && s_model.page == ADV_PAGE_SESSION ? 5 : 10));
     }
 }

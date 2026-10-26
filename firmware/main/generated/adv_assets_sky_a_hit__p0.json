@@ -95,12 +95,12 @@
     "ad58c330561f872e04d3e53936006f5c31ac91e107e166e00b38b04d6a1c61c5"
   ],
   "source_sha256": [
-    "50c43c5efb68fae28e08e4888336833ea96cd65967c713fbf213fd97bd61d3e3",
-    "b326606a821e996d07f0d582527d809d5018c7a70698d74c979f820c17bf3c9d",
-    "106ae999f3e24d2c1da92b0071c9ea2ddb00d9753de671b0d13a5944e3b27247",
-    "0d1c812c165d83e70bc9420eba7f3b20af102b69bd8c4b605c9104697628b3ae",
-    "f508d10bfb9aaba2ec1beb4215b2314144356b5cece748f517b00e96243bda7f",
-    "50c43c5efb68fae28e08e4888336833ea96cd65967c713fbf213fd97bd61d3e3"
+    "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433",
+    "1e7603d4391801c4d6a893008952a2be4b9e43223fb74a74ff2fd4181d602c72",
+    "9cbcf54b4ecd7aa969fecac6e4fbd6102beccb7541843d9b329d323c5140b9e3",
+    "6a3760e5fb43b316db49e0e4f48c52633319341ece934de5c9c570537cc13c43",
+    "11d44240e59c99fc1267d8363e2b006a9522c19c90c6d9f37a152018a2467de5",
+    "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
   ],
   "verified_frames": 6,
   "comparison": "lossless after shared RGB565 quantization",
@@ -113,27 +113,27 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/hit/000.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\hit\\000.png",
       "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/hit/001.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\hit\\001.png",
       "sha256": "1e7603d4391801c4d6a893008952a2be4b9e43223fb74a74ff2fd4181d602c72"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/hit/002.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\hit\\002.png",
       "sha256": "9cbcf54b4ecd7aa969fecac6e4fbd6102beccb7541843d9b329d323c5140b9e3"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/hit/003.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\hit\\003.png",
       "sha256": "6a3760e5fb43b316db49e0e4f48c52633319341ece934de5c9c570537cc13c43"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/hit/004.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\hit\\004.png",
       "sha256": "11d44240e59c99fc1267d8363e2b006a9522c19c90c6d9f37a152018a2467de5"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/hit/005.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\hit\\005.png",
       "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
     }
   ],

@@ -1,0 +1,55 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_props_comet__p0",
+  "width": 56,
+  "height": 18,
+  "palette_rgb565": [
+    0,
+    15094,
+    28028,
+    42783,
+    53119,
+    61407,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 499,
+  "table_bytes": 54,
+  "frame_sha256": [
+    "5442cd333ef1e3678340eb79b314929f26d7ac1c2a0fa7bd67ed6f733f252cab"
+  ],
+  "source_sha256": [
+    "75cde01ae6b7481c0f305df09e1c3375d612d15cc27eebe40435f165cb6e2d26"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/props/comet",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_props_comet__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\props-comet.png",
+      "sha256": "237b54c40a9d52bcbe35ae4b4c8eaa92a64808cc7873b27a5c40438d15618e09"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/props/comet",
+      "logical_symbol": "adv_assets_game_space_v2_props_comet__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

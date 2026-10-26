@@ -95,14 +95,14 @@
     "e865a9eaabcb00fccc1820a370b2405d0e89624c0f64767d45639f42c4e8ec9b"
   ],
   "source_sha256": [
-    "84d63e37566d9434c17a5618c10998f0a09ae7c13285ab3f4390e2817c3329f8",
-    "5de595c7cef62383e248bbf8ed561821ba99fb9bfdfa2728b2c216a63770616b",
-    "6225dd910e1a677ec8e4571b57f6e4d576a0863231d5e88a2b6456368ea01249",
-    "a92c74e5e2f012daea058472ab46655567a8b3ff7258b87482db08aa79d1e786",
-    "f95708eec88c95de662f62d816c0eb83c12fa479312c13c4d67baefb5d9d53a6",
-    "51504c90a35e64bd37e0cc962e221a84aec9851361004f58a65f1ac499db735c",
-    "062320e9bafd9242e382377f72600b74a2b12355ed7558dd66e3cfc159e0e9d1",
-    "f0ed7ca7f52ef679b458a65db2fd58c591a413a0fde8398a5e1d581ceedbcec7"
+    "b200061ceaf388c7785f7a8ba9f2b48d52de00afba76aabb1231f3681b6dc101",
+    "8c72c9862f2a5b1fdb9caf286b2edfc0b36e9db8e1bcc5666f1e72fca68512b5",
+    "0917444e6a5e6bf864bad96335b7aad4a74bad518798ad7438ae535fcb2c73cb",
+    "e9092c6998e9f4299ddbd33497cad5a0797a5e722f001b2f2d756dce04f14016",
+    "17fc9545a9ea162987bfadef67e68151689f51e2e07fd78ca16f12948a5e325d",
+    "0d62b6973f308cbf9e7ec2f420c7b1fceaaea970116455b975a9b35c7e9feb30",
+    "aa485192d455343fb91840952ca540284fdd4b653f67e11f86ae97b739052e24",
+    "c51384427e02050eef6aff8ce19b669b783873f7cdb9f2e3237faf2fad49f670"
   ],
   "verified_frames": 8,
   "comparison": "lossless after shared RGB565 quantization",
@@ -115,35 +115,35 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/000.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\000.png",
       "sha256": "b200061ceaf388c7785f7a8ba9f2b48d52de00afba76aabb1231f3681b6dc101"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/001.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\001.png",
       "sha256": "8c72c9862f2a5b1fdb9caf286b2edfc0b36e9db8e1bcc5666f1e72fca68512b5"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/002.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\002.png",
       "sha256": "0917444e6a5e6bf864bad96335b7aad4a74bad518798ad7438ae535fcb2c73cb"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/003.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\003.png",
       "sha256": "e9092c6998e9f4299ddbd33497cad5a0797a5e722f001b2f2d756dce04f14016"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/004.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\004.png",
       "sha256": "17fc9545a9ea162987bfadef67e68151689f51e2e07fd78ca16f12948a5e325d"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/005.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\005.png",
       "sha256": "0d62b6973f308cbf9e7ec2f420c7b1fceaaea970116455b975a9b35c7e9feb30"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/006.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\006.png",
       "sha256": "aa485192d455343fb91840952ca540284fdd4b653f67e11f86ae97b739052e24"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/007.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\007.png",
       "sha256": "c51384427e02050eef6aff8ce19b669b783873f7cdb9f2e3237faf2fad49f670"
     }
   ],

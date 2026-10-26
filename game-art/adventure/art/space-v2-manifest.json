@@ -3,7 +3,7 @@
  "assets": [
   {
    "id": "space-v2/bg/launch-far",
-   "path": "space-v2/bg-launch-far.png",
+   "path": "space-v2\\bg-launch-far.png",
    "size": [
     320,
     120
@@ -11,11 +11,13 @@
    "anchor": [
     0,
     120
-   ]
+   ],
+   "sha256": "1e944f824b9c30185702216a702dfb5d2c5e74d9da856cf9e9aa02ae08038b73",
+   "color_limit": 64
   },
   {
    "id": "space-v2/bg/launch-near",
-   "path": "space-v2/bg-launch-near.png",
+   "path": "space-v2\\bg-launch-near.png",
    "size": [
     320,
     150
@@ -23,11 +25,13 @@
    "anchor": [
     0,
     150
-   ]
+   ],
+   "sha256": "6749d1835a889df2ff0cba4b3b6caf137b0d8a9c275f914e3d5c89c4e68ec868",
+   "color_limit": 64
   },
   {
    "id": "space-v2/bg/cloud-a",
-   "path": "space-v2/bg-cloud-a.png",
+   "path": "space-v2\\bg-cloud-a.png",
    "size": [
     320,
     96
@@ -35,11 +39,13 @@
    "anchor": [
     0,
     96
-   ]
+   ],
+   "sha256": "752972ef2284f7b6d89549500fa4e299404b459c61e49d25048f4f7bc1dea10a",
+   "color_limit": 64
   },
   {
    "id": "space-v2/bg/cloud-b",
-   "path": "space-v2/bg-cloud-b.png",
+   "path": "space-v2\\bg-cloud-b.png",
    "size": [
     320,
     96
@@ -47,11 +53,13 @@
    "anchor": [
     0,
     96
-   ]
+   ],
+   "sha256": "7f978b51201670c2f344e5fe0f740cf3fee138b397aee48292a2a1a6447526b9",
+   "color_limit": 64
   },
   {
    "id": "space-v2/bg/cloud-far",
-   "path": "space-v2/bg-cloud-far.png",
+   "path": "space-v2\\bg-cloud-far.png",
    "size": [
     320,
     56
@@ -59,11 +67,13 @@
    "anchor": [
     0,
     56
-   ]
+   ],
+   "sha256": "ec6169ec8ca3f7a486c7c23d0a54df3fb781c3a77839ab21d428755f3b46b5f5",
+   "color_limit": 64
   },
   {
    "id": "space-v2/bg/cirrus",
-   "path": "space-v2/bg-cirrus.png",
+   "path": "space-v2\\bg-cirrus.png",
    "size": [
     320,
     48
@@ -71,11 +81,13 @@
    "anchor": [
     0,
     48
-   ]
+   ],
+   "sha256": "858b301771001bca0a46ce679fbf373da999a129d8ad8129c9b9d906dd47587a",
+   "color_limit": 64
   },
   {
    "id": "space-v2/bg/aurora",
-   "path": "space-v2/bg-aurora.png",
+   "path": "space-v2\\bg-aurora.png",
    "size": [
     320,
     120
@@ -83,11 +95,13 @@
    "anchor": [
     0,
     120
-   ]
+   ],
+   "sha256": "785b63c29765a45298388411c0a88d52081f1f8b0ddad0bfdeef4f46c3fcb90e",
+   "color_limit": 64
   },
   {
    "id": "space-v2/bg/earth-limb",
-   "path": "space-v2/bg-earth-limb.png",
+   "path": "space-v2\\bg-earth-limb.png",
    "size": [
     320,
     130
@@ -95,11 +109,13 @@
    "anchor": [
     0,
     130
-   ]
+   ],
+   "sha256": "1d641fd8e45af9e36cba002df2a6e8906dafc071d4de752165cb977ecc3f2408",
+   "color_limit": 64
   },
   {
    "id": "space-v2/bg/nebula",
-   "path": "space-v2/bg-nebula.png",
+   "path": "space-v2\\bg-nebula.png",
    "size": [
     320,
     220
@@ -107,11 +123,13 @@
    "anchor": [
     0,
     220
-   ]
+   ],
+   "sha256": "ad9d6be7f879cd641c88bd17279944c28366188527931640dfc729a3d617887c",
+   "color_limit": 64
   },
   {
    "id": "space-v2/bg/moon-32",
-   "path": "space-v2/bg-moon-32.png",
+   "path": "space-v2\\bg-moon-32.png",
    "size": [
     32,
     32
@@ -119,11 +137,13 @@
    "anchor": [
     16,
     16
-   ]
+   ],
+   "sha256": "abf67d2bddb73ec61d1536f257831e4644ace5d1bb822e1fa95c35255cb2e9e8",
+   "color_limit": 64
   },
   {
    "id": "space-v2/bg/moon-64",
-   "path": "space-v2/bg-moon-64.png",
+   "path": "space-v2\\bg-moon-64.png",
    "size": [
     64,
     64
@@ -131,11 +151,13 @@
    "anchor": [
     32,
     32
-   ]
+   ],
+   "sha256": "29d1f229698f6f9ea417cb26bade89a43b9b52fae29e912b612dfd3d4c4f8abd",
+   "color_limit": 64
   },
   {
    "id": "space-v2/bg/moon-128",
-   "path": "space-v2/bg-moon-128.png",
+   "path": "space-v2\\bg-moon-128.png",
    "size": [
     128,
     128
@@ -143,11 +165,13 @@
    "anchor": [
     64,
     64
-   ]
+   ],
+   "sha256": "c4e4b87032f7fe931084bf03e404548ba9f671e14c61a310cddb7db815a6fc1e",
+   "color_limit": 64
   },
   {
    "id": "space-v2/bg/lunar-surface",
-   "path": "space-v2/bg-lunar-surface.png",
+   "path": "space-v2\\bg-lunar-surface.png",
    "size": [
     320,
     120
@@ -155,11 +179,13 @@
    "anchor": [
     0,
     120
-   ]
+   ],
+   "sha256": "b3dfbf18249e3ad71e71e31f836420fa328addf09651e1a9afcc303b290dcb29",
+   "color_limit": 64
   },
   {
    "id": "space-v2/bg/station",
-   "path": "space-v2/bg-station.png",
+   "path": "space-v2\\bg-station.png",
    "size": [
     84,
     34
@@ -167,11 +193,13 @@
    "anchor": [
     42,
     17
-   ]
+   ],
+   "sha256": "17882d70c5fc08d4ae989af08c4b2ce0d6e37a76c0f3cf5ad98dbb091bb14913",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/rocket-left",
-   "path": "space-v2/props-rocket-left.png",
+   "path": "space-v2\\props-rocket-left.png",
    "size": [
     18,
     46
@@ -179,11 +207,13 @@
    "anchor": [
     9,
     44
-   ]
+   ],
+   "sha256": "da20665fa1a52bff4d58f3d54ba44a56b0cb33b50463e9fffd97adbba9dc7900",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/rocket",
-   "path": "space-v2/props-rocket.png",
+   "path": "space-v2\\props-rocket.png",
    "size": [
     18,
     46
@@ -191,11 +221,13 @@
    "anchor": [
     9,
     44
-   ]
+   ],
+   "sha256": "30a632e343c2debe265703236ee0eaae0fde037f9d042d1b672c9402cb9becce",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/rocket-right",
-   "path": "space-v2/props-rocket-right.png",
+   "path": "space-v2\\props-rocket-right.png",
    "size": [
     18,
     46
@@ -203,11 +235,13 @@
    "anchor": [
     9,
     44
-   ]
+   ],
+   "sha256": "9c975d04a6d7d4c6eb835a904181ae8c62e469072e41bc88fe75d1e10c4872ab",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/booster",
-   "path": "space-v2/props-booster.png",
+   "path": "space-v2\\props-booster.png",
    "size": [
     14,
     30
@@ -215,11 +249,13 @@
    "anchor": [
     7,
     15
-   ]
+   ],
+   "sha256": "62100aec92ecfa0a060ed173872492aa0c4ce1071df7cba3fdd19cac9ca7757c",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/storm-cloud",
-   "path": "space-v2/props-storm-cloud.png",
+   "path": "space-v2\\props-storm-cloud.png",
    "size": [
     112,
     60
@@ -227,11 +263,13 @@
    "anchor": [
     56,
     30
-   ]
+   ],
+   "sha256": "72dfa6817884c2eb6d202c69479d61a75b44efafed0094bd757d0e99cb6189dd",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/birds-0",
-   "path": "space-v2/props-birds-0.png",
+   "path": "space-v2\\props-birds-0.png",
    "size": [
     20,
     10
@@ -239,11 +277,13 @@
    "anchor": [
     10,
     5
-   ]
+   ],
+   "sha256": "a9a73615eb496f85d39e70eb80c4cef2ac854ac015a113af996a055f0a6ac9e5",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/birds-1",
-   "path": "space-v2/props-birds-1.png",
+   "path": "space-v2\\props-birds-1.png",
    "size": [
     20,
     10
@@ -251,11 +291,13 @@
    "anchor": [
     10,
     5
-   ]
+   ],
+   "sha256": "7685a268e66ba51e36c7456c50dc8fcb6f14a0bd40494a2b660cf74d207a2cb5",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/plane",
-   "path": "space-v2/props-plane.png",
+   "path": "space-v2\\props-plane.png",
    "size": [
     40,
     14
@@ -263,11 +305,13 @@
    "anchor": [
     20,
     7
-   ]
+   ],
+   "sha256": "fd48b9539f99227ec84b62c067779f08c258ac890699b540b44170a7edd62e1e",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/balloon",
-   "path": "space-v2/props-balloon.png",
+   "path": "space-v2\\props-balloon.png",
    "size": [
     16,
     26
@@ -275,11 +319,13 @@
    "anchor": [
     8,
     13
-   ]
+   ],
+   "sha256": "bf52cbfa2998cd0d43767dd21b9e380e6c7a0306837703913e7b771d3e941b74",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/satellite",
-   "path": "space-v2/props-satellite.png",
+   "path": "space-v2\\props-satellite.png",
    "size": [
     44,
     18
@@ -287,11 +333,13 @@
    "anchor": [
     22,
     9
-   ]
+   ],
+   "sha256": "42ee2f221eae2f9ced0f05a683b28dff7eac6b170e89244c402495514aa8cfae",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/junk",
-   "path": "space-v2/props-junk.png",
+   "path": "space-v2\\props-junk.png",
    "size": [
     12,
     10
@@ -299,11 +347,13 @@
    "anchor": [
     6,
     5
-   ]
+   ],
+   "sha256": "11f0d241e1a1c1a24f3b03f4ba36d90b14ee10303ee5ff43b89b88c671cb1c5a",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/comet",
-   "path": "space-v2/props-comet.png",
+   "path": "space-v2\\props-comet.png",
    "size": [
     56,
     18
@@ -311,11 +361,13 @@
    "anchor": [
     8,
     9
-   ]
+   ],
+   "sha256": "237b54c40a9d52bcbe35ae4b4c8eaa92a64808cc7873b27a5c40438d15618e09",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/repair",
-   "path": "space-v2/props-repair.png",
+   "path": "space-v2\\props-repair.png",
    "size": [
     14,
     14
@@ -323,11 +375,13 @@
    "anchor": [
     7,
     7
-   ]
+   ],
+   "sha256": "0564cb098526c382fca9014804cdfea8c61745cb84957324591aa6bd1099d8f5",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/plane-left",
-   "path": "space-v2/props-plane-left.png",
+   "path": "space-v2\\props-plane-left.png",
    "size": [
     40,
     14
@@ -335,11 +389,13 @@
    "anchor": [
     20,
     7
-   ]
+   ],
+   "sha256": "94bcf874cb0fabeff472a8255cbd7c464404e63259cc537d4495a15f8fd3d5ed",
+   "color_limit": 64
   },
   {
    "id": "space-v2/props/comet-right",
-   "path": "space-v2/props-comet-right.png",
+   "path": "space-v2\\props-comet-right.png",
    "size": [
     56,
     18
@@ -347,7 +403,9 @@
    "anchor": [
     48,
     9
-   ]
+   ],
+   "sha256": "19c1f56bc87ec08794c280d52a299e44cf65a2210a4760a6fbc1e35211a0a61e",
+   "color_limit": 64
   }
  ]
 }

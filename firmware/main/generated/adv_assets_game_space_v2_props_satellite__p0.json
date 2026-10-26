@@ -1,0 +1,56 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_props_satellite__p0",
+  "width": 44,
+  "height": 18,
+  "palette_rgb565": [
+    0,
+    10867,
+    23546,
+    40215,
+    52891,
+    58925,
+    64201,
+    65430
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 412,
+  "table_bytes": 56,
+  "frame_sha256": [
+    "564687558002eecd335c11a5eeb781acc1e55eb6874ff1d1df0f9e31c158990e"
+  ],
+  "source_sha256": [
+    "9820e3f74c20bea3e7766ae83ac750db7115dd3a4eef8a51e19671e0288fde76"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/props/satellite",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_props_satellite__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\props-satellite.png",
+      "sha256": "42ee2f221eae2f9ced0f05a683b28dff7eac6b170e89244c402495514aa8cfae"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/props/satellite",
+      "logical_symbol": "adv_assets_game_space_v2_props_satellite__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

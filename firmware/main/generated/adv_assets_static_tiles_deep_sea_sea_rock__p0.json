@@ -22,7 +22,7 @@
     "ce318627d252ac7d45fa87e922e3ce97a898a2707a89183c3afce9a1094aa3b2"
   ],
   "source_sha256": [
-    "4768723049ec6181195adbd8e5e0f05e49c11588125d04e6642bd6ffe2f4091d"
+    "22143e9c9b949b0393e9c0a1f90d1f8bbc92f786448fd79e4320e41e5769530f"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/deep-sea/sea-rock.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\deep-sea\\sea-rock.png",
       "sha256": "22143e9c9b949b0393e9c0a1f90d1f8bbc92f786448fd79e4320e41e5769530f"
     }
   ],

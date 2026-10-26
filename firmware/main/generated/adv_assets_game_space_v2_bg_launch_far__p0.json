@@ -1,0 +1,75 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_bg_launch_far__p0",
+  "width": 256,
+  "height": 120,
+  "palette_rgb565": [
+    0,
+    8619,
+    10601,
+    10602,
+    12748,
+    12813,
+    14959,
+    19056,
+    21071,
+    23184,
+    25265,
+    25361,
+    27345,
+    27378,
+    29458,
+    31539,
+    35701,
+    37810,
+    40379,
+    40863,
+    55945,
+    58639,
+    61210,
+    63027,
+    65167,
+    65300,
+    65359
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 11820,
+  "table_bytes": 298,
+  "frame_sha256": [
+    "69ca02276f5b88a57cad5345cfc97c2c92570059f898b5a283508f7cd6c630fa"
+  ],
+  "source_sha256": [
+    "b1c4bf2935a272315f4719d3a67896198f901d3007ca2c81997e53ac94cf9f49"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/bg/launch-far",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_bg_launch_far__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\bg-launch-far.png",
+      "sha256": "1e944f824b9c30185702216a702dfb5d2c5e74d9da856cf9e9aa02ae08038b73"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/bg/launch-far",
+      "logical_symbol": "adv_assets_game_space_v2_bg_launch_far__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

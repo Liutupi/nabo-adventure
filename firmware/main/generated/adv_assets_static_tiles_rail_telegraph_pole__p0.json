@@ -21,7 +21,7 @@
     "23bb7227e390a57b6edb6dba7f5e756c819201ec0b52b6c025717366edee217f"
   ],
   "source_sha256": [
-    "4044e03e4449d350279f8c1aaabce4d6ce73687f297b7d67cc288c7068a9172b"
+    "b68b63b27ecba2a4af139de37f3673495db544998a3f433e92ca58725a3e4dc6"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/rail/telegraph-pole.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\rail\\telegraph-pole.png",
       "sha256": "b68b63b27ecba2a4af139de37f3673495db544998a3f433e92ca58725a3e4dc6"
     }
   ],

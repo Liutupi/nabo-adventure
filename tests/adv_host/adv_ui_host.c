@@ -221,7 +221,7 @@ void host_climb_case(int which)
 static void *late_open(int station)
 {
     if(model.in_session&&model.station!=station){
-        if((model.station==4||model.station==6)&&model.phase==ADV_PLAY)
+        if((model.station==4||model.station==6||model.station==8)&&model.phase==ADV_PLAY)
             adv_event(&model,ADV_BTN_DOWN,ADV_EV_LONG);
         adv_event(&model,ADV_BTN_UP,ADV_EV_DOUBLE);
     }
@@ -272,20 +272,25 @@ void host_sky_case(int which)
     if(which==0){p->objs[0]=(adv_sky_obj_t){SKY_STORM,d+120,a+150,0,0};p->objs[1]=(adv_sky_obj_t){SKY_BIRD,d+90,a+40,8,0};}
     late_phase(which,7,640,&p->res,&p->over,&p->score);
 }
-// SPACE: 0 falling, 1 main engine, 2 side thruster, 3 landed, 4 planting the flag, 5 crash, 6 fuel can + rock, 7 round 5.
+// SPACE V2: ignition, ascent, boost, touchdown, flag, lost, orbit objects, TLI; 8..13 shell phases; 14 dense, 15 separation, 16 upper sky, 17 landing.
 void host_space_case(int which)
 {
-    adv_space_t *p=late_open(8);adv_space_start(p,4321);
-    adv_input_t none={0},thrust={.ok_held=1},side={.down_held=1};
-    for(int i=0;i<40;i++)adv_space_step(p,&none);
-    if(which==1)for(int i=0;i<12;i++)adv_space_step(p,&thrust);
-    if(which==2)for(int i=0;i<12;i++)adv_space_step(p,&side);
-    if(which==3||which==4){p->x=p->pad*256;p->y=ADV_SPACE_GROUND*256;p->phase=SPACE_LANDED;p->timer=which==3?ADV_SPACE_LANDED-20:ADV_SPACE_LANDED-90;
-        p->score=242;p->last_bonus=242;p->message=SPACE_MSG_LANDED;p->feedback=60;}
-    if(which==5){p->y=ADV_SPACE_GROUND*256;p->phase=SPACE_CRASH;p->timer=40;p->message=SPACE_MSG_HARD;p->feedback=60;p->res=600;}
-    if(which==6){int lx=p->x/256,ly=p->y/256;p->objs[0]=(adv_space_obj_t){SPACE_FUEL,(lx+70)*256,(ly+20)*256,-220};p->objs[1]=(adv_space_obj_t){SPACE_ROCK,(lx-70)*256,(ly+40)*256,200};}
-    if(which==7){p->round=4;p->score=860;}
-    late_phase(which,8,1210,&p->res,&p->over,&p->score);
+    adv_space_t *p=late_open(8);adv_space_start(p,4321);p->modeT=24;
+    if(which!=0&&which<8){p->mode=SPACE_FLY;p->alt=600<<8;p->v=p->vTarget=640;}
+    if(which==1){p->vx=450;p->ign=3;}
+    if(which==2){p->alt=5800<<8;p->boostT=30;p->heat=780;p->sep=2;}
+    if(which==3||which==4){p->mode=SPACE_ENDING;p->win=1;p->pad=160;p->lx=160<<8;p->ly=206<<8;p->modeT=which==3?16:66;p->score=6042;}
+    if(which==5){p->mode=SPACE_LOST;p->modeT=50;p->invuln=60;p->hull=0;p->fx[0]=(adv_space_fx_t){SPACE_FX_HIT,160,156,1,6};}
+    if(which==6){p->alt=9200<<8;p->sep=2;p->objs[0]=(adv_space_obj_t){SPACE_FUEL,220<<8,9250,0,0,0};p->objs[1]=(adv_space_obj_t){SPACE_ROCK,100<<8,9280,40,0,0};p->objs[2]=(adv_space_obj_t){SPACE_SAT,230<<8,9300,-90,0,0};}
+    if(which==7){p->alt=15500<<8;p->sep=2;p->tli=1;p->tliT=75;p->tliHit=1;p->tliQ=2;}
+    if(which>=8&&which<=13){p->mode=SPACE_FLY;p->alt=600<<8;late_phase(which,8,6042,&p->res,&p->over,&p->score);}
+    if(which==14){p->mode=SPACE_FLY;p->alt=5200<<8;p->sep=2;p->boostT=20;p->combo=24;p->heat=840;
+        for(int i=0;i<ADV_SPACE_OBJS;i++)p->objs[i]=(adv_space_obj_t){1+i%15,(24+(i*47)%272)<<8,5200+20+(i*31)%160,i%2?1:-1,i%15==3?8:0,0};
+        for(int i=0;i<ADV_SPACE_FX;i++)p->fx[i]=(adv_space_fx_t){i==0?SPACE_FX_ZONE:SPACE_FX_STAR,80+i*30,100+i*10,i==0?2:100,10+i*3};
+    }
+    if(which==15){p->mode=SPACE_FLY;p->alt=4100<<8;p->sep=1;p->sepT=75;}
+    if(which==16){p->mode=SPACE_FLY;p->alt=6800<<8;p->sep=2;p->boostT=30;}
+    if(which==17){p->mode=SPACE_LAND;p->pad=210;p->lx=180<<8;p->ly=125<<8;p->lvy=380;p->boostT=6;}
 }
 
 void host_post_station_at(int lane,int x)

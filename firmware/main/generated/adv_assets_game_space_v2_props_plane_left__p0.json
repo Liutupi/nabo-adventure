@@ -1,0 +1,55 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_props_plane_left__p0",
+  "width": 40,
+  "height": 14,
+  "palette_rgb565": [
+    0,
+    23509,
+    40671,
+    44440,
+    52891,
+    55847,
+    61343
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 105,
+  "table_bytes": 46,
+  "frame_sha256": [
+    "a5f57a999d04c4a2c4e05d3cacdc85b5ae088ee2d0f5a595302a71ae558c9ba7"
+  ],
+  "source_sha256": [
+    "a1cebe6a978306f3ff09e3afc866ad2bb7ee34dc9bcc38e8de0bcfb6924909ac"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/props/plane-left",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_props_plane_left__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\props-plane-left.png",
+      "sha256": "94bcf874cb0fabeff472a8255cbd7c464404e63259cc537d4495a15f8fd3d5ed"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/props/plane-left",
+      "logical_symbol": "adv_assets_game_space_v2_props_plane_left__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

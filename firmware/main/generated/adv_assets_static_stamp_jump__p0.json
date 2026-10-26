@@ -19,7 +19,7 @@
     "c7c760ac07d97480165d49469130ac4602277e1f5b4b9b41f4d7139f81e747a3"
   ],
   "source_sha256": [
-    "c9082f36d2655332a9ca3dd254e40162403ad87fb708504bf27d81320944646c"
+    "d76db59ac0bdc7692a9a6b7c00c52be1f2afe8a562fb1762fda263b7a84f6f2c"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/stamps/jump.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\stamps\\jump.png",
       "sha256": "d76db59ac0bdc7692a9a6b7c00c52be1f2afe8a562fb1762fda263b7a84f6f2c"
     }
   ],

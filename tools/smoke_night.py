@@ -64,7 +64,7 @@ def enter(link):
     raise SmokeError('NIGHT countdown stalled')
 
 def play(link,target=5):
-    """Walk (no held keys) and swing at reachable fireflies until the light runs out."""
+    """Catch the real-input target, then walk until the light naturally runs out."""
     enter(link);start=time.monotonic();checked=start;last_score=-1;profile=[];phases=[]
     while time.monotonic()-start<240:
         p=query(link)
@@ -76,7 +76,7 @@ def play(link,target=5):
                 return {'score':p['score'],'seconds':time.monotonic()-start,'end_phases':sorted(set(phases)),'profile':profile,
                         'whiffs':p['whiffs'],'caught':p['caught']}
             time.sleep(.1);continue
-        if drive(p):tap(link,1)
+        if p['score']<target and drive(p):tap(link,1)
         now=time.monotonic()
         if now-checked>=1:
             state=link.expect(7)

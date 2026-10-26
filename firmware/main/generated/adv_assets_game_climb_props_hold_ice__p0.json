@@ -23,7 +23,7 @@
     "27014fcd58ddbb660c9d74caf132eda86dc4486237338f56cf3b17a2d7667b7b"
   ],
   "source_sha256": [
-    "ccf3f7844cfc62d24003974c8d6e3597bf7d701021f8578e21d50e799300f37d"
+    "8f67162906ee64cdce34bd3ed952131604d154d97cf2dc64506a29a6050e7ca5"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -36,7 +36,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/climb/props/hold-ice.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\climb\\props\\hold-ice.png",
       "sha256": "8f67162906ee64cdce34bd3ed952131604d154d97cf2dc64506a29a6050e7ca5"
     }
   ],

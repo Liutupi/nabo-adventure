@@ -22,7 +22,7 @@
     "a55d40c23398d322384dbf9022175a49e11d90e4edd1b2d9c72175f3258af1ac"
   ],
   "source_sha256": [
-    "60036d975ac984c34d753dc2bfccc27d0c62330ad4610f4af6303e649106b2fa"
+    "2f1a4e35393568cf45b38ee3b6a5fef8613fdd65e41baa5efbad87ecbf0bf45d"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/icons/spirit.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\icons\\spirit.png",
       "sha256": "2f1a4e35393568cf45b38ee3b6a5fef8613fdd65e41baa5efbad87ecbf0bf45d"
     }
   ],

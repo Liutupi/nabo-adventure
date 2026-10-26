@@ -21,7 +21,7 @@
     "d314430ea783923944e8e38bcee5f313ae47c405524eea645a36c6c067377fc6"
   ],
   "source_sha256": [
-    "deb5e0a04bf0ae61fa30e544ff832217687896d22761c9f9c3bd1d803617c64b"
+    "c9059406cb4e54f8d7daf06e9edb114458625f1dfc4756be91a4079ec2c8022d"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/map/station-unlocked.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\station-unlocked.png",
       "sha256": "60b94b480cf38fb16e2a343cf702ffd18964d7e407b69743ba52e50c29a65e00"
     }
   ],

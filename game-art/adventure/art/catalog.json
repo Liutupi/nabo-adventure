@@ -35,6 +35,7 @@
     "ski-manifest.json": "ce917671979911b3aa2d645ab99a30bd605677497a4cb5e13649a51ab35c84fb",
     "sky-manifest.json": "abfbc0ffd9e3e97e61295911ea5c65b3c65f988bcc2af9021247590b07b3ee98",
     "space-manifest.json": "168d04124ab06e8d7e181a41c51e3eec91ba3e9f7dd5911fa8690a25e96fe789",
+    "space-v2-manifest.json": "a55a8f6f45a4edbc1ca50949c58b38d87104df6ec65ae00014fa00aaac8cb2c2",
     "boot/selection.json": "0ca4b960ce4d40972ca9af10c3ef62814c119560b1735ab55b41ebec2e1ecf06",
     "boot/v3/runtime/manifest.json": "38b2e11a0fe5a3167226b679d39492ea0c51a8cca6497ce1aa31d7ed01a1e5b8",
     "boot/v3/runtime/boot-welcome.m1v": "5ab6fa3182f432c30b762d51a30a01967541192e9165a6944fbb81154f30725f",
@@ -47,8 +48,8 @@
     "ui/palette.json": "3b3dc6d793ac4eff3af34fc01f0d969f7eb6a5c0b5a6b967e66795103949fce0"
   },
   "counts": {
-    "resources": 337,
-    "frames_including_static": 647
+    "resources": 366,
+    "frames_including_static": 676
   },
   "resources": [
     {
@@ -1261,6 +1262,441 @@
       "anchor": [
         24,
         29
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/bg/aurora",
+      "group": "space",
+      "canvas": [
+        320,
+        120
+      ],
+      "anchor": [
+        0,
+        120
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/bg/cirrus",
+      "group": "space",
+      "canvas": [
+        320,
+        48
+      ],
+      "anchor": [
+        0,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/bg/cloud-a",
+      "group": "space",
+      "canvas": [
+        320,
+        96
+      ],
+      "anchor": [
+        0,
+        96
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/bg/cloud-b",
+      "group": "space",
+      "canvas": [
+        320,
+        96
+      ],
+      "anchor": [
+        0,
+        96
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/bg/cloud-far",
+      "group": "space",
+      "canvas": [
+        320,
+        56
+      ],
+      "anchor": [
+        0,
+        56
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/bg/earth-limb",
+      "group": "space",
+      "canvas": [
+        320,
+        130
+      ],
+      "anchor": [
+        0,
+        130
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/bg/launch-far",
+      "group": "space",
+      "canvas": [
+        320,
+        120
+      ],
+      "anchor": [
+        0,
+        120
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/bg/launch-near",
+      "group": "space",
+      "canvas": [
+        320,
+        150
+      ],
+      "anchor": [
+        0,
+        150
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/bg/lunar-surface",
+      "group": "space",
+      "canvas": [
+        320,
+        120
+      ],
+      "anchor": [
+        0,
+        120
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/bg/moon-128",
+      "group": "space",
+      "canvas": [
+        128,
+        128
+      ],
+      "anchor": [
+        64,
+        64
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/bg/moon-32",
+      "group": "space",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/bg/moon-64",
+      "group": "space",
+      "canvas": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/bg/nebula",
+      "group": "space",
+      "canvas": [
+        320,
+        220
+      ],
+      "anchor": [
+        0,
+        220
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/bg/station",
+      "group": "space",
+      "canvas": [
+        84,
+        34
+      ],
+      "anchor": [
+        42,
+        17
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/balloon",
+      "group": "space",
+      "canvas": [
+        16,
+        26
+      ],
+      "anchor": [
+        8,
+        13
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/birds-0",
+      "group": "space",
+      "canvas": [
+        20,
+        10
+      ],
+      "anchor": [
+        10,
+        5
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/birds-1",
+      "group": "space",
+      "canvas": [
+        20,
+        10
+      ],
+      "anchor": [
+        10,
+        5
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/booster",
+      "group": "space",
+      "canvas": [
+        14,
+        30
+      ],
+      "anchor": [
+        7,
+        15
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/comet",
+      "group": "space",
+      "canvas": [
+        56,
+        18
+      ],
+      "anchor": [
+        8,
+        9
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/comet-right",
+      "group": "space",
+      "canvas": [
+        56,
+        18
+      ],
+      "anchor": [
+        48,
+        9
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/junk",
+      "group": "space",
+      "canvas": [
+        12,
+        10
+      ],
+      "anchor": [
+        6,
+        5
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/plane",
+      "group": "space",
+      "canvas": [
+        40,
+        14
+      ],
+      "anchor": [
+        20,
+        7
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/plane-left",
+      "group": "space",
+      "canvas": [
+        40,
+        14
+      ],
+      "anchor": [
+        20,
+        7
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/repair",
+      "group": "space",
+      "canvas": [
+        14,
+        14
+      ],
+      "anchor": [
+        7,
+        7
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/rocket",
+      "group": "space",
+      "canvas": [
+        18,
+        46
+      ],
+      "anchor": [
+        9,
+        44
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/rocket-left",
+      "group": "space",
+      "canvas": [
+        18,
+        46
+      ],
+      "anchor": [
+        9,
+        44
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/rocket-right",
+      "group": "space",
+      "canvas": [
+        18,
+        46
+      ],
+      "anchor": [
+        9,
+        44
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/satellite",
+      "group": "space",
+      "canvas": [
+        44,
+        18
+      ],
+      "anchor": [
+        22,
+        9
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/space-v2/props/storm-cloud",
+      "group": "space",
+      "canvas": [
+        112,
+        60
+      ],
+      "anchor": [
+        56,
+        30
       ],
       "fps": 0,
       "loop": false,
@@ -5159,16 +5595,16 @@
           "static_bytes_estimate_c3": 32001
         },
         "space": {
-          "rle_bytes": 29615,
-          "table_bytes": 5880,
-          "descriptor_catalog_estimate_c3": 1291,
-          "resources": 15,
-          "pieces": 15,
-          "frames": 49,
-          "physical_sprites": 15,
-          "physical_frames": 49,
+          "rle_bytes": 186873,
+          "table_bytes": 12864,
+          "descriptor_catalog_estimate_c3": 4346,
+          "resources": 44,
+          "pieces": 54,
+          "frames": 88,
+          "physical_sprites": 54,
+          "physical_frames": 88,
           "interned_pieces": 0,
-          "static_bytes_estimate_c3": 36786
+          "static_bytes_estimate_c3": 204083
         },
         "static": {
           "rle_bytes": 49523,
@@ -5207,10 +5643,10 @@
           "static_bytes_estimate_c3": 41766
         }
       },
-      "python_verified_frames": 591,
+      "python_verified_frames": 630,
       "production_c": {
-        "verified_frames": 591,
-        "verified_sprite_rows": 27626,
+        "verified_frames": 630,
+        "verified_sprite_rows": 30576,
         "verified_ninepatch_rows": 912,
         "comparison": "generated C and production decoders vs indexed source"
       }
@@ -5333,29 +5769,29 @@
     "space": {
       "groups": {
         "space": {
-          "rle_bytes": 29615,
-          "table_bytes": 5880,
-          "descriptor_catalog_estimate_c3": 1291,
-          "resources": 15,
-          "pieces": 15,
-          "frames": 49,
-          "physical_sprites": 15,
-          "physical_frames": 49,
+          "rle_bytes": 186873,
+          "table_bytes": 12864,
+          "descriptor_catalog_estimate_c3": 4346,
+          "resources": 44,
+          "pieces": 54,
+          "frames": 88,
+          "physical_sprites": 54,
+          "physical_frames": 88,
           "interned_pieces": 0,
-          "static_bytes_estimate_c3": 36786
+          "static_bytes_estimate_c3": 204083
         }
       },
-      "python_verified_frames": 49,
+      "python_verified_frames": 88,
       "production_c": {
-        "verified_frames": 49,
-        "verified_sprite_rows": 2800,
+        "verified_frames": 88,
+        "verified_sprite_rows": 5750,
         "verified_ninepatch_rows": 0,
         "comparison": "generated C and production decoders vs indexed source"
       }
     }
   },
   "device": {
-    "common_candidate_sha256": "0cbaaa94f0b9b41a86364d3bc3b49539372a8ce579431fd07b9912f449e60acb",
+    "common_candidate_sha256": "6d7f499b7174a0f359fa87d4b08a7e947b74fc80f5a33011b7883589f71b6747",
     "new_game_art_embedded_in_this_candidate": true,
     "integrated_game_groups": [
       "climb",

@@ -21,7 +21,7 @@
     "54bf3866a4f0f0601a0293cb0f0ed9ac86d10683f9716e0b5a0953cf9631aad6"
   ],
   "source_sha256": [
-    "7ab1fe85c3e518dfd00641ca56cfc46c450a5633045bc5fe8531ca4713c11232"
+    "a0f7dbce9a93da1b7299e33c73b81745b4f1c37bd97c8781565009f2b3947033"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/mountain/snow-drift.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\mountain\\snow-drift.png",
       "sha256": "a0f7dbce9a93da1b7299e33c73b81745b4f1c37bd97c8781565009f2b3947033"
     }
   ],

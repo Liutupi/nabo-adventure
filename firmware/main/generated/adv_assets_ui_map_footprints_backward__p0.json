@@ -19,7 +19,7 @@
     "a2f280f52fd77bdd7e94fa016c1f2d1758cb50acbe6cefd0fa215e2e48756ba6"
   ],
   "source_sha256": [
-    "0e38bc1b15949acd4a6714e9fa5781eb740d55e53c1da0cf3226c90a3bc18afe"
+    "40112acc7c618b54d3ff1b0e8aed883beaa4a8b5b8e926875a5f495af178ddc4"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/map/footprints-backward.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\footprints-backward.png",
       "sha256": "1b288ae6af50dffcbe1856a21dc550bff4e4551896751e2f1f7becfab9465f6a"
     }
   ],

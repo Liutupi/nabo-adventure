@@ -22,7 +22,7 @@
     "7e79d21a6fac2307a5099ff531a583794857a807632f49f10172c4318c3c2a0f"
   ],
   "source_sha256": [
-    "e918c2fe084895ced2a8f23c16ca37dcf7154e291e8b5a561bf74ba5ec31e78f"
+    "9f85cc928423214e0f275f59f793ac5f9e8ad6b3f64e9c382b9896f278307b60"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/deep-sea/shell.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\deep-sea\\shell.png",
       "sha256": "9f85cc928423214e0f275f59f793ac5f9e8ad6b3f64e9c382b9896f278307b60"
     }
   ],

@@ -24,7 +24,7 @@
     "846d6665de4a29220d0235e246d25a524fd9d4f678bd383060b419d94d2aec84"
   ],
   "source_sha256": [
-    "8c98b7f01db7f6c03cd739de3ca95fde13760cd3bf5ee56a565f0dc0830f925e"
+    "ac128f0afb2902bdc9418a51d87068c238690d326125d664fbebe84cd5729c94"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -37,7 +37,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/landmarks/climb.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\landmarks\\climb.png",
       "sha256": "ac128f0afb2902bdc9418a51d87068c238690d326125d664fbebe84cd5729c94"
     }
   ],

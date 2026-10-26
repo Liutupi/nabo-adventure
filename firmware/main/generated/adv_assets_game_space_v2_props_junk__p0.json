@@ -1,0 +1,53 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_props_junk__p0",
+  "width": 12,
+  "height": 10,
+  "palette_rgb565": [
+    0,
+    23310,
+    40215,
+    52555,
+    55004
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 58,
+  "table_bytes": 34,
+  "frame_sha256": [
+    "3f78218119d5546490c90b5aabbd40dd58c75bed584c385f5a552d8d6169c66d"
+  ],
+  "source_sha256": [
+    "ff5d74498ab6201357a76dc8f31601f4cfb24c97cdf2ee5e125e1028ca644486"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/props/junk",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_props_junk__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\props-junk.png",
+      "sha256": "11f0d241e1a1c1a24f3b03f4ba36d90b14ee10303ee5ff43b89b88c671cb1c5a"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/props/junk",
+      "logical_symbol": "adv_assets_game_space_v2_props_junk__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

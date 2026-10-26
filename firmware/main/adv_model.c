@@ -164,15 +164,11 @@ static void record_result(adv_model_t *m)
 
 // V2 landscape games (NIGHT, SKI) hold UP all the time: middle DOWN starts/resumes/pauses (long),
 // left OK restarts from pause, and the map is reached only from the pause page.
-static bool v2(int station) { return station == 4 || station == 6; }
-// SPACE holds UP to move: only two genuinely short UP taps may leave for the map.
-static bool holds_up(int station) { return station == 8; }
-static int short_up_taps(const adv_model_t *m) { return ((adv_space_t *)m->game)->short_taps; }
+static bool v2(int station) { return station == 4 || station == 6 || station == 8; }
 // Pause: V2 games long middle DOWN, SPACE two short DOWN taps, everyone else long UP.
 static bool pause_key(const adv_model_t *m, adv_btn_t b, adv_ev_t e)
 {
     if (v2(m->station)) return b == ADV_BTN_DOWN && e == ADV_EV_LONG;
-    if (m->station == 8) return b == ADV_BTN_DOWN && e == ADV_EV_DOUBLE && ((adv_space_t *)m->game)->down_taps >= 2;
     return b == ADV_BTN_UP && e == ADV_EV_LONG;
 }
 
@@ -181,7 +177,6 @@ static void session_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
     adv_btn_t confirm=v2(m->station)?ADV_BTN_DOWN:ADV_BTN_OK,restart=v2(m->station)?ADV_BTN_OK:ADV_BTN_DOWN;
     if(adv_game_map_key(b,e)) {
         if(v2(m->station)&&m->phase==ADV_PLAY)return;
-        if(holds_up(m->station)&&m->phase==ADV_PLAY&&short_up_taps(m)<2)return;
         if(m->phase==ADV_END)record_result(m);
         cue(m,ADV_CUE_BACK);to_map(m);return;
     }
@@ -193,10 +188,6 @@ static void session_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
         else if(m->station==3&&b==ADV_BTN_DOWN&&click)start_practice(m);
         break;
     case ADV_PLAY:
-        if(holds_up(m->station)&&b==ADV_BTN_UP&&(e==ADV_EV_PRESS||e==ADV_EV_RELEASE)) {
-            adv_space_up_event(m->game,e==ADV_EV_PRESS);
-        }
-        if(m->station==8&&b==ADV_BTN_DOWN&&(e==ADV_EV_PRESS||e==ADV_EV_RELEASE))adv_space_down_event(m->game,e==ADV_EV_PRESS);
         if (pause_key(m, b, e)) { m->phase = ADV_PAUSE; cue(m, ADV_CUE_BACK); break; }
         if (e == ADV_EV_PRESS) {
             if (b == ADV_BTN_OK) m->input.ok_down = 1;

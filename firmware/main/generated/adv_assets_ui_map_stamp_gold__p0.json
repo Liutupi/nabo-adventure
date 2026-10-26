@@ -20,7 +20,7 @@
     "644173a0b0a651a8d004334907f1da2686a3386eb6134f650afabe892538a94e"
   ],
   "source_sha256": [
-    "a6605c3dad7b9b52e58ab0b3c6edc304d402db0371c9e31b234da9a1b8002eef"
+    "7f6368aa230e72a880f99658616524e8055118418dc46832962490106578a2db"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/map/stamp-gold.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\stamp-gold.png",
       "sha256": "6c8ac5c09baa830d983e8485da8568bd98b10e5bcb3743839579a46264bd79e3"
     }
   ],

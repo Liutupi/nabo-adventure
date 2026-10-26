@@ -166,12 +166,10 @@ class Mutations(unittest.TestCase):
         ('adv_model.c', 'if (!m->test) {', 'if (true) {'),
         # Every station now runs a formal game; the placeholder engine is no longer reachable, so its
         # mutants were retired. The hold-to-move games guard their exits and pause gestures instead.
-        ('adv_model.c', 'static bool holds_up(int station) { return station == 8; }',
-         'static bool holds_up(int station) { return station == 6; }'),
         ('adv_model.c', 'if(v2(m->station)&&m->phase==ADV_PLAY)return;', 'if(v2(m->station)&&m->phase==ADV_PAUSE)return;'),
-        ('adv_model.c', 'static bool v2(int station) { return station == 4 || station == 6; }',
+        ('adv_model.c', 'static bool v2(int station) { return station == 4 || station == 6 || station == 8; }',
          'static bool v2(int station) { return station == 4; }'),
-        ('adv_model.c', '((adv_space_t *)m->game)->down_taps >= 2', '((adv_space_t *)m->game)->down_taps >= 1'),
+        ('adv_model.c', 'station == 4 || station == 6 || station == 8', 'station == 4 || station == 6'),
     ]
 
     def test_mutants_are_caught(self):

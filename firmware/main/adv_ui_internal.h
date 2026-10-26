@@ -46,3 +46,5 @@ void ui_draw_climb_session(ag_t *g,const adv_model_t *m);
 void ui_draw_ski_session(ag_t *g,const adv_model_t *m);
 void ui_draw_sky_session(ag_t *g,const adv_model_t *m);
 void ui_draw_space_session(ag_t *g,const adv_model_t *m);
+void ui_space_close(void);
+uint32_t ui_space_staging_bytes(void);

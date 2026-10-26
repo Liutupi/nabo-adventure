@@ -21,7 +21,7 @@
     "0362a142d80edb6492e06ae6bcc300c6a72f44e63ce1b9262f297d45708e8218"
   ],
   "source_sha256": [
-    "1889b89384d8cfcba17f5f1680df615e19e3e0592842c11fc779e0ff10ea4ef4"
+    "84e4d5dbb2b070c2af9748e8ba4acf96ee1449df8c8acd464d5b0ce840829625"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/deep-sea/coral-fan.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\deep-sea\\coral-fan.png",
       "sha256": "84e4d5dbb2b070c2af9748e8ba4acf96ee1449df8c8acd464d5b0ce840829625"
     }
   ],

@@ -20,7 +20,7 @@
     "48998a4f2d41f35706ab69183b23587ef419e3d79e63d2cadc5c6cf9c90464da"
   ],
   "source_sha256": [
-    "2dc6002bd601682c04f2e2f7d820fed78ea3b14032cc4adb273317c36bd9b8b4"
+    "9fc98cc1c143f19201eb40a9f409dc40265af600c24b02c0d562dc02d112c25a"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/ski/snow-track.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\ski\\snow-track.png",
       "sha256": "9fc98cc1c143f19201eb40a9f409dc40265af600c24b02c0d562dc02d112c25a"
     }
   ],

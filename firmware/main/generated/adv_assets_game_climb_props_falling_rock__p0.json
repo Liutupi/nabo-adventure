@@ -22,7 +22,7 @@
     "5cb46cda340a6d21204ff558854b64865a8d8fe953c07b4fa7c2fa2fb90726dc"
   ],
   "source_sha256": [
-    "ccd291c06979b12971e33babe364b4588d69cef85cea7430af471454339699f2"
+    "9f980c19382582a94a84cc7c7baac18963fdd9faf871c6543cd8defba38d0b9b"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/climb/props/falling-rock.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\climb\\props\\falling-rock.png",
       "sha256": "9f980c19382582a94a84cc7c7baac18963fdd9faf871c6543cd8defba38d0b9b"
     }
   ],

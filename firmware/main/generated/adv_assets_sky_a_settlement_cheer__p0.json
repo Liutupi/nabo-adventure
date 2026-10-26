@@ -103,14 +103,14 @@
     "1460004683c57274c2021061cba3b0a419d3d157653908811e14a7088e9dcfa8"
   ],
   "source_sha256": [
-    "a0b89047a5e3fba9b1011221cbbda7ec779d7d99fa81191a9cd038c723a40de7",
-    "719321f8c6abc177197893f9fb865c4143c42eff2446879a5d7ae1404cc2e13c",
-    "efa36bdafa47cad63709a12cc723b87819bccb4acb6e34b413387bb52bc664cf",
-    "a9427e561eea7ef35d49abc6eb4d9f5b54c929d083796ba1142a71b2c10ba53c",
-    "056020a074fd6faabe9dc8464765ea329f8293711b3e2039c635fc25092c0f39",
-    "62f92a2cf86b3892684a8ef52287bbdf577edbc5fcae959dac828ffc54b07eef",
-    "b9bba61ddc6498bac832c136791e436565398695dc72ea02c8e35ff699055908",
-    "a0b89047a5e3fba9b1011221cbbda7ec779d7d99fa81191a9cd038c723a40de7"
+    "0a9bfd56511d68a43c9884b17bce76fa11b8290b69063419e1fae0270f5e7a24",
+    "a1a82fc378bd9f501425a8e5e7cde9f6b7ad09de2ab0760f856ceef7d3485fd3",
+    "e64eb01ddb8651581ec36124520a83522fd210e9f6d21df5b9c687ab2e2095a2",
+    "5c6ee047328af5083e325d0c57343de25a7c209ec8c24b2b709d3ebf435f2004",
+    "e088ab57732dd9227c5b744242995456107e73ea6c33f902cd7e362180cd4e76",
+    "aeec8584f731674b45bf738986af8cf5d1eae8816390986838efad806bb22b50",
+    "5f73121a46a259e7f8638ae8ea41223368d6c7153a1609d390e6b944513903ee",
+    "0a9bfd56511d68a43c9884b17bce76fa11b8290b69063419e1fae0270f5e7a24"
   ],
   "verified_frames": 8,
   "comparison": "lossless after shared RGB565 quantization",
@@ -123,35 +123,35 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/settlement_cheer/000.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\settlement_cheer\\000.png",
       "sha256": "0a9bfd56511d68a43c9884b17bce76fa11b8290b69063419e1fae0270f5e7a24"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/settlement_cheer/001.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\settlement_cheer\\001.png",
       "sha256": "a1a82fc378bd9f501425a8e5e7cde9f6b7ad09de2ab0760f856ceef7d3485fd3"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/settlement_cheer/002.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\settlement_cheer\\002.png",
       "sha256": "e64eb01ddb8651581ec36124520a83522fd210e9f6d21df5b9c687ab2e2095a2"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/settlement_cheer/003.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\settlement_cheer\\003.png",
       "sha256": "5c6ee047328af5083e325d0c57343de25a7c209ec8c24b2b709d3ebf435f2004"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/settlement_cheer/004.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\settlement_cheer\\004.png",
       "sha256": "e088ab57732dd9227c5b744242995456107e73ea6c33f902cd7e362180cd4e76"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/settlement_cheer/005.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\settlement_cheer\\005.png",
       "sha256": "aeec8584f731674b45bf738986af8cf5d1eae8816390986838efad806bb22b50"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/settlement_cheer/006.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\settlement_cheer\\006.png",
       "sha256": "5f73121a46a259e7f8638ae8ea41223368d6c7153a1609d390e6b944513903ee"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/settlement_cheer/007.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\settlement_cheer\\007.png",
       "sha256": "0a9bfd56511d68a43c9884b17bce76fa11b8290b69063419e1fae0270f5e7a24"
     }
   ],

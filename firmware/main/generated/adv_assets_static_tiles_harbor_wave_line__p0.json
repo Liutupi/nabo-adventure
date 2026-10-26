@@ -19,7 +19,7 @@
     "bee5d2dbdc1b087050db33e21ebeaefa7a7bcd8379cbfb1f976c4fb4606fe7d7"
   ],
   "source_sha256": [
-    "34d13f2e93e47e97a05ded396273a2731b56a873f9ef32359923d81fee4bf344"
+    "16297e2d826c2942b8ca05d504e486b3e7bd5830dd792db0c5b10c7f2c70d658"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/harbor/wave-line.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\harbor\\wave-line.png",
       "sha256": "16297e2d826c2942b8ca05d504e486b3e7bd5830dd792db0c5b10c7f2c70d658"
     }
   ],

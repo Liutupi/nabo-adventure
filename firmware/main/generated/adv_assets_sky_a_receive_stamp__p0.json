@@ -89,10 +89,10 @@
     "ad58c330561f872e04d3e53936006f5c31ac91e107e166e00b38b04d6a1c61c5"
   ],
   "source_sha256": [
-    "50c43c5efb68fae28e08e4888336833ea96cd65967c713fbf213fd97bd61d3e3",
-    "3d9a095099df4dc8f46c7129c278ac0114a8bfa9aaa48d120a3f8faa54404543",
-    "290fa5284a712ca8140769d695a8fd73cff9d59d4bc1e154d29d42555593d460",
-    "50c43c5efb68fae28e08e4888336833ea96cd65967c713fbf213fd97bd61d3e3"
+    "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433",
+    "c382538f9424e24cba8533fcf690c5f886af74a5f8f2e30aa1d6e33884839f17",
+    "30f3d65cdf289075d94456b7d6a011b8306b5a7fbaec1b92d1b27c602f8480e5",
+    "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
   ],
   "verified_frames": 4,
   "comparison": "lossless after shared RGB565 quantization",
@@ -105,19 +105,19 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/receive_stamp/000.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\receive_stamp\\000.png",
       "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/receive_stamp/001.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\receive_stamp\\001.png",
       "sha256": "c382538f9424e24cba8533fcf690c5f886af74a5f8f2e30aa1d6e33884839f17"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/receive_stamp/002.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\receive_stamp\\002.png",
       "sha256": "30f3d65cdf289075d94456b7d6a011b8306b5a7fbaec1b92d1b27c602f8480e5"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/receive_stamp/003.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\receive_stamp\\003.png",
       "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
     }
   ],

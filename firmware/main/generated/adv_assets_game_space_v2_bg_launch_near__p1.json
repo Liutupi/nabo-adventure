@@ -1,0 +1,68 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_bg_launch_near__p1",
+  "width": 64,
+  "height": 150,
+  "palette_rgb565": [
+    0,
+    15305,
+    19432,
+    23754,
+    25738,
+    27851,
+    31431,
+    31530,
+    31827,
+    32043,
+    39883,
+    44076,
+    46188,
+    46618,
+    50446,
+    52461,
+    56687,
+    56752,
+    59230,
+    60945
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 4473,
+  "table_bytes": 344,
+  "frame_sha256": [
+    "de59a2986872caabf968bddb434b5c49ae0a8462f0a63a04a31f288e313c5836"
+  ],
+  "source_sha256": [
+    "8da4517ab5ed679b3c18e8d6b1f0c6b8196b8d52db13f9e5306d02b5b437c50a"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/bg/launch-near",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_bg_launch_near__p1",
+  "offset": [
+    256,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\bg-launch-near.png",
+      "sha256": "6749d1835a889df2ff0cba4b3b6caf137b0d8a9c275f914e3d5c89c4e68ec868"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/bg/launch-near",
+      "logical_symbol": "adv_assets_game_space_v2_bg_launch_near__p1",
+      "offset": [
+        256,
+        0
+      ]
+    }
+  ]
+}

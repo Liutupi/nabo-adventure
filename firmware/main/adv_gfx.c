@@ -1,6 +1,20 @@
 #include "adv_gfx.h"
 
 #include <string.h>
+#include <stdio.h>
+#ifdef ESP_PLATFORM
+#include "esp_cpu.h"
+#endif
+static bool s_profile_pending,s_profiling;
+static uint32_t s_profile_cycles[16],s_profile_calls[16];
+void ag_profile_next(void){s_profile_pending=true;}
+static uint32_t cycles(void){
+#ifdef ESP_PLATFORM
+    return esp_cpu_get_cycle_count();
+#else
+    return 0;
+#endif
+}
 
 // ---------- display list ----------
 
@@ -248,7 +262,7 @@ static void add_rect(const ag_t *g,rect_t *r, int *n, int x0, int y0, int x1, in
 
 // ---------- composition ----------
 
-static void paint(ag_t *g, const ag_op_t *op, int y, int x0, int x1, uint16_t *row)
+static void paint_op(ag_t *g, const ag_op_t *op, int y, int x0, int x1, uint16_t *restrict row)
 {
     if (y < op->y0 || y >= op->y1 || x1 <= op->x0 || x0 >= op->x1) return;
     switch (op->kind) {
@@ -293,6 +307,12 @@ static void paint(ag_t *g, const ag_op_t *op, int y, int x0, int x1, uint16_t *r
     }
 }
 
+static void paint(ag_t *g,const ag_op_t *op,int y,int x0,int x1,uint16_t *row)
+{
+    if(!s_profiling){paint_op(g,op,y,x0,x1,row);return;}
+    uint32_t at=cycles();paint_op(g,op,y,x0,x1,row);
+    if(op->kind<16){s_profile_cycles[op->kind]+=cycles()-at;s_profile_calls[op->kind]++;}
+}
 static void compose(ag_t *g, int x0, int y0, int x1, int y1)
 {
     int w = x1 - x0;
@@ -301,8 +321,14 @@ static void compose(ag_t *g, int x0, int y0, int x1, int y1)
         uint16_t *px = g->strip[g->which];
         g->which ^= 1;
         memset(px, 0, (size_t)(w * h) * 2);
-        for (int r = 0; r < h; r++)
-            for (int i = 0; i < g->n; i++) paint(g, &g->ops[i], y + r, x0, x1, px + r * w);
+        // Rows are independent; keep each layer's code, palette and RLE rows hot
+        // across the strip, and skip layers outside it before calling painters.
+        for(int i=0;i<g->n;i++){
+            const ag_op_t *op=&g->ops[i];
+            if(x1<=op->x0||x0>=op->x1)continue;
+            int first=y>op->y0?y:op->y0,last=y+h<op->y1?y+h:op->y1;
+            for(int yy=first;yy<last;yy++)paint(g,op,yy,x0,x1,px+(yy-y)*w);
+        }
         for (int k = 0; k < w * h; k++) px[k] = (uint16_t)(px[k] << 8 | px[k] >> 8);   // panel order
         g->send(g->ctx, x0, y, w, h, px);
         g->bytes += (uint32_t)(w * h * 2);
@@ -311,6 +337,8 @@ static void compose(ag_t *g, int x0, int y0, int x1, int y1)
 
 void ag_flush(ag_t *g)
 {
+    s_profiling=s_profile_pending;s_profile_pending=false;
+    if(s_profiling){memset(s_profile_cycles,0,sizeof(s_profile_cycles));memset(s_profile_calls,0,sizeof(s_profile_calls));}
     rect_t rects[AG_MAX_RECTS];
     int n = 0;
     bool overflow = g->full || g->scene_id != g->prev_scene_id;
@@ -335,4 +363,16 @@ void ag_flush(ag_t *g)
     g->prev_n = g->n;
     g->prev_scene_id = g->scene_id;
     g->full = false;
+    if(s_profiling){
+#ifdef ESP_PLATFORM
+        flockfile(stdout);
+#endif
+        printf("@gfx_profile {\"bytes\":%u,\"ops\":%d,\"kinds\":[",(unsigned)g->bytes,g->n);
+        for(unsigned i=0;i<16;i++)printf("%s[%u,%u,%u]",i?",":"",i,(unsigned)s_profile_cycles[i],(unsigned)s_profile_calls[i]);
+        puts("]}");
+#ifdef ESP_PLATFORM
+        funlockfile(stdout);
+#endif
+        s_profiling=false;
+    }
 }

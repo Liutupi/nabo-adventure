@@ -1,0 +1,53 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_bg_aurora__p0",
+  "width": 256,
+  "height": 120,
+  "palette_rgb565": [
+    0,
+    15924,
+    21719,
+    24470,
+    55292
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 6022,
+  "table_bytes": 254,
+  "frame_sha256": [
+    "658c400396e53c42166d92534ada2e8ed5b46a9e4feea0eaebf293f2d6300812"
+  ],
+  "source_sha256": [
+    "844f641138f97357a85189650c0f3aede0e39e5d556e63f47f21132d8b3a31f9"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/bg/aurora",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_bg_aurora__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\bg-aurora.png",
+      "sha256": "785b63c29765a45298388411c0a88d52081f1f8b0ddad0bfdeef4f46c3fcb90e"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/bg/aurora",
+      "logical_symbol": "adv_assets_game_space_v2_bg_aurora__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

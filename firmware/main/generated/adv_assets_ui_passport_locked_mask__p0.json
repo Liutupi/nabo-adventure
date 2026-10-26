@@ -20,7 +20,7 @@
     "d4f99604d2a6c1106568fa203c004ca5a6111ccc682173733f826e36791bedf8"
   ],
   "source_sha256": [
-    "17c627fc9a6d04a7686fb7328f408678c7ef289560ae4f12c541756176868cf8"
+    "c4d2ced2471f8d881beea04f60cef4a04436a7ee460d2c928b72386de8232ccc"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/passport/locked-mask.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\passport\\locked-mask.png",
       "sha256": "d066f67fd07dce0d466507993d8a8ff7fbd996be26a1679207b7186df9986146"
     }
   ],

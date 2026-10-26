@@ -1,5 +1,5 @@
 """Opaque span shortcuts must retain the original coverage and clipping pixels."""
-import ctypes,random,subprocess,tempfile,unittest
+import ctypes,math,random,subprocess,tempfile,unittest
 from pathlib import Path
 from host_tools import CC,SHARED_EXPORT,unload_library
 ROOT=Path(__file__).resolve().parents[1];BOARD=ROOT/'firmware/main'
@@ -18,10 +18,16 @@ void rect(int x,int y,int w,int h,int color,int yy,int x0,int x1,uint16_t *row){
  op.u.rect.x=x;op.u.rect.y=y;op.u.rect.w=w;op.u.rect.h=h;op.u.rect.fill=color;op.u.rect.alpha=255;
  ag_paint_rect(&op,yy,x0,x1,row);
 }
+void rounded(int x,int y,int w,int h,int r,int alpha,int color,int yy,int x0,int x1,uint16_t *row){
+ ag_op_t op={.x0=x,.y0=y,.x1=x+w,.y1=y+h};
+ op.u.rect.x=x;op.u.rect.y=y;op.u.rect.w=w;op.u.rect.h=h;op.u.rect.r=r;op.u.rect.fill=color;op.u.rect.alpha=alpha;
+ ag_paint_rect(&op,yy,x0,x1,row);
+}
 ''','utf-8')
   libpath=folder/'shapes.dll'
   subprocess.run([CC,'-std=c11','-O2','-shared',SHARED_EXPORT,'-Wall','-Wextra','-Werror','-I',str(ROOT/'tests/adv_host'),'-I',str(BOARD),str(source),str(BOARD/'adv_shapes.c'),str(BOARD/'adv_text.c'),'-o',str(libpath)],check=True)
   cls.lib=ctypes.CDLL(str(libpath));cls.lib.tri.argtypes=[ctypes.c_int]*8+[ctypes.c_void_p];cls.lib.rect.argtypes=[ctypes.c_int]*8+[ctypes.c_void_p]
+  cls.lib.rounded.argtypes=[ctypes.c_int]*10+[ctypes.c_void_p]
  @classmethod
  def tearDownClass(cls):unload_library(cls.lib._handle);cls.tmp.cleanup()
  @staticmethod
@@ -54,4 +60,20 @@ void rect(int x,int y,int w,int h,int color,int yy,int x0,int x1,uint16_t *row){
    if y<=yy<y+h:
     for xx in range(max(x0,x),min(x1,x+w)):want[xx-x0]=color
    self.assertEqual(list(pixels)[1:-1],want,(x,y,w,h,yy,x0,x1))
+   self.assertEqual((pixels[0],pixels[-1]),(0x1357,0x2468))
+ def test_rounded_fills_and_smoke_circles_retain_original_coverage(self):
+  rng=random.Random(210)
+  for _ in range(1600):
+   x=rng.randrange(-120,260);y=rng.randrange(-40,200);w=rng.randrange(1,321);h=rng.randrange(1,241)
+   r=rng.randrange(0,max(w,h)//2+1);alpha=rng.randrange(256);color=rng.randrange(65536)
+   yy=y+rng.randrange(-2,h+3);x0=rng.randrange(160);x1=rng.randrange(160,321)
+   before=[rng.randrange(65536) for _ in range(x1-x0)];pixels=(ctypes.c_uint16*(x1-x0+2))(0x1357,*before,0x2468)
+   self.lib.rounded(x,y,w,h,r,alpha,color,yy,x0,x1,ctypes.byref(pixels,2));want=before[:]
+   cx=x*16+w*8;cy=y*16+h*8;py=yy*16+8;radius=r*16
+   for xx in range(max(x0,x),min(x1,x+w)):
+    qx=abs(xx*16+8-cx)-(w*8-radius);qy=abs(py-cy)-(h*8-radius)
+    out=math.isqrt(qx*qx+qy*qy) if qx>0 and qy>0 else max(qx,qy)
+    cov=max(0,min(16,8-(out-radius)))*16
+    if cov:want[xx-x0]=self.blend(before[xx-x0],color,cov*alpha//255)
+   self.assertEqual(list(pixels)[1:-1],want,(x,y,w,h,r,alpha,yy,x0,x1))
    self.assertEqual((pixels[0],pixels[-1]),(0x1357,0x2468))

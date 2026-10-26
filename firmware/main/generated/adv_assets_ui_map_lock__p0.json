@@ -20,7 +20,7 @@
     "95ed1d96ad020b3563750bda1d74c0a0d39e7a1ae0a8420b5c5239bf76899da9"
   ],
   "source_sha256": [
-    "eb1c5ca98a4b4f9806e1de4e84b876eaa33cc5748aa8e7c17bff5b788c672b13"
+    "75f2f27c837a9cac12552b8419fb99e407616ec0e7a9e302cec410ae79948f04"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/map/lock.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\lock.png",
       "sha256": "b340d12d645006f7be1a710984fb1c7e0ef70d4532840d91c5fc676339cc2b58"
     }
   ],

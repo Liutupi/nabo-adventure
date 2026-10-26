@@ -25,7 +25,7 @@
     "e9548fe7b7efa5a907d3c8f75b2a4d73035267223108f4ccfa9c391dd0661106"
   ],
   "source_sha256": [
-    "bfaa836be828211cccd2703381e55d5fa9f8974b04c7cd3ebd1665a5ddde7aba"
+    "835e69ed79dc5212399a229b2a398dd627f726f545e9c28cefcd4778961943f0"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -38,7 +38,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/landmarks/sky.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\landmarks\\sky.png",
       "sha256": "835e69ed79dc5212399a229b2a398dd627f726f545e9c28cefcd4778961943f0"
     }
   ],

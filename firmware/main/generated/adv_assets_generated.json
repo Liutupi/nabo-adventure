@@ -51,16 +51,16 @@
       "static_bytes_estimate_c3": 32001
     },
     "space": {
-      "rle_bytes": 29615,
-      "table_bytes": 5880,
-      "descriptor_catalog_estimate_c3": 1291,
-      "resources": 15,
-      "pieces": 15,
-      "frames": 49,
-      "physical_sprites": 15,
-      "physical_frames": 49,
+      "rle_bytes": 186873,
+      "table_bytes": 12864,
+      "descriptor_catalog_estimate_c3": 4346,
+      "resources": 44,
+      "pieces": 54,
+      "frames": 88,
+      "physical_sprites": 54,
+      "physical_frames": 88,
       "interned_pieces": 0,
-      "static_bytes_estimate_c3": 36786
+      "static_bytes_estimate_c3": 204083
     },
     "static": {
       "rle_bytes": 49523,
@@ -102,7 +102,7 @@
   "tools_sha256": {
     "tools/generate_adv_sprites.py": "91b7a530c8f5c56be690ba053f94892886a2e21cbae360cfef8192e03f90d6bf",
     "tools/build_adventure_assets.py": "d21da1edb91ddad201c23d5b22ff50f871c521c1f3b9b80597e041d04f14c276",
-    "tools/adventure_assets_manifest.py": "e7cf951c1fa9def63a5c1e17a8d3450868001a98472205f4e15e359f45cf340f",
+    "tools/adventure_assets_manifest.py": "1eeafdbcbe2baf79a8e698844ded714a5f34b2720a8e5705de19bf5bf020c4af",
     "tools/adventure_assets_emit.py": "6698b23c132b9cf4387c4ab866bac7d04eed9f9637064ce1b52b11f58da2e4bc",
     "tools/adventure_assets_verify.py": "46bc8a4727cb94f50afebfb99c3f7470e8260550384bb07ab04b2c6569e8e106",
     "tools/generate_boot_presentation.py": "1a61eab768fbbaaf460ebd8245167b09eac8b42a2fae1fe3fec55585646452dc",
@@ -120,7 +120,7 @@
     "firmware/main/third_party/pl_mpeg/pl_mpeg.h": "f663908a6a0dbb08d3d540c39af971766d45a62b6f641f245fc0c270ac169d3e"
   },
   "generated_code_sha256": {
-    "adv_assets_catalog.c": "bd63ed27c361dd8d4ba049f31b9058d29142d2e119c9e7ef4df06272e9efc08d",
+    "adv_assets_catalog.c": "75ac7b7c67fa2c709def6ec70a8508805beddaadb8c30ee3ec6b789e52054735",
     "adv_assets_catalog.h": "045bda6ae2668d6c708cbbcbe630f74e3d527ec186931ac34b657f23b6848193",
     "adv_assets_climb_a_charge_left__p0.c": "6f36364909168f952783c9e8e6d1f88e27f024476a4d11a4fb97129442b48d90",
     "adv_assets_climb_a_charge_left__p0.h": "d124be9a3ae8451fed0efa6c431a48e48c2a8e7232206002431cabbd1494f5b2",
@@ -282,6 +282,84 @@
     "adv_assets_game_space_tiles_lunar_1__p0.h": "13ab2a38fe6fefd7e32c07a2a2ed6e9aede7838129faa2f7149f583410e75dd5",
     "adv_assets_game_space_tiles_lunar_2__p0.c": "3bb72787987f20ecf214084f6546270ad99940c558caeaece258275ed0ae0d1d",
     "adv_assets_game_space_tiles_lunar_2__p0.h": "57e5de0b16d867917c9bbd6764e4466eb43d11f3b9e344883bd60bf76f1e294f",
+    "adv_assets_game_space_v2_bg_aurora__p0.c": "f581ef3012ca3065ce5b78dec5bb747bf36f931ab4265b577f0b2ef053b2fa9d",
+    "adv_assets_game_space_v2_bg_aurora__p0.h": "9fc52ffa61e046925763dba9b2d5f6383f3e39110ffebfbd09f3a141226386dc",
+    "adv_assets_game_space_v2_bg_aurora__p1.c": "59169fb7bada210de91d7ffee50bf27e1d508847011c82b15395985d25111413",
+    "adv_assets_game_space_v2_bg_aurora__p1.h": "0002751c6e920de0997580bd99d4c7ae55cb8e7153c8a3026866d21329d437e2",
+    "adv_assets_game_space_v2_bg_cirrus__p0.c": "9dae67ef7065f54ec482a8a09319efc3ba83a0cd84ef3cd63835bd3c3fff92c2",
+    "adv_assets_game_space_v2_bg_cirrus__p0.h": "f8c2f229183a6fb58f304d5e840a8c9706758cee932ba5b805c6d9549c9a2758",
+    "adv_assets_game_space_v2_bg_cirrus__p1.c": "75e77e6660fd4f9acf3699d9e261bf25efd7b7c4f0a3d1f060b6ee8569709397",
+    "adv_assets_game_space_v2_bg_cirrus__p1.h": "db845e455fd5caecdafa21650d2c4fc077f4b34ff09033be689ad317fb2ac042",
+    "adv_assets_game_space_v2_bg_cloud_a__p0.c": "7388636ecd2ff54b1e447c4049d36128a1d4e170b6bad8b0da821ddbcb832a76",
+    "adv_assets_game_space_v2_bg_cloud_a__p0.h": "f63ff593ced1b0d9d988fa3f9e340c0722e03266d033cbc4bf293ab83f3c7a76",
+    "adv_assets_game_space_v2_bg_cloud_a__p1.c": "8291a0879ad6bf3178671a7143f0c006d612eda4bde12fda861831a27ff02833",
+    "adv_assets_game_space_v2_bg_cloud_a__p1.h": "132e2ec88037f9fbdbd1b62aca20dacdaee5909a2bb829c07e074ab6716aadfb",
+    "adv_assets_game_space_v2_bg_cloud_b__p0.c": "56d312b2a4c6479dee464ee20b005df6a3636a539f14da6a2e171227b359b66b",
+    "adv_assets_game_space_v2_bg_cloud_b__p0.h": "2713a9447046ccdb6595ac2ffbcd5cc0b41c31432fe81b47c684f047a52d1171",
+    "adv_assets_game_space_v2_bg_cloud_b__p1.c": "d1f93c62e5e847df7f9ccdd763847b75eca3a6716ce1142672b3e96936945b1c",
+    "adv_assets_game_space_v2_bg_cloud_b__p1.h": "ddf8e31a70e5aa4f701a065393f5f85abadd32500c9386b345f1dc39470aed40",
+    "adv_assets_game_space_v2_bg_cloud_far__p0.c": "0e3aa6a640ab4242ebbab7a9b1fc28cb5ab22af28f3a1560e061471cf883666c",
+    "adv_assets_game_space_v2_bg_cloud_far__p0.h": "b3797ede19cbe497fda5f2108b83cb4945ca69f9dfd06636fe96f8272e25c0fb",
+    "adv_assets_game_space_v2_bg_cloud_far__p1.c": "61ca0ea1fc02b0e13ec633e7de27bf0f84ce8ce449d51d0e3e643c920c2d794e",
+    "adv_assets_game_space_v2_bg_cloud_far__p1.h": "54a4d9e152a790b655d5cf3631838118327dde8f52aecde3b11346d1e7da4aa1",
+    "adv_assets_game_space_v2_bg_earth_limb__p0.c": "55d33647eceae5a9f07c6428bca1694001aeefa68afddb666393ac668653dc6c",
+    "adv_assets_game_space_v2_bg_earth_limb__p0.h": "86aca3312118344cf41de2326a9d90b5a0f72b8635b72083ee3daad4107827ba",
+    "adv_assets_game_space_v2_bg_earth_limb__p1.c": "5c8cab71e6c5cb50ea7d6d3be417033e1a7911ca4166fd189631f4004d3d71d9",
+    "adv_assets_game_space_v2_bg_earth_limb__p1.h": "a89e005a4c81a958004ce0a3b16154d98380afbf4198c48a56d21bb066b1e8f7",
+    "adv_assets_game_space_v2_bg_launch_far__p0.c": "12bc7abc5bbe38d011d853f14ebf52893a141a98d01b6708928e0caf3c6ea91a",
+    "adv_assets_game_space_v2_bg_launch_far__p0.h": "cbb0e8b9bb10273d064b2d342425bfa157f4939b25063045a17d09932921ba56",
+    "adv_assets_game_space_v2_bg_launch_far__p1.c": "b4b43756191c35cfc150c102d60a4430ebad6cc380688a00cd70fd63706d5722",
+    "adv_assets_game_space_v2_bg_launch_far__p1.h": "bc19c54f301e16d113cc230b6521b56140eec1286b66164e5aa5fc9a4c69b8de",
+    "adv_assets_game_space_v2_bg_launch_near__p0.c": "d45ddd68ac99baa78252a8b2bf9535aebf8553b1e7f4903b805372de1422735b",
+    "adv_assets_game_space_v2_bg_launch_near__p0.h": "17afaabafb54ce8795a4401f99c1cf3c2d1e8033d84dbcfede94404dc753b61a",
+    "adv_assets_game_space_v2_bg_launch_near__p1.c": "a787885581c49362885edb4a6f39c98a7cb3fb8dbce6de80075777e0f5e6b8ae",
+    "adv_assets_game_space_v2_bg_launch_near__p1.h": "cf5e112945f4c54219abcc55857f834b968365df5259693197de544f5e53a2a3",
+    "adv_assets_game_space_v2_bg_lunar_surface__p0.c": "fb044957d5687417d879727495359a5f2fa539514c85cdbb8400b1b74b1be4b7",
+    "adv_assets_game_space_v2_bg_lunar_surface__p0.h": "dba710d7b6c6e3b4ffe319c0a36b2e452c9e49aa47ceaa27149894e08ce25251",
+    "adv_assets_game_space_v2_bg_lunar_surface__p1.c": "6022e18221fc9cbdf905b1055d4e0428af49d2d31174c0661e09efff422570b7",
+    "adv_assets_game_space_v2_bg_lunar_surface__p1.h": "304a55e4c17dd752f1b8a7fd1f72678538db5a351650bcee4c8e0df7121c5d9a",
+    "adv_assets_game_space_v2_bg_moon_128__p0.c": "214378ccdcf555cd8ebb732b8567fa2bab3f3657c73225724acf06d881ef0910",
+    "adv_assets_game_space_v2_bg_moon_128__p0.h": "ae95574f437b8526060bd7b301d5d775b5d68c30258a68659f7359dea4039b15",
+    "adv_assets_game_space_v2_bg_moon_32__p0.c": "202f214ca79351ac67e99c73312e731126d414318061a75d17ddb8f5d48ca559",
+    "adv_assets_game_space_v2_bg_moon_32__p0.h": "b03cb93da0066688be130bf61552feb071c9bd6026074afc14d271e7b27f29ce",
+    "adv_assets_game_space_v2_bg_moon_64__p0.c": "5b9dd5edd0cbe3258e40064a30bf9ef648e7d3d59e9e0a4842bd11fd16bf7940",
+    "adv_assets_game_space_v2_bg_moon_64__p0.h": "9513d7983f1ff8ac4d17634444f750c4f2dacf784fb056adabacd8508cb659e0",
+    "adv_assets_game_space_v2_bg_nebula__p0.c": "2a223045904c2197edf6d0187e09d8ac5e452d6dbc724b29d18c543c95dafba0",
+    "adv_assets_game_space_v2_bg_nebula__p0.h": "f7c5364aa8ec0f1196180f2235e2312b637638a8821c1f46133cc06aa9c93409",
+    "adv_assets_game_space_v2_bg_nebula__p1.c": "b05ef97aa3d8fcc5886289cf49d9b7e5cadf2f0d6188e39639ebb6057151e2fb",
+    "adv_assets_game_space_v2_bg_nebula__p1.h": "62e21320d6e8417c5d604480b6593123fce7eb53576af950f4fca99757294393",
+    "adv_assets_game_space_v2_bg_station__p0.c": "2e0fccb42bd5fe1d05d70b3b73a4f4e840e01fbbadde38dde19fb00c1e854c34",
+    "adv_assets_game_space_v2_bg_station__p0.h": "03048249da741bc3dcff18afa229e198f6b05d276af5640391b8c2b03bb4f5e2",
+    "adv_assets_game_space_v2_props_balloon__p0.c": "42bbf40f8d2ffa81350673ec2755bbbe71b45ed889569583eacaa7d5cfc5b28f",
+    "adv_assets_game_space_v2_props_balloon__p0.h": "ee7b2da90c18281c00876b60bb930fb893c2dce2d19686c94c8b1697ed640744",
+    "adv_assets_game_space_v2_props_birds_0__p0.c": "6eee635c349c01d7cd4dd0ce09e8f2929bb27c4759a953256806046f84b0e53c",
+    "adv_assets_game_space_v2_props_birds_0__p0.h": "d0fd3994229c4866417b5d22a9e5539bb42090f3dfdf8fac09d63a8fca584563",
+    "adv_assets_game_space_v2_props_birds_1__p0.c": "4657b82b8414352bd6bad491fd6943ee77b4cf2fcc7e78173c3c317f9a1dc9b6",
+    "adv_assets_game_space_v2_props_birds_1__p0.h": "648e925f7c3e26cc0cabd6a21aab186eb73ef8fc82218043fa1f1e69ae29817d",
+    "adv_assets_game_space_v2_props_booster__p0.c": "17f71cf3cb3f95ea40faa2d08ff892a1405f5efcf524adf8a9691c8eae34ec2e",
+    "adv_assets_game_space_v2_props_booster__p0.h": "35b7c220e36f0738aa3d83a1d2467879c6cd9c1e0db275126274f6232f0cef94",
+    "adv_assets_game_space_v2_props_comet__p0.c": "34adeb8a1b795d068ddc87ece1d7deeefd3003eb7b1489c328218519180b61ae",
+    "adv_assets_game_space_v2_props_comet__p0.h": "2c674ba7678e0e1f145c6cad04fb4970ef1e821da2e2d7184425f431a4c4d9c3",
+    "adv_assets_game_space_v2_props_comet_right__p0.c": "c0c3e2cb38f6e2b5b1659ea8f7cccdf10019577803e680c81d10f9afa26baaa0",
+    "adv_assets_game_space_v2_props_comet_right__p0.h": "d118cea664d3bf8f5b596f4504fb2fad17f95248ed7da4cb8d696d7f9970d9f9",
+    "adv_assets_game_space_v2_props_junk__p0.c": "5a2a2a77f79ba2159fed764b2563301e9d7f74ed202209ce56b9d616e703d0e3",
+    "adv_assets_game_space_v2_props_junk__p0.h": "59a254c371216128c2aa9cd672f804b8d112721743baa3bf85c024bdd95be379",
+    "adv_assets_game_space_v2_props_plane__p0.c": "313314069eb45ca466dadf1ed97f5322eb26679e21fc5c228937837f050f1dc6",
+    "adv_assets_game_space_v2_props_plane__p0.h": "db4e1ff82590dfedd331d2c26cd0761df538cb6a2ac4fbce50c58e514a8b29c4",
+    "adv_assets_game_space_v2_props_plane_left__p0.c": "1739f453d210ad8695a42c8228635448d7e8750aa7e9d31f89e9a88aadac80c6",
+    "adv_assets_game_space_v2_props_plane_left__p0.h": "1d7bfd5d0dbc5d32cc29f1fd3649fdfbc3c133396f8906a98147c4e02cc19fee",
+    "adv_assets_game_space_v2_props_repair__p0.c": "65c53e5e8ecdac9d5d45ecc5a43e0ae2411baac3953ad20935d864bf24a105ac",
+    "adv_assets_game_space_v2_props_repair__p0.h": "38c0710c765cc81644c082145e4c40d32e2e3186999689204d527eaac771d248",
+    "adv_assets_game_space_v2_props_rocket__p0.c": "b59a2a7f17a0849b10321553b263dc2fbc16b6a289daba95a86e706c6a53af0b",
+    "adv_assets_game_space_v2_props_rocket__p0.h": "ae3f21706c9dab185feb6af2793ef9b3806b1b33b8626c6e641bea4829b3ec43",
+    "adv_assets_game_space_v2_props_rocket_left__p0.c": "2c1c573b3c4ee9900e3923be00e8e738ceac7d50e3dc2c349766c5b597f0d703",
+    "adv_assets_game_space_v2_props_rocket_left__p0.h": "b106e9923af1f5db3293b572e5af5ec1452ffca3ca80b20aea0411a47262266d",
+    "adv_assets_game_space_v2_props_rocket_right__p0.c": "16845ff12ce59368b53d786df3a2d86878e5d8d77b6624ad2bd75d231df0e312",
+    "adv_assets_game_space_v2_props_rocket_right__p0.h": "368ddb003c2af0d54775522e372a2651b7b11bd1ce47e3ff35f85b31d311b940",
+    "adv_assets_game_space_v2_props_satellite__p0.c": "2491ebe084a89c1e7e99cb2d317c401c6633540b20a46ada5b0a6cac57cbd237",
+    "adv_assets_game_space_v2_props_satellite__p0.h": "14bc4e04f3d369895493b51328571b657f327138fc75142c559420f03cc36572",
+    "adv_assets_game_space_v2_props_storm_cloud__p0.c": "bd7c12f063233773f945536026844343eca5e81ca483e2aa659ad7dd892051b2",
+    "adv_assets_game_space_v2_props_storm_cloud__p0.h": "f7bbd47df4540aa361ec705cec91b13b4f7b7637b55a08e9c9baf8a0ecb6336e",
     "adv_assets_post_a_delivered__p0.c": "ca4b7121141c5e25c7af8f86e9497a9a6a926671eef3b8f41a05bac026429e4d",
     "adv_assets_post_a_delivered__p0.h": "773c9c8e97d8e5c82718cd2c95cad1d9f1077498079b75b05e174c53f707806a",
     "adv_assets_post_a_hit__p0.c": "41e178a1c50a06d3752c102547396f9bf6e4acb08ff531d1cd12c6d2948eefba",
@@ -922,6 +1000,123 @@
     "adv_assets_game_space_tiles_lunar_2__p0.c",
     "adv_assets_game_space_tiles_lunar_2__p0.h",
     "adv_assets_game_space_tiles_lunar_2__p0.json",
+    "adv_assets_game_space_v2_bg_aurora__p0.c",
+    "adv_assets_game_space_v2_bg_aurora__p0.h",
+    "adv_assets_game_space_v2_bg_aurora__p0.json",
+    "adv_assets_game_space_v2_bg_aurora__p1.c",
+    "adv_assets_game_space_v2_bg_aurora__p1.h",
+    "adv_assets_game_space_v2_bg_aurora__p1.json",
+    "adv_assets_game_space_v2_bg_cirrus__p0.c",
+    "adv_assets_game_space_v2_bg_cirrus__p0.h",
+    "adv_assets_game_space_v2_bg_cirrus__p0.json",
+    "adv_assets_game_space_v2_bg_cirrus__p1.c",
+    "adv_assets_game_space_v2_bg_cirrus__p1.h",
+    "adv_assets_game_space_v2_bg_cirrus__p1.json",
+    "adv_assets_game_space_v2_bg_cloud_a__p0.c",
+    "adv_assets_game_space_v2_bg_cloud_a__p0.h",
+    "adv_assets_game_space_v2_bg_cloud_a__p0.json",
+    "adv_assets_game_space_v2_bg_cloud_a__p1.c",
+    "adv_assets_game_space_v2_bg_cloud_a__p1.h",
+    "adv_assets_game_space_v2_bg_cloud_a__p1.json",
+    "adv_assets_game_space_v2_bg_cloud_b__p0.c",
+    "adv_assets_game_space_v2_bg_cloud_b__p0.h",
+    "adv_assets_game_space_v2_bg_cloud_b__p0.json",
+    "adv_assets_game_space_v2_bg_cloud_b__p1.c",
+    "adv_assets_game_space_v2_bg_cloud_b__p1.h",
+    "adv_assets_game_space_v2_bg_cloud_b__p1.json",
+    "adv_assets_game_space_v2_bg_cloud_far__p0.c",
+    "adv_assets_game_space_v2_bg_cloud_far__p0.h",
+    "adv_assets_game_space_v2_bg_cloud_far__p0.json",
+    "adv_assets_game_space_v2_bg_cloud_far__p1.c",
+    "adv_assets_game_space_v2_bg_cloud_far__p1.h",
+    "adv_assets_game_space_v2_bg_cloud_far__p1.json",
+    "adv_assets_game_space_v2_bg_earth_limb__p0.c",
+    "adv_assets_game_space_v2_bg_earth_limb__p0.h",
+    "adv_assets_game_space_v2_bg_earth_limb__p0.json",
+    "adv_assets_game_space_v2_bg_earth_limb__p1.c",
+    "adv_assets_game_space_v2_bg_earth_limb__p1.h",
+    "adv_assets_game_space_v2_bg_earth_limb__p1.json",
+    "adv_assets_game_space_v2_bg_launch_far__p0.c",
+    "adv_assets_game_space_v2_bg_launch_far__p0.h",
+    "adv_assets_game_space_v2_bg_launch_far__p0.json",
+    "adv_assets_game_space_v2_bg_launch_far__p1.c",
+    "adv_assets_game_space_v2_bg_launch_far__p1.h",
+    "adv_assets_game_space_v2_bg_launch_far__p1.json",
+    "adv_assets_game_space_v2_bg_launch_near__p0.c",
+    "adv_assets_game_space_v2_bg_launch_near__p0.h",
+    "adv_assets_game_space_v2_bg_launch_near__p0.json",
+    "adv_assets_game_space_v2_bg_launch_near__p1.c",
+    "adv_assets_game_space_v2_bg_launch_near__p1.h",
+    "adv_assets_game_space_v2_bg_launch_near__p1.json",
+    "adv_assets_game_space_v2_bg_lunar_surface__p0.c",
+    "adv_assets_game_space_v2_bg_lunar_surface__p0.h",
+    "adv_assets_game_space_v2_bg_lunar_surface__p0.json",
+    "adv_assets_game_space_v2_bg_lunar_surface__p1.c",
+    "adv_assets_game_space_v2_bg_lunar_surface__p1.h",
+    "adv_assets_game_space_v2_bg_lunar_surface__p1.json",
+    "adv_assets_game_space_v2_bg_moon_128__p0.c",
+    "adv_assets_game_space_v2_bg_moon_128__p0.h",
+    "adv_assets_game_space_v2_bg_moon_128__p0.json",
+    "adv_assets_game_space_v2_bg_moon_32__p0.c",
+    "adv_assets_game_space_v2_bg_moon_32__p0.h",
+    "adv_assets_game_space_v2_bg_moon_32__p0.json",
+    "adv_assets_game_space_v2_bg_moon_64__p0.c",
+    "adv_assets_game_space_v2_bg_moon_64__p0.h",
+    "adv_assets_game_space_v2_bg_moon_64__p0.json",
+    "adv_assets_game_space_v2_bg_nebula__p0.c",
+    "adv_assets_game_space_v2_bg_nebula__p0.h",
+    "adv_assets_game_space_v2_bg_nebula__p0.json",
+    "adv_assets_game_space_v2_bg_nebula__p1.c",
+    "adv_assets_game_space_v2_bg_nebula__p1.h",
+    "adv_assets_game_space_v2_bg_nebula__p1.json",
+    "adv_assets_game_space_v2_bg_station__p0.c",
+    "adv_assets_game_space_v2_bg_station__p0.h",
+    "adv_assets_game_space_v2_bg_station__p0.json",
+    "adv_assets_game_space_v2_props_balloon__p0.c",
+    "adv_assets_game_space_v2_props_balloon__p0.h",
+    "adv_assets_game_space_v2_props_balloon__p0.json",
+    "adv_assets_game_space_v2_props_birds_0__p0.c",
+    "adv_assets_game_space_v2_props_birds_0__p0.h",
+    "adv_assets_game_space_v2_props_birds_0__p0.json",
+    "adv_assets_game_space_v2_props_birds_1__p0.c",
+    "adv_assets_game_space_v2_props_birds_1__p0.h",
+    "adv_assets_game_space_v2_props_birds_1__p0.json",
+    "adv_assets_game_space_v2_props_booster__p0.c",
+    "adv_assets_game_space_v2_props_booster__p0.h",
+    "adv_assets_game_space_v2_props_booster__p0.json",
+    "adv_assets_game_space_v2_props_comet__p0.c",
+    "adv_assets_game_space_v2_props_comet__p0.h",
+    "adv_assets_game_space_v2_props_comet__p0.json",
+    "adv_assets_game_space_v2_props_comet_right__p0.c",
+    "adv_assets_game_space_v2_props_comet_right__p0.h",
+    "adv_assets_game_space_v2_props_comet_right__p0.json",
+    "adv_assets_game_space_v2_props_junk__p0.c",
+    "adv_assets_game_space_v2_props_junk__p0.h",
+    "adv_assets_game_space_v2_props_junk__p0.json",
+    "adv_assets_game_space_v2_props_plane__p0.c",
+    "adv_assets_game_space_v2_props_plane__p0.h",
+    "adv_assets_game_space_v2_props_plane__p0.json",
+    "adv_assets_game_space_v2_props_plane_left__p0.c",
+    "adv_assets_game_space_v2_props_plane_left__p0.h",
+    "adv_assets_game_space_v2_props_plane_left__p0.json",
+    "adv_assets_game_space_v2_props_repair__p0.c",
+    "adv_assets_game_space_v2_props_repair__p0.h",
+    "adv_assets_game_space_v2_props_repair__p0.json",
+    "adv_assets_game_space_v2_props_rocket__p0.c",
+    "adv_assets_game_space_v2_props_rocket__p0.h",
+    "adv_assets_game_space_v2_props_rocket__p0.json",
+    "adv_assets_game_space_v2_props_rocket_left__p0.c",
+    "adv_assets_game_space_v2_props_rocket_left__p0.h",
+    "adv_assets_game_space_v2_props_rocket_left__p0.json",
+    "adv_assets_game_space_v2_props_rocket_right__p0.c",
+    "adv_assets_game_space_v2_props_rocket_right__p0.h",
+    "adv_assets_game_space_v2_props_rocket_right__p0.json",
+    "adv_assets_game_space_v2_props_satellite__p0.c",
+    "adv_assets_game_space_v2_props_satellite__p0.h",
+    "adv_assets_game_space_v2_props_satellite__p0.json",
+    "adv_assets_game_space_v2_props_storm_cloud__p0.c",
+    "adv_assets_game_space_v2_props_storm_cloud__p0.h",
+    "adv_assets_game_space_v2_props_storm_cloud__p0.json",
     "adv_assets_post_a_delivered__p0.c",
     "adv_assets_post_a_delivered__p0.h",
     "adv_assets_post_a_delivered__p0.json",
@@ -1524,6 +1719,7 @@
     "ski-manifest.json": "ce917671979911b3aa2d645ab99a30bd605677497a4cb5e13649a51ab35c84fb",
     "sky-manifest.json": "abfbc0ffd9e3e97e61295911ea5c65b3c65f988bcc2af9021247590b07b3ee98",
     "space-manifest.json": "168d04124ab06e8d7e181a41c51e3eec91ba3e9f7dd5911fa8690a25e96fe789",
+    "space-v2-manifest.json": "a55a8f6f45a4edbc1ca50949c58b38d87104df6ec65ae00014fa00aaac8cb2c2",
     "shared-static-manifest.json": "f48bb34259cd5f58eb04cdc94d1e95e130875b111888b85962955b9655a4c5c8",
     "manifest.json": "e62681862e7f1c656c547f5324ac0f1d8a462609afcb19ad4157041f7de2d9af",
     "ui/ui-manifest.json": "093a972bcd5fd12ab2a12281216e06d861fc63222b3c98551630d6791c95e0d0",
@@ -4075,6 +4271,1044 @@
           "size": [
             48,
             32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/bg/aurora",
+      "sources": [
+        {
+          "path": "space-v2/bg-aurora.png",
+          "sha256": "785b63c29765a45298388411c0a88d52081f1f8b0ddad0bfdeef4f46c3fcb90e"
+        }
+      ],
+      "canvas": [
+        320,
+        120
+      ],
+      "anchor": [
+        0,
+        120
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_bg_aurora__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            256,
+            120
+          ]
+        },
+        {
+          "symbol": "adv_assets_game_space_v2_bg_aurora__p1",
+          "offset": [
+            256,
+            0
+          ],
+          "size": [
+            64,
+            120
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/bg/cirrus",
+      "sources": [
+        {
+          "path": "space-v2/bg-cirrus.png",
+          "sha256": "858b301771001bca0a46ce679fbf373da999a129d8ad8129c9b9d906dd47587a"
+        }
+      ],
+      "canvas": [
+        320,
+        48
+      ],
+      "anchor": [
+        0,
+        48
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_bg_cirrus__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            256,
+            48
+          ]
+        },
+        {
+          "symbol": "adv_assets_game_space_v2_bg_cirrus__p1",
+          "offset": [
+            256,
+            0
+          ],
+          "size": [
+            64,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/bg/cloud-a",
+      "sources": [
+        {
+          "path": "space-v2/bg-cloud-a.png",
+          "sha256": "752972ef2284f7b6d89549500fa4e299404b459c61e49d25048f4f7bc1dea10a"
+        }
+      ],
+      "canvas": [
+        320,
+        96
+      ],
+      "anchor": [
+        0,
+        96
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_bg_cloud_a__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            256,
+            96
+          ]
+        },
+        {
+          "symbol": "adv_assets_game_space_v2_bg_cloud_a__p1",
+          "offset": [
+            256,
+            0
+          ],
+          "size": [
+            64,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/bg/cloud-b",
+      "sources": [
+        {
+          "path": "space-v2/bg-cloud-b.png",
+          "sha256": "7f978b51201670c2f344e5fe0f740cf3fee138b397aee48292a2a1a6447526b9"
+        }
+      ],
+      "canvas": [
+        320,
+        96
+      ],
+      "anchor": [
+        0,
+        96
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_bg_cloud_b__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            256,
+            96
+          ]
+        },
+        {
+          "symbol": "adv_assets_game_space_v2_bg_cloud_b__p1",
+          "offset": [
+            256,
+            0
+          ],
+          "size": [
+            64,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/bg/cloud-far",
+      "sources": [
+        {
+          "path": "space-v2/bg-cloud-far.png",
+          "sha256": "ec6169ec8ca3f7a486c7c23d0a54df3fb781c3a77839ab21d428755f3b46b5f5"
+        }
+      ],
+      "canvas": [
+        320,
+        56
+      ],
+      "anchor": [
+        0,
+        56
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_bg_cloud_far__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            256,
+            56
+          ]
+        },
+        {
+          "symbol": "adv_assets_game_space_v2_bg_cloud_far__p1",
+          "offset": [
+            256,
+            0
+          ],
+          "size": [
+            64,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/bg/earth-limb",
+      "sources": [
+        {
+          "path": "space-v2/bg-earth-limb.png",
+          "sha256": "1d641fd8e45af9e36cba002df2a6e8906dafc071d4de752165cb977ecc3f2408"
+        }
+      ],
+      "canvas": [
+        320,
+        130
+      ],
+      "anchor": [
+        0,
+        130
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_bg_earth_limb__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            256,
+            130
+          ]
+        },
+        {
+          "symbol": "adv_assets_game_space_v2_bg_earth_limb__p1",
+          "offset": [
+            256,
+            0
+          ],
+          "size": [
+            64,
+            130
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/bg/launch-far",
+      "sources": [
+        {
+          "path": "space-v2/bg-launch-far.png",
+          "sha256": "1e944f824b9c30185702216a702dfb5d2c5e74d9da856cf9e9aa02ae08038b73"
+        }
+      ],
+      "canvas": [
+        320,
+        120
+      ],
+      "anchor": [
+        0,
+        120
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_bg_launch_far__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            256,
+            120
+          ]
+        },
+        {
+          "symbol": "adv_assets_game_space_v2_bg_launch_far__p1",
+          "offset": [
+            256,
+            0
+          ],
+          "size": [
+            64,
+            120
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/bg/launch-near",
+      "sources": [
+        {
+          "path": "space-v2/bg-launch-near.png",
+          "sha256": "6749d1835a889df2ff0cba4b3b6caf137b0d8a9c275f914e3d5c89c4e68ec868"
+        }
+      ],
+      "canvas": [
+        320,
+        150
+      ],
+      "anchor": [
+        0,
+        150
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_bg_launch_near__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            256,
+            150
+          ]
+        },
+        {
+          "symbol": "adv_assets_game_space_v2_bg_launch_near__p1",
+          "offset": [
+            256,
+            0
+          ],
+          "size": [
+            64,
+            150
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/bg/lunar-surface",
+      "sources": [
+        {
+          "path": "space-v2/bg-lunar-surface.png",
+          "sha256": "b3dfbf18249e3ad71e71e31f836420fa328addf09651e1a9afcc303b290dcb29"
+        }
+      ],
+      "canvas": [
+        320,
+        120
+      ],
+      "anchor": [
+        0,
+        120
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_bg_lunar_surface__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            256,
+            120
+          ]
+        },
+        {
+          "symbol": "adv_assets_game_space_v2_bg_lunar_surface__p1",
+          "offset": [
+            256,
+            0
+          ],
+          "size": [
+            64,
+            120
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/bg/moon-128",
+      "sources": [
+        {
+          "path": "space-v2/bg-moon-128.png",
+          "sha256": "c4e4b87032f7fe931084bf03e404548ba9f671e14c61a310cddb7db815a6fc1e"
+        }
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "anchor": [
+        64,
+        64
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_bg_moon_128__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            128,
+            128
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/bg/moon-32",
+      "sources": [
+        {
+          "path": "space-v2/bg-moon-32.png",
+          "sha256": "abf67d2bddb73ec61d1536f257831e4644ace5d1bb822e1fa95c35255cb2e9e8"
+        }
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_bg_moon_32__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/bg/moon-64",
+      "sources": [
+        {
+          "path": "space-v2/bg-moon-64.png",
+          "sha256": "29d1f229698f6f9ea417cb26bade89a43b9b52fae29e912b612dfd3d4c4f8abd"
+        }
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_bg_moon_64__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/bg/nebula",
+      "sources": [
+        {
+          "path": "space-v2/bg-nebula.png",
+          "sha256": "ad9d6be7f879cd641c88bd17279944c28366188527931640dfc729a3d617887c"
+        }
+      ],
+      "canvas": [
+        320,
+        220
+      ],
+      "anchor": [
+        0,
+        220
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_bg_nebula__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            256,
+            220
+          ]
+        },
+        {
+          "symbol": "adv_assets_game_space_v2_bg_nebula__p1",
+          "offset": [
+            256,
+            0
+          ],
+          "size": [
+            64,
+            220
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/bg/station",
+      "sources": [
+        {
+          "path": "space-v2/bg-station.png",
+          "sha256": "17882d70c5fc08d4ae989af08c4b2ce0d6e37a76c0f3cf5ad98dbb091bb14913"
+        }
+      ],
+      "canvas": [
+        84,
+        34
+      ],
+      "anchor": [
+        42,
+        17
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_bg_station__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            84,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/balloon",
+      "sources": [
+        {
+          "path": "space-v2/props-balloon.png",
+          "sha256": "bf52cbfa2998cd0d43767dd21b9e380e6c7a0306837703913e7b771d3e941b74"
+        }
+      ],
+      "canvas": [
+        16,
+        26
+      ],
+      "anchor": [
+        8,
+        13
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_balloon__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            16,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/birds-0",
+      "sources": [
+        {
+          "path": "space-v2/props-birds-0.png",
+          "sha256": "a9a73615eb496f85d39e70eb80c4cef2ac854ac015a113af996a055f0a6ac9e5"
+        }
+      ],
+      "canvas": [
+        20,
+        10
+      ],
+      "anchor": [
+        10,
+        5
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_birds_0__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            20,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/birds-1",
+      "sources": [
+        {
+          "path": "space-v2/props-birds-1.png",
+          "sha256": "7685a268e66ba51e36c7456c50dc8fcb6f14a0bd40494a2b660cf74d207a2cb5"
+        }
+      ],
+      "canvas": [
+        20,
+        10
+      ],
+      "anchor": [
+        10,
+        5
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_birds_1__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            20,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/booster",
+      "sources": [
+        {
+          "path": "space-v2/props-booster.png",
+          "sha256": "62100aec92ecfa0a060ed173872492aa0c4ce1071df7cba3fdd19cac9ca7757c"
+        }
+      ],
+      "canvas": [
+        14,
+        30
+      ],
+      "anchor": [
+        7,
+        15
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_booster__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            14,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/comet",
+      "sources": [
+        {
+          "path": "space-v2/props-comet.png",
+          "sha256": "237b54c40a9d52bcbe35ae4b4c8eaa92a64808cc7873b27a5c40438d15618e09"
+        }
+      ],
+      "canvas": [
+        56,
+        18
+      ],
+      "anchor": [
+        8,
+        9
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_comet__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            56,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/comet-right",
+      "sources": [
+        {
+          "path": "space-v2/props-comet-right.png",
+          "sha256": "19c1f56bc87ec08794c280d52a299e44cf65a2210a4760a6fbc1e35211a0a61e"
+        }
+      ],
+      "canvas": [
+        56,
+        18
+      ],
+      "anchor": [
+        48,
+        9
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_comet_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            56,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/junk",
+      "sources": [
+        {
+          "path": "space-v2/props-junk.png",
+          "sha256": "11f0d241e1a1c1a24f3b03f4ba36d90b14ee10303ee5ff43b89b88c671cb1c5a"
+        }
+      ],
+      "canvas": [
+        12,
+        10
+      ],
+      "anchor": [
+        6,
+        5
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_junk__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            12,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/plane",
+      "sources": [
+        {
+          "path": "space-v2/props-plane.png",
+          "sha256": "fd48b9539f99227ec84b62c067779f08c258ac890699b540b44170a7edd62e1e"
+        }
+      ],
+      "canvas": [
+        40,
+        14
+      ],
+      "anchor": [
+        20,
+        7
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_plane__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            40,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/plane-left",
+      "sources": [
+        {
+          "path": "space-v2/props-plane-left.png",
+          "sha256": "94bcf874cb0fabeff472a8255cbd7c464404e63259cc537d4495a15f8fd3d5ed"
+        }
+      ],
+      "canvas": [
+        40,
+        14
+      ],
+      "anchor": [
+        20,
+        7
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_plane_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            40,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/repair",
+      "sources": [
+        {
+          "path": "space-v2/props-repair.png",
+          "sha256": "0564cb098526c382fca9014804cdfea8c61745cb84957324591aa6bd1099d8f5"
+        }
+      ],
+      "canvas": [
+        14,
+        14
+      ],
+      "anchor": [
+        7,
+        7
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_repair__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            14,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/rocket",
+      "sources": [
+        {
+          "path": "space-v2/props-rocket.png",
+          "sha256": "30a632e343c2debe265703236ee0eaae0fde037f9d042d1b672c9402cb9becce"
+        }
+      ],
+      "canvas": [
+        18,
+        46
+      ],
+      "anchor": [
+        9,
+        44
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_rocket__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            18,
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/rocket-left",
+      "sources": [
+        {
+          "path": "space-v2/props-rocket-left.png",
+          "sha256": "da20665fa1a52bff4d58f3d54ba44a56b0cb33b50463e9fffd97adbba9dc7900"
+        }
+      ],
+      "canvas": [
+        18,
+        46
+      ],
+      "anchor": [
+        9,
+        44
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_rocket_left__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            18,
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/rocket-right",
+      "sources": [
+        {
+          "path": "space-v2/props-rocket-right.png",
+          "sha256": "9c975d04a6d7d4c6eb835a904181ae8c62e469072e41bc88fe75d1e10c4872ab"
+        }
+      ],
+      "canvas": [
+        18,
+        46
+      ],
+      "anchor": [
+        9,
+        44
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_rocket_right__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            18,
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/satellite",
+      "sources": [
+        {
+          "path": "space-v2/props-satellite.png",
+          "sha256": "42ee2f221eae2f9ced0f05a683b28dff7eac6b170e89244c402495514aa8cfae"
+        }
+      ],
+      "canvas": [
+        44,
+        18
+      ],
+      "anchor": [
+        22,
+        9
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_satellite__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            44,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/space-v2/props/storm-cloud",
+      "sources": [
+        {
+          "path": "space-v2/props-storm-cloud.png",
+          "sha256": "72dfa6817884c2eb6d202c69479d61a75b44efafed0094bd757d0e99cb6189dd"
+        }
+      ],
+      "canvas": [
+        112,
+        60
+      ],
+      "anchor": [
+        56,
+        30
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_space_v2_props_storm_cloud__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            112,
+            60
           ]
         }
       ]
@@ -12836,10 +14070,10 @@
       ]
     }
   ],
-  "python_verified_frames": 591,
+  "python_verified_frames": 630,
   "production_c": {
-    "verified_frames": 591,
-    "verified_sprite_rows": 27626,
+    "verified_frames": 630,
+    "verified_sprite_rows": 30576,
     "verified_ninepatch_rows": 912,
     "comparison": "generated C and production decoders vs indexed source"
   },
@@ -12903,8 +14137,8 @@
   "sprite_interning": {
     "scope": "within each group only",
     "comparison": "exact RGBA pixels, dimensions and ordered frame sequence",
-    "logical_pieces": 319,
-    "physical_sprites": 278,
+    "logical_pieces": 358,
+    "physical_sprites": 317,
     "accounting": "RLE/tables/sprite32 per physical object; piece8 and record/id per logical use"
   },
   "startup_composition": {

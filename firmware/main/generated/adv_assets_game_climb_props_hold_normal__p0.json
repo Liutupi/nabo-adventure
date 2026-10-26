@@ -22,7 +22,7 @@
     "f7fc98fba26980f558e8fdea92f286a1d83898dfbc9785084e20feeb1e8a2d74"
   ],
   "source_sha256": [
-    "8706e868ee14b0d7fa66936b60778df3fd6cf3a560a866ffeb08e13ebd808a7d"
+    "4ce379b03fc41658fd90014bcfa910b3d013b04bc603847536ff9adc369e70a1"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/climb/props/hold-normal.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\climb\\props\\hold-normal.png",
       "sha256": "4ce379b03fc41658fd90014bcfa910b3d013b04bc603847536ff9adc369e70a1"
     }
   ],

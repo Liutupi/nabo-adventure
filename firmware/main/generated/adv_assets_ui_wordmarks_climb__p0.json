@@ -23,7 +23,7 @@
     "b4209a3bef7f52ccc1a7337509585709469d2e383b1500371fe6db1465357098"
   ],
   "source_sha256": [
-    "1d26c0fb35e6a5f61c97c1663adad22c76f4d11ff93738e5debac3c632eeaeda"
+    "7b7b80063c0f767c29aec68db3111073668b4cfef453655eb4e91412a6487e7d"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -36,7 +36,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/wordmarks/climb.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\wordmarks\\climb.png",
       "sha256": "311d3e321653014525668004b6bec954cf8338ff9893e0ebc69614ba5d7fef22"
     }
   ],

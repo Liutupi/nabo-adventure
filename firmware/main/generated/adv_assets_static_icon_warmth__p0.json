@@ -22,7 +22,7 @@
     "fa4c584899a7208f519d42267865b92abf686e2bfc4ab9dbf83ba66ca119aaff"
   ],
   "source_sha256": [
-    "205a986971aff3a000c5ed15205cf56c57364fe3372e7a2a013d11924283221d"
+    "026bc94edb20620b692cd9783999352b40a1911618e1d0fcc8d76b910a98793b"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/icons/warmth.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\icons\\warmth.png",
       "sha256": "026bc94edb20620b692cd9783999352b40a1911618e1d0fcc8d76b910a98793b"
     }
   ],

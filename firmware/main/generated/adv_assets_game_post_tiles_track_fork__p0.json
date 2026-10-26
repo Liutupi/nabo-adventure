@@ -22,7 +22,7 @@
     "4518330c98fc0d3a1686f1f8734e8185e3ec5e03500494816c83103cc1062d88"
   ],
   "source_sha256": [
-    "dda40b1296effb4abe327f12de69206c4bd4b54321933472598fba749261de5b"
+    "85494406138f099474b4dd29cc9edbd84ccf3a741358da17218dc8b319387a4b"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/tiles/track-fork.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\tiles\\track-fork.png",
       "sha256": "85494406138f099474b4dd29cc9edbd84ccf3a741358da17218dc8b319387a4b"
     }
   ],

@@ -76,6 +76,7 @@ bool ag_viewport(ag_t *g,int width,int height); // 240x320 or 320x240; invalidat
 void ag_begin(ag_t *g, int scene_id);   // starts a new display list; a new scene redraws everything
 void ag_invalidate(ag_t *g);
 void ag_flush(ag_t *g);                 // diffs, composes and sends the dirty areas
+void ag_profile_next(void);            // one diagnostic frame, disabled during normal drawing
 
 // Builders (return false when the list is full). Colours are native RGB565.
 bool ag_band(ag_t *g, int y, int h, uint16_t top, uint16_t bottom);

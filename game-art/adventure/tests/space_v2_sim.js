@@ -1,6 +1,6 @@
 // SPACE V2 火箭登月 balance probe: node tests/space_v2_sim.js [seeds]
 'use strict';
-const S = require('../prototype/adv_space_v2.js'), { driver } = require('../../../tests/space_v2_policy.js');
+const S = require('../prototype/adv_space.js'), { driver } = require('../../../tests/space_v2_policy.js');
 const seeds = +(process.argv[2] || 60);
 for (const kind of ['idle', 'spam', 'casual', 'skilled']) {
   const rows = [];

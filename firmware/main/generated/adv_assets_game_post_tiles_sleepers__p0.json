@@ -21,7 +21,7 @@
     "96ba2527e46414477e50b733f67c382a2890f5e8a0fd8295864ba31239e3a571"
   ],
   "source_sha256": [
-    "c36592c1594f51de5c84f25cc8fa53db2fc8493f2c32332492d8841815731ded"
+    "3a25a0c263e63843c437829a7d81b415fee5c41beca193bccfcbb99bbc405c40"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/tiles/sleepers.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\tiles\\sleepers.png",
       "sha256": "3a25a0c263e63843c437829a7d81b415fee5c41beca193bccfcbb99bbc405c40"
     }
   ],

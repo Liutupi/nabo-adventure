@@ -26,7 +26,7 @@
     "5a6145cfb90f19d77cbd240c6af8e22a701733cba642dbecc7b89bb11c716e92"
   ],
   "source_sha256": [
-    "5bbcb204b17b5bf4240ff3fcd63439bd30952ae42e57ca1185ff0cace3cb7397"
+    "e744b9fc86bdcd2e1bee6d4080d5258a6d211dafb5bc5a30f87ee724b91ddd2c"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -39,7 +39,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/town/window-box.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\town\\window-box.png",
       "sha256": "e744b9fc86bdcd2e1bee6d4080d5258a6d211dafb5bc5a30f87ee724b91ddd2c"
     }
   ],

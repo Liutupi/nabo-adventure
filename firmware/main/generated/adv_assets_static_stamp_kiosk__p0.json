@@ -19,7 +19,7 @@
     "84eb023cd33db27f024019f3887eee7801ee8b134879c097cc0a35a0ae768b73"
   ],
   "source_sha256": [
-    "a953639869794736484883f0a112967ddf6e67da27931658a3829f4a7a244391"
+    "2595b0a6a69d31a51b5750b443a7a7cc6188edd2b930a7b8c152991f5042fc12"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/stamps/kiosk.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\stamps\\kiosk.png",
       "sha256": "2595b0a6a69d31a51b5750b443a7a7cc6188edd2b930a7b8c152991f5042fc12"
     }
   ],

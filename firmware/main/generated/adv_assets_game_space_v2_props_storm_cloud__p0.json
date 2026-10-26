@@ -1,0 +1,57 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_props_storm_cloud__p0",
+  "width": 112,
+  "height": 60,
+  "palette_rgb565": [
+    0,
+    14827,
+    19053,
+    21231,
+    25457,
+    31731,
+    35956,
+    40214,
+    48633
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 3429,
+  "table_bytes": 142,
+  "frame_sha256": [
+    "061ca9a10c0486e3cdd60d16a92f10513f00767d276cb9fae697b0a779f08a67"
+  ],
+  "source_sha256": [
+    "1d3faf437dd3307722cfc0512db495c87c1f7c7ae2ec6b66a67f9c0d582d5b51"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/props/storm-cloud",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_props_storm_cloud__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\props-storm-cloud.png",
+      "sha256": "72dfa6817884c2eb6d202c69479d61a75b44efafed0094bd757d0e99cb6189dd"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/props/storm-cloud",
+      "logical_symbol": "adv_assets_game_space_v2_props_storm_cloud__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

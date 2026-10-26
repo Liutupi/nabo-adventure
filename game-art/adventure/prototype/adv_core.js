@@ -36,7 +36,7 @@
     { id: 'climb', cn: '登山', en: 'CLIMB', world: '雪山', res: '体力', kind: 2, th: [50, 150, 300], placeholder: false },
     { id: 'ski', cn: '滑雪', en: 'SKI', world: '雪坡', res: '雪崩', kind: 2, th: [300, 1000, 2500], placeholder: false },
     { id: 'sky', cn: '热气球', en: 'SKY', world: '云端', res: '热气', kind: 2, th: [200, 500, 1000], placeholder: false },
-    { id: 'space', cn: '太空', en: 'SPACE', world: '太空', res: '燃料', kind: 2, th: [300, 600, 900], placeholder: false },
+    { id: 'space', cn: '火箭登月', en: 'SPACE', world: '太空', res: '燃料', kind: 2, th: [1500, 3500, 6000], placeholder: false },
   ];
 
   function threshold(s, tier) { return STATION[s].placeholder ? DEMO_THRESHOLDS[tier] : STATION[s].th[tier]; }
@@ -220,12 +220,10 @@
   // Games where UP is held to move: only two genuinely short UP taps may leave for the map.
   // V2 landscape games (NIGHT, SKI) hold UP all the time: middle DOWN starts/resumes/pauses (long),
   // left OK restarts from pause, and the map is reached only from the pause page.
-  const v2=station=>station===4||station===6;
-  const holdsUp=station=>station===8;
+  const v2=station=>station===4||station===6||station===8;
   // Pause: V2 games long middle DOWN, SPACE two short DOWN taps, everyone else long UP.
   function pauseKey(s,btn,ev){
     if(v2(s.station))return btn===BTN.DOWN&&ev===EV.LONG;
-    if(s.station===8)return btn===BTN.DOWN&&ev===EV.DOUBLE&&s.game.downTaps>=2;
     return btn===BTN.UP&&ev===EV.LONG;
   }
 
@@ -242,7 +240,6 @@
     const confirm=v2(s.station)?BTN.DOWN:BTN.OK,restart=v2(s.station)?BTN.OK:BTN.DOWN;
     if(gameMapKey(btn,ev)) {
       if(v2(s.station)&&s.phase===PHASE.PLAY)return;
-      if(holdsUp(s.station)&&s.phase===PHASE.PLAY&&s.game.shortTaps<2)return;
       if(s.phase===PHASE.END)recordResult(m);
       cue(m,CUE.BACK);toMap(m);return;
     }
@@ -250,8 +247,6 @@
       if (btn === confirm && ev === EV.CLICK) startRun(m);
       else if (s.station===3&&btn===BTN.DOWN&&ev===EV.CLICK) startRun(m,true);
     } else if (s.phase === PHASE.PLAY) {
-      if(holdsUp(s.station)&&btn===BTN.UP&&(ev===EV.PRESS||ev===EV.RELEASE))engine(s.station).upEvent(s.game,ev===EV.PRESS);
-      if(s.station===8&&btn===BTN.DOWN&&(ev===EV.PRESS||ev===EV.RELEASE))Space.downEvent(s.game,ev===EV.PRESS);
       if (pauseKey(s,btn,ev)) { s.phase = PHASE.PAUSE; cue(m, CUE.BACK); return; }
       if (ev === EV.PRESS) {
         if (btn === BTN.OK) m.input.ok_down = 1;

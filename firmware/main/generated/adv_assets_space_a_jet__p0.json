@@ -91,10 +91,10 @@
     "357c1327fd1f6fc3a52d98414e60a9836f96b1dd7d22411539713db2a8038ec0"
   ],
   "source_sha256": [
-    "3666fe396511a33b10ae869176380ba2c85448eadc48d2713925fa16c1097639",
-    "2642c068e77a754710ca5d3996b867ccc543e2ec3d8f6f5daa3859b616cc4a6f",
-    "3666fe396511a33b10ae869176380ba2c85448eadc48d2713925fa16c1097639",
-    "9ca59136d4884b70d227ab61eea450f74378442ed5df91af89b3896010169578"
+    "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082",
+    "b9ca76873c6fc457bcae768e4756f43ffc55212a953de01f5c2e6f2bf2e195f2",
+    "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082",
+    "641579177b67aae54dee5bb03b0838059fb0055cf1f6cbc1ecbba28ba5eef858"
   ],
   "verified_frames": 4,
   "comparison": "lossless after shared RGB565 quantization",
@@ -107,19 +107,19 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/jet/000.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\space\\runtime\\space_a\\jet\\000.png",
       "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/jet/001.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\space\\runtime\\space_a\\jet\\001.png",
       "sha256": "b9ca76873c6fc457bcae768e4756f43ffc55212a953de01f5c2e6f2bf2e195f2"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/jet/002.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\space\\runtime\\space_a\\jet\\002.png",
       "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/jet/003.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\space\\runtime\\space_a\\jet\\003.png",
       "sha256": "641579177b67aae54dee5bb03b0838059fb0055cf1f6cbc1ecbba28ba5eef858"
     }
   ],

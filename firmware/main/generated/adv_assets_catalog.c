@@ -71,6 +71,45 @@
 #include "adv_assets_game_sky_envelope__p0.h"
 #include "adv_assets_game_sky_stamp__p0.h"
 #include "adv_assets_game_sky_thundercloud__p0.h"
+#include "adv_assets_game_space_v2_bg_aurora__p0.h"
+#include "adv_assets_game_space_v2_bg_aurora__p1.h"
+#include "adv_assets_game_space_v2_bg_cirrus__p0.h"
+#include "adv_assets_game_space_v2_bg_cirrus__p1.h"
+#include "adv_assets_game_space_v2_bg_cloud_a__p0.h"
+#include "adv_assets_game_space_v2_bg_cloud_a__p1.h"
+#include "adv_assets_game_space_v2_bg_cloud_b__p0.h"
+#include "adv_assets_game_space_v2_bg_cloud_b__p1.h"
+#include "adv_assets_game_space_v2_bg_cloud_far__p0.h"
+#include "adv_assets_game_space_v2_bg_cloud_far__p1.h"
+#include "adv_assets_game_space_v2_bg_earth_limb__p0.h"
+#include "adv_assets_game_space_v2_bg_earth_limb__p1.h"
+#include "adv_assets_game_space_v2_bg_launch_far__p0.h"
+#include "adv_assets_game_space_v2_bg_launch_far__p1.h"
+#include "adv_assets_game_space_v2_bg_launch_near__p0.h"
+#include "adv_assets_game_space_v2_bg_launch_near__p1.h"
+#include "adv_assets_game_space_v2_bg_lunar_surface__p0.h"
+#include "adv_assets_game_space_v2_bg_lunar_surface__p1.h"
+#include "adv_assets_game_space_v2_bg_moon_128__p0.h"
+#include "adv_assets_game_space_v2_bg_moon_32__p0.h"
+#include "adv_assets_game_space_v2_bg_moon_64__p0.h"
+#include "adv_assets_game_space_v2_bg_nebula__p0.h"
+#include "adv_assets_game_space_v2_bg_nebula__p1.h"
+#include "adv_assets_game_space_v2_bg_station__p0.h"
+#include "adv_assets_game_space_v2_props_balloon__p0.h"
+#include "adv_assets_game_space_v2_props_birds_0__p0.h"
+#include "adv_assets_game_space_v2_props_birds_1__p0.h"
+#include "adv_assets_game_space_v2_props_booster__p0.h"
+#include "adv_assets_game_space_v2_props_comet__p0.h"
+#include "adv_assets_game_space_v2_props_comet_right__p0.h"
+#include "adv_assets_game_space_v2_props_junk__p0.h"
+#include "adv_assets_game_space_v2_props_plane__p0.h"
+#include "adv_assets_game_space_v2_props_plane_left__p0.h"
+#include "adv_assets_game_space_v2_props_repair__p0.h"
+#include "adv_assets_game_space_v2_props_rocket__p0.h"
+#include "adv_assets_game_space_v2_props_rocket_left__p0.h"
+#include "adv_assets_game_space_v2_props_rocket_right__p0.h"
+#include "adv_assets_game_space_v2_props_satellite__p0.h"
+#include "adv_assets_game_space_v2_props_storm_cloud__p0.h"
 #include "adv_assets_game_space_lander_back__p0.h"
 #include "adv_assets_game_space_lander_front__p0.h"
 #include "adv_assets_game_space_props_asteroid__p0.h"
@@ -490,6 +529,103 @@ static const adv_asset_piece_t adv_assets_game_sky_stamp__pieces[] = {
 };
 static const adv_asset_piece_t adv_assets_game_sky_thundercloud__pieces[] = {
     {&adv_assets_game_sky_thundercloud__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_bg_aurora__pieces[] = {
+    {&adv_assets_game_space_v2_bg_aurora__p0, 0, 0},
+    {&adv_assets_game_space_v2_bg_aurora__p1, 256, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_bg_cirrus__pieces[] = {
+    {&adv_assets_game_space_v2_bg_cirrus__p0, 0, 0},
+    {&adv_assets_game_space_v2_bg_cirrus__p1, 256, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_bg_cloud_a__pieces[] = {
+    {&adv_assets_game_space_v2_bg_cloud_a__p0, 0, 0},
+    {&adv_assets_game_space_v2_bg_cloud_a__p1, 256, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_bg_cloud_b__pieces[] = {
+    {&adv_assets_game_space_v2_bg_cloud_b__p0, 0, 0},
+    {&adv_assets_game_space_v2_bg_cloud_b__p1, 256, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_bg_cloud_far__pieces[] = {
+    {&adv_assets_game_space_v2_bg_cloud_far__p0, 0, 0},
+    {&adv_assets_game_space_v2_bg_cloud_far__p1, 256, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_bg_earth_limb__pieces[] = {
+    {&adv_assets_game_space_v2_bg_earth_limb__p0, 0, 0},
+    {&adv_assets_game_space_v2_bg_earth_limb__p1, 256, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_bg_launch_far__pieces[] = {
+    {&adv_assets_game_space_v2_bg_launch_far__p0, 0, 0},
+    {&adv_assets_game_space_v2_bg_launch_far__p1, 256, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_bg_launch_near__pieces[] = {
+    {&adv_assets_game_space_v2_bg_launch_near__p0, 0, 0},
+    {&adv_assets_game_space_v2_bg_launch_near__p1, 256, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_bg_lunar_surface__pieces[] = {
+    {&adv_assets_game_space_v2_bg_lunar_surface__p0, 0, 0},
+    {&adv_assets_game_space_v2_bg_lunar_surface__p1, 256, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_bg_moon_128__pieces[] = {
+    {&adv_assets_game_space_v2_bg_moon_128__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_bg_moon_32__pieces[] = {
+    {&adv_assets_game_space_v2_bg_moon_32__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_bg_moon_64__pieces[] = {
+    {&adv_assets_game_space_v2_bg_moon_64__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_bg_nebula__pieces[] = {
+    {&adv_assets_game_space_v2_bg_nebula__p0, 0, 0},
+    {&adv_assets_game_space_v2_bg_nebula__p1, 256, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_bg_station__pieces[] = {
+    {&adv_assets_game_space_v2_bg_station__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_balloon__pieces[] = {
+    {&adv_assets_game_space_v2_props_balloon__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_birds_0__pieces[] = {
+    {&adv_assets_game_space_v2_props_birds_0__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_birds_1__pieces[] = {
+    {&adv_assets_game_space_v2_props_birds_1__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_booster__pieces[] = {
+    {&adv_assets_game_space_v2_props_booster__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_comet__pieces[] = {
+    {&adv_assets_game_space_v2_props_comet__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_comet_right__pieces[] = {
+    {&adv_assets_game_space_v2_props_comet_right__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_junk__pieces[] = {
+    {&adv_assets_game_space_v2_props_junk__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_plane__pieces[] = {
+    {&adv_assets_game_space_v2_props_plane__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_plane_left__pieces[] = {
+    {&adv_assets_game_space_v2_props_plane_left__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_repair__pieces[] = {
+    {&adv_assets_game_space_v2_props_repair__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_rocket__pieces[] = {
+    {&adv_assets_game_space_v2_props_rocket__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_rocket_left__pieces[] = {
+    {&adv_assets_game_space_v2_props_rocket_left__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_rocket_right__pieces[] = {
+    {&adv_assets_game_space_v2_props_rocket_right__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_satellite__pieces[] = {
+    {&adv_assets_game_space_v2_props_satellite__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_space_v2_props_storm_cloud__pieces[] = {
+    {&adv_assets_game_space_v2_props_storm_cloud__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_game_space_lander_back__pieces[] = {
     {&adv_assets_game_space_lander_back__p0, 0, 0},
@@ -1307,6 +1443,35 @@ const adv_asset_record_t adv_assets_catalog[] = {
     {"game/sky/envelope", adv_assets_game_sky_envelope__pieces, 1, 96, 96, 48, 94, 0, false},
     {"game/sky/stamp", adv_assets_game_sky_stamp__pieces, 1, 16, 20, 8, 10, 0, false},
     {"game/sky/thundercloud", adv_assets_game_sky_thundercloud__pieces, 1, 48, 32, 24, 29, 0, false},
+    {"game/space-v2/bg/aurora", adv_assets_game_space_v2_bg_aurora__pieces, 2, 320, 120, 0, 120, 0, false},
+    {"game/space-v2/bg/cirrus", adv_assets_game_space_v2_bg_cirrus__pieces, 2, 320, 48, 0, 48, 0, false},
+    {"game/space-v2/bg/cloud-a", adv_assets_game_space_v2_bg_cloud_a__pieces, 2, 320, 96, 0, 96, 0, false},
+    {"game/space-v2/bg/cloud-b", adv_assets_game_space_v2_bg_cloud_b__pieces, 2, 320, 96, 0, 96, 0, false},
+    {"game/space-v2/bg/cloud-far", adv_assets_game_space_v2_bg_cloud_far__pieces, 2, 320, 56, 0, 56, 0, false},
+    {"game/space-v2/bg/earth-limb", adv_assets_game_space_v2_bg_earth_limb__pieces, 2, 320, 130, 0, 130, 0, false},
+    {"game/space-v2/bg/launch-far", adv_assets_game_space_v2_bg_launch_far__pieces, 2, 320, 120, 0, 120, 0, false},
+    {"game/space-v2/bg/launch-near", adv_assets_game_space_v2_bg_launch_near__pieces, 2, 320, 150, 0, 150, 0, false},
+    {"game/space-v2/bg/lunar-surface", adv_assets_game_space_v2_bg_lunar_surface__pieces, 2, 320, 120, 0, 120, 0, false},
+    {"game/space-v2/bg/moon-128", adv_assets_game_space_v2_bg_moon_128__pieces, 1, 128, 128, 64, 64, 0, false},
+    {"game/space-v2/bg/moon-32", adv_assets_game_space_v2_bg_moon_32__pieces, 1, 32, 32, 16, 16, 0, false},
+    {"game/space-v2/bg/moon-64", adv_assets_game_space_v2_bg_moon_64__pieces, 1, 64, 64, 32, 32, 0, false},
+    {"game/space-v2/bg/nebula", adv_assets_game_space_v2_bg_nebula__pieces, 2, 320, 220, 0, 220, 0, false},
+    {"game/space-v2/bg/station", adv_assets_game_space_v2_bg_station__pieces, 1, 84, 34, 42, 17, 0, false},
+    {"game/space-v2/props/balloon", adv_assets_game_space_v2_props_balloon__pieces, 1, 16, 26, 8, 13, 0, false},
+    {"game/space-v2/props/birds-0", adv_assets_game_space_v2_props_birds_0__pieces, 1, 20, 10, 10, 5, 0, false},
+    {"game/space-v2/props/birds-1", adv_assets_game_space_v2_props_birds_1__pieces, 1, 20, 10, 10, 5, 0, false},
+    {"game/space-v2/props/booster", adv_assets_game_space_v2_props_booster__pieces, 1, 14, 30, 7, 15, 0, false},
+    {"game/space-v2/props/comet", adv_assets_game_space_v2_props_comet__pieces, 1, 56, 18, 8, 9, 0, false},
+    {"game/space-v2/props/comet-right", adv_assets_game_space_v2_props_comet_right__pieces, 1, 56, 18, 48, 9, 0, false},
+    {"game/space-v2/props/junk", adv_assets_game_space_v2_props_junk__pieces, 1, 12, 10, 6, 5, 0, false},
+    {"game/space-v2/props/plane", adv_assets_game_space_v2_props_plane__pieces, 1, 40, 14, 20, 7, 0, false},
+    {"game/space-v2/props/plane-left", adv_assets_game_space_v2_props_plane_left__pieces, 1, 40, 14, 20, 7, 0, false},
+    {"game/space-v2/props/repair", adv_assets_game_space_v2_props_repair__pieces, 1, 14, 14, 7, 7, 0, false},
+    {"game/space-v2/props/rocket", adv_assets_game_space_v2_props_rocket__pieces, 1, 18, 46, 9, 44, 0, false},
+    {"game/space-v2/props/rocket-left", adv_assets_game_space_v2_props_rocket_left__pieces, 1, 18, 46, 9, 44, 0, false},
+    {"game/space-v2/props/rocket-right", adv_assets_game_space_v2_props_rocket_right__pieces, 1, 18, 46, 9, 44, 0, false},
+    {"game/space-v2/props/satellite", adv_assets_game_space_v2_props_satellite__pieces, 1, 44, 18, 22, 9, 0, false},
+    {"game/space-v2/props/storm-cloud", adv_assets_game_space_v2_props_storm_cloud__pieces, 1, 112, 60, 56, 30, 0, false},
     {"game/space/lander/back", adv_assets_game_space_lander_back__pieces, 1, 96, 96, 48, 92, 0, false},
     {"game/space/lander/front", adv_assets_game_space_lander_front__pieces, 1, 96, 96, 48, 92, 0, false},
     {"game/space/props/asteroid", adv_assets_game_space_props_asteroid__pieces, 1, 32, 28, 16, 28, 0, false},
@@ -1570,32 +1735,32 @@ const adv_ninepatch_t adv_assets_patch_info_normal = {{&adv_assets_ui_cards_info
 const adv_ninepatch_t adv_assets_patch_info_current = {{&adv_assets_ui_cards_info_current_top_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_top_right__p0, &adv_assets_ui_cards_info_current_left__p0, &adv_assets_ui_cards_info_current_center__p0, &adv_assets_ui_cards_info_current_right__p0, &adv_assets_ui_cards_info_current_bottom_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_bottom_right__p0}};
 const adv_ninepatch_t adv_assets_patch_popup_normal = {{&adv_assets_ui_cards_popup_normal_top_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_top_right__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_info_normal_center__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_popup_normal_bottom_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_bottom_right__p0}};
 const adv_asset_digit_t adv_assets_digits_36[] = {
-    {48, &adv_assets_catalog[279], 36},
-    {49, &adv_assets_catalog[280], 22},
-    {50, &adv_assets_catalog[281], 31},
-    {51, &adv_assets_catalog[282], 32},
-    {52, &adv_assets_catalog[283], 36},
-    {53, &adv_assets_catalog[284], 31},
-    {54, &adv_assets_catalog[285], 34},
-    {55, &adv_assets_catalog[286], 33},
-    {56, &adv_assets_catalog[287], 35},
-    {57, &adv_assets_catalog[288], 33},
-    {109, &adv_assets_catalog[289], 53},
-    {43, &adv_assets_catalog[290], 31},
+    {48, &adv_assets_catalog[308], 36},
+    {49, &adv_assets_catalog[309], 22},
+    {50, &adv_assets_catalog[310], 31},
+    {51, &adv_assets_catalog[311], 32},
+    {52, &adv_assets_catalog[312], 36},
+    {53, &adv_assets_catalog[313], 31},
+    {54, &adv_assets_catalog[314], 34},
+    {55, &adv_assets_catalog[315], 33},
+    {56, &adv_assets_catalog[316], 35},
+    {57, &adv_assets_catalog[317], 33},
+    {109, &adv_assets_catalog[318], 53},
+    {43, &adv_assets_catalog[319], 31},
 };
 const adv_asset_digit_t adv_assets_digits_20[] = {
-    {48, &adv_assets_catalog[267], 22},
-    {49, &adv_assets_catalog[268], 15},
-    {50, &adv_assets_catalog[269], 20},
-    {51, &adv_assets_catalog[270], 19},
-    {52, &adv_assets_catalog[271], 22},
-    {53, &adv_assets_catalog[272], 20},
-    {54, &adv_assets_catalog[273], 21},
-    {55, &adv_assets_catalog[274], 20},
-    {56, &adv_assets_catalog[275], 21},
-    {57, &adv_assets_catalog[276], 21},
-    {109, &adv_assets_catalog[277], 32},
-    {43, &adv_assets_catalog[278], 20},
+    {48, &adv_assets_catalog[296], 22},
+    {49, &adv_assets_catalog[297], 15},
+    {50, &adv_assets_catalog[298], 20},
+    {51, &adv_assets_catalog[299], 19},
+    {52, &adv_assets_catalog[300], 22},
+    {53, &adv_assets_catalog[301], 20},
+    {54, &adv_assets_catalog[302], 21},
+    {55, &adv_assets_catalog[303], 20},
+    {56, &adv_assets_catalog[304], 21},
+    {57, &adv_assets_catalog[305], 21},
+    {109, &adv_assets_catalog[306], 32},
+    {43, &adv_assets_catalog[307], 20},
 };
 const uint16_t adv_assets_ui_palette[] = {8649, 15375, 17298, 25487, 35986, 38099, 40276, 44406, 45672, 46518, 48007, 54567, 56595, 57082, 63356, 65502};
 const size_t adv_assets_ui_palette_count = 16;

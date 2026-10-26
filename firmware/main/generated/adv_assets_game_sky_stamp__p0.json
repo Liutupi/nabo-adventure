@@ -22,7 +22,7 @@
     "dbbb8bb408e4ce1193b912e8e8e18357686353be1a2a9e8098d01b22ae2a4626"
   ],
   "source_sha256": [
-    "89e7d8e9f2d810d6d695a72dc15773682f8e362b670e45a6af00d1c4a57218d5"
+    "55475e6fbb5c1b404192ffa80b7341bc236a62674a4684b1a8521d7ed4ca9c3f"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/props/stamp.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\sky\\props\\stamp.png",
       "sha256": "55475e6fbb5c1b404192ffa80b7341bc236a62674a4684b1a8521d7ed4ca9c3f"
     }
   ],

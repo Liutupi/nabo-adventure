@@ -19,7 +19,7 @@
     "1931bb0f648c44ca0473897dff3655fd6b1dd38f77123c861e18f3c63a436560"
   ],
   "source_sha256": [
-    "e23c8b32614843a95e3c04113d00e1a00a4b010d8ab0ba98d5561d3713dbef62"
+    "efb7f2f3fb4333e3e42e557d45f0580adcb3ae4ed94a59e89bdba5ff717fbdc6"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/stamps/ski.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\stamps\\ski.png",
       "sha256": "efb7f2f3fb4333e3e42e557d45f0580adcb3ae4ed94a59e89bdba5ff717fbdc6"
     }
   ],

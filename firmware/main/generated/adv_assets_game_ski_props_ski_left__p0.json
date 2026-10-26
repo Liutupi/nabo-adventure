@@ -21,7 +21,7 @@
     "03f1ee5a5469945bdf49574c64e0c8edfa7d2f6d1b91021fb5cab8a00a39fecd"
   ],
   "source_sha256": [
-    "957e12fee25c90d2c62c04240863c20f33b7a1afba5a8c14b74338812434f3ea"
+    "f6653f5cccb67ab54ef5108ed5d03f428260d3807c19a874c48d4bbcc76d2e3f"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/ski/props/ski-left.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\ski\\props\\ski-left.png",
       "sha256": "f6653f5cccb67ab54ef5108ed5d03f428260d3807c19a874c48d4bbcc76d2e3f"
     }
   ],

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Guarded SKI/SKY/SPACE lifecycle checks through real input events.
 
-SKI is V2 (landscape, 2026-10-26): middle DOWN starts/resumes, long DOWN pauses, UP never leaves while
+SKI and SPACE are V2 (landscape, 2026-10-26): middle DOWN starts/resumes, long DOWN pauses, UP never leaves while
 playing, and the map is reached from the pause page.
 
 This checks natural round endings, controls and allocations, not expert scoring
@@ -28,7 +28,7 @@ def enter(link,name):
     elif s['page']!=1:raise SmokeError('Entry requires map or cover')
     link.send('>adv.open='+name);s=link.expect(7)
     if s['station']!=STATIONS[name] or s['phase']!=0:raise SmokeError('Wrong game title')
-    link.key('down' if name=='ski' else 'ok');deadline=time.monotonic()+12
+    link.key('down' if name in ('ski','space') else 'ok');deadline=time.monotonic()+12
     while time.monotonic()<deadline:
         s=link.expect(7)
         if s['phase']==2:return s
@@ -38,36 +38,23 @@ def enter(link,name):
 
 def controls(link,name):
     start=enter(link,name)
-    if name=='ski':
+    if name in ('ski','space'):
         for button in (0,2):edge(link,button,True);time.sleep(.3);edge(link,button,False)
         for _ in range(2):tap(link,0)
         link.key('double_up')
-        if link.expect(7)['phase']!=2:raise SmokeError('SKI V2 left while playing')
+        if link.expect(7)['phase']!=2:raise SmokeError(name+' V2 left while playing')
         tap(link,1)                                   # a jump is the primary action
         link.key('long_down')
-        if link.expect(7)['phase']!=3:raise SmokeError('Long DOWN did not pause SKI')
+        if link.expect(7)['phase']!=3:raise SmokeError('Long DOWN did not pause '+name)
         time.sleep(.45);a=link.expect(7);time.sleep(.3);b=link.expect(7)
-        if (a['res'],a['score'])!=(b['res'],b['score']):raise SmokeError('Paused SKI advanced')
+        if (a['res'],a['score'])!=(b['res'],b['score']):raise SmokeError('Paused '+name+' advanced')
         link.key('down')
-        if link.expect(7)['phase']!=2:raise SmokeError('DOWN did not resume SKI')
+        if link.expect(7)['phase']!=2:raise SmokeError('DOWN did not resume '+name)
         link.key('long_down')
-        if link.expect(7)['phase']!=3:raise SmokeError('Second SKI pause failed')
+        if link.expect(7)['phase']!=3:raise SmokeError('Second '+name+' pause failed')
         link.key('double_up')
         return {'initial_heap':start['heap'],'map':link.map()}
-    if name=='space':
-        for _ in range(2):
-            edge(link,0,True);time.sleep(.25);edge(link,0,False)
-        # A movement hold followed by one short tap must not satisfy return.
-        tap(link,0);link.key('double_up')
-        if link.expect(7)['phase']!=2:raise SmokeError('Held movement counted as return tap')
-        edge(link,0,True);time.sleep(.8);link.key('long_up');edge(link,0,False)
-        if link.expect(7)['phase']!=2:raise SmokeError('Moving UP paused or exited')
-    if name=='space':
-        edge(link,1,True);time.sleep(.25);edge(link,1,False)
-        tap(link,1);link.key('double_down')
-        if link.expect(7)['phase']!=2:raise SmokeError('Side thrust counted as pause tap')
-        tap(link,1);link.key('double_down')
-    else:link.key('long_up')
+    link.key('long_up')
     paused=link.expect(7)
     if paused['phase']!=3:raise SmokeError('Pause gesture failed')
     time.sleep(.45);frozen=link.expect(7)

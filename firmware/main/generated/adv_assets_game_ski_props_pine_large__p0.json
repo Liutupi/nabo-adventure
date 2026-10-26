@@ -23,7 +23,7 @@
     "69359632f7eecb46381b274a8928a1b272568a9fc4b945f4a13a0e93f8d1addf"
   ],
   "source_sha256": [
-    "bd5ede14f28a241d7e249ff16d80dbef77b7abd6e057f58a9f3b12e3c27c7750"
+    "f3d641cf7afafea15894be6683ab2a304b8563ea1c8258988f9a6fc2b464bf97"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -36,7 +36,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/ski/props/pine-large.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\ski\\props\\pine-large.png",
       "sha256": "f3d641cf7afafea15894be6683ab2a304b8563ea1c8258988f9a6fc2b464bf97"
     }
   ],

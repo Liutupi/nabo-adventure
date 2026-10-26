@@ -24,7 +24,7 @@
     "a7e9c635e9c089fab5a45b8172e49090644657a7fe9846668d69e296c95f9c03"
   ],
   "source_sha256": [
-    "b4668a96d26ff4283b0c6bbe22c5680abb91bedeb9fdc0d1c9b4ec5fc22794f6"
+    "711c10341677d84d6df2b80910c2bb6940d0a6dfd31632801e1135447c550af2"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -37,7 +37,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/props/basket_front.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\sky\\props\\basket_front.png",
       "sha256": "711c10341677d84d6df2b80910c2bb6940d0a6dfd31632801e1135447c550af2"
     }
   ],

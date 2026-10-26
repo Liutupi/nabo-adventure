@@ -20,7 +20,7 @@
     "c098c76da71105ed4826fb988dd374de041757e19f81dcffdfc98ba607e9438a"
   ],
   "source_sha256": [
-    "ca6c72529918bff5142c9a5ee02d5dad57751f84a51ab1767386a17a81df9cac"
+    "7dc8bc7ad3cd85269b670c6a1555e988fe7e0d0c89d92192530fc725f7c61eb3"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/stamps/ink-pad.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\stamps\\ink-pad.png",
       "sha256": "38f6e2f57d30bd11e6d727e4aff4c2f34f780a23049a416135e144b0e67b6efb"
     }
   ],

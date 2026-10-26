@@ -22,7 +22,7 @@
     "bfbf31cde3e8dea740fe9917b282f21d1e2f3e8fc3bff731436d6db2ced49419"
   ],
   "source_sha256": [
-    "16fd4a2b2bb4576101fc41e26a62f9feedf5ebd2b3dc4e29f53746bd043abb7c"
+    "0a2d7e6c579e7936c8c3d22e2dbe33721ba5823082d9c42029097994e4d5ed4c"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/space/props/flag.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\space\\props\\flag.png",
       "sha256": "0a2d7e6c579e7936c8c3d22e2dbe33721ba5823082d9c42029097994e4d5ed4c"
     }
   ],

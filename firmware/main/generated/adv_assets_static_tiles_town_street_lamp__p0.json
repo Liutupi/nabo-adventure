@@ -23,7 +23,7 @@
     "ac35645d6cfe60294b9de4b1260786045d0e8a29329da1e365effed2aa800487"
   ],
   "source_sha256": [
-    "5849306634b1807e2dd9632252e297b02fece1757fcd065db2cd268569e0dfec"
+    "4e328bd10bac49cc41f49bd1f9cb40c818b343ff4f4325ba6db5a7ecbec555bc"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -36,7 +36,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/town/street-lamp.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\town\\street-lamp.png",
       "sha256": "4e328bd10bac49cc41f49bd1f9cb40c818b343ff4f4325ba6db5a7ecbec555bc"
     }
   ],

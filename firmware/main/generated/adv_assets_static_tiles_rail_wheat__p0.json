@@ -21,7 +21,7 @@
     "d529f11a9027667febff2ad7238a1f04308ffae3adf6622340ec1354142b5bb5"
   ],
   "source_sha256": [
-    "1dbe898f34a9882daaf337962b7554764aef4851534723404e524049210fdb09"
+    "04111181a053208b7090595dc21a5a429dbf3cd8e9a8ab3b803da190c967d6a8"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/rail/wheat.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\rail\\wheat.png",
       "sha256": "04111181a053208b7090595dc21a5a429dbf3cd8e9a8ab3b803da190c967d6a8"
     }
   ],

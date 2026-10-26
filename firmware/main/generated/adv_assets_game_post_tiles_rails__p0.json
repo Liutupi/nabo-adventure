@@ -20,7 +20,7 @@
     "fbbf3db036e6f1d319daf91b405421bb6cd38fe0a170df67bdf7c0a5bd317124"
   ],
   "source_sha256": [
-    "4aa0042e9cc837ae5603025186673b964d22d476fe1abe62d4af5c82d365128e"
+    "2a61dccaa7e489dda45134fd046dbe8f83fe41a088b9e4183107515ba7ef762f"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/tiles/rails.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\tiles\\rails.png",
       "sha256": "2a61dccaa7e489dda45134fd046dbe8f83fe41a088b9e4183107515ba7ef762f"
     }
   ],

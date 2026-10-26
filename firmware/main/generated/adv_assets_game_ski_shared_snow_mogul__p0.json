@@ -21,7 +21,7 @@
     "6c626b91be67f5b49afd5e358abbe7b69d358d1031f3aa43999fee67a23b2d75"
   ],
   "source_sha256": [
-    "5b4e624bf16eb04668a7999ce57ad6184ebb88a3041fed4212425eb2511953a4"
+    "1b94744c19c7bb95a7faf3c53bb9b3d410cdbf932aa690722797fe997928264e"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/ski/snow-mound.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\ski\\snow-mound.png",
       "sha256": "1b94744c19c7bb95a7faf3c53bb9b3d410cdbf932aa690722797fe997928264e"
     }
   ],

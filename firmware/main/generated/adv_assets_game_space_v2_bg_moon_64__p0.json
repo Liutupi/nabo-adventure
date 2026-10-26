@@ -1,0 +1,68 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_bg_moon_64__p0",
+  "width": 64,
+  "height": 64,
+  "palette_rgb565": [
+    0,
+    10565,
+    14791,
+    16936,
+    23210,
+    23243,
+    27468,
+    29548,
+    29581,
+    31662,
+    33774,
+    35888,
+    38033,
+    42226,
+    42258,
+    44404,
+    48597,
+    52823,
+    59130,
+    63389
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 2483,
+  "table_bytes": 172,
+  "frame_sha256": [
+    "9a230a0527ed2b1974b2936042a1135382a8a70a58b4a07b16338abb05fadc69"
+  ],
+  "source_sha256": [
+    "3771de741aabec18840c2ab7f1613e654d94bf8ae8417c9363c6ab8d18d18ad3"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/bg/moon-64",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_bg_moon_64__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\bg-moon-64.png",
+      "sha256": "29d1f229698f6f9ea417cb26bade89a43b9b52fae29e912b612dfd3d4c4f8abd"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/bg/moon-64",
+      "logical_symbol": "adv_assets_game_space_v2_bg_moon_64__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

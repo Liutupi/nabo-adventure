@@ -87,7 +87,8 @@ def main():
                       common_dependencies,
                       [r for r in resources if r.group in common_groups], ui=ui)
     games = {game: evidence(ROOT / 'private/game-art-c' / game / 'adv_assets_generated.json',
-                            (f'{game}-manifest.json',), [r for r in resources if r.group == game]) for game in GAME_GROUPS}
+                            (f'{game}-manifest.json',)+(('space-v2-manifest.json',) if game=='space' else ()),
+                            [r for r in resources if r.group == game]) for game in GAME_GROUPS}
     source = ART / 'reference/nabo-idle-original.png'
     from generate_boot_video import read_video
     video=read_video(ART)

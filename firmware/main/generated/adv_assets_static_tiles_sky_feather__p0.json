@@ -22,7 +22,7 @@
     "93a34118a6ceaa6930aca644f34842db622e83436f0791fcec7feaf3ec4c5fa2"
   ],
   "source_sha256": [
-    "c92ab5710fd285da722a09cc19309b98aaba7ceb7bbfd29d44bf063907693731"
+    "134505217c36ee5e1df4f873a1400f7bad1514448a5a280f990895e76df98412"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/sky/feather.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\sky\\feather.png",
       "sha256": "134505217c36ee5e1df4f873a1400f7bad1514448a5a280f990895e76df98412"
     }
   ],

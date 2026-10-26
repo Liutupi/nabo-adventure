@@ -19,7 +19,7 @@
     "e8291e963e7cdbfa376c517b18d47a7da9484ca4ce964a420f03eb7ee557d68e"
   ],
   "source_sha256": [
-    "730e3c16c38bf612c82ba039e68bb7d18486f593ff1549285b9b498d04f245bd"
+    "7212dde37b96452b1956083d0bc3b446875aafdb91587ed77763642ad6157e56"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/sky/bird-silhouette.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\sky\\bird-silhouette.png",
       "sha256": "7212dde37b96452b1956083d0bc3b446875aafdb91587ed77763642ad6157e56"
     }
   ],

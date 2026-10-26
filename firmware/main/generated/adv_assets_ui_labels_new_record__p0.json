@@ -21,7 +21,7 @@
     "fb8e71ace068ba6358619d85c976e8c9aa5b54ac807634548548f44cab13c2ad"
   ],
   "source_sha256": [
-    "57ae9c8d3b2b79b816c22c6d0f75c76dd48b632ed147a5b73bedc8310e89a620"
+    "da964dcac3815ce94d20fed81abe60c0886ff595e9c44688451c29f269d5ab58"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/labels/new-record.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\labels\\new-record.png",
       "sha256": "7b662b238ff0499009671c44acef88ec7360001e3ec75375b9acd2edc04ea4a0"
     }
   ],

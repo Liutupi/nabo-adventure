@@ -21,7 +21,7 @@
     "5296ab74f9b58c3a55a9e45da50145b70e6f09ba7cf7c5bda832c40fd32689fc"
   ],
   "source_sha256": [
-    "7b07beb0716e21e9fdecc055dd7094f5ccda1014539a362dcb28bbc6cd963d2d"
+    "2f5fd5ea63e474105953bf3c9ab5ac56775d153b5efa1e3c6242ecf97ab071c5"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/map/station-current.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\station-current.png",
       "sha256": "01638dff0f1174de9deb52a5e2fa70110dcd1a55d6cc0539fdaf385fc0a99287"
     }
   ],

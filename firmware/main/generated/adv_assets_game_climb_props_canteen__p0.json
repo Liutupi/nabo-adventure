@@ -24,7 +24,7 @@
     "6f874853d72ed067edb10c1f69c31ca2a46667180faeabeb58f30068d46c3e1f"
   ],
   "source_sha256": [
-    "d72c863ca70c677dc20a1f3c3439e910f46f892274b5ef3e565bfcdd25a2f5ec"
+    "bfba8b159240837faab90737c4a0385c284b5f4d57a307ae3b75d42891ac2e9f"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -37,7 +37,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/climb/props/canteen.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\climb\\props\\canteen.png",
       "sha256": "bfba8b159240837faab90737c4a0385c284b5f4d57a307ae3b75d42891ac2e9f"
     }
   ],

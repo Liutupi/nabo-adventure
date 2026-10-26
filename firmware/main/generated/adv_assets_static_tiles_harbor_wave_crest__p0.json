@@ -21,7 +21,7 @@
     "694b3b0d36d37f46a3d7b7014e752e7eafb0b4c89204d2eddb263c53d7ce4018"
   ],
   "source_sha256": [
-    "92384baee7f99c28847a51ac048a75edffb447d09725a5df63cd21eb34c82873"
+    "aba54606bbc19471fdcbdcd209c42d7bea188a5e33f1db5d944106af4666d12d"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/harbor/wave-crest.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\harbor\\wave-crest.png",
       "sha256": "aba54606bbc19471fdcbdcd209c42d7bea188a5e33f1db5d944106af4666d12d"
     }
   ],

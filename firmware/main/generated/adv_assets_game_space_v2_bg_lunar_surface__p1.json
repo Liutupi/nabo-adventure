@@ -1,0 +1,62 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_bg_lunar_surface__p1",
+  "width": 64,
+  "height": 120,
+  "palette_rgb565": [
+    0,
+    23245,
+    27470,
+    27471,
+    27503,
+    31696,
+    33809,
+    35922,
+    40148,
+    44374,
+    48600,
+    52793,
+    57052,
+    59165
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 4092,
+  "table_bytes": 272,
+  "frame_sha256": [
+    "b2ae99bcc6944385d858cb05e0acde6a16287f54d4fca754b320a4bcf0ee0687"
+  ],
+  "source_sha256": [
+    "a257bb4f972469c461c2745da762a4c479a2b20f2b9fb3424756a1d61566dc5a"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/bg/lunar-surface",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_bg_lunar_surface__p1",
+  "offset": [
+    256,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\bg-lunar-surface.png",
+      "sha256": "b3dfbf18249e3ad71e71e31f836420fa328addf09651e1a9afcc303b290dcb29"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/bg/lunar-surface",
+      "logical_symbol": "adv_assets_game_space_v2_bg_lunar_surface__p1",
+      "offset": [
+        256,
+        0
+      ]
+    }
+  ]
+}

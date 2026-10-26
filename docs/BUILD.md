@@ -58,7 +58,7 @@ python tools/smoke_adventure.py --port <COM口> --app <已回读app.bin> --sha25
 
 选定素材在`game-art/adventure/art/boot/selection.json`。重现素材用`tools/prepare_boot_video.py --ffmpeg <FFmpeg7.1绝对路径> --output <空候选目录>`；已有输入和原片保留。激活选择后先运行`tools/generate_boot_video.py`、`tools/generate_boot_presentation.py`，再重建主/六游戏C证明并更新索引。两个旧字库用`tools/subset_legacy_fonts.py`从保留原C字形数据复现，不重新栅格化字形。
 
-Windows及macOS/Linux构建脚本均运行`tools/check_adventure_budget.py`：真实旧factory2,031,616B，永久余量352KiB；开机V3+全UI224KiB，旧RLE档160KiB。构建目录的4MB开发布局检查不能替代此检查。只刷冻结app，保留旧6MB资源、NVS、当前成绩和静音设置。
+Windows及macOS/Linux构建脚本均运行`tools/check_adventure_budget.py`：真实旧factory2,031,616B。2026-10-26用户已批准替代旧352KiB规则：SKY/CLIMB各72KiB净新增额度、64KiB长期修复额；配置见`firmware/tools/adventure-budget.json`，两款未接V2前均为reserved。开机V3+全UI224KiB，旧RLE档160KiB。构建目录的4MB开发布局检查不能替代此检查。只刷冻结app，保留旧6MB资源、NVS、当前成绩和静音设置。
 
 
 睡前恢复点：直接用`firmware/checkpoints/2026-10-26/`内原样bin和SHA；99是已验收NIGHT操作的回退点，82是当前未最终验收的Grok候选。不要为恢复重新构建，也不要把宿主12fps目标GIF当成设备已达12fps。

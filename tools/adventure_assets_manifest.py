@@ -112,6 +112,15 @@ def load_resources(art, groups, include_b_skins=False):
                     resources.append(Resource('game/'+entry['id'], group, [scoped(art, entry['path'])], [entry['sha256']],
                                               pair(entry['size'], 'game static size', positive=True),
                                               pair(entry['anchor'], 'game static anchor'), color_limit=entry['color_limit']))
+            if group == 'space' and (art/'space-v2-manifest.json').is_file():
+                extra_path=scoped(art,'space-v2-manifest.json')
+                extra=json.loads(extra_path.read_text('utf-8'))
+                if extra.get('schema')!='space-v2-painted-v1':raise ValueError('Unsupported SPACE V2 painted manifest')
+                manifests['space-v2-manifest.json']=digest(extra_path)
+                for entry in extra['assets']:
+                    resources.append(Resource('game/'+entry['id'],group,[scoped(art,entry['path'])],[entry['sha256']],
+                                              pair(entry['size'],'SPACE V2 size',positive=True),
+                                              pair(entry['anchor'],'SPACE V2 anchor'),color_limit=entry['color_limit']))
         elif group == 'ui':
             ui = manifest
             for entry in manifest['assets']:

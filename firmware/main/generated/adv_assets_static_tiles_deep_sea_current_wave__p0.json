@@ -19,7 +19,7 @@
     "bee5d2dbdc1b087050db33e21ebeaefa7a7bcd8379cbfb1f976c4fb4606fe7d7"
   ],
   "source_sha256": [
-    "080250c39acc813003e29c5ed343fdf6e229c49bf56e1143c07fa1f780597555"
+    "0172b53ebd01b076bf1d20f843114afe3b4faaf41be3d0b68243728da21fcada"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -32,7 +32,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/deep-sea/current-wave.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\deep-sea\\current-wave.png",
       "sha256": "0172b53ebd01b076bf1d20f843114afe3b4faaf41be3d0b68243728da21fcada"
     }
   ],

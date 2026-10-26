@@ -1,0 +1,52 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_bg_cirrus__p1",
+  "width": 64,
+  "height": 48,
+  "palette_rgb565": [
+    0,
+    40381,
+    48733,
+    61343
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 395,
+  "table_bytes": 108,
+  "frame_sha256": [
+    "d12721a0b815910cbfda41228c3db45bc8179bde523b964a547a5d22ad73946c"
+  ],
+  "source_sha256": [
+    "8a3743ce1b8fa369d6d72051762e5b27a9c5d21ca393e00feacff6554fdd7142"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/bg/cirrus",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_bg_cirrus__p1",
+  "offset": [
+    256,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\bg-cirrus.png",
+      "sha256": "858b301771001bca0a46ce679fbf373da999a129d8ad8129c9b9d906dd47587a"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/bg/cirrus",
+      "logical_symbol": "adv_assets_game_space_v2_bg_cirrus__p1",
+      "offset": [
+        256,
+        0
+      ]
+    }
+  ]
+}

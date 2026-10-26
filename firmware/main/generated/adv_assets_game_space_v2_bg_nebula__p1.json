@@ -1,0 +1,59 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_bg_nebula__p1",
+  "width": 64,
+  "height": 220,
+  "palette_rgb565": [
+    0,
+    8393,
+    14604,
+    14636,
+    20847,
+    31185,
+    45745,
+    48927,
+    62873,
+    65368,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 4268,
+  "table_bytes": 466,
+  "frame_sha256": [
+    "20bd5b49fbc96c1c1e056aa3368074825a01d79d3b4e0e414dc5b5054135222a"
+  ],
+  "source_sha256": [
+    "f55fa9df1dc0b7ae418008c21f53b981c9409658193442b93340d6e93d5fc657"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/bg/nebula",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_bg_nebula__p1",
+  "offset": [
+    256,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\bg-nebula.png",
+      "sha256": "ad9d6be7f879cd641c88bd17279944c28366188527931640dfc729a3d617887c"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/bg/nebula",
+      "logical_symbol": "adv_assets_game_space_v2_bg_nebula__p1",
+      "offset": [
+        256,
+        0
+      ]
+    }
+  ]
+}

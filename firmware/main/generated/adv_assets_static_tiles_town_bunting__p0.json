@@ -22,7 +22,7 @@
     "01ef67e4022a0c886ab59dee087a1cc5791704c27dc46a00ffaee3bf8fa6a081"
   ],
   "source_sha256": [
-    "3a54d30a3ab65c644d7903effc7c4297d21911899e8a760b68266963826a5e34"
+    "6da0b8085c835b4f6c75c0d240cd468ecd73298967f96d813cbbcc40bfa103d7"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/town/bunting.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\town\\bunting.png",
       "sha256": "6da0b8085c835b4f6c75c0d240cd468ecd73298967f96d813cbbcc40bfa103d7"
     }
   ],

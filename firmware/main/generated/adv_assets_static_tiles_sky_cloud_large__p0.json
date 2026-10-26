@@ -21,7 +21,7 @@
     "baa5735333649df98b33c7037725d8d6f15fe3b38d1a1ab96e18e991a35592a8"
   ],
   "source_sha256": [
-    "2b9078bc7541ece4391feba1d64e4d92656ab7afe6028ae83d143e6e549d5f2f"
+    "74c102a22c030810de0679fb4c27899b5b6d5e68fcb74e0d8d988251f5a770d6"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/sky/cloud-large.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\sky\\cloud-large.png",
       "sha256": "74c102a22c030810de0679fb4c27899b5b6d5e68fcb74e0d8d988251f5a770d6"
     }
   ],

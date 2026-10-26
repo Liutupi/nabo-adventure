@@ -22,7 +22,7 @@
     "3be193369548c9619d3440ab2fe5ca2e19458fefa871b76eec354cf5123d91c9"
   ],
   "source_sha256": [
-    "220b13dd7027ec977367d1da6ae7c57868619170aeb21ef30bf865a3a07c4394"
+    "7341819b7dcbbc92c2c4332a25e1396f3321b820c470c3b560ffe51db9cd6b0c"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/space/props/asteroid.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\space\\props\\asteroid.png",
       "sha256": "7341819b7dcbbc92c2c4332a25e1396f3321b820c470c3b560ffe51db9cd6b0c"
     }
   ],

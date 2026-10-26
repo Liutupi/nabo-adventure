@@ -28,7 +28,7 @@
     "4223bffa085511379309b811d9f5dc7bccc7d4a47a5afa303d24daf7cf6151f2"
   ],
   "source_sha256": [
-    "9dc229ed0f745fbdf8bb6fe3b7433b6c5d1949c0c894a6f9f130f444a7eeb017"
+    "053f4bba2f368f5f9003d574f53b45e6b822751f503dd58f85249f6f6107e5a1"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -41,7 +41,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/landmarks/kiosk.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\landmarks\\kiosk.png",
       "sha256": "053f4bba2f368f5f9003d574f53b45e6b822751f503dd58f85249f6f6107e5a1"
     }
   ],

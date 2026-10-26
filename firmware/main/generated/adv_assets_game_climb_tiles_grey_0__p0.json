@@ -23,7 +23,7 @@
     "2348d0025b7964d6ae33c6a24955f745ccdd6ade708218c4e1d2820ce1f2ade7"
   ],
   "source_sha256": [
-    "2ae16ec4a1e1e1a7411f1ee9efea8a35d1e95b81ca6d9cd6f7aaa5ce85d791a0"
+    "b6115515c7e4cbc712cb948348a0009c67fd568a8b96285a30d6705effab8eae"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -36,7 +36,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/climb/tiles/grey-0.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\climb\\tiles\\grey-0.png",
       "sha256": "b6115515c7e4cbc712cb948348a0009c67fd568a8b96285a30d6705effab8eae"
     }
   ],

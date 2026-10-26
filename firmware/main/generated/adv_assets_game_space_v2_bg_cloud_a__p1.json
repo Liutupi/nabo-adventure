@@ -1,0 +1,56 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_bg_cloud_a__p1",
+  "width": 64,
+  "height": 96,
+  "palette_rgb565": [
+    0,
+    31895,
+    40281,
+    46619,
+    52925,
+    57182,
+    61375,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 1915,
+  "table_bytes": 212,
+  "frame_sha256": [
+    "ec16a25ad704e0680f6dc76b1539df101d2035a526be7bb418b9f663c315b414"
+  ],
+  "source_sha256": [
+    "8dde9911ad39837905b2d9068ea8b325a36bc6d0895631227153dcaa0f2aa6d8"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/bg/cloud-a",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_bg_cloud_a__p1",
+  "offset": [
+    256,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\bg-cloud-a.png",
+      "sha256": "752972ef2284f7b6d89549500fa4e299404b459c61e49d25048f4f7bc1dea10a"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/bg/cloud-a",
+      "logical_symbol": "adv_assets_game_space_v2_bg_cloud_a__p1",
+      "offset": [
+        256,
+        0
+      ]
+    }
+  ]
+}

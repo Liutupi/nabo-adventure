@@ -25,7 +25,7 @@
     "5fc51d22803e214155e8d5c1909e121645b62bba6f56ab581637407183eacb4b"
   ],
   "source_sha256": [
-    "9a7098fb14ee23ecf3ee4b0c2e0bfdee37cd3c8e42110566926641d6e4b0f6ed"
+    "b6a69822623b186653a353ab269a3b951bbd4f918b7d30415d44981dbbe055ea"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -38,7 +38,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/space/lander/front.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\space\\lander\\front.png",
       "sha256": "b6a69822623b186653a353ab269a3b951bbd4f918b7d30415d44981dbbe055ea"
     }
   ],

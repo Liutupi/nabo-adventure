@@ -1,0 +1,50 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_props_birds_0__p0",
+  "width": 20,
+  "height": 10,
+  "palette_rgb565": [
+    0,
+    10600
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 74,
+  "table_bytes": 28,
+  "frame_sha256": [
+    "3204ffc456dc8909982883da71e0e7fb7f6bbfaa4f3f56b20ef3c868623e7e38"
+  ],
+  "source_sha256": [
+    "06d9932cce33bbe929264a7498bbf9c21c2b527ed4fc6acec7e1a1e234706966"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/props/birds-0",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_props_birds_0__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\props-birds-0.png",
+      "sha256": "a9a73615eb496f85d39e70eb80c4cef2ac854ac015a113af996a055f0a6ac9e5"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/props/birds-0",
+      "logical_symbol": "adv_assets_game_space_v2_props_birds_0__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

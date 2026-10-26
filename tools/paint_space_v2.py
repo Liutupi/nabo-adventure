@@ -522,7 +522,9 @@ def main():
         im = painter().image(colours)
         path = OUT / (ident.split('/', 1)[1].replace('/', '-') + '.png')
         im.save(path, optimize=True)
-        manifest.append({'id': ident, 'path': str(path.relative_to(ROOT / 'game-art/adventure/art')), 'size': list(im.size), 'anchor': list(anchor)})
+        import hashlib
+        manifest.append({'id': ident, 'path': str(path.relative_to(ROOT / 'game-art/adventure/art')), 'size': list(im.size), 'anchor': list(anchor),
+                         'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'color_limit':64})
     (ROOT / 'game-art/adventure/art/space-v2-manifest.json').write_text(json.dumps({'schema': 'space-v2-painted-v1', 'assets': manifest}, indent=1) + '\n', 'utf-8')
     print(len(manifest), 'assets')
     if args.preview:

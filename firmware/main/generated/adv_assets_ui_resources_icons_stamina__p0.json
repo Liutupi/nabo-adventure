@@ -20,7 +20,7 @@
     "2e736f19d3fb7f6bdc0965eb3912b3144f3f3c498c43e14718521fe923354d21"
   ],
   "source_sha256": [
-    "ea4f3a4e71b8f33fe967c2db3038903a671b50f4c5abcdf0dd57c73c24542681"
+    "069bc77f6ebfe0da06507140fd82b88342573a84e2566401ffd2f9714dd178d5"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/resources/icons/stamina.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\resources\\icons\\stamina.png",
       "sha256": "68626ba880f8f4b5e1ade1c2700e609f5d6ec2e0fd1252622b58808ab0c57c19"
     }
   ],

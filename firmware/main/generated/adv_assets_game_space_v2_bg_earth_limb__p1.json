@@ -1,0 +1,83 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_bg_earth_limb__p1",
+  "width": 64,
+  "height": 130,
+  "palette_rgb565": [
+    0,
+    4593,
+    8851,
+    11062,
+    13207,
+    13273,
+    15322,
+    15353,
+    15385,
+    15484,
+    17466,
+    17530,
+    17532,
+    17564,
+    19611,
+    19676,
+    21723,
+    21756,
+    23837,
+    23869,
+    25949,
+    27849,
+    27916,
+    28029,
+    32113,
+    32141,
+    33994,
+    34062,
+    40735,
+    44702,
+    46481,
+    48829,
+    48895,
+    57182,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 3727,
+  "table_bytes": 334,
+  "frame_sha256": [
+    "2d308673f549dfcb8badc9b9cfcc36c3531c561054580cfac3c1ddd4b2f72b8c"
+  ],
+  "source_sha256": [
+    "52ee9476595103491d9b9c2e1beb9abc7957263c30de0201c1ce5aaa43773b60"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/bg/earth-limb",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_bg_earth_limb__p1",
+  "offset": [
+    256,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\bg-earth-limb.png",
+      "sha256": "1d641fd8e45af9e36cba002df2a6e8906dafc071d4de752165cb977ecc3f2408"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/bg/earth-limb",
+      "logical_symbol": "adv_assets_game_space_v2_bg_earth_limb__p1",
+      "offset": [
+        256,
+        0
+      ]
+    }
+  ]
+}

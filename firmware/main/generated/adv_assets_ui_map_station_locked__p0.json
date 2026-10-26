@@ -21,7 +21,7 @@
     "d314430ea783923944e8e38bcee5f313ae47c405524eea645a36c6c067377fc6"
   ],
   "source_sha256": [
-    "e5d4b80adf6166ebd38361d64d3c865176c436fc60ddf509f175a5b2d6913779"
+    "84590a70a631b55d38741f9598e99ec523f697d1215fe38a4ac6b279661a0a95"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/ui/map/station-locked.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\ui\\map\\station-locked.png",
       "sha256": "fe961d9ebbb17e30e79c27b2292c255a818563a607963f99b666638749b84afc"
     }
   ],

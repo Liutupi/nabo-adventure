@@ -103,14 +103,14 @@
     "94bbda518624fd985d0f6184a8e7ced569991971b3c5c1c00952b6a702e7ec87"
   ],
   "source_sha256": [
-    "3666fe396511a33b10ae869176380ba2c85448eadc48d2713925fa16c1097639",
-    "e8e090e45aadd50244cebc17145966f6097924c40020bcc76eed1df79fbc86b8",
-    "f2a3d9aedd53f2dcca23326a251bafa40b8c99d8be49c0124259717c83fa3de3",
-    "5723843ab0aa64d142af5133eb0ce32e343e42f794435347530de87e784db147",
-    "5e4c0d7f588285432c77d0ec89828c09035adbdf041bf472a4cb4e6437d8b258",
-    "c8f62867428ce8121cf616e3335fab644d16afd7f5912396890565065b9d9d46",
-    "042ddfb69483f80647519c1e3f5521ce0c64de657c13c4374b582591792d13de",
-    "3666fe396511a33b10ae869176380ba2c85448eadc48d2713925fa16c1097639"
+    "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082",
+    "58af3dda92944f3ffa48ee7f9d09e1b638ee53220f0f0503561db0eeae6d02a0",
+    "c97a85bbcc17d576b75ddfd0221b197a076a9126c73f9b77481f4082648de1d1",
+    "3005cd2412881f6baafac48536ef4c3423b217d47fe4286d9f74a61e5dd3a8b3",
+    "55e6cf36aa624fe80c4e760c1b8c7b4e3d04b9463a5a8320e6707a3e5376059c",
+    "fd84f4ee1d3b263eeb21a1df95283d8399542caa6a5fdd7c18052ad0a364e045",
+    "9ca9f94c1d4cb0e931c3fb6102bc5f0daaa4690cc4096a89609b4004941bd2ec",
+    "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
   ],
   "verified_frames": 8,
   "comparison": "lossless after shared RGB565 quantization",
@@ -123,35 +123,35 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/plant_flag/000.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\space\\runtime\\space_a\\plant_flag\\000.png",
       "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/plant_flag/001.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\space\\runtime\\space_a\\plant_flag\\001.png",
       "sha256": "58af3dda92944f3ffa48ee7f9d09e1b638ee53220f0f0503561db0eeae6d02a0"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/plant_flag/002.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\space\\runtime\\space_a\\plant_flag\\002.png",
       "sha256": "c97a85bbcc17d576b75ddfd0221b197a076a9126c73f9b77481f4082648de1d1"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/plant_flag/003.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\space\\runtime\\space_a\\plant_flag\\003.png",
       "sha256": "3005cd2412881f6baafac48536ef4c3423b217d47fe4286d9f74a61e5dd3a8b3"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/plant_flag/004.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\space\\runtime\\space_a\\plant_flag\\004.png",
       "sha256": "55e6cf36aa624fe80c4e760c1b8c7b4e3d04b9463a5a8320e6707a3e5376059c"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/plant_flag/005.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\space\\runtime\\space_a\\plant_flag\\005.png",
       "sha256": "fd84f4ee1d3b263eeb21a1df95283d8399542caa6a5fdd7c18052ad0a364e045"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/plant_flag/006.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\space\\runtime\\space_a\\plant_flag\\006.png",
       "sha256": "9ca9f94c1d4cb0e931c3fb6102bc5f0daaa4690cc4096a89609b4004941bd2ec"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/space/runtime/space_a/plant_flag/007.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\space\\runtime\\space_a\\plant_flag\\007.png",
       "sha256": "d02ddf38f875c9eb5a0e422dfec77841034f2e7e312cc1fa49959bc6ec6b5082"
     }
   ],

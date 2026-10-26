@@ -25,7 +25,7 @@
     "7c60e6b1484e749ad6a619e338063e08465ab2517d94daaba194eb1f581838b0"
   ],
   "source_sha256": [
-    "3cf59ff27138571f96e6ae97ed5744cc541817ee7cdb31f6b36f52d51ff0ebee"
+    "b2084cf4b32ff96a81b0a00b00735320511ff585d7bc8b6576ad506487f4d7cf"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -38,7 +38,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/ski/props/hot-cocoa-cabin.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\ski\\props\\hot-cocoa-cabin.png",
       "sha256": "b2084cf4b32ff96a81b0a00b00735320511ff585d7bc8b6576ad506487f4d7cf"
     }
   ],

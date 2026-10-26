@@ -22,7 +22,7 @@
     "892d066bb9ed54e6d8a0f4f00a5f972e94703fe4994788579ff8bb733cfc3002"
   ],
   "source_sha256": [
-    "2cc0fea4f81441c97d2fd73a3d67042976ab7b8bdd3b4da4924aca4f790c8b78"
+    "aae0726aa8c260e9dc00d228efd07bd7c3d431f46de5b95f2b1628602abdb327"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/climb/props/hold-fragile.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\climb\\props\\hold-fragile.png",
       "sha256": "aae0726aa8c260e9dc00d228efd07bd7c3d431f46de5b95f2b1628602abdb327"
     }
   ],

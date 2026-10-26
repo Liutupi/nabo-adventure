@@ -21,7 +21,7 @@
     "7d0134e19d8ba63b50d64641fb3f11aab46f023b0eb24a682de5fca22717c607"
   ],
   "source_sha256": [
-    "de779ed8f34b6f6fafd810984d1b00331ab9bf5dffffe677c959ec728b519091"
+    "dd963d89203896cbc102e4941b1b16cb9c373a13b44079cb8c898f0bea6721f6"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/rail/rail-crossing.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\rail\\rail-crossing.png",
       "sha256": "dd963d89203896cbc102e4941b1b16cb9c373a13b44079cb8c898f0bea6721f6"
     }
   ],

@@ -1,0 +1,11 @@
+{
+  "schema": "nabo-adventure-growth-budget-v1",
+  "approved_on": "2026-10-26",
+  "authorization": "Direct user reply: approved this allocation and continue device upgrade",
+  "permanent_reserve_bytes": 65536,
+  "space_baseline_app_bytes": 1812256,
+  "future_games": {
+    "sky": {"allocation_bytes": 73728, "state": "reserved"},
+    "climb": {"allocation_bytes": 73728, "state": "reserved"}
+  }
+}

@@ -37,12 +37,12 @@
     "91fd38b0c6564cbad45d1606ebd867d96fe3b99638130711a93f21b56376306b"
   ],
   "source_sha256": [
-    "d309d2367fbff94f5e4a535799ea7439ec58a05d619d35bf8237484e9119d7ee",
-    "1ba73d2816347569aa5694e31c9de3a373034c4c4b11cb46fdb9ce25215c3a51",
-    "a1c90254fad9487282a6e0e48dee23efb43a82010b47bc9bf324fd10922456a6",
-    "cf36a47a8d7937589e83f6138bc4e4860caa73c507f91c5043c48553f8f15c01",
-    "0e9b8433d83137593ec4e668b9cf7796eeb174f8813f0413e1025738f458e756",
-    "d309d2367fbff94f5e4a535799ea7439ec58a05d619d35bf8237484e9119d7ee"
+    "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212",
+    "9ce09ba23d67a9fd973de54d1375ae3e500f9a86cdfea279beffe959031df46d",
+    "80b08151e4f3e1746589009cecb487de2e5cf4b2764fc59ec1a7e1c705e64bf5",
+    "57aecc9ea9b33819b673011ee81e5cd542b0b647d7112f062ffe3ee0e40f4f0a",
+    "6ee3a7e5515de2859c3c174d431df8ce3c989119d27877e15dc56cd2c20a92b5",
+    "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212"
   ],
   "verified_frames": 6,
   "comparison": "lossless after shared RGB565 quantization",
@@ -55,27 +55,27 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/controls/heat/000.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\sky\\controls\\heat\\000.png",
       "sha256": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/controls/heat/001.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\sky\\controls\\heat\\001.png",
       "sha256": "9ce09ba23d67a9fd973de54d1375ae3e500f9a86cdfea279beffe959031df46d"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/controls/heat/002.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\sky\\controls\\heat\\002.png",
       "sha256": "80b08151e4f3e1746589009cecb487de2e5cf4b2764fc59ec1a7e1c705e64bf5"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/controls/heat/003.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\sky\\controls\\heat\\003.png",
       "sha256": "57aecc9ea9b33819b673011ee81e5cd542b0b647d7112f062ffe3ee0e40f4f0a"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/controls/heat/004.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\sky\\controls\\heat\\004.png",
       "sha256": "6ee3a7e5515de2859c3c174d431df8ce3c989119d27877e15dc56cd2c20a92b5"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/controls/heat/005.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\sky\\controls\\heat\\005.png",
       "sha256": "30e3a7b00db019b418ee99f4d29c572fbc9e8afbd71c6d43338c2a2fa2892212"
     }
   ],

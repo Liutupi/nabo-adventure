@@ -100,14 +100,14 @@
     "71362d53f7d2d496969483eebf28314eb5ecd6a9a7ae3f82aadeb42a99c2e357"
   ],
   "source_sha256": [
-    "1640b3135af095ccbf597823f567e18d00053fd8ecc4146ecb2265069ee4f165",
-    "bbbf8ab0cfb5f8757dd9b91f7a49ff8f3e5b921b9523dd2323fe6aee6fc4efaf",
-    "308e9a6c1b6961a11a57530ce1a3de934230e5057b7f1639916b1a9d515ca5ca",
-    "1823132dffe66e3f6d9798e73cca5707feddedfe6ba440aac17b0799b0420963",
-    "1823132dffe66e3f6d9798e73cca5707feddedfe6ba440aac17b0799b0420963",
-    "308e9a6c1b6961a11a57530ce1a3de934230e5057b7f1639916b1a9d515ca5ca",
-    "bbbf8ab0cfb5f8757dd9b91f7a49ff8f3e5b921b9523dd2323fe6aee6fc4efaf",
-    "1640b3135af095ccbf597823f567e18d00053fd8ecc4146ecb2265069ee4f165"
+    "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6",
+    "ea6b52fab6f283e5d642b0057212825f2830b2f10928f7052121412b722f544f",
+    "792ce958a23e4bbeabecd1af49843f181ed93a70a14df5b3c8a19cf7168c488b",
+    "47d469bb49854b6ba6ee06844d19b743720bfafaff6c51d62020aa1b3a3bdcf0",
+    "47d469bb49854b6ba6ee06844d19b743720bfafaff6c51d62020aa1b3a3bdcf0",
+    "792ce958a23e4bbeabecd1af49843f181ed93a70a14df5b3c8a19cf7168c488b",
+    "ea6b52fab6f283e5d642b0057212825f2830b2f10928f7052121412b722f544f",
+    "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
   ],
   "verified_frames": 8,
   "comparison": "lossless after shared RGB565 quantization",
@@ -120,35 +120,35 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/000.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\fall\\000.png",
       "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/001.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\fall\\001.png",
       "sha256": "ea6b52fab6f283e5d642b0057212825f2830b2f10928f7052121412b722f544f"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/002.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\fall\\002.png",
       "sha256": "792ce958a23e4bbeabecd1af49843f181ed93a70a14df5b3c8a19cf7168c488b"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/003.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\fall\\003.png",
       "sha256": "47d469bb49854b6ba6ee06844d19b743720bfafaff6c51d62020aa1b3a3bdcf0"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/004.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\fall\\004.png",
       "sha256": "47d469bb49854b6ba6ee06844d19b743720bfafaff6c51d62020aa1b3a3bdcf0"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/005.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\fall\\005.png",
       "sha256": "792ce958a23e4bbeabecd1af49843f181ed93a70a14df5b3c8a19cf7168c488b"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/006.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\fall\\006.png",
       "sha256": "ea6b52fab6f283e5d642b0057212825f2830b2f10928f7052121412b722f544f"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/fall/007.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\fall\\007.png",
       "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
     }
   ],

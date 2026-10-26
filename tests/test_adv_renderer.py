@@ -64,6 +64,7 @@ class Renderer(unittest.TestCase):
         lib.host_boot_start.argtypes = [ctypes.c_uint32]
         lib.host_fail_caps.argtypes = [ctypes.c_size_t]
         lib.adv_ui_staging_bytes.restype = ctypes.c_uint32
+        lib.ui_space_staging_bytes.restype = ctypes.c_uint32
         lib.adv_boot_motion_enabled.restype = ctypes.c_bool
         class BootStats(ctypes.Structure):
             _fields_=[(name,ctypes.c_uint32) for name in ('frames','skipped','last_frame','elapsed_ms')]
@@ -119,7 +120,7 @@ class Renderer(unittest.TestCase):
         self.check(f'{n} steps')
 
     def test_v2_landscape_dma_staging_is_fenced_and_released(self):
-        for game in ('night','ski'):
+        for game in ('night','ski','space'):
             self.new([0]*9,seen=0xffffff)
             getattr(self.lib,'host_'+game+'_case')(0)
             self.check(game+' action pipeline')
@@ -134,12 +135,13 @@ class Renderer(unittest.TestCase):
             self.assertEqual(self.lib.adv_ui_staging_bytes(),0)
 
     def test_v2_landscape_allocation_failure_keeps_identical_pixels(self):
-        for game in ('night','ski'):
+        for game in ('night','ski','space'):
             self.new([0]*9,seen=0xffffff)
             getattr(self.lib,'host_'+game+'_case')(0)
             self.lib.host_fail_caps(61440)
             self.lib.host_draw()
             self.assertEqual(self.lib.adv_ui_staging_bytes(),0)
+
             self.assertFalse(self.lib.host_overflow())
             fallback=self.snapshot()
             self.lib.host_full()
@@ -148,6 +150,15 @@ class Renderer(unittest.TestCase):
             self.assertEqual(fallback,self.snapshot())
             self.ev(DOWN,LONG);self.ev(UP,DOUBLE)
             self.assertEqual(self.lib.adv_ui_staging_bytes(),0)
+
+    def test_space_marks_release_on_exit_and_recover_after_allocation_failure(self):
+        self.new([0]*9,seen=0xffffff);self.lib.host_space_case(1);self.lib.host_fail_caps(8192)
+        self.lib.host_draw();self.assertTrue(self.lib.host_overflow());self.assertEqual(self.lib.ui_space_staging_bytes(),0)
+        self.lib.host_full();self.assertFalse(self.lib.host_overflow());self.assertEqual(self.lib.ui_space_staging_bytes(),8192)
+        self.check('SPACE recovered render');self.ev(DOWN,LONG);self.ev(UP,DOUBLE)
+        self.assertEqual(self.lib.ui_space_staging_bytes(),0)
+        self.lib.host_space_case(1);self.check('SPACE re-entry');self.lib.host_close()
+        self.assertEqual(self.lib.ui_space_staging_bytes(),0)
 
     def test_every_screen(self):
         self.new([0, 12, 350, 7, 0, 0, 0, 0, 0], seen=0b11011001)
@@ -218,8 +229,7 @@ class Renderer(unittest.TestCase):
 
     def test_ski_sky_space_scenes_and_phases_are_incremental(self):
         self.new([0,50,600,25,60,300,45,1000,0],seen=0x7fffff)
-        games={'sky':('drift','heat','vent','hit','stamp','dense','low','warm'),
-               'space':('fall','engine','side','landed','flag','crash','objects','round5')}
+        games={'sky':('drift','heat','vent','hit','stamp','dense','low','warm')}
         phases=('title','ready','pause','end','result','max-record')
         for game,names in games.items():
             case=getattr(self.lib,'host_'+game+'_case')
@@ -232,6 +242,18 @@ class Renderer(unittest.TestCase):
                 self.ev(button,PRESS);self.steps(12);self.ev(button,RELEASE)
             for _ in range(2):self.ev(UP,PRESS);self.ev(UP,RELEASE);self.ev(UP,CLICK)
             self.ev(UP,DOUBLE);self.assertIn(self.lib.host_page(),(1,5))
+
+    def test_space_v2_native_journey_scenes_and_controls(self):
+        self.new([0]*9,seen=0xffffff)
+        names=('ignite','ascent','boost','landed','flag','lost','orbit','transfer','title','ready','pause','end','result','max-record','dense','separation','upper','landing')
+        for which,name in enumerate(names):
+            self.lib.host_space_case(which);self.check('SPACE V2 '+name);self.save('space-'+name+'.png',True)
+            self.assertEqual((self.lib.adv_ui_width(),self.lib.adv_ui_height()),(320,240))
+        self.lib.host_space_case(1)
+        for _ in range(6):self.steps(4)
+        self.ev(UP,DOUBLE);self.assertEqual(self.lib.host_page(),7)
+        self.ev(DOWN,LONG);self.assertEqual(self.lib.host_phase(),3)
+        self.ev(UP,DOUBLE);self.assertEqual(self.lib.host_page(),1)
 
     def test_ski_v2_scenes_fit_the_op_budget_and_leave_only_from_pause(self):
         self.new([0,50,600,25,60,300,0,0,0],seen=0x7fffff)

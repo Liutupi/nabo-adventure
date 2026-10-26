@@ -22,7 +22,7 @@
     "08358c39e103e7c887d6d198b709bf593cdd007d03de6bea98ee1b4d715ac795"
   ],
   "source_sha256": [
-    "a6b1d320224ba5b71803603bf7f60464c62cb24fffa897ad7b7ad29643ced1a9"
+    "db7eda758de16a707bb8893ece580f36cd16ddaf6694c596baeb0d4805bf21ff"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/tiles/track-straight.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\tiles\\track-straight.png",
       "sha256": "db7eda758de16a707bb8893ece580f36cd16ddaf6694c596baeb0d4805bf21ff"
     }
   ],

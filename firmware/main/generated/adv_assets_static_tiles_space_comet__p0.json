@@ -21,7 +21,7 @@
     "b8c80ebc70caa5927eab503ce736e8a80f2c75ecb8437c7453612c486b024698"
   ],
   "source_sha256": [
-    "d637d36cff682743b13e8a3c2f6521995b152d886950f79cbe2c0b1ae6d57300"
+    "ef10e490ecbb609f4bb008cffad1e5e16068ed70223ce19e7f7490d8ff38c024"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/space/comet.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\space\\comet.png",
       "sha256": "ef10e490ecbb609f4bb008cffad1e5e16068ed70223ce19e7f7490d8ff38c024"
     }
   ],

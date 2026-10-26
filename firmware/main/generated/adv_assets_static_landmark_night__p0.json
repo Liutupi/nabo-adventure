@@ -27,7 +27,7 @@
     "8a14cae8037c94d33c38e05a75857c8bf28e98a7629c506bc10a57f10f4c52f4"
   ],
   "source_sha256": [
-    "d578ac613d2d53415b8b81f04ac18842535122c0de45e49002fb4b550eae0b2d"
+    "5da7308a84004d0913c704e0fa887705992588adce23919e86715c1059464d1e"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -40,7 +40,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/landmarks/night.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\landmarks\\night.png",
       "sha256": "5da7308a84004d0913c704e0fa887705992588adce23919e86715c1059464d1e"
     }
   ],

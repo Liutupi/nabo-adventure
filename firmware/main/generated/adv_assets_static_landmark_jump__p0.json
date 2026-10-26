@@ -25,7 +25,7 @@
     "7519ee5527ff0fe9ce80fb62a306a3804f38ab2c4f9ef33fe3d0259f0890014e"
   ],
   "source_sha256": [
-    "76b2373736e8e75757848c1fed36008c6288c8b565bb04847c9b19c2cc3bf308"
+    "af2889591d7a04240f1cfc1faba86c9aaad4a6d63375b56afebffe6f2a119ec3"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -38,7 +38,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/landmarks/jump.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\landmarks\\jump.png",
       "sha256": "af2889591d7a04240f1cfc1faba86c9aaad4a6d63375b56afebffe6f2a119ec3"
     }
   ],

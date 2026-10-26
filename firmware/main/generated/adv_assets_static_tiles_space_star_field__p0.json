@@ -21,7 +21,7 @@
     "d20811cf49751711213312ef177002bd30fb0b685c3ac6908a09742600980c64"
   ],
   "source_sha256": [
-    "ab6210ca9a60e13720c952ad7c16b32fed43e5a80970aa8b93ee9817223387fa"
+    "13b53ccfabcb3bd9762942ace7426c4785ea6ffb2be1529caa0bf40452d92c9a"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/space/star-field.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\space\\star-field.png",
       "sha256": "13b53ccfabcb3bd9762942ace7426c4785ea6ffb2be1529caa0bf40452d92c9a"
     }
   ],

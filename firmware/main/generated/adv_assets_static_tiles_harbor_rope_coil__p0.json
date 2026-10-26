@@ -21,7 +21,7 @@
     "c7186197a7aa44203c34416c7ed61a6bdbdee58ca11a07f13adbf0a039aec6af"
   ],
   "source_sha256": [
-    "5d7bc2e6767324ce457c7cbe98d8a8b8cc0f81970941ba6bb02a9d4ac0e91cb9"
+    "c2b03b03ac8f74252fc2c9056a6541bba8a2a012a9e96f793d03993b6b67f3b1"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/harbor/rope-coil.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\harbor\\rope-coil.png",
       "sha256": "c2b03b03ac8f74252fc2c9056a6541bba8a2a012a9e96f793d03993b6b67f3b1"
     }
   ],

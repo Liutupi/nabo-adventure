@@ -23,7 +23,7 @@
     "fb800d9b12b9dc7ba6e2bc8c01e7983c64e1e5b02523590646e1f05d8a602d6d"
   ],
   "source_sha256": [
-    "36605e329a0f417a4b5b46edc75fcaf51f3d6a194f9ac73a9b7632c603787080"
+    "aff19cae1f384f71ca348cfc20ef6b9837f4269896a23c42d80f5ae2a4ac89c6"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -36,7 +36,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/space/props/fuel-can.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\space\\props\\fuel-can.png",
       "sha256": "aff19cae1f384f71ca348cfc20ef6b9837f4269896a23c42d80f5ae2a4ac89c6"
     }
   ],

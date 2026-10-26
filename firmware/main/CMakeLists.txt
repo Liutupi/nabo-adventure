@@ -19,6 +19,7 @@ idf_component_register(
         "adv_post.c"
         "adv_night.c"
         "adv_night_debug.c"
+        "adv_space_debug.c"
         "adv_climb.c"
         "adv_climb_debug.c"
         "adv_ui_climb.c"

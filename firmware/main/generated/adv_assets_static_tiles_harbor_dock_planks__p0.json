@@ -22,7 +22,7 @@
     "71062cdf5d110edf0a2f157c5ce4ba9f4ae4215d1b1c29c687196b63fb1ef876"
   ],
   "source_sha256": [
-    "975aa08e052bea5c4eb692ee750f29faa18763786e287e2f827143044e167638"
+    "548732a6ff55f112ae2cd4b88deb800caf3792df66b0f330d77f868604d4cf43"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/harbor/dock-planks.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\harbor\\dock-planks.png",
       "sha256": "548732a6ff55f112ae2cd4b88deb800caf3792df66b0f330d77f868604d4cf43"
     }
   ],

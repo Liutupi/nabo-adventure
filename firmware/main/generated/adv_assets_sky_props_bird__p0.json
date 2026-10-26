@@ -29,10 +29,10 @@
     "fc55e145406682e38c6b7504c7ad70a06bb5c072e22d7718b63fb0e4591d6ccc"
   ],
   "source_sha256": [
-    "e2744c0fe96897838f5dd7111f55eb3b1f38226a850b20e05721a68ec8953657",
-    "dbe5a4081d91520f2ba1b176b2244cc05b55edc893ccd370eff27d024c819de2",
-    "649053d7c9d3bb4d2396f298ac81ae7265fb96c157f8021e0e004e72deb801a0",
-    "bd1f16f78ecba117386002448c79e53980948ef53cfdffe30205d88329c6363f"
+    "86f8cc02a3f7d06e4d76878c44f2df68b5f197f08c772b5e84bfcd4be52089e0",
+    "5f2d6de4ae31821f69ff242ede40281dd824c9a05f138db235cbe4a7fc1123b0",
+    "1535e6d655a914b353cbabece243ea2884beab81d4d84f800db920df4e717a1b",
+    "4b29322b94ad99763bdcc2e97a1c998f01692b17caa822995b447e93729d9195"
   ],
   "verified_frames": 4,
   "comparison": "lossless after shared RGB565 quantization",
@@ -45,19 +45,19 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/bird/000.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\sky\\bird\\000.png",
       "sha256": "86f8cc02a3f7d06e4d76878c44f2df68b5f197f08c772b5e84bfcd4be52089e0"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/bird/001.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\sky\\bird\\001.png",
       "sha256": "5f2d6de4ae31821f69ff242ede40281dd824c9a05f138db235cbe4a7fc1123b0"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/bird/002.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\sky\\bird\\002.png",
       "sha256": "1535e6d655a914b353cbabece243ea2884beab81d4d84f800db920df4e717a1b"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/bird/003.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\sky\\bird\\003.png",
       "sha256": "4b29322b94ad99763bdcc2e97a1c998f01692b17caa822995b447e93729d9195"
     }
   ],

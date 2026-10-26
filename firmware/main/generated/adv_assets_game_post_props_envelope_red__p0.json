@@ -21,7 +21,7 @@
     "414060d00c485d43ffa4465764c3c34d4fd48001339c78d35c80c1301d0dca44"
   ],
   "source_sha256": [
-    "fad619eaf96cbbf931d7c749fb5cd107c8c3d918464a3f2c5bde76f1c5dac730"
+    "4ebcb2af03b27d48c66a1bfa5fd543034fd76c34e0a15285f50223a5f29ff82e"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/envelope-red.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\envelope-red.png",
       "sha256": "4ebcb2af03b27d48c66a1bfa5fd543034fd76c34e0a15285f50223a5f29ff82e"
     }
   ],

@@ -97,12 +97,12 @@
     "71362d53f7d2d496969483eebf28314eb5ecd6a9a7ae3f82aadeb42a99c2e357"
   ],
   "source_sha256": [
-    "1640b3135af095ccbf597823f567e18d00053fd8ecc4146ecb2265069ee4f165",
-    "8ac969aca9deca23c6141f787fa22e0fcde9dd9997cc70afde97d58ceefa3bf5",
-    "f19e179e722d2d31cf53c1047dc93795ac5513ceade356c83685eca92093797f",
-    "cf65dbb5aebef1eb6b782b76ebd381d82a2bca5b1d42904f290316d19895df77",
-    "9178bd0143247fe42ac31994a0d233d56dc2b81f55513063d4b4076f676d5c0f",
-    "1640b3135af095ccbf597823f567e18d00053fd8ecc4146ecb2265069ee4f165"
+    "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6",
+    "f1e3c46b28ade9a99f8d9661c93911fcb3323f45bc4a545b18a6f2b5c10c5990",
+    "283890e600ac303cb94ddc93f8d146a8aa7ee5a903c1c705e482da74205ebcba",
+    "6a225ba0b5e98dd6233a4b1707acd3c8081667ca1897dcf3bc6b6f3105473aba",
+    "9961fdc7d734ca0a08e4c7b9a156152067885ccf5fb267b769ea8cf49ae54c00",
+    "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
   ],
   "verified_frames": 6,
   "comparison": "lossless after shared RGB565 quantization",
@@ -115,27 +115,27 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/jump/000.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\jump\\000.png",
       "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/jump/001.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\jump\\001.png",
       "sha256": "f1e3c46b28ade9a99f8d9661c93911fcb3323f45bc4a545b18a6f2b5c10c5990"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/jump/002.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\jump\\002.png",
       "sha256": "283890e600ac303cb94ddc93f8d146a8aa7ee5a903c1c705e482da74205ebcba"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/jump/003.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\jump\\003.png",
       "sha256": "6a225ba0b5e98dd6233a4b1707acd3c8081667ca1897dcf3bc6b6f3105473aba"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/jump/004.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\jump\\004.png",
       "sha256": "9961fdc7d734ca0a08e4c7b9a156152067885ccf5fb267b769ea8cf49ae54c00"
     },
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/jump/005.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\jump\\005.png",
       "sha256": "4b46c8200705b27cefbe4a90e6712c46f6b79aef1e9e99919a59c181c38489b6"
     }
   ],

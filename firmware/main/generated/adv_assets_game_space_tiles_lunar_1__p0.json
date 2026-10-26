@@ -22,7 +22,7 @@
     "bd83f856c1870440e01ae283113bd67bf1805028d2c4a2e07891253d8a8c0083"
   ],
   "source_sha256": [
-    "9e333c1a8429e2f00856979ecb67c08dcb3a81e7888e4d231aea857d36e48314"
+    "d9160bc6873060915d6bd9340ad31211bdcc8e08b8539bc395e57d4ca4cc3476"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/space/tiles/lunar-1.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\space\\tiles\\lunar-1.png",
       "sha256": "d9160bc6873060915d6bd9340ad31211bdcc8e08b8539bc395e57d4ca4cc3476"
     }
   ],

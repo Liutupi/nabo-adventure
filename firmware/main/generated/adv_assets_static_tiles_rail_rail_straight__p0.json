@@ -21,7 +21,7 @@
     "7512234eeb3b517798b61042e36e076736a5729452620d96ae2ecd6e613ffc39"
   ],
   "source_sha256": [
-    "7d7834fabb69b3c0257ff83a455ddbb21ffc2687c1830428eaafabcd7d5b08ac"
+    "0579917e1b4a0d82544cfee4618f07ddfb8490acdfe54f787433253f0a3484c2"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/rail/rail-straight.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\rail\\rail-straight.png",
       "sha256": "0579917e1b4a0d82544cfee4618f07ddfb8490acdfe54f787433253f0a3484c2"
     }
   ],

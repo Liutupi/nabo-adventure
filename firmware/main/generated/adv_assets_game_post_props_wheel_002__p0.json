@@ -23,7 +23,7 @@
     "bc145bd1a4c4a58e68286d3546e3486c53f6c5b72d6743ba2e5d2bbd2c4d53d5"
   ],
   "source_sha256": [
-    "6fab3ee6023af78de8f815643bf6908cafd05401171f460b33f07ffad3392e6a"
+    "1f999c9a515a646194e3cbaaa86ba9787674ac87aa8aa6e3eed9d03a7759bf9c"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -36,7 +36,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/post/props/wheel-002.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\post\\props\\wheel-002.png",
       "sha256": "1f999c9a515a646194e3cbaaa86ba9787674ac87aa8aa6e3eed9d03a7759bf9c"
     }
   ],

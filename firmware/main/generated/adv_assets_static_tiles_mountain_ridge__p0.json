@@ -22,7 +22,7 @@
     "bce971427d197af7bd5b9f4946181be34ee4b04d526d51fecc5e8058a6fd6724"
   ],
   "source_sha256": [
-    "962a62238c56764ab13c8a7898037702cca9838dc053679a6be1035bf4ec2c70"
+    "aa8e0aa5f24a1f352fb4b628a7a9157e654a9174044461d2f33682916e3141b7"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -35,7 +35,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/mountain/ridge.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\mountain\\ridge.png",
       "sha256": "aa8e0aa5f24a1f352fb4b628a7a9157e654a9174044461d2f33682916e3141b7"
     }
   ],

@@ -20,7 +20,7 @@
     "a96567a090333719818dd7926c20647684b43c9a94b34246820e31621df47bca"
   ],
   "source_sha256": [
-    "c19658cde1e65541f0efacc4fc34cc87a8585d936f62e1f1a42026618f92a237"
+    "0d9e83cc68bc23bb7ff7dc5d367b9221314c70819b6bd9a448215eec7d249015"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -33,7 +33,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/tiles/deep-sea/bubble-chain.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\tiles\\deep-sea\\bubble-chain.png",
       "sha256": "0d9e83cc68bc23bb7ff7dc5d367b9221314c70819b6bd9a448215eec7d249015"
     }
   ],

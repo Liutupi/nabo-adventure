@@ -21,7 +21,7 @@
     "35fa8bfae175a60b7b22d094dbc19da1a260e1a70fa0ad1c3cfa74d3ce15c767"
   ],
   "source_sha256": [
-    "b380b7330d306491497bb6c4c1b381b98a46404443c5519a7d24db5ac8c8ecb0"
+    "c164b0b5ed215d08c19b0f2fe4611f6937430907a0a79aef2edd826a832e67d5"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -34,7 +34,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/games/sky/props/thundercloud.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\games\\sky\\props\\thundercloud.png",
       "sha256": "c164b0b5ed215d08c19b0f2fe4611f6937430907a0a79aef2edd826a832e67d5"
     }
   ],

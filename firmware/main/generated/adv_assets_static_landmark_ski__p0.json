@@ -25,7 +25,7 @@
     "6d88910f3612248b4a2cc826b133bef7db024e7f66f520a9a119addfc68be624"
   ],
   "source_sha256": [
-    "b2aa4fa99cfa25de3c2c7a8a3da8f2da39b7385f53518fbe74f53e89e7a60263"
+    "a4d9f679d11503195225a51fd32af67fde6b7fa1316191cb40375ce8470efcfe"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -38,7 +38,7 @@
   ],
   "original_sources": [
     {
-      "path": "/home/claude/nabo-adventure/game-art/adventure/art/map/landmarks/ski.png",
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\map\\landmarks\\ski.png",
       "sha256": "a4d9f679d11503195225a51fd32af67fde6b7fa1316191cb40375ce8470efcfe"
     }
   ],

@@ -1,0 +1,53 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_props_repair__p0",
+  "width": 14,
+  "height": 14,
+  "palette_rgb565": [
+    0,
+    15758,
+    40215,
+    61310,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 104,
+  "table_bytes": 42,
+  "frame_sha256": [
+    "0698896642ed5e8ce3a9b5c9d569e7f7bafc1d52a7811156c0d07594b2ca82fe"
+  ],
+  "source_sha256": [
+    "5a5dcfe26197e784e06006845b708400e91215cb69855e33afdd2d4f16ff9833"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/props/repair",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_props_repair__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\props-repair.png",
+      "sha256": "0564cb098526c382fca9014804cdfea8c61745cb84957324591aa6bd1099d8f5"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/props/repair",
+      "logical_symbol": "adv_assets_game_space_v2_props_repair__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_space_v2_bg_station__p0",
+  "width": 84,
+  "height": 34,
+  "palette_rgb565": [
+    0,
+    10867,
+    23546,
+    32447,
+    48666,
+    61310,
+    65535
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 1660,
+  "table_bytes": 86,
+  "frame_sha256": [
+    "d866d20f76e763c26d9a9a26af8079b03587980f14db13eba42a49ad4b82ef2d"
+  ],
+  "source_sha256": [
+    "2d825e06b92c3befbd48ec232b27a53328058c07ce3824aa2364ac042358a39b"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/space-v2/bg/station",
+  "group": "space",
+  "symbol": "adv_assets_game_space_v2_bg_station__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\bg-station.png",
+      "sha256": "17882d70c5fc08d4ae989af08c4b2ce0d6e37a76c0f3cf5ad98dbb091bb14913"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/space-v2/bg/station",
+      "logical_symbol": "adv_assets_game_space_v2_bg_station__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

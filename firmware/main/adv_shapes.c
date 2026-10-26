@@ -28,6 +28,7 @@ static int rbox_sd(int px, int py, int cx, int cy, int hx, int hy, int r)
 }
 
 static int cov_from_sd(int sd) { return clampi(8 - sd, 0, 16) * 16; }   // 256 well inside, 0 outside
+static int floor16(int v){return v>=0?v/16:-((-v+15)/16);}
 
 // 4x4 Bayer matrix, 0..15: the threshold for rounding each 8-bit channel down to 5 or 6 bits.
 static const uint8_t BAYER[4][4] = {{0, 8, 2, 10}, {12, 4, 14, 6}, {3, 11, 1, 9}, {15, 7, 13, 5}};
@@ -40,7 +41,7 @@ static int dither(int v, int bits, int t)
     return out > max ? max : out;
 }
 
-void ag_paint_band(const ag_op_t *op, int y, int x0, int x1, uint16_t *row)
+void ag_paint_band(const ag_op_t *op, int y, int x0, int x1, uint16_t *restrict row)
 {
     int h = op->u.band.h > 1 ? op->u.band.h - 1 : 1, k = clampi(y - op->u.band.y, 0, h);
     int r = op->u.band.r0 + (op->u.band.r1 - op->u.band.r0) * k / h;
@@ -53,8 +54,12 @@ void ag_paint_band(const ag_op_t *op, int y, int x0, int x1, uint16_t *row)
         int t = BAYER[y & 3][phase];
         colors[phase] = (uint16_t)(dither(r, 5, t) << 11 | dither(g, 6, t) << 5 | dither(b, 5, t));
     }
-    for (int x = imax(x0, op->x0); x < imin(x1, op->x1); x++)
-        row[x - x0] = colors[x & 3];
+    int first=imax(x0,op->x0),count=imin(x1,op->x1)-first;
+    if(count<=0)return;
+    uint16_t *p=row+first-x0;
+    uint16_t c0=colors[first&3],c1=colors[(first+1)&3],c2=colors[(first+2)&3],c3=colors[(first+3)&3];
+    while(count>=4){p[0]=c0;p[1]=c1;p[2]=c2;p[3]=c3;p+=4;count-=4;}
+    for(int i=0;i<count;i++)p[i]=colors[(first+i)&3];
 }
 
 void ag_paint_rect(const ag_op_t *op, int y, int x0, int x1, uint16_t *row)
@@ -68,16 +73,42 @@ void ag_paint_rect(const ag_op_t *op, int y, int x0, int x1, uint16_t *row)
         for(int x=a;x<b;x++)row[x-x0]=op->u.rect.fill;
         return;
     }
-    for (int x = a; x < b; x++) {
+    if(r>0&&!lw){
+        int qy=iabs_(py-cy)-(h*8-r),outer=w*8-r;
+        if(qy>=r+8)return;
+        outer+=qy>0?(int)isqrt_u((uint32_t)((r+8)*(r+8)-1-qy*qy)):r+7;
+        if(outer<0)return;
+        a=imax(a,-floor16(-(cx-outer-8)));b=imin(b,floor16(cx+outer-8)+1);
+    }
+    int full_first=b,full_last=b,full_alpha=op->u.rect.alpha*256/255;
+    if(!lw){
+        if(!op->u.rect.alpha)return;
+        int qy=iabs_(py-cy)-(h*8-r),inner=r-8,limit=w*8-r;
+        bool full=false;
+        if(!r&&y>=op->u.rect.y&&y<op->u.rect.y+h){full_first=a;full_last=b;}
+        else if(r>0&&qy<=0){limit+=inner;full=true;}
+        else if(r>0&&qy<=inner){limit+=(int)isqrt_u((uint32_t)(inner*inner-qy*qy));full=true;}
+        if(full&&limit>=0){
+            full_first=imax(a,-floor16(-(cx-limit-8)));
+            full_last=imin(b,floor16(cx+limit-8)+1);
+            if(full_last<full_first)full_first=full_last=b;
+        }
+    }
+    for (int x = a; x < b; ) {
+        if(x==full_first){
+            for(;x<full_last;x++)row[x-x0]=full_alpha==256?op->u.rect.fill:nt_blend565(row[x-x0],op->u.rect.fill,full_alpha);
+            if(x>=b)break;
+        }
         int sd = rbox_sd(x * 16 + 8, py, cx, cy, w * 8, h * 8, r);
         int cov = cov_from_sd(sd);
-        if (!cov) continue;
+        if (!cov) {x++;continue;}
         uint16_t *p = &row[x - x0];
         if (op->u.rect.alpha) *p = nt_blend565(*p, op->u.rect.fill, cov * op->u.rect.alpha / 255);
         if (lw) {
             int ring = cov - cov_from_sd(sd + lw);
             if (ring > 0) *p = nt_blend565(*p, op->u.rect.line, ring);
         }
+        x++;
     }
 }
 
