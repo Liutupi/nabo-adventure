@@ -1,5 +1,11 @@
 # 验证记录
 
+## v0.1.0 公开预览发布验证
+
+2026-10-26，[GitHub Release](https://github.com/Liutupi/nabo-adventure/releases/tag/v0.1.0)已公开，draft=false、prerelease=true；标签固定到02c3448，原固件源码579f692及下方8897cd9e应用没有重新构建或修改。8项打包保护测试与ZIP内升级工具只读inspect检查通过。
+
+全部7项发布资产经无认证HTTP 200重新下载，逐字节等于上传前本地包（包括SHA256SUMS.txt本身）；ZIP全部30个成员和内置校验清单、应用/完整镜像一致性、FF填充区检查通过。完整镜像1,881,520B，SHA256 `2bca7adda06ea0b0e1cc3f4959781583983172c0b6163c2b1768c117e4b979d0`；无设备备份或NVS。公开发布凭据见[release-v0.1.0.json](../validation/release-v0.1.0.json)。首次完整安装仍未真机验收；发布没有扩大下方应用的验收范围，也没有操作用户工牌。
+
 ## Windows · 8897cd9e（三款V2自动检查及设置页睡醒通过）
 
 2026-10-26，SHA256 `8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8`，应用1,815,984B。279项完整宿主检查/177.863秒、Windows IDF6.0.2构建和预算通过；134张基线图共10,466,112像素与优化前一致。精确应用见[检查点](../firmware/checkpoints/2026-10-26-v2/)，[机器摘要](../validation/v0.1.0-v2-8897cd9e.json)区分自动检查和用户验收。
