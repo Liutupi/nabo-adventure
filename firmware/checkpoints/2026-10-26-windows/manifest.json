@@ -1,0 +1,37 @@
+{
+  "schema": "nabo-adventure-checkpoint-v1",
+  "date": "2026-10-26",
+  "release": false,
+  "status": "HOST AND SERIAL PASS; PHYSICAL ACCEPTANCE PENDING",
+  "files": [
+    {
+      "path": "nabo-adventure-ddd1f50d-candidate.bin",
+      "bytes": 1661056,
+      "sha256": "ddd1f50dfeb8eafd207292bdd27fc9de8d120713bee3fd65f03b69c04c444e9e",
+      "flash_offset": "0x10000",
+      "contains_nvs_or_old_assets": false
+    }
+  ],
+  "budget": {
+    "app_bytes": 1661056,
+    "factory_bytes": 2031616,
+    "reserve_bytes": 360448,
+    "free_bytes": 370560,
+    "remaining_after_reserve_bytes": 10112,
+    "opening_bytes": 221831,
+    "opening_limit_bytes": 229376
+  },
+  "automatic_regression": {
+    "old_four_games": true,
+    "climb": true,
+    "ski_sky_space": true
+  },
+  "human_acceptance": {
+    "new_cover": "pending",
+    "climb_ski_sky_space": "pending",
+    "sleep_wake_on_this_image": "pending",
+    "audio": "not tested; user requested silence"
+  },
+  "validation": "../../../validation/v0.1.0-windows-ddd1f50d.json",
+  "rule": "Exact frozen app only. Guarded upgrade preserving NVS, boot, PHY and all bytes at 0x200000..0x800000. Never merge or erase flash."
+}

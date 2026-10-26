@@ -90,7 +90,8 @@ def main():
     video=read_video(ART)
     catalog = {
         'schema': 'nabo-adventure-art-catalog-v1',
-        'scope': 'eleven art rounds; gameplay integration is listed separately',
+        'scope': 'eleven art rounds; default A-skin pack; gameplay integration is listed separately',
+        'b_skin_policy': 'B source art is retained; excluded from default runtime pack until the selector and capacity plan exist',
         'identity': {'path': source.relative_to(ART).as_posix(), 'sha256': digest(source)},
         'selected_travel_design': 'design/round1/v2/01-hiker-design-board.png',
         'selected_ui_theme': 'ui/design/round3/01-passport',

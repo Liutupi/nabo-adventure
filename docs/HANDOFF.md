@@ -1,5 +1,23 @@
 # 交接本
 
+## 2026-10-26 Windows 恢复：当前记录优先于下方历史
+
+用户已明确“同步github,继续任务”，睡前停止已解除。已快进同步 `claude/climb-cloud` 的8个提交，最新云端来源 `6453dfc`；新增 CLIMB / SKI / SKY / SPACE 正式引擎、A款美术和规则对拍，不能再称这四款为占位。所有后续验证继续静音，保存的扬声器关闭与300秒休眠保持。
+
+当前 Windows 候选 **`ddd1f50dfeb8eafd207292bdd27fc9de8d120713bee3fd65f03b69c04c444e9e`**，app **1,661,056 B**，真实 factory 2,031,616 B，扣永久352KiB后余 **10,112 B**。265项宿主检查/114.377秒、IDF6.0.2构建及预算通过；保护式app-only升级与全片保护字节回读通过。回执 `private/device/20261026-121641-168475-receipt.json`。精确bin保留在 `private/candidates/<完整SHA>/`，不得用重建覆盖。
+
+开机原片、73帧、人物大小、全部采样像素及原WAV不变。按16行比较两份YCbCr引用图，只重画确有变化的行带；慢I帧后逐帧补交，不跨过未显示的动作。当前真机 **73帧全部提交、跳过0帧，末帧选择时钟6008ms，选择间隔约11.984fps**；短窗普通draw计数约17.20fps含重复/无像素更新，不再用它冒充动作帧率。这里的末帧时间是合成前选择时钟，**不是光学测得的屏幕帧率**。正常封面10次进出稳定：封面heap92,768/largest36,864，地图heap267,528/largest114,688。新外观与本镜像睡醒仍待用户验收。
+
+**八游戏自动检查已通过。** 旧四游戏整局/各10轮加暖机/POST练习通过；静音后CLIMB到50米、自然结束、10轮加暖机、暂停冻结与返回通过；SKI/SKY/SPACE各10轮加暖机、移动不误退、暂停冻结、自然结束通过。SPACE串口自然坠落至燃料耗尽，成功着陆/插旗仍须实体验证。静音后POST短窗中位26.170fps、NIGHT28.443fps；新增三款各一个初始3秒窗口31.75/42.34/56.41fps，不代表最满场景。最终24,576B NVS与新静音基线逐字节一致，真实132/5888/POST8/NIGHT51和22枚章保留。新开机实际合成截图76,800像素与生产末帧逐像素相同。
+
+本镜像可见30秒熄屏/上键唤醒已准备，等待用户结果；新开机观感与新四款实体手感/读图仍待用户，不称全M4或正式发布。B选择与容量方案、SKI/SKY/SPACE可玩浏览器页面、八金章回家与地图硬件滚动未完成。各关独立A款已接入，B源素材保留而默认不嵌入bin。精确候选和SHA在`firmware/checkpoints/2026-10-26-windows/`，此前99和82检查点保留。
+
+**静音核对纠正：** 本次首次升级前NVS实际为speaker=1，与睡前speaker=0不同；开测前错误依赖旧记录，首轮旧四游戏检查不能称“静音验收”。12:28已通过正常设置关闭扬声器，并读回/重启确认speaker=0、sleep=300；除speaker外全部用户设置及成绩键与升级前一致。新静音基线为`private/quiet-baseline-ddd1f50d.json/.bin`，SHA256 `1969121c5fb0c91fbc188fd9ef18ddb747ef9de0e9e1e3aebb975d7670f16280`。后续NVS应与此新基线比，不能把主动静音当存档损坏，更不能恢复旧speaker=1备份。CLIMB曾测试到50米后为纠正静音而中断，未写入真实11米；恢复正常模式后已从静音基线重新测试。以后必须读回实际设置再开测，不只信历史交接。
+
+验证入口：`private/tests-boot-no-skip.log`、`private/build-boot-no-skip.log`、`private/probe-boot-no-skip.log`、`private/device-suite-ddd1f50d-run.log`、`private/climb-smoke-ddd1f50d-muted.log`、`private/late-games-ddd1f50d-muted.log`。CLIMB首次脚本入口失败已恢复正常模式；原因是模式切换后的吞键位未通过原始按下/松开清除，已补齐三键边沿后再测。新增 `tools/smoke_late_games.py` 验证三款生命周期/自然结束；`double_down` 串口键已补齐以验证SPACE暂停，测试工具也必须在正常封面/地图、无真人对局时才接管。串口测试不能代替实体按键、读图、配色与手感。
+
+补充：八游戏的Windows渲染编译改GCC参数文件，避免WinError206。三个字库在Windows重新生成，C文件逐字节一致。C资产证明已按新解码器重新核验，594份生产C/H字节不变；冻结目录旧报告保留，更新后的报告在生产generated与 `private/asset-proof-boot-no-skip/`，不需要为报告更新重建bin。
+
 ## 2026-10-26 云端续作（二）：SKI / SKY / SPACE 正式玩法，八站全部有正式游戏（未上机）
 
 用户随后要求“把还没做完的游戏一起做了”。同一分支 `claude/climb-cloud` 上继续，**仍然没有刷写、没有任何真机结果**。

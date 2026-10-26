@@ -248,5 +248,6 @@ void adv_ui_draw(const adv_model_t *m, uint32_t ms, int battery, int mv)
     s_pipeline=m->page==ADV_PAGE_COVER&&!s_capture;
     ag_flush(g);
     finish_transfer();s_pipeline=false;
+    if(m->page==ADV_PAGE_COVER)ui_boot_video_did_flush();
     s_capture = false;
 }

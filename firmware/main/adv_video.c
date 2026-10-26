@@ -13,6 +13,7 @@ struct adv_video {
     unsigned frame,width,height;
     uint16_t fx[240];
     uint32_t fy[320];
+    uint32_t bands[ADV_VIDEO_BANDS];
 };
 
 adv_video_t *adv_video_open(const uint8_t *data,size_t size,unsigned w,unsigned h)
@@ -42,16 +43,49 @@ void adv_video_close(adv_video_t *v)
     free(v);
 }
 
+static void update_bands(adv_video_t *v,const plm_frame_t *previous)
+{
+    if(!previous){
+        for(unsigned b=0;b<ADV_VIDEO_BANDS;b++)v->bands[b]++;
+        return;
+    }
+    // The two-reference I/P rotation keeps the immediately previous image alive
+    // until this comparison. Compare samples, never lossy hashes or RGB thresholds.
+    bool luma[272],chroma[136];
+    const plm_frame_t *f=v->image;
+    for(unsigned y=0;y<272;y++)
+        luma[y]=memcmp(previous->y.data+y*208,f->y.data+y*208,208)!=0;
+    for(unsigned y=0;y<136;y++)
+        chroma[y]=memcmp(previous->cb.data+y*104,f->cb.data+y*104,104)!=0||
+                  memcmp(previous->cr.data+y*104,f->cr.data+y*104,104)!=0;
+    for(unsigned b=0;b<ADV_VIDEO_BANDS;b++){
+        for(unsigned y=b*ADV_VIDEO_BAND_HEIGHT;y<(b+1)*ADV_VIDEO_BAND_HEIGHT;y++){
+            unsigned sy=v->fy[y]>>8,cy=v->fy[y]>>9;
+            // Include both bilinear neighbours, including bottom-edge clamping.
+            if(luma[sy]||luma[sy+(sy<271)]||chroma[cy]||chroma[cy+(cy<135)]){
+                v->bands[b]++;break;
+            }
+        }
+    }
+}
+
 bool adv_video_next(adv_video_t *v)
 {
     if(!v)return false;
+    plm_frame_t previous;
+    bool had_image=v->image!=NULL;
+    if(had_image)previous=*v->image;
     plm_frame_t *image=plm_video_decode(v->decoder);
     if(!image)return false;
     if(v->image)v->frame++;
-    v->image=image;return true;
+    v->image=image;update_bands(v,had_image?&previous:NULL);return true;
 }
 
 unsigned adv_video_frame(const adv_video_t *v){return v?v->frame:0;}
+uint32_t adv_video_band_generation(const adv_video_t *v,unsigned band)
+{
+    return v&&band<ADV_VIDEO_BANDS?v->bands[band]:0;
+}
 size_t adv_video_reference_bytes(const adv_video_t *v){return v?(size_t)v->width*v->height*3:0;}
 
 static void vertical(const plm_plane_t *p,unsigned fy,uint16_t *values)

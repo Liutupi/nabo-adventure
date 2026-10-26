@@ -85,6 +85,7 @@ bool ag_tri(ag_t *g, int cx, int cy, int size, bool up, uint16_t color);
 bool ag_glow(ag_t *g, int cx, int cy, int r, uint16_t color);
 bool ag_bitmap(ag_t *g, const uint16_t *pixels, int x, int y, int w, int h);
 bool ag_rows(ag_t *g,ag_row_fn paint,const void *ctx,uint32_t generation);
+bool ag_rows_region(ag_t *g,ag_row_fn paint,const void *ctx,int y0,int y1,uint32_t generation);
 bool ag_sprite(ag_t *g, const adv_sprite_t *asset, unsigned frame, int x, int y);
 // Keep native pixel coordinates, but omit an explicitly bounded source region's
 // exterior from painting and dirty bounds. No scaling or framebuffer allocation.

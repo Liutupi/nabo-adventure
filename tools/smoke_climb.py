@@ -3,7 +3,7 @@
 
 Same contract as smoke_night.py: verified candidate only, test mode for the run,
 real OK press/release edges, and normal mode plus untouched records restored.
-Written in the cloud without a device: it has not been run yet.
+Cloud entry guard was repaired on Windows; actual results bind to candidate SHA.
 """
 import argparse
 from datetime import datetime
@@ -110,6 +110,9 @@ def main():
             initial = link.status()
             if initial['test'] or initial['owner'] or initial['page'] not in (0, 1): raise SmokeError('Start in normal cover/map with no real round active')
             owned = True; link.enable_test(); before = (initial['best'], initial['seen'])
+            # A mode reload swallows pending click events until real raw edges
+            # acknowledge release. Match the established POST/NIGHT contract.
+            for button in range(3): edge(link, button, True); edge(link, button, False)
             result['play'] = play(link); link.key('double_up'); link.map(); samples = []
             for _ in range(args.rounds+1):
                 enter(link)

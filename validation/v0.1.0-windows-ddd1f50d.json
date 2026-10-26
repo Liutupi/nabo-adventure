@@ -1,0 +1,236 @@
+{
+  "date": "2026-10-26",
+  "candidate_sha256": "ddd1f50dfeb8eafd207292bdd27fc9de8d120713bee3fd65f03b69c04c444e9e",
+  "status": "HOST AND SERIAL PASS; PHYSICAL ACCEPTANCE PENDING",
+  "upstream": "claude/climb-cloud at 6453dfc",
+  "host": {
+    "tests": 265,
+    "seconds": 114.377,
+    "passed": true,
+    "idf": "6.0.2",
+    "windows_build_passed": true,
+    "all_three_regenerated_fonts_identical": true,
+    "production_asset_c_headers_unchanged": 594,
+    "all_source_frames_retained": 73
+  },
+  "budget": {
+    "app_bytes": 1661056,
+    "factory_bytes": 2031616,
+    "reserve_bytes": 360448,
+    "free_bytes": 370560,
+    "remaining_after_reserve_bytes": 10112,
+    "opening_bytes": 221831,
+    "opening_limit_bytes": 229376
+  },
+  "device": {
+    "app_only_flashed": true,
+    "all_protected_bytes_verified": true,
+    "automatic_regression": {
+      "old_four_games": true,
+      "climb": true,
+      "ski_sky_space": true
+    },
+    "boot": {
+      "poses": {
+        "boot_frames": 73,
+        "boot_skipped": 0,
+        "boot_last": 72,
+        "boot_elapsed_ms": 6008
+      },
+      "all73_submitted": true,
+      "nominal_fps": 12,
+      "selection_interval_fps": 11.984021304926765,
+      "scope": "Pose count sampled after compositor flush; elapsed_ms is the selection clock before flush, not optical screen timing",
+      "cover_cycles": 10,
+      "cover_heap_min": 92768,
+      "cover_largest_min": 36864,
+      "map_heap": 267528,
+      "map_largest": 114688
+    },
+    "progress": {
+      "best": [
+        0,
+        132,
+        5888,
+        8,
+        51,
+        11,
+        13,
+        12,
+        15
+      ],
+      "stamps": 22,
+      "speaker": "OFF after explicit current readback and reset",
+      "saved_sleep_seconds": 300
+    },
+    "nvs_comparison": {
+      "app_sha256": "ddd1f50dfeb8eafd207292bdd27fc9de8d120713bee3fd65f03b69c04c444e9e",
+      "bytes": 24576,
+      "sha256": "1969121c5fb0c91fbc188fd9ef18ddb747ef9de0e9e1e3aebb975d7670f16280",
+      "baseline_json": "private\\quiet-baseline-ddd1f50d.json",
+      "identical_to_pre_auto_baseline": true,
+      "comparison_boundary": "After human play and before automated tests; legitimate new scores are retained",
+      "receipt": "20261026-121641-168475-receipt.json"
+    },
+    "climb": {
+      "status": "PASS: SERIAL CLIMB ONLY",
+      "rounds": 10,
+      "warmup_rounds": 1,
+      "memory": {
+        "heap": {
+          "before": 267528,
+          "after": 267528,
+          "minimum": 267528,
+          "maximum": 267528
+        },
+        "largest": {
+          "before": 114688,
+          "after": 114688,
+          "minimum": 114688,
+          "maximum": 114688
+        }
+      },
+      "play": {
+        "score": 50,
+        "seconds": 47.375,
+        "hits": 3,
+        "misses": 0
+      }
+    },
+    "late_games": {
+      "ski": {
+        "memory": {
+          "heap": {
+            "before": 267528,
+            "after": 267528,
+            "minimum": 267528,
+            "maximum": 267528
+          },
+          "largest": {
+            "before": 114688,
+            "after": 114688,
+            "minimum": 114688,
+            "maximum": 114688
+          }
+        },
+        "rounds": 10,
+        "warmup_rounds": 1,
+        "natural_round": {
+          "score": 2,
+          "seconds": 13.171999999991385,
+          "phases": [
+            2,
+            4,
+            5
+          ],
+          "start_resource": 1000,
+          "end_resource": 0,
+          "quiet_sample": {
+            "seconds": 3.0234999999956926,
+            "frames": 96,
+            "fps": 31.751281627298418,
+            "scope": "one initial idle 3-second window with only two status snapshots; not worst-case performance"
+          }
+        }
+      },
+      "sky": {
+        "memory": {
+          "heap": {
+            "before": 267528,
+            "after": 267528,
+            "minimum": 267528,
+            "maximum": 267528
+          },
+          "largest": {
+            "before": 114688,
+            "after": 114688,
+            "minimum": 114688,
+            "maximum": 114688
+          }
+        },
+        "rounds": 10,
+        "warmup_rounds": 1,
+        "natural_round": {
+          "score": 56,
+          "seconds": 8.25,
+          "phases": [
+            2,
+            4,
+            5
+          ],
+          "start_resource": 1000,
+          "end_resource": 0,
+          "quiet_sample": {
+            "seconds": 3.0234999999956926,
+            "frames": 128,
+            "fps": 42.335042169731224,
+            "scope": "one initial idle 3-second window with only two status snapshots; not worst-case performance"
+          }
+        }
+      },
+      "space": {
+        "memory": {
+          "heap": {
+            "before": 267528,
+            "after": 267528,
+            "minimum": 267528,
+            "maximum": 267528
+          },
+          "largest": {
+            "before": 114688,
+            "after": 114688,
+            "minimum": 114688,
+            "maximum": 114688
+          }
+        },
+        "rounds": 10,
+        "warmup_rounds": 1,
+        "natural_round": {
+          "score": 0,
+          "seconds": 13.625,
+          "phases": [
+            2,
+            4,
+            5
+          ],
+          "start_resource": 1000,
+          "end_resource": 0,
+          "quiet_sample": {
+            "seconds": 3.0315000000118744,
+            "frames": 171,
+            "fps": 56.4077189507934,
+            "scope": "one initial idle 3-second window with only two status snapshots; not worst-case performance"
+          }
+        }
+      }
+    },
+    "post_muted_fps_median": 26.169819371291297,
+    "night_muted_fps_median": 28.443113772443525,
+    "compositor_identical_pixels": 76800
+  },
+  "human_acceptance": {
+    "new_cover": "pending",
+    "climb_ski_sky_space": "pending",
+    "sleep_wake_on_this_image": "pending",
+    "audio": "not tested; user requested silence"
+  },
+  "remaining": [
+    "Physical new-game controls, readability and feel",
+    "Visible sleep/wake",
+    "B-skin capacity and selector",
+    "Playable browser pages for SKI/SKY/SPACE",
+    "Eight-gold home ending",
+    "Hardware map scrolling"
+  ],
+  "release": false,
+  "quiet_correction": {
+    "before_first_upgrade_speaker": 1,
+    "sleep_checkpoint_speaker": 0,
+    "speaker_turned_off_and_read_back": true,
+    "fresh_baseline_sha256": "1969121c5fb0c91fbc188fd9ef18ddb747ef9de0e9e1e3aebb975d7670f16280",
+    "other_settings_and_scores_unchanged": true,
+    "first_old_four_game_suite_speaker": 1,
+    "subsequent_climb_late_games_speaker": 0,
+    "note": "First old-game functionality results remain valid; they were not silent physical acceptance. No listening quality certification."
+  }
+}

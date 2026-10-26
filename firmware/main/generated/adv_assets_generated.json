@@ -125,10 +125,10 @@
     "firmware/main/adv_ninepatch.h": "438c7369f79703f2164bbc364a65532e135267f3e52cf5d1009b6af51cae79aa",
     "tools/generate_boot_video.py": "77674c334d62cbe41e1572b023deda6f0ad52c4d24a666f86139163012c31598",
     "tools/prepare_boot_video.py": "4f03af76e5fde893f219ae17470e7d8acce45969c2def696d0f90866d419a7c9",
-    "firmware/main/adv_video.c": "9d0b349f45aa8c6375735d7bfa404ce5ee3dcfbb991806c7d9e4c057da817096",
-    "firmware/main/adv_video.h": "461e7a4bef3db34aaeef35f91a8c6b14a8437f243621039a1e7a474acfc5dc65",
-    "firmware/main/adv_ui_boot_video.c": "d2d44665c9680a26a61d620da727e73820ae338177da28b3d20e556064147975",
-    "firmware/main/adv_ui_boot_video.h": "b8248be77a1a2f273e228b439dead30e51bdee3b1e22f9866da760fec9a72ca2",
+    "firmware/main/adv_video.c": "31c1ba3bf193f77929bcce5711de26d285fdf47d437cb28589c3b83933aebabb",
+    "firmware/main/adv_video.h": "747255e639d3dacd6949b17524c8437f6eb8a5775fa1c1571f33d99a17232105",
+    "firmware/main/adv_ui_boot_video.c": "5e873a3cb835a8a3a2fc15238260e67ac1111440d200942d3c6fe065d4034d79",
+    "firmware/main/adv_ui_boot_video.h": "36cdd4d6f9eba5e49460ad968c386e504c0eac0588e135f628dabcd2919a371c",
     "firmware/main/third_party/pl_mpeg/pl_mpeg.h": "f663908a6a0dbb08d3d540c39af971766d45a62b6f641f245fc0c270ac169d3e"
   },
   "generated_code_sha256": {

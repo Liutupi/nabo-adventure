@@ -139,8 +139,13 @@ bool ag_bitmap(ag_t *g, const uint16_t *pixels, int x, int y, int w, int h)
 
 bool ag_rows(ag_t *g,ag_row_fn paint_row,const void *ctx,uint32_t generation)
 {
-    if(!paint_row||!ctx)return false;
-    ag_op_t *op=add(g,AG_ROWS,0,0,g->width,g->height);
+    return g&&ag_rows_region(g,paint_row,ctx,0,g->height,generation);
+}
+
+bool ag_rows_region(ag_t *g,ag_row_fn paint_row,const void *ctx,int y0,int y1,uint32_t generation)
+{
+    if(!g||!paint_row||!ctx||y0<0||y1>g->height||y0>=y1)return false;
+    ag_op_t *op=add(g,AG_ROWS,0,y0,g->width,y1);
     if(!op)return false;
     op->u.rows.paint=paint_row;op->u.rows.ctx=ctx;
     seal(op,mix(mix((uint32_t)(uintptr_t)ctx,(uint32_t)((uint64_t)(uintptr_t)ctx>>32)),generation));

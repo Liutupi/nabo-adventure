@@ -1,3 +1,4 @@
-# Only the two explicitly verified app-only snapshots are published here.
+# Only explicitly hash-verified app-only snapshots are published here.
 !2026-10-26/nabo-adventure-night-99e71e9f.bin
 !2026-10-26/nabo-adventure-boot-v3-82efd1ef-candidate.bin
+!2026-10-26-windows/nabo-adventure-ddd1f50d-candidate.bin

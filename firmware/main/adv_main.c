@@ -9,6 +9,7 @@
 #include "adv_post.h"
 #include "adv_night_debug.h"
 #include "adv_climb_debug.h"
+#include "adv_ui_boot_video.h"
 #include "adv_persist.h"
 #include "adv_sound.h"
 #include "adv_ui.h"
@@ -222,7 +223,9 @@ static void status(void)
            (unsigned)heap_caps_get_largest_free_block(MALLOC_CAP_8BIT), (unsigned)adv_ui_bytes(), adv_ui_overflow(),
            (unsigned)s_draw_frames,(unsigned)s_draw_us,(unsigned)s_draw_max_us);
     for (int i = 0; i < ADV_STATIONS; i++) printf("%s%u", i ? "," : "", (unsigned)s_model.best[i]);
-    printf("],\"view_w\":%d,\"view_h\":%d}\n",adv_ui_width(),adv_ui_height());
+    ui_boot_video_stats_t boot=ui_boot_video_stats();
+    printf("],\"view_w\":%d,\"view_h\":%d,\"boot_frames\":%u,\"boot_skipped\":%u,\"boot_last\":%u,\"boot_elapsed_ms\":%u}\n",
+           adv_ui_width(),adv_ui_height(),(unsigned)boot.frames,(unsigned)boot.skipped,(unsigned)boot.last_frame,(unsigned)boot.elapsed_ms);
     funlockfile(stdout);
 }
 
@@ -317,6 +320,7 @@ static void command(const char *line)
         static const struct { const char *name; int button, event; } keys[] = {
             {"up", BSP_BTN_UP, BSP_BTN_CLICK}, {"down", BSP_BTN_DOWN, BSP_BTN_CLICK}, {"ok", BSP_BTN_OK, BSP_BTN_CLICK},
             {"long_up", BSP_BTN_UP, BSP_BTN_LONG}, {"double_up", BSP_BTN_UP, BSP_BTN_DOUBLE},
+            {"double_down", BSP_BTN_DOWN, BSP_BTN_DOUBLE},
             {"long_ok", BSP_BTN_OK, BSP_BTN_LONG}, {"long_down", BSP_BTN_DOWN, BSP_BTN_LONG},
         };
         for (size_t i = 0; i < sizeof(keys) / sizeof(keys[0]); i++)
@@ -454,6 +458,8 @@ static void adventure_task(void *arg)
         else if (s_owner == OWNER_SHELL) {
             uint32_t ui_frame = ms / 1000u * 12u + ms % 1000u * 12u / 1000u;
             if (ui_frame != last_ui_frame) { dirty = true; last_ui_frame = ui_frame; }
+            if(s_model.page==ADV_PAGE_COVER&&adv_ui_boot_initial()&&
+               ui_boot_video_pending(adv_ui_boot_elapsed(ms)))dirty=true;
             if (s_model.page == ADV_PAGE_COVER && adv_ui_boot_initial() && adv_boot_motion_enabled()) {
                 unsigned pose = adv_boot_motion_frame(adv_ui_boot_elapsed(ms));
                 if (pose != last_boot_pose) { dirty = true; last_boot_pose = pose; }
@@ -478,7 +484,9 @@ static void adventure_task(void *arg)
         }
         if (s_model.cfg.settings.sleep_seconds > 0 &&
             us - s_last_input_us > (int64_t)s_model.cfg.settings.sleep_seconds * 1000000) sleep_now();
-        vTaskDelay(pdMS_TO_TICKS(s_owner == OWNER_SHELL && s_model.page == ADV_PAGE_SESSION ? 5 : 10));
+        bool boot_pending=s_owner==OWNER_SHELL&&s_model.page==ADV_PAGE_COVER&&adv_ui_boot_initial()&&
+                          ui_boot_video_pending(adv_ui_boot_elapsed((uint32_t)(esp_timer_get_time()/1000)));
+        vTaskDelay(pdMS_TO_TICKS(boot_pending?1:s_owner == OWNER_SHELL && s_model.page == ADV_PAGE_SESSION ? 5 : 10));
     }
 }
 

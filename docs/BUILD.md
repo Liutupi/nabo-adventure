@@ -18,6 +18,8 @@ ESP-IDF 6.0.2，目标 ESP32-C3，8 MB Flash；LVGL 9.5.0 等依赖由 `firmware
 
 源码里已经包含生成好的字库和半身像，构建不需要重跑生成器。新增中文界面文字后：
 
+若复用睡前的旧`build-idf6/sdkconfig`，它会优先于新defaults；需先保存旧配置并确认当前选择为`CONFIG_COMPILER_OPTIMIZATION_SIZE=y`、`CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_SILENT=y`。main仍由CMake最后追加`-O2`。本次Windows已切换并验证；不要把修改本机构建配置当成修改设备NVS，也不要擦除设备来解决构建预算问题。
+
 ```sh
 python3 firmware/tools/generate_collection_fonts.py \
   --converter <lv_font_conv 1.5.3 的 lv_font_conv.js> \

@@ -42,10 +42,16 @@ class Renderer(unittest.TestCase):
                       f'.global _binary_{stem}_end', f'_binary_{stem}_end:']
         assembly.write_text('\n'.join(lines)+'\n', 'utf-8')
         library = folder/'adv_render.dll'
-        subprocess.run([CC, '-std=gnu11', '-O2', '-shared', SHARED_EXPORT, '-Wall', '-Wextra', '-Werror',
+        arguments = (['-std=gnu11', '-O2', '-shared', SHARED_EXPORT, '-Wall', '-Wextra', '-Werror',
                         '-Wno-missing-field-initializers', '-I', str(HOST), '-I', str(BOARD), '-I', str(BOARD/'generated')] +
                        [str(BOARD/s) for s in SOURCES] + [str(p) for p in sorted((BOARD/'generated').glob('*.c'))] + [str(HOST/'adv_ui_host.c'), str(assembly), '-lm', '-o',
-                       str(library)], check=True)
+                       str(library)])
+        # Eight games exceed Windows CreateProcess's command-line limit. GCC's
+        # response file also preserves paths containing spaces on every host.
+        response = folder/'render-arguments.rsp'
+        response.write_text('\n'.join('"'+arg.replace('\\', '\\\\').replace('"', '\\"')+'"'
+                                      for arg in arguments)+'\n', 'utf-8')
+        subprocess.run([CC, '@'+str(response)], check=True)
         cls.lib = lib = ctypes.CDLL(str(library))
         lib.host_new.argtypes = [ctypes.c_uint32, ctypes.POINTER(ctypes.c_uint32), ctypes.c_uint32]
         lib.host_legacy.argtypes = [ctypes.c_uint32]
@@ -57,6 +63,9 @@ class Renderer(unittest.TestCase):
         lib.host_draw_at.argtypes = [ctypes.c_uint32]
         lib.host_boot_start.argtypes = [ctypes.c_uint32]
         lib.adv_boot_motion_enabled.restype = ctypes.c_bool
+        class BootStats(ctypes.Structure):
+            _fields_=[(name,ctypes.c_uint32) for name in ('frames','skipped','last_frame','elapsed_ms')]
+        lib.ui_boot_video_stats.restype=BootStats
         cls.previews = ROOT/'private/previews'
         cls.previews.mkdir(parents=True, exist_ok=True)
         cls.docs = ROOT/'docs/images/ui'
@@ -291,7 +300,12 @@ class Renderer(unittest.TestCase):
         self.lib.host_boot_start(1000)
         frames = []
         times = (0, 250, 449, 450, 600, 1000, 1399, 1400, 1500, 2000, 2733, 2734, 4066, 4067, 4417, 5000,6000,6599,6600,7000)
+        next_pose=1
         for t in times:
+            # Advance the real movie between observation boundaries. Production
+            # submits each pose rather than seeking past unseen frames.
+            while next_pose<73 and next_pose*1000//12<=t:
+                self.lib.host_draw_at(1000+next_pose*1000//12);next_pose+=1
             self.lib.host_draw_at(1000 + t)
             self.check(f'boot {t}')
             frames.append(self.snapshot())
@@ -320,10 +334,22 @@ class Renderer(unittest.TestCase):
             frames.append(self.view_image());snapshots.append(hash(tuple(self.snapshot())))
         self.assertGreater(len(set(snapshots)),65)
         last=self.snapshot()
+        stats=self.lib.ui_boot_video_stats()
+        self.assertEqual((stats.frames,stats.skipped,stats.last_frame),(73,0,72))
         for elapsed in (6001,6599,6600,7000,12000,0x7fffffff):
             self.lib.host_draw_at(1000+elapsed);self.check(f'Grok held{elapsed}');self.assertEqual(self.snapshot(),last)
         frames[0].save(self.docs/'boot-v3-silent.gif',save_all=True,append_images=frames[1:],duration=[80 if i%3<2 else 90 for i in range(72)]+[600],loop=0,disposal=2)
         frames[-1].save(self.docs/'boot-6000.png')
+        self.assertEqual(self.lib.ui_boot_video_stats().frames,73,'Repeated hold/full redraws must not count as new poses')
+
+    def test_boot_after_a_slow_draw_submits_every_pose_and_full_redraw_is_stable(self):
+        self.new([0]*9);self.lib.host_boot_start(1000)
+        self.lib.host_draw_at(1000);self.check('first pose')
+        # Simulate a delayed worker, then repeated immediate catch-up flushes.
+        for index in range(1,73):
+            self.lib.host_draw_at(10000+index);self.check(f'catch-up {index}')
+            stats=self.lib.ui_boot_video_stats()
+            self.assertEqual((stats.frames,stats.skipped,stats.last_frame),(index+1,0,index))
 
     def test_deferred_dma_fixture_detects_buffer_reuse_before_transfer_completion(self):
         self.assertEqual(self.lib.host_dma_selftest(),1)

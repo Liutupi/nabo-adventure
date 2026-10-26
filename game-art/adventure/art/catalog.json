@@ -1,6 +1,7 @@
 {
   "schema": "nabo-adventure-art-catalog-v1",
-  "scope": "eleven art rounds; gameplay integration is listed separately",
+  "scope": "eleven art rounds; default A-skin pack; gameplay integration is listed separately",
+  "b_skin_policy": "B source art is retained; excluded from default runtime pack until the selector and capacity plan exist",
   "identity": {
     "path": "reference/nabo-idle-original.png",
     "sha256": "eecbd9b9ad2a928d9bcf1058e1e248a006b121ca96dc814a16a924a8c091d243"
@@ -46,8 +47,8 @@
     "ui/palette.json": "3b3dc6d793ac4eff3af34fc01f0d969f7eb6a5c0b5a6b967e66795103949fce0"
   },
   "counts": {
-    "resources": 356,
-    "frames_including_static": 767
+    "resources": 337,
+    "frames_including_static": 647
   },
   "resources": [
     {
@@ -244,51 +245,6 @@
       "fps": 12,
       "loop": false,
       "frame_count": 6
-    },
-    {
-      "id": "climb_b/grip_idle_left",
-      "group": "climb",
-      "canvas": [
-        60,
-        65
-      ],
-      "anchor": [
-        30,
-        62
-      ],
-      "fps": 12,
-      "loop": true,
-      "frame_count": 6
-    },
-    {
-      "id": "climb_b/grip_idle_right",
-      "group": "climb",
-      "canvas": [
-        60,
-        65
-      ],
-      "anchor": [
-        30,
-        62
-      ],
-      "fps": 12,
-      "loop": true,
-      "frame_count": 6
-    },
-    {
-      "id": "climb_b/settlement_cheer",
-      "group": "climb",
-      "canvas": [
-        72,
-        78
-      ],
-      "anchor": [
-        36,
-        75
-      ],
-      "fps": 12,
-      "loop": false,
-      "frame_count": 8
     },
     {
       "id": "game/climb/props/canteen",
@@ -1551,111 +1507,6 @@
       "frame_count": 6
     },
     {
-      "id": "night_b/catch",
-      "group": "night",
-      "canvas": [
-        53,
-        56
-      ],
-      "anchor": [
-        20,
-        56
-      ],
-      "fps": 12,
-      "loop": false,
-      "frame_count": 6
-    },
-    {
-      "id": "night_b/cheer",
-      "group": "night",
-      "canvas": [
-        52,
-        72
-      ],
-      "anchor": [
-        21,
-        72
-      ],
-      "fps": 12,
-      "loop": false,
-      "frame_count": 8
-    },
-    {
-      "id": "night_b/lift_jar",
-      "group": "night",
-      "canvas": [
-        53,
-        56
-      ],
-      "anchor": [
-        20,
-        56
-      ],
-      "fps": 12,
-      "loop": false,
-      "frame_count": 6
-    },
-    {
-      "id": "night_b/move_left",
-      "group": "night",
-      "canvas": [
-        53,
-        56
-      ],
-      "anchor": [
-        20,
-        56
-      ],
-      "fps": 12,
-      "loop": false,
-      "frame_count": 4
-    },
-    {
-      "id": "night_b/move_right",
-      "group": "night",
-      "canvas": [
-        53,
-        56
-      ],
-      "anchor": [
-        20,
-        56
-      ],
-      "fps": 12,
-      "loop": false,
-      "frame_count": 4
-    },
-    {
-      "id": "night_b/seat_idle",
-      "group": "night",
-      "canvas": [
-        53,
-        56
-      ],
-      "anchor": [
-        20,
-        56
-      ],
-      "fps": 12,
-      "loop": true,
-      "frame_count": 8
-    },
-    {
-      "id": "night_b/yawn",
-      "group": "night",
-      "canvas": [
-        53,
-        56
-      ],
-      "anchor": [
-        20,
-        56
-      ],
-      "fps": 12,
-      "loop": false,
-      "frame_count": 6
-    },
-    {
       "id": "night_shared/moth",
       "group": "night",
       "canvas": [
@@ -1758,36 +1609,6 @@
       ],
       "fps": 12,
       "loop": false,
-      "frame_count": 6
-    },
-    {
-      "id": "post_b/delivered",
-      "group": "post",
-      "canvas": [
-        36,
-        40
-      ],
-      "anchor": [
-        22,
-        40
-      ],
-      "fps": 12,
-      "loop": false,
-      "frame_count": 6
-    },
-    {
-      "id": "post_b/idle",
-      "group": "post",
-      "canvas": [
-        36,
-        40
-      ],
-      "anchor": [
-        22,
-        40
-      ],
-      "fps": 12,
-      "loop": true,
       "frame_count": 6
     },
     {
@@ -1926,36 +1747,6 @@
       "frame_count": 6
     },
     {
-      "id": "ski_b/settlement_cheer",
-      "group": "ski",
-      "canvas": [
-        45,
-        72
-      ],
-      "anchor": [
-        30,
-        72
-      ],
-      "fps": 12,
-      "loop": false,
-      "frame_count": 8
-    },
-    {
-      "id": "ski_b/straight",
-      "group": "ski",
-      "canvas": [
-        63,
-        68
-      ],
-      "anchor": [
-        32,
-        60
-      ],
-      "fps": 12,
-      "loop": true,
-      "frame_count": 6
-    },
-    {
       "id": "sky_a/heat",
       "group": "sky",
       "canvas": [
@@ -2044,36 +1835,6 @@
       "fps": 12,
       "loop": false,
       "frame_count": 6
-    },
-    {
-      "id": "sky_b/idle",
-      "group": "sky",
-      "canvas": [
-        43,
-        40
-      ],
-      "anchor": [
-        22,
-        40
-      ],
-      "fps": 12,
-      "loop": true,
-      "frame_count": 6
-    },
-    {
-      "id": "sky_b/settlement_cheer",
-      "group": "sky",
-      "canvas": [
-        51,
-        72
-      ],
-      "anchor": [
-        27,
-        72
-      ],
-      "fps": 12,
-      "loop": false,
-      "frame_count": 8
     },
     {
       "id": "sky_props/bird",
@@ -2197,51 +1958,6 @@
     },
     {
       "id": "space_a/settlement_cheer",
-      "group": "space",
-      "canvas": [
-        73,
-        73
-      ],
-      "anchor": [
-        37,
-        72
-      ],
-      "fps": 12,
-      "loop": false,
-      "frame_count": 8
-    },
-    {
-      "id": "space_b/cabin_idle",
-      "group": "space",
-      "canvas": [
-        57,
-        57
-      ],
-      "anchor": [
-        29,
-        56
-      ],
-      "fps": 12,
-      "loop": true,
-      "frame_count": 6
-    },
-    {
-      "id": "space_b/jet",
-      "group": "space",
-      "canvas": [
-        57,
-        57
-      ],
-      "anchor": [
-        29,
-        56
-      ],
-      "fps": 12,
-      "loop": true,
-      "frame_count": 4
-    },
-    {
-      "id": "space_b/settlement_cheer",
       "group": "space",
       "canvas": [
         73,
@@ -5394,33 +5110,81 @@
   "production_c_evidence": {
     "common": {
       "groups": {
-        "night": {
-          "rle_bytes": 136460,
-          "table_bytes": 23858,
-          "descriptor_catalog_estimate_c3": 2069,
-          "resources": 25,
-          "pieces": 25,
-          "frames": 98,
-          "physical_sprites": 25,
-          "physical_frames": 98,
+        "climb": {
+          "rle_bytes": 61205,
+          "table_bytes": 11812,
+          "descriptor_catalog_estimate_c3": 2299,
+          "resources": 26,
+          "pieces": 26,
+          "frames": 93,
+          "physical_sprites": 26,
+          "physical_frames": 93,
           "interned_pieces": 0,
-          "static_bytes_estimate_c3": 162387
+          "static_bytes_estimate_c3": 75316
+        },
+        "night": {
+          "rle_bytes": 57163,
+          "table_bytes": 5924,
+          "descriptor_catalog_estimate_c3": 1508,
+          "resources": 18,
+          "pieces": 18,
+          "frames": 56,
+          "physical_sprites": 18,
+          "physical_frames": 56,
+          "interned_pieces": 0,
+          "static_bytes_estimate_c3": 64595
         },
         "post": {
-          "rle_bytes": 47971,
-          "table_bytes": 18460,
-          "descriptor_catalog_estimate_c3": 2833,
-          "resources": 32,
-          "pieces": 32,
-          "frames": 82,
-          "physical_sprites": 32,
-          "physical_frames": 82,
+          "rle_bytes": 41331,
+          "table_bytes": 8148,
+          "descriptor_catalog_estimate_c3": 2676,
+          "resources": 30,
+          "pieces": 30,
+          "frames": 70,
+          "physical_sprites": 30,
+          "physical_frames": 70,
           "interned_pieces": 0,
-          "static_bytes_estimate_c3": 69264
+          "static_bytes_estimate_c3": 52155
+        },
+        "ski": {
+          "rle_bytes": 51770,
+          "table_bytes": 7076,
+          "descriptor_catalog_estimate_c3": 1633,
+          "resources": 19,
+          "pieces": 19,
+          "frames": 54,
+          "physical_sprites": 19,
+          "physical_frames": 54,
+          "interned_pieces": 0,
+          "static_bytes_estimate_c3": 60479
+        },
+        "sky": {
+          "rle_bytes": 24553,
+          "table_bytes": 5810,
+          "descriptor_catalog_estimate_c3": 1638,
+          "resources": 20,
+          "pieces": 20,
+          "frames": 63,
+          "physical_sprites": 20,
+          "physical_frames": 63,
+          "interned_pieces": 0,
+          "static_bytes_estimate_c3": 32001
+        },
+        "space": {
+          "rle_bytes": 29615,
+          "table_bytes": 5880,
+          "descriptor_catalog_estimate_c3": 1291,
+          "resources": 15,
+          "pieces": 15,
+          "frames": 49,
+          "physical_sprites": 15,
+          "physical_frames": 49,
+          "interned_pieces": 0,
+          "static_bytes_estimate_c3": 36786
         },
         "static": {
           "rle_bytes": 49523,
-          "table_bytes": 14480,
+          "table_bytes": 7648,
           "descriptor_catalog_estimate_c3": 6899,
           "resources": 78,
           "pieces": 78,
@@ -5428,11 +5192,11 @@
           "physical_sprites": 72,
           "physical_frames": 72,
           "interned_pieces": 6,
-          "static_bytes_estimate_c3": 70902
+          "static_bytes_estimate_c3": 64070
         },
         "travel": {
-          "rle_bytes": 50383,
-          "table_bytes": 14196,
+          "rle_bytes": 49017,
+          "table_bytes": 7516,
           "descriptor_catalog_estimate_c3": 739,
           "resources": 9,
           "pieces": 9,
@@ -5440,11 +5204,11 @@
           "physical_sprites": 9,
           "physical_frames": 62,
           "interned_pieces": 0,
-          "static_bytes_estimate_c3": 65318
+          "static_bytes_estimate_c3": 57272
         },
         "ui": {
           "rle_bytes": 25921,
-          "table_bytes": 10516,
+          "table_bytes": 5614,
           "descriptor_catalog_estimate_c3": 10231,
           "resources": 122,
           "pieces": 122,
@@ -5452,13 +5216,13 @@
           "physical_sprites": 87,
           "physical_frames": 87,
           "interned_pieces": 35,
-          "static_bytes_estimate_c3": 46668
+          "static_bytes_estimate_c3": 41766
         }
       },
-      "python_verified_frames": 442,
+      "python_verified_frames": 647,
       "production_c": {
-        "verified_frames": 442,
-        "verified_sprite_rows": 18977,
+        "verified_frames": 647,
+        "verified_sprite_rows": 30495,
         "verified_ninepatch_rows": 912,
         "comparison": "generated C and production decoders vs indexed source"
       }
@@ -5466,22 +5230,22 @@
     "post": {
       "groups": {
         "post": {
-          "rle_bytes": 47971,
-          "table_bytes": 18460,
-          "descriptor_catalog_estimate_c3": 2833,
-          "resources": 32,
-          "pieces": 32,
-          "frames": 82,
-          "physical_sprites": 32,
-          "physical_frames": 82,
+          "rle_bytes": 41331,
+          "table_bytes": 8148,
+          "descriptor_catalog_estimate_c3": 2676,
+          "resources": 30,
+          "pieces": 30,
+          "frames": 70,
+          "physical_sprites": 30,
+          "physical_frames": 70,
           "interned_pieces": 0,
-          "static_bytes_estimate_c3": 69264
+          "static_bytes_estimate_c3": 52155
         }
       },
-      "python_verified_frames": 82,
+      "python_verified_frames": 70,
       "production_c": {
-        "verified_frames": 82,
-        "verified_sprite_rows": 4188,
+        "verified_frames": 70,
+        "verified_sprite_rows": 3708,
         "verified_ninepatch_rows": 0,
         "comparison": "generated C and production decoders vs indexed source"
       }
@@ -5489,22 +5253,22 @@
     "night": {
       "groups": {
         "night": {
-          "rle_bytes": 136460,
-          "table_bytes": 23858,
-          "descriptor_catalog_estimate_c3": 2069,
-          "resources": 25,
-          "pieces": 25,
-          "frames": 98,
-          "physical_sprites": 25,
-          "physical_frames": 98,
+          "rle_bytes": 57163,
+          "table_bytes": 5924,
+          "descriptor_catalog_estimate_c3": 1508,
+          "resources": 18,
+          "pieces": 18,
+          "frames": 56,
+          "physical_sprites": 18,
+          "physical_frames": 56,
           "interned_pieces": 0,
-          "static_bytes_estimate_c3": 162387
+          "static_bytes_estimate_c3": 64595
         }
       },
-      "python_verified_frames": 98,
+      "python_verified_frames": 56,
       "production_c": {
-        "verified_frames": 98,
-        "verified_sprite_rows": 5349,
+        "verified_frames": 56,
+        "verified_sprite_rows": 2869,
         "verified_ninepatch_rows": 0,
         "comparison": "generated C and production decoders vs indexed source"
       }
@@ -5512,22 +5276,22 @@
     "climb": {
       "groups": {
         "climb": {
-          "rle_bytes": 77013,
-          "table_bytes": 31154,
-          "descriptor_catalog_estimate_c3": 2563,
-          "resources": 29,
-          "pieces": 29,
-          "frames": 113,
-          "physical_sprites": 29,
-          "physical_frames": 113,
+          "rle_bytes": 61205,
+          "table_bytes": 11812,
+          "descriptor_catalog_estimate_c3": 2299,
+          "resources": 26,
+          "pieces": 26,
+          "frames": 93,
+          "physical_sprites": 26,
+          "physical_frames": 93,
           "interned_pieces": 0,
-          "static_bytes_estimate_c3": 110730
+          "static_bytes_estimate_c3": 75316
         }
       },
-      "python_verified_frames": 113,
+      "python_verified_frames": 93,
       "production_c": {
-        "verified_frames": 113,
-        "verified_sprite_rows": 7072,
+        "verified_frames": 93,
+        "verified_sprite_rows": 5668,
         "verified_ninepatch_rows": 0,
         "comparison": "generated C and production decoders vs indexed source"
       }
@@ -5535,22 +5299,22 @@
     "ski": {
       "groups": {
         "ski": {
-          "rle_bytes": 77801,
-          "table_bytes": 19168,
-          "descriptor_catalog_estimate_c3": 1799,
-          "resources": 21,
-          "pieces": 21,
-          "frames": 68,
-          "physical_sprites": 21,
-          "physical_frames": 68,
+          "rle_bytes": 51770,
+          "table_bytes": 7076,
+          "descriptor_catalog_estimate_c3": 1633,
+          "resources": 19,
+          "pieces": 19,
+          "frames": 54,
+          "physical_sprites": 19,
+          "physical_frames": 54,
           "interned_pieces": 0,
-          "static_bytes_estimate_c3": 98768
+          "static_bytes_estimate_c3": 60479
         }
       },
-      "python_verified_frames": 68,
+      "python_verified_frames": 54,
       "production_c": {
-        "verified_frames": 68,
-        "verified_sprite_rows": 4372,
+        "verified_frames": 54,
+        "verified_sprite_rows": 3388,
         "verified_ninepatch_rows": 0,
         "comparison": "generated C and production decoders vs indexed source"
       }
@@ -5558,22 +5322,22 @@
     "sky": {
       "groups": {
         "sky": {
-          "rle_bytes": 35152,
-          "table_bytes": 15352,
-          "descriptor_catalog_estimate_c3": 1800,
-          "resources": 22,
-          "pieces": 22,
-          "frames": 77,
-          "physical_sprites": 22,
-          "physical_frames": 77,
+          "rle_bytes": 24553,
+          "table_bytes": 5810,
+          "descriptor_catalog_estimate_c3": 1638,
+          "resources": 20,
+          "pieces": 20,
+          "frames": 63,
+          "physical_sprites": 20,
+          "physical_frames": 63,
           "interned_pieces": 0,
-          "static_bytes_estimate_c3": 52304
+          "static_bytes_estimate_c3": 32001
         }
       },
-      "python_verified_frames": 77,
+      "python_verified_frames": 63,
       "production_c": {
-        "verified_frames": 77,
-        "verified_sprite_rows": 3438,
+        "verified_frames": 63,
+        "verified_sprite_rows": 2622,
         "verified_ninepatch_rows": 0,
         "comparison": "generated C and production decoders vs indexed source"
       }
@@ -5581,33 +5345,37 @@
     "space": {
       "groups": {
         "space": {
-          "rle_bytes": 46903,
-          "table_bytes": 17470,
-          "descriptor_catalog_estimate_c3": 1539,
-          "resources": 18,
-          "pieces": 18,
-          "frames": 67,
-          "physical_sprites": 18,
-          "physical_frames": 67,
+          "rle_bytes": 29615,
+          "table_bytes": 5880,
+          "descriptor_catalog_estimate_c3": 1291,
+          "resources": 15,
+          "pieces": 15,
+          "frames": 49,
+          "physical_sprites": 15,
+          "physical_frames": 49,
           "interned_pieces": 0,
-          "static_bytes_estimate_c3": 65912
+          "static_bytes_estimate_c3": 36786
         }
       },
-      "python_verified_frames": 67,
+      "python_verified_frames": 49,
       "production_c": {
-        "verified_frames": 67,
-        "verified_sprite_rows": 3954,
+        "verified_frames": 49,
+        "verified_sprite_rows": 2800,
         "verified_ninepatch_rows": 0,
         "comparison": "generated C and production decoders vs indexed source"
       }
     }
   },
   "device": {
-    "common_candidate_sha256": "82efd1efdda558a598fa0058e8f9e419eb571d761856e9c98c96b9a05ba5f236",
+    "common_candidate_sha256": "ddd1f50dfeb8eafd207292bdd27fc9de8d120713bee3fd65f03b69c04c444e9e",
     "new_game_art_embedded_in_this_candidate": true,
     "integrated_game_groups": [
+      "climb",
       "night",
-      "post"
+      "post",
+      "ski",
+      "sky",
+      "space"
     ],
     "reason": "Only explicitly integrated games are embedded; physical factory is 2,031,616 bytes."
   },

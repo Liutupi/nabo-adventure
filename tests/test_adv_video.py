@@ -19,6 +19,7 @@ class Video(unittest.TestCase):
    lib.adv_video_close.argtypes=[ctypes.c_void_p];lib.adv_video_next.argtypes=[ctypes.c_void_p];lib.adv_video_next.restype=ctypes.c_bool
    lib.adv_video_row.argtypes=[ctypes.c_void_p,ctypes.c_int,ctypes.c_int,ctypes.c_int,ctypes.c_void_p]
    lib.adv_video_reference_bytes.argtypes=[ctypes.c_void_p];lib.adv_video_reference_bytes.restype=ctypes.c_size_t
+   lib.adv_video_band_generation.argtypes=[ctypes.c_void_p,ctypes.c_uint];lib.adv_video_band_generation.restype=ctypes.c_uint32
    lib.host_yuv_hash.argtypes=[ctypes.c_void_p];lib.host_yuv_hash.restype=ctypes.c_uint32
    lib.host_reference_frame.argtypes=[ctypes.c_void_p]
    lib.host_alloc_fail.argtypes=[ctypes.c_int]
@@ -42,6 +43,32 @@ class Video(unittest.TestCase):
    for _ in range(3):self.assertFalse(lib.adv_video_next(v));self.assertEqual(lib.host_yuv_hash(v),held)
    lib.adv_video_close(v);self.assertEqual(lib.host_alloc_live(),0);hashes.append(frames)
   self.assertEqual(hashes[0],hashes[1],'Two-buffer I/P rotation must equal independent three-reference path for every YCbCr pixel')
+ def test_unchanged_band_generations_never_hide_changed_pixels_including_skipped_draws(self):
+  lib=self.libs[0];data=ctypes.create_string_buffer(self.data)
+  v=lib.adv_video_open(data,len(self.data),208,272);self.assertTrue(v)
+  previous=None;displayed=None;frame=0;changed=0
+  while lib.adv_video_next(v):
+   rows=[]
+   for y in range(320):
+    row=(ctypes.c_uint16*240)();lib.adv_video_row(v,y,0,240,row);rows.append(bytes(row))
+   bands=[b''.join(rows[b*16:(b+1)*16]) for b in range(20)]
+   generations=[lib.adv_video_band_generation(v,b) for b in range(20)]
+   for earlier in (previous,displayed):
+    if earlier:
+     for b in range(20):
+      if earlier[0][b]==generations[b]:self.assertEqual(earlier[1][b],bands[b],f'frame {frame}, band {b}')
+   if previous:changed+=sum(a!=b for a,b in zip(previous[0],generations))
+   previous=(generations,bands)
+   # The compositor may draw after several decoded frames. A later matching
+   # sample must not erase damage accumulated since the last presented image.
+   if frame%5==0:displayed=previous
+   frame+=1
+  held=[lib.adv_video_band_generation(v,b) for b in range(20)]
+  self.assertFalse(lib.adv_video_next(v))
+  self.assertEqual(held,[lib.adv_video_band_generation(v,b) for b in range(20)])
+  self.assertEqual(lib.adv_video_band_generation(v,20),0)
+  self.assertEqual(frame,73);self.assertLess(changed,72*20*0.8,'Real static rows should avoid at least 20% of redraws')
+  lib.adv_video_close(v);self.assertEqual(lib.host_alloc_live(),0)
  def test_each_allocation_failure_cleans_up_and_reports_unavailable(self):
   lib=self.libs[0];data=ctypes.create_string_buffer(self.data)
   for fail in range(4):
