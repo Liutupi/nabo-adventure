@@ -1,0 +1,173 @@
+{
+  "schema": "nabo-adventure-release-v1",
+  "version": "0.1.0",
+  "date": "2026-10-26",
+  "prerelease": true,
+  "firmware_source_commit": "579f692018be895b0aa5bd2bb93e3fbcca57939e",
+  "release_ref": "v0.1.0",
+  "device": "FoloToy AI Passport ESP32-C3 8MB",
+  "application": {
+    "file": "nabo-adventure-v0.1.0-app.bin",
+    "bytes": 1815984,
+    "sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8",
+    "offset": "0x10000",
+    "hardware_serial_verified": true
+  },
+  "full_install": {
+    "file": "nabo-adventure-v0.1.0-full.bin",
+    "bytes": 1881520,
+    "sha256": "2bca7adda06ea0b0e1cc3f4959781583983172c0b6163c2b1768c117e4b979d0",
+    "offset": "0x0",
+    "contains_same_application": true,
+    "hardware_first_install_verified": false,
+    "resets_settings_and_scores": true
+  },
+  "build_components": {
+    "bootloader/bootloader.bin": {
+      "offset": "0x0",
+      "bytes": 20064,
+      "sha256": "d492cb90188413bb25f6acfa1915bf3d3b2b680d4d17179c8dbf72f1aec8b7c7"
+    },
+    "partition_table/partition-table.bin": {
+      "offset": "0x8000",
+      "bytes": 3072,
+      "sha256": "feb7ea496adb63179bf197f87431e6c8ddade47ce0228c1e671ef01421effc0c"
+    },
+    "nabo-adventure.bin": {
+      "offset": "0x10000",
+      "bytes": 1815984,
+      "sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8"
+    }
+  },
+  "archive": "nabo-adventure-v0.1.0.zip",
+  "archive_members": {
+    "GAME_CONTROLS.md": {
+      "bytes": 5401,
+      "sha256": "3fe6b99e627396c7274738911f26119581e4218129094f2b93d7ad0109ba19f1"
+    },
+    "INSTALL.md": {
+      "bytes": 3862,
+      "sha256": "92c4503bf9b9f8d406b66cee817ddaa79a92ac6750bd3b315884f6ec93da59b6"
+    },
+    "LICENSE": {
+      "bytes": 1190,
+      "sha256": "658f3ef31bd2527a34eeaa171f36a01f5b97e5ebcea760a2b2b11aef840037eb"
+    },
+    "LICENSE.Jump": {
+      "bytes": 1162,
+      "sha256": "8e43517088915f56edb2c93aa044d490ab28bff4e06a709408c41f705d32d378"
+    },
+    "LICENSE.Table": {
+      "bytes": 1162,
+      "sha256": "8e43517088915f56edb2c93aa044d490ab28bff4e06a709408c41f705d32d378"
+    },
+    "NOTICE.md": {
+      "bytes": 2256,
+      "sha256": "f021b360e891da04ec71742f1a51ffc9933b646703e76905d349a03f4825211d"
+    },
+    "VALIDATION.json": {
+      "bytes": 14614,
+      "sha256": "2cb312f71e8704713cd3af411ed97d00957619da3749595ff72f16a2b0c20709"
+    },
+    "bootloader.bin": {
+      "bytes": 20064,
+      "sha256": "d492cb90188413bb25f6acfa1915bf3d3b2b680d4d17179c8dbf72f1aec8b7c7"
+    },
+    "licenses/ESP-IDF-LICENSE": {
+      "bytes": 11560,
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    "licenses/LICENSE.FoloToy": {
+      "bytes": 1085,
+      "sha256": "cb7ecfa19d8706fb4b499bf519b4395ed134aea2b433786578b3cddbc05a2f6b"
+    },
+    "licenses/espressif__button/license.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "licenses/espressif__cmake_utilities/license.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "licenses/espressif__esp_codec_dev/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "licenses/espressif__esp_lvgl_port/license.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "licenses/lvgl__lvgl/COPYRIGHTS.md": {
+      "bytes": 1914,
+      "sha256": "18dff80ab6d19cca167018a2883b73f5575ccf1e6dff60a58b1f99425b666439"
+    },
+    "licenses/lvgl__lvgl/LICENCE.txt": {
+      "bytes": 1072,
+      "sha256": "27a80bd36832ab42d35ad60c08b2b230a807a9bc0d58e94ec1531543dc49cbe8"
+    },
+    "licenses/main/OFL-ArchivoBlack.txt": {
+      "bytes": 4492,
+      "sha256": "3173acd82f8c6159b5b1037b539fcbd4edff68e65c2ea8b9412b5a5ca97b08ff"
+    },
+    "licenses/main/OFL-SourceHanSans.txt": {
+      "bytes": 4559,
+      "sha256": "1953855bf1927e7214385bbdd8adb04cc5e8a0ecd0e6eaedeb1bdc281b009481"
+    },
+    "licenses/main/OFL-SpaceMono.txt": {
+      "bytes": 4485,
+      "sha256": "a73c20d6b38329c23a89570c7e16373a9100976fef58deb5a8f2a867ee332496"
+    },
+    "licenses/main/font-licenses/NotoSansSC-Bold-OFL.txt": {
+      "bytes": 4535,
+      "sha256": "34e7d1db55ce73c5f5d988ed4dec050ba5b1eea86ecbd8b93ac3d878e8307225"
+    },
+    "licenses/main/font-licenses/SourceHanSans-OFL.txt": {
+      "bytes": 4463,
+      "sha256": "fcac737e761ec63dbfbdce11030a1780161920d80315edba9c8beff1c2bac5a2"
+    },
+    "licenses/main/third_party/pl_mpeg/UPSTREAM.md": {
+      "bytes": 881,
+      "sha256": "532374e561c9dda59d96251c9c4191bfebba5bdffe9f256c22447fdefc63790b"
+    },
+    "licenses/main/third_party/pl_mpeg/pl_mpeg.h": {
+      "bytes": 142570,
+      "sha256": "f663908a6a0dbb08d3d540c39af971766d45a62b6f641f245fc0c270ac169d3e"
+    },
+    "nabo-adventure-v0.1.0-app.bin": {
+      "bytes": 1815984,
+      "sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8"
+    },
+    "nabo-adventure-v0.1.0-full.bin": {
+      "bytes": 1881520,
+      "sha256": "2bca7adda06ea0b0e1cc3f4959781583983172c0b6163c2b1768c117e4b979d0"
+    },
+    "partition-table.bin": {
+      "bytes": 3072,
+      "sha256": "feb7ea496adb63179bf197f87431e6c8ddade47ce0228c1e671ef01421effc0c"
+    },
+    "tools/flash_candidate.py": {
+      "bytes": 8954,
+      "sha256": "00589365711daa22ac4fb3902205b8af5994a0b67b3af7ef46e4190d5d0f80e7"
+    },
+    "tools/verify_firmware.py": {
+      "bytes": 8858,
+      "sha256": "8c854da134e9c927f20f33cf3eded4cb2daff415ac3587b2f17ca17dc87a0ac4"
+    }
+  },
+  "privacy": {
+    "source": "prebuilt build outputs plus explicit allowlisted documents/licenses/tools",
+    "device_flash_or_nvs_included": false,
+    "all_gaps_ff_verified": true
+  },
+  "validation": "VALIDATION.json",
+  "human_acceptance": {
+    "controls_and_readability": "pending",
+    "rocket_successful_landing": "pending",
+    "sleep_wake": {
+      "status": "PASS: user confirmed",
+      "user_report": "约30秒熄屏，上键能回到封面",
+      "scope": "Temporary 30-second settings-page test only; each active game not individually tested"
+    },
+    "audio": "not tested; muted"
+  }
+}
