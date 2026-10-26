@@ -2,6 +2,12 @@
 
 
 
+
+## 2026-10-26 14:44 SPACE V2「月面跳跳」G0/G1 已交，等用户试玩
+
+- 概念、键位、数值：`game-art/adventure/SPACE_V2_CONCEPT.md`；试玩页 `prototype/space_v2.html`。只用现有太空 A 款素材，不需要 Grok。主引擎改为点按，长按中键暂停与 NIGHT/SKI 一致。
+- **用户认可前 Codex 不要动 SPACE 的 C、素材或 V1。**
+
 ## 2026-10-26 14:27 SKI V2「雪崩速降」已接入固件（云端，未上机）
 
 - 用户 14:27 试玩后回复“可以”。V2 替换 V1，只用现有滑雪 A 款素材 + 程序画的跳台/冰面/雪崩，不需要 Grok。设计、键位、文件、验证边界：**`game-art/adventure/SKI_DESIGN.md`**。
