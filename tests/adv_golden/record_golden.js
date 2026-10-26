@@ -11,7 +11,7 @@ const {driver:nightDriver}=require('../night_policy.js');
 const {driver:climbDriver}=require('../climb_policy.js');
 const LATE={6:require('../ski_policy.js').driver,7:require('../sky_policy.js').driver,8:require('../space_policy.js').driver};
 // The pause gesture of each shell game (NIGHT long DOWN, SKI long OK, SPACE two short DOWN taps, others long UP).
-function pause(r,station){if(station===4)r.long(BTN.DOWN);else if(station===6)r.long(BTN.OK);else if(station===8)r.double(BTN.DOWN);else r.long(BTN.UP);}
+function pause(r,station){if(station===4||station===6)r.long(BTN.DOWN);else if(station===8)r.double(BTN.DOWN);else r.long(BTN.UP);}
 const SETTINGS = { volume: 70, brightness: 80, sleep: 300, speaker: true };
 
 function recorder(seed, best, seen) {
@@ -119,7 +119,10 @@ function playLate(r,target,waitResult=true){
     for(const [button,want] of [[BTN.OK,!!(input.ok_held||input.ok_down)&&!input.ok_up],[BTN.UP,!!input.up_held],[BTN.DOWN,!!input.down_held]]){
       const was=!!(r.m.held&(1<<button));if(was!==want)r.ev(button,want?EV.PRESS:EV.RELEASE);
     }
+    const tap=input.down_down&&!input.down_held&&!(r.m.held&(1<<BTN.DOWN));   // SKI V2 jumps on a real DOWN press
+    if(tap)r.ev(BTN.DOWN,EV.PRESS);
     r.steps(1);
+    if(tap)r.ev(BTN.DOWN,EV.RELEASE);
   }
   for(const button of [BTN.OK,BTN.UP,BTN.DOWN])if(r.m.held&(1<<button))r.ev(button,EV.RELEASE);
   if(r.m.session.phase!==A.PHASE.END)throw Error('game did not end');
@@ -129,16 +132,18 @@ function playLate(r,target,waitResult=true){
 function lateGames(){
   const r=recorder(64,[0,30,400,13,40,160,0,0,0],0x7fff);
   r.click(BTN.OK);for(let i=0;i<4;i++)r.click(BTN.UP);
-  for(const [station,target] of [[6,10],[7,200],[8,300]]){
+  for(const [station,target] of [[6,300],[7,200],[8,300]]){
+    const go=station===6?BTN.DOWN:BTN.OK;   // SKI V2: middle starts and resumes, UP is never a way out while playing
     r.click(BTN.OK);if(!r.m.session||r.m.session.station!==station)throw Error('station '+station+' did not open');
-    r.click(BTN.OK);r.steps(200);r.click(BTN.UP);
-    if(station===6||station===8){   // a held move followed by one short tap is not a double-tap gesture
-      const b=station===6?BTN.UP:BTN.DOWN;r.ev(b,EV.PRESS);r.steps(20);r.ev(b,EV.RELEASE);r.ev(b,EV.PRESS);r.ev(b,EV.RELEASE);r.ev(b,EV.DOUBLE);
+    r.click(go);r.steps(200);r.click(BTN.UP);
+    if(station===6){r.double(BTN.UP);if(r.m.page!==A.PAGE.SESSION||r.m.session.phase!==A.PHASE.PLAY)throw Error('SKI V2 left while playing');}
+    if(station===8){   // a held move followed by one short tap is not a double-tap gesture
+      const b=BTN.DOWN;r.ev(b,EV.PRESS);r.steps(20);r.ev(b,EV.RELEASE);r.ev(b,EV.PRESS);r.ev(b,EV.RELEASE);r.ev(b,EV.DOUBLE);
       if(r.m.page!==A.PAGE.SESSION||r.m.session.phase!==A.PHASE.PLAY)throw Error('held move counted as a double tap at '+station);
     }
     pause(r,station);
     if(r.m.session.phase!==A.PHASE.PAUSE)throw Error('pause gesture failed at '+station);
-    r.click(BTN.OK);playLate(r,target);
+    r.click(go);playLate(r,target);
     if(r.m.best[station]<target)throw Error('bronze not earned at '+station);
     r.double(BTN.UP);r.click(BTN.OK);r.click(BTN.UP);
   }
@@ -238,7 +243,7 @@ function gameReturns() {
   r.click(BTN.OK);r.test(1);
   for(let station=3;station<9;station++)for(const phase of Object.values(A.PHASE)) {
     r.open(station);
-    if(phase!==A.PHASE.TITLE)r.click(station===4?BTN.DOWN:BTN.OK);
+    if(phase!==A.PHASE.TITLE)r.click(station===4||station===6?BTN.DOWN:BTN.OK);
     if(phase!==A.PHASE.TITLE&&phase!==A.PHASE.READY)r.steps(180);
     if(phase===A.PHASE.PAUSE)pause(r,station);
     if(phase===A.PHASE.END||phase===A.PHASE.RESULT) {
@@ -247,13 +252,13 @@ function gameReturns() {
       if(r.m.session.phase!==A.PHASE.END)throw Error('Expected an ended round');
       if(phase===A.PHASE.RESULT)r.steps(A.END_STEPS);
     }
-    if(phase===A.PHASE.PLAY){r.click(BTN.UP);pause(r,station);r.click(station===4?BTN.DOWN:BTN.OK);}
+    if(phase===A.PHASE.PLAY){r.click(BTN.UP);pause(r,station);r.click(station===4||station===6?BTN.DOWN:BTN.OK);}
     else r.long(BTN.UP);
     if(r.m.page!==A.PAGE.SESSION||r.m.session.phase!==phase)throw Error('Single/long UP unexpectedly returned or changed a phase');
     r.double(BTN.UP);
-    if(station===4&&phase===A.PHASE.PLAY){
-      // NIGHT V2 (user decision 2026-10-26): UP is the run key, so the map is reached from the pause page.
-      if(r.m.page!==A.PAGE.SESSION||r.m.session.phase!==A.PHASE.PLAY)throw Error('NIGHT V2 left while playing');
+    if((station===4||station===6)&&phase===A.PHASE.PLAY){
+      // NIGHT/SKI V2 (user decision 2026-10-26): UP is a move key, so the map is reached from the pause page.
+      if(r.m.page!==A.PAGE.SESSION||r.m.session.phase!==A.PHASE.PLAY)throw Error('V2 game left while playing');
       pause(r,station);r.double(BTN.UP);
     }
     if(r.m.page!==A.PAGE.MAP||r.m.session)throw Error('Double UP did not close the game');

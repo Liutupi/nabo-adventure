@@ -1,178 +1,217 @@
-// SKI, 240x320 portrait, rear view: NABO skis up the screen; gates and hazards come down.
+// SKI V2「雪崩速降」screen, 320x240 clockwise landscape. Layout follows
+// game-art/adventure/prototype/adv_ski_draw.js: ski_a frames and ski props, procedural kicker/ice/avalanche.
 #include <stdio.h>
+#include <stdlib.h>
 #include "adv_ski.h"
 #include "adv_ui_internal.h"
 
-#define FEET_Y 262
-#define TOP 32
-#define BOTTOM 290
+#define NY ADV_SKI_NABO_Y
+#define W 320
+#define H 240
+static const uint16_t SNOW_TOP = 0xF7DF, SNOW_LOW = 0xDF5E, SPECK = 0xB5DB, TRACK = 0xC63C, ICE = 0xAF3E, RAMP = 0xBE9D;
+static const uint16_t HUD_INK = 0x1928, GOLD = 0xFE89, WARN = 0xFB49, OKC = 0x8F15, MID = 0xFE09, FLOW = 0x7E5F, PALE = 0xCEFE;
 
+static uint32_t hash(uint32_t n) { n = (n ^ 0x9e3779b9u) * 0x85ebca6bu; n ^= n >> 13; n *= 0xc2b2ae35u; return n ^ (n >> 16); }
 static void text(ag_t *g, const char *s, int x, int y, int size, nt_align_t align, uint16_t color)
-{
-    ag_text_top(g, size == 18 ? &collection_font_18 : size == 16 ? &collection_font_16 : &collection_font_12, s, x, y, align, color);
-}
+{ ag_text_top(g, size == 18 ? &collection_font_18 : size == 16 ? &collection_font_16 : &collection_font_12, s, x, y, align, color); }
 static void actor(ag_t *g, const char *action, unsigned frame, int x, int y)
-{
-    char id[40];
-    snprintf(id, sizeof(id), "ski_a/%s", action);
-    ui_art_frame_anchor(g, id, frame, x, y);
-}
-static int screen_y(const adv_ski_t *p, int world_y) { return FEET_Y - (world_y - p->pos); }
+{ char id[40]; snprintf(id, sizeof(id), "ski_a/%s", action); ui_art_frame_anchor(g, id, frame, x, y); }
 
-static void hud(ag_t *g, const adv_ski_t *p)
+static void slope(ag_t *g, int wy)
 {
-    ui_art(g, "ui/bars/top", 0, 0, 0);
-    ui_art(g, "ui/resources/icons/temperature", 0, 10, 8);
-    ui_art(g, "ui/resources/bar-frame", 0, 36, 11);
-    int w = p->res * 124 / ADV_RESOURCE_MAX;
-    if (w > 0) ag_rect(g, 38, 13, w, 6, 0, p->res < ADV_RESOURCE_MAX / 4 ? UI_RED : ADV_ASSETS_UI_TEAL, 255, 0, 0);
-    char n[16];
-    if (p->score > 9999) snprintf(n, sizeof(n), "9999+");
-    else snprintf(n, sizeof(n), "%u", (unsigned)p->score);
-    ui_number_tint(g, n, 20, 230, 6, NT_ALIGN_RIGHT, UI_WHITE);
-}
-
-static void snow(ag_t *g, const adv_ski_t *p)
-{
-    ag_band(g, TOP, BOTTOM - TOP, ag_rgb(222, 232, 250), ag_rgb(238, 244, 255));
-    // Fixed world marks give the speed cue: one drift every 90 px of slope, x hashed from its row.
-    for (int row = (p->pos - 40) / 90; row * 90 <= p->pos + FEET_Y - TOP + 40; row++) {
-        if (row < 0) continue;
-        int x = 20 + (int)((unsigned)(row * 73 + 41) % 200u), y = screen_y(p, row * 90);
-        ui_art_frame_anchor(g, "game/ski/shared/snow-ground", 0, x, y);   // sparkle only: drifts read as obstacles
+    ag_band(g, 0, H, SNOW_TOP, SNOW_LOW);
+    int top = wy - NY;
+    for (int i = top / 22 - 1; i < (top + H) / 22 + 1; i++) {
+        uint32_t h = hash((uint32_t)i * 7u);
+        int y = i * 22 - top + (int)(h % 22u);
+        ag_rect(g, (int)((h >> 8) % (uint32_t)W), y, (h >> 20) & 1 ? 3 : 2, 1, 0, SPECK, 255, 0, 0);
+        ag_rect(g, (int)((h >> 14) % (uint32_t)W), y + 9, 2, 1, 0, TRACK, 255, 0, 0);
     }
 }
 
-static void object(ag_t *g, const adv_ski_t *p, const adv_ski_obj_t *o)
+static const char *const PROP[] = {NULL, "game/ski/props/gate-red", "game/ski/props/gate-blue", "game/ski/props/pine-large",
+                                   "game/ski/shared/pine-small", "game/ski/shared/snow-mogul", NULL, NULL, "game/ski/shared/snow-drift"};
+static void flat(ag_t *g, const adv_ski_t *p)
 {
-    static const char *const ART[] = {"", "game/ski/props/gate-red", "game/ski/props/gate-blue", "game/ski/props/pine-large",
-                                      "game/ski/shared/pine-small", "game/ski/shared/snow-mogul", "game/ski/props/hot-cocoa-cabin"};
-    int y = screen_y(p, o->y);
-    if (y < TOP - 8 || y > BOTTOM + 90) return;
-    ui_art_frame_anchor(g, ART[o->type], 0, o->x, y);
-    if (o->type <= SKI_GATE_BLUE && o->done) ag_rect(g, o->x - 3, y - 47, 6, 6, 3, UI_GOLD, 255, 0, 0);
-}
-
-static void nabo(ag_t *g, const adv_ski_t *p)
-{
-    int x = p->x / 16, lift = 0;
-    const char *name = "straight";
-    unsigned frame = p->tick / 5 % 6;
-    if (p->fall) {
-        int total = p->message == SKI_MSG_TREE ? ADV_SKI_FALL : ADV_SKI_BUMP_T;
-        name = "fall"; frame = (unsigned)((total - p->fall) * 8 / total);
-        if (frame > 7) frame = 7;
-    } else if (p->air) {
-        int t = ADV_SKI_AIR - p->air;
-        name = "jump"; frame = (unsigned)(t * 6 / ADV_SKI_AIR);
-        lift = 64 * t * p->air / (ADV_SKI_AIR * ADV_SKI_AIR);
-    } else if (p->vx < -12 || p->vx > 12) {
-        int lean = (p->vx < 0 ? -p->vx : p->vx) - 12;
-        name = p->vx < 0 ? "lean_left" : "lean_right"; frame = (unsigned)(lean / 8 > 3 ? 3 : lean / 8);
-    }
-    if (p->invuln && p->invuln / 4 % 2) return;
-    if (lift) ag_rect(g, x - 14, FEET_Y - 2, 28, 4, 2, ag_rgb(196, 208, 230), 200, 0, 0);
-    actor(g, name, frame, x, FEET_Y - lift);
-}
-
-static const char *hint(const adv_ski_t *p, bool *warn)
-{
-    static const char *const messages[] = {"", "过门 +1", "漏过旗门 · 体温-100", "撞树 · 体温-250", "绊倒 · 体温-100", "热可可 体温+300"};
-    *warn = p->feedback && (p->message == SKI_MSG_MISS || p->message == SKI_MSG_TREE || p->message == SKI_MSG_BUMP);
-    if (p->feedback && p->message) return messages[p->message];
-    return "按住上下转弯 · 点OK跳";
-}
-
-static void play(ag_t *g, const adv_ski_t *p, bool footer)
-{
-    snow(g, p);
-    for (int pass = 0; pass < 2; pass++)   // far objects first, then NABO, then what he already passed
-        for (int depth = ADV_SKI_AHEAD + 60; depth >= -ADV_SKI_BEHIND; depth -= 20) {
-            for (int i = 0; i < ADV_SKI_CAP; i++) {
-                const adv_ski_obj_t *o = &p->objs[i];
-                int d = o->y - p->pos;
-                if (!o->type || d > depth || d <= depth - 20 || (pass == 0) != (d >= 0)) continue;
-                object(g, p, o);
-            }
-            if (pass == 0 && depth == 0) nabo(g, p);
+    int top = (p->y >> 8) - NY;
+    for (int i = 0; i < ADV_SKI_OBJS; i++) {
+        const adv_ski_obj_t *o = &p->objs[i];
+        int y = o->y - top;
+        if (!o->type || y < -70 || y > H + 10) continue;
+        if (o->type == SKI_ICE) ag_rect(g, o->x - ADV_SKI_ICE_HALF, y, ADV_SKI_ICE_HALF * 2, ADV_SKI_ICE_LEN, 12, ICE, 190, 0xFFFF, 1);
+        else if (o->type == SKI_KICKER) {
+            ag_rect(g, o->x - 22, y - 14, 44, 16, 3, RAMP, 255, 0, 0);
+            ag_rect(g, o->x - 20, y - 14, 40, 5, 2, 0xFFFF, 255, 0, 0);
+            ag_rect(g, o->x - 3, y - 13, 6, 3, 1, 0xEAA7, 255, 0, 0);
         }
-    hud(g, p);
-    if (!footer) return;
-    bool warn;
-    const char *h = hint(p, &warn);
-    ui_art(g, "ui/bars/bottom", 0, 0, BOTTOM);
-    ag_text(g, &collection_font_12, h, 120, 310, NT_ALIGN_CENTER, warn ? ADV_ASSETS_UI_ACCENT : UI_PAPER);
-}
-
-static void title(ag_t *g, const adv_model_t *m)
-{
-    ui_paper(g);
-    ui_header(g, "雪坡", NULL);
-    ui_art(g, "ui/wordmarks/ski", 0, 20, 42);
-    static const char *const lines[] = {"按住上往左 · 按住下往右", "点OK跳过雪包和小树", "穿过旗门+1 · 漏门扣体温",
-                                        "撞树扣250 · 热可可补体温", "体温耗尽结束"};
-    for (int i = 0; i < 5; i++) text(g, lines[i], 120, 128 + i * 17, 12, NT_ALIGN_CENTER, UI_INK);
-    uint32_t earned = adv_earned(m);
-    for (int tier = 0; tier < 3; tier++) {
-        int x = 60 + tier * 60;
-        bool on = earned & adv_stamp_bit(6, tier);
-        ag_circle(g, x, 236, 9, ui_tier_color(tier), on ? 255 : 40, on ? UI_INK : ui_tier_color(tier), 2);
-        char th[16];
-        snprintf(th, sizeof(th), "%u", (unsigned)adv_threshold(6, tier));
-        ag_text(g, &nabo_mono_font_12, th, x, 258, NT_ALIGN_CENTER, UI_INK);
     }
-    char best[32];
-    if (m->best[6] > 9999) snprintf(best, sizeof(best), "最佳 9999+");
-    else snprintf(best, sizeof(best), "最佳 %u", (unsigned)m->best[6]);
-    ag_text(g, &collection_font_16, best, 120, 283, NT_ALIGN_CENTER, UI_INK);
-    ui_footer(g, "OK开始 · 长按OK暂停 · 双击上返回");
+}
+// Standing props sorted by base line: `front` picks those below NABO's feet.
+static void standing(ag_t *g, const adv_ski_t *p, bool front)
+{
+    int top = (p->y >> 8) - NY, order[ADV_SKI_OBJS], n = 0;
+    for (int i = 0; i < ADV_SKI_OBJS; i++) {
+        const adv_ski_obj_t *o = &p->objs[i];
+        int y = o->y - top;
+        if (!o->type || (o->type >= SKI_KICKER && o->type <= SKI_ICE) || y < -2 || y > H + 66 || (y > NY) != front) continue;
+        int k = n++;
+        while (k > 0 && p->objs[order[k - 1]].y > o->y) { order[k] = order[k - 1]; k--; }
+        order[k] = i;
+    }
+    for (int k = 0; k < n; k++) { const adv_ski_obj_t *o = &p->objs[order[k]]; ui_art_frame_anchor(g, PROP[o->type], 0, o->x, o->y - top); }
 }
 
-static void result(ag_t *g, const adv_model_t *m, const adv_ski_t *p, uint32_t elapsed_ms)
+static void nabo(ag_t *g, const adv_ski_t *p, bool out, uint32_t ms)
 {
-    ag_rect(g, 0, 34, 240, 286, 0, UI_INK, 150, 0, 0);
-    ui_popup(g, 24, 50, 192, 228);
-    ag_text(g, &collection_font_16, "本局成绩", 120, 78, NT_ALIGN_CENTER, UI_INK);
-    char n[24];
-    if (p->score > 9999) snprintf(n, sizeof(n), "9999+");
-    else snprintf(n, sizeof(n), "%u", (unsigned)p->score);
-    ui_number(g, n, 36, 120, 90, NT_ALIGN_CENTER);
-    if (m->record) ui_art(g, m->test ? "ui/labels/test-no-record" : "ui/labels/new-record", 0, m->test ? 72 : 84, 134);
-    unsigned frame = elapsed_ms / 83;
-    actor(g, "settlement_cheer", frame > 7 ? 7 : frame, 120, 238);
-    if (m->best[6] > 9999) snprintf(n, sizeof(n), "最佳 9999+");
-    else snprintf(n, sizeof(n), "最佳 %u", (unsigned)m->best[6]);
-    ag_text(g, &collection_font_16, n, 120, 258, NT_ALIGN_CENTER, UI_INK);
-    ui_stamps(g, m, 6, 92, 274, 7, 28);
-    ui_footer(g, "OK 再来一局 · 双击上 回地图");
+    int x = p->x >> 8, lift = 0;
+    const char *name = "straight";
+    unsigned f = ms / 100 % 6;
+    if (p->vx < -170) { name = "lean_left"; f = ms / 133 % 4; } else if (p->vx > 170) { name = "lean_right"; f = ms / 133 % 4; }
+    if (p->air > 0) {
+        int t = p->air_max - p->air, T = p->air_max, peak = T > 30 ? 26 : T > 12 ? 10 : 4;
+        lift = 4 * peak * t * (T - t) / (T * T); name = "jump"; f = (unsigned)(t * 6 / T > 5 ? 5 : t * 6 / T);
+        if (p->spin_t > 0) { static const char *const SPIN[] = {"lean_left", "straight", "lean_right", "straight"}; name = SPIN[(ADV_SKI_SPIN - p->spin_t) / 6 % 4]; f = 1; }
+    }
+    if (p->crash > 0) { name = "fall"; f = (unsigned)((ADV_SKI_CRASH - p->crash) / 5 > 7 ? 7 : (ADV_SKI_CRASH - p->crash) / 5); lift = 0; }
+    if (out) { name = "fall"; f = 7; }
+    ag_rect(g, x - 15 + lift / 4, NY - 2, 30 - lift / 2, 5, 2, 0x4B10, 70, 0, 0);
+    actor(g, name, f, x, NY - lift);
+    if (p->spin_t > 0) {        // sparkle ring: 8 points of a 26 px circle, half of it lit and turning
+        static const int8_t RX[8] = {26, 18, 0, -18, -26, -18, 0, 18}, RY[8] = {0, 18, 26, 18, 0, -18, -26, -18};
+        for (int k = 0; k < 4; k++) { int j = (int)(ms / 60 + (uint32_t)k) % 8; ag_rect(g, x + RX[j] - 1, NY - lift - 30 + RY[j] - 1, 3, 3, 1, GOLD, 230, 0, 0); }
+    }
+}
+
+static void avalanche(ag_t *g, const adv_ski_t *p, uint32_t ms)
+{
+    int gap = adv_ski_gap(p) > 0 ? adv_ski_gap(p) >> 8 : 0, front = NY - gap * (NY + 40) / ADV_SKI_AVAL_CAP;
+    if (front < -30) return;
+    if (front > 0) ag_rect(g, 0, 0, W, front, 0, 0xFFFF, 255, 0, 0);
+    int top = p->y >> 8;
+    for (int x = -8; x < W + 24; x += 26) {
+        uint32_t h = hash((uint32_t)((x + 8) / 26) * 13u);
+        int r = 14 + (int)(h % 10u), y = front + (int)((hash((uint32_t)(top + x) / 9u + (uint32_t)(ms / 120)) % 9u)) - 4;
+        ag_circle(g, x, y, r, (h >> 9) & 1 ? 0xFFFF : 0xEF9F, 255, 0, 0);
+    }
+    for (int i = 0; i < 8; i++) { uint32_t h = hash((uint32_t)i * 31u + ms / 70); ag_rect(g, (int)(h % (uint32_t)W), front + 12 + (int)((h >> 10) % 26u), 2, 2, 0, 0xFFFF, 255, 0, 0); }
+}
+
+static void hud(ag_t *g, const adv_ski_t *p, uint32_t ms)
+{
+    int y = H - 26, pct = p->res / 10, m = adv_ski_mult(p);
+    ag_rect(g, 0, y, W, 26, 0, HUD_INK, 210, 0, 0);
+    text(g, "雪崩", 6, y + 1, 12, NT_ALIGN_LEFT, 0xFFFF);
+    ag_rect(g, 34, y + 5, 86, 7, 0, 0x4A8E, 255, 0, 0);
+    uint16_t c = pct < 30 ? ((ms / 170) % 2 ? WARN : 0xFD94) : pct < 60 ? MID : OKC;
+    if (pct) ag_rect(g, 34, y + 5, 86 * pct / 100, 7, 0, c, 255, 0, 0);
+    text(g, "速度", 6, y + 13, 12, NT_ALIGN_LEFT, 0xFFFF);
+    ag_rect(g, 34, y + 17, 86, 5, 0, 0x4A8E, 255, 0, 0);
+    if (p->flow) ag_rect(g, 34, y + 17, 86 * p->flow / ADV_SKI_FLOW_MAX, 5, 0, FLOW, 255, 0, 0);
+    char s[40];
+    if (p->combo >= 2) {
+        if (m > 1) snprintf(s, sizeof(s), "%d连 ×%d", (int)p->combo, m); else snprintf(s, sizeof(s), "%d连", (int)p->combo);
+        text(g, s, 132, y + 6, 12, NT_ALIGN_LEFT, m > 1 ? GOLD : 0xFFFF);
+    }
+    snprintf(s, sizeof(s), "%d m", (int)p->meters);
+    text(g, s, 238, y + 6, 12, NT_ALIGN_RIGHT, PALE);
+    snprintf(s, sizeof(s), "%u", (unsigned)p->score);
+    text(g, s, 314, y + 3, 18, NT_ALIGN_RIGHT, 0xFFFF);
+}
+
+static void effects(ag_t *g, const adv_ski_t *p)
+{
+    static const char *const NAME[] = {"", "旗门密集", "进入树林", "跳台公园", "冰面", "起雾了"};
+    static const char *const HINT[] = {"", "连过旗门越滑越快", "小心大树", "起跳后按中键转体", "转向变慢", "看不清远处"};
+    char s[32];
+    for (int i = 0; i < ADV_SKI_FX; i++) {
+        const adv_ski_fx_t *e = &p->fx[i];
+        if (!e->kind) continue;
+        int rise = e->t / 3;
+        switch (e->kind) {
+        case SKI_FX_GATE: snprintf(s, sizeof(s), "+%d", (int)e->val); text(g, s, e->x, e->y - 8 - rise, 12, NT_ALIGN_CENTER, GOLD); break;
+        case SKI_FX_MISS: text(g, "漏门", e->x, e->y - 8 - rise, 12, NT_ALIGN_CENTER, WARN); break;
+        case SKI_FX_CRASH: text(g, "撞树了！", e->x, e->y - 70, 16, NT_ALIGN_CENTER, WARN); break;
+        case SKI_FX_STUMBLE: text(g, "绊了一下", e->x, e->y - 68, 12, NT_ALIGN_CENTER, 0xFD8F); break;
+        case SKI_FX_WIPE: text(g, "没转完就落地", e->x, e->y - 86, 12, NT_ALIGN_CENTER, WARN); break;
+        case SKI_FX_LAND: snprintf(s, sizeof(s), "转体 +%d", (int)e->val); text(g, s, e->x, e->y - 78 - rise, 16, NT_ALIGN_CENTER, GOLD); break;
+        case SKI_FX_KICK: text(g, "起跳！按中键转体", e->x, e->y - 92, 12, NT_ALIGN_CENTER, HUD_INK); break;
+        case SKI_FX_NEAR: text(g, "好险", e->x, e->y - 70 - rise, 12, NT_ALIGN_CENTER, 0x4C7F); break;
+        case SKI_FX_SECTION:
+            if (e->val < 1 || e->val > 5) break;
+            ag_rect(g, 0, 156, W, 40, 0, HUD_INK, 180, 0, 0);
+            text(g, NAME[e->val], 160 + (e->t < 10 ? (10 - e->t) * 20 : 0), 158, 16, NT_ALIGN_CENTER, GOLD);
+            text(g, HINT[e->val], 160, 178, 12, NT_ALIGN_CENTER, 0xFFFF); break;
+        default: break;
+        }
+    }
+}
+
+static void world(ag_t *g, const adv_ski_t *p, bool out, uint32_t ms)
+{
+    slope(g, p->y >> 8); flat(g, p); standing(g, p, false); nabo(g, p, out, ms); standing(g, p, true);
+    if (p->section == SKI_SEC_FOG) { ag_rect(g, 0, NY + 30, W, 30, 0, 0xF7BF, 160, 0, 0); ag_rect(g, 0, NY + 60, W, H - NY - 60, 0, 0xF7BF, 245, 0, 0); }
+    avalanche(g, p, ms);
+}
+
+static int sway(uint32_t ms) { int t = (int)(ms / 10 % 400); return (t < 200 ? t - 100 : 300 - t) * 3 / 5; }
+static void title(ag_t *g, const adv_model_t *m, uint32_t ms)
+{
+    slope(g, (int)(ms * 36 / 100));
+    int x = 160 + sway(ms), d = sway(ms + 300) - sway(ms);
+    actor(g, d < -8 ? "lean_left" : d > 8 ? "lean_right" : "straight", ms / 120 % 4, x, NY);
+    ag_rect(g, 0, 110, W, 130, 0, HUD_INK, 150, 0, 0);
+    char best[32];
+    snprintf(best, sizeof(best), "最佳 %u", (unsigned)m->best[6]);
+    text(g, best, 312, 6, 12, NT_ALIGN_RIGHT, 0x2945);
+    text(g, "雪崩速降", 160, 118, 18, NT_ALIGN_CENTER, 0xFFFF);
+    text(g, "左键 左转 · 中键 跳/空中转体 · 右键 右转", 160, 146, 12, NT_ALIGN_CENTER, PALE);
+    text(g, "过旗门、做转体越滑越快，别让雪崩追上", 160, 166, 12, NT_ALIGN_CENTER, PALE);
+    if ((ms / 500) % 3) text(g, "中键开始", 160, 190, 16, NT_ALIGN_CENTER, 0xFFFF);
+    text(g, "长按中键暂停 · 双击上键回地图", 160, 222, 12, NT_ALIGN_CENTER, 0x9CF3);
+}
+
+static void result(ag_t *g, const adv_model_t *m, const adv_ski_t *p, uint32_t since)
+{
+    world(g, p, true, since);
+    ag_rect(g, 0, 0, W, H, 0, HUD_INK, 205, 0, 0);
+    text(g, "被雪崩追上了", 160, 16, 12, NT_ALIGN_CENTER, PALE);
+    char s[64];
+    snprintf(s, sizeof(s), "%u", (unsigned)p->score);
+    ui_number_tint(g, s, 36, 160, 38, NT_ALIGN_CENTER, 0xFFFF);
+    if (m->record) text(g, m->test ? "测试不保存" : "新纪录！", 254, 44, 12, NT_ALIGN_CENTER, GOLD);
+    snprintf(s, sizeof(s), "%d 米 · 旗门 %d/%d · 转体 %d · 最长 %d 连", (int)p->meters, (int)p->passed, (int)(p->passed + p->misses), (int)p->tricks, (int)p->best);
+    text(g, s, 160, 90, 12, NT_ALIGN_CENTER, PALE);
+    unsigned frame = since / 83 > 7 ? 7 : since / 83;
+    actor(g, "settlement_cheer", frame, 160, 196);
+    snprintf(s, sizeof(s), "最佳 %u", (unsigned)m->best[6]);
+    text(g, s, 160, 200, 12, NT_ALIGN_CENTER, 0xFFFF);
+    text(g, "中键重玩 · 双击上键回地图", 160, 222, 12, NT_ALIGN_CENTER, 0x9CF3);
 }
 
 void ui_draw_ski_session(ag_t *g, const adv_model_t *m)
 {
     static int prior_phase = -1;
     static uint32_t prior_seed, phase_started;
-    if ((int)m->phase != prior_phase || m->seed != prior_seed) { prior_phase = m->phase; prior_seed = m->seed; phase_started = ui_millis(); }
+    uint32_t ms = ui_millis();
+    if ((int)m->phase != prior_phase || m->seed != prior_seed) { prior_phase = m->phase; prior_seed = m->seed; phase_started = ms; }
     ag_begin(g, m->phase == ADV_TITLE ? UI_SCENE_TITLE : m->phase == ADV_RESULT ? UI_SCENE_RESULT : UI_SCENE_PLAY);
-    if (m->phase == ADV_TITLE) { title(g, m); return; }
+    if (m->phase == ADV_TITLE) { title(g, m, ms); return; }
     const adv_ski_t *p = m->game;
-    play(g, p, m->phase == ADV_PLAY);
+    if (m->phase == ADV_RESULT) { result(g, m, p, ms - phase_started); return; }
+    world(g, p, m->phase == ADV_END, ms);
+    if (m->phase == ADV_PAUSE) {
+        ag_rect(g, 56, 50, 208, 124, 8, HUD_INK, 235, GOLD, 1);
+        text(g, "暂停", 160, 60, 18, NT_ALIGN_CENTER, 0xFFFF);
+        text(g, "中键继续", 160, 92, 16, NT_ALIGN_CENTER, GOLD);
+        text(g, "左键重新开始", 160, 120, 12, NT_ALIGN_CENTER, 0xFFFF);
+        text(g, "双击上键回地图", 160, 142, 12, NT_ALIGN_CENTER, 0xFFFF);
+        return;
+    }
+    effects(g, p); hud(g, p, ms);
     if (m->phase == ADV_READY) {
         char n[12];
         snprintf(n, sizeof(n), "%d", (m->t + 59) / 60);
-        ag_glow(g, 120, 130, 46, UI_GOLD);
-        ui_number(g, n, 36, 120, 112, NT_ALIGN_CENTER);
-        ui_footer(g, "按住上下转弯 · 点OK跳");
-    } else if (m->phase == ADV_END) {
-        ag_rect(g, 60, 136, 120, 40, 12, UI_INK, 230, UI_RED, 2);
-        ag_text(g, &collection_font_18, "体温耗尽", 120, 163, NT_ALIGN_CENTER, UI_PAPER);
-        ui_footer(g, "双击上 回地图");
-    } else if (m->phase == ADV_PAUSE) {
-        ag_rect(g, 0, 34, 240, 256, 0, UI_INK, 150, 0, 0);
-        ui_popup(g, 24, 80, 192, 160);
-        ag_text(g, &collection_font_18, "暂停", 120, 112, NT_ALIGN_CENTER, UI_INK);
-        ag_text(g, &collection_font_16, "OK 继续", 120, 148, NT_ALIGN_CENTER, UI_INK);
-        ag_text(g, &collection_font_16, "下 重新开始", 120, 178, NT_ALIGN_CENTER, UI_INK);
-        ag_text(g, &collection_font_16, "双击上 回地图", 120, 208, NT_ALIGN_CENTER, UI_INK);
-        ui_footer(g, "长按OK已暂停");
-    } else if (m->phase == ADV_RESULT) result(g, m, p, ui_millis() - phase_started);
+        ag_glow(g, 160, 140, 34, GOLD); ui_number(g, n, 36, 160, 122, NT_ALIGN_CENTER);
+        text(g, "雪崩从后面追来了", 160, 168, 12, NT_ALIGN_CENTER, HUD_INK);
+    } else if (m->phase == ADV_END) { ag_rect(g, 82, 120, 156, 44, 8, HUD_INK, 235, WARN, 1); text(g, "被追上了", 160, 130, 18, NT_ALIGN_CENTER, 0xFFFF); }
 }

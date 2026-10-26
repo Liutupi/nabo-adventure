@@ -6,6 +6,7 @@
 > 3. 需要左右操作的游戏一律横屏（三键朝下：左=左、中=主要动作、右=右）。
 > 4. 每款按 G0 概念 → G1 浏览器可玩原型 → G2 动作 → G3 界面 → G4 固件过门，每道门都要用户明确认可；宿主测试通过不等于好玩。
 > 5. 2026-10-26 13:46 用户补充：**现有素材能做好的就不交 Grok 做视频**。NIGHT V2 因此跳过 G2，已用共用旅行帧接入固件（`game-art/adventure/NIGHT_DESIGN.md`，待真机）；NIGHT 游戏中任何上键手势不回地图，暂停页双击上键回地图。
+> 6. 2026-10-26 14:27 SKI V2「雪崩速降」同样用现有素材接入（`game-art/adventure/SKI_DESIGN.md`，待真机）；NIGHT/SKI 共用“V2 横屏手势”。
 
 这是《NABO 的冒险之旅》独立离线游戏合集，不是小智固件。先读 `docs/HANDOFF.md` 和 `game-art/adventure/DESIGN.md`，按 nabo-passport-game skill 的流程工作。
 
