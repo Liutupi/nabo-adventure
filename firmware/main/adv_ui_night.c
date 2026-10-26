@@ -1,5 +1,5 @@
 // NIGHT V2「萤火虫之夜」screen, 320x240 clockwise landscape. Layout follows
-// game-art/adventure/prototype/adv_night_v2_draw.js; NABO uses the shared travel frames.
+// game-art/adventure/prototype/adv_night_draw.js; NABO uses the shared travel frames.
 #include <stdio.h>
 #include <stdlib.h>
 #include "adv_night.h"
@@ -21,17 +21,45 @@ static dark_t s_dark;
 static int isqrt_(int v) { int r = 0, b = 1 << 14; while (b > v) b >>= 2; while (b) { if (v >= r + b) { v -= r + b; r = (r >> 1) + b; } else r >>= 1; b >>= 2; } return r; }
 static int span(int r, int dy2) { return dy2 < r * r ? isqrt_(r * r - dy2) : -1; }
 static const uint8_t RING_PCT[6] = {50, 64, 77, 89, 100, 116}, RING_K[7] = {16, 13, 10, 8, 6, 4, 2};   // k/16 brightness
+static void dark_span(uint16_t *row,int x0,int x1,int first,int last,unsigned k)
+{
+    if(first<x0)first=x0;
+    if(last>x1)last=x1;
+    if(first>=last)return;
+    uint16_t *p=row+first-x0,*end=row+last-x0;
+    // Power-of-two factors can shift all channels at once after masking the
+    // cross-channel bits. Other factors retain the original exact rounding.
+    if(k==2)while(p<end){*p=(uint16_t)((*p>>3)&0x18e3u);p++;}
+    else if(k==4)while(p<end){*p=(uint16_t)((*p>>2)&0x39e7u);p++;}
+    else if(k==8)while(p<end){*p=(uint16_t)((*p>>1)&0x7befu);p++;}
+    else while(p<end){
+        unsigned c=*p;
+        *p++=(uint16_t)((((c>>11)*k>>4)<<11)|((((c>>5)&63)*k>>4)<<5)|((c&31)*k>>4));
+    }
+}
 static void dark_row(const void *ctx, int y, int x0, int x1, uint16_t *row)
 {
     const dark_t *d = ctx;
     int dy2 = (y - d->jy) * (y - d->jy), w[6];
     for (int i = 0; i < 6; i++) w[i] = span(d->r * RING_PCT[i] / 100, dy2);
-    for (int x = x0; x < x1; x++) {
-        int dx = abs(x - d->jx), level = 0;
-        while (level < 6 && dx > w[level]) level++;
-        if (!level) continue;
-        unsigned c = row[x - x0], k = RING_K[level];
-        row[x - x0] = (uint16_t)((((c >> 11) * k >> 4) << 11) | ((((c >> 5) & 63) * k >> 4) << 5) | ((c & 31) * k >> 4));
+    if(w[5]<0){dark_span(row,x0,x1,x0,x1,2);return;}
+    int left=x0;
+    for(int level=6;level>=1;level--){
+        int end=d->jx-w[level-1];
+        if(end>x1)end=x1;
+        dark_span(row,x0,x1,left,end,RING_K[level]);
+        if(end>left)left=end;
+    }
+    // Assign the centre pixel to the left half when the inner rings are absent.
+    // This avoids applying darkness twice on tangent rows (width == -1).
+    int right=d->jx+w[0]+1;
+    if(right<d->jx+1)right=d->jx+1;
+    if(right<x0)right=x0;
+    for(int level=1;level<=6;level++){
+        int end=level<6?d->jx+w[level]+1:x1;
+        if(end>x1)end=x1;
+        dark_span(row,x0,x1,right,end,RING_K[level]);
+        if(end>right)right=end;
     }
 }
 

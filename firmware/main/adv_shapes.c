@@ -62,6 +62,12 @@ void ag_paint_rect(const ag_op_t *op, int y, int x0, int x1, uint16_t *row)
     int w = op->u.rect.w, h = op->u.rect.h, r = op->u.rect.r * 16, lw = op->u.rect.line_w * 16;
     int cx = op->u.rect.x * 16 + w * 8, cy = op->u.rect.y * 16 + h * 8, py = y * 16 + 8;
     int a = imax(x0, op->x0), b = imin(x1, op->x1);
+    // Integer, zero-radius rectangles have full coverage at every in-bounds
+    // pixel. A solid ground strip needs neither distance nor alpha arithmetic.
+    if(!r&&!lw&&op->u.rect.alpha==255&&y>=op->u.rect.y&&y<op->u.rect.y+h){
+        for(int x=a;x<b;x++)row[x-x0]=op->u.rect.fill;
+        return;
+    }
     for (int x = a; x < b; x++) {
         int sd = rbox_sd(x * 16 + 8, py, cx, cy, w * 8, h * 8, r);
         int cov = cov_from_sd(sd);
@@ -92,8 +98,20 @@ void ag_paint_tri(const ag_op_t *op, int y, int x0, int x1, uint16_t *row)
     if (k < 0 || k >= s) return;
     int half = (op->u.tri.up ? k : s - 1 - k) * 16 * 2 / 3 + 8;   // Q4, widest at the base
     int cx = op->u.tri.cx * 16 + 8;
-    for (int x = imax(x0, op->x0); x < imin(x1, op->x1); x++) {
+    int extent=(half+7)/16,solid=(half-8)/16;
+    int first=imax(imax(x0,op->x0),op->u.tri.cx-extent);
+    int last=imin(imin(x1,op->x1),op->u.tri.cx+extent+1);
+    int middle=imin(last,imax(first,op->u.tri.cx-solid));
+    int end=imax(middle,imin(last,op->u.tri.cx+solid+1));
+    // At most one partially covered pixel on each side; the interior is
+    // exactly the source RGB565 color. Preserve the original edge coverage.
+    for(int x=first;x<middle;x++){
         int cov = clampi(half - iabs_(x * 16 + 8 - cx) + 8, 0, 16) * 16;
-        if (cov) row[x - x0] = nt_blend565(row[x - x0], op->u.tri.color, cov);
+        row[x-x0]=nt_blend565(row[x-x0],op->u.tri.color,cov);
+    }
+    for(int x=middle;x<end;x++)row[x-x0]=op->u.tri.color;
+    for(int x=end;x<last;x++){
+        int cov=clampi(half-iabs_(x*16+8-cx)+8,0,16)*16;
+        row[x-x0]=nt_blend565(row[x-x0],op->u.tri.color,cov);
     }
 }

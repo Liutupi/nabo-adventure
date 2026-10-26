@@ -67,6 +67,8 @@ def evidence(path, expected, resources, art=ART, ui=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--candidate-sha256', help='Optional tested common-firmware association; never inferred from a fresh build')
+    parser.add_argument('--shared-art-game',choices=INTEGRATED_GAMES,action='append',default=[],
+                        help='Explicit formal game using common travel art rather than its legacy game group')
     args = parser.parse_args()
     if args.candidate_sha256 and not re.fullmatch('[0-9a-f]{64}', args.candidate_sha256):
         parser.error('--candidate-sha256 must contain 64 lowercase hexadecimal digits')
@@ -78,6 +80,7 @@ def main():
     if not base<=common_groups or not common_groups<=base|set(INTEGRATED_GAMES):
         raise ValueError('Production package declares unsupported gameplay integration')
     integrated=sorted(common_groups-base)
+    if set(args.shared_art_game)&set(integrated):raise ValueError('Game cannot declare both dedicated and shared art')
     common_dependencies = {name: sha for name, sha in manifests.items() if name not in
                            {f'{game}-manifest.json' for game in GAME_GROUPS if game not in integrated}}
     common = evidence(ROOT / 'firmware/main/generated/adv_assets_generated.json',
@@ -109,7 +112,8 @@ def main():
         'device': {'common_candidate_sha256': args.candidate_sha256,
                    'new_game_art_embedded_in_this_candidate': bool(integrated),
                    'integrated_game_groups': integrated,
-                   'reason': 'Only explicitly integrated games are embedded; physical factory is 2,031,616 bytes.'},
+                   'shared_art_game_groups':sorted(set(args.shared_art_game)),
+                   'reason': 'Dedicated groups and explicit common-art games are listed separately; physical factory is 2,031,616 bytes.'},
         'acceptance': 'Source integrity and actual C decoder checks; visual/device checks are recorded separately in ART_PROGRESS and VALIDATION.',
     }
     target = ART / 'catalog.json'
