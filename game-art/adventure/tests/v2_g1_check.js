@@ -1,9 +1,10 @@
-// G1 sanity for the SKY V2 / CLIMB V2 rule files: integer-only state, deterministic replay, no slot overflow.
+// G1 sanity for the SKY / CLIMB / POST V2 rule files: integer-only state, deterministic replay, no slot overflow.
 // node game-art/adventure/tests/v2_g1_check.js   (not a golden; goldens come with the C port after user approval)
 'use strict';
 const games = [
   ['sky_v2', require('../prototype/adv_sky_v2.js'), require('../../../tests/sky_v2_policy.js')],
   ['climb_v2', require('../prototype/adv_climb_v2.js'), require('../../../tests/climb_v2_policy.js')],
+  ['post_v2', require('../prototype/adv_post_v2.js'), require('../../../tests/post_v2_policy.js')],
 ];
 let fail = 0;
 const hash = a => { let h = 2166136261; for (const v of a) { h ^= v & 0xffff; h = Math.imul(h, 16777619); h ^= v >>> 16; h = Math.imul(h, 16777619); } return h >>> 0; };

@@ -83,7 +83,7 @@ class SkiModel(unittest.TestCase):
         self.assertEqual((g.w[F['res']], g.w[F['cue']]), (0, 8))
 
     def test_mutations_are_caught(self):
-        for mutation in [('adv_ski.c', 'GATE_PUSH = 26', 'GATE_PUSH = 25'),
+        for mutation in [('adv_ski.c', 'GATE_PUSH = 26', 'GATE_PUSH = 25'), ('adv_ski.c', 'GATE_STEP = 44', 'GATE_STEP = 43'),
                          ('adv_ski.c', 'int target = V0 + g->flow - abs(g->vx) / 3;', 'int target = V0 + g->flow - abs(g->vx) / 4;'),
                          ('adv_ski.c', 'g->vx -= g->vx / 6;', 'g->vx -= g->vx / 5;'),
                          ('adv_ski.c', 'if (g->flow > 0 && (g->tick & 1)) g->flow--;', 'if (g->flow > 0) g->flow--;'),

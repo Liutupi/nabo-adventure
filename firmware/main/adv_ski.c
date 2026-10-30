@@ -7,7 +7,7 @@
 
 enum {
     AHEAD = 200, CULL = 110, STEER = 26, VX_MAX = 600, V0 = 470, FLOW_GATE = 85, FLOW_SPIN = 70, ACCEL = 8, DRAG_DIV = 40,
-    GATE_HALF = 21, GATE_BOOST = 110, GATE_PUSH = 26, MISS_PULL = 20, TREE_R = 11, PINE_R = 9, MOGUL_R = 11, KICK_HALF = 18,
+    GATE_HALF = 21, GATE_STEP = 44, GATE_BOOST = 110, GATE_PUSH = 26, MISS_PULL = 20, TREE_R = 11, PINE_R = 9, MOGUL_R = 11, KICK_HALF = 18,
     DRIFT_HALF = 14, HOP = 26, KICK_AIR = 72, SPIN_PTS = 50, SPIN_PUSH = 18, STUMBLE = 20, INVULN = 50,
     AVAL0 = 340, AVAL_RAMP = 460, AVAL_DIV = 12, AVAL_START = 200, CALM = 900, EVERY = 1500, SECTION_LEN = 600,
 };
@@ -15,6 +15,7 @@ static int rnd(adv_ski_t *g, int n) { return (int)(adv_rand(&g->rng) % (uint32_t
 static int px(int32_t q) { return q >> 8; }
 static int imin(int a, int b) { return a < b ? a : b; }
 static int imax(int a, int b) { return a > b ? a : b; }
+static int iabs(int a) { return a < 0 ? -a : a; }
 int adv_ski_mult(const adv_ski_t *g) { return 1 + imin(4, g->combo / 4); }
 static int aval_speed(const adv_ski_t *g) { return AVAL0 + (int)(g->tick / AVAL_DIV < AVAL_RAMP ? g->tick / AVAL_DIV : AVAL_RAMP); }
 
@@ -49,6 +50,11 @@ static void spawn_gate(adv_ski_t *g, int y)
     bool slalom = g->section == SKI_SEC_SLALOM;
     int swing = slalom ? 110 : 80, lo = imax(48, g->last_gate_x - swing), hi = imin(272, g->last_gate_x + swing);
     int x = lo + rnd(g, hi - lo + 1);
+    // gates never line up: at least GATE_STEP to the side of the last one (adv_ski.js, 2026-10-30)
+    if (iabs(x - g->last_gate_x) < GATE_STEP) {
+        x = g->last_gate_x + (x >= g->last_gate_x ? GATE_STEP : -GATE_STEP);
+        if (x > 272 || x < 48) x = g->last_gate_x + (x > 272 ? -GATE_STEP : GATE_STEP);
+    }
     adv_ski_obj_t *o = slot(g);
     if (o) *o = (adv_ski_obj_t){g->gates & 1 ? SKI_GATE_BLUE : SKI_GATE_RED, x, y, 0};
     g->last_gate_x = x; g->gates++;

@@ -32,7 +32,9 @@ int adv_night_fly_y(const adv_night_fly_t *f, uint32_t tick)
     return f->base_y + f->amp * adv_night_isin((int)(phase >> 8)) / 4096;
 }
 static int speed_of(const adv_night_t *g, int gait) { return SPEED[gait] * (30000 + imin(15000, px(g->x))) / 30000; }
-static int decay(const adv_night_t *g) { return DECAY * (9000 + (int)(g->tick < 1000000u ? g->tick : 1000000u)) / 9000; }
+// 2026-10-30: ramp 9000 -> 5400 so a strong player's run tops out near three and a half minutes (adv_night.js DECAY_RAMP)
+enum { DECAY_RAMP = 5400 };
+static int decay(const adv_night_t *g) { return DECAY * (DECAY_RAMP + (int)(g->tick < 1000000u ? g->tick : 1000000u)) / DECAY_RAMP; }
 int adv_night_radius(const adv_night_t *g) { return g->burst > 0 ? 220 : 34 + g->light * 15 / 100000; }
 int adv_night_mult(const adv_night_t *g) { return 1 + imin(4, g->combo / 6); }
 int adv_night_meter_full(const adv_night_t *g) { return METER + METER_STEP * g->bursts; }

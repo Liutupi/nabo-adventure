@@ -1,4 +1,4 @@
-> **2026-10-30 最新：先读 `docs/HANDOFF.md` 最上方“★ 2026-10-30 Claude 云端交接”。** SKY V2「风层邮差」与 CLIMB V2「双线攀岩」G0+G1 已交（`game-art/adventure/SKY_V2_CONCEPT.md`、`CLIMB_V2_CONCEPT.md`），等用户试玩；认可前不改 C。全项目体验优化清单见 `docs/UX_REVIEW_2026-10-30.md`。
+> **2026-10-30 最新：先读 `docs/HANDOFF.md` 最上方“★★ 第二轮”。** POST V2「邮政快车」G1 已交（`game-art/adventure/POST_V2_CONCEPT.md`）；六款横屏共用标题/暂停/结算提案在 `prototype/adv_v2_ui.js`；NIGHT 光衰减坡度与 SKI 旗门横移已同步进 C（287 项宿主通过，未上机）。以下为第一轮： SKY V2「风层邮差」与 CLIMB V2「双线攀岩」G0+G1 已交（`game-art/adventure/SKY_V2_CONCEPT.md`、`CLIMB_V2_CONCEPT.md`），等用户试玩；认可前不改 C。全项目体验优化清单见 `docs/UX_REVIEW_2026-10-30.md`。
 
 # 维护约定
 

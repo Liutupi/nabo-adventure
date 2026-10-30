@@ -127,15 +127,11 @@
     }
   }
 
+  const UIT = { name: '雪崩速降', pitch: '过旗门、做转体越滑越快，别让雪崩追上', keys: [['◀', '左转'], ['●', '跳/转体'], ['▶', '右转']], th: [300, 1000, 2500], ink: '20,40,70', go: '冲！', tip: '雪崩从后面追来了' };
   function title(c, vt, best) {
     const fake = S.start(1); fake.y = vt * 600; fake.x = (160 + Math.round(Math.sin(vt * .03) * 60)) << 8; fake.vx = Math.round(Math.cos(vt * .03) * 400);
     slope(c, fake.y >> 8, vt); nabo(c, fake, 'TITLE', vt);
-    c.fillStyle = 'rgba(20,40,70,.55)'; c.fillRect(0, 110, W, 130);
-    text(c, '雪崩速降', W / 2, 132, 26, '#ffffff', 'center');
-    text(c, '◀ 左转   ● 跳 / 空中转体   ▶ 右转', W / 2, 162, 11, '#d6e8ff', 'center', 700, null);
-    text(c, '过旗门、做转体越滑越快，别让雪崩追上', W / 2, 182, 11, '#d6e8ff', 'center', 700, null);
-    if (best) text(c, '最佳 ' + best, W - 10, 18, 11, '#ffd34a', 'right');
-    if (vt % 60 < 42) text(c, '按 ● 开始', W / 2, 214, 13, '#ffffff', 'center');
+    root.AdvV2UI.title(c, { ...UIT, best }, vt);
   }
 
   function draw(c, g, phase, vt, phaseT, best, info = {}) {
@@ -147,21 +143,11 @@
     objects(c, behind, 1); nabo(c, g, phase, vt); objects(c, front, 1);
     if (g.section === S.SEC.FOG) { const gr = c.createLinearGradient(0, NY + 30, 0, H); gr.addColorStop(0, 'rgba(240,245,250,0)'); gr.addColorStop(.35, 'rgba(240,245,250,.92)'); gr.addColorStop(1, 'rgba(240,245,250,1)'); c.fillStyle = gr; c.fillRect(0, NY + 30, W, H); }
     avalanche(c, g, vt); fx(c, g); hud(c, g, vt);
-    if (phase === 'READY') { const n = Math.ceil(info.countdown / 60); text(c, n > 0 ? String(n) : '冲！', W / 2, 140, 34, '#ffffff', 'center'); text(c, '雪崩从后面追来了', W / 2, 172, 11, '#ffffff', 'center', 700); }
-    if (phase === 'PAUSE') {
-      c.fillStyle = 'rgba(20,40,70,.75)'; c.fillRect(0, 0, W, H); text(c, '暂停', W / 2, 70, 24, '#ffffff', 'center');
-      [['●', '继续'], ['◀', '重来'], ['▶▶', '双击回地图']].forEach(([k, s], i) => text(c, `${k}  ${s}`, W / 2, 112 + i * 22, 12, '#d6e8ff', 'center', 700, null));
-    }
-    if (phase === 'RESULT') {
-      const k = Math.min(1, phaseT / 30); c.fillStyle = `rgba(20,40,70,${.75 * k})`; c.fillRect(0, 0, W, H);
-      if (phaseT > 20) {
-        text(c, '被雪崩追上了', W / 2, 36, 12, '#c8dcf5', 'center', 700, null);
-        text(c, String(g.score), W / 2, 80, 40, '#ffffff', 'center');
-        if (g.score >= best && g.score > 0) text(c, '新纪录!', W / 2 + 76, 62, 12, '#ffd34a', 'center');
-        text(c, `${g.meters} 米 · 旗门 ${g.passed}/${g.passed + g.misses} · 转体 ${g.tricks} · 最长 ${g.best} 连`, W / 2, 120, 10, '#d6e8ff', 'center', 700, null);
-        if (phaseT > 50 && vt % 60 < 42) text(c, '● 再来一局', W / 2, 200, 13, '#ffffff', 'center');
-      }
-    }
+    const U = root.AdvV2UI;
+    if (phase === 'READY') U.ready(c, UIT, info.countdown);
+    if (phase === 'PAUSE') U.pause(c, UIT);
+    if (phase === 'RESULT') U.result(c, UIT, { cause: '被雪崩追上了', score: g.score, best: info.bestBefore ?? best, th: UIT.th,
+      lines: [`${g.meters} 米 · 旗门 ${g.passed}/${g.passed + g.misses} · 转体 ${g.tricks} · 最长 ${g.best} 连`, `撞树 ${g.crashes} · 好险 ${g.nearMiss}`] }, phaseT, vt);
   }
   root.AdvSkiDraw = { load, draw };
 })(window);

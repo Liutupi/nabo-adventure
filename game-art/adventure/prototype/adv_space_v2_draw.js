@@ -245,15 +245,11 @@
     }
   }
 
+  const UIT = { name: '火箭登月', pitch: '点火、分离、奔月、着陆，关键时刻按 ●', keys: [['◀', '左移'], ['●', '加速/时机'], ['▶', '右移']], th: [1500, 3500, 6000], ink: '6,10,30', go: '点火！', tip: '准备发射' };
   function title(c, vt, best) {
     backdrop(c, 0, vt);
     const g = S.start(1); rocket(c, g, vt, false);
-    c.fillStyle = 'rgba(6,10,30,.6)'; c.fillRect(0, 0, W, 92);
-    text(c, '火箭登月', W / 2, 26, 26, '#ffffff', 'center');
-    text(c, '◀ 左移   ● 加速 / 关键时刻按   ▶ 右移', W / 2, 56, 11, '#c8d2f0', 'center', 700, null);
-    text(c, '点火 → 升空 → 分离 → 太空 → 奔月 → 登月', W / 2, 76, 11, '#ffd34a', 'center', 700, null);
-    if (best) text(c, '最佳 ' + best, W - 8, 104, 11, '#ffd34a', 'right');
-    if (vt % 60 < 42) text(c, '按 ● 开始倒计时', W / 2, 108, 13, '#ffffff', 'center');
+    root.AdvV2UI.title(c, { ...UIT, best }, vt);
   }
 
   function draw(c, g, phase, vt, phaseT, best, info = {}) {
@@ -267,21 +263,11 @@
       if (g.sep === 2 && g.fx.some(e => e.kind === S.FX.SEP)) { const e = g.fx.find(e => e.kind === S.FX.SEP); put(c, 'space-v2/props/booster', (g.x >> 8) - e.t * .6, RY + 20 + e.t * 2.4); }
     }
     timing(c, g, vt); fx(c, g); cockpit(c, g, vt); hud(c, g, vt);
-    if (phase === 'READY') text(c, '准备发射', W / 2, 130, 20, '#ffffff', 'center');
-    if (phase === 'PAUSE') {
-      c.fillStyle = 'rgba(6,10,30,.78)'; c.fillRect(0, 0, W, H); text(c, '暂停', W / 2, 70, 24, '#ffffff', 'center');
-      [['●', '继续'], ['◀', '重来'], ['▶▶', '双击回地图']].forEach(([k, s], i) => text(c, `${k}  ${s}`, W / 2, 112 + i * 22, 12, '#c8d2f0', 'center', 700, null));
-    }
-    if (phase === 'RESULT') {
-      const k = Math.min(1, phaseT / 30); c.fillStyle = `rgba(6,10,30,${.72 * k})`; c.fillRect(0, 0, W, H);
-      if (phaseT > 20) {
-        text(c, g.win ? '登月成功！' : (g.fuel <= 0 ? '燃料耗尽' : '火箭受损，任务中止'), W / 2, 30, 14, g.win ? '#ffd34a' : '#c8d2f0', 'center', 900, null);
-        text(c, String(g.score), W / 2, 74, 40, '#ffffff', 'center');
-        if (g.score >= best && g.score > 0) text(c, '新纪录!', W / 2 + 82, 56, 12, '#ffd34a', 'center');
-        text(c, `${g.win ? '384,400' : kmAt(g.alt >> 8).toLocaleString()} km · 星星 ${g.stars} · 擦边 ${g.near} · 完美 ${g.perfects}`, W / 2, 112, 10, '#c8d2f0', 'center', 700, null);
-        if (phaseT > 50 && vt % 60 < 42) text(c, '● 再来一次', W / 2, 200, 13, '#ffffff', 'center');
-      }
-    }
+    const U = root.AdvV2UI;
+    if (phase === 'READY') U.ready(c, { ...UIT, go: '准备发射', tip: '' }, 0);
+    if (phase === 'PAUSE') U.pause(c, UIT);
+    if (phase === 'RESULT') U.result(c, UIT, { cause: g.win ? '登月成功！' : (g.fuel <= 0 ? '燃料耗尽' : '火箭受损，任务中止'), score: g.score, best: info.bestBefore ?? best, th: UIT.th,
+      lines: [`${g.win ? '384,400' : kmAt(g.alt >> 8).toLocaleString()} km · 星星 ${g.stars} · 擦边 ${g.near} · 完美 ${g.perfects}`], retry: '● 再来一次' }, phaseT, vt);
   }
   root.AdvSpaceV2Draw = { load, draw };
 })(window);

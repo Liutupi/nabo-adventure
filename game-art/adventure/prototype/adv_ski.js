@@ -8,7 +8,7 @@
   const K = {
     W: 320, H: 240, NABO_Y: 92, LEFT: 18, RIGHT: 302, OBJS: 28, AHEAD: 200, CULL: 110,
     STEER: 26, VX_MAX: 600, V0: 470, FLOW_MAX: 520, FLOW_GATE: 85, FLOW_SPIN: 70, ACCEL: 8, DRAG_DIV: 40,
-    GATE_HALF: 21, GATE_BOOST: 110, GATE_PUSH: 26, MISS_PULL: 20,
+    GATE_HALF: 21, GATE_STEP: 44, GATE_BOOST: 110, GATE_PUSH: 26, MISS_PULL: 20,
     TREE_R: 11, PINE_R: 9, MOGUL_R: 11, KICK_HALF: 18, DRIFT_HALF: 14, ICE_HALF: 34, ICE_LEN: 60,
     HOP: 26, KICK_AIR: 72, SPIN: 22, SPIN_PTS: 50, SPIN_PUSH: 18,
     CRASH: 36, STUMBLE: 20, INVULN: 50,
@@ -39,7 +39,10 @@
 
   function spawnGate(g, y) {
     const slalom = g.section === SEC.SLALOM, swing = slalom ? 110 : 80;
-    const lo = Math.max(48, g.lastGateX - swing), hi = Math.min(272, g.lastGateX + swing), x = lo + rnd(g, hi - lo + 1);
+    const lo = Math.max(48, g.lastGateX - swing), hi = Math.min(272, g.lastGateX + swing);
+    let x = lo + rnd(g, hi - lo + 1);
+    // gates never line up: each one sits at least GATE_STEP to the side of the last, so going straight misses them
+    if (Math.abs(x - g.lastGateX) < K.GATE_STEP) { x = g.lastGateX + (x >= g.lastGateX ? K.GATE_STEP : -K.GATE_STEP); if (x > 272 || x < 48) x = g.lastGateX + (x > 272 ? -K.GATE_STEP : K.GATE_STEP); }
     const o = slot(g); if (o) Object.assign(o, { type: g.gates & 1 ? T.GATE_BLUE : T.GATE_RED, x, y, done: 0 });
     g.lastGateX = x; g.gates++;
     g.nextGate = y + (slalom ? 110 : 170) + rnd(g, slalom ? 50 : 90);

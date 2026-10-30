@@ -188,15 +188,11 @@
   function keyRow(c, y, items) {
     items.forEach(([k, s], i) => { const x = 60 + i * 100; c.fillStyle = 'rgba(255,255,255,.16)'; c.beginPath(); c.roundRect(x - 44, y - 11, 88, 22, 8); c.fill(); text(c, `${k} ${s}`, x, y, 11, '#ffffff', 'center', 800, null); });
   }
+  const UIT = { name: '风层邮差', pitch: '乘对风层，把信投进邮筒', keys: [['◀', '放气↓'], ['●', '投信'], ['▶', '加热↑']], th: [300, 1000, 2500], ink: '28,30,60', go: '起飞！', tip: '右边箭头越长，那一层风越快' };
   function title(c, vt, best) {
     const fake = S.start(3); fake.dist = vt * 420; fake.y = (150 + Math.round(Math.sin(vt * .03) * 20)) << 8; fake.heating = Math.sin(vt * .03) < 0 ? 1 : 0;
     backdrop(c, fake, vt); ground(c, fake); balloon(c, fake, 'TITLE', vt, { cheer: 0, phaseT: 0 });
-    c.fillStyle = 'rgba(28,30,60,.55)'; c.fillRect(0, 150, W, 90);
-    text(c, '风层邮差', 214, 60, 26, '#ffffff', 'center');
-    text(c, '乘对风层，把信投进邮筒', 214, 90, 11, '#fff0d0', 'center', 700);
-    keyRow(c, 176, [['◀', '放气↓'], ['●', '投信'], ['▶', '加热↑']]);
-    if (best) text(c, '最佳 ' + best, W - 8, 12, 11, '#ffd34a', 'right');
-    if (vt % 60 < 42) text(c, '按 ● 开始', W / 2, 214, 13, '#ffffff', 'center');
+    root.AdvV2UI.title(c, { ...UIT, best }, vt);
   }
 
   const st = { cheer: 0, lastDel: 0, shake: 0, lastHits: 0, phaseT: 0 };
@@ -212,23 +208,11 @@
     backdrop(c, g, vt); wind(c, g, vt); ground(c, g); objects(c, g, vt); balloon(c, g, phase, vt, st);
     c.restore();
     fx(c, g); hud(c, g, vt);
-    if (phase === 'READY') { const n = Math.ceil(info.countdown / 60); text(c, n > 0 ? String(n) : '起飞！', W / 2, 120, 32, '#ffffff', 'center'); text(c, '右边箭头越长，那一层风越快', W / 2, 150, 11, '#ffffff', 'center', 700); }
-    if (phase === 'PAUSE') {
-      c.fillStyle = 'rgba(28,30,60,.75)'; c.fillRect(0, 0, W, H); text(c, '暂停', W / 2, 70, 24, '#ffffff', 'center');
-      [['●', '继续'], ['◀', '重来'], ['▶▶', '双击回地图']].forEach(([k, s], i) => text(c, `${k}  ${s}`, W / 2, 112 + i * 22, 12, '#e6e0ff', 'center', 700, null));
-    }
-    if (phase === 'RESULT') {
-      const k = Math.min(1, phaseT / 30); c.fillStyle = `rgba(28,30,60,${.72 * k})`; c.fillRect(0, 0, W, H);
-      if (phaseT > 20) {
-        const shown = Math.min(g.score, Math.round(g.score * Math.min(1, (phaseT - 20) / 40)));
-        text(c, '燃料用完，平安降落', W / 2, 34, 12, '#e6e0ff', 'center', 700, null);
-        text(c, String(shown), W / 2, 76, 40, '#ffffff', 'center');
-        if (g.score >= best && g.score > 0 && phaseT > 60) text(c, '新纪录!', W / 2 + 80, 58, 12, '#ffd34a', 'center');
-        text(c, `送达 ${g.delivered} 封 · 正中 ${g.bulls} · 金邮筒 ${g.golds} · 最长 ${g.best} 连`, W / 2, 116, 10, '#e6e0ff', 'center', 700, null);
-        text(c, `${g.meters} 米 · 漏送 ${g.skipped} 家 · 撞到 ${g.hits} 次`, W / 2, 134, 10, '#c9c2ea', 'center', 700, null);
-        if (phaseT > 60 && vt % 60 < 42) text(c, '● 再来一局', W / 2, 206, 13, '#ffffff', 'center');
-      }
-    }
+    const U = root.AdvV2UI;
+    if (phase === 'READY') U.ready(c, UIT, info.countdown);
+    if (phase === 'PAUSE') U.pause(c, UIT);
+    if (phase === 'RESULT') U.result(c, UIT, { cause: '燃料用完，平安降落', score: g.score, best: info.bestBefore ?? best, th: UIT.th,
+      lines: [`送达 ${g.delivered} 封 · 正中 ${g.bulls} · 金邮筒 ${g.golds} · 最长 ${g.best} 连`, `${g.meters} 米 · 漏送 ${g.skipped} 家 · 撞到 ${g.hits} 次`] }, phaseT, vt);
   }
   root.AdvSkyV2Draw = { load, draw };
 })(window);

@@ -160,19 +160,12 @@
     gr.addColorStop(0, 'rgba(10,14,34,0)'); gr.addColorStop(1, 'rgba(10,14,34,.9)'); c.fillStyle = gr; c.fillRect(0, 0, W, H);
   }
 
-  function keyRow(c, y, items) {
-    items.forEach(([k, s], i) => { const x = 60 + i * 100; c.fillStyle = 'rgba(255,255,255,.16)'; c.beginPath(); c.roundRect(x - 44, y - 11, 88, 22, 8); c.fill(); text(c, `${k} ${s}`, x, y, 11, '#ffffff', 'center', 800, null); });
-  }
+  const UIT = { name: '双线攀岩', pitch: '左右手跟着抓点交替，断路和落石就换线', keys: [['◀', '左手'], ['●', '换线'], ['▶', '右手']], th: [80, 250, 600], ink: '30,34,52', go: '爬！', tip: '跟着黄圈里的箭头按左右' };
   function title(c, vt, best) {
     const fake = S.start(5); fake.row = (vt >> 4); fake.tween = K.TWEEN - ((vt >> 2) & 3); while (fake.genRow <= fake.row + K.AHEAD) { fake.genRow++; }
     for (let r = 0; r < K.ROWS; r++) Object.assign(fake.rows[r], { h0: 1, h1: r % 5 ? 1 : 2, i0: 0, i1: 0 });
     backdrop(c, fake, vt); wall(c, fake); holds(c, fake, vt); nabo(c, fake, 'TITLE', vt);
-    c.fillStyle = 'rgba(30,34,52,.6)'; c.fillRect(0, 150, W, 90);
-    text(c, '双线攀岩', W / 2, 52, 26, '#ffffff', 'center');
-    text(c, '左右手跟着抓点交替，断路和落石就换线', W / 2, 82, 11, '#eef4ff', 'center', 700);
-    keyRow(c, 176, [['◀', '左手'], ['●', '换线'], ['▶', '右手']]);
-    if (best) text(c, '最佳 ' + best, W - 8, 12, 11, '#ffd34a', 'right');
-    if (vt % 60 < 42) text(c, '按 ● 开始', W / 2, 214, 13, '#ffffff', 'center');
+    root.AdvV2UI.title(c, { ...UIT, best }, vt);
   }
 
   let shake = 0, lastSlip = 0;
@@ -184,23 +177,11 @@
     backdrop(c, g, vt); wall(c, g); holds(c, g, vt); rocks(c, g, vt); nabo(c, g, phase, vt); night(c, g);
     c.restore();
     fx(c, g); hud(c, g, vt);
-    if (phase === 'READY') { const n = Math.ceil(info.countdown / 60); text(c, n > 0 ? String(n) : '爬！', W / 2, 110, 32, '#ffffff', 'center'); text(c, '跟着黄圈里的箭头按左右', W / 2, 140, 11, '#ffffff', 'center', 700); }
-    if (phase === 'PAUSE') {
-      c.fillStyle = 'rgba(30,34,52,.78)'; c.fillRect(0, 0, W, H); text(c, '暂停', W / 2, 70, 24, '#ffffff', 'center');
-      [['●', '继续'], ['◀', '重来'], ['▶▶', '双击回地图']].forEach(([k, s], i) => text(c, `${k}  ${s}`, W / 2, 112 + i * 22, 12, '#e0e8ff', 'center', 700, null));
-    }
-    if (phase === 'RESULT') {
-      const k = Math.min(1, phaseT / 30); c.fillStyle = `rgba(30,34,52,${.74 * k})`; c.fillRect(0, 0, W, H);
-      if (phaseT > 20) {
-        const shown = Math.min(g.score, Math.round(g.score * Math.min(1, (phaseT - 20) / 40)));
-        text(c, '握力用完，安全绳接住了你', W / 2, 32, 12, '#e0e8ff', 'center', 700, null);
-        text(c, String(shown), W / 2, 72, 40, '#ffffff', 'center');
-        if (g.score >= best && g.score > 0 && phaseT > 60) text(c, '新纪录!', W / 2 + 80, 54, 12, '#ffd34a', 'center');
-        text(c, `${g.meters} 米 · 最长节奏 ${g.best} · 旗子 ${g.flags} · 水壶 ${g.canteens}`, W / 2, 112, 10, '#e0e8ff', 'center', 700, null);
-        text(c, `打滑 ${g.slips} · 落石 ${g.rockHits} · 好险 ${g.nearMiss}`, W / 2, 130, 10, '#c4cde8', 'center', 700, null);
-        if (phaseT > 60 && vt % 60 < 42) text(c, '● 再来一局', W / 2, 228, 13, '#ffffff', 'center');
-      }
-    }
+    const U = root.AdvV2UI;
+    if (phase === 'READY') U.ready(c, UIT, info.countdown);
+    if (phase === 'PAUSE') U.pause(c, UIT);
+    if (phase === 'RESULT') U.result(c, UIT, { cause: '握力用完，安全绳接住了你', score: g.score, best: info.bestBefore ?? best, th: UIT.th,
+      lines: [`${g.meters} 米 · 最长节奏 ${g.best} · 旗子 ${g.flags} · 水壶 ${g.canteens}`, `打滑 ${g.slips} · 落石 ${g.rockHits} · 好险 ${g.nearMiss}`] }, phaseT, vt);
   }
   root.AdvClimbV2Draw = { load, draw };
 })(window);

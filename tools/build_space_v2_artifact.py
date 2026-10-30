@@ -15,7 +15,7 @@ clips = [c for c in space['animations'] if c['skin'] == 'space_a']
 slim_space = {'animations': [{k: c[k] for k in ('skin', 'name', 'runtime_frames', 'runtime_anchor')} for c in clips],
               'assets': [{k: a[k] for k in ('id', 'path', 'anchor') if k in a} for a in space['assets']]}
 paths = {p for c in clips for p in c['runtime_frames']} | {a['path'] for a in space['assets']} | {a['path'] for a in painted['assets']}
-files = {p: 'data:image/png;base64,' + base64.b64encode((ADV / 'art' / p).read_bytes()).decode() for p in sorted(paths)}
+files = {p: 'data:image/png;base64,' + base64.b64encode((ADV / 'art' / p.replace('\\', '/')).read_bytes()).decode() for p in sorted(paths)}
 sprites = 'window.SPACE_V2_SPRITES=' + json.dumps({'painted': painted, 'space': slim_space, 'files': files}, separators=(',', ':')) + ';'
 for tag in (r'<!doctype html>\s*', r'<html[^>]*>\s*', r'</?head>\s*', r'</?body>\s*', r'</html>\s*', r'<meta charset[^>]*>\s*', r'<meta name="viewport"[^>]*>\s*'):
     html = re.sub(tag, '', html, flags=re.I)
@@ -23,5 +23,6 @@ html = html.replace('<title>', '<meta name="claude:viewport-fit-sides" content="
 inline = lambda name: '<script>\n' + (ADV / 'prototype' / name).read_text('utf-8').replace('</script', '<\\/script') + '\n</script>'
 html = html.replace('<script src="adv_space.js"></script>', '<script>' + sprites + '</script>\n' + inline('adv_space.js'))
 html = html.replace('<script src="adv_space_v2_draw.js"></script>', inline('adv_space_v2_draw.js'))
+html = html.replace('<script src="adv_v2_ui.js"></script>', inline('adv_v2_ui.js'))
 assert 'src="adv_' not in html
 out.parent.mkdir(parents=True, exist_ok=True); out.write_text(html, 'utf-8'); print(out, len(html))

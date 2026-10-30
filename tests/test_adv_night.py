@@ -167,7 +167,7 @@ class NightModel(unittest.TestCase):
     def test_mutations_are_caught(self):
         for mutation in [('adv_night.c', 'age >= ADV_NIGHT_SWING_ON && age <= ADV_NIGHT_SWING_OFF', 'age >= ADV_NIGHT_SWING_ON && age < ADV_NIGHT_SWING_OFF'),
                          ('adv_night.c', 'return 1 + imin(4, g->combo / 6);', 'return 1 + imin(4, g->combo / 5);'),
-                         ('adv_night.c', 'return DECAY * (9000 +', 'return DECAY * (9100 +'),
+                         ('adv_night.c', 'DECAY_RAMP = 5400', 'DECAY_RAMP = 5500'),
                          ('adv_night.c', 'METER_STEP = 12', 'METER_STEP = 11'),
                          ('adv_night.c', 'int rr = 15 + rnd(g, 9);\n                int sign = rnd(g, 2) ? -1 : 1;', 'int sign = rnd(g, 2) ? -1 : 1;\n                int rr = 15 + rnd(g, 9);'),
                          ('adv_night.c', 'm->y += adv_night_isin(ai * 13 / 10)', 'm->y += adv_night_isin(ai * 4 / 3)'),

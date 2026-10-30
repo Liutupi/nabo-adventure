@@ -214,18 +214,14 @@
   }
 
   // ---------------------------------------------------------------- screens
+  const UIT = { name: '萤火虫之夜', pitch: '挥罐抓萤火虫补光，别让罐子熄灭', keys: [['◀', '慢走'], ['●', '挥罐'], ['▶', '小跑']], th: [100, 300, 800], ink: '3,5,16', go: '走！', tip: '罐子的光会慢慢变暗，抓萤火虫补光' };
   function title(c, vt, best) {
     scenery(c, vt * .6, vt);
     for (let i = 0; i < 14; i++) { const x = (i * 47 + vt * (.3 + hash(i) * .4)) % (W + 20) - 10, y = 70 + hash(i * 3) * 90 + Math.sin(vt * .03 + i) * 12; glow(c, x, y, 10, '190,255,120', .5 + .3 * Math.sin(vt * .2 + i)); c.fillStyle = '#efffc8'; c.fillRect(x - 1, y - 1, 3, 3); }
     c.fillStyle = 'rgba(3,5,16,.35)'; c.fillRect(0, 0, W, H);
     sprite(c, 'walk_right', Math.floor(vt / 5) % 8, 70, GY + 1);
     glow(c, 82, GY - 20, 50, '255,214,110', .3);
-    text(c, '萤火虫之夜', W / 2 + 30, 66, 28, '#fff1b8', 'center');
-    text(c, 'V2 试玩原型', W / 2 + 30, 92, 10, '#9fb4e8', 'center', 700);
-    const keys = [['◀', '慢走 / 刹车'], ['●', '挥罐 · 双击放光'], ['▶', '小跑']];
-    keys.forEach(([k, s], i) => { const y = 126 + i * 18; c.fillStyle = 'rgba(255,255,255,.12)'; c.beginPath(); c.roundRect(150, y - 8, 18, 16, 4); c.fill(); text(c, k, 159, y, 10, '#fff', 'center', 900, false); text(c, s, 176, y, 10, '#d6e2ff', 'left', 700); });
-    if (best) text(c, '最佳 ' + best, W - 10, 18, 11, '#ffd34a', 'right');
-    if (vt % 60 < 42) text(c, '按 ● 开始', W / 2 + 30, 186, 13, '#ffffff', 'center');
+    root.AdvV2UI.title(c, { ...UIT, best }, vt);
   }
 
   function draw(c, g, phase, vt, phaseT, best, info = {}) {
@@ -233,22 +229,11 @@
     if (phase === 'TITLE') return title(c, vt, best);
     scenery(c, N.camX(g) / 256, vt); roots(c, g); owls(c, g, vt); nabo(c, g, phase, phaseT);
     darkness(c, g, vt); flies(c, g, vt); fx(c, g); hud(c, g, vt);
-    if (phase === 'READY') { const n = Math.ceil(info.countdown / 60); text(c, n > 0 ? String(n) : '走!', W / 2, 100, 34, '#fff1b8', 'center'); text(c, '罐子的光会慢慢变暗，抓萤火虫补光', W / 2, 134, 11, '#d6e2ff', 'center', 700); }
-    if (phase === 'PAUSE') {
-      c.fillStyle = 'rgba(3,5,16,.72)'; c.fillRect(0, 0, W, H); text(c, '暂停', W / 2, 70, 24, '#fff1b8', 'center');
-      [['●', '继续'], ['◀', '重来'], ['▶▶', '双击回地图']].forEach(([k, s], i) => text(c, `${k}  ${s}`, W / 2, 112 + i * 22, 12, '#d6e2ff', 'center', 700));
-    }
-    if (phase === 'RESULT') {
-      const k = Math.min(1, phaseT / 30); c.fillStyle = `rgba(3,5,16,${.75 * k})`; c.fillRect(0, 0, W, H);
-      if (phaseT > 20) {
-        const cause = ['罐子的光慢慢熄了', '一路狂奔，光晃没了', '挥空太多，光洒光了', '飞蛾扑灭了罐子', '绊了一跤，光灭了', '被猫头鹰吓灭了光'][g.lastLoss] || '';
-        text(c, cause, W / 2, 40, 12, '#9fb4e8', 'center', 700);
-        text(c, String(g.score), W / 2, 82, 40, '#fff1b8', 'center');
-        if (g.score >= best && g.score > 0) text(c, '新纪录!', W / 2 + 70, 66, 12, '#ffd34a', 'center');
-        text(c, `抓到 ${g.caught} 只 · 最长 ${g.maxCombo} 连 · 放光 ${g.bursts} 次 · ${Math.floor(g.tick / 60)} 秒`, W / 2, 120, 10, '#d6e2ff', 'center', 700);
-        if (phaseT > 50 && vt % 60 < 42) text(c, '● 再来一局', W / 2, 200, 13, '#ffffff', 'center');
-      }
-    }
+    const U = root.AdvV2UI;
+    if (phase === 'READY') U.ready(c, UIT, info.countdown);
+    if (phase === 'PAUSE') U.pause(c, UIT);
+    if (phase === 'RESULT') U.result(c, UIT, { cause: ['罐子的光慢慢熄了', '一路狂奔，光晃没了', '挥空太多，光洒光了', '飞蛾扑灭了罐子', '绊了一跤，光灭了', '被猫头鹰吓灭了光'][g.lastLoss] || '', score: g.score, best: info.bestBefore ?? best, th: UIT.th,
+      lines: [`抓到 ${g.caught} 只 · 最长 ${g.maxCombo} 连 · 放光 ${g.bursts} 次`, `${Math.floor(g.tick / 60)} 秒`] }, phaseT, vt);
   }
 
   // Collection prototype (index.html) entry: same signature as the V1 renderer.

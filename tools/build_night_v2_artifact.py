@@ -20,5 +20,6 @@ html = html.replace('<title>', '<meta name="claude:viewport-fit-sides" content="
 inline = lambda name: '<script>\n' + (ADV / 'prototype' / name).read_text('utf-8').replace('</script', '<\\/script') + '\n</script>'
 html = html.replace('<script src="adv_night.js"></script>', '<script>' + sprites + '</script>\n' + inline('adv_night.js'))
 html = html.replace('<script src="adv_night_draw.js"></script>', inline('adv_night_draw.js'))
+html = html.replace('<script src="adv_v2_ui.js"></script>', inline('adv_v2_ui.js'))
 assert 'src="adv_' not in html
 out.parent.mkdir(parents=True, exist_ok=True); out.write_text(html, 'utf-8'); print(out, len(html))

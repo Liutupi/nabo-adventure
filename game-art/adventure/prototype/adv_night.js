@@ -7,7 +7,7 @@
   const K = {
     W: 320, H: 240, GROUND: 200, FLIES: 40, MOTHS: 12, ROOTS: 6, OWLS: 4, FX: 6,
     SPEED: [141, 294, 563], SCREEN: [78, 112, 156],
-    LIGHT_MAX: 1000000, LIGHT_START: 720000, DECAY: 420, RUN_COST: 220,
+    LIGHT_MAX: 1000000, LIGHT_START: 720000, DECAY: 420, DECAY_RAMP: 5400, RUN_COST: 220,
     FLY_LIGHT: 36000, FLY_LIGHT_MIN: 18000, GOLD_LIGHT: 150000, MULTI_LIGHT: 60000,
     WHIFF: 16000, MOTH: 120000, TRIP: 130000, OWL: 200000, BURST_LIGHT: 160000,
     SWING: 18, SWING_ON: 3, SWING_OFF: 12, NET_DX: 20, NET_DY: 42, NET_R: 31, MOTH_R: 24,
@@ -43,7 +43,7 @@
   const camX = g => g.x - g.screen;
   const px = q => q >> 8;
   const speedOf = (g, gait) => tr(K.SPEED[gait] * (30000 + Math.min(15000, px(g.x))) / 30000);
-  const decay = g => tr(K.DECAY * (9000 + Math.min(g.tick, 1000000)) / 9000);
+  const decay = g => tr(K.DECAY * (K.DECAY_RAMP + Math.min(g.tick, 1000000)) / K.DECAY_RAMP);
   const radius = g => g.burst > 0 ? 220 : 34 + tr(g.light * 15 / 100000);
   const mult = g => 1 + Math.min(4, tr(g.combo / 6));
   const meterFull = g => K.METER + K.METER_STEP * g.bursts;
