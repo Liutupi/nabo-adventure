@@ -68,3 +68,15 @@ Windows及macOS/Linux构建脚本均运行`tools/check_adventure_budget.py`：�
 本轮在 macOS 的 APFS 副本工作，已有 `build-idf6/sdkconfig` 仍是较早的编译配置，本候选未沿用该配置；新候选用 `build-v2-20261030` 和同目录新 `sdkconfig` 从 tracked defaults 构建。已核对 `CONFIG_COMPILER_OPTIMIZATION_SIZE=y`、`CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_SILENT=y`，main 保持 `-O2`。按原流程运行 `idf.py build`、`merge-bin`、`verify_firmware.py` 和 `check_adventure_budget.py`，路径参数指向新构建目录。交接中 Windows `build.ps1` 的本地重建步骤，在本机以同版本 IDF 的 build/merge/verify/budget 命令等价执行；不使用旧云端二进制。当前 macOS 候选 e9fe81f6 已按用户明确要求刷入；307项宿主、预算/布局、应用读回及八款串口回归通过。实际工牌多一个record分区，按完整实测边界做app-only写入；没有使用会强制全片备份的旧安装器模式，也没有冒充全保护区回读。最终静音/NVS与正常模式已核对，实体手感和睡醒仍待用户。
 
 共用横屏标题另有 `collection_font_26.c`，只包含六款标题、暂停字形和 ASCII；12/16/18 px 字库继续覆盖所有 UI。`generate_collection_fonts.py` 一并复现四份字库。气球三张机械件由 `python3 tools/prepare_sky_v2.py` 原色最近邻缩至 2/3，NABO 帧不变。完整素材打包命令仍见 `tools/ADVENTURE_ASSETS.md`；跨平台 manifest 路径支持 Windows 分隔符并维持范围检查。更新美术索引时可用 `catalog_adventure_art.py --game-proof-root <新逐款证明目录>` 保留旧冻结证据。
+
+
+## v0.2.0 发布包复现
+
+应用必须逐字节等于已上机e9fe81f6，不重编译替换。准备三镜像目录：应用取已校验冻结输出，bootloader/partition-table从v0.1.0公开ZIP复用，flash_args沿用0x0/0x8000/0x10000；合并并运行verify_firmware。打包器核对固定应用SHA、八款设备验证和旧组件SHA，只加入白名单说明/工具/许可，不读取设备。
+
+```sh
+python3 tools/package_release.py --build <三镜像目录> --output release-v0.2.0 --idf <ESP-IDF-6.0.2目录> --source-commit 1309753751a71d8be571fc298fa0bf3fb3c52a95
+python3 tools/verify_release.py release-v0.2.0
+```
+
+发布来源、7个资产校验和与公开下载回执见 `docs/releases/v0.2.0/` 和 `validation/release-v0.2.0.json`。源提交与v0.2.0标签一致；发布之后的交接/回执提交不改固件运行时输入。

@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-30",
+  "version": "0.2.0",
+  "status": "PASS: PUBLIC RELEASE AND ALL ANONYMOUS DOWNLOADS VERIFIED",
+  "release_id": 428846815,
+  "url": "https://github.com/Liutupi/nabo-adventure/releases/tag/v0.2.0",
+  "published_at": "2026-10-30T09:29:14Z",
+  "draft": false,
+  "prerelease": true,
+  "page_http_status": 200,
+  "anonymous_downloads": true,
+  "assets": [
+    {
+      "name": "INSTALL.md",
+      "bytes": 4072,
+      "sha256": "ce396ec78367db8544748c0fa7f9d8201f2a56d948391313a55fc74228f2fb45",
+      "http_status": 200,
+      "url": "https://github.com/Liutupi/nabo-adventure/releases/download/v0.2.0/INSTALL.md"
+    },
+    {
+      "name": "manifest.json",
+      "bytes": 6403,
+      "sha256": "8f1fdfed4f743f44ee3cf5720890240c843d5cb62ed80750dc4946cbcf379fed",
+      "http_status": 200,
+      "url": "https://github.com/Liutupi/nabo-adventure/releases/download/v0.2.0/manifest.json"
+    },
+    {
+      "name": "nabo-adventure-v0.2.0-app.bin",
+      "bytes": 1880672,
+      "sha256": "e9fe81f6cd52f194d309638305cd9e41faaf074c2c076f815578fb34981e8afc",
+      "http_status": 200,
+      "url": "https://github.com/Liutupi/nabo-adventure/releases/download/v0.2.0/nabo-adventure-v0.2.0-app.bin"
+    },
+    {
+      "name": "nabo-adventure-v0.2.0-full.bin",
+      "bytes": 1946208,
+      "sha256": "0d0b0e6861310cfdc6e2d287785f2bdf5fa8425399335bc335f988101af257f2",
+      "http_status": 200,
+      "url": "https://github.com/Liutupi/nabo-adventure/releases/download/v0.2.0/nabo-adventure-v0.2.0-full.bin"
+    },
+    {
+      "name": "nabo-adventure-v0.2.0.zip",
+      "bytes": 2452430,
+      "sha256": "da8128e808a7c50664aae1011953853f89a6bd6dc6a9427be7cd1369d59440f8",
+      "http_status": 200,
+      "url": "https://github.com/Liutupi/nabo-adventure/releases/download/v0.2.0/nabo-adventure-v0.2.0.zip"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 524,
+      "sha256": "d5ca4b177b3f1aa05b304a4d862c1e055475817b1cee17241c55a2b290359e46",
+      "http_status": 200,
+      "url": "https://github.com/Liutupi/nabo-adventure/releases/download/v0.2.0/SHA256SUMS.txt"
+    },
+    {
+      "name": "VALIDATION.json",
+      "bytes": 14018,
+      "sha256": "e9b07deef2f7191552f55bfdbb5ecbe02df8b1de891b2cdaf6cacd1abb888b9f",
+      "http_status": 200,
+      "url": "https://github.com/Liutupi/nabo-adventure/releases/download/v0.2.0/VALIDATION.json"
+    }
+  ],
+  "verification": {
+    "status": "PASS: ALL ASSETS AND ZIP MEMBERS VERIFIED",
+    "assets": 7,
+    "members": 30,
+    "app_sha256": "e9fe81f6cd52f194d309638305cd9e41faaf074c2c076f815578fb34981e8afc",
+    "full_sha256": "0d0b0e6861310cfdc6e2d287785f2bdf5fa8425399335bc335f988101af257f2"
+  },
+  "application_rebuilt": false,
+  "community_updated": false,
+  "firmware_source_commit": "1309753751a71d8be571fc298fa0bf3fb3c52a95",
+  "git_tag_commit": "1309753751a71d8be571fc298fa0bf3fb3c52a95",
+  "host_tests": 310,
+  "host_seconds": 121.127,
+  "runtime_source_inputs_verified": 788,
+  "device_tests": "PASS: prior exact e9fe81f6 application, eight games ten serial cycles each; no device operations during publication"
+}
