@@ -5,7 +5,7 @@
   "permanent_reserve_bytes": 65536,
   "space_baseline_app_bytes": 1812256,
   "future_games": {
-    "sky": {"allocation_bytes": 73728, "state": "reserved"},
-    "climb": {"allocation_bytes": 73728, "state": "reserved"}
+    "sky": {"allocation_bytes": 73728, "state": "integrated"},
+    "climb": {"allocation_bytes": 73728, "state": "integrated"}
   }
 }

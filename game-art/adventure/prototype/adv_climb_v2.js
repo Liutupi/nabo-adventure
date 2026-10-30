@@ -3,7 +3,7 @@
 // alternating, so climbing is a left-right rhythm. Holds can be blank (lane broken), fragile (crumbles), or icy (hold the key).
 // Keys (landscape, left to right): OK = left hand, DOWN = tap to traverse to the other lane, UP = right hand.
 // Long-press DOWN is the shell's pause; traverse fires on the press edge, so nothing needs DOWN held.
-// Firmware does NOT follow this yet: V1 (switch sides / charge jump) is still adv_climb.c. Port only after the user approves G1.
+// Approved 2026-10-30: firmware/main/adv_climb_v2.c mirrors these rules; V1 stays available for rollback.
 (function (root) {
   'use strict';
   const K = {

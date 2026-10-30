@@ -1,0 +1,488 @@
+{
+  "date": "2026-10-30",
+  "candidate_sha256": "e9fe81f6cd52f194d309638305cd9e41faaf074c2c076f815578fb34981e8afc",
+  "status": "BUILD AND HOST PASS; DEVICE SERIAL AUTOMATION PASS; PHYSICAL ACCEPTANCE PENDING",
+  "base_commit": "ccecab649dde1c7bacc06855713b1e6fe285cbe5",
+  "host": {
+    "tests": 307,
+    "seconds": 124.821,
+    "passed": true,
+    "rule_traces": 18,
+    "rule_mutations": 6,
+    "render_tests": 32,
+    "notes": "Complete final gate after lossless CLIMB wall and SKY scenery cache repairs; cache/fallback pixels and release checks included.",
+    "production_c": {
+      "verified_frames": 633,
+      "verified_sprite_rows": 30666,
+      "verified_ninepatch_rows": 912,
+      "comparison": "generated C and production decoders vs indexed source"
+    },
+    "fonts": {
+      "collection_font_12": "acb43fdb4876bf43203f3e9b2b51636a367da2749933efe06c4fc0981e3fc8f1",
+      "collection_font_16": "5b156755b3e7769e5015ac4a964f92e801cfe8c04154925b6e6dc5d5263fcb05",
+      "collection_font_18": "f983e9ae0b223258471ca6ac844e1b6100b67537054e7ca37be615f0b336cb4b",
+      "collection_font_26": "40a0c2299cc520469a6f4eed3d89cb2361bdee2dd3a7175af857bb9bc7628e99"
+    }
+  },
+  "build": {
+    "platform": "macOS",
+    "idf": "6.0.2",
+    "directory": "firmware/build-v2-20261030",
+    "isolated_defaults": true,
+    "main_optimization": "-O2",
+    "idf_optimization": "size, silent assertion text",
+    "merged_sha256": "ab8285eb2edc6d11c07d410d014ce400034a3c7eec181dbc263d6bf38c9832d1",
+    "elf_sha256": "eb6e4daf90287e709c139d849e4a8bbe6b91f91319b7a17a8b0e3bf6c58ecbea",
+    "source_inputs_sha256": "ad036efa32e2d05a7a82f78d91bc6aa2273cf4e7753594997debd3e0fdb0ad5d",
+    "candidate_archive_verified": true
+  },
+  "budget": {
+    "app_sha256": "e9fe81f6cd52f194d309638305cd9e41faaf074c2c076f815578fb34981e8afc",
+    "app_bytes": 1880672,
+    "physical_factory_bytes": 2031616,
+    "free_bytes": 150944,
+    "reserve_bytes": 65536,
+    "permanent_reserve_bytes": 65536,
+    "future_game_reserve_bytes": 0,
+    "future_games_reserved_bytes": {},
+    "remaining_after_reserve_bytes": 85408,
+    "budget_profile_sha256": "966b586736e129009a383249c59eb3247a013cbe87d84dea007e8b5e70b574e0",
+    "opening_bytes": 221831,
+    "opening_limit_bytes": 229376,
+    "status": "PASS"
+  },
+  "device": {
+    "tests": "PASS: SERIAL ONLY",
+    "flashed": true,
+    "application_readback_verified": true,
+    "app_offset": 65536,
+    "app_erase_end": 1949696,
+    "flash_size_bytes": 8388608,
+    "factory_size_bytes": 2031616,
+    "actual_partition_profile": "nvs + phy_init + factory + record + assets",
+    "partition_table_unchanged": true,
+    "speaker_before_boot": 0,
+    "backup_required": false,
+    "whole_chip_erased": false,
+    "preserved_region_evidence": "write/erase bounds protect record/assets; partition table and current muted NVS compared at flash time. Other preserved bytes not read back.",
+    "quick_draw_counter_samples": {
+      "climb": [
+        {
+          "frames": 90,
+          "seconds": 3.0292632085620426,
+          "fps": 29.710194791136026,
+          "heap": 189180,
+          "largest": 114688,
+          "last_draw_us": 32842
+        },
+        {
+          "frames": 90,
+          "seconds": 3.026861708436627,
+          "fps": 29.733766742348124,
+          "heap": 189180,
+          "largest": 114688,
+          "last_draw_us": 33014
+        },
+        {
+          "frames": 90,
+          "seconds": 3.0274144160212018,
+          "fps": 29.72833832187503,
+          "heap": 189180,
+          "largest": 114688,
+          "last_draw_us": 32921
+        }
+      ],
+      "sky": [
+        {
+          "frames": 80,
+          "seconds": 3.0256131041096523,
+          "fps": 26.440921970934422,
+          "heap": 123932,
+          "largest": 40960,
+          "last_draw_us": 37133
+        },
+        {
+          "frames": 80,
+          "seconds": 3.0370210205437616,
+          "fps": 26.341602332958647,
+          "heap": 123932,
+          "largest": 40960,
+          "last_draw_us": 38156
+        },
+        {
+          "frames": 81,
+          "seconds": 3.0389148124377243,
+          "fps": 26.654251599446543,
+          "heap": 123932,
+          "largest": 40960,
+          "last_draw_us": 37400
+        }
+      ],
+      "jump_charge": [
+        {
+          "frames": 152,
+          "seconds": 3.025630541553255,
+          "fps": 50.237462212411565,
+          "heap": 260200,
+          "largest": 114688,
+          "last_draw_us": 10635
+        }
+      ],
+      "jump_flight_and_end": [
+        {
+          "frames": 47,
+          "seconds": 1.0293991045327857,
+          "fps": 45.657704376313724,
+          "heap": 260200,
+          "largest": 114688,
+          "last_draw_us": 14563
+        }
+      ]
+    },
+    "quick_sample_scope": "3 independent initial idle 3-second windows per CLIMB/SKY; JUMP charge 3s plus flight/end 1s; not optical or worst-case FPS",
+    "games": {
+      "jump": {
+        "rounds": 10,
+        "warmup_rounds": 1,
+        "memory": {
+          "heap": {
+            "before": 260200,
+            "after": 260200,
+            "minimum": 260200,
+            "maximum": 260200
+          },
+          "largest": {
+            "before": 114688,
+            "after": 114688,
+            "minimum": 114688,
+            "maximum": 114688
+          }
+        }
+      },
+      "dive": {
+        "rounds": 10,
+        "warmup_rounds": 1,
+        "memory": {
+          "heap": {
+            "before": 260112,
+            "after": 260112,
+            "minimum": 260112,
+            "maximum": 260112
+          },
+          "largest": {
+            "before": 114688,
+            "after": 114688,
+            "minimum": 114688,
+            "maximum": 114688
+          }
+        }
+      },
+      "post": {
+        "rounds": 10,
+        "warmup_rounds": 1,
+        "memory": {
+          "heap": {
+            "before": 260112,
+            "after": 260112,
+            "minimum": 260112,
+            "maximum": 260112
+          },
+          "largest": {
+            "before": 114688,
+            "after": 114688,
+            "minimum": 114688,
+            "maximum": 114688
+          }
+        },
+        "natural_round": {
+          "score": 1,
+          "seconds": 37.54180537501816,
+          "phases": [
+            2,
+            4,
+            5
+          ],
+          "start_resource": 998,
+          "end_resource": 0,
+          "quiet_sample": {
+            "seconds": 3.0233264579437673,
+            "frames": 86,
+            "fps": 28.445489164438612,
+            "scope": "one initial idle 3-second window with only two status snapshots; not worst-case performance"
+          }
+        }
+      },
+      "climb": {
+        "rounds": 10,
+        "warmup_rounds": 1,
+        "memory": {
+          "heap": {
+            "before": 260112,
+            "after": 260112,
+            "minimum": 260112,
+            "maximum": 260112
+          },
+          "largest": {
+            "before": 114688,
+            "after": 114688,
+            "minimum": 114688,
+            "maximum": 114688
+          }
+        },
+        "natural_round": {
+          "score": 0,
+          "seconds": 25.537229291978292,
+          "phases": [
+            2,
+            4,
+            5
+          ],
+          "start_resource": 999,
+          "end_resource": 0,
+          "quiet_sample": {
+            "seconds": 3.0434617499704473,
+            "frames": 91,
+            "fps": 29.900162208670316,
+            "scope": "one initial idle 3-second window with only two status snapshots; not worst-case performance"
+          }
+        }
+      },
+      "ski": {
+        "rounds": 10,
+        "warmup_rounds": 1,
+        "memory": {
+          "heap": {
+            "before": 260112,
+            "after": 260112,
+            "minimum": 260112,
+            "maximum": 260112
+          },
+          "largest": {
+            "before": 114688,
+            "after": 114688,
+            "minimum": 114688,
+            "maximum": 114688
+          }
+        },
+        "natural_round": {
+          "score": 182,
+          "seconds": 37.3697452909546,
+          "phases": [
+            2,
+            4,
+            5
+          ],
+          "start_resource": 678,
+          "end_resource": 0,
+          "quiet_sample": {
+            "seconds": 3.026382583018858,
+            "frames": 119,
+            "fps": 39.3208712830008,
+            "scope": "one initial idle 3-second window with only two status snapshots; not worst-case performance"
+          }
+        }
+      },
+      "sky": {
+        "rounds": 10,
+        "warmup_rounds": 1,
+        "memory": {
+          "heap": {
+            "before": 260112,
+            "after": 260112,
+            "minimum": 260112,
+            "maximum": 260112
+          },
+          "largest": {
+            "before": 114688,
+            "after": 114688,
+            "minimum": 114688,
+            "maximum": 114688
+          }
+        },
+        "natural_round": {
+          "score": 63,
+          "seconds": 18.630317457951605,
+          "phases": [
+            2,
+            4,
+            5
+          ],
+          "start_resource": 999,
+          "end_resource": 0,
+          "quiet_sample": {
+            "seconds": 3.04909541644156,
+            "frames": 81,
+            "fps": 26.565255899577874,
+            "scope": "one initial idle 3-second window with only two status snapshots; not worst-case performance"
+          }
+        }
+      },
+      "space": {
+        "rounds": 10,
+        "warmup_rounds": 1,
+        "memory": {
+          "heap": {
+            "before": 260112,
+            "after": 260112,
+            "minimum": 260112,
+            "maximum": 260112
+          },
+          "largest": {
+            "before": 114688,
+            "after": 114688,
+            "minimum": 114688,
+            "maximum": 114688
+          }
+        },
+        "natural_round": {
+          "score": 101,
+          "seconds": 18.003751041949727,
+          "phases": [
+            2,
+            4,
+            5
+          ],
+          "start_resource": 1000,
+          "end_resource": 921,
+          "quiet_sample": {
+            "seconds": 3.0256994999945164,
+            "frames": 219,
+            "fps": 72.37995709765524,
+            "scope": "one initial idle 3-second window with only two status snapshots; not worst-case performance"
+          }
+        }
+      },
+      "night": {
+        "rounds": 10,
+        "warmup_rounds": 1,
+        "memory": {
+          "heap": {
+            "before": 260112,
+            "after": 260112,
+            "minimum": 260112,
+            "maximum": 260112
+          },
+          "largest": {
+            "before": 114688,
+            "after": 114688,
+            "minimum": 114688,
+            "maximum": 114688
+          }
+        },
+        "real_input_round": {
+          "score": 7,
+          "seconds": 35.39271058398299,
+          "end_phases": [
+            4,
+            5
+          ],
+          "whiffs": 0,
+          "caught": 6
+        }
+      }
+    },
+    "normal_mode_restored": true,
+    "port_closed": true,
+    "nvs_bytes_compared_after_tests": 24576,
+    "nvs_unchanged_after_tests": true,
+    "speaker_after_tests": 0,
+    "durable_progress_unchanged": true,
+    "startup": {
+      "boot_frames": 73,
+      "boot_skipped": 0,
+      "boot_last": 72,
+      "boot_elapsed_ms": 6008,
+      "heap": 85440,
+      "largest": 30720,
+      "overflow": 0
+    },
+    "startup_observation_seconds": 12,
+    "ski_independent_samples": [
+      {
+        "seconds": 3.031545041478239,
+        "frames": 116,
+        "fps": 38.26431684598563,
+        "heap": 198016,
+        "largest": 114688,
+        "last_draw_us": 25755
+      },
+      {
+        "seconds": 3.029474854003638,
+        "frames": 114,
+        "fps": 37.63028428816366,
+        "heap": 198016,
+        "largest": 114688,
+        "last_draw_us": 27926
+      },
+      {
+        "seconds": 3.0309767084545456,
+        "frames": 142,
+        "fps": 46.84958469126735,
+        "heap": 198016,
+        "largest": 114688,
+        "last_draw_us": 26727
+      }
+    ],
+    "test_mode_real_inputs": {
+      "post": {
+        "score": 180,
+        "delivered": 2,
+        "perfects": 2,
+        "cranes": 4,
+        "tick": 1499,
+        "res": 501
+      },
+      "climb": {
+        "score": 41,
+        "row": 10,
+        "combo": 2,
+        "tick": 1202,
+        "res": 532
+      }
+    },
+    "device_test_scope": "Real device, serial inputs and counters only; test scores are not durable user records."
+  },
+  "compatibility": {
+    "v1_source_and_tests_retained": true,
+    "new_best_keys": {
+      "post": "adv_v2_post",
+      "climb": "adv_v2_climb",
+      "sky": "adv_v2_sky"
+    },
+    "v1_keys_unchanged": true,
+    "legacy_awards_inherited": true,
+    "partitions_and_pins_unchanged": true
+  },
+  "unverified": [
+    "physical buttons and game feel",
+    "physical LCD readability, costume and cards",
+    "worst-case dense-scene and optical frame rates",
+    "sleep/wake during games",
+    "audio quality (speaker remains muted)",
+    "unused B-skin selector remains unfinished"
+  ],
+  "performance_repair": {
+    "predecessor_sha256": "8eb9039d8f649b18d482ed30df998aeb5a9414ebab48e2a110cdc7e77f6defbd",
+    "predecessor_climb_initial_fps": 17.09357107088807,
+    "predecessor_sky_single_draw_us_median": 54903,
+    "climb_cache_bytes": 8448,
+    "sky_cache_bytes": 70400,
+    "allocation_failure_keeps_original_pixels": true,
+    "cache_released_on_exit": true,
+    "rules_and_source_art_unchanged": true
+  },
+  "release_packaging": {
+    "version": "0.2.0",
+    "application_rebuilt": false,
+    "component_source": "bootloader and partition table reused byte-for-byte from public v0.1.0 ZIP",
+    "full_install_sha256": "0d0b0e6861310cfdc6e2d287785f2bdf5fa8425399335bc335f988101af257f2",
+    "full_install_bytes": 1946208,
+    "full_install_device_tested": false,
+    "firmware_gate_tests": 307,
+    "firmware_gate_seconds": 124.821,
+    "host_tests": 310,
+    "host_seconds": 121.127,
+    "host_passed": true,
+    "runtime_inputs_verified": 788
+  }
+}

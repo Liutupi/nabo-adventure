@@ -103,14 +103,14 @@
     "f7599e5e6c0947f41ca57a3f47185d4947f2b41f0ab7bd10dcf966dcf9507eb9"
   ],
   "source_sha256": [
-    "9b163bb3ee304f2d7e2cb51283b43953b72e43960ed9174f5fa66b4edbbb7c1c",
+    "fc40a72ead7f305bcac5f088142471d5d4cadc82be9fe86a5d96c42d7ca8a8bb",
     "abe1031b388d800b5a40d3495ba25b89328935006aa236fd8d1829b46976f46a",
     "a3c0b0c956f025b63e8ebebda608abb795adeeca21359967a2062de2515173b1",
     "e787e65285e830ac9228a3d17956c05e37c7cd0a3296c43130c8ddcf4a880126",
     "0d528ad83c3f133e853a93431cdcff149bfe2fee6a93d120fc991cb3858e3695",
     "8cfe392c2e5c86fc81b882db6e45b808e43bc5fcf47e324d4edb43e41ed0af19",
     "63751b7e897def4d590bf35d50f7d042017b74795e6c3bc76d4722e756a41594",
-    "9b163bb3ee304f2d7e2cb51283b43953b72e43960ed9174f5fa66b4edbbb7c1c"
+    "fc40a72ead7f305bcac5f088142471d5d4cadc82be9fe86a5d96c42d7ca8a8bb"
   ],
   "verified_frames": 8,
   "comparison": "lossless after shared RGB565 quantization",
@@ -123,35 +123,35 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\settlement_cheer\\000.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/000.png",
       "sha256": "9b163bb3ee304f2d7e2cb51283b43953b72e43960ed9174f5fa66b4edbbb7c1c"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\settlement_cheer\\001.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/001.png",
       "sha256": "abe1031b388d800b5a40d3495ba25b89328935006aa236fd8d1829b46976f46a"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\settlement_cheer\\002.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/002.png",
       "sha256": "a3c0b0c956f025b63e8ebebda608abb795adeeca21359967a2062de2515173b1"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\settlement_cheer\\003.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/003.png",
       "sha256": "e787e65285e830ac9228a3d17956c05e37c7cd0a3296c43130c8ddcf4a880126"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\settlement_cheer\\004.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/004.png",
       "sha256": "0d528ad83c3f133e853a93431cdcff149bfe2fee6a93d120fc991cb3858e3695"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\settlement_cheer\\005.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/005.png",
       "sha256": "8cfe392c2e5c86fc81b882db6e45b808e43bc5fcf47e324d4edb43e41ed0af19"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\settlement_cheer\\006.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/006.png",
       "sha256": "63751b7e897def4d590bf35d50f7d042017b74795e6c3bc76d4722e756a41594"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\ski\\runtime\\ski_a\\settlement_cheer\\007.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/ski/runtime/ski_a/settlement_cheer/007.png",
       "sha256": "9b163bb3ee304f2d7e2cb51283b43953b72e43960ed9174f5fa66b4edbbb7c1c"
     }
   ],

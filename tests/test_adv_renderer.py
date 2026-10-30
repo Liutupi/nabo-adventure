@@ -18,10 +18,10 @@ BOARD = ROOT/'firmware/main'
 HOST = ROOT/'tests/adv_host'
 UP, DOWN, OK = 0, 1, 2
 PRESS, CLICK, DOUBLE, LONG, RELEASE = 0, 1, 2, 3, 4
-SOURCES = ['adv_boot_motion.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c','adv_ui_night.c','adv_climb.c','adv_ui_climb.c','adv_ski.c','adv_ui_ski.c','adv_sky.c','adv_ui_sky.c','adv_space.c','adv_ui_space.c', 'adv_ui_post.c', 'adv_ui_post_session.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
-           'adv_text.c', 'adv_ui.c', 'adv_ui_animation.c', 'adv_ui_art.c', 'adv_ui_map.c', 'adv_ui_session.c', 'adv_ui_jump.c', 'collection_portrait.c',
+SOURCES = ['adv_boot_motion.c', 'adv_post_v2.c','adv_climb_v2.c','adv_sky_v2.c','adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c','adv_ui_night.c','adv_climb.c','adv_ui_climb.c','adv_ski.c','adv_ui_ski.c','adv_sky.c','adv_ui_sky.c','adv_space.c','adv_ui_space.c', 'adv_ui_post.c', 'adv_ui_post_session.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
+           'adv_text.c', 'adv_ui.c', 'adv_ui_animation.c', 'adv_ui_art.c', 'adv_ui_map.c', 'adv_ui_session.c','adv_ui_cards.c','adv_ui_post_v2.c','adv_ui_sky_v2.c','adv_ui_climb_v2.c', 'adv_ui_jump.c', 'collection_portrait.c',
            'nabo_jump_model.c', 'nabo_jump_rig.c', 'nabo_jump_codec.c','nabo_dive_text.c', 'collection_font_12.c', 'collection_font_16.c',
-           'collection_font_18.c', 'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c','adv_video.c','adv_ui_boot_video.c']
+           'collection_font_18.c','collection_font_26.c', 'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c','adv_video.c','adv_ui_boot_video.c']
 
 def ui_color(name):
     palette=json.loads((ROOT/'game-art/adventure/art/ui/palette.json').read_text('utf-8'))
@@ -66,6 +66,8 @@ class Renderer(unittest.TestCase):
         lib.adv_ui_staging_bytes.restype = ctypes.c_uint32
         lib.ui_space_staging_bytes.restype = ctypes.c_uint32
         lib.ui_space_cache_bytes.restype = ctypes.c_uint32
+        lib.ui_climb_v2_cache_bytes.restype = ctypes.c_uint32
+        lib.ui_sky_v2_cache_bytes.restype = ctypes.c_uint32
         lib.adv_boot_motion_enabled.restype = ctypes.c_bool
         class BootStats(ctypes.Structure):
             _fields_=[(name,ctypes.c_uint32) for name in ('frames','skipped','last_frame','elapsed_ms')]
@@ -121,7 +123,7 @@ class Renderer(unittest.TestCase):
         self.check(f'{n} steps')
 
     def test_v2_landscape_dma_staging_is_fenced_and_released(self):
-        for game in ('night','ski','space'):
+        for game in ('post','night','climb','ski','sky','space'):
             self.new([0]*9,seen=0xffffff)
             getattr(self.lib,'host_'+game+'_case')(0)
             self.check(game+' action pipeline')
@@ -136,7 +138,7 @@ class Renderer(unittest.TestCase):
             self.assertEqual(self.lib.adv_ui_staging_bytes(),0)
 
     def test_v2_landscape_allocation_failure_keeps_identical_pixels(self):
-        for game in ('night','ski','space'):
+        for game in ('post','night','climb','ski','sky','space'):
             self.new([0]*9,seen=0xffffff)
             getattr(self.lib,'host_'+game+'_case')(0)
             self.lib.host_fail_caps(61440)
@@ -176,6 +178,44 @@ class Renderer(unittest.TestCase):
         self.lib.host_space_case(1);self.lib.host_full();self.lib.host_close()
         self.assertEqual(self.lib.ui_space_cache_bytes(),0)
 
+    def test_climb_wall_cache_is_exact_for_every_scene_and_released(self):
+        for case in range(16):
+            self.lib.host_close()
+            self.new([0]*9,seen=0xffffff)
+            self.lib.host_climb_case(case)
+            self.lib.ui_climb_v2_close()
+            self.lib.host_fail_caps(8448)
+            self.lib.host_full()
+            self.assertEqual(self.lib.ui_climb_v2_cache_bytes(),0)
+            original=self.snapshot()
+            self.lib.host_full()
+            self.assertEqual(self.lib.ui_climb_v2_cache_bytes(),8448)
+            self.assertEqual(self.snapshot(),original,case)
+            self.check('climb cache scene '+str(case))
+            self.lib.host_close()
+            self.assertEqual(self.lib.ui_climb_v2_cache_bytes(),0)
+        self.new([0]*9,seen=0xffffff);self.lib.host_climb_case(0);self.check('climb exit')
+        self.ev(DOWN,LONG);self.ev(UP,DOUBLE)
+        self.assertEqual(self.lib.ui_climb_v2_cache_bytes(),0)
+
+    def test_sky_scenery_cache_is_exact_for_every_scene_and_released(self):
+        for case in range(17):
+            self.lib.host_close()
+            self.new([0]*9,seen=0xffffff)
+            self.lib.host_sky_case(case)
+            self.lib.ui_sky_v2_close()
+            self.lib.host_fail_caps(70400);self.lib.host_full()
+            self.assertEqual(self.lib.ui_sky_v2_cache_bytes(),0)
+            original=self.snapshot();self.lib.host_full()
+            self.assertEqual(self.lib.ui_sky_v2_cache_bytes(),70400)
+            self.assertEqual(self.snapshot(),original,case)
+            self.check('sky cache scene '+str(case))
+            self.lib.host_close()
+            self.assertEqual(self.lib.ui_sky_v2_cache_bytes(),0)
+        self.new([0]*9,seen=0xffffff);self.lib.host_sky_case(0);self.check('sky exit')
+        self.ev(DOWN,LONG);self.ev(UP,DOUBLE)
+        self.assertEqual(self.lib.ui_sky_v2_cache_bytes(),0)
+
     def test_every_screen(self):
         self.new([0, 12, 350, 7, 0, 0, 0, 0, 0], seen=0b11011001)
         self.check('cover'); self.save('cover.png', True)
@@ -184,15 +224,15 @@ class Renderer(unittest.TestCase):
         for _ in range(4): self.click(UP)
         self.save('map-locked.png', True)
         self.click(DOWN); self.click(OK); self.save('title.png', True)
-        self.click(OK); self.steps(30); self.save('ready.png', True)
+        self.click(DOWN); self.steps(30); self.save('ready.png', True)
         self.steps(160); self.save('play.png', True)
-        self.ev(UP, PRESS); self.ev(UP, LONG); self.ev(UP, RELEASE); self.save('pause.png', True)
-        self.click(OK)
+        self.ev(DOWN, PRESS); self.ev(DOWN, LONG); self.ev(DOWN, RELEASE); self.save('pause.png', True)
+        self.click(DOWN)
         for _ in range(30000):
             self.lib.host_steps(1)
             if self.lib.host_phase() == 4: break
         self.check('end'); self.save('end.png', True)
-        self.steps(120); self.assertEqual(self.lib.host_phase(), 5); self.save('result.png', True)
+        self.steps(120); self.assertEqual(self.lib.host_phase(), 5); self.lib.host_draw_at(4000); self.check('settled result'); self.save('result.png', True)
         self.ev(UP, DOUBLE)
         self.click(DOWN); self.click(DOWN); self.click(OK); self.save('kiosk.png', True)
         self.click(OK); self.click(DOWN); self.save('passport.png', True)
@@ -208,30 +248,26 @@ class Renderer(unittest.TestCase):
         for case,name in enumerate(names):
             self.lib.host_post_case(case);self.check('POST '+name);self.save('post-'+name+'.png',True)
         self.lib.host_post_case(0);self.check('POST fixed upper backdrop')
-        before=self.view_image().crop((0,90,320,98)).tobytes()
+        before=self.view_image().tobytes()
         for _ in range(20):self.steps(3)
-        self.assertEqual(before,self.view_image().crop((0,90,320,98)).tobytes())
-        self.assertLess(self.last_incremental_bytes,240*200*2,'H redraw should stay below a full screen')
+        self.assertNotEqual(before,self.view_image().tobytes())
 
-    def test_post_practice_steps_remain_visible_and_incremental(self):
-        self.new([0,99,0,0,0,0,0,0,0],seen=7)
-        for lesson in range(6):
-            self.lib.host_post_practice_case(lesson);self.check('POST practice '+str(lesson))
-            self.save('post-practice-'+str(lesson)+'.png',True)
-        self.lib.host_post_practice_case(2);self.check('POST waiting for a tap');self.steps(1200)
-        self.assertEqual(self.lib.host_phase(),2)
+    def test_post_v2_shared_cards_cover_every_phase(self):
+        self.new([0]*9,seen=0xffffff)
+        for which,name in enumerate(('title','ready','pause','end','result','max-record'),8):
+            self.lib.host_post_session_case(which);self.check('POST V2 '+name);self.save('post-'+name+'.png',True)
+
+    def test_post_v2_mail_window_and_empty_bag_feedback_are_distinct(self):
+        self.new([0]*9,seen=0xffffff)
+        self.lib.host_post_case(7);self.check('net in the throw window');ready=self.snapshot()
+        self.lib.host_post_case(8);self.check('empty bag warning');self.assertNotEqual(ready,self.snapshot())
 
     def test_climb_native_scenes_and_every_session_phase_are_incremental(self):
         self.new([0,50,600,25,60,0,0,0,0],seen=0xfff)
         names=('idle','switch','charge','jump','hit-slide','holds','rocks','snow','title','ready','pause','end','result','max-record','milestone','cold')
         for case,name in enumerate(names):
             self.lib.host_climb_case(case);self.check('CLIMB '+name);self.save('climb-'+name+'.png',True)
-            self.assertEqual((self.lib.adv_ui_width(),self.lib.adv_ui_height()),(240,320))
-            if name=='title':
-                source=Image.open(ROOT/'game-art/adventure/art/ui/wordmarks/climb.png').convert('RGBA')
-                got=self.view_image().crop((20,42,220,122))
-                for (r,g,b,a),pixel in zip(source.getdata(),got.getdata()):
-                    if a==255:self.assertEqual(pixel,((r>>3)*255//31,(g>>2)*255//63,(b>>3)*255//31));break
+            self.assertEqual((self.lib.adv_ui_width(),self.lib.adv_ui_height()),(320,240))
         # Climbing for real scrolls every frame; each frame must still equal a full redraw.
         self.lib.host_climb_case(0)
         for _ in range(3):
@@ -239,7 +275,7 @@ class Renderer(unittest.TestCase):
             for _ in range(6):self.steps(5)
         self.ev(OK,PRESS);self.steps(30);self.ev(OK,RELEASE);self.ev(OK,LONG)
         for _ in range(8):self.steps(5)
-        self.ev(UP,LONG);self.assertEqual(self.lib.host_phase(),3)
+        self.ev(DOWN,LONG);self.assertEqual(self.lib.host_phase(),3)
         for _ in range(2):self.ev(UP,PRESS);self.ev(UP,RELEASE);self.ev(UP,CLICK)
         self.ev(UP,DOUBLE);self.assertIn(self.lib.host_page(),(1,5))   # map, or the stamp ceremony first
 
@@ -251,13 +287,14 @@ class Renderer(unittest.TestCase):
             case=getattr(self.lib,'host_'+game+'_case')
             for which,name in enumerate(names+phases):
                 case(which);self.check(game+' '+name);self.save(game+'-'+name+'.png',True)
-                self.assertEqual((self.lib.adv_ui_width(),self.lib.adv_ui_height()),(240,320))
+                self.assertEqual((self.lib.adv_ui_width(),self.lib.adv_ui_height()),(320,240))
             case(0)
             for _ in range(6):self.ev(OK,PRESS);self.steps(4);self.ev(OK,RELEASE);self.steps(10)
             for button in (UP,DOWN):
                 self.ev(button,PRESS);self.steps(12);self.ev(button,RELEASE)
             for _ in range(2):self.ev(UP,PRESS);self.ev(UP,RELEASE);self.ev(UP,CLICK)
-            self.ev(UP,DOUBLE);self.assertIn(self.lib.host_page(),(1,5))
+            self.ev(UP,DOUBLE);self.assertEqual(self.lib.host_page(),7)
+            self.ev(DOWN,LONG);self.ev(UP,DOUBLE);self.assertIn(self.lib.host_page(),(1,5))
 
     def test_space_v2_native_journey_scenes_and_controls(self):
         self.new([0]*9,seen=0xffffff)
@@ -302,18 +339,12 @@ class Renderer(unittest.TestCase):
         self.ev(UP,DOUBLE);self.assertEqual(self.lib.host_page(),1)
         self.assertEqual((self.lib.adv_ui_width(),self.lib.adv_ui_height()),(240,320))
 
-    def test_route_guidance_never_covers_ahead_station_or_its_mail(self):
-        self.new([0,99,0,0,0,0,0,0,0],seen=7)
-        for lane in (0,1):
-            for x in (200,240,280):
-                self.lib.host_post_station_at(lane,x);self.check(f'station visible {lane},{x}')
-                actual=self.view_image()
-                if x==240:self.save('post-station-visible-'+('lower' if lane else 'upper')+'.png',True)
-                self.lib.host_post_station_reference(lane,x);reference=self.view_image()
-                opaque=[(i,p) for i,p in enumerate(reference.getdata()) if p!=(255,0,255)]
-                self.assertGreater(len(opaque),500,'the real station and envelope must be present')
-                scene=list(actual.getdata())
-                self.assertTrue(all(scene[i]==p for i,p in opaque),f'UI obscures station/mail at lane={lane},x={x}')
+    def test_shared_result_count_up_is_incremental_at_each_animation_boundary(self):
+        for game in ('post','night','climb','ski','sky','space'):
+            self.new([0]*9,seen=0)
+            getattr(self.lib,'host_post_session_case' if game=='post' else 'host_'+game+'_case')(12)
+            for ms in (2500,2600,2800,3200,3400,4000):
+                self.lib.host_draw_at(ms);self.check(game+' result animation '+str(ms))
 
     def test_landscape_rotation_has_no_mirror_and_returns_to_portrait(self):
         self.new([0,99,0,0,0,0,0,0,0],seen=7)
@@ -323,7 +354,7 @@ class Renderer(unittest.TestCase):
         image=self.snapshot()
         self.assertEqual([image[y*240+x] for y in (311,312) for x in (9,10,11)],
                          [0x1002,0x1004,0x1006,0x1001,0x1003,0x1005])
-        self.lib.host_full();self.ev(UP,DOUBLE)
+        self.lib.host_full();self.ev(DOWN,LONG);self.ev(UP,DOUBLE)
         self.assertEqual((self.lib.host_page(),self.lib.adv_ui_width(),self.lib.adv_ui_height()),(1,240,320))
 
     def test_viewport_clips_landscape_edges_and_forces_full_orientation_change(self):

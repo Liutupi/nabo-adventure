@@ -10,8 +10,9 @@ from smoke_adventure import SmokeError
 import smoke_post
 
 def telemetry():
-    return {'tick':1,'score':0,'res':1000,'lane':1,'choice':1,'remaining':3,'lap':0,'speed':90,
-            'hold':0,'over':0,'mail':[0]*5,'events':[[0]*6 for _ in range(12)]}
+    return {'v2':1,'tick':1,'score':0,'res':1000,'speed':300,'dist':0,'bags':3,
+            'delivered':0,'perfects':0,'cranes':0,'reds':0,'derails':0,'zone':0,
+            'over':0,'events':[[0]*6 for _ in range(16)]}
 
 class FakeLink:
     def __init__(self):self.commands=[];self.armed=True;self.reads=0;self.statuses=[]

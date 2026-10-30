@@ -21,6 +21,8 @@ EXPECTED = {'nvs': (1, 2, 0x9000, 0x6000), 'phy_init': (1, 1, 0xf000, 0x1000),
             'files': (1, 0x82, 0x700000, 0x100000)}
 LEGACY_EXPECTED = {'nvs': (1, 2, 0x9000, 0x6000), 'phy_init': (1, 1, 0xf000, 0x1000),
                    'factory': (0, 0, APP_OFFSET, 0x1f0000), 'assets': (1, 0x41, 0x200000, 0x600000)}
+LEGACY_RECORD_EXPECTED = {**LEGACY_EXPECTED, 'record': (1, 0x40, 0x200000, 0x10000),
+                          'assets': (1, 0x41, 0x210000, 0x5f0000)}
 
 @dataclass(frozen=True)
 class LayoutProfile:
@@ -38,7 +40,8 @@ class LayoutProfile:
 
 CANONICAL = LayoutProfile('canonical_4m_app', EXPECTED)
 LEGACY = LayoutProfile('legacy_2m_app_6m_assets', LEGACY_EXPECTED)
-LAYOUT_PROFILES = (CANONICAL, LEGACY)
+LEGACY_RECORD = LayoutProfile('legacy_2m_app_record_assets', LEGACY_RECORD_EXPECTED)
+LAYOUT_PROFILES = (CANONICAL, LEGACY, LEGACY_RECORD)
 
 def digest(data):
     return hashlib.sha256(data).hexdigest()
@@ -93,6 +96,12 @@ def check_device(esp, expected_mac):
     if (esp.flash_id() >> 16) & 255 != 0x17:
         raise ValueError('Exactly 8 MB flash is required')
 
+def verify_direct_readback(app, after, head_before, head_after):
+    if after != app:
+        raise ValueError('Application readback mismatch')
+    if len(head_before) != APP_OFFSET or head_before != head_after:
+        raise ValueError('Boot, partition table, NVS or PHY changed')
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--app', type=Path, required=True)
@@ -100,8 +109,10 @@ def main():
     ap.add_argument('--mode', choices=('inspect', 'backup', 'upgrade'), default='inspect')
     ap.add_argument('--port')
     ap.add_argument('--expected-mac')
+    ap.add_argument('--no-backup', action='store_true', help='Upgrade without reading/backing up old firmware; verify app and boot/NVS/PHY only')
     ap.add_argument('--private-dir', type=Path, default=Path('private/device'))
     args = ap.parse_args()
+    if args.no_backup and args.mode == 'backup': ap.error('--no-backup conflicts with --mode backup')
     data = args.app.read_bytes()
     validate_app(data, args.sha256)
     print(f'Candidate verified: {len(data)} bytes; SHA256 {digest(data)}', flush=True)
@@ -132,6 +143,22 @@ def main():
                            protected_regions=[{'start': start, 'end': end} for start, end in protected_ranges(layout)])
             erased_end = validate_app(data, args.sha256, layout)
             receipt['app_erase_end'] = erased_end
+            if args.no_backup:
+                before = cmds.read_flash(esp, 0, APP_OFFSET, no_progress=True)
+                check_device(esp, args.expected_mac)
+                write_attempted = True
+                cmds.write_flash(esp, [(layout.app_offset, data)], flash_mode='keep', flash_freq='keep', flash_size='keep')
+                cmds.verify_flash(esp, [(layout.app_offset, data)])
+                after = cmds.read_flash(esp, layout.app_offset, len(data), no_progress=True)
+                head = cmds.read_flash(esp, 0, APP_OFFSET, no_progress=True)
+                verify_direct_readback(data, after, before, head)
+                receipt.update(status='PASS: APPLICATION READBACK VERIFIED; BOOT NOT YET OBSERVED',
+                               app_readback_sha256=digest(after), boot_nvs_phy_unchanged=True,
+                               boot_nvs_phy_sha256=digest(head), backup_created=False,
+                               preserved_scope='boot/NVS/PHY byte comparison; record/assets protected by write bounds, not read back')
+                save(); cmds.reset_chip(esp)
+                print(f'PASS: application verified; no firmware backup; receipt {receipt_path.name}', flush=True)
+                return
             print(f'Identity, security and exact {layout.name} partition map verified; '
                   f'factory {layout.app_offset:#x}..{layout.app_end:#x}. Reading full private backup...', flush=True)
             backup = cmds.read_flash(esp, 0, FLASH_SIZE, no_progress=True)

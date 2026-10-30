@@ -1,5 +1,7 @@
 # POST V2「邮政快车」G0 概念 + G1 试玩
 
+> 2026-10-30 Codex：用户已明确认可本款 G1；`firmware/main/adv_post_v2.c/.h` 和横屏画面已接入，共用卡片已接入。V1 源码/规则对拍保留。新规则对拍在 `tests/v2_golden/post/`，统一录制入口 `node tests/record_v2_golden.js post`；宿主与构建通过，新候选未上机，详见 `docs/HANDOFF.md` 顶部。
+
 2026-10-30 Claude 云端。用户看过 SKY/CLIMB V2 试玩后要求“其他款也按这个标准”，并选择**小火车重做玩法**。只到 **G1 浏览器试玩**，**用户认可前不改 C、不动固件素材、不删 V1**（`adv_post.c` 仍是双轨/颜色信/OK 短按长按）。
 
 | 用途 | 文件 |

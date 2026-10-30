@@ -7137,6 +7137,57 @@
       ],
       "color_limit": 8,
       "source_svg": "games/sky/props/controls_idle.svg"
+    },
+    {
+      "id": "sky/v2/envelope",
+      "path": "games/sky/v2/envelope.png",
+      "sha256": "64ae35fd9143846b6747cfaf17fd2c9bfea97488de64b5281cd6bf330c282811",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        0
+      ],
+      "color_limit": 16,
+      "derived_from": "games/sky/props/envelope.png",
+      "source_sha256": "4e2e3719faa7bcf8c53cdb155503c29b385ed7ff624585b82266bf9d8c92e4e1",
+      "recipe": "prepare_sky_v2.py: nearest, 2/3, binary alpha; machine part only"
+    },
+    {
+      "id": "sky/v2/basket_front",
+      "path": "games/sky/v2/basket_front.png",
+      "sha256": "1cf1058f4037605a1abf94d4043f159f7e35a1d4628f33d2a6020bdb44460b75",
+      "size": [
+        43,
+        19
+      ],
+      "anchor": [
+        21,
+        0
+      ],
+      "color_limit": 16,
+      "derived_from": "games/sky/props/basket_front.png",
+      "source_sha256": "711c10341677d84d6df2b80910c2bb6940d0a6dfd31632801e1135447c550af2",
+      "recipe": "prepare_sky_v2.py: nearest, 2/3, binary alpha; machine part only"
+    },
+    {
+      "id": "sky/v2/basket_back",
+      "path": "games/sky/v2/basket_back.png",
+      "sha256": "2e65ef5606432e12e61e916f406027d59fe1decf3d682f033ab3c6940c6ac27e",
+      "size": [
+        43,
+        7
+      ],
+      "anchor": [
+        21,
+        0
+      ],
+      "color_limit": 8,
+      "derived_from": "games/sky/props/basket_back.png",
+      "source_sha256": "980df5635f2987a40c765f075b52bb1e3577f2a9935bb09de0c8ba953d40d4cd",
+      "recipe": "prepare_sky_v2.py: nearest, 2/3, binary alpha; machine part only"
     }
   ],
   "budget_bytes": 266240,

@@ -4,8 +4,6 @@
 #include <string.h>
 #include "adv_demo.h"
 #include "adv_model.h"
-#include "adv_post_view.h"
-#include "adv_climb_view.h"
 #include "adv_space.h"
 
 static adv_model_t model;
@@ -47,23 +45,10 @@ int host_snapshot(char *out, int size)
                       (unsigned)m->seed, m->record ? 1 : 0);
     else n += snprintf(out + n, size - n, "\"session\":null,");
     if (m->in_session && m->phase != ADV_TITLE) {
-        if(m->station==3) {
-            int64_t values[POST_VALUES];post_values(m->game,values);
-            n+=snprintf(out+n,size-n,"\"game\":[");
-            for(int i=0;i<POST_VALUES;i++)n+=snprintf(out+n,size-n,"%s%lld",i?",":"",(long long)values[i]);
-            return n+snprintf(out+n,size-n,"]}");
-        }
-        if(m->station>=6||m->station==4){
-            // NIGHT/SKI/SKY/SPACE states are 3 uint32 + int32 words, the same order as their JS view().
+        if(m->station>=3){
             size_t words=adv_station[m->station].game->state_size/4;const int32_t *w=m->game;
             n+=snprintf(out+n,size-n,"\"game\":[");
             for(size_t i=0;i<words;i++)n+=snprintf(out+n,size-n,"%s%lld",i?",":"",i<3?(long long)(uint32_t)w[i]:(long long)w[i]);
-            return n+snprintf(out+n,size-n,"]}");
-        }
-        if(m->station==5){
-            int64_t values[CLIMB_VALUES];climb_values(m->game,values);
-            n+=snprintf(out+n,size-n,"\"game\":[");
-            for(int i=0;i<CLIMB_VALUES;i++)n+=snprintf(out+n,size-n,"%s%lld",i?",":"",(long long)values[i]);
             return n+snprintf(out+n,size-n,"]}");
         }
         const adv_demo_t *g = m->game;

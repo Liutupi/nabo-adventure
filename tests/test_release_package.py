@@ -3,12 +3,30 @@ import sys
 from pathlib import Path
 import tempfile
 import unittest
+import copy
+from unittest.mock import patch
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'tools'))
-from package_release import safe_member,verify_padding,frozen_write,sha
+from package_release import safe_member,verify_padding,frozen_write,sha,validate_binding
 from verify_release import parse_sums
 
 class ReleaseGuards(unittest.TestCase):
+    def test_release_requires_exact_app_and_completed_eight_game_readback(self):
+        app=b'accepted firmware';digest=sha(app)
+        valid={'candidate_sha256':digest,'status':'BUILD AND HOST PASS; DEVICE SERIAL AUTOMATION PASS',
+               'device':{'application_readback_verified':True,'normal_mode_restored':True,
+                         'nvs_unchanged_after_tests':True,'games':dict.fromkeys(('jump','dive','post','night','climb','ski','sky','space'))}}
+        with patch('package_release.APP_SHA',digest):
+            validate_binding(app,valid)
+            with self.assertRaises(ValueError):validate_binding(b'rebuilt',valid)
+            wrong=copy.deepcopy(valid);wrong['status']='BUILD AND HOST PASS; DEVICE NOT RUN'
+            with self.assertRaises(ValueError):validate_binding(app,wrong)
+            for key in ('application_readback_verified','normal_mode_restored','nvs_unchanged_after_tests'):
+                wrong=copy.deepcopy(valid);wrong['device'][key]=False
+                with self.assertRaises(ValueError):validate_binding(app,wrong)
+            wrong=copy.deepcopy(valid);del wrong['device']['games']['sky']
+            with self.assertRaises(ValueError):validate_binding(app,wrong)
+
     def test_rejects_archive_traversal_and_absolute_names(self):
         for name in ('../app.bin','/app.bin','C:/app.bin','tools\\app.py'):
             with self.subTest(name=name),self.assertRaises(ValueError):safe_member(name)

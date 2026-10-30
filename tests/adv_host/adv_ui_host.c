@@ -4,11 +4,11 @@
 #include <string.h>
 #include "adv_gfx.h"
 #include "adv_model.h"
-#include "adv_post.h"
+#include "adv_post_v2.h"
 #include "adv_night.h"
-#include "adv_climb.h"
+#include "adv_climb_v2.h"
 #include "adv_ski.h"
-#include "adv_sky.h"
+#include "adv_sky_v2.h"
 #include "adv_space.h"
 #include "adv_ui.h"
 #include "adv_ui_art.h"
@@ -128,47 +128,25 @@ int host_viewport_edges(void)
     return !viewport_bad&&gfx.bytes==153600&&viewport_pixels[319*320+239]==0x3579;
 }
 
+static void *late_open(int station);
+static void late_phase(int which,int station,uint32_t score,int *res,int *over,uint32_t *pscore);
 void host_post_case(int which)
 {
-    if(model.in_session&&model.station!=3)adv_event(&model,ADV_BTN_UP,ADV_EV_DOUBLE);
-    if(!model.in_session){model.test=true;model.page=ADV_PAGE_MAP;adv_test_open(&model,3);}
-    model.phase=ADV_PLAY;adv_post_t *p=model.game;adv_post_start(p,1234);
-    p->tick=10;p->distance=600;p->next_fork=p->next_coal=p->next_animal=10000;
-    if(which==1){p->whistle=1;p->hold=ADV_POST_HOLD+10;}
-    if(which==2){p->lane=0;p->y=ADV_POST_UPPER;p->hit=24;}
-    if(which==3)p->delivered=50;
-    if(which==4)p->delivered=20;
-    if(which==5){p->lane=0;p->y=172;p->transition=40;p->events[0]=(adv_post_event_t){POST_FORK,110*60,0,0,1,0};}
-    if(which==6){
-        p->remaining=5;p->mail[3]=3;p->mail[4]=1;
-        const adv_post_event_t events[]={
-            {POST_FORK,50*60,0,0,0,0},{POST_FORK,275*60,0,0,0,0},
-            {POST_STATION,200*60,0,0,0,0},{POST_STATION,170*60,1,2,0,0},
-            {POST_ANIMAL,220*60,0,1,0,0},{POST_ANIMAL,180*60,1,0,0,0},
-            {POST_COAL,235*60,1,0,0,0},{POST_COAL,130*60,0,0,0,0},
-            {POST_COAL,10*60,1,0,0,0},{POST_DEPOT,225*60,1,0,0,0},
-            {POST_STATION,-10*60,0,1,1,0},{POST_ANIMAL,250*60,0,0,2,36}};
-        memcpy(p->events,events,sizeof(events));
-    }
-    if(which==7)p->events[0]=(adv_post_event_t){POST_STATION,ADV_POST_MAIL_X,p->lane,p->mail[0],0,0};
-    if(which==8){p->miss_reason=2;p->feedback=90;}
-    if(which>=9&&which<=12) {
-        int lane=which==10?1:0;
-        if(which==10){p->lane=p->choice=0;p->y=ADV_POST_UPPER;}
-        if(which==12)p->choice=0;
-        p->events[0]=(adv_post_event_t){POST_FORK,(which==11?90:240)*60,0,0,which==11,0};
-        p->events[1]=(adv_post_event_t){POST_STATION,(which==11?190:340)*60,lane,p->mail[0],0,0};
-    }
+    adv_post_v2_t *p=late_open(3);adv_post_v2_start(p,1234);p->tick=10;p->nextEvent=100000;
+    if(which==1){p->v=900;p->steaming=1;}
+    if(which==2){p->stun=30;p->reds=1;p->fx[0]=(adv_post_v2_fx_t){POST_V2_FX_RED,196,136,160,6};}
+    if(which==3)p->fx[0]=(adv_post_v2_fx_t){POST_V2_FX_NET,120,142,20,5};
+    if(which==4){p->fx[0]=(adv_post_v2_fx_t){POST_V2_FX_PERFECT,120,142,40,15};p->score=40;p->delivered=2;}
+    if(which==5){p->braking=1;p->v=400;p->zone=360;p->ev[0]=(adv_post_v2_event_t){POST_V2_T_LIMIT,180,360,180,0,0};}
+    if(which==6)for(int i=0;i<POST_V2_EVENTS;i++)p->ev[i]=(adv_post_v2_event_t){1+i%5,20+i*20,80+i*10,60,1,0};
+    if(which==7)p->ev[0]=(adv_post_v2_event_t){POST_V2_T_NET,120,0,0,0,0};
+    if(which==8){p->bags=0;p->ev[0]=(adv_post_v2_event_t){POST_V2_T_NET,140,0,0,0,0};}
+    if(which>=9&&which<=12)p->ev[0]=(adv_post_v2_event_t){POST_V2_T_CRANE,110+(which-9)*12,0,0,0,0};
 }
 
 void host_night_case(int which)
 {
-    if(model.in_session&&model.station!=4)adv_event(&model,ADV_BTN_UP,ADV_EV_DOUBLE);
-    if(!model.in_session){model.test=true;model.page=ADV_PAGE_MAP;adv_test_open(&model,4);}
-    // V2 scenes from the real rules: 0 walk, 1 run with a group ahead, 2 swing catching, 3 moth + gold,
-    // 4 low light with a root, 5 owl ring, 6 burst, 7 event banner, 8 title, 9 ready, 10 pause, 11 end,
-    // 12 result record, 13 max result, 14 dense swarm (op budget).
-    model.phase=ADV_PLAY;adv_night_t *p=model.game;adv_night_start(p,1234);
+    model.phase=ADV_PLAY;adv_night_t *p=late_open(4);adv_night_start(p,1234);
     adv_input_t walk={0},run={.up_held=1},swing={.down_down=1};
     for(int i=0;i<200;i++)adv_night_step(p,which==1?&run:&walk);
     int32_t base=p->x>>8;
@@ -186,47 +164,32 @@ void host_night_case(int which)
     if(which==9){model.phase=ADV_READY;model.t=120;}
     if(which==10)model.phase=ADV_PAUSE;
     if(which==11){model.phase=ADV_END;model.t=60;p->light=0;p->res=0;p->over=1;}
-    if(which==12||which==13){model.phase=ADV_RESULT;p->score=which==13?UINT32_MAX:1268;p->caught=412;p->max_combo=57;p->bursts=3;p->last_loss=NIGHT_LOSS_OWL;model.best[4]=p->score;model.record=which==12;model.test=false;}
+    if(which==12||which==13){model.phase=ADV_RESULT;p->score=which==13?UINT32_MAX:1268;p->caught=412;p->max_combo=57;p->bursts=3;p->last_loss=NIGHT_LOSS_OWL;model.best[4]=p->score;model.record=which==12;model.test=false;host_draw();now+=1400;}
 }
 
-// CLIMB scenes: 0 idle, 1 switch mid-air, 2 charging, 3 jump, 4 slide after a hit, 5 fragile/ice/canteen,
-// 6 rock warning + falling rocks, 7 snow zone, 8 title, 9 ready, 10 pause, 11 end, 12 result record, 13 max result,
-// 14 milestone cheer, 15 cold zone.
+// V2 scenes exercise both lanes, ice, traverses, rocks and every shell card.
 void host_climb_case(int which)
 {
-    if(model.in_session&&model.station!=5)adv_event(&model,ADV_BTN_UP,ADV_EV_DOUBLE);
-    if(!model.in_session){model.test=true;model.page=ADV_PAGE_MAP;adv_test_open(&model,5);}
-    model.phase=ADV_PLAY;adv_climb_t *p=model.game;adv_climb_start(p,1234);p->tick=10;p->rock_next=100000;
-    adv_input_t none={0},down={.ok_down=1,.ok_held=1},held={.ok_held=1},up={.ok_up=1};
-    if(which==1){adv_climb_step(p,&down);adv_climb_step(p,&up);for(int i=0;i<12;i++)adv_climb_step(p,&none);}
-    if(which==2){adv_climb_step(p,&down);for(int i=0;i<26;i++)adv_climb_step(p,&held);}
-    if(which==3){adv_climb_step(p,&down);for(int i=0;i<20;i++)adv_climb_step(p,&held);adv_climb_step(p,&up);for(int i=0;i<14;i++)adv_climb_step(p,&none);}
-    if(which==4){p->row=3;p->score=8;p->rocks[0]=(adv_climb_rock_t){1,0,3*ADV_CLIMB_ROW+20};adv_climb_step(p,&none);for(int i=0;i<10;i++)adv_climb_step(p,&none);}
-    if(which==5){p->row=2;p->side=1;p->grid[2]=CLIMB_NORMAL|(CLIMB_ICE<<2);p->grid[3]=CLIMB_FRAGILE|(CLIMB_NORMAL<<2)|(1<<5);
-        p->grid[4]=CLIMB_ICE|(CLIMB_FRAGILE<<2)|(1<<4);p->res=200;}
-    if(which==6){p->score=40;p->rocks[0]=(adv_climb_rock_t){1,0,14*ADV_CLIMB_ROW};p->rocks[1]=(adv_climb_rock_t){1,1,3*ADV_CLIMB_ROW};
-        p->rocks[2]=(adv_climb_rock_t){1,0,4*ADV_CLIMB_ROW};p->rocks[3]=(adv_climb_rock_t){1,1,12*ADV_CLIMB_ROW};}
-    if(which==7||which==15){int row=which==7?240:150;
-        for(int r=row-10;r<=row+12;r++){p->gen_top=r;p->grid[r%ADV_CLIMB_RING]=(uint8_t)(r%3==0?CLIMB_NORMAL|(CLIMB_ICE<<2):r%3==1?CLIMB_NORMAL:CLIMB_ICE<<2);}
-        p->row=row;p->score=(uint32_t)row;p->side=0;}
-    if(which==8)model.phase=ADV_TITLE;
-    if(which==9){model.phase=ADV_READY;model.t=120;}
-    if(which==10)model.phase=ADV_PAUSE;
-    if(which==11){model.phase=ADV_END;model.t=60;p->res=0;p->over=1;}
-    if(which==12||which==13){model.phase=ADV_RESULT;p->score=which==13?UINT32_MAX:186;model.best[5]=p->score;model.record=which==12;model.test=false;}
-    if(which==14){p->row=50;p->score=50;p->cheer=30;p->feedback=60;p->message=CLIMB_MSG_MILESTONE;
-        for(int r=40;r<=62;r++){p->gen_top=r;p->grid[r%ADV_CLIMB_RING]=CLIMB_NORMAL|(CLIMB_NORMAL<<2);}}
+    adv_climb_v2_t *p=late_open(5);adv_climb_v2_start(p,1234);p->tick=10;p->nextRock=100000;
+    if(which==1||which==3){p->trav=7;p->row=3;}
+    if(which==2){p->row=1;p->ice=8;p->iceSide=1;p->rows[1].h0=CLIMB_V2_H_ICE;}
+    if(which==4){p->row=3;p->stun=12;p->slips=1;}
+    if(which==5){p->row=2;p->lane=1;p->rows[2]=(adv_climb_v2_row_t){1,3,0,0};p->rows[3]=(adv_climb_v2_row_t){2,1,0,1};p->rows[4]=(adv_climb_v2_row_t){3,2,2,0};p->res=200;}
+    if(which==6){p->rocks[0]=(adv_climb_v2_rock_t){1,0,30,-16,0};p->rocks[1]=(adv_climb_v2_rock_t){1,1,0,100,0};p->rocks[2]=(adv_climb_v2_rock_t){1,0,0,180,0};}
+    if(which==7||which==15){p->row=which==7?240:150;p->genRow=p->row+15;for(int i=0;i<CLIMB_V2_ROWS;i++)p->rows[i]=(adv_climb_v2_row_t){1+i%3,3-i%3,i%3==0,0};}
+    if(which==14){p->section=CLIMB_V2_SEC_NIGHT;p->combo=24;p->fx[0]=(adv_climb_v2_fx_t){CLIMB_V2_FX_SECTION,160,100,CLIMB_V2_SEC_NIGHT,15};}
+    late_phase(which,5,286,&p->res,&p->over,&p->score);
 }
 
 static void *late_open(int station)
 {
     if(model.in_session&&model.station!=station){
-        if((model.station==4||model.station==6||model.station==8)&&model.phase==ADV_PLAY)
+        if((model.station>=3&&model.station<=8)&&model.phase==ADV_PLAY)
             adv_event(&model,ADV_BTN_DOWN,ADV_EV_LONG);
         adv_event(&model,ADV_BTN_UP,ADV_EV_DOUBLE);
     }
     if(!model.in_session){model.test=true;model.page=ADV_PAGE_MAP;adv_test_open(&model,station);}
-    model.phase=ADV_PLAY;return model.game;
+    model.phase=ADV_PLAY;model.seed++;model.best_before=0;return model.game;
 }
 static void late_phase(int which,int station,uint32_t score,int *res,int *over,uint32_t *pscore)
 {
@@ -234,7 +197,12 @@ static void late_phase(int which,int station,uint32_t score,int *res,int *over,u
     if(which==9){model.phase=ADV_READY;model.t=120;}
     if(which==10)model.phase=ADV_PAUSE;
     if(which==11){model.phase=ADV_END;model.t=60;*res=0;*over=1;}
-    if(which==12||which==13){model.phase=ADV_RESULT;*pscore=which==13?UINT32_MAX:score;model.best[station]=*pscore;model.record=which==12;model.test=false;}
+    if(which==12||which==13){model.phase=ADV_RESULT;*pscore=which==13?UINT32_MAX:score;model.best[station]=*pscore;model.record=which==12;model.test=false;host_draw();now+=1400;}
+}
+void host_post_session_case(int which)
+{
+    host_post_case(0);adv_post_v2_t *p=model.game;
+    late_phase(which,3,512,&p->res,&p->over,&p->score);
 }
 // SKI V2: 0 straight, 1 carving, 2 hop, 3 tree crash, 4 kicker spin, 5 dense course, 6 gate pass + section,
 // 7 avalanche close in fog, 8.. phases (title, ready, pause, end, result, max-record).
@@ -254,23 +222,17 @@ void host_ski_case(int which)
     if(which==7){p->section=SKI_SEC_FOG;p->section_t=300;p->aval=p->y-(40<<8);adv_ski_step(p,&none);}
     late_phase(which,6,1268,&p->res,&p->over,&p->score);
 }
-// SKY: 0 drifting, 1 heating, 2 venting, 3 hit, 4 stamp, 5 dense sky, 6 low over treetops, 7 warm current.
+// SKY V2: envelope, active wind layers, letters, houses, trees and storms.
 void host_sky_case(int which)
 {
-    adv_sky_t *p=late_open(7);adv_sky_start(p,4321);
-    adv_input_t none={0},heat={.ok_held=1};
-    for(int i=0;i<60;i++)adv_sky_step(p,&none);
-    for(int i=0;i<ADV_SKY_CAP;i++)p->objs[i]=(adv_sky_obj_t){0};
-    int d=p->dist>>4,a=p->alt>>4;
-    if(which==1)for(int i=0;i<20;i++)adv_sky_step(p,&heat);
-    if(which==2)p->vy=-32;
-    if(which==3){p->invuln=ADV_SKY_INVULN-6;p->message=SKY_MSG_STORM;p->feedback=54;p->res=700;}
-    if(which==4){p->message=SKY_MSG_STAMP;p->feedback=50;p->bonus=10;}
-    if(which==5)for(int i=0;i<ADV_SKY_CAP;i++)p->objs[i]=(adv_sky_obj_t){1+i%4,d+40+i*24,a-100+(i*47)%260,i*9,0};
-    if(which==6){p->alt=20*16;}
-    if(which==7)p->objs[0]=(adv_sky_obj_t){SKY_WARM,d+110,a+20,0,0};
-    if(which==0){p->objs[0]=(adv_sky_obj_t){SKY_STORM,d+120,a+150,0,0};p->objs[1]=(adv_sky_obj_t){SKY_BIRD,d+90,a+40,8,0};}
-    late_phase(which,7,640,&p->res,&p->over,&p->score);
+    adv_sky_v2_t *p=late_open(7);adv_sky_v2_start(p,4321);p->nextGround=p->nextSky=100000;p->tick=100;
+    if(which==1)p->heating=1;if(which==2)p->venting=1;if(which==3){p->invuln=64;p->res=700;}
+    if(which==4){p->combo=4;p->score=340;p->letters[0]=(adv_sky_v2_letter_t){1,100*256,180*256,450,300,140};}
+    if(which==5)for(int i=0;i<SKY_V2_OBJS;i++)p->objs[i]=(adv_sky_v2_obj_t){1+i%5,20+i*15,40+i*7,i%4,180+i,0,0};
+    if(which==6){p->y=204*256;p->objs[0]=(adv_sky_v2_obj_t){SKY_V2_T_TREE,160,170,0,0,0,0};}
+    if(which==7)p->objs[0]=(adv_sky_v2_obj_t){SKY_V2_T_TANK,180,140,0,0,0,0};
+    if(which==0){p->objs[0]=(adv_sky_v2_obj_t){SKY_V2_T_HOUSE,200,185,1,0,0,0};p->objs[1]=(adv_sky_v2_obj_t){SKY_V2_T_STORM,250,45,0,190,0,0};}
+    late_phase(which,7,1240,&p->res,&p->over,&p->score);
 }
 // SPACE V2: ignition, ascent, boost, touchdown, flag, lost, orbit objects, TLI; 8..13 shell phases; 14 dense, 15 separation, 16 upper sky, 17 landing.
 void host_space_case(int which)
@@ -291,37 +253,6 @@ void host_space_case(int which)
     if(which==15){p->mode=SPACE_FLY;p->alt=4100<<8;p->sep=1;p->sepT=75;}
     if(which==16){p->mode=SPACE_FLY;p->alt=6800<<8;p->sep=2;p->boostT=30;}
     if(which==17){p->mode=SPACE_LAND;p->pad=210;p->lx=180<<8;p->ly=125<<8;p->lvy=380;p->boostT=6;}
-}
-
-void host_post_station_at(int lane,int x)
-{
-    host_post_case(0);adv_post_t *p=model.game;
-    p->events[0]=(adv_post_event_t){POST_STATION,x*60,lane,p->mail[0],0,0};
-    adv_ui_invalidate();
-}
-
-// Draw the native station alone on a sentinel background. The test compares
-// every opaque station/mail pixel against the complete production scene.
-void host_post_station_reference(int lane,int x)
-{
-    extern void adv_ui_send(void *,int,int,int,int,uint16_t *);
-    static ag_t gfx;static uint16_t strips[2][AG_MAX_W*AG_STRIP];
-    ag_init(&gfx,strips[0],strips[1],adv_ui_send,NULL);ag_viewport(&gfx,320,240);
-    ag_begin(&gfx,99);ag_rect(&gfx,0,0,320,240,0,0xf81f,255,0,0);
-    int y=lane?ADV_POST_LOWER:ADV_POST_UPPER;
-    ui_art_tint(&gfx,"game/post/props/station-platform-mask",x-40,y-66,0xcae6);
-    ui_art(&gfx,"game/post/props/envelope-red",0,x-16,y-64);ag_flush(&gfx);
-}
-
-void host_post_practice_case(int lesson)
-{
-    host_post_case(0);adv_post_t *p=model.game;adv_post_start_practice(p,42);
-    adv_input_t in={.up_down=1};
-    if(lesson>0)adv_post_step(p,&in);
-    if(lesson>1){in=(adv_input_t){0};for(int i=0;i<240;i++)adv_post_step(p,&in);}
-    if(lesson>2){in=(adv_input_t){.ok_down=1,.ok_held=1};adv_post_step(p,&in);in=(adv_input_t){.ok_up=1};adv_post_step(p,&in);}
-    if(lesson>3){in=(adv_input_t){.ok_down=1,.ok_held=1};adv_post_step(p,&in);in=(adv_input_t){.ok_held=1};for(int i=0;i<60;i++)adv_post_step(p,&in);}
-    if(lesson>4){in=(adv_input_t){.ok_up=1};adv_post_step(p,&in);}
 }
 
 // ---------- legacy jump ----------

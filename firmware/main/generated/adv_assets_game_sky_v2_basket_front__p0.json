@@ -1,0 +1,54 @@
+{
+  "format": "adv-row-rle-v4",
+  "name": "adv_assets_game_sky_v2_basket_front__p0",
+  "width": 43,
+  "height": 19,
+  "palette_rgb565": [
+    0,
+    16870,
+    25158,
+    37704,
+    48202,
+    50380
+  ],
+  "background_rgb888": null,
+  "key_interval": 8,
+  "keys": [
+    0
+  ],
+  "frame_map": null,
+  "data_bytes": 283,
+  "table_bytes": 54,
+  "frame_sha256": [
+    "1d38f89be0d8d216547bb81c72a588263518461224a893b7062ab4b643fb2ff6"
+  ],
+  "source_sha256": [
+    "1cf1058f4037605a1abf94d4043f159f7e35a1d4628f33d2a6020bdb44460b75"
+  ],
+  "verified_frames": 1,
+  "comparison": "lossless after shared RGB565 quantization",
+  "resource_id": "game/sky/v2/basket_front",
+  "group": "sky",
+  "symbol": "adv_assets_game_sky_v2_basket_front__p0",
+  "offset": [
+    0,
+    0
+  ],
+  "original_sources": [
+    {
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/games/sky/v2/basket_front.png",
+      "sha256": "1cf1058f4037605a1abf94d4043f159f7e35a1d4628f33d2a6020bdb44460b75"
+    }
+  ],
+  "descriptor_bytes_c3": 32,
+  "logical_uses": [
+    {
+      "resource_id": "game/sky/v2/basket_front",
+      "logical_symbol": "adv_assets_game_sky_v2_basket_front__p0",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ]
+}

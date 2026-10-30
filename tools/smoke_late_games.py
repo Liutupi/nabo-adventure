@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
-"""Guarded SKI/SKY/SPACE lifecycle checks through real input events.
+"""Guarded V2 landscape lifecycle, natural-ending and memory checks.
 
-SKI and SPACE are V2 (landscape, 2026-10-26): middle DOWN starts/resumes, long DOWN pauses, UP never leaves while
-playing, and the map is reached from the pause page.
-
-This checks natural round endings, controls and allocations, not expert scoring
-or physical button feel. Test mode is acknowledged before any game input.
+All five games here use middle DOWN to start/resume/pause and only leave play
+through the pause page. This suite never certifies physical feel or readability.
 """
 import argparse
 from datetime import datetime
@@ -16,7 +13,7 @@ from smoke_adventure import Link,SmokeError,verify_candidate,analyse_memory
 from smoke_post import BufferedPort,restore,edge,tap
 
 ROOT=Path(__file__).resolve().parents[1]
-STATIONS={'ski':6,'sky':7,'space':8}
+STATIONS={'post':3,'climb':5,'ski':6,'sky':7,'space':8}
 
 def short_pair(link,button,event):
     for _ in range(2):tap(link,button)
@@ -28,7 +25,7 @@ def enter(link,name):
     elif s['page']!=1:raise SmokeError('Entry requires map or cover')
     link.send('>adv.open='+name);s=link.expect(7)
     if s['station']!=STATIONS[name] or s['phase']!=0:raise SmokeError('Wrong game title')
-    link.key('down' if name in ('ski','space') else 'ok');deadline=time.monotonic()+12
+    link.key('down');deadline=time.monotonic()+12
     while time.monotonic()<deadline:
         s=link.expect(7)
         if s['phase']==2:return s
@@ -38,7 +35,7 @@ def enter(link,name):
 
 def controls(link,name):
     start=enter(link,name)
-    if name in ('ski','space'):
+    if name in STATIONS:
         for button in (0,2):edge(link,button,True);time.sleep(.3);edge(link,button,False)
         for _ in range(2):tap(link,0)
         link.key('double_up')
@@ -54,18 +51,6 @@ def controls(link,name):
         if link.expect(7)['phase']!=3:raise SmokeError('Second '+name+' pause failed')
         link.key('double_up')
         return {'initial_heap':start['heap'],'map':link.map()}
-    link.key('long_up')
-    paused=link.expect(7)
-    if paused['phase']!=3:raise SmokeError('Pause gesture failed')
-    time.sleep(.45);frozen=link.expect(7)
-    if (frozen['res'],frozen['score'])!=(paused['res'],paused['score']):raise SmokeError('Paused resources/score advanced')
-    link.key('ok')
-    if link.expect(7)['phase']!=2:raise SmokeError('OK did not resume')
-    # Exercise the game's primary raw action, then release before returning.
-    edge(link,2,True);time.sleep(.35);edge(link,2,False)
-    if link.expect(7)['phase']!=2:raise SmokeError('Primary action left play')
-    short_pair(link,0,'double_up')
-    return {'initial_heap':start['heap'],'map':link.map()}
 
 def natural_ending(link,name):
     start=enter(link,name);at=time.monotonic();last=start;phases={2};profile=[]
@@ -92,12 +77,13 @@ def natural_ending(link,name):
         last=s;time.sleep(.2)
     raise SmokeError(f'{name} did not naturally end; last phase {last["phase"]}')
 
-def main():
+def main(argv=None):
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--port',required=True);ap.add_argument('--app',type=Path,required=True)
     ap.add_argument('--sha256',required=True);ap.add_argument('--receipt',type=Path,required=True)
     ap.add_argument('--rounds',type=int,default=10)
-    args=ap.parse_args()
+    ap.add_argument("--game",choices=tuple(STATIONS),action="append",dest="games")
+    args=ap.parse_args(argv)
     if args.rounds<2:ap.error('--rounds must be >=2')
     verify_candidate(args.app,args.sha256,args.receipt,args.port)
     import serial
@@ -105,13 +91,14 @@ def main():
     stamp=datetime.now().strftime('%Y%m%d-%H%M%S');result={'candidate_sha256':args.sha256,'status':'INCOMPLETE','games':{}}
     with (folder/(stamp+'.log')).open('w',encoding='utf-8') as log:
         p=serial.Serial(port=None,baudrate=115200,timeout=.05);p.dtr=p.rts=False;p.port=args.port;p.open()
-        p.set_buffer_size(rx_size=1024*1024,tx_size=16384);link=Link(BufferedPort(p),log);owned=False
+        if hasattr(p,"set_buffer_size"):p.set_buffer_size(rx_size=1024*1024,tx_size=16384)
+        link=Link(BufferedPort(p),log);owned=False
         try:
             initial=link.status()
             if initial['test'] or initial['owner'] or initial['page'] not in (0,1):raise SmokeError('Start in normal cover/map, no real game')
             before=(initial['best'],initial['seen']);owned=True;link.enable_test()
             for button in range(3):edge(link,button,True);edge(link,button,False)
-            for name in STATIONS:
+            for name in (args.games or STATIONS):
                 print('START '+name,flush=True);samples=[]
                 for n in range(args.rounds+1):
                     check=controls(link,name);samples.append(check['map'])

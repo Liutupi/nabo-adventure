@@ -5,6 +5,7 @@
 #include "esp_heap_caps.h"
 #include "adv_space.h"
 #include "adv_ui_internal.h"
+#include "adv_ui_cards.h"
 #define RY ADV_SPACE_RY
 #define RGB(r,g,b) ((uint16_t)((((r)>>3)<<11)|(((g)>>2)<<5)|((b)>>3)))
 #define INK RGB(6,10,30)
@@ -281,7 +282,8 @@ static void effects(ag_t *g,const adv_space_t *p)
 }
 void ui_draw_space_session(ag_t *g,const adv_model_t *m)
 {
-    uint32_t ms=ui_millis();unsigned vt=ms/1000u*60u+ms%1000u*60u/1000u;
+    static int prior_phase=-1;static uint32_t prior_seed,started;
+    uint32_t ms=ui_millis();if(prior_phase!=m->phase||prior_seed!=m->seed){prior_phase=m->phase;prior_seed=m->seed;started=ms;}unsigned vt=ms/1000u*60u+ms%1000u*60u/1000u;
     const adv_space_t *p=m->game;s_marks.n=s_marks.first=s_marks.groups=0;s_marks.overflow=false;
     ag_begin(g,m->phase==ADV_TITLE?UI_SCENE_TITLE:m->phase==ADV_RESULT?UI_SCENE_RESULT:UI_SCENE_PLAY);
     if(!s_marks.m)s_marks.m=heap_caps_malloc(1024u*sizeof(mark_t),MALLOC_CAP_INTERNAL);
@@ -291,24 +293,17 @@ void ui_draw_space_session(ag_t *g,const adv_model_t *m)
     }
     cloud_prepare();s_cloud.used=0;
     if(m->phase==ADV_TITLE){
-        backdrop(g,0,vt);rocket(g,p,vt,false);flush_marks(g);ag_rect(g,0,0,320,96,0,INK,205,0,0);
-        text(g,"火箭登月",160,15,18,NT_ALIGN_CENTER,WHITE);text(g,"左移 · 中键加速/关键时刻按 · 右移",160,48,12,NT_ALIGN_CENTER,WHITE);
-        text(g,"点火 → 升空 → 分离 → 奔月 → 登月",160,70,12,NT_ALIGN_CENTER,GOLD);
-        if(vt%60<42)text(g,"中键开始",160,107,16,NT_ALIGN_CENTER,WHITE);
-        text(g,"长按中键暂停 · 暂停后双击右键返回",160,222,12,NT_ALIGN_CENTER,WHITE);return;
+        backdrop(g,0,vt);rocket(g,p,vt,false);flush_marks(g);ui_v2_title(g,m);return;
     }
     bool lunar=p->mode==SPACE_LAND||p->mode==SPACE_ENDING||(p->mode==SPACE_LOST&&p->lvy+p->ly>0);
     if(lunar)landing(g,p,vt,m->phase==ADV_PLAY);else{backdrop(g,p->alt>>8,vt);objects(g,p,vt);flush_marks(g);rocket(g,p,vt,p->mode==SPACE_FLY||(p->mode==SPACE_IGNITE&&p->ign));}
     flush_marks(g);timing(g,p);effects(g,p);cockpit(g,p,vt);hud(g,p,vt);
-    if(m->phase==ADV_READY){ag_rect(g,78,88,164,54,9,INK,240,0,0);text(g,"准备发射",160,98,18,NT_ALIGN_CENTER,WHITE);}
-    if(m->phase==ADV_PAUSE){ag_rect(g,0,0,320,240,0,INK,220,0,0);text(g,"暂停",160,58,18,NT_ALIGN_CENTER,WHITE);text(g,"中键继续",160,100,16,NT_ALIGN_CENTER,GOLD);text(g,"左键重来",160,131,12,NT_ALIGN_CENTER,WHITE);text(g,"双击右键回地图",160,158,12,NT_ALIGN_CENTER,WHITE);}
+    if(m->phase==ADV_READY)ui_v2_ready(g,m);
+    if(m->phase==ADV_PAUSE)ui_v2_pause(g);
     if(m->phase==ADV_RESULT){
-        ag_rect(g,0,0,320,240,0,INK,225,0,0);text(g,p->win?"登月成功！":p->fuel<=0?"燃料耗尽":"火箭受损，任务中止",160,24,18,NT_ALIGN_CENTER,p->win?GOLD:WHITE);
-        char s[80];snprintf(s,sizeof(s),"%u",(unsigned)p->score);ui_number_tint(g,s,36,160,60,NT_ALIGN_CENTER,WHITE);
-        snprintf(s,sizeof(s),"%d km · 星星 %d · 擦边 %d",p->win?384400:km_at(p->alt>>8),(int)p->stars,(int)p->near);text(g,s,160,112,12,NT_ALIGN_CENTER,WHITE);
-        snprintf(s,sizeof(s),"完美 %d · 最佳 %u",(int)p->perfects,(unsigned)m->best[8]);text(g,s,160,138,12,NT_ALIGN_CENTER,GOLD);
-        if(m->record)text(g,m->test?"测试不保存":"新纪录！",160,166,12,NT_ALIGN_CENTER,GOLD);
-        text(g,"中键重玩 · 双击右键回地图",160,205,12,NT_ALIGN_CENTER,WHITE);
+        char line[80],detail[40];snprintf(line,sizeof(line),"%d km · 星星 %d · 擦边 %d",p->win?384400:km_at(p->alt>>8),(int)p->stars,(int)p->near);
+        snprintf(detail,sizeof(detail),"完美 %d",(int)p->perfects);
+        ui_v2_result(g,m,ms-started,p->win?"登月成功！":p->fuel<=0?"燃料耗尽":"火箭受损，任务中止",line,detail);
     }
     if(s_marks.overflow)g->overflow=true;
 }

@@ -161,6 +161,12 @@ class SmokeProtocol(unittest.TestCase):
                 status='PASS: APP AND ALL PRESERVED BYTES VERIFIED; BOOT NOT YET OBSERVED')), 'utf-8')
             verify_candidate(app, sha, receipt, 'TEST')
             with self.assertRaisesRegex(SmokeError, 'receipt'): verify_candidate(app, sha, receipt, 'WRONG')
+            direct=dict(app_sha256=sha,port='TEST',status='PASS: APPLICATION READBACK VERIFIED',
+                        app_readback_sha256=sha,boot_nvs_phy_unchanged=True)
+            receipt.write_text(json.dumps(direct),'utf-8');verify_candidate(app,sha,receipt,'TEST')
+            for key,value in (('app_readback_sha256','0'*64),('boot_nvs_phy_unchanged',False)):
+                wrong={**direct,key:value};receipt.write_text(json.dumps(wrong),'utf-8')
+                with self.assertRaisesRegex(SmokeError,'receipt'):verify_candidate(app,sha,receipt,'TEST')
             image[12] = 9; app.write_bytes(image)
             with self.assertRaisesRegex(SmokeError, 'ESP32-C3'):
                 verify_candidate(app, hashlib.sha256(image).hexdigest())

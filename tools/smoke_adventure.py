@@ -42,8 +42,11 @@ def verify_candidate(path, sha256, receipt=None, port=None):
         raise SmokeError('Candidate SHA256 mismatch')
     if receipt:
         saved = json.loads(Path(receipt).read_text('utf-8'))
+        complete = saved.get('status', '').startswith('PASS: APP AND ALL PRESERVED BYTES VERIFIED')
+        direct = (saved.get('status', '').startswith('PASS: APPLICATION READBACK VERIFIED') and
+                  saved.get('app_readback_sha256') == sha256 and saved.get('boot_nvs_phy_unchanged') is True)
         if (saved.get('app_sha256') != sha256 or saved.get('port') != port or
-                not saved.get('status', '').startswith('PASS: APP AND ALL PRESERVED BYTES VERIFIED')):
+                not (complete or direct)):
             raise SmokeError('Flash receipt does not confirm this app and port')
     return len(data)
 

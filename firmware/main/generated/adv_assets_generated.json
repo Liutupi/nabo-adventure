@@ -39,16 +39,16 @@
       "static_bytes_estimate_c3": 60479
     },
     "sky": {
-      "rle_bytes": 24553,
-      "table_bytes": 5810,
-      "descriptor_catalog_estimate_c3": 1638,
-      "resources": 20,
-      "pieces": 20,
-      "frames": 63,
-      "physical_sprites": 20,
-      "physical_frames": 63,
+      "rle_bytes": 26096,
+      "table_bytes": 6042,
+      "descriptor_catalog_estimate_c3": 1900,
+      "resources": 23,
+      "pieces": 23,
+      "frames": 66,
+      "physical_sprites": 23,
+      "physical_frames": 66,
       "interned_pieces": 0,
-      "static_bytes_estimate_c3": 32001
+      "static_bytes_estimate_c3": 34038
     },
     "space": {
       "rle_bytes": 186873,
@@ -102,7 +102,7 @@
   "tools_sha256": {
     "tools/generate_adv_sprites.py": "91b7a530c8f5c56be690ba053f94892886a2e21cbae360cfef8192e03f90d6bf",
     "tools/build_adventure_assets.py": "d21da1edb91ddad201c23d5b22ff50f871c521c1f3b9b80597e041d04f14c276",
-    "tools/adventure_assets_manifest.py": "1eeafdbcbe2baf79a8e698844ded714a5f34b2720a8e5705de19bf5bf020c4af",
+    "tools/adventure_assets_manifest.py": "e5e52d95596d800a3672d5bd2f241d5e79c4c104d23b8b4b2eb4430ef716a6db",
     "tools/adventure_assets_emit.py": "6698b23c132b9cf4387c4ab866bac7d04eed9f9637064ce1b52b11f58da2e4bc",
     "tools/adventure_assets_verify.py": "46bc8a4727cb94f50afebfb99c3f7470e8260550384bb07ab04b2c6569e8e106",
     "tools/generate_boot_presentation.py": "1a61eab768fbbaaf460ebd8245167b09eac8b42a2fae1fe3fec55585646452dc",
@@ -120,7 +120,7 @@
     "firmware/main/third_party/pl_mpeg/pl_mpeg.h": "f663908a6a0dbb08d3d540c39af971766d45a62b6f641f245fc0c270ac169d3e"
   },
   "generated_code_sha256": {
-    "adv_assets_catalog.c": "75ac7b7c67fa2c709def6ec70a8508805beddaadb8c30ee3ec6b789e52054735",
+    "adv_assets_catalog.c": "05841fa33e4e467413c21b7a34d68308ba2ae55e08761cb0f815f18cf2143a23",
     "adv_assets_catalog.h": "045bda6ae2668d6c708cbbcbe630f74e3d527ec186931ac34b657f23b6848193",
     "adv_assets_climb_a_charge_left__p0.c": "6f36364909168f952783c9e8e6d1f88e27f024476a4d11a4fb97129442b48d90",
     "adv_assets_climb_a_charge_left__p0.h": "d124be9a3ae8451fed0efa6c431a48e48c2a8e7232206002431cabbd1494f5b2",
@@ -264,6 +264,12 @@
     "adv_assets_game_sky_stamp__p0.h": "2845b2b44ea7f487026f27ea1eb6dde32c34873562e6a718decec4aa2a8b552b",
     "adv_assets_game_sky_thundercloud__p0.c": "7d958ce5c6c5de9e218edb1a3c23405eb81d90d79b2eb9c2118bd51f95f3f49e",
     "adv_assets_game_sky_thundercloud__p0.h": "8e4feae1e0c8a233fcd090d5cbee4cc01c70649765d51eea66602cc583670f94",
+    "adv_assets_game_sky_v2_basket_back__p0.c": "bc1e6285452ac003dd421db3a54f4bfd5950d40ffc7fcab6c8cbca63d4837ecf",
+    "adv_assets_game_sky_v2_basket_back__p0.h": "01e3a5dc979b9b2af405ca0020e50f42e3da1c2c7cc02d7bdd0e0c1ffc5497b4",
+    "adv_assets_game_sky_v2_basket_front__p0.c": "420c800fe1f53c2832a6c0d976fb10cd50af9cade17e73ae4dddfeeab76d4722",
+    "adv_assets_game_sky_v2_basket_front__p0.h": "792746558526ca88157f94ee15dfe0f6f16218c297612d00109848d59d9887d5",
+    "adv_assets_game_sky_v2_envelope__p0.c": "cbf8d188768b0f18aa55922c582f224c7007aeb1309bd543b492caa60bd67a82",
+    "adv_assets_game_sky_v2_envelope__p0.h": "aa1b875506bae36010ea31d1582e38e244909a1fe72a034df660fa0ad9fcf4dd",
     "adv_assets_game_space_lander_back__p0.c": "c2ebf0d9f1d18992d86fd67f2d5fc731c76dbbc5d326ec12e011040b6c124210",
     "adv_assets_game_space_lander_back__p0.h": "6869f4177d7b46ffa98dc2eaee9068f4b9e3dcdd6e7d603d280df345889052d2",
     "adv_assets_game_space_lander_front__p0.c": "edb5be26d10a3c60cb6bdd490a06400e4c1bc9bd29221a80245db4dc4372dfef",
@@ -973,6 +979,15 @@
     "adv_assets_game_sky_thundercloud__p0.c",
     "adv_assets_game_sky_thundercloud__p0.h",
     "adv_assets_game_sky_thundercloud__p0.json",
+    "adv_assets_game_sky_v2_basket_back__p0.c",
+    "adv_assets_game_sky_v2_basket_back__p0.h",
+    "adv_assets_game_sky_v2_basket_back__p0.json",
+    "adv_assets_game_sky_v2_basket_front__p0.c",
+    "adv_assets_game_sky_v2_basket_front__p0.h",
+    "adv_assets_game_sky_v2_basket_front__p0.json",
+    "adv_assets_game_sky_v2_envelope__p0.c",
+    "adv_assets_game_sky_v2_envelope__p0.h",
+    "adv_assets_game_sky_v2_envelope__p0.json",
     "adv_assets_game_space_lander_back__p0.c",
     "adv_assets_game_space_lander_back__p0.h",
     "adv_assets_game_space_lander_back__p0.json",
@@ -1717,7 +1732,7 @@
     "climb-manifest.json": "d2eecac332e1f45e02bdba1591f5ef1474562cbc11978a7cf2c49b94e8cc3b71",
     "post-manifest.json": "42464721aae43aa0c7dc2aba7b55b4f6b4966f8ef61b2ecc23bcbce5a764636f",
     "ski-manifest.json": "ce917671979911b3aa2d645ab99a30bd605677497a4cb5e13649a51ab35c84fb",
-    "sky-manifest.json": "abfbc0ffd9e3e97e61295911ea5c65b3c65f988bcc2af9021247590b07b3ee98",
+    "sky-manifest.json": "e32929f015cbf0c885f43de2e620e987edbe2f1cbd5e30ed0c66fdc688d6b36f",
     "space-manifest.json": "168d04124ab06e8d7e181a41c51e3eec91ba3e9f7dd5911fa8690a25e96fe789",
     "space-v2-manifest.json": "a55a8f6f45a4edbc1ca50949c58b38d87104df6ec65ae00014fa00aaac8cb2c2",
     "shared-static-manifest.json": "f48bb34259cd5f58eb04cdc94d1e95e130875b111888b85962955b9655a4c5c8",
@@ -4271,6 +4286,102 @@
           "size": [
             48,
             32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/sky/v2/basket_back",
+      "sources": [
+        {
+          "path": "games/sky/v2/basket_back.png",
+          "sha256": "2e65ef5606432e12e61e916f406027d59fe1decf3d682f033ab3c6940c6ac27e"
+        }
+      ],
+      "canvas": [
+        43,
+        7
+      ],
+      "anchor": [
+        21,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_sky_v2_basket_back__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            43,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/sky/v2/basket_front",
+      "sources": [
+        {
+          "path": "games/sky/v2/basket_front.png",
+          "sha256": "1cf1058f4037605a1abf94d4043f159f7e35a1d4628f33d2a6020bdb44460b75"
+        }
+      ],
+      "canvas": [
+        43,
+        19
+      ],
+      "anchor": [
+        21,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_sky_v2_basket_front__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            43,
+            19
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game/sky/v2/envelope",
+      "sources": [
+        {
+          "path": "games/sky/v2/envelope.png",
+          "sha256": "64ae35fd9143846b6747cfaf17fd2c9bfea97488de64b5281cd6bf330c282811"
+        }
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "pieces": [
+        {
+          "symbol": "adv_assets_game_sky_v2_envelope__p0",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            64,
+            64
           ]
         }
       ]
@@ -14070,10 +14181,10 @@
       ]
     }
   ],
-  "python_verified_frames": 630,
+  "python_verified_frames": 633,
   "production_c": {
-    "verified_frames": 630,
-    "verified_sprite_rows": 30576,
+    "verified_frames": 633,
+    "verified_sprite_rows": 30666,
     "verified_ninepatch_rows": 912,
     "comparison": "generated C and production decoders vs indexed source"
   },
@@ -14137,8 +14248,8 @@
   "sprite_interning": {
     "scope": "within each group only",
     "comparison": "exact RGBA pixels, dimensions and ordered frame sequence",
-    "logical_pieces": 358,
-    "physical_sprites": 317,
+    "logical_pieces": 361,
+    "physical_sprites": 320,
     "accounting": "RLE/tables/sprite32 per physical object; piece8 and record/id per logical use"
   },
   "startup_composition": {

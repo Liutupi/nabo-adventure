@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT/'tools'))
 from build_adventure_assets import build, OWNERSHIP
 from adventure_assets_manifest import load_resources
 from catalog_adventure_art import evidence
+from adventure_assets_manifest import scoped
 from test_adventure_assets import fixture
 
 
@@ -61,6 +62,12 @@ class CatalogEvidence(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'changed after verification'): self.check()
         finally:
             path.write_bytes(before)
+
+    def test_windows_manifest_separators_are_scoped_on_every_host(self):
+        target=self.art/'frames/runtime/0.png'
+        self.assertEqual(scoped(self.art,r'frames\runtime\0.png'),target.resolve())
+        for escape in (r'..\outside.png',r'C:\outside.png',r'\\server\share\outside.png'):
+            with self.subTest(path=escape),self.assertRaises(ValueError):scoped(self.art,escape)
 
 
 if __name__ == '__main__':

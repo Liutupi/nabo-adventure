@@ -90,6 +90,8 @@ void adv_ui_close(void)
 {
     finish_transfer();s_pipeline=false;
     ui_space_close();
+    ui_climb_v2_close();
+    ui_sky_v2_close();
     ui_boot_video_close();
     esp_lcd_panel_io_tx_param(bsp_display_io(), 0x00, NULL, 0);
     free(s_gfx);
@@ -240,14 +242,16 @@ void adv_ui_draw(const adv_model_t *m, uint32_t ms, int battery, int mv)
     ag_t *g = s_gfx;
     finish_transfer();
     if(m->page!=ADV_PAGE_SESSION||m->station!=8)ui_space_close();
-    bool action=m->page==ADV_PAGE_SESSION&&(m->station==4||m->station==6||m->station==8);
+    if(m->page!=ADV_PAGE_SESSION||m->station!=5)ui_climb_v2_close();
+    if(m->page!=ADV_PAGE_SESSION||m->station!=7)ui_sky_v2_close();
+    bool action=m->page==ADV_PAGE_SESSION&&(m->station>=3&&m->station<=8);
     if(action&&!s_action_strips)
         s_action_strips=heap_caps_malloc(3u*ACTION_PIXELS*sizeof(uint16_t),MALLOC_CAP_DMA|MALLOC_CAP_INTERNAL);
     if(!action&&s_action_strips){free(s_action_strips);s_action_strips=NULL;s_rotate_index=0;}
     bool action_pipeline=action&&s_action_strips&&!s_capture;
     (void)ag_strips(g,action_pipeline?s_action_strips:s_strip[0],
                    action_pipeline?s_action_strips:s_strip[1],action_pipeline?ACTION_ROWS:AG_STRIP);
-    s_landscape=m->page==ADV_PAGE_SESSION&&(m->station==3||m->station==4||m->station==6||m->station==8);
+    s_landscape=m->page==ADV_PAGE_SESSION&&(m->station>=3&&m->station<=8);
     (void)ag_viewport(g,s_landscape?320:240,s_landscape?240:320);
     switch (m->page) {
     case ADV_PAGE_COVER: ag_begin(g, UI_SCENE_COVER); draw_cover(g, m); break;

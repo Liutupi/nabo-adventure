@@ -14,6 +14,7 @@ ART = ROOT / 'game-art/adventure/art'
 
 
 def evidence(path, expected, resources, art=ART, ui=None):
+    art = Path(art).resolve()
     report = json.loads(path.read_text('utf-8'))
     proof = report.get('production_c')
     if report.get('schema') != 'adventure-assets-package-v1' or not isinstance(proof, dict):
@@ -69,6 +70,7 @@ def main():
     parser.add_argument('--candidate-sha256', help='Optional tested common-firmware association; never inferred from a fresh build')
     parser.add_argument('--shared-art-game',choices=INTEGRATED_GAMES,action='append',default=[],
                         help='Explicit formal game using common travel art rather than its legacy game group')
+    parser.add_argument('--game-proof-root',type=Path,default=ROOT/'private/game-art-c',help='Fresh per-game C proof directory; frozen deliveries need not be overwritten')
     args = parser.parse_args()
     if args.candidate_sha256 and not re.fullmatch('[0-9a-f]{64}', args.candidate_sha256):
         parser.error('--candidate-sha256 must contain 64 lowercase hexadecimal digits')
@@ -86,7 +88,7 @@ def main():
     common = evidence(ROOT / 'firmware/main/generated/adv_assets_generated.json',
                       common_dependencies,
                       [r for r in resources if r.group in common_groups], ui=ui)
-    games = {game: evidence(ROOT / 'private/game-art-c' / game / 'adv_assets_generated.json',
+    games = {game: evidence(args.game_proof_root / game / 'adv_assets_generated.json',
                             (f'{game}-manifest.json',)+(('space-v2-manifest.json',) if game=='space' else ()),
                             [r for r in resources if r.group == game]) for game in GAME_GROUPS}
     source = ART / 'reference/nabo-idle-original.png'

@@ -33,7 +33,7 @@
     "night-manifest.json": "d9d5b35ec4702fa5fd739b5224d1d5c0b933b72c5d272ade1f9c3a8e6679a0bb",
     "climb-manifest.json": "d2eecac332e1f45e02bdba1591f5ef1474562cbc11978a7cf2c49b94e8cc3b71",
     "ski-manifest.json": "ce917671979911b3aa2d645ab99a30bd605677497a4cb5e13649a51ab35c84fb",
-    "sky-manifest.json": "abfbc0ffd9e3e97e61295911ea5c65b3c65f988bcc2af9021247590b07b3ee98",
+    "sky-manifest.json": "e32929f015cbf0c885f43de2e620e987edbe2f1cbd5e30ed0c66fdc688d6b36f",
     "space-manifest.json": "168d04124ab06e8d7e181a41c51e3eec91ba3e9f7dd5911fa8690a25e96fe789",
     "space-v2-manifest.json": "a55a8f6f45a4edbc1ca50949c58b38d87104df6ec65ae00014fa00aaac8cb2c2",
     "boot/selection.json": "0ca4b960ce4d40972ca9af10c3ef62814c119560b1735ab55b41ebec2e1ecf06",
@@ -48,8 +48,8 @@
     "ui/palette.json": "3b3dc6d793ac4eff3af34fc01f0d969f7eb6a5c0b5a6b967e66795103949fce0"
   },
   "counts": {
-    "resources": 366,
-    "frames_including_static": 676
+    "resources": 369,
+    "frames_including_static": 679
   },
   "resources": [
     {
@@ -1262,6 +1262,51 @@
       "anchor": [
         24,
         29
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/sky/v2/basket_back",
+      "group": "sky",
+      "canvas": [
+        43,
+        7
+      ],
+      "anchor": [
+        21,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/sky/v2/basket_front",
+      "group": "sky",
+      "canvas": [
+        43,
+        19
+      ],
+      "anchor": [
+        21,
+        0
+      ],
+      "fps": 0,
+      "loop": false,
+      "frame_count": 1
+    },
+    {
+      "id": "game/sky/v2/envelope",
+      "group": "sky",
+      "canvas": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        0
       ],
       "fps": 0,
       "loop": false,
@@ -5583,16 +5628,16 @@
           "static_bytes_estimate_c3": 60479
         },
         "sky": {
-          "rle_bytes": 24553,
-          "table_bytes": 5810,
-          "descriptor_catalog_estimate_c3": 1638,
-          "resources": 20,
-          "pieces": 20,
-          "frames": 63,
-          "physical_sprites": 20,
-          "physical_frames": 63,
+          "rle_bytes": 26096,
+          "table_bytes": 6042,
+          "descriptor_catalog_estimate_c3": 1900,
+          "resources": 23,
+          "pieces": 23,
+          "frames": 66,
+          "physical_sprites": 23,
+          "physical_frames": 66,
           "interned_pieces": 0,
-          "static_bytes_estimate_c3": 32001
+          "static_bytes_estimate_c3": 34038
         },
         "space": {
           "rle_bytes": 186873,
@@ -5643,10 +5688,10 @@
           "static_bytes_estimate_c3": 41766
         }
       },
-      "python_verified_frames": 630,
+      "python_verified_frames": 633,
       "production_c": {
-        "verified_frames": 630,
-        "verified_sprite_rows": 30576,
+        "verified_frames": 633,
+        "verified_sprite_rows": 30666,
         "verified_ninepatch_rows": 912,
         "comparison": "generated C and production decoders vs indexed source"
       }
@@ -5746,22 +5791,22 @@
     "sky": {
       "groups": {
         "sky": {
-          "rle_bytes": 24553,
-          "table_bytes": 5810,
-          "descriptor_catalog_estimate_c3": 1638,
-          "resources": 20,
-          "pieces": 20,
-          "frames": 63,
-          "physical_sprites": 20,
-          "physical_frames": 63,
+          "rle_bytes": 26096,
+          "table_bytes": 6042,
+          "descriptor_catalog_estimate_c3": 1900,
+          "resources": 23,
+          "pieces": 23,
+          "frames": 66,
+          "physical_sprites": 23,
+          "physical_frames": 66,
           "interned_pieces": 0,
-          "static_bytes_estimate_c3": 32001
+          "static_bytes_estimate_c3": 34038
         }
       },
-      "python_verified_frames": 63,
+      "python_verified_frames": 66,
       "production_c": {
-        "verified_frames": 63,
-        "verified_sprite_rows": 2622,
+        "verified_frames": 66,
+        "verified_sprite_rows": 2712,
         "verified_ninepatch_rows": 0,
         "comparison": "generated C and production decoders vs indexed source"
       }
@@ -5791,7 +5836,7 @@
     }
   },
   "device": {
-    "common_candidate_sha256": "8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8",
+    "common_candidate_sha256": null,
     "new_game_art_embedded_in_this_candidate": true,
     "integrated_game_groups": [
       "climb",

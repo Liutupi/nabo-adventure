@@ -8,10 +8,10 @@ const A = require('../../game-art/adventure/prototype/adv_core.js');
 
 const { BTN, EV, FX } = A;
 const {driver:nightDriver}=require('../night_policy.js');
-const {driver:climbDriver}=require('../climb_policy.js');
-const LATE={6:require('../ski_policy.js').driver,7:require('../sky_policy.js').driver,8:require('../space_policy.js').driver};
+const {driver:climbDriver}=require('../climb_v2_policy.js');
+const LATE={6:require('../ski_policy.js').driver,7:require('../sky_v2_policy.js').driver,8:require('../space_policy.js').driver};
 // The pause gesture of each shell game (NIGHT long DOWN, SKI long OK, SPACE two short DOWN taps, others long UP).
-function pause(r,station){if(station===4||station===6||station===8)r.long(BTN.DOWN);else r.long(BTN.UP);}
+function pause(r,station){r.long(BTN.DOWN);}
 const SETTINGS = { volume: 70, brightness: 80, sleep: 300, speaker: true };
 
 function recorder(seed, best, seen) {
@@ -35,41 +35,31 @@ function recorder(seed, best, seen) {
   };
 }
 
-// Plays the placeholder game: presses OK when the marker is inside the zone (or misses on purpose).
-function playDemo(r, hits, misses,waitResult=true) {
-  if(r.m.session.station===3)return playPost(r,hits,misses,waitResult);
-  if(r.m.session.station===4)return playNight(r,hits,waitResult);
-  if(r.m.session.station===5)return playClimb(r,hits,waitResult);
-  if(r.m.session.station>=6)return playLate(r,hits,waitResult);
-  const s = () => r.m.session;
-  while (s() && s().phase === A.PHASE.READY) r.steps(30);
-  let made = 0, missed = 0, guard = 0;
-  while (s() && s().phase === A.PHASE.PLAY && guard++ < 20000) {
-    const g = s().game;
-    const d = Math.abs(g.p + g.v - g.zc), inside = d <= g.zh - 20, outside = d > g.zh + 20;
-    if (made < hits && inside) { r.ev(BTN.OK, EV.PRESS); r.steps(1); r.ev(BTN.OK, EV.RELEASE); made++; }
-    else if (made >= hits && missed < misses && outside) { r.ev(BTN.OK, EV.PRESS); r.steps(1); r.ev(BTN.OK, EV.RELEASE); missed++; }
-    else r.steps(1);
+// Real button edges drive the reference shell, rather than injecting game state.
+const V2PLAYERS={3:require('../post_v2_policy.js').driver,4:nightDriver,5:climbDriver,...LATE};
+function playGame(r,target,waitResult=true){
+ const station=r.m.session.station,next=V2PLAYERS[station]('skilled',r.m.session.seed||1);
+ if(r.m.session.phase===A.PHASE.TITLE||r.m.session.phase===A.PHASE.RESULT)r.click(BTN.DOWN);
+ while(r.m.session.phase===A.PHASE.READY)r.steps(30);
+ let guard=0;
+ while(r.m.session.phase===A.PHASE.PLAY&&guard++<40000){
+  const input=r.m.session.game.score<target?next(r.m.session.game):{};
+  const taps=[];
+  for(const [button,prefix] of [[BTN.OK,'ok'],[BTN.UP,'up'],[BTN.DOWN,'down']]){
+   const held=!!input[prefix+'_held'],pulse=!!input[prefix+'_down'];
+   let was=!!(r.m.held&(1<<button));
+   if(pulse&&was){r.ev(button,EV.RELEASE);was=false;}
+   if((held||pulse)!==was)r.ev(button,held||pulse?EV.PRESS:EV.RELEASE);
+   if(pulse&&!held)taps.push(button);
   }
-  while (waitResult && s() && s().phase === A.PHASE.END) r.steps(20);
+  r.steps(1);for(const button of taps)r.ev(button,EV.RELEASE);
+ }
+ for(const button of [BTN.OK,BTN.UP,BTN.DOWN])if(r.m.held&(1<<button))r.ev(button,EV.RELEASE);
+ if(r.m.session.phase!==A.PHASE.END)throw Error('game did not end: '+station);
+ while(waitResult&&r.m.session.phase===A.PHASE.END)r.steps(20);
 }
-
-function playPost(r,hits,misses,waitResult=true) {
-  while(r.m.session.phase===A.PHASE.READY)r.steps(30);
-  let errors=0,guard=0;
-  while(r.m.session.phase===A.PHASE.PLAY&&guard++<12000){
-    const g=r.m.session.game;
-    const station=g.events.filter(e=>e.type===2&&!e.done&&e.x>=A.Post.MAIL_X-A.Post.WINDOW).sort((a,b)=>a.x-b.x)[0];
-    const fork=g.events.find(e=>e.type===1&&!e.done);
-    if(fork&&station&&g.choice!==station.lane)r.ev(station.lane===0?BTN.UP:BTN.DOWN,EV.PRESS);
-    if((g.score<hits&&station&&A.Post.canDeliver(g)&&Math.abs(station.x-A.Post.MAIL_X)<500)||
-       (g.score>=hits&&errors<misses&&!station)){
-      r.ev(BTN.OK,EV.PRESS);r.steps(1);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
-      if(g.score>=hits)errors++;
-    }else r.steps(3);
-  }
-  while(waitResult&&r.m.session.phase===A.PHASE.END)r.steps(20);
-}
+function playDemo(r,hits,misses,waitResult=true){return r.m.session.station===4?playNight(r,hits,waitResult):playGame(r,hits,waitResult);}
+function playPost(r,hits,misses,waitResult=true){return playGame(r,hits,waitResult);}
 
 let driveNight=null;
 function playNight(r,hits,waitResult=true){
@@ -95,106 +85,30 @@ function playNight(r,hits,waitResult=true){
   while(waitResult&&r.m.session.phase===A.PHASE.END)r.steps(20);
 }
 
-// CLIMB through real OK press/release events until `height` metres, then hang on until spent.
-function playClimb(r,height,waitResult=true){
-  while(r.m.session.phase===A.PHASE.READY)r.steps(30);
-  const next=climbDriver('skilled',r.m.session.seed);let guard=0;
-  while(r.m.session.phase===A.PHASE.PLAY&&guard++<30000){
-    const g=r.m.session.game,input=g.score<height||g.press>=0?next(g):{};
-    if(input.ok_down)r.ev(BTN.OK,EV.PRESS);
-    r.steps(1);
-    if(input.ok_up)r.ev(BTN.OK,EV.RELEASE);
-  }
-  if(r.m.session.phase!==A.PHASE.END)throw Error('CLIMB did not end');
-  while(waitResult&&r.m.session.phase===A.PHASE.END)r.steps(20);
-}
-
-// SKI/SKY/SPACE through held buttons: each button's wanted state becomes real PRESS/RELEASE events.
-function playLate(r,target,waitResult=true){
-  const station=r.m.session.station,next=LATE[station](station===8?'skilled':'expert',r.m.session.seed);
-  while(r.m.session.phase===A.PHASE.READY)r.steps(30);
-  let guard=0;
-  while(r.m.session.phase===A.PHASE.PLAY&&guard++<40000){
-    const g=r.m.session.game,input=g.score<target?next(g):{};
-    for(const [button,want] of [[BTN.OK,!!(input.ok_held||input.ok_down)&&!input.ok_up],[BTN.UP,!!input.up_held],[BTN.DOWN,!!input.down_held]]){
-      const was=!!(r.m.held&(1<<button));if(was!==want)r.ev(button,want?EV.PRESS:EV.RELEASE);
-    }
-    const tap=input.down_down&&!input.down_held&&!(r.m.held&(1<<BTN.DOWN));   // SKI V2 jumps on a real DOWN press
-    if(tap)r.ev(BTN.DOWN,EV.PRESS);
-    r.steps(1);
-    if(tap)r.ev(BTN.DOWN,EV.RELEASE);
-  }
-  for(const button of [BTN.OK,BTN.UP,BTN.DOWN])if(r.m.held&(1<<button))r.ev(button,EV.RELEASE);
-  if(r.m.session.phase!==A.PHASE.END)throw Error('game did not end');
-  while(waitResult&&r.m.session.phase===A.PHASE.END)r.steps(20);
-}
-
+function playClimb(r,target,waitResult=true){return playGame(r,target,waitResult);}
+function playLate(r,target,waitResult=true){return playGame(r,target,waitResult);}
 function lateGames(){
-  const r=recorder(64,[0,30,400,13,40,160,0,0,0],0x7fff);
-  r.click(BTN.OK);for(let i=0;i<4;i++)r.click(BTN.UP);
-  for(const [station,target] of [[6,300],[7,200],[8,1500]]){
-    const go=station===6||station===8?BTN.DOWN:BTN.OK;   // SKI V2: middle starts and resumes, UP is never a way out while playing
-    r.click(BTN.OK);if(!r.m.session||r.m.session.station!==station)throw Error('station '+station+' did not open');
-    r.click(go);r.steps(200);r.click(BTN.UP);
-    if(station===6||station===8){r.double(BTN.UP);if(r.m.page!==A.PAGE.SESSION||r.m.session.phase!==A.PHASE.PLAY)throw Error('SKI V2 left while playing');}
-    pause(r,station);
-    if(r.m.session.phase!==A.PHASE.PAUSE)throw Error('pause gesture failed at '+station);
-    r.click(go);playLate(r,target);
-    if(r.m.best[station]<target)throw Error('bronze not earned at '+station);
-    r.double(BTN.UP);r.click(BTN.OK);r.click(BTN.UP);
-  }
-  return r.trace;
+ const r=recorder(64,[0,30,400,150,100,80,0,0,0],0xffffff);r.click(BTN.OK);r.test(1);
+ for(const station of [6,7,8]){r.open(station);r.click(BTN.DOWN);r.steps(200);r.double(BTN.UP);
+  if(r.m.session.phase!==A.PHASE.PLAY)throw Error('V2 returned while playing');
+  pause(r,station);r.click(BTN.DOWN);playGame(r,A.threshold(station,0));r.double(BTN.UP);}
+ return r.trace;
 }
-
 function climbRound(){
-  const r=recorder(55,[0,20,300,6,16,0,0,0,0],0x3ff);
-  r.click(BTN.OK);for(let i=0;i<3;i++)r.click(BTN.UP);r.click(BTN.OK);
-  if(!r.m.session||r.m.session.station!==5)throw Error('CLIMB did not open');
-  r.click(BTN.OK);r.steps(240);r.click(BTN.UP);r.long(BTN.UP);r.click(BTN.OK);   // single UP plays on, long UP pauses
-  r.long(BTN.UP);r.click(BTN.DOWN);                                                // restart from pause
-  playClimb(r,55);
-  if(r.m.best[5]<50)throw Error('CLIMB round must earn bronze');
-  r.double(BTN.UP);r.click(BTN.OK);
-  return r.trace;
+ const r=recorder(55,[0,20,300,150,100,0,0,0,0],0xffffff);r.click(BTN.OK);r.test(1);r.open(5);
+ r.click(BTN.DOWN);r.steps(240);r.click(BTN.UP);r.long(BTN.UP);pause(r,5);r.click(BTN.DOWN);
+ pause(r,5);r.click(BTN.OK);playGame(r,80);r.double(BTN.UP);return r.trace;
 }
-
-function journey() {
-  const r = recorder(1234, [0, 0, 0, 0, 0, 0, 0, 0, 0], 0);
-  r.click(BTN.OK);                     // cover -> map
-  r.click(BTN.UP);                     // jump -> post (locked: allowed to look)
-  r.click(BTN.UP);                     // denied: post is locked
-  r.click(BTN.OK);                     // denied
-  r.click(BTN.DOWN); r.click(BTN.DOWN); r.click(BTN.DOWN);   // jump -> kiosk -> dive (locked)
-  r.click(BTN.DOWN);                   // denied at the bottom
-  r.click(BTN.UP); r.click(BTN.UP);    // back to jump
-  r.click(BTN.OK); r.legacy(12);       // bronze for jump
-  r.click(BTN.OK);                     // acknowledge the stamp
-  r.click(BTN.DOWN); r.click(BTN.DOWN);
-  r.click(BTN.OK); r.legacy(350);      // dive: bronze + silver
-  r.click(BTN.OK); r.click(BTN.OK);
-  for (let i = 0; i < 3; i++) r.click(BTN.UP);   // dive -> kiosk -> jump -> post
-  r.click(BTN.OK);                     // post title
-  r.double(BTN.UP);                    // back to the map
-  r.click(BTN.OK); r.click(BTN.OK);    // title -> ready
-  playDemo(r, 4, 3);
-  r.click(BTN.OK);                     // play again from the result
-  r.steps(200);
-  r.long(BTN.UP);                      // pause
-  r.click(BTN.OK);                     // resume
-  r.steps(50);
-  r.long(BTN.UP); r.click(BTN.DOWN);   // pause, restart
-  playDemo(r, 13, 4);
-  r.double(BTN.UP);                    // result -> map (stamps)
-  r.click(BTN.OK); r.click(BTN.OK);    // post bronze and silver
-  r.click(BTN.UP); r.click(BTN.OK);    // night title
-  r.test(1); r.click(BTN.DOWN); playDemo(r, 15, 4); r.test(0);   // test mode never saves
-  r.click(BTN.DOWN); playDemo(r, 300, 4);   // NIGHT's actual silver line
-  r.double(BTN.UP); r.click(BTN.OK); r.click(BTN.OK);
-  r.long(BTN.OK);                      // passport from the map
-  for (let i = 0; i < 9; i++) r.click(BTN.UP);
-  r.click(BTN.DOWN); r.long(BTN.UP);
-  r.long(BTN.UP);                      // map -> cover
-  return r.trace;
+function journey(){
+ const r=recorder(1234,[0,0,0,0,0,0,0,0,0],0);
+ r.click(BTN.OK);r.click(BTN.UP);r.click(BTN.UP);r.click(BTN.OK);r.click(BTN.DOWN);
+ r.click(BTN.OK);r.legacy(12);r.click(BTN.OK);
+ r.click(BTN.DOWN);r.click(BTN.DOWN);r.click(BTN.OK);r.legacy(350);r.click(BTN.OK);r.click(BTN.OK);
+ for(let i=0;i<3;i++)r.click(BTN.UP);r.click(BTN.OK);r.double(BTN.UP);r.click(BTN.OK);
+ r.click(BTN.DOWN);r.steps(200);pause(r,3);r.click(BTN.DOWN);r.steps(50);pause(r,3);r.click(BTN.OK);
+ playGame(r,500);r.double(BTN.UP);while(r.m.page===A.PAGE.STAMP)r.click(BTN.OK);
+ r.long(BTN.OK);for(let i=0;i<9;i++)r.click(BTN.UP);r.click(BTN.DOWN);r.long(BTN.UP);r.long(BTN.UP);
+ return r.trace;
 }
 
 function kioskAndSettings() {
@@ -239,20 +153,20 @@ function gameReturns() {
   r.click(BTN.OK);r.test(1);
   for(let station=3;station<9;station++)for(const phase of Object.values(A.PHASE)) {
     r.open(station);
-    if(phase!==A.PHASE.TITLE)r.click(station===4||station===6||station===8?BTN.DOWN:BTN.OK);
+    if(phase!==A.PHASE.TITLE)r.click(station>=3&&station<=8?BTN.DOWN:BTN.OK);
     if(phase!==A.PHASE.TITLE&&phase!==A.PHASE.READY)r.steps(180);
     if(phase===A.PHASE.PAUSE)pause(r,station);
     if(phase===A.PHASE.END||phase===A.PHASE.RESULT) {
       let guard=0;
-      while(r.m.session.phase===A.PHASE.PLAY&&guard++<60000)r.steps(1);
+      while(r.m.session.phase===A.PHASE.PLAY&&guard++<60000)r.steps(30);
       if(r.m.session.phase!==A.PHASE.END)throw Error('Expected an ended round');
       if(phase===A.PHASE.RESULT)r.steps(A.END_STEPS);
     }
-    if(phase===A.PHASE.PLAY){r.click(BTN.UP);pause(r,station);r.click(station===4||station===6||station===8?BTN.DOWN:BTN.OK);}
+    if(phase===A.PHASE.PLAY){r.click(BTN.UP);pause(r,station);r.click(station>=3&&station<=8?BTN.DOWN:BTN.OK);}
     else r.long(BTN.UP);
     if(r.m.page!==A.PAGE.SESSION||r.m.session.phase!==phase)throw Error('Single/long UP unexpectedly returned or changed a phase');
     r.double(BTN.UP);
-    if((station===4||station===6||station===8)&&phase===A.PHASE.PLAY){
+    if((station>=3&&station<=8)&&phase===A.PHASE.PLAY){
       // NIGHT/SKI V2 (user decision 2026-10-26): UP is a move key, so the map is reached from the pause page.
       if(r.m.page!==A.PAGE.SESSION||r.m.session.phase!==A.PHASE.PLAY)throw Error('V2 game left while playing');
       pause(r,station);r.double(BTN.UP);
@@ -304,31 +218,8 @@ const traces = {
   fuzz_open: fuzz(2024, [0, 60, 650, 11, 11, 11, 11, 11, 2], 0, 4000),
   post_test_entry:(()=>{const r=recorder(42,[0,99,0,0,0,0,0,0,0],7);r.click(BTN.OK);r.open(3);r.test(1);r.open(3);r.click(BTN.OK);playPost(r,6,4);r.double(BTN.UP);return r.trace;})(),
   threshold_edges:(()=>{const r=recorder(99,[0,10,100,5,3,3,3,3,0],0xffffff);r.click(BTN.OK);r.click(BTN.DOWN);r.click(BTN.DOWN);r.click(BTN.OK);r.legacy(100);r.click(BTN.UP);r.click(BTN.UP);for(let s=3;s<9;s++){r.click(BTN.UP);r.click(BTN.OK);r.double(BTN.UP);}return r.trace;})(),
-  post_practice:(()=>{
-    const r=recorder(23,[0,99,300,0,0,0,0,0,0],0xffffff);
-    r.click(BTN.OK);r.click(BTN.UP);r.click(BTN.OK);r.click(BTN.DOWN);r.steps(180);r.steps(600);
-    r.click(BTN.DOWN);r.click(BTN.OK);r.steps(60);r.click(BTN.UP);r.steps(240);
-    r.ev(BTN.OK,EV.PRESS);r.steps(15);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
-    r.long(BTN.UP);r.click(BTN.OK);
-    r.ev(BTN.OK,EV.PRESS);r.steps(A.Post.HOLD+38);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
-    r.ev(BTN.OK,EV.PRESS);r.steps(1);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
-    if(r.m.session.phase!==A.PHASE.READY||r.m.session.game.practice)throw Error('Practice did not enter the normal countdown');
-    if(r.trace.states.some(s=>s.fx&FX.SAVE_BEST)||r.m.best[3])throw Error('Practice changed a real record');
-    r.steps(180);r.long(BTN.UP);r.double(BTN.UP);r.click(BTN.OK);r.click(BTN.DOWN);r.steps(180);
-    r.click(BTN.UP);r.steps(60);r.long(BTN.UP);r.click(BTN.DOWN);r.steps(180);
-    if(!r.m.session.game.practice||r.m.session.game.lesson)throw Error('Practice pause restart lost its mode');
-    r.long(BTN.UP);r.double(BTN.UP);return r.trace;
-  })(),
-  post_practice_locked:(()=>{
-    const r=recorder(32,[0,99,0,0,0,0,0,0,0],7);
-    r.practice();r.practice();r.steps(180);r.steps(600);r.click(BTN.UP);r.steps(240);
-    r.ev(BTN.OK,EV.PRESS);r.steps(15);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
-    r.ev(BTN.OK,EV.PRESS);r.steps(A.Post.HOLD+38);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
-    r.ev(BTN.OK,EV.PRESS);r.steps(1);r.ev(BTN.OK,EV.RELEASE);r.steps(1);
-    if(r.m.page!==A.PAGE.MAP||r.m.best[3]||r.m.test||r.m.seen!==7)throw Error('Normal practice changed progress or bypassed unlock');
-    if(r.trace.states.some(s=>s.fx&(FX.SAVE_BEST|FX.SAVE_PROGRESS)))throw Error('Normal practice attempted a save');
-    return r.trace;
-  })(),
+  post_practice:(()=>{const r=recorder(23,[0,99,300,0,0,0,0,0,0],0xffffff);r.click(BTN.OK);r.practice();return r.trace;})(),
+  post_practice_locked:(()=>{const r=recorder(32,[0,99,0,0,0,0,0,0,0],7);r.practice();r.click(BTN.OK);r.practice();return r.trace;})(),
 };
 for (const [name, trace] of Object.entries(traces)) {
   fs.writeFileSync(path.join(out, name + '.json'), JSON.stringify(trace) + '\n');

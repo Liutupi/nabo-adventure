@@ -4,11 +4,11 @@
 // Change rules here first, re-record tests/adv_golden, then port to C.
 (function (root) {
   'use strict';
-  const Post=typeof module!=='undefined'&&module.exports?require('./adv_post.js'):root.AdvPost;
+  const Post=typeof module!=='undefined'&&module.exports?require('./adv_post_v2.js'):root.AdvPostV2;
   const Night=typeof module!=='undefined'&&module.exports?require('./adv_night.js'):root.AdvNight;
-  const Climb=typeof module!=='undefined'&&module.exports?require('./adv_climb.js'):root.AdvClimb;
+  const Climb=typeof module!=='undefined'&&module.exports?require('./adv_climb_v2.js'):root.AdvClimbV2;
   const Ski=typeof module!=='undefined'&&module.exports?require('./adv_ski.js'):root.AdvSki;
-  const Sky=typeof module!=='undefined'&&module.exports?require('./adv_sky.js'):root.AdvSky;
+  const Sky=typeof module!=='undefined'&&module.exports?require('./adv_sky_v2.js'):root.AdvSkyV2;
   const Space=typeof module!=='undefined'&&module.exports?require('./adv_space.js'):root.AdvSpace;
 
   // ---------- constants shared with adv_model.h ----------
@@ -31,11 +31,11 @@
     { id: 'kiosk', cn: '护照亭', en: 'PASSPORT', world: '小镇', res: '', kind: 0, th: [0, 0, 0], placeholder: false },
     { id: 'jump', cn: '跳一跳', en: 'JUMP', world: '小镇', res: '体力', kind: 1, th: [10, 25, 50], placeholder: false },
     { id: 'dive', cn: '深潜', en: 'DIVE', world: '深海', res: '氧气', kind: 1, th: [100, 300, 600], placeholder: false },
-    { id: 'post', cn: '小火车', en: 'POST', world: '铁路平原', res: '蒸汽', kind: 2, th: [5, 12, 25], placeholder: false },
+    { id: 'post', cn: '小火车', en: 'POST', world: '铁路平原', res: '时刻表', kind: 2, th: [150, 500, 1200], placeholder: false },
     { id: 'night', cn: '萤火虫', en: 'NIGHT', world: '夜林', res: '光', kind: 2, th: [100, 300, 800], placeholder: false },
-    { id: 'climb', cn: '登山', en: 'CLIMB', world: '雪山', res: '体力', kind: 2, th: [50, 150, 300], placeholder: false },
+    { id: 'climb', cn: '登山', en: 'CLIMB', world: '雪山', res: '握力', kind: 2, th: [80, 250, 600], placeholder: false },
     { id: 'ski', cn: '滑雪', en: 'SKI', world: '雪坡', res: '雪崩', kind: 2, th: [300, 1000, 2500], placeholder: false },
-    { id: 'sky', cn: '热气球', en: 'SKY', world: '云端', res: '热气', kind: 2, th: [200, 500, 1000], placeholder: false },
+    { id: 'sky', cn: '热气球', en: 'SKY', world: '云端', res: '燃料', kind: 2, th: [300, 1000, 2500], placeholder: false },
     { id: 'space', cn: '火箭登月', en: 'SPACE', world: '太空', res: '燃料', kind: 2, th: [1500, 3500, 6000], placeholder: false },
   ];
 
@@ -170,10 +170,11 @@
 
   function clearInput(m) { m.input = { ok_down: 0, ok_up: 0, up_down: 0, down_down: 0, down_up: 0 }; }
 
-  function startRun(m, practice=false) {
+  function startRun(m) {
     const s = m.session;
     s.seed = rand(m);
-    s.game = practice&&s.station===3?Post.startPractice(s.seed):engine(s.station).start(s.seed);
+    s.bestBefore=m.best[s.station];
+    s.game = engine(s.station).start(s.seed);
     s.phase = PHASE.READY; s.t = READY_STEPS; s.record = 0;
     clearInput(m);
     cue(m, CUE.ENTER);
@@ -208,11 +209,7 @@
 
   function openPassport(m, from) { m.page = PAGE.PASSPORT; m.passport = 0; m.passportFrom = from; cue(m, CUE.ENTER); }
 
-  function practiceOpen(m) {
-    m.fx=0;m.cue=CUE.NONE;
-    if((m.page!==PAGE.MAP&&m.page!==PAGE.COVER)||m.session)return 0;
-    m.fx=FX.REDRAW;openSession(m,3);startRun(m,true);return m.fx;
-  }
+  function practiceOpen(m) { m.fx=0;m.cue=0;return 0; }
 
   function isBack(btn, ev) { return btn === BTN.UP && (ev === EV.LONG || ev === EV.DOUBLE); }
   function gameMapKey(btn, ev) { return btn === BTN.UP && ev === EV.DOUBLE; }
@@ -220,7 +217,7 @@
   // Games where UP is held to move: only two genuinely short UP taps may leave for the map.
   // V2 landscape games (NIGHT, SKI) hold UP all the time: middle DOWN starts/resumes/pauses (long),
   // left OK restarts from pause, and the map is reached only from the pause page.
-  const v2=station=>station===4||station===6||station===8;
+  const v2=station=>station>=3&&station<=8;
   // Pause: V2 games long middle DOWN, SPACE two short DOWN taps, everyone else long UP.
   function pauseKey(s,btn,ev){
     if(v2(s.station))return btn===BTN.DOWN&&ev===EV.LONG;
@@ -245,7 +242,6 @@
     }
     if (s.phase === PHASE.TITLE) {
       if (btn === confirm && ev === EV.CLICK) startRun(m);
-      else if (s.station===3&&btn===BTN.DOWN&&ev===EV.CLICK) startRun(m,true);
     } else if (s.phase === PHASE.PLAY) {
       if (pauseKey(s,btn,ev)) { s.phase = PHASE.PAUSE; cue(m, CUE.BACK); return; }
       if (ev === EV.PRESS) {
@@ -258,10 +254,9 @@
       } else return;
     } else if (s.phase === PHASE.PAUSE) {
       if (btn === confirm && ev === EV.CLICK) { s.phase = PHASE.PLAY; clearInput(m); cue(m, CUE.GO); }
-      else if (btn === restart && ev === EV.CLICK) startRun(m,s.station===3&&s.game.practice);
+      else if (btn === restart && ev === EV.CLICK) startRun(m);
     } else if (s.phase === PHASE.RESULT) {
       if (btn === confirm && ev === EV.CLICK) startRun(m);
-      else if (s.station===3&&btn===BTN.DOWN&&ev===EV.CLICK) startRun(m,true);
     }
   }
 
@@ -352,8 +347,7 @@
       engine(s.station).step(s.game, input);
       if (s.game.cue) cue(m, s.game.cue);
       if (engine(s.station).status(s.game).over) {
-        if(s.station===3&&s.game.practice){if(m.test||unlocked(m,3))startRun(m);else toMap(m);}
-        else {s.phase = PHASE.END; s.t = END_STEPS;}
+        s.phase = PHASE.END; s.t = END_STEPS;
       }
       m.fx |= FX.REDRAW;
     } else if (s.phase === PHASE.END) {

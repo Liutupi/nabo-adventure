@@ -13,11 +13,11 @@ sys.path.insert(0,str(ROOT/'firmware/tools'))
 from verify_firmware import (parse_flash_args,validate_flash_size,verify_flash_images,
     verify_firmware_layout,verify_extra_image_partitions)
 
-VERSION='0.1.0'
-APP_SHA='8897cd9e790bac8ec8812f83582f278145da85b4a835a6584e643211acdc3bf8'
-SOURCE='579f692018be895b0aa5bd2bb93e3fbcca57939e'
-CHECKPOINT=ROOT/'firmware/checkpoints/2026-10-26-v2/nabo-adventure-8897cd9e-candidate.bin'
-VALIDATION=ROOT/'validation/v0.1.0-v2-8897cd9e.json'
+VERSION='0.2.0'
+APP_SHA='e9fe81f6cd52f194d309638305cd9e41faaf074c2c076f815578fb34981e8afc'
+VALIDATION=ROOT/'validation/v2-20261030-e9fe81f6.json'
+REUSED_COMPONENTS={'bootloader/bootloader.bin':'d492cb90188413bb25f6acfa1915bf3d3b2b680d4d17179c8dbf72f1aec8b7c7',
+                   'partition_table/partition-table.bin':'feb7ea496adb63179bf197f87431e6c8ddade47ce0228c1e671ef01421effc0c'}
 
 def sha(data):return hashlib.sha256(data).hexdigest()
 def safe_member(name):
@@ -46,14 +46,22 @@ def frozen_write(path,data):
 def encode(value):return (json.dumps(value,ensure_ascii=False,indent=2)+'\n').encode()
 def sums(files):return ''.join(sha(data)+'  '+name+'\n' for name,data in sorted(files.items())).encode()
 
-def package(build,output,idf):
-    build=Path(build);output=Path(output);idf=Path(idf)
-    app=CHECKPOINT.read_bytes();validation=json.loads(VALIDATION.read_text('utf-8'))
+def validate_binding(app,validation):
     if sha(app)!=APP_SHA or validation['candidate_sha256']!=APP_SHA:
         raise ValueError('Hardware checkpoint binding changed')
-    if not validation['status'].startswith('HOST AND SERIAL PASS'):
+    device=validation.get('device',{})
+    if (not validation['status'].startswith('BUILD AND HOST PASS; DEVICE SERIAL AUTOMATION PASS') or
+            not device.get('application_readback_verified') or not device.get('normal_mode_restored') or
+            not device.get('nvs_unchanged_after_tests') or set(device.get('games',{}))!={'jump','dive','post','night','climb','ski','sky','space'}):
         raise ValueError('Missing device serial validation')
-    if (build/'nabo-adventure.bin').read_bytes()!=app:raise ValueError('Fresh build differs from checkpoint')
+
+def package(build,output,idf,source):
+    build=Path(build);output=Path(output);idf=Path(idf)
+    if not re.fullmatch('[0-9a-f]{40}',source):raise ValueError('Exact firmware source commit required')
+    app=(build/'nabo-adventure.bin').read_bytes();validation=json.loads(VALIDATION.read_text('utf-8'))
+    validate_binding(app,validation)
+    for name,h in REUSED_COMPONENTS.items():
+        if sha((build/name).read_bytes())!=h:raise ValueError('Released v0.1.0 component changed: '+name)
     merged=(build/'nabo-adventure-merged.bin').read_bytes()
     args=(build/'flash_args').read_text('utf-8');validate_flash_size(args);offsets=parse_flash_args(args)
     expected={'bootloader/bootloader.bin':0,'partition_table/partition-table.bin':0x8000,'nabo-adventure.bin':0x10000}
@@ -66,7 +74,7 @@ def package(build,output,idf):
     app_name=prefix+'-app.bin';full_name=prefix+'-full.bin';zip_name=prefix+'.zip'
     files={app_name:app,full_name:merged,'bootloader.bin':(build/'bootloader/bootloader.bin').read_bytes(),
            'partition-table.bin':(build/'partition_table/partition-table.bin').read_bytes(),
-           'INSTALL.md':(ROOT/'docs/INSTALL_v0.1.0.md').read_bytes(),'VALIDATION.json':VALIDATION.read_bytes(),
+           'INSTALL.md':(ROOT/('docs/INSTALL_v'+VERSION+'.md')).read_bytes(),'VALIDATION.json':VALIDATION.read_bytes(),
            'GAME_CONTROLS.md':(ROOT/'docs/GAME_CONTROLS.md').read_bytes(),
            'tools/flash_candidate.py':(ROOT/'firmware/tools/flash_candidate.py').read_bytes(),
            'tools/verify_firmware.py':(ROOT/'firmware/tools/verify_firmware.py').read_bytes()}
@@ -85,22 +93,24 @@ def package(build,output,idf):
                 files['licenses/'+component.name+'/'+p.name]=p.read_bytes();found=True
         if not found:raise ValueError('Missing component license: '+component.name)
     for name in files:safe_member(name)
-    manifest={'schema':'nabo-adventure-release-v1','version':VERSION,'date':'2026-10-26','prerelease':True,
-      'firmware_source_commit':SOURCE,'release_ref':'v'+VERSION,'device':'FoloToy AI Passport ESP32-C3 8MB',
+    manifest={'schema':'nabo-adventure-release-v1','version':VERSION,'date':'2026-10-30','prerelease':True,
+      'firmware_source_commit':source,'release_ref':'v'+VERSION,'device':'FoloToy AI Passport ESP32-C3 8MB',
       'application':{'file':app_name,'bytes':len(app),'sha256':APP_SHA,'offset':'0x10000','hardware_serial_verified':True},
       'full_install':{'file':full_name,'bytes':len(merged),'sha256':sha(merged),'offset':'0x0',
                       'contains_same_application':True,'hardware_first_install_verified':False,'resets_settings_and_scores':True},
       'build_components':{name:{'offset':hex(at),'bytes':sizes[name],'sha256':sha((build/name).read_bytes())} for name,at in offsets.items()},
+      'component_provenance':{'application':'exact e9fe81f6 device-tested build output; not rebuilt',
+                              'bootloader_and_partition_table':'reused byte-for-byte from public v0.1.0 ZIP'},
       'archive':zip_name,'archive_members':{name:{'bytes':len(data),'sha256':sha(data)} for name,data in sorted(files.items())},
       'privacy':{'source':'prebuilt build outputs plus explicit allowlisted documents/licenses/tools',
                  'device_flash_or_nvs_included':False,'all_gaps_ff_verified':True},
-      'validation':'VALIDATION.json','human_acceptance':validation['human_acceptance']}
+      'validation':'VALIDATION.json','human_acceptance':{'status':'pending','unverified':validation['unverified']}}
     files['manifest.json']=encode(manifest);files['contents.sha256']=sums(files)
     import io
     stream=io.BytesIO()
     with zipfile.ZipFile(stream,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
         for name,data in sorted(files.items()):
-            info=zipfile.ZipInfo(safe_member(name),(2026,10,26,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED
+            info=zipfile.ZipInfo(safe_member(name),(2026,10,30,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED
             info.external_attr=0o100644<<16;z.writestr(info,data,compresslevel=9)
     assets={app_name:app,full_name:merged,zip_name:stream.getvalue(),
             'manifest.json':files['manifest.json'],'INSTALL.md':files['INSTALL.md'],'VALIDATION.json':files['VALIDATION.json']}
@@ -111,5 +121,6 @@ def package(build,output,idf):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--build',type=Path,default=ROOT/'firmware/build-idf6')
-    p.add_argument('--output',type=Path,default=ROOT/'release-v0.1.0');p.add_argument('--idf',type=Path,default=Path('C:/Espressif/esp-idf-v6.0.2'))
-    a=p.parse_args();package(a.build,a.output,a.idf)
+    p.add_argument('--output',type=Path,default=ROOT/'release-v0.2.0');p.add_argument('--idf',type=Path,required=True)
+    p.add_argument('--source-commit',required=True)
+    a=p.parse_args();package(a.build,a.output,a.idf,a.source_commit)

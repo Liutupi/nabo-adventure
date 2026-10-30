@@ -96,9 +96,9 @@
   ],
   "source_sha256": [
     "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433",
-    "b0b896e7f94c29c1ce537b60ed4d29be5bb1e16c8ce80dc3a34ef824e76d2855",
+    "0e617cbf4d0ef89e9222728464bb862e63f0a7c9f9334accda24b34256960e6c",
     "8789df5cbe8e75247862920d23967499520e7a04d3b424a43defb900c6692880",
-    "00630df1a725ec725205b3c09fee2292befa8298939a859b228d6a49e37bbeec",
+    "c0414705ec0652654fbfc0f2be3dacae2d716159e846cb485da1a36360341588",
     "2e264f4c1f94c1273cc8570ebe1be1dfda71b64e837f94f27b3517bf075b74f9",
     "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
   ],
@@ -113,27 +113,27 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\heat\\000.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/heat/000.png",
       "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\heat\\001.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/heat/001.png",
       "sha256": "b0b896e7f94c29c1ce537b60ed4d29be5bb1e16c8ce80dc3a34ef824e76d2855"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\heat\\002.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/heat/002.png",
       "sha256": "8789df5cbe8e75247862920d23967499520e7a04d3b424a43defb900c6692880"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\heat\\003.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/heat/003.png",
       "sha256": "00630df1a725ec725205b3c09fee2292befa8298939a859b228d6a49e37bbeec"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\heat\\004.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/heat/004.png",
       "sha256": "2e264f4c1f94c1273cc8570ebe1be1dfda71b64e837f94f27b3517bf075b74f9"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\heat\\005.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/heat/005.png",
       "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
     }
   ],

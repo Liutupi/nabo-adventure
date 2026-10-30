@@ -22,6 +22,13 @@ static uint32_t read_u32(nvs_handle_t h, const char *key)
     return value;
 }
 
+// V2 scores use different units. Keep every V1 best key intact for rollback.
+const char *adv_persist_best_key(int station)
+{
+    static const char *const keys[]={"","jump_best","dive_best","adv_v2_post","adv_b_night","adv_v2_climb","adv_b_ski","adv_v2_sky","adv_b_space"};
+    return station>0&&station<ADV_STATIONS?keys[station]:"";
+}
+
 void adv_persist_load(cg_settings_t *s, uint32_t best[ADV_STATIONS], uint32_t *seen)
 {
     *s = (cg_settings_t){.volume = 70, .brightness = 80, .sleep_seconds = 300, .speaker = true};
@@ -37,12 +44,18 @@ void adv_persist_load(cg_settings_t *s, uint32_t best[ADV_STATIONS], uint32_t *s
     if (nvs_get_u8(h, "speaker", &flag) == ESP_OK) s->speaker = flag != 0;
     best[1] = s_jump_saved = read_u32(h, "jump_best");
     best[2] = (uint32_t)dive_depth_m((float)read_u32(h, "dive_best"));
+    uint32_t inherited = 0;
     for (int i = 3; i < ADV_STATIONS; i++) {
         char key[16];
         snprintf(key, sizeof(key), "adv_b_%s", adv_station[i].id);
         best[i] = read_u32(h, key);
+        if(i==3||i==5||i==7){
+            static const uint32_t legacy[3][3]={{5,12,25},{50,150,300},{200,500,1000}};
+            int row=(i-3)/2;for(int tier=0;tier<3;tier++)if(best[i]>=legacy[row][tier])inherited|=adv_stamp_bit(i,tier);
+            best[i]=read_u32(h,adv_persist_best_key(i));
+        }
     }
-    *seen = read_u32(h, "adv_seen");
+    *seen = read_u32(h, "adv_seen") | inherited;
     nvs_close(h);
     cg_sanitize(s);
 }

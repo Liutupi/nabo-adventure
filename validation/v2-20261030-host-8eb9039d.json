@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-30",
+  "candidate_sha256": "8eb9039d8f649b18d482ed30df998aeb5a9414ebab48e2a110cdc7e77f6defbd",
+  "status": "BUILD AND HOST PASS; DEVICE CLIMB PERFORMANCE FAILED; SUPERSEDED",
+  "base_commit": "ccecab649dde1c7bacc06855713b1e6fe285cbe5",
+  "host": {
+    "tests": 305,
+    "seconds": 120.055,
+    "passed": true,
+    "rule_traces": 18,
+    "rule_mutations": 6,
+    "render_tests": 30,
+    "notes": "First baseline run hit macOS /var alias paths; evidence path canonicalization is fixed and the final complete gate passes with the normal environment.",
+    "production_c": {
+      "verified_frames": 633,
+      "verified_sprite_rows": 30666,
+      "verified_ninepatch_rows": 912,
+      "comparison": "generated C and production decoders vs indexed source"
+    },
+    "fonts": {
+      "collection_font_12": "acb43fdb4876bf43203f3e9b2b51636a367da2749933efe06c4fc0981e3fc8f1",
+      "collection_font_16": "5b156755b3e7769e5015ac4a964f92e801cfe8c04154925b6e6dc5d5263fcb05",
+      "collection_font_18": "f983e9ae0b223258471ca6ac844e1b6100b67537054e7ca37be615f0b336cb4b",
+      "collection_font_26": "40a0c2299cc520469a6f4eed3d89cb2361bdee2dd3a7175af857bb9bc7628e99"
+    }
+  },
+  "build": {
+    "platform": "macOS",
+    "idf": "6.0.2",
+    "directory": "firmware/build-v2-20261030",
+    "isolated_defaults": true,
+    "main_optimization": "-O2",
+    "idf_optimization": "size, silent assertion text",
+    "merged_sha256": "dc372ac89f30f739e7fb4e185b7b926fb1e8bc0dee19b3cd1e88aedba4878a49",
+    "elf_sha256": "13e3e468d894ec2acf87bd2f253d9c25731f31cbae37ec9790b6f970e4ab610e",
+    "source_inputs_sha256": "817c4fa6f6c7740ba1e2deaa6a69db564b24f165e735d800b72eec5aa9e0a6a5",
+    "candidate_archive_verified": true
+  },
+  "budget": {
+    "app_sha256": "8eb9039d8f649b18d482ed30df998aeb5a9414ebab48e2a110cdc7e77f6defbd",
+    "app_bytes": 1878928,
+    "physical_factory_bytes": 2031616,
+    "free_bytes": 152688,
+    "reserve_bytes": 65536,
+    "permanent_reserve_bytes": 65536,
+    "future_game_reserve_bytes": 0,
+    "future_games_reserved_bytes": {},
+    "remaining_after_reserve_bytes": 87152,
+    "budget_profile_sha256": "966b586736e129009a383249c59eb3247a013cbe87d84dea007e8b5e70b574e0",
+    "opening_bytes": 221831,
+    "opening_limit_bytes": 229376,
+    "status": "PASS"
+  },
+  "device": {
+    "tests": "PARTIAL; CLIMB PERFORMANCE FAILED",
+    "flashed": true,
+    "application_readback_verified": true,
+    "completed_serial_lifecycle_games": [
+      "jump",
+      "dive",
+      "post",
+      "climb",
+      "ski"
+    ],
+    "climb_initial_idle_fps": 17.09357107088807,
+    "note": "Stopped before completing SKY/SPACE/NIGHT; see repair candidate e9fe81f6. No full-flash backup or preserved-region readback was required."
+  },
+  "compatibility": {
+    "v1_source_and_tests_retained": true,
+    "new_best_keys": {
+      "post": "adv_v2_post",
+      "climb": "adv_v2_climb",
+      "sky": "adv_v2_sky"
+    },
+    "v1_keys_unchanged": true,
+    "legacy_awards_inherited": true,
+    "partitions_and_pins_unchanged": true
+  },
+  "unverified": [
+    "actual buttons and game feel",
+    "each changed game ten lifecycle rounds on the device",
+    "SKI and dense-scene FPS",
+    "new jump gradient frame rate",
+    "actual mute setting and NVS preservation",
+    "sleep/wake during games",
+    "unused B-skin selector remains unfinished"
+  ],
+  "superseded_by": "e9fe81f6cd52f194d309638305cd9e41faaf074c2c076f815578fb34981e8afc"
+}

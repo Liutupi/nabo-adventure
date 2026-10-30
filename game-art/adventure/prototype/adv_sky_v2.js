@@ -3,7 +3,7 @@
 // Screen y grows downward, Q8 for the balloon and letters. World x is integer px (dist is Q8).
 // Keys (landscape, left to right): OK = hold to vent (sink fast), DOWN = tap to drop a letter, UP = hold to heat (climb).
 // Long-press DOWN is the shell's pause, so nothing here needs DOWN held.
-// Firmware does NOT follow this yet: V1 (portrait, hold OK to heat) is still adv_sky.c. Port only after the user approves G1.
+// Approved 2026-10-30: firmware/main/adv_sky_v2.c mirrors these rules; V1 stays available for rollback.
 (function (root) {
   'use strict';
   const K = {

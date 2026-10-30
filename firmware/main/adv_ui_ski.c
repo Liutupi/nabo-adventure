@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "adv_ski.h"
 #include "adv_ui_internal.h"
+#include "adv_ui_cards.h"
 
 #define NY ADV_SKI_NABO_Y
 #define W 320
@@ -159,33 +160,15 @@ static void title(ag_t *g, const adv_model_t *m, uint32_t ms)
     slope(g, (int)(ms * 36 / 100));
     int x = 160 + sway(ms), d = sway(ms + 300) - sway(ms);
     actor(g, d < -8 ? "lean_left" : d > 8 ? "lean_right" : "straight", ms / 120 % 4, x, NY);
-    ag_rect(g, 0, 110, W, 130, 0, HUD_INK, 150, 0, 0);
-    char best[32];
-    snprintf(best, sizeof(best), "最佳 %u", (unsigned)m->best[6]);
-    text(g, best, 312, 6, 12, NT_ALIGN_RIGHT, 0x2945);
-    text(g, "雪崩速降", 160, 118, 18, NT_ALIGN_CENTER, 0xFFFF);
-    text(g, "左键 左转 · 中键 跳/空中转体 · 右键 右转", 160, 146, 12, NT_ALIGN_CENTER, PALE);
-    text(g, "过旗门、做转体越滑越快，别让雪崩追上", 160, 166, 12, NT_ALIGN_CENTER, PALE);
-    if ((ms / 500) % 3) text(g, "中键开始", 160, 190, 16, NT_ALIGN_CENTER, 0xFFFF);
-    text(g, "长按中键暂停 · 双击上键回地图", 160, 222, 12, NT_ALIGN_CENTER, 0x9CF3);
+    ui_v2_title(g,m);
 }
 
-static void result(ag_t *g, const adv_model_t *m, const adv_ski_t *p, uint32_t since)
+static void result(ag_t *g,const adv_model_t *m,const adv_ski_t *p,uint32_t since)
 {
-    world(g, p, true, since);
-    ag_rect(g, 0, 0, W, H, 0, HUD_INK, 205, 0, 0);
-    text(g, "被雪崩追上了", 160, 16, 12, NT_ALIGN_CENTER, PALE);
-    char s[64];
-    snprintf(s, sizeof(s), "%u", (unsigned)p->score);
-    ui_number_tint(g, s, 36, 160, 38, NT_ALIGN_CENTER, 0xFFFF);
-    if (m->record) text(g, m->test ? "测试不保存" : "新纪录！", 254, 44, 12, NT_ALIGN_CENTER, GOLD);
-    snprintf(s, sizeof(s), "%d 米 · 旗门 %d/%d · 转体 %d · 最长 %d 连", (int)p->meters, (int)p->passed, (int)(p->passed + p->misses), (int)p->tricks, (int)p->best);
-    text(g, s, 160, 90, 12, NT_ALIGN_CENTER, PALE);
-    unsigned frame = since / 83 > 7 ? 7 : since / 83;
-    actor(g, "settlement_cheer", frame, 160, 196);
-    snprintf(s, sizeof(s), "最佳 %u", (unsigned)m->best[6]);
-    text(g, s, 160, 200, 12, NT_ALIGN_CENTER, 0xFFFF);
-    text(g, "中键重玩 · 双击上键回地图", 160, 222, 12, NT_ALIGN_CENTER, 0x9CF3);
+    world(g,p,true,since);char line[80];
+    snprintf(line,sizeof(line),"%d 米 · 旗门 %d/%d · 转体 %d",(int)p->meters,(int)p->passed,(int)(p->passed+p->misses),(int)p->tricks);
+    char detail[40];snprintf(detail,sizeof(detail),"最长 %d 连",(int)p->best);
+    ui_v2_result(g,m,since,"被雪崩追上了",line,detail);
 }
 
 void ui_draw_ski_session(ag_t *g, const adv_model_t *m)
@@ -199,19 +182,7 @@ void ui_draw_ski_session(ag_t *g, const adv_model_t *m)
     const adv_ski_t *p = m->game;
     if (m->phase == ADV_RESULT) { result(g, m, p, ms - phase_started); return; }
     world(g, p, m->phase == ADV_END, ms);
-    if (m->phase == ADV_PAUSE) {
-        ag_rect(g, 56, 50, 208, 124, 8, HUD_INK, 235, GOLD, 1);
-        text(g, "暂停", 160, 60, 18, NT_ALIGN_CENTER, 0xFFFF);
-        text(g, "中键继续", 160, 92, 16, NT_ALIGN_CENTER, GOLD);
-        text(g, "左键重新开始", 160, 120, 12, NT_ALIGN_CENTER, 0xFFFF);
-        text(g, "双击上键回地图", 160, 142, 12, NT_ALIGN_CENTER, 0xFFFF);
-        return;
-    }
+    if (m->phase == ADV_PAUSE) { ui_v2_pause(g); return; }
     effects(g, p); hud(g, p, ms);
-    if (m->phase == ADV_READY) {
-        char n[12];
-        snprintf(n, sizeof(n), "%d", (m->t + 59) / 60);
-        ag_glow(g, 160, 140, 34, GOLD); ui_number(g, n, 36, 160, 122, NT_ALIGN_CENTER);
-        text(g, "雪崩从后面追来了", 160, 168, 12, NT_ALIGN_CENTER, HUD_INK);
-    } else if (m->phase == ADV_END) { ag_rect(g, 82, 120, 156, 44, 8, HUD_INK, 235, WARN, 1); text(g, "被追上了", 160, 130, 18, NT_ALIGN_CENTER, 0xFFFF); }
+    if (m->phase == ADV_READY) { ui_v2_ready(g,m); } else if (m->phase == ADV_END) { ag_rect(g, 82, 120, 156, 44, 8, HUD_INK, 235, WARN, 1); text(g, "被追上了", 160, 130, 18, NT_ALIGN_CENTER, 0xFFFF); }
 }

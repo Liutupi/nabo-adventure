@@ -31,7 +31,7 @@
     "b2ae99bcc6944385d858cb05e0acde6a16287f54d4fca754b320a4bcf0ee0687"
   ],
   "source_sha256": [
-    "a257bb4f972469c461c2745da762a4c479a2b20f2b9fb3424756a1d61566dc5a"
+    "187ef76afb67bc9b7e7239230a4f0cb7675e6a8cd15e94f9b72e94e790278cc1"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -44,7 +44,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\bg-lunar-surface.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/space-v2/bg-lunar-surface.png",
       "sha256": "b3dfbf18249e3ad71e71e31f836420fa328addf09651e1a9afcc303b290dcb29"
     }
   ],

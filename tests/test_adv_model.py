@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BOARD = ROOT/'firmware/main'
 HOST = ROOT/'tests/adv_host'
 GOLDEN = ROOT/'tests/adv_golden'
-SOURCES = ['adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c', 'adv_climb.c', 'adv_ski.c', 'adv_sky.c', 'adv_space.c', 'collection_model.c']
+SOURCES = ['adv_post_v2.c','adv_climb_v2.c','adv_sky_v2.c','adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c', 'adv_climb.c', 'adv_ski.c', 'adv_sky.c', 'adv_space.c', 'collection_model.c']
 REDRAW = 1
 
 def build(folder, replace=None):
@@ -167,9 +167,9 @@ class Mutations(unittest.TestCase):
         # Every station now runs a formal game; the placeholder engine is no longer reachable, so its
         # mutants were retired. The hold-to-move games guard their exits and pause gestures instead.
         ('adv_model.c', 'if(v2(m->station)&&m->phase==ADV_PLAY)return;', 'if(v2(m->station)&&m->phase==ADV_PAUSE)return;'),
-        ('adv_model.c', 'static bool v2(int station) { return station == 4 || station == 6 || station == 8; }',
+        ('adv_model.c', 'static bool v2(int station) { return station >= 3 && station <= 8; }',
          'static bool v2(int station) { return station == 4; }'),
-        ('adv_model.c', 'station == 4 || station == 6 || station == 8', 'station == 4 || station == 6'),
+        ('adv_model.c', 'station >= 3 && station <= 8', 'station >= 4 && station <= 8'),
     ]
 
     def test_mutants_are_caught(self):

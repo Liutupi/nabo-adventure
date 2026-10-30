@@ -95,11 +95,11 @@
     "e865a9eaabcb00fccc1820a370b2405d0e89624c0f64767d45639f42c4e8ec9b"
   ],
   "source_sha256": [
-    "b200061ceaf388c7785f7a8ba9f2b48d52de00afba76aabb1231f3681b6dc101",
-    "8c72c9862f2a5b1fdb9caf286b2edfc0b36e9db8e1bcc5666f1e72fca68512b5",
+    "3a05ba733fa15bb425560f60ec727ca5e69e6469ee23442cd8d379acd2a5f4f9",
+    "bd40e1bb538851f55b0d0e81e0988db8e2bd33366c787934521ad6ce7c65a361",
     "0917444e6a5e6bf864bad96335b7aad4a74bad518798ad7438ae535fcb2c73cb",
-    "e9092c6998e9f4299ddbd33497cad5a0797a5e722f001b2f2d756dce04f14016",
-    "17fc9545a9ea162987bfadef67e68151689f51e2e07fd78ca16f12948a5e325d",
+    "923c293ba368177e10da54ba81ae74d9f8a6b9f440e2d0aadfce543d75c16d53",
+    "a4de7ef7054d5d29af80bd756d6f1784136ac7f1f8114d96a7d62e8f7ca99ccc",
     "0d62b6973f308cbf9e7ec2f420c7b1fceaaea970116455b975a9b35c7e9feb30",
     "aa485192d455343fb91840952ca540284fdd4b653f67e11f86ae97b739052e24",
     "c51384427e02050eef6aff8ce19b669b783873f7cdb9f2e3237faf2fad49f670"
@@ -115,35 +115,35 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\000.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/000.png",
       "sha256": "b200061ceaf388c7785f7a8ba9f2b48d52de00afba76aabb1231f3681b6dc101"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\001.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/001.png",
       "sha256": "8c72c9862f2a5b1fdb9caf286b2edfc0b36e9db8e1bcc5666f1e72fca68512b5"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\002.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/002.png",
       "sha256": "0917444e6a5e6bf864bad96335b7aad4a74bad518798ad7438ae535fcb2c73cb"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\003.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/003.png",
       "sha256": "e9092c6998e9f4299ddbd33497cad5a0797a5e722f001b2f2d756dce04f14016"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\004.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/004.png",
       "sha256": "17fc9545a9ea162987bfadef67e68151689f51e2e07fd78ca16f12948a5e325d"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\005.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/005.png",
       "sha256": "0d62b6973f308cbf9e7ec2f420c7b1fceaaea970116455b975a9b35c7e9feb30"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\006.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/006.png",
       "sha256": "aa485192d455343fb91840952ca540284fdd4b653f67e11f86ae97b739052e24"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\walk_left\\007.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/walk_left/007.png",
       "sha256": "c51384427e02050eef6aff8ce19b669b783873f7cdb9f2e3237faf2fad49f670"
     }
   ],

@@ -37,7 +37,7 @@
     "de59a2986872caabf968bddb434b5c49ae0a8462f0a63a04a31f288e313c5836"
   ],
   "source_sha256": [
-    "8da4517ab5ed679b3c18e8d6b1f0c6b8196b8d52db13f9e5306d02b5b437c50a"
+    "3a86f3af689275879488f47d9f7e30d97d3790ef88fc58e7f22e7cfaa4c50878"
   ],
   "verified_frames": 1,
   "comparison": "lossless after shared RGB565 quantization",
@@ -50,7 +50,7 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\space-v2\\bg-launch-near.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/space-v2/bg-launch-near.png",
       "sha256": "6749d1835a889df2ff0cba4b3b6caf137b0d8a9c275f914e3d5c89c4e68ec868"
     }
   ],

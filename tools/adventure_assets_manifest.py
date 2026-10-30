@@ -2,7 +2,7 @@
 from dataclasses import dataclass, field
 import hashlib
 import json
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 import re
 from PIL import Image
 
@@ -36,8 +36,8 @@ class Resource:
 
 
 def scoped(base, relative):
-    path = Path(relative)
-    if path.is_absolute(): raise ValueError('Manifest paths must be relative')
+    path = Path(str(relative).replace("\\", "/"))
+    if path.is_absolute() or PureWindowsPath(relative).drive: raise ValueError('Manifest paths must be relative')
     resolved = (base / path).resolve()
     if not resolved.is_relative_to(base.resolve()): raise ValueError('Manifest path escapes its source directory')
     if not resolved.is_file(): raise ValueError(f'Missing declared source: {resolved}')

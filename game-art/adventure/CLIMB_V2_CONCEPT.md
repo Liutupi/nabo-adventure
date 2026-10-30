@@ -1,5 +1,7 @@
 # CLIMB V2「双线攀岩」G0 概念 + G1 试玩
 
+> 2026-10-30 Codex：用户已明确认可本款 G1；`firmware/main/adv_climb_v2.c/.h` 和横屏画面已接入，共用卡片已接入。V1 源码/规则对拍保留。新规则对拍在 `tests/v2_golden/climb/`，统一录制入口 `node tests/record_v2_golden.js climb`；宿主与构建通过，新候选未上机，详见 `docs/HANDOFF.md` 顶部。
+
 2026-10-30 Claude 云端，和 SKY V2 同批。只到 **G1 浏览器试玩**，**用户认可前不改 C、不动固件素材、不删 V1**（`adv_climb.c` 仍是 V1 竖屏换边/蓄力跳）。
 
 | 用途 | 文件 |

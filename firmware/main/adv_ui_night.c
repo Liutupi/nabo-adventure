@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "adv_night.h"
 #include "adv_ui_internal.h"
+#include "adv_ui_cards.h"
 
 #define GY ADV_NIGHT_GROUND
 #define W 320
@@ -252,7 +253,7 @@ static void hud(ag_t *g, const adv_night_t *p, uint32_t ms)
     if (p->combo >= 2) {
         int mu = adv_night_mult(p);
         if (mu > 1) snprintf(s, sizeof(s), "%d连 ×%d", (int)p->combo, mu); else snprintf(s, sizeof(s), "%d连", (int)p->combo);
-        text(g, s, 312, 28, 12, NT_ALIGN_RIGHT, mu > 1 ? GOLD : 0xD71F);
+        text(g, s, 160, 8, 12, NT_ALIGN_CENTER, mu > 1 ? GOLD : 0xD71F);
     }
 }
 
@@ -282,35 +283,15 @@ static void title(ag_t *g, const adv_model_t *m, uint32_t ms)
         int x = (int)((uint32_t)(i * 47) + ms * (20 + h % 25) / 1000) % (W + 20) - 10, y = 60 + (int)(h >> 10) % 90 + adv_night_isin((int)(ms / 30) + i * 40) * 10 / 4096;
         ag_glow(g, x, y, 6, FLY);
     }
-    char best[32];
-    snprintf(best, sizeof(best), "最佳 %u", (unsigned)m->best[4]);
-    text(g, best, 312, 6, 12, NT_ALIGN_RIGHT, GOLD);
-    text(g, "萤火虫之夜", 196, 34, 18, NT_ALIGN_CENTER, 0xFF97);
-    text(g, "左键 慢走 · 中键 挥罐 · 右键 小跑", 196, 66, 12, NT_ALIGN_CENTER, UI_WHITE);
-    text(g, "光会越来越暗，抓萤火虫补光", 196, 88, 12, NT_ALIGN_CENTER, 0xD71F);
-    text(g, "金色值5倍 · 别网飞蛾 · 跑时当心树根", 196, 108, 12, NT_ALIGN_CENTER, 0xD71F);
-    text(g, "能量满了双击中键放光", 196, 128, 12, NT_ALIGN_CENTER, 0xD71F);
-    if ((ms / 500) % 3) text(g, "中键开始", 196, 160, 16, NT_ALIGN_CENTER, UI_WHITE);
-    text(g, "长按中键暂停 · 双击上键回地图", 160, 222, 12, NT_ALIGN_CENTER, 0x9CF3);
+    ui_v2_title(g,m);
 }
 
-static void result(ag_t *g, const adv_model_t *m, const adv_night_t *p, uint32_t since)
+static void result(ag_t *g,const adv_model_t *m,const adv_night_t *p,uint32_t since)
 {
-    static const char *const CAUSE[] = {"罐子的光慢慢熄了", "一路狂奔，光晃没了", "挥空太多，光洒光了", "飞蛾扑灭了罐子", "绊了一跤，光灭了", "被猫头鹰吓灭了光"};
-    world(g, p, true, since);
-    ag_rect(g, 0, 0, W, 240, 0, 0x0001, 190, 0, 0);
-    text(g, CAUSE[p->last_loss >= 0 && p->last_loss < NIGHT_LOSS_N ? p->last_loss : 0], 160, 18, 12, NT_ALIGN_CENTER, 0x9DBD);
-    char s[64];
-    snprintf(s, sizeof(s), "%u", (unsigned)p->score);
-    ui_number_tint(g, s, 36, 160, 40, NT_ALIGN_CENTER, 0xFF97);
-    if (m->record) text(g, m->test ? "测试不保存" : "新纪录！", 250, 46, 12, NT_ALIGN_CENTER, GOLD);
-    snprintf(s, sizeof(s), "抓到 %d 只 · 最长 %d 连 · 放光 %d 次", (int)p->caught, (int)p->max_combo, (int)p->bursts);
-    text(g, s, 160, 92, 12, NT_ALIGN_CENTER, 0xD71F);
-    unsigned frame = since / 83 > 7 ? 7 : since / 83;
-    ui_art_frame_anchor(g, "travel/cheer", frame, 160, 196);
-    snprintf(s, sizeof(s), "最佳 %u", (unsigned)m->best[4]);
-    text(g, s, 160, 200, 12, NT_ALIGN_CENTER, UI_WHITE);
-    text(g, "中键重玩 · 双击上键回地图", 160, 222, 12, NT_ALIGN_CENTER, 0x9CF3);
+    static const char *const CAUSE[]={"罐子的光慢慢熄了","一路狂奔，光晃没了","挥空太多，光洒光了","飞蛾扑灭了罐子","绊了一跤，光灭了","被猫头鹰吓灭了光"};
+    world(g,p,true,since);
+    char line[80];snprintf(line,sizeof(line),"抓到 %d 只 · 最长 %d 连 · 放光 %d 次",(int)p->caught,(int)p->max_combo,(int)p->bursts);
+    ui_v2_result(g,m,since,CAUSE[p->last_loss>=0&&p->last_loss<NIGHT_LOSS_N?p->last_loss:0],line,NULL);
 }
 
 void ui_draw_night_session(ag_t *g, const adv_model_t *m)
@@ -324,19 +305,7 @@ void ui_draw_night_session(ag_t *g, const adv_model_t *m)
     const adv_night_t *p = m->game;
     if (m->phase == ADV_RESULT) { result(g, m, p, ms - phase_started); return; }
     world(g, p, m->phase == ADV_END, ms - phase_started);
-    if (m->phase == ADV_PAUSE) {
-        panel(g, 58, 124);
-        text(g, "暂停", 160, 68, 18, NT_ALIGN_CENTER, UI_WHITE);
-        text(g, "中键继续", 160, 100, 16, NT_ALIGN_CENTER, UI_GOLD);
-        text(g, "左键重新开始", 160, 128, 12, NT_ALIGN_CENTER, UI_WHITE);
-        text(g, "双击上键回地图", 160, 150, 12, NT_ALIGN_CENTER, UI_WHITE);
-        return;
-    }
+    if (m->phase == ADV_PAUSE) { ui_v2_pause(g); return; }
     effects(g, p); hud(g, p, ms);
-    if (m->phase == ADV_READY) {
-        char n[12];
-        snprintf(n, sizeof(n), "%d", (m->t + 59) / 60);
-        ag_glow(g, 160, 104, 34, UI_GOLD); ui_number(g, n, 36, 160, 86, NT_ALIGN_CENTER);
-        text(g, "罐子的光会变暗，抓萤火虫补光", 160, 140, 12, NT_ALIGN_CENTER, 0xD71F);
-    } else if (m->phase == ADV_END) { panel(g, 80, 44); text(g, "光灭了", 160, 90, 18, NT_ALIGN_CENTER, UI_WHITE); }
+    if (m->phase == ADV_READY) { ui_v2_ready(g,m); } else if (m->phase == ADV_END) { panel(g, 80, 44); text(g, "光灭了", 160, 90, 18, NT_ALIGN_CENTER, UI_WHITE); }
 }

@@ -85,7 +85,7 @@ void host_settings(void) {
 }
 void host_fake_progress(void) {
     model.best[1] = 999; model.best[2] = 888; model.best[3] = 777; model.best[4] = 555; model.seen = 0xffffff;
-    adv_persist_u32("adv_seen", model.seen); adv_persist_u32("adv_b_post", model.best[3]);
+    adv_persist_u32("adv_seen", model.seen); adv_persist_u32(adv_persist_best_key(3), model.best[3]);
     adv_persist_u32("adv_b_night", model.best[4]);
 }
 void host_leave_test(void) {
@@ -98,7 +98,7 @@ uint32_t host_model_seen(void) { return model.seen; }
 int host_model_volume(void) { return model.cfg.settings.volume; }
 void host_save_restored(void) {
     adv_persist_jump(model.best[1]); adv_persist_settings(&model.cfg.settings);
-    adv_persist_u32("adv_seen", model.seen); adv_persist_u32("adv_b_post", model.best[3]);
+    adv_persist_u32("adv_seen", model.seen); adv_persist_u32(adv_persist_best_key(3), model.best[3]);
 }
 '''
 
@@ -112,7 +112,7 @@ class Persistence(unittest.TestCase):
         (folder / 'esp_log.h').write_text('#define ESP_LOGE(...) ((void)0)\n', 'utf-8')
         (folder / 'harness.c').write_text(HARNESS, 'utf-8')
         library = folder / 'adv_persist.dll'
-        sources = ['adv_persist.c', 'adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c','adv_climb.c','adv_ski.c','adv_sky.c','adv_space.c',
+        sources = ['adv_persist.c', 'adv_post_v2.c','adv_climb_v2.c','adv_sky_v2.c','adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c','adv_climb.c','adv_ski.c','adv_sky.c','adv_space.c',
                    'collection_model.c', 'nabo_dive_model.c']
         subprocess.run([CC, '-std=gnu11', '-O2', '-shared', SHARED_EXPORT, '-Wall', '-Wextra',
                         '-Werror', '-Wno-unused-parameter', '-I', str(folder), '-I', str(BOARD),
@@ -171,17 +171,39 @@ class Persistence(unittest.TestCase):
         self.lib.host_leave_test()
         self.assertEqual(self.lib.host_writes(), 0)
         self.assertEqual(self.lib.host_model_best(1), 12)
-        self.assertEqual(self.lib.host_model_best(3), 6)
+        self.assertEqual(self.lib.host_model_best(3), 0)
         self.assertEqual(self.lib.host_model_best(4), 35)
-        self.assertEqual(self.lib.host_model_seen(), 1)
+        self.assertEqual(self.lib.host_model_seen(), 1 | (1 << 6))
         self.assertEqual(self.lib.host_model_volume(), 60)
         self.lib.host_save_restored()
         self.assertEqual(self.lib.host_value(b'jump_best'), 12)
         self.assertEqual(self.lib.host_value(b'dive_best'), 2400)
         self.assertEqual(self.lib.host_value(b'adv_b_post'), 6)
         self.assertEqual(self.lib.host_value(b'adv_b_night'), 35)
-        self.assertEqual(self.lib.host_value(b'adv_seen'), 1)
+        self.assertEqual(self.lib.host_value(b'adv_seen'), 1 | (1 << 6))
         self.assertEqual(self.lib.host_value(b'volume'), 60)
+
+    def test_v2_score_keys_preserve_v1_records_and_inherited_awards(self):
+        self.lib.adv_persist_best_key.argtypes=[ctypes.c_int]
+        self.lib.adv_persist_best_key.restype=ctypes.c_char_p
+        self.assertEqual(self.lib.host_writes(),0)
+        self.assertEqual(self.lib.host_model_best(3),0)
+        self.assertTrue(self.lib.host_model_seen() & (1 << 6))
+        for station,key in ((3,b'adv_v2_post'),(5,b'adv_v2_climb'),(7,b'adv_v2_sky')):
+            self.assertEqual(self.lib.adv_persist_best_key(station),key)
+            self.lib.adv_persist_u32(key,512+station)
+        self.lib.host_leave_test()
+        self.assertEqual(self.lib.host_model_best(3),515)
+        self.assertEqual(self.lib.host_model_best(5),517)
+        self.assertEqual(self.lib.host_model_best(7),519)
+        self.assertEqual(self.lib.host_value(b'adv_b_post'),6)
+        self.assertEqual(self.lib.host_value(b'adv_seen'),1)
+
+    def test_test_mode_blocks_v2_score_keys(self):
+        self.lib.adv_persist_set_test(True)
+        for key in (b'adv_v2_post',b'adv_v2_climb',b'adv_v2_sky'):
+            self.lib.adv_persist_u32(key,9999)
+        self.assertEqual(self.lib.host_writes(),0)
 
 
 if __name__ == '__main__':

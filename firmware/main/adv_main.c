@@ -6,7 +6,7 @@
 #include <string.h>
 #include "adv_boot.h"
 #include "adv_model.h"
-#include "adv_post.h"
+#include "adv_post_v2.h"
 #include "adv_night_debug.h"
 #include "adv_space_debug.h"
 #include "adv_climb_debug.h"
@@ -70,7 +70,7 @@ static void report_error(const char *what, esp_err_t err)
     if (err != ESP_OK) ESP_LOGE(TAG, "%s: %s", what, esp_err_to_name(err));
 }
 
-static void best_key(char *out, size_t size, int station) { snprintf(out, size, "adv_b_%s", adv_station[station].id); }
+static void best_key(char *out, size_t size, int station) { snprintf(out, size, "%s", adv_persist_best_key(station)); }
 
 static void stop_boot(void)
 {
@@ -125,7 +125,7 @@ static void set_owner(owner_t next)
 
 static void handle_fx(int fx)
 {
-    bool horn=s_model.in_session&&s_model.station==3&&s_model.phase==ADV_PLAY&&((adv_post_t *)s_model.game)->whistle;
+    bool horn=false; // POST V2 has no held whistle action.
     atomic_store(&s_post_horn,horn);
     if (s_model.page != ADV_PAGE_COVER) stop_boot();
     if (fx & ADV_FX_CUE) atomic_store(&s_cue, s_model.cue);
@@ -234,18 +234,10 @@ static void status(void)
 static void post_status(void)
 {
     if(!s_model.in_session||s_model.station!=3||!s_model.game){puts("@error POST not active");return;}
-    const adv_post_t *g=s_model.game;
-    flockfile(stdout);
-    printf("@post {\"tick\":%u,\"score\":%u,\"res\":%d,\"lane\":%d,\"choice\":%d,\"remaining\":%d,\"lap\":%d,\"speed\":%d,\"hold\":%d,\"over\":%d,\"mail\":[",
-           (unsigned)g->tick,(unsigned)g->score,(int)g->res,(int)g->lane,(int)g->choice,
-           (int)g->remaining,(int)g->lap,(int)g->speed,(int)g->hold,(int)g->over);
-    for(int i=0;i<5;i++)printf("%s%d",i?",":"",(int)g->mail[i]);
-    printf("],\"y\":%d,\"whistle\":%d,\"practice\":%d,\"lesson\":%d,\"presses\":%u,\"taps\":%u,\"miss_reason\":%d,\"events\":[",
-           (int)g->y,(int)g->whistle,(int)g->practice,(int)g->lesson,(unsigned)g->presses,(unsigned)g->taps,(int)g->miss_reason);
-    for(int i=0;i<ADV_POST_CAP;i++){
-        const adv_post_event_t *e=&g->events[i];
-        printf("%s[%d,%d,%d,%d,%d,%d]",i?",":"",(int)e->type,(int)e->x,(int)e->lane,(int)e->color,(int)e->done,(int)e->horn);
-    }
+    const adv_post_v2_t *g=s_model.game;flockfile(stdout);
+    printf("@post {\"v2\":1,\"tick\":%u,\"score\":%u,\"res\":%d,\"over\":%d,\"speed\":%d,\"dist\":%d,\"bags\":%d,\"delivered\":%d,\"perfects\":%d,\"cranes\":%d,\"reds\":%d,\"derails\":%d,\"zone\":%d,\"events\":[",
+           (unsigned)g->tick,(unsigned)g->score,(int)g->res,(int)g->over,(int)g->v,(int)g->dist,(int)g->bags,(int)g->delivered,(int)g->perfects,(int)g->cranes,(int)g->reds,(int)g->derails,(int)g->zone);
+    for(int i=0;i<POST_V2_EVENTS;i++){const adv_post_v2_event_t *e=&g->ev[i];printf("%s[%d,%d,%d,%d,%d,%d]",i?",":"",(int)e->type,(int)e->x,(int)e->a,(int)e->b,(int)e->t,(int)e->done);}
     puts("]}");funlockfile(stdout);
 }
 
@@ -312,13 +304,7 @@ static void command(const char *line)
     else if(!strcmp(line,">night.status"))adv_night_debug(&s_model);
     else if(!strcmp(line,">space.status"))adv_space_debug(&s_model);
     else if(!strcmp(line,">climb.status"))adv_climb_debug(&s_model);
-    else if(!strcmp(line,">adv.practice=post")) {
-        handle_fx(adv_practice_open(&s_model));
-        if(s_model.in_session&&s_model.station==3&&((adv_post_t *)s_model.game)->practice) {
-            s_draw_frames=s_draw_us=s_draw_max_us=0;s_last_input_us=s_step_us=esp_timer_get_time();
-            puts("@adv practice=post");
-        } else puts("@error practice requires cover or map");
-    }
+    else if(!strcmp(line,">adv.practice=post")) puts("@error POST V2: use middle key to start");
     else if (!strncmp(line, ">adv.open=", 10)) diagnostic_open(line + 10);
     else if (!strncmp(line, ">adv.key=", 9)) {
         static const struct { const char *name; int button, event; } keys[] = {
@@ -432,7 +418,11 @@ static void jump_tick(uint32_t ms)
     if (before == JUMP_SCROLLING && s_jump.phase == JUMP_FLYING) atomic_store(&s_jump_cue, 1);
     if (s_jump.phase == JUMP_FALLING && before != JUMP_FALLING) atomic_store(&s_jump_cue, 4);
     if (s_jump.phase == JUMP_OVER) adv_persist_jump(s_jump.best);
+    int64_t draw_start = esp_timer_get_time();
     adv_jump_draw(&s_jump, ms, false);
+    s_draw_us = (uint32_t)(esp_timer_get_time() - draw_start);
+    s_draw_frames++;
+    if (s_draw_us > s_draw_max_us) s_draw_max_us = s_draw_us;
 }
 
 static void adventure_task(void *arg)
@@ -493,7 +483,7 @@ static void adventure_task(void *arg)
         // The V2 renderer already spends most of its frame composing pixels.
         // Yield one tick during play; retain the fixed 60 Hz simulation above.
         bool v2_play=s_owner==OWNER_SHELL&&s_model.page==ADV_PAGE_SESSION&&s_model.phase==ADV_PLAY&&
-                     (s_model.station==4||s_model.station==6||s_model.station==8);
+                     (s_model.station>=3&&s_model.station<=8);
         vTaskDelay(pdMS_TO_TICKS(boot_pending||v2_play?1:s_owner == OWNER_SHELL && s_model.page == ADV_PAGE_SESSION ? 5 : 10));
     }
 }

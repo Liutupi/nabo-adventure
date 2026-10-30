@@ -48,3 +48,11 @@ void ui_draw_sky_session(ag_t *g,const adv_model_t *m);
 void ui_draw_space_session(ag_t *g,const adv_model_t *m);
 void ui_space_close(void);
 uint32_t ui_space_staging_bytes(void);
+
+void ui_draw_post_v2_session(ag_t *g,const adv_model_t *m);
+void ui_draw_sky_v2_session(ag_t *g,const adv_model_t *m);
+void ui_draw_climb_v2_session(ag_t *g,const adv_model_t *m);
+void ui_climb_v2_close(void);
+uint32_t ui_climb_v2_cache_bytes(void);
+void ui_sky_v2_close(void);
+uint32_t ui_sky_v2_cache_bytes(void);

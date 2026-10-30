@@ -95,14 +95,14 @@
     "825af8c977a392109790b6e48a74a013d80273c8c58abb32d67df979c4fd3cf0"
   ],
   "source_sha256": [
-    "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07",
-    "91b7c6c175296362168f4a26d496e09475c6ed91ec16cd58bc55eb115ac6411a",
-    "5bd861faaf02e9b5f7ab207d979b12e3fe1426115b085cebbedde2b5e5c3f7fd",
-    "670df0d2cc70675f343a77a091f3ad91eb71220e93a88b37938962f11151cb91",
-    "0c609893e3822fda0ac381003aee25688d2d3fc08a3ad68def9ce36b34cdb322",
-    "2858fbbfeb3b58e3929b8af1f3236194dc9f60990fb50ec6d9ea0cdbbb9e82ee",
-    "cb9ebf4e3f408836befe093c3295b48e617b7bb3dd098d6deefe4e164531285e",
-    "eaa1f9d16a52d10276122daea676a13ff2238dfdc8ec368c666a2f56caee6e31"
+    "76c3c2a5276420c9698de07521349e63b97d7e9cc3bc6886a5f5fbc21e279f26",
+    "93021a9cc67cad3b2cccace89ad1f618e06f463e31123fcbab4d642f75e39e57",
+    "a9eb851d5b0291082a12d9fef095a4d9a80cda294e98b76f509ac451061e4f5c",
+    "60e68f4746c4f2edaf552af90f87644f4e325dec7a2aa27ef40f13802b0cbdcb",
+    "6447f2e37ab710406bfd0a1603ee8e053e70c7b3444be80860df7958ad2b055d",
+    "0fa73ccb0559b4c728b4d05d57e3d63ef16c78665d46c8137585996a39f7ae37",
+    "f7ff68a3186f7e562e7092526bdccbcded0448edb479954ed538bb94ec1771d5",
+    "33a03c757bc003995d932d7c60e9071f9c289bfe676437e50ec5558675f9e995"
   ],
   "verified_frames": 8,
   "comparison": "lossless after shared RGB565 quantization",
@@ -115,35 +115,35 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\000.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/idle/000.png",
       "sha256": "973dc43622fdc50e2df3b22977f870dd90fdf8cde5c164ebe2dafb1a7628dd07"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\001.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/idle/001.png",
       "sha256": "91b7c6c175296362168f4a26d496e09475c6ed91ec16cd58bc55eb115ac6411a"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\002.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/idle/002.png",
       "sha256": "5bd861faaf02e9b5f7ab207d979b12e3fe1426115b085cebbedde2b5e5c3f7fd"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\003.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/idle/003.png",
       "sha256": "670df0d2cc70675f343a77a091f3ad91eb71220e93a88b37938962f11151cb91"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\004.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/idle/004.png",
       "sha256": "0c609893e3822fda0ac381003aee25688d2d3fc08a3ad68def9ce36b34cdb322"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\005.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/idle/005.png",
       "sha256": "2858fbbfeb3b58e3929b8af1f3236194dc9f60990fb50ec6d9ea0cdbbb9e82ee"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\006.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/idle/006.png",
       "sha256": "cb9ebf4e3f408836befe093c3295b48e617b7bb3dd098d6deefe4e164531285e"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\travel\\runtime\\idle\\007.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/travel/runtime/idle/007.png",
       "sha256": "eaa1f9d16a52d10276122daea676a13ff2238dfdc8ec368c666a2f56caee6e31"
     }
   ],

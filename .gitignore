@@ -24,3 +24,6 @@ __pycache__/
 /firmware/build-idf6/
 /community-v*/
 /release-v*/
+
+# Isolated local V2 candidates; exact deliverables are frozen under private/.
+/firmware/build-v2-*/

@@ -71,6 +71,9 @@
 #include "adv_assets_game_sky_envelope__p0.h"
 #include "adv_assets_game_sky_stamp__p0.h"
 #include "adv_assets_game_sky_thundercloud__p0.h"
+#include "adv_assets_game_sky_v2_basket_back__p0.h"
+#include "adv_assets_game_sky_v2_basket_front__p0.h"
+#include "adv_assets_game_sky_v2_envelope__p0.h"
 #include "adv_assets_game_space_v2_bg_aurora__p0.h"
 #include "adv_assets_game_space_v2_bg_aurora__p1.h"
 #include "adv_assets_game_space_v2_bg_cirrus__p0.h"
@@ -529,6 +532,15 @@ static const adv_asset_piece_t adv_assets_game_sky_stamp__pieces[] = {
 };
 static const adv_asset_piece_t adv_assets_game_sky_thundercloud__pieces[] = {
     {&adv_assets_game_sky_thundercloud__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_sky_v2_basket_back__pieces[] = {
+    {&adv_assets_game_sky_v2_basket_back__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_sky_v2_basket_front__pieces[] = {
+    {&adv_assets_game_sky_v2_basket_front__p0, 0, 0},
+};
+static const adv_asset_piece_t adv_assets_game_sky_v2_envelope__pieces[] = {
+    {&adv_assets_game_sky_v2_envelope__p0, 0, 0},
 };
 static const adv_asset_piece_t adv_assets_game_space_v2_bg_aurora__pieces[] = {
     {&adv_assets_game_space_v2_bg_aurora__p0, 0, 0},
@@ -1443,6 +1455,9 @@ const adv_asset_record_t adv_assets_catalog[] = {
     {"game/sky/envelope", adv_assets_game_sky_envelope__pieces, 1, 96, 96, 48, 94, 0, false},
     {"game/sky/stamp", adv_assets_game_sky_stamp__pieces, 1, 16, 20, 8, 10, 0, false},
     {"game/sky/thundercloud", adv_assets_game_sky_thundercloud__pieces, 1, 48, 32, 24, 29, 0, false},
+    {"game/sky/v2/basket_back", adv_assets_game_sky_v2_basket_back__pieces, 1, 43, 7, 21, 0, 0, false},
+    {"game/sky/v2/basket_front", adv_assets_game_sky_v2_basket_front__pieces, 1, 43, 19, 21, 0, 0, false},
+    {"game/sky/v2/envelope", adv_assets_game_sky_v2_envelope__pieces, 1, 64, 64, 32, 0, 0, false},
     {"game/space-v2/bg/aurora", adv_assets_game_space_v2_bg_aurora__pieces, 2, 320, 120, 0, 120, 0, false},
     {"game/space-v2/bg/cirrus", adv_assets_game_space_v2_bg_cirrus__pieces, 2, 320, 48, 0, 48, 0, false},
     {"game/space-v2/bg/cloud-a", adv_assets_game_space_v2_bg_cloud_a__pieces, 2, 320, 96, 0, 96, 0, false},
@@ -1735,32 +1750,32 @@ const adv_ninepatch_t adv_assets_patch_info_normal = {{&adv_assets_ui_cards_info
 const adv_ninepatch_t adv_assets_patch_info_current = {{&adv_assets_ui_cards_info_current_top_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_top_right__p0, &adv_assets_ui_cards_info_current_left__p0, &adv_assets_ui_cards_info_current_center__p0, &adv_assets_ui_cards_info_current_right__p0, &adv_assets_ui_cards_info_current_bottom_left__p0, &adv_assets_ui_cards_info_current_bottom__p0, &adv_assets_ui_cards_info_current_bottom_right__p0}};
 const adv_ninepatch_t adv_assets_patch_popup_normal = {{&adv_assets_ui_cards_popup_normal_top_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_top_right__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_info_normal_center__p0, &adv_assets_ui_cards_popup_normal_left__p0, &adv_assets_ui_cards_popup_normal_bottom_left__p0, &adv_assets_ui_cards_popup_normal_bottom__p0, &adv_assets_ui_cards_popup_normal_bottom_right__p0}};
 const adv_asset_digit_t adv_assets_digits_36[] = {
-    {48, &adv_assets_catalog[308], 36},
-    {49, &adv_assets_catalog[309], 22},
-    {50, &adv_assets_catalog[310], 31},
-    {51, &adv_assets_catalog[311], 32},
-    {52, &adv_assets_catalog[312], 36},
-    {53, &adv_assets_catalog[313], 31},
-    {54, &adv_assets_catalog[314], 34},
-    {55, &adv_assets_catalog[315], 33},
-    {56, &adv_assets_catalog[316], 35},
-    {57, &adv_assets_catalog[317], 33},
-    {109, &adv_assets_catalog[318], 53},
-    {43, &adv_assets_catalog[319], 31},
+    {48, &adv_assets_catalog[311], 36},
+    {49, &adv_assets_catalog[312], 22},
+    {50, &adv_assets_catalog[313], 31},
+    {51, &adv_assets_catalog[314], 32},
+    {52, &adv_assets_catalog[315], 36},
+    {53, &adv_assets_catalog[316], 31},
+    {54, &adv_assets_catalog[317], 34},
+    {55, &adv_assets_catalog[318], 33},
+    {56, &adv_assets_catalog[319], 35},
+    {57, &adv_assets_catalog[320], 33},
+    {109, &adv_assets_catalog[321], 53},
+    {43, &adv_assets_catalog[322], 31},
 };
 const adv_asset_digit_t adv_assets_digits_20[] = {
-    {48, &adv_assets_catalog[296], 22},
-    {49, &adv_assets_catalog[297], 15},
-    {50, &adv_assets_catalog[298], 20},
-    {51, &adv_assets_catalog[299], 19},
-    {52, &adv_assets_catalog[300], 22},
-    {53, &adv_assets_catalog[301], 20},
-    {54, &adv_assets_catalog[302], 21},
-    {55, &adv_assets_catalog[303], 20},
-    {56, &adv_assets_catalog[304], 21},
-    {57, &adv_assets_catalog[305], 21},
-    {109, &adv_assets_catalog[306], 32},
-    {43, &adv_assets_catalog[307], 20},
+    {48, &adv_assets_catalog[299], 22},
+    {49, &adv_assets_catalog[300], 15},
+    {50, &adv_assets_catalog[301], 20},
+    {51, &adv_assets_catalog[302], 19},
+    {52, &adv_assets_catalog[303], 22},
+    {53, &adv_assets_catalog[304], 20},
+    {54, &adv_assets_catalog[305], 21},
+    {55, &adv_assets_catalog[306], 20},
+    {56, &adv_assets_catalog[307], 21},
+    {57, &adv_assets_catalog[308], 21},
+    {109, &adv_assets_catalog[309], 32},
+    {43, &adv_assets_catalog[310], 20},
 };
 const uint16_t adv_assets_ui_palette[] = {8649, 15375, 17298, 25487, 35986, 38099, 40276, 44406, 45672, 46518, 48007, 54567, 56595, 57082, 63356, 65502};
 const size_t adv_assets_ui_palette_count = 16;

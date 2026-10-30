@@ -1,5 +1,4 @@
 #include "adv_model.h"
-#include "adv_post.h"
 #include "adv_space.h"
 #include <stdlib.h>
 #include <string.h>
@@ -75,6 +74,7 @@ adv_status_t adv_game_status(const adv_model_t *m)
 
 static void start_run(adv_model_t *m)
 {
+    m->best_before = m->best[m->station];
     m->seed = adv_rand(&m->rng);
     session_game(m)->start(m->game, m->seed);
     m->phase = ADV_READY;
@@ -82,12 +82,6 @@ static void start_run(adv_model_t *m)
     m->record = false;
     memset(&m->input, 0, sizeof(m->input));
     cue(m, ADV_CUE_ENTER);
-}
-
-static void start_practice(adv_model_t *m)
-{
-    start_run(m);
-    adv_post_start_practice(m->game,m->seed);
 }
 
 static void move_cursor(adv_model_t *m, int dir)
@@ -135,12 +129,8 @@ int adv_test_open(adv_model_t *m,int station)
     return m->fx;
 }
 
-int adv_practice_open(adv_model_t *m)
-{
-    m->fx=0;m->cue=ADV_CUE_NONE;
-    if((m->page!=ADV_PAGE_MAP&&m->page!=ADV_PAGE_COVER)||m->in_session)return 0;
-    m->fx=ADV_FX_REDRAW;begin_session(m,3);if(m->in_session)start_practice(m);return m->fx;
-}
+// Retained diagnostic ABI: the old POST tutorial is retired with V2.
+int adv_practice_open(adv_model_t *m) { m->fx=0; m->cue=ADV_CUE_NONE; return 0; }
 
 static void open_passport(adv_model_t *m, adv_page_t from)
 {
@@ -164,7 +154,7 @@ static void record_result(adv_model_t *m)
 
 // V2 landscape games (NIGHT, SKI) hold UP all the time: middle DOWN starts/resumes/pauses (long),
 // left OK restarts from pause, and the map is reached only from the pause page.
-static bool v2(int station) { return station == 4 || station == 6 || station == 8; }
+static bool v2(int station) { return station >= 3 && station <= 8; }
 // Pause: V2 games long middle DOWN, SPACE two short DOWN taps, everyone else long UP.
 static bool pause_key(const adv_model_t *m, adv_btn_t b, adv_ev_t e)
 {
@@ -185,7 +175,6 @@ static void session_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
     case ADV_TITLE:
     case ADV_RESULT:
         if (b == confirm && click) start_run(m);
-        else if(m->station==3&&b==ADV_BTN_DOWN&&click)start_practice(m);
         break;
     case ADV_PLAY:
         if (pause_key(m, b, e)) { m->phase = ADV_PAUSE; cue(m, ADV_CUE_BACK); break; }
@@ -204,8 +193,7 @@ static void session_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
             memset(&m->input, 0, sizeof(m->input));
             cue(m, ADV_CUE_GO);
         } else if (b == restart && click) {
-            if(m->station==3&&((adv_post_t *)m->game)->practice)start_practice(m);
-            else start_run(m);
+            start_run(m);
         }
         break;
     default: break;   // READY and END accept only the common double-UP return
@@ -316,10 +304,7 @@ int adv_step(adv_model_t *m)
         adv_status_t st = game->status(m->game);
         if (st.cue) cue(m, (adv_cue_t)st.cue);
         if (st.over) {
-            if(m->station==3&&((adv_post_t *)m->game)->practice) {
-                if(m->test||adv_unlocked(m,3))start_run(m);else to_map(m);
-            }
-            else {m->phase = ADV_END; m->t = ADV_END_STEPS;}
+            m->phase = ADV_END; m->t = ADV_END_STEPS;
         }
         m->fx |= ADV_FX_REDRAW;
     } else if (m->phase == ADV_END) {

@@ -67,12 +67,12 @@
   <section class="stack">
     <div class="panel">
       <h2>操作</h2>
-      <p class="sub" style="margin:0">键盘 <kbd>↑</kbd> <kbd>↓</kbd> <kbd>Enter</kbd>/<kbd>空格</kbd>；所有游戏双击上键回地图。按住 500 ms 为长按，两次单击间隔不到 300 ms 为双击。</p>
+      <p class="sub" style="margin:0">键盘 <kbd>↑</kbd> <kbd>↓</kbd> <kbd>Enter</kbd>/<kbd>空格</kbd>；横屏游戏长按中键暂停，暂停页双击右键回地图。按住 500 ms 为长按，两次单击间隔不到 300 ms 为双击。</p>
       <div class="row">
         <button id="reset">清空进度</button>
         <button id="unlock">全部解锁</button>
         <label><input type="checkbox" id="test"> 测试模式（不存成绩）</label>
-        <label><input type="checkbox" id="sound" checked> 声音</label>
+        <label><input type="checkbox" id="sound"> 声音</label>
       </div>
       <div class="row">
         旧游戏离开时的成绩 <input id="legacyScore" type="number" value="12" min="0">
@@ -82,18 +82,28 @@
     <div class="panel"><h2>状态（view，与 C 快照同字段）</h2><pre id="state"></pre></div>
   </section>
 </main>
-<script src="adv_post.js"></script>
-<script src="adv_post_draw.js"></script>
+<script src="adv_post_v2.js"></script>
 <script src="adv_night.js"></script>
+<script src="adv_climb_v2.js"></script>
+<script src="adv_ski.js"></script>
+<script src="adv_sky_v2.js"></script>
+<script src="adv_space.js"></script>
+<script src="adv_v2_ui.js"></script>
+<script src="adv_post_v2_draw.js"></script>
 <script src="adv_night_draw.js"></script>
+<script src="adv_climb_v2_draw.js"></script>
+<script src="adv_ski_draw.js"></script>
+<script src="adv_sky_v2_draw.js"></script>
+<script src="adv_space_v2_draw.js"></script>
 <script src="adv_core.js"></script>
 <script src="adv_draw.js"></script>
 <script>
 (function () {
   'use strict';
   const A = window.AdvCore;
-  window.AdvPostDraw.load().catch(error=>console.error('POST art failed',error));
-  window.AdvNightDraw.load().catch(error=>console.error('NIGHT art failed',error));
+  let artReady=false;
+  Promise.all([AdvPostV2Draw,AdvNightDraw,AdvClimbV2Draw,AdvSkiDraw,AdvSkyV2Draw,AdvSpaceV2Draw].map(d=>d.load()))
+    .then(()=>{artReady=true;}).catch(error=>console.error('Adventure art failed',error));
   const canvas = document.getElementById('screen');
   const ctx = canvas.getContext('2d');
   const SETTINGS = { volume: 70, brightness: 80, sleep: 300, speaker: true };
@@ -190,9 +200,9 @@
   function frame(now) {
     acc += Math.min(250, now - last); last = now;
     while (acc >= 1000 / 60) { handle(A.step(m)); acc -= 1000 / 60; }
-    const landscape=m.page===A.PAGE.SESSION&&(m.session.station===3||m.session.station===4),w=landscape?320:240,h=landscape?240:320;
+    const landscape=m.page===A.PAGE.SESSION&&(m.session.station>=3&&m.session.station<=8),w=landscape?320:240,h=landscape?240:320;
     if(canvas.width!==w){canvas.width=w;canvas.height=h;canvas.style.width=w+'px';canvas.style.height=h+'px';canvas.closest('.device').classList.toggle('landscape',landscape);}
-    AdvDraw.draw(ctx, m, A);
+    if(artReady)AdvDraw.draw(ctx,m,A);
     const text = JSON.stringify(A.view(m), null, 1);
     if (text !== shown) { document.getElementById('state').textContent = text; shown = text; }
     requestAnimationFrame(frame);

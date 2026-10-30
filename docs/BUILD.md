@@ -62,3 +62,9 @@ Windows及macOS/Linux构建脚本均运行`tools/check_adventure_budget.py`：�
 
 
 睡前恢复点：直接用`firmware/checkpoints/2026-10-26/`内原样bin和SHA；99是已验收NIGHT操作的回退点，82是当前未最终验收的Grok候选。不要为恢复重新构建，也不要把宿主12fps目标GIF当成设备已达12fps。
+
+## 2026-10-30 V2 隔离构建
+
+本轮在 macOS 的 APFS 副本工作，已有 `build-idf6/sdkconfig` 仍是较早的编译配置，本候选未沿用该配置；新候选用 `build-v2-20261030` 和同目录新 `sdkconfig` 从 tracked defaults 构建。已核对 `CONFIG_COMPILER_OPTIMIZATION_SIZE=y`、`CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_SILENT=y`，main 保持 `-O2`。按原流程运行 `idf.py build`、`merge-bin`、`verify_firmware.py` 和 `check_adventure_budget.py`，路径参数指向新构建目录。交接中 Windows `build.ps1` 的本地重建步骤，在本机以同版本 IDF 的 build/merge/verify/budget 命令等价执行；不使用旧云端二进制。当前 macOS 候选 e9fe81f6 已按用户明确要求刷入；307项宿主、预算/布局、应用读回及八款串口回归通过。实际工牌多一个record分区，按完整实测边界做app-only写入；没有使用会强制全片备份的旧安装器模式，也没有冒充全保护区回读。最终静音/NVS与正常模式已核对，实体手感和睡醒仍待用户。
+
+共用横屏标题另有 `collection_font_26.c`，只包含六款标题、暂停字形和 ASCII；12/16/18 px 字库继续覆盖所有 UI。`generate_collection_fonts.py` 一并复现四份字库。气球三张机械件由 `python3 tools/prepare_sky_v2.py` 原色最近邻缩至 2/3，NABO 帧不变。完整素材打包命令仍见 `tools/ADVENTURE_ASSETS.md`；跨平台 manifest 路径支持 Windows 分隔符并维持范围检查。更新美术索引时可用 `catalog_adventure_art.py --game-proof-root <新逐款证明目录>` 保留旧冻结证据。

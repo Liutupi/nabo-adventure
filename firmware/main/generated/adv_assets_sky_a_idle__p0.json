@@ -90,8 +90,8 @@
   ],
   "source_sha256": [
     "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433",
-    "8729cda660f77642cbc89f403c2e756410b02af94a14a9fbb0b6c800da257a8b",
-    "ca1bda1f9329935f3fe8efbb5e9740ca2d515100e0e16965221494703b5e42f6",
+    "49b0475657f24003dfd71a748d3c85ab9efd44a7106297a6c024d2b56d5b3e73",
+    "87a71b6318bdd9bbbd9491b99cc3b532c36911253b8be8c95764159f3572e2af",
     "857710cf775cc272c8a7e064e558aff716822c678ad44d9bd6201a2fb94e837c",
     "1541144d1a0664eefb7be70a5475be60b63840ea6606b51fc024f98ebe5a934c",
     "fd8efebb9a96dad0cb2cc7452b4c7a6e5060f0ce1124bff7bb8d61203e159a02"
@@ -107,27 +107,27 @@
   ],
   "original_sources": [
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\idle\\000.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/idle/000.png",
       "sha256": "cf373136ca947cc333d0e349531ad39230a6f5b5abe9d07ae768e36997c87433"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\idle\\001.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/idle/001.png",
       "sha256": "8729cda660f77642cbc89f403c2e756410b02af94a14a9fbb0b6c800da257a8b"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\idle\\002.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/idle/002.png",
       "sha256": "ca1bda1f9329935f3fe8efbb5e9740ca2d515100e0e16965221494703b5e42f6"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\idle\\003.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/idle/003.png",
       "sha256": "857710cf775cc272c8a7e064e558aff716822c678ad44d9bd6201a2fb94e837c"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\idle\\004.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/idle/004.png",
       "sha256": "1541144d1a0664eefb7be70a5475be60b63840ea6606b51fc024f98ebe5a934c"
     },
     {
-      "path": "D:\\AI PASSPORT XIAOZHI\\nabo-adventure\\game-art\\adventure\\art\\frames\\sky\\runtime\\sky_a\\idle\\005.png",
+      "path": "/Users/tupi/nabo-build/adv/nabo-adventure/game-art/adventure/art/frames/sky/runtime/sky_a/idle/005.png",
       "sha256": "fd8efebb9a96dad0cb2cc7452b4c7a6e5060f0ce1124bff7bb8d61203e159a02"
     }
   ],

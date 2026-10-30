@@ -225,7 +225,15 @@
     }
   }
 
+  let previousSession=null,previousPhase=-1,phaseStarted=0;
   function draw(ctx, m, A) {
+    if(m.page===A.PAGE.SESSION&&m.session.station>=3){
+      const s=m.session,now=performance.now();
+      if(previousSession!==s||previousPhase!==s.phase){previousSession=s;previousPhase=s.phase;phaseStarted=now;}
+      const pairs={3:[root.AdvPostV2,root.AdvPostV2Draw],4:[root.AdvNight,root.AdvNightDraw],5:[root.AdvClimbV2,root.AdvClimbV2Draw],6:[root.AdvSki,root.AdvSkiDraw],7:[root.AdvSkyV2,root.AdvSkyV2Draw],8:[root.AdvSpaceV2,root.AdvSpaceV2Draw]};
+      const [G,D]=pairs[s.station],phase=['TITLE','READY','PLAY','PAUSE','END','RESULT'][s.phase];
+      D.draw(ctx,s.game||G.start(1),phase,Math.floor(now*60/1000),Math.floor((now-phaseStarted)*60/1000),m.best[s.station],{countdown:s.t,bestBefore:s.bestBefore||0});return;
+    }
     if(m.page===A.PAGE.SESSION&&m.session.station===4&&root.AdvNightDraw){root.AdvNightDraw.session(ctx,m,A,performance.now());return;}
     c = ctx;
     c.clearRect(0, 0, c.canvas.width, c.canvas.height);

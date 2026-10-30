@@ -8,6 +8,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'firmware/tools'))
 from flash_candidate import (APP_SIZE, EXPECTED, FLASH_SIZE, LEGACY_EXPECTED, CANONICAL, LEGACY,
+                             LEGACY_RECORD_EXPECTED, LEGACY_RECORD, verify_direct_readback,
                              check_device, protected_ranges, validate_app, validate_layout, verify_preserved)
 from verify_firmware import validate_flash_size
 
@@ -52,11 +53,27 @@ class Guard(unittest.TestCase):
         with self.assertRaises(ValueError): validate_layout(table(wrong))
 
     def test_exact_legacy_profile_is_accepted_without_changing_canonical(self):
-        for expected, profile in ((EXPECTED, CANONICAL), (LEGACY_EXPECTED, LEGACY)):
+        for expected, profile in ((EXPECTED, CANONICAL), (LEGACY_EXPECTED, LEGACY), (LEGACY_RECORD_EXPECTED, LEGACY_RECORD)):
             entries = [(name, *values, 0) for name, values in expected.items()]
             self.assertEqual(validate_layout(table(entries)), profile)
         self.assertEqual(protected_ranges(CANONICAL), ((0, 0x10000), (0x400000, FLASH_SIZE)))
         self.assertEqual(protected_ranges(LEGACY), ((0, 0x10000), (0x200000, FLASH_SIZE)))
+        self.assertEqual(protected_ranges(LEGACY_RECORD), protected_ranges(LEGACY))
+
+    def test_record_layout_never_accepts_moved_resource_boundaries(self):
+        entries=[(name,*values,0) for name,values in LEGACY_RECORD_EXPECTED.items()]
+        for idx,entry in enumerate(entries):
+            for field in range(6):
+                changed=list(entry);changed[field]='other' if field==0 else changed[field]+1
+                wrong=entries.copy();wrong[idx]=tuple(changed)
+                with self.subTest(partition=entry[0],field=field),self.assertRaises(ValueError):validate_layout(table(wrong))
+
+    def test_direct_readback_rejects_changed_app_or_boot_nvs_phy(self):
+        head=bytes(0x10000)
+        verify_direct_readback(b'app',b'app',head,head)
+        for app,after,before,post in ((b'app',b'bad',head,head),(b'app',b'app',head,head[:-1]),
+                                      (b'app',b'app',head[:-1],head[:-1]),(b'app',b'app',head,b'x'+head[1:])):
+            with self.assertRaises(ValueError):verify_direct_readback(app,after,before,post)
 
     def test_legacy_app_size_and_rounded_erase_end_use_actual_factory(self):
         # A canonical-size candidate must still be rejected on the smaller real device.

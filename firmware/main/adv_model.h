@@ -54,6 +54,7 @@ typedef struct {
     bool in_session;
     int station, phase, t;
     uint32_t seed;
+    uint32_t best_before;        // score at run start, used by the result medal animation
     bool record;
     void *game;                  // calloc'd state of adv_station[station].game
     bool test;                   // scripted tests: never raise ADV_FX_SAVE_BEST

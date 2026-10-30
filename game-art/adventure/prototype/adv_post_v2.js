@@ -5,7 +5,7 @@
 // or to snatch a hanging bag from a crane.
 // Keys (landscape, left to right): OK = hold to brake, DOWN = tap to throw/catch, UP = hold for steam (accelerate).
 // Long-press DOWN is the shell's pause; the action fires on the press edge, so nothing needs DOWN held.
-// Firmware does NOT follow this yet: V1 (two tracks, mail colours, OK tap/hold) is still adv_post.c.
+// Approved 2026-10-30: firmware/main/adv_post_v2.c mirrors these rules; V1 stays available for rollback.
 (function (root) {
   'use strict';
   const K = {

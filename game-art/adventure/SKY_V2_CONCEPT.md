@@ -1,5 +1,7 @@
 # SKY V2「风层邮差」G0 概念 + G1 试玩
 
+> 2026-10-30 Codex：用户已明确认可本款 G1；`firmware/main/adv_sky_v2.c/.h` 和横屏画面已接入，共用卡片已接入。V1 源码/规则对拍保留。新规则对拍在 `tests/v2_golden/sky/`，统一录制入口 `node tests/record_v2_golden.js sky`；宿主与构建通过，新候选未上机，详见 `docs/HANDOFF.md` 顶部。
+
 2026-10-30 Claude 云端。用户要求“优化项目的游戏性、交互性、UI、流畅性”；按 REDESIGN_V2 顺序，NIGHT/SKI/SPACE 已完成，剩下 SKY 和 CLIMB。本款只到 **G1 浏览器试玩**，**用户认可前不改 C、不动固件素材、不删 V1**（`adv_sky.c` 仍是 V1 竖屏单键）。
 
 | 用途 | 文件 |

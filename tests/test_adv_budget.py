@@ -4,7 +4,9 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'tools'))
 from check_adventure_budget import growth_budget,FACTORY
 class GrowthBudget(unittest.TestCase):
- def setUp(self):self.profile=json.loads((ROOT/'firmware/tools/adventure-budget.json').read_text('utf-8'))
+ def setUp(self):
+  self.profile=json.loads((ROOT/'firmware/tools/adventure-budget.json').read_text('utf-8'))
+  for entry in self.profile['future_games'].values():entry['state']='reserved'
  def test_current_candidate_protects_both_future_games(self):
   r=growth_budget(1812256,self.profile)
   self.assertEqual(r['future_games_reserved_bytes'],{'sky':73728,'climb':73728})
@@ -32,3 +34,7 @@ class GrowthBudget(unittest.TestCase):
    with self.assertRaises(ValueError):growth_budget(size,self.profile)
   self.profile['permanent_reserve_bytes']=0
   with self.assertRaises(ValueError):growth_budget(1812256,self.profile)
+
+ def test_live_profile_marks_only_landed_v2_games_integrated(self):
+  p=json.loads((ROOT/'firmware/tools/adventure-budget.json').read_text('utf-8'))
+  self.assertEqual({game:entry['state'] for game,entry in p['future_games'].items()},{'sky':'integrated','climb':'integrated'})
