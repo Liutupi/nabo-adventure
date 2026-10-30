@@ -350,6 +350,7 @@ void host_jump_item(int size, int skin)
     adv_jump_draw(&game, now, true);
 }
 int host_jump_hold(void) { return (game.gap - 4) * 1000 / 150; }
+int host_jump_score(void) { return (int)game.score; }
 
 // ---------- raw renderer ----------
 

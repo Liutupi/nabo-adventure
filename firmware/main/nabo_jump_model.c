@@ -634,8 +634,10 @@ void nabo_jump_draw_row(const nabo_jump_t* g, uint32_t now, int y, int x0, int x
         lean = g->dir * (256 - ease(t, 200)) / 256;
     }
     int head_h = 28, total_h = head_h + body_h + leg_h;
+    // 2026-10-30: soft vertical gradient instead of a flat grey (static per row, so dirty regions are unchanged).
+    uint16_t sky = color(mix(0xebeef6, 0xd2d8e7, clamp(y, 0, 319) * 256 / 320));
     for (int x = x0; x <= x1; ++x)
-        out[x - x0] = color(0xdfe1eb);
+        out[x - x0] = sky;
     if (nabo_jump_camera_moving(g, now))
         platform_row(out, x0, x1, y, next_x + g->future_dir * g->future_gap - camera_x,
                      next_y - g->future_gap / 2 - camera_y, g->future_skin, g->future_size);
@@ -650,8 +652,13 @@ void nabo_jump_draw_row(const nabo_jump_t* g, uint32_t now, int y, int x0, int x
         nabo_jump_rig_draw_row(g, now, px, foot, y, x0, x1, out);
         if (nabo_jump_charging(g) && y >= 281 && y <= 286) {
             int fill = clamp((int)nabo_jump_charge_ms(g, now), 0, 1400) * 180 / 1400;
-            for (int x = clamp(30, x0, x1 + 1); x <= clamp(210, x0 - 1, x1); ++x)
-                out[x - x0] = color(x < 30 + fill ? 0x6685a8 : 0xc3c7d7);
+            // Power bar: warms from blue to orange as it fills, rounded ends.
+            uint16_t hot = color(mix(0x6685a8, 0xff7a3a, fill * 256 / 180));
+            bool edge_row = y == 281 || y == 286;
+            for (int x = clamp(30, x0, x1 + 1); x <= clamp(210, x0 - 1, x1); ++x) {
+                if (edge_row && (x == 30 || x == 210)) continue;
+                out[x - x0] = x < 30 + fill ? hot : color(0xc9cddb);
+            }
         }
         return;
     }

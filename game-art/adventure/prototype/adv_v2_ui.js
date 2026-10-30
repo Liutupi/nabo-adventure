@@ -2,7 +2,7 @@
 // so all six look and behave the same. Each game draws its own scene first, then calls these.
 // Firmware target: one C module (adv_ui_cards.c) with the same layout; numbers here are the spec.
 //   title : big name y=46, one-line pitch y=76, key chips y=176 (three, 88x22, centres 60/160/260), best + medal pips top right, blinking "按 ● 开始" y=214
-//   result: cause y=30, score rolls 0→final over 40 frames at y=72, medal row y=108 (earned medals pop in), "距银章还差 N" y=130,
+//   result: cause y=30, score rolls 0→final over 40 frames at y=72, medal row y=108 (earned medals pop in), "离银章 N 分" y=130,
 //           at most two stat lines y=150/166, "● 再来一局" y=214
 (function (root) {
   'use strict';
@@ -56,7 +56,7 @@
     if (roll >= 1) {
       const all = earned(Math.max(r.score, r.best || 0), r.th);
       if (now > before) text(c, `拿到${MEDAL_NAME[now - 1]}!`, W / 2, 130, 11, MEDAL[now - 1], 'center', 900);
-      else if (all < 3) text(c, `距${MEDAL_NAME[all]}还差 ${r.th[all] - r.score}`, W / 2, 130, 10, '#c9d3ee', 'center', 700, null);
+      else if (all < 3) text(c, `离${MEDAL_NAME[all]} ${r.th[all] - r.score} 分`, W / 2, 130, 10, '#c9d3ee', 'center', 700, null);   // firmware fonts lack 距/还/差
       else text(c, '三枚章都拿到了', W / 2, 130, 10, '#ffd34a', 'center', 700, null);
     }
     (r.lines || []).slice(0, 2).forEach((s, i) => text(c, s, W / 2, 152 + i * 16, 10, i ? '#b9c4e2' : '#e6ecff', 'center', 700, null));

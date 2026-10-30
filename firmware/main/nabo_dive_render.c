@@ -418,6 +418,24 @@ static void over_ops(dive_gfx_t* g) {
         snprintf(s, sizeof(s), "最深 %d m", (int)dive_depth_m(d->best_px));
         add_text(g, &nabo_menu_font_16, s, 24, 166, DIVE_ALIGN_LEFT, 0, 0xFFFF, 0.65f, false, false, LAYER_UI);
     }
+    // 2026-10-30 collection: medal row and gap to the next medal (thresholds = DIVE station 100/300/600 m).
+    // collection_font_12 strings begin
+    {
+        static const int th[3] = {100, 300, 600};
+        const uint16_t tint[3] = {rgb565(201, 135, 74), rgb565(200, 208, 220), rgb565(255, 211, 74)};
+        static const char* const name[3] = {"铜章", "银章", "金章"};
+        int prev = (int)dive_depth_m(d->best_px), had = 0, got = 0;
+        for (int i = 0; i < 3; ++i) { had += prev >= th[i]; got += m >= th[i]; }
+        int have = got > had ? got : had;
+        for (int i = 0; i < 3; ++i)
+            add_rect(g, 164 + i * 20, 116, 178 + i * 20, 130, i < have ? tint[i] : 0xFFFF, i < have ? 1 : 0.18f, 7, 0, false, LAYER_UI);
+        if (got > had) snprintf(s, sizeof(s), "拿到%s!", name[got - 1]);
+        else if (have < 3) snprintf(s, sizeof(s), "离%s %d m", name[have], th[have] - m);
+        else snprintf(s, sizeof(s), "三枚章都拿到了");
+        add_text(g, &collection_font_12, s, 218, 148, DIVE_ALIGN_RIGHT, 0, got > had ? rgb565(255, 181, 71) : rgb565(200, 230, 245),
+                 got > had ? 1 : 0.8f, false, false, LAYER_UI);
+    }
+    // collection_font_12 strings end
     dive_op_t* p = add_op(g, OP_PROFILE, LAYER_UI, false, 16, 188, 224, 208);
     if (p)
         p->y = 200, p->a = d->new_record ? 0 : d->best_px;

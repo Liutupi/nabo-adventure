@@ -35,6 +35,8 @@ def parse(text):
  return result
 def used_chars():
  text=(ROOT/'firmware/main/nabo_dive_render.c').read_text('utf-8')
+ # A marked block draws only with collection_font_12, so its literals are not legacy-font glyphs.
+ text=re.sub(r'// collection_font_12 strings begin[\s\S]*?// collection_font_12 strings end','',text)
  # Include all literal characters conservatively, even literals drawn by other fonts.
  literals=re.findall(r'"((?:[^"\\]|\\.)*)"',text)
  return set(map(chr,range(32,127)))|{c for s in literals for c in s if ord(c)>126}

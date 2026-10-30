@@ -139,6 +139,10 @@ class Assets(unittest.TestCase):
         for name in ('nabo_dive_render.c',):
             source=(BOARD/name).read_text('utf-8')
             collection_used=set(''.join(re.findall(r'add_text\(g, &collection_font_12, "([^"]*)"',source)))
+            # A marked block renders only with collection_font_12 (formatted strings, e.g. the medal line).
+            for block in re.findall(r'// collection_font_12 strings begin([\s\S]*?)// collection_font_12 strings end',source):
+                collection_used |= set(''.join(re.findall(r'"((?:[^"\\]|\\.)*)"',block)))
+            source=re.sub(r'// collection_font_12 strings begin[\s\S]*?// collection_font_12 strings end','',source)
             have={chr(int(h,16)) for h in re.findall(r'/\* U\+([0-9A-F]+) ',(BOARD/'collection_font_12.c').read_text('utf-8'))}
             self.assertEqual(sorted(c for c in collection_used if ord(c)>0x7e and c not in have),[],'collection_font_12.c')
             source=re.sub(r'add_text\(g, &collection_font_12,[\s\S]*?\);','',source)
@@ -150,6 +154,17 @@ class Assets(unittest.TestCase):
 
 
 class Renderer(unittest.TestCase):
+    def test_over_card_medal_row_and_screenshot(self):
+        # 2026-10-30 collection: medal row + gap line on the result card. Best 120 m (bronze), this run 350 m (silver).
+        lib.host_init(5, 540.0)
+        lib.host_jump(1331.0, 1.0)
+        lib.host_die()
+        for _ in range(240): lib.host_step(1 / 60, 0, 0, OVER); lib.host_frame(-1, 0)
+        lib.host_invalidate(); lib.host_frame(-1, 0)       # the card animates (pulse, bubbles); a full redraw is the shot
+        from PIL import Image
+        rgb = bytearray()
+        for v in snapshot(): rgb.extend(((v >> 11) * 255 // 31, ((v >> 5) & 63) * 255 // 63, (v & 31) * 255 // 31))
+        Image.frombytes('RGB', (240, 320), bytes(rgb)).save(ROOT / 'docs/images/ui/dive-over-medals.png')
     def test_dirty_rectangles_match_a_full_redraw(self):
         # Incremental frames (hardware scroll + dirty rects) must leave the same picture as
         # redrawing the final state from scratch; any stale pixel is a renderer bug.

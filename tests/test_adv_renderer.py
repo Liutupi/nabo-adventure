@@ -497,5 +497,30 @@ class Renderer(unittest.TestCase):
             self.assertEqual(incremental, self.snapshot(), f'stale jump pixels at frame {frame}')
         self.save('jump.png', True)
 
+    def _jump_throw(self, hold):
+        self.lib.host_jump_tick(10, 1)
+        for _ in range(hold // 10): self.lib.host_jump_tick(10, 0)
+        self.lib.host_jump_tick(hold % 10, 2)
+        for _ in range(160): self.lib.host_jump_tick(10, 0)
+
+    def test_jump_charge_streak_and_over_card(self):
+        # 2026-10-30 collection polish: perfect-streak label, medal pips, warm power bar and the game-over card.
+        self.assertEqual(self.lib.host_jump_reset(5), 1)
+        for _ in range(4): self._jump_throw(self.lib.host_jump_hold())
+        self.assertGreaterEqual(self.lib.host_jump_score(), 12)
+        self.lib.host_jump_tick(10, 1)
+        for frame in range(45):
+            self.lib.host_jump_tick(10, 0)
+            incremental = self.snapshot(); self.lib.host_jump_full()
+            self.assertEqual(incremental, self.snapshot(), f'stale charge pixels at frame {frame}')
+        self.save('jump-charge.png', True)
+        for _ in range(100): self.lib.host_jump_tick(10, 0)        # hold to the clamp: far overshoot
+        self.lib.host_jump_tick(10, 2)
+        for frame in range(160):
+            self.lib.host_jump_tick(10, 0)
+            incremental = self.snapshot(); self.lib.host_jump_full()
+            self.assertEqual(incremental, self.snapshot(), f'stale over pixels at frame {frame}')
+        self.save('jump-over.png', True)
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)
