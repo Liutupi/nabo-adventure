@@ -1,0 +1,39 @@
+1. INSTALL AND START
+
+This page provides the same full installation image as GitHub v0.2.0. Installing with the community's Install Latest button resets existing settings and game records. To preserve your save, use the application-only upgrade instructions on GitHub instead of a full installation. All resources are included; no network setup or activation is needed.
+
+Downloads and save-preserving upgrade instructions:
+https://github.com/Liutupi/nabo-adventure/releases/tag/v0.2.0
+https://github.com/Liutupi/nabo-adventure/blob/v0.2.0/docs/INSTALL_v0.2.0.md
+
+After boot, press OK to leave the cover. Hold the badge upright: Up/Down moves on the map and OK enters a stop. Hold OK to open the passport; hold Up on the map to return to the cover. The passport kiosk leads to settings.
+
+2. UNLOCK THE JOURNEY
+
+Begin with Jump, then unlock Dive, the train (Postal Express), Fireflies, climbing (Twin-Route Climb), skiing (Avalanche Descent), the balloon (Wind-Layer Post) and Rocket to the Moon. Earn the previous stop's bronze stamp to enter the next.
+
+Bronze targets: Jump 10 points; Dive 100 metres; Postal Express 150 points; Fireflies 100 points; Twin-Route Climb 80 points; Avalanche Descent 300 points; Wind-Layer Post 300 points; Rocket 1500 points.
+
+A save-preserving upgrade retains the previous POST/CLIMB/SKY records and earned stamps. Their new rules use separate new best-score records; other game records continue as before. A full community installation resets all progress.
+
+3. SIX LANDSCAPE GAMES
+
+From the train onward, rotate clockwise with the three buttons below the screen. Left is the original OK button, middle is original Down and right is original Up. Tap middle to start. Hold middle to pause; while paused, middle resumes, left restarts and double-tapping right returns to the map. Double-right also works on title/results cards, but does not exit during play.
+
+• Postal Express: hold left to brake and right to accelerate. Tap middle to deliver or collect mailbags when a crane lines up with the door. Centre hits and higher speeds reward timing; brake for speed limits, red signals and animals. The round ends when the timetable runs out. The old track-choice, horn and step-by-step practice are replaced.
+• Firefly Night: hold left to walk slowly, right to run and tap middle to swing. Double-middle releases a burst when charged. Catches restore light; misses and hazards consume it. The round ends when the light runs out.
+• Twin-Route Climb: follow the next-hold cue and alternate left/right hands. Middle switches routes and may change the required hand. Hold the matching hand on ice and move quickly off fragile holds. Switch routes for gaps or falling-rock warnings. The round ends when grip runs out.
+• Avalanche Descent: hold left/right to steer and tap middle to jump. After a ramp launch, tap middle in the air to spin. Consecutive gates require sideways movement; chains build speed, while misses and trees bring the avalanche closer. The round ends when it catches you.
+• Wind-Layer Post: hold left to vent and descend, right to heat and rise, and tap middle to drop a letter. Use the wind arrows to pick a layer and lead the rooftop mailbox while the letter falls. Centre hits, gold boxes and high drops earn bonuses. Avoid trees, birds and lightning columns; the round ends when fuel runs out.
+• Rocket to the Moon: hold left/right to move. Tap middle in the green zones for ignition/separation, during flight to boost and with the ring rhythm for transfer burns. Near the Moon, use short retro burns to slow down and align with the pad. Empty fuel or hull damage ends the attempt; a gentle landing leads to the flag celebration.
+
+4. TWO PORTRAIT GAMES
+
+• Jump: hold OK to charge and release to jump. Down changes the character; hold Down to restart. A missed platform ends the round. Double-Up returns to the map.
+• Dive: OK starts/changes direction, hold Down to dive faster, and tap Up to pause/resume. Avoid obstacles and watch oxygen. Empty oxygen ends the round; double-Up returns to the map.
+
+5. SAVES, SETTINGS AND PREVIEW LIMITS
+
+Best results and stamps save after normal completed rounds. Automated test scores do not enter your save. The kiosk settings control volume, brightness, speaker and sleep. Fresh installations enable the speaker; it can be disabled in settings. The default idle sleep interval is 300 seconds; use Up to wake. The built-in status page still says v0.1.0; identify this package by this update and the GitHub v0.2.0 release.
+
+Repeated entry/exit, pause, automated play and save checks are complete. Physical feel, actual readability, sleep/wake within each game, sound quality and first-time full installation still need user feedback. B-outfit selection is unavailable. Please include the version, game, orientation, button steps and symptom in feedback.

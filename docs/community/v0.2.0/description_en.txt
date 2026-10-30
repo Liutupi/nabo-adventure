@@ -1,0 +1,24 @@
+Turn your badge into a playable adventure passport and travel with NABO from the deep sea to the Moon.
+
+Leap across town platforms, dive past underwater obstacles, deliver mail by train, catch fireflies after dark, climb between two rock routes and outrun an avalanche. Then ride a hot-air balloon to deliver letters on the wind and launch a rocket toward the Moon. Eight offline games form one journey, with a stamp for every challenge.
+
+EIGHT STOPS, EIGHT WAYS TO PLAY
+• Jump: hold to charge, release to jump, and judge the gap to the next platform.
+• Dive: change direction and dive faster while avoiding obstacles and watching your oxygen.
+• Postal Express: throttle, brake and time your mailbag deliveries and refills. Higher speeds demand better timing; watch for speed limits, red signals and animals.
+• Firefly Night: your jar's light is your energy. Walk, run and swing to catch fireflies, with golden surprises and hazards along the way.
+• Twin-Route Climb: alternate hands, switch routes and read the holds. Hold onto ice, move quickly across fragile rocks and change routes when falling rocks are warned.
+• Avalanche Descent: steer through gates, jump and spin from ramps, and build enough speed to leave the avalanche behind.
+• Wind-Layer Post: choose your altitude using four wind layers, drop letters ahead of rooftop mailboxes and avoid trees, birds and lightning columns.
+• Rocket to the Moon: time ignition, separation and transfer burns, then use short retro burns to land gently on the pad and celebrate with a flag.
+
+COLLECT A JOURNEY
+Start with Jump and earn the previous stop's bronze stamp to unlock the next. Collect 24 bronze, silver and gold stamps across the eight games. Your passport keeps your best results and completed milestones, and unlocked stops can be replayed whenever you like.
+
+Six landscape games now share title, pause and results cards, with rolling scores, illuminated stamps and the gap to your next stamp. Jump's charge and streak feedback and Dive's results stamps have also been refreshed.
+
+NABO welcomes you with an opening animation and voice greeting. Play entirely offline, with no network setup, activation or Xiaozhi service. Volume, brightness, speaker and automatic sleep settings are available.
+
+Version 0.2.0 is a preview release. Feedback on physical controls, readability and sleep/wake is welcome. B-outfit selection is not available yet. The cover is an AI promotional illustration; detail images are current firmware interface previews with demonstration data, not device photographs.
+
+This project is not affiliated with or endorsed by FoloToy. See the repository NOTICE for source and artwork licensing.

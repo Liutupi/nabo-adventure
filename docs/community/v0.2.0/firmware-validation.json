@@ -1,0 +1,10 @@
+{
+  "status": "PASS: source release bytes and saved server metadata match",
+  "file": "nabo-adventure-v0.2.0-full.bin",
+  "bytes": 1946208,
+  "sha256": "0d0b0e6861310cfdc6e2d287785f2bdf5fa8425399335bc335f988101af257f2",
+  "application_sha256": "e9fe81f6cd52f194d309638305cd9e41faaf074c2c076f815578fb34981e8afc",
+  "full_image_gap_and_app_validation": "GitHub release-v0.2.0 verification reused; exact same full image",
+  "saved_firmware_downloaded": false,
+  "note": "Server revision metadata verified; raw firmware download not yet independently checked."
+}

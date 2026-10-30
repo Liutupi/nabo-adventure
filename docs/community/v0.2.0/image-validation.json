@@ -1,0 +1,45 @@
+{
+  "status": "PASS: exact upload files visually inspected",
+  "images": [
+    {
+      "file": "01-cover.png",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 2431319,
+      "sha256": "8bf3ad49b48ba4ba37571f1018773d0dd9f67c0114644adeecba909f6664e2ad",
+      "visual_check": "PASS: exact upload file opened and inspected; finished art, no placeholders"
+    },
+    {
+      "file": "02-passport.jpg",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 292130,
+      "sha256": "a3e87538cb4d797ac6bfaed7ba2ab0847b506f081c932be91a2f5e1362391ef5",
+      "visual_check": "PASS: exact upload file opened and inspected; finished art, no placeholders"
+    },
+    {
+      "file": "03-post-climb.jpg",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 294785,
+      "sha256": "d5dc3872f075fdc9d0179cc66eb7c1b7d3e4f4251d5a27cbf799212a8b0f60c1",
+      "visual_check": "PASS: exact upload file opened and inspected; finished art, no placeholders"
+    },
+    {
+      "file": "04-sky-space.jpg",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 309522,
+      "sha256": "806d4aaeedc72569d1730ea34a7c10e70afa6adf08f694dabbf32e872344f354",
+      "visual_check": "PASS: exact upload file opened and inspected; finished art, no placeholders"
+    },
+    {
+      "file": "05-night-ski.jpg",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 259467,
+      "sha256": "50d57cc040f5380c78f82646700848d50ce00e332ea4d1be62ef1e1ddf1a629e",
+      "visual_check": "PASS: exact upload file opened and inspected; finished art, no placeholders"
+    }
+  ]
+}

@@ -1,5 +1,9 @@
 # 验证记录
 
+## 社区 v0.2.0 更新 · 1662 / 4154（已提交审核）
+
+通过官方publisher API更新原项目nabo-4，服务器回执pending，原公开3808保留。上传完整镜像与GitHub v0.2.0逐字节一致，服务器大小/哈希相符；五张3:4图片已逐张打开确认完成，中英文八个文案字段已读回比对。没有重建或操作设备。服务端新修订文件下载尚未独立验证，不能把审核中写成公开。详见 [submission-status.json](community/v0.2.0/submission-status.json)。
+
 ## v0.2.0 公开预览发布验证 · 2026-10-30
 
 [GitHub v0.2.0](https://github.com/Liutupi/nabo-adventure/releases/tag/v0.2.0) 于09:29:14 UTC公开，draft=false、prerelease=true，标签/固件源码提交 `1309753751a71d8be571fc298fa0bf3fb3c52a95`。发布工具新增保护检查后完整310项宿主门禁 / 121.127秒通过，788个运行时输入与原e9fe81f6候选一致。应用未重编译；发布用完整镜像复用v0.1.0启动器/分区表，SHA256 `0d0b0e6861310cfdc6e2d287785f2bdf5fa8425399335bc335f988101af257f2`。

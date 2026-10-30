@@ -1,0 +1,7 @@
+v0.2.0 — Three renewed games and shared interface
+• Postal Express, Twin-Route Climb and Wind-Layer Post join the collection with delivery timing, alternating hands and route switching, and wind-layer mail drops.
+• Six landscape games share title, countdown, pause and results cards with rolling scores, stamps and the gap to the next award.
+• Jump gains a gradient background, charge bar, streak feedback and result stamps; Dive adds result stamps.
+• Firefly light decay and ski-gate movement are refined, with smoother climbing and balloon scenery.
+• Save-preserving upgrades retain previous stamps/unlocks and add separate new records for the three renewed games. A full community installation still resets progress.
+• This package matches the GitHub v0.2.0 full image and remains a preview release.
