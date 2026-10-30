@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>风层邮差 V2</title>
+<style>
+  :root { --bg:#f3efe6; --panel:#fffaf0; --ink:#1d2541; --muted:#6b6f80; --line:#d9d2c3; --btn:#2a3150; --btn-ink:#f6ead9; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#12141f; --panel:#1b1e2d; --ink:#ece6da; --muted:#9a9cab; --line:#2e3247; --btn:#3a4166; } }
+  :root[data-theme="dark"] { --bg:#12141f; --panel:#1b1e2d; --ink:#ece6da; --muted:#9a9cab; --line:#2e3247; --btn:#3a4166; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.6 "Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif; -webkit-user-select:none; user-select:none; }
+  main { max-width:1100px; margin:0 auto; padding-block:16px; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start; }
+  .badge { background:#20263d; border-radius:26px; padding:18px 18px 16px; box-shadow:0 10px 30px rgba(0,0,0,.28); width:min(100%, 700px); }
+  canvas { display:block; width:100%; aspect-ratio:4/3; image-rendering:pixelated; border-radius:6px; background:#000; }
+  .keys { display:flex; gap:12px; margin-top:14px; }
+  .key { flex:1; height:62px; border:0; border-radius:14px; background:#353d63; color:#f6ead9; font:800 15px inherit; font-family:inherit; touch-action:none; cursor:pointer; }
+  .key small { display:block; font-weight:600; font-size:11px; opacity:.75; }
+  .key.down { background:#5a6699; }
+  aside { flex:1; min-width:280px; }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px 16px; margin-bottom:14px; }
+  h1 { font-size:18px; margin:0 0 4px; } h2 { font-size:14px; margin:0 0 6px; }
+  p, li { color:var(--muted); margin:4px 0; } b { color:var(--ink); }
+  table { width:100%; border-collapse:collapse; font-size:12px; font-variant-numeric:tabular-nums; }
+  th, td { text-align:right; padding:3px 4px; border-bottom:1px solid var(--line); } th:first-child, td:first-child { text-align:left; }
+  button.small { border:1px solid var(--line); background:transparent; color:var(--ink); border-radius:8px; padding:5px 10px; font:inherit; cursor:pointer; }
+  @media (max-width:520px) { .badge { padding:12px; border-radius:18px; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="badge">
+    <canvas id="game" width="320" height="240"></canvas>
+    <div class="keys">
+      <button class="key" data-k="left">◀<small>OK · 按住放气↓</small></button>
+      <button class="key" data-k="mid">●<small>下键 · 投信</small></button>
+      <button class="key" data-k="right">▶<small>上键 · 按住加热↑</small></button>
+    </div>
+  </div>
+  <aside>
+    <div class="panel">
+      <h1>风层邮差 · SKY V2 试玩（G1）</h1>
+      <p>工牌横拿，三个键从左到右：<b>◀ 按住放气下降</b>、<b>● 投信</b>、<b>▶ 按住加热上升</b>。键盘 <b>A / S / D</b> 或 <b>← ↓ →</b>，空格也是投信。</p>
+      <ul>
+        <li>燃料一直在烧，加热烧得更快。送达一封信有小费补燃料；橙色降落伞是燃料罐。</li>
+        <li>天上分四层风，<b>右边箭头越长那层越快</b>。飞得快走得远、分数高，但反应时间更短。每换一段路风向会重新洗牌。</li>
+        <li>信离手后在屏幕上是笔直落下的，房子在往左走，所以要<b>提前一点</b>扔。地上的影子就是落点。</li>
+        <li>扔进屋顶邮筒得分并连送；<b>正中</b>翻倍、<b>金邮筒</b>三倍、高空投（离屋顶 70 像素以上）再加一半。扔歪或漏掉一家，连送断掉，扔歪还浪费一点燃料。</li>
+        <li>低空有树（金邮筒后面常有一棵高树），中间有鸟群，高空是雷云。雷云闪烁、下面出现黄色光柱时，<b>赶快降低</b>躲开闪电。</li>
+        <li>每 25 秒换一段：小镇、候鸟、雷暴、彩虹（金邮筒多）、顺风。</li>
+        <li><b>长按 ●</b> 暂停；暂停中 ● 继续、◀ 重来、双击 ▶ 回标题（工牌上是回地图）。</li>
+      </ul>
+      <p>NABO 用现有热气球服装动作；气囊和吊篮在这里缩到 2/3（固件需离线做两张小图），云和海边小镇复用火箭关已有背景，房子、树、风线、闪电是程序画的。</p>
+    </div>
+    <div class="panel">
+      <h2>每局数据 <button class="small" id="copy">复制给 Claude</button></h2>
+      <table><thead><tr><th>#</th><th>分</th><th>秒</th><th>按键/分</th><th>米</th><th>送达</th><th>正中</th></tr></thead><tbody id="rows"></tbody></table>
+    </div>
+  </aside>
+</main>
+<script src="adv_sky_v2.js"></script>
+<script src="adv_sky_v2_draw.js"></script>
+<script>
+(async () => {
+  'use strict';
+  const N = AdvSkyV2, D = AdvSkyV2Draw, cv = document.getElementById('game'), c = cv.getContext('2d');
+  await D.load();
+  const held = { left: 0, mid: 0, right: 0 }, edges = { left: 0, mid: 0, right: 0 };
+  let phase = 'TITLE', g = N.start(1), seed = (Date.now() & 0xffff) | 1, countdown = 0, vt = 0, phaseT = 0, midHeld = 0, swallowMid = false;
+  let lastRight = -99, best = 0; const rounds = [];
+  try { best = +localStorage.getItem('sky_v2_best') || 0; } catch (e) {}
+  const set = p => { phase = p; phaseT = 0; };
+  const startRound = () => { seed = (Math.imul(seed, 1103515245) + 12345) >>> 0; g = N.start(seed); g.seed = seed; countdown = 180; set('READY'); };
+
+  function press(k, down) {
+    if (down && !held[k]) edges[k] = 1;
+    held[k] = down ? 1 : 0;
+    document.querySelector(`[data-k="${k}"]`).classList.toggle('down', !!down);
+  }
+  const keymap = { a: 'left', arrowleft: 'left', s: 'mid', arrowdown: 'mid', ' ': 'mid', d: 'right', arrowright: 'right' };
+  addEventListener('keydown', e => { const k = keymap[e.key.toLowerCase()]; if (k) { e.preventDefault(); if (!e.repeat) press(k, 1); } else if (e.key === 'p' && phase === 'PLAY') set('PAUSE'); });
+  addEventListener('keyup', e => { const k = keymap[e.key.toLowerCase()]; if (k) { e.preventDefault(); press(k, 0); } });
+  for (const b of document.querySelectorAll('.key')) {
+    b.addEventListener('pointerdown', e => { e.preventDefault(); b.setPointerCapture(e.pointerId); press(b.dataset.k, 1); });
+    for (const ev of ['pointerup', 'pointercancel', 'lostpointercapture']) b.addEventListener(ev, () => press(b.dataset.k, 0));
+  }
+  addEventListener('blur', () => { for (const k in held) press(k, 0); if (phase === 'PLAY') set('PAUSE'); });
+
+  function logRound() {
+    const keys = ['meters', 'delivered', 'houses', 'bulls', 'golds', 'skipped', 'missDrops', 'hits', 'tanks', 'nearMiss', 'best'];
+    const r = { seed: g.seed, score: g.score, sec: Math.round(g.tick / 60), ppm: Math.round(g.presses / (g.tick / 3600)) };
+    for (const k of keys) r[k] = g[k];
+    rounds.push(r);
+    document.getElementById('rows').insertAdjacentHTML('afterbegin', `<tr><td>${rounds.length}</td><td>${r.score}</td><td>${r.sec}</td><td>${r.ppm}</td><td>${r.meters}</td><td>${r.delivered}/${r.houses}</td><td>${r.bulls}</td></tr>`);
+    if (g.score > best) { best = g.score; try { localStorage.setItem('sky_v2_best', best); } catch (e) {} }
+  }
+  document.getElementById('copy').onclick = () => { const t = JSON.stringify(rounds); navigator.clipboard?.writeText(t).catch(() => {}); document.getElementById('copy').textContent = '已复制 ' + rounds.length + ' 局'; };
+
+  function tick() {
+    vt++; phaseT++;
+    const e = { ...edges }; edges.left = edges.mid = edges.right = 0;
+    midHeld = held.mid ? midHeld + 1 : 0;
+    if (!held.mid) swallowMid = false;
+    if (phase === 'TITLE') { if (e.mid) { swallowMid = true; startRound(); } }
+    else if (phase === 'READY') { if (--countdown <= 0) set('PLAY'); }
+    else if (phase === 'PLAY') {
+      if (midHeld === 40 && !swallowMid) { swallowMid = true; set('PAUSE'); return; }
+      N.step(g, { ok_held: held.left, up_held: held.right, down_down: e.mid && !swallowMid ? 1 : 0, ok_down: e.left, up_down: e.right });
+      if (g.over) { logRound(); set('RESULT'); }
+    } else if (phase === 'PAUSE') {
+      if (e.mid && !swallowMid) { swallowMid = true; set('PLAY'); }
+      else if (e.left) startRound();
+      else if (e.right) { if (vt - lastRight <= 24) set('TITLE'); lastRight = vt; }
+    } else if (phase === 'RESULT') { if (e.mid && phaseT > 50) { swallowMid = true; startRound(); } }
+  }
+  let last = performance.now(), acc = 0;
+  function frame(now) {
+    acc += Math.min(100, now - last); last = now;
+    while (acc >= 1000 / 60) { tick(); acc -= 1000 / 60; }
+    D.draw(c, g, phase, vt, phaseT, best, { countdown });
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

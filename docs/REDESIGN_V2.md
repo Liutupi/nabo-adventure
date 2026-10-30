@@ -206,7 +206,7 @@ SKI V2「雪崩速降」：用户 14:27 认可 G1，已用现有滑雪 A 款素�
 
 - NIGHT V2「萤火虫之夜」、SKI V2「雪崩速降」：已接入固件（云端），待真机。原 §4.3 的“侧视速降”改为“正对镜头往下冲 + 雪崩追赶”以复用现有素材。
 - SPACE V2：用户 15:08 改为「火箭登月」（发射→分离→冲出大气层→太空→奔月→登月），不用 Grok、背景要丰富；G1 已交，见 `game-art/adventure/SPACE_V2_CONCEPT.md`。原 §4.5 作废。
-- SKY、CLIMB：未开始。接手说明见 `docs/HANDOFF.md` 最上方。
+- SKY、CLIMB：~~未开始~~ 2026-10-30 G0+G1 已交：SKY「风层邮差」（`game-art/adventure/SKY_V2_CONCEPT.md`）、CLIMB「双线攀岩」（`CLIMB_V2_CONCEPT.md`），等用户试玩。CLIMB 原 §4.2 的“长按中键蓄力跳”与长按暂停冲突，改为点按换线。接手说明见 `docs/HANDOFF.md` 最上方。
 
 ## 8. 当前仓库状态（V2 开始前）
 

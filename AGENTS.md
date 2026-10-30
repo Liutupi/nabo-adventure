@@ -1,3 +1,5 @@
+> **2026-10-30 最新：先读 `docs/HANDOFF.md` 最上方“★ 2026-10-30 Claude 云端交接”。** SKY V2「风层邮差」与 CLIMB V2「双线攀岩」G0+G1 已交（`game-art/adventure/SKY_V2_CONCEPT.md`、`CLIMB_V2_CONCEPT.md`），等用户试玩；认可前不改 C。全项目体验优化清单见 `docs/UX_REVIEW_2026-10-30.md`。
+
 # 维护约定
 
 > **2026-10-26 13:22 最高优先级：先读 `docs/REDESIGN_V2.md`。** 用户实玩后认为萤火虫起五款游戏性不足、动作僵硬像贴片人、UI 不行，要求重新设计。V2 规则：
