@@ -70,6 +70,13 @@ uint32_t host_frame(int best_m, int dash_hint) {
     return sent_bytes;
 }
 uint32_t host_transfers(void) { return transfers; }
+// Versus race overlay (pill + banner); NULL pill turns it off.
+void host_versus(const char* pill, const char* banner) {
+    view.versus = pill != NULL;
+    view.vs_pill = pill;
+    view.vs_banner = banner;
+    dive_gfx_invalidate(&gfx);
+}
 // Screen as the viewer sees it (native RGB565), honouring hardware scroll.
 void host_snapshot(uint16_t* out) {
     for (int y = 0; y < DIVE_H; ++y)

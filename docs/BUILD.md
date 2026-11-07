@@ -80,3 +80,23 @@ python3 tools/verify_release.py release-v0.2.0
 ```
 
 发布来源、7个资产校验和与公开下载回执见 `docs/releases/v0.2.0/` 和 `validation/release-v0.2.0.json`。源提交与v0.2.0标签一致；发布之后的交接/回执提交不改固件运行时输入。
+
+## v0.3.0 无线对战构建与发布包复现
+
+无线是构建选项，默认构建保持离线、可装旧 2MB 布局。无线版：
+
+```sh
+export ADV_LINK=1
+idf.py -B build-vs -DSDKCONFIG=build-vs/sdkconfig -DSDKCONFIG_DEFAULTS="sdkconfig.defaults;sdkconfig.link.defaults" build
+```
+
+`ADV_LINK=1` 时 main 组件才依赖 esp_wifi/esp_event 并定义 `ADV_LINK_ENABLED`；否则 `adv_link` 编译为空实现，对战房间只剩“和 NABO 练习”。新增中文文案后用 `tools/generate_collection_fonts.py` 重生成字库（只扫描 `main/adv_*.c`，深潜叠层文字也放在 adv_main.c）。
+
+发布包：应用取双机实测的 91b850dd 构建输出，启动器取 v0.2.0 公开 ZIP 原件（d492cb90…），分区表 feb7ea49…，`esptool merge-bin` 合并后：
+
+```sh
+python3 tools/package_release.py --version 0.3.0 --build <三镜像目录> --output release-v0.3.0 --idf <ESP-IDF-6.0.2目录> --components <许可目录> --source-commit <提交>
+python3 tools/verify_release.py release-v0.3.0
+```
+
+`--components` 指向按 `<命名空间>__<组件>` 存放许可文件的目录（可取自 v0.2.0 ZIP 的 `licenses/`）。双机测试：`tools/vs_device_test.py COMa COMb`，真人对战旁听：`tools/vs_watch.py COMa COMb`。

@@ -5,6 +5,14 @@ if(CMAKE_SCRIPT_MODE_FILE)
 else()
     file(GLOB ADV_GENERATED CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/generated/*.c")
 endif()
+# Wireless versus is opt-in: ADV_LINK=1 in the environment (with sdkconfig.link.defaults) links
+# Wi-Fi/ESP-NOW. Without it the radio stack is not even a component of the build, so the normal
+# offline image keeps its size and still fits the legacy 2 MB factory partition.
+if("$ENV{ADV_LINK}" STREQUAL "1")
+    set(ADV_LINK_REQUIRES esp_wifi esp_event)
+else()
+    set(ADV_LINK_REQUIRES "")
+endif()
 idf_component_register(
     SRCS
         ${ADV_GENERATED}
@@ -15,6 +23,9 @@ idf_component_register(
         "adv_demo.c"
         "adv_gfx.c"
         "adv_main.c"
+        "adv_link.c"
+        "adv_vs.c"
+        "adv_ui_versus.c"
         "adv_model.c"
         "adv_ui_cards.c"
         "adv_post_v2.c"
@@ -76,7 +87,10 @@ idf_component_register(
         "nabo_poster_font_48.c"
         "nabo_ui_font_18.c"
     INCLUDE_DIRS "." "generated"
-    REQUIRES bsp lvgl esp_lcd esp_timer nvs_flash esp_rom
+    REQUIRES bsp lvgl esp_lcd esp_timer nvs_flash esp_rom ${ADV_LINK_REQUIRES}
     EMBED_FILES "jump_sprites.bin" "jump_sounds.bin" "adv_boot_voice.wav"
 )
 target_compile_options(${COMPONENT_LIB} PRIVATE -O2)
+if("$ENV{ADV_LINK}" STREQUAL "1")
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE ADV_LINK_ENABLED=1)
+endif()

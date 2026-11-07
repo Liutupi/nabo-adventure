@@ -1,6 +1,7 @@
 // Legacy 跳一跳 page, moved unchanged from the NABO games collection (collection_ui.c): the
 // jump model renders its own rows; labels are overlaid with the DIVE text helper.
 #include <stdio.h>
+#include <string.h>
 #include "adv_ui.h"
 #include "adv_ui_internal.h"
 #include "nabo_dive_text.h"
@@ -17,6 +18,24 @@ static nabo_jump_t s_previous;
 static uint32_t s_previous_ms;
 
 void adv_jump_invalidate(void) { s_jump_valid = false; }
+
+// Versus overlay: no medals/best (a race is not a record attempt), the opponent's live score instead.
+static bool s_versus;
+static char s_opp[32], s_opp_state[32], s_card_title[32], s_card_line[48], s_footer[48], s_prev_top[192];
+void adv_jump_versus(const char *opp, const char *opp_state, const char *card_title, const char *card_line,
+                     const char *footer)
+{
+    bool was = s_versus;
+    s_versus = opp != NULL;
+    if (s_versus) {
+        snprintf(s_opp, sizeof(s_opp), "%s", opp);
+        snprintf(s_opp_state, sizeof(s_opp_state), "%s", opp_state ? opp_state : "");
+        snprintf(s_card_title, sizeof(s_card_title), "%s", card_title ? card_title : "");
+        snprintf(s_card_line, sizeof(s_card_line), "%s", card_line ? card_line : "");
+        snprintf(s_footer, sizeof(s_footer), "%s", footer ? footer : "");
+    }
+    if (was != s_versus) s_jump_valid = false;
+}
 
 static int min(int a, int b) { return a < b ? a : b; }
 static int max(int a, int b) { return a > b ? a : b; }
@@ -55,13 +74,13 @@ static void medal_row(uint16_t *line, int y, int x0, int x1, int cx, int cy, int
 static void overlay_row(const nabo_jump_t *game, int y, int x0, int x1, uint16_t *line)
 {
     int have = earned(game->best);
-    for (int i = 0; i < 3; i++) medal_row(line, y, x0, x1, 196 + i * 14, PIP_Y, 5, i, i < have, UI_DIM);
+    if (!s_versus) for (int i = 0; i < 3; i++) medal_row(line, y, x0, x1, 196 + i * 14, PIP_Y, 5, i, i < have, UI_DIM);
     if (game->phase != JUMP_OVER || y < CARD_Y0 || y > CARD_Y1) return;
     for (int x = max(x0, CARD_X0); x <= min(x1, CARD_X1); x++) {
         bool corner = (y == CARD_Y0 || y == CARD_Y1) && (x == CARD_X0 || x == CARD_X1);
         if (!corner) line[x - x0] = blend(line[x - x0], UI_INK, 222);
     }
-    for (int i = 0; i < 3; i++) medal_row(line, y, x0, x1, 96 + i * 24, MEDAL_Y, 7, i, i < have, blend(UI_INK, UI_WHITE, 60));
+    if (!s_versus) for (int i = 0; i < 3; i++) medal_row(line, y, x0, x1, 96 + i * 24, MEDAL_Y, 7, i, i < have, blend(UI_INK, UI_WHITE, 60));
 }
 
 static void jump_rect(const nabo_jump_t *game, uint32_t ms, int x0, int y0, int x1, int y1,
@@ -111,8 +130,19 @@ void adv_jump_draw(const nabo_jump_t *game, uint32_t ms, bool full) {
                      120, 303, DIVE_ALIGN_CENTER, 0, UI_INK, 255);
     dive_text_layout(&labels[4], &collection_font_12, "双击上回地图 · 下换角色", 120, 316, DIVE_ALIGN_CENTER, 0, UI_INK, 255);
     int n = 5;
+    if (s_versus) {
+        dive_text_layout(&labels[1], &collection_font_16, s_opp, 225, 34, DIVE_ALIGN_RIGHT, 0, UI_RED, 255);
+        dive_text_layout(&labels[3], &collection_font_16, s_footer[0] ? s_footer : over ? "等对手结束" : "按住OK蓄力，松开起跳",
+                         120, 303, DIVE_ALIGN_CENTER, 0, s_footer[0] ? UI_RED : UI_INK, 255);
+        dive_text_layout(&labels[4], &collection_font_12, "双击上退出对战 · 下换角色", 120, 316, DIVE_ALIGN_CENTER, 0, UI_INK, 255);
+        dive_text_layout(&labels[n++], &collection_font_12, s_opp_state, 225, 52, DIVE_ALIGN_RIGHT, 0, UI_INK, 255);
+    }
     if (game->combo >= 2) dive_text_layout(&labels[n++], &collection_font_12, combo, 16, 58, DIVE_ALIGN_LEFT, 0, UI_RED, 255);
-    if (over) {
+    if (over && s_versus) {
+        dive_text_layout(&labels[n++], &collection_font_16, s_card_title, 120, 126, DIVE_ALIGN_CENTER, 0, UI_WHITE, 255);
+        dive_text_layout(&labels[n++], &nabo_poster_font_28, card_score, 120, 160, DIVE_ALIGN_CENTER, 0, UI_WHITE, 255);
+        dive_text_layout(&labels[n++], &collection_font_12, s_card_line, 120, 190, DIVE_ALIGN_CENTER, 0, UI_GOLD, 255);
+    } else if (over) {
         dive_text_layout(&labels[n++], &collection_font_16, record ? "新纪录!" : "本局", 120, 126, DIVE_ALIGN_CENTER, 0, record ? UI_GOLD : UI_WHITE, 255);
         dive_text_layout(&labels[n++], &nabo_poster_font_28, card_score, 120, 160, DIVE_ALIGN_CENTER, 0, UI_WHITE, 255);
         dive_text_layout(&labels[n++], &collection_font_12, gap, 120, 196, DIVE_ALIGN_CENTER, 0, now > before ? UI_GOLD : UI_WHITE, 255);
@@ -130,9 +160,13 @@ void adv_jump_draw(const nabo_jump_t *game, uint32_t ms, bool full) {
             nabo_jump_character_bounds(&s_previous, s_previous_ms, &a0, &b0, &a1, &b1);
         }
         jump_rect(game, ms, min(x0, a0), min(y0, b0), max(x1, a1), max(y1, b1), labels, n);
-        if (game->score != s_previous.score || game->best != s_previous.best || game->combo != s_previous.combo || game->next_skin != s_previous.next_skin || game->next_size != s_previous.next_size)
+        char top[192];
+        snprintf(top, sizeof(top), "%s|%s|%s|%s", s_opp, s_opp_state, s_card_line, s_footer);
+        bool top_changed = s_versus && strcmp(top, s_prev_top);
+        if (top_changed) { snprintf(s_prev_top, sizeof(s_prev_top), "%s", top); if (over) jump_rect(game, ms, CARD_X0, CARD_Y0, CARD_X1, CARD_Y1, labels, n); }
+        if (top_changed || game->score != s_previous.score || game->best != s_previous.best || game->combo != s_previous.combo || game->next_skin != s_previous.next_skin || game->next_size != s_previous.next_size)
             jump_rect(game, ms, 0, 0, 239, 82, labels, n);
-        if ((game->phase == JUMP_OVER) != (s_previous.phase == JUMP_OVER))
+        if (top_changed || (game->phase == JUMP_OVER) != (s_previous.phase == JUMP_OVER))
             jump_rect(game, ms, 0, 287, 239, 319, labels, n);
         if (nabo_jump_charging(game) || nabo_jump_charging(&s_previous))
             jump_rect(game, ms, 30, 281, 210, 286, labels, n);

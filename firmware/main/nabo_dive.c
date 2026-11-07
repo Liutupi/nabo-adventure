@@ -2,6 +2,7 @@
 #include "adv_persist.h"
 #include <math.h>
 #include <stdatomic.h>
+#include <stdio.h>
 #include <string.h>
 #include "esp_heap_caps.h"
 #include "esp_cpu.h"
@@ -35,6 +36,13 @@ static esp_timer_handle_t s_timer;
 static atomic_bool s_stop, s_running;
 static int s_scroll = -1;
 static uint32_t s_seed;
+// Versus race (set before open, read by the game task).
+static atomic_bool s_versus;
+static uint32_t s_vs_seed;
+static atomic_int s_vs_depth;
+static atomic_bool s_vs_over;
+static portMUX_TYPE s_vs_lock = portMUX_INITIALIZER_UNLOCKED;
+static char s_vs_pill[40], s_vs_banner[64];
 
 // Inputs from the button / main tasks.
 static atomic_int s_ok_presses, s_up_clicks;
@@ -175,6 +183,19 @@ static void game_task(void* arg) {
     uint8_t vscrdef[6] = {0, 0, DIVE_H >> 8, DIVE_H & 0xFF, 0, 0};
     esp_lcd_panel_io_tx_param(s_io, 0x33, vscrdef, 6);
     new_title(best);
+    bool versus = atomic_load(&s_versus);
+    char vs_pill[40] = "", vs_banner[64] = "";
+    if (versus) {   // straight into the shared dive: no title, nothing to beat but the opponent
+        best = 0;
+        dive_reset(s_game, s_vs_seed, 0);
+        dive_anim_reset(&s_anim);
+        dive_gfx_invalidate(&s_gfx);
+        atomic_store(&s_splash, true);
+        screen = DIVE_SCREEN_PLAY;
+        view.versus = true;
+        view.vs_pill = vs_pill;
+        view.vs_banner = vs_banner;
+    }
     int64_t last = esp_timer_get_time(), stats_at = last;
     uint32_t frames = 0, work_us = 0, max_work_us = 0, bytes = 0;
     atomic_store(&s_ok_presses, 0);
@@ -215,7 +236,7 @@ static void game_task(void* arg) {
                 }
                 break;
             case DIVE_SCREEN_PLAY:
-                if (up) {
+                if (up && !versus) {
                     screen = DIVE_SCREEN_PAUSE;
                     break;
                 }
@@ -234,7 +255,7 @@ static void game_task(void* arg) {
                     save_dashed();
                 }
                 if (s_game->phase == DIVE_OVER) {
-                    if (s_game->new_record) {
+                    if (s_game->new_record && !versus) {
                         best = s_game->y;
                         save_best(best);
                     }
@@ -248,6 +269,7 @@ static void game_task(void* arg) {
                 }
                 break;
             case DIVE_SCREEN_OVER:
+                if (versus) break;   // the room decides what comes next
                 if (screen_t > 0.45f && ok) {
                     new_dive(best);
                     atomic_store(&s_splash, true);
@@ -269,9 +291,17 @@ static void game_task(void* arg) {
         atomic_store(&s_music_o2, s_game->o2);
         atomic_store(&s_music_lb, s_game->lb);
 
+        if (versus) {
+            atomic_store(&s_vs_depth, (int)dive_depth_m(s_game->y < 0 ? 0 : s_game->y));
+            atomic_store(&s_vs_over, s_game->phase != DIVE_PLAY);
+            taskENTER_CRITICAL(&s_vs_lock);
+            memcpy(vs_pill, s_vs_pill, sizeof(vs_pill));
+            memcpy(vs_banner, s_vs_banner, sizeof(vs_banner));
+            taskEXIT_CRITICAL(&s_vs_lock);
+        }
         view.time = screen_t;
         view.best_m = best > 0 ? (int)dive_depth_m(best) : -1;
-        view.dash_hint = !dashed;
+        view.dash_hint = !dashed && !versus;
         dive_anim_update(&s_anim, s_game, screen, dash, events, screen == DIVE_SCREEN_PAUSE ? 0 : dt, &view);
         bool prof = atomic_load(&s_profile);
         s_gfx.clock_us = prof ? clock_us : NULL;
@@ -307,6 +337,28 @@ static void game_task(void* arg) {
     atomic_store(&s_music_mode, 0);
     xSemaphoreGive(s_done);
     vTaskDelete(NULL);
+}
+
+/* ---------- versus ---------- */
+
+void nabo_dive_versus(bool on, uint32_t seed) {
+    s_vs_seed = seed;
+    atomic_store(&s_vs_depth, 0);
+    atomic_store(&s_vs_over, false);
+    nabo_dive_versus_text(NULL, NULL);
+    atomic_store(&s_versus, on);
+}
+
+void nabo_dive_versus_state(int* depth_m, bool* over) {
+    *depth_m = atomic_load(&s_vs_depth);
+    *over = atomic_load(&s_vs_over);
+}
+
+void nabo_dive_versus_text(const char* pill, const char* banner) {
+    taskENTER_CRITICAL(&s_vs_lock);
+    snprintf(s_vs_pill, sizeof(s_vs_pill), "%s", pill ? pill : "");
+    snprintf(s_vs_banner, sizeof(s_vs_banner), "%s", banner ? banner : "");
+    taskEXIT_CRITICAL(&s_vs_lock);
 }
 
 /* ---------- lifecycle ---------- */
@@ -386,6 +438,7 @@ void nabo_dive_close(void) {
     s_task = NULL;
     release();
     atomic_store(&s_running, false);
+    atomic_store(&s_versus, false);
     log_heap("closed");
 }
 

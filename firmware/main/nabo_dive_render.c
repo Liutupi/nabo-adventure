@@ -20,6 +20,7 @@ LV_FONT_DECLARE(nabo_poster_font_28);
 LV_FONT_DECLARE(nabo_poster_font_48);
 LV_FONT_DECLARE(nabo_mono_font_12);
 LV_FONT_DECLARE(collection_font_12);
+LV_FONT_DECLARE(collection_font_16);
 
 #define STRIP_PX (DIVE_W * 5)
 #define TITLE_SURF 104
@@ -342,6 +343,18 @@ static void hud_ops(dive_gfx_t* g) {
         add_text(g, &nabo_mono_font_12, "x1.5", 18, 26, DIVE_ALIGN_LEFT, 0, rgb565(255, 181, 71), dk, true, true,
                  LAYER_UI);
     }
+    if (g->v->versus && g->v->vs_pill && g->v->vs_pill[0]) {
+        int w = dive_text_width(&collection_font_12, g->v->vs_pill, 0);
+        add_rect(g, 22, 31, 36 + w, 49, rgb565(2, 10, 20), 0.7f, 8, 0, true, LAYER_UI);
+        add_text(g, &collection_font_12, g->v->vs_pill, 29, 45, DIVE_ALIGN_LEFT, 0, 0xFFFF, 1, false, true, LAYER_UI);
+    }
+    if (g->v->versus && g->v->vs_banner && g->v->vs_banner[0]) {
+        int w = dive_text_width(&collection_font_16, g->v->vs_banner, 0);
+        add_rect(g, DIVE_W / 2 - w / 2 - 10, 268, DIVE_W / 2 + w / 2 + 10, 292, rgb565(182, 72, 60), 0.92f, 10, 0, true,
+                 LAYER_UI);
+        add_text(g, &collection_font_16, g->v->vs_banner, DIVE_W / 2, 286, DIVE_ALIGN_CENTER, 0, 0xFFFF, 1, false, true,
+                 LAYER_UI);
+    }
     bool low = d->o2 < 30 || d->lb;
     dive_op_t* gauge = add_op(g, OP_O2, LAYER_UI, true, 3, 12, 15, DIVE_H - 11);
     if (gauge) {
@@ -398,10 +411,30 @@ static void hud_ops(dive_gfx_t* g) {
     }
 }
 
+static void versus_over_ops(dive_gfx_t* g, int m) {
+    char s[16];
+    add_dim(g, 0.76f);
+    snprintf(s, sizeof(s), "%d", m);
+    int w = dive_text_width(&nabo_poster_font_48, s, 0);
+    add_text(g, &nabo_poster_font_48, s, DIVE_W / 2 - 6, 150, DIVE_ALIGN_CENTER, 0, 0xFFFF, 1, false, false, LAYER_UI);
+    add_text(g, &nabo_mono_font_12, "m", DIVE_W / 2 - 2 + w / 2, 150, DIVE_ALIGN_LEFT, 0, 0xFFFF, 1, false, false, LAYER_UI);
+    if (g->v->vs_pill && g->v->vs_pill[0])
+        add_text(g, &collection_font_16, g->v->vs_pill, DIVE_W / 2, 196, DIVE_ALIGN_CENTER, 0, rgb565(200, 230, 245), 0.9f,
+                 false, false, LAYER_UI);
+    if (g->v->vs_banner && g->v->vs_banner[0]) {
+        int bw = dive_text_width(&collection_font_16, g->v->vs_banner, 0);
+        add_rect(g, DIVE_W / 2 - bw / 2 - 10, 230, DIVE_W / 2 + bw / 2 + 10, 254, rgb565(182, 72, 60), 0.92f, 10, 0, true,
+                 LAYER_UI);
+        add_text(g, &collection_font_16, g->v->vs_banner, DIVE_W / 2, 248, DIVE_ALIGN_CENTER, 0, 0xFFFF, 1, false, true,
+                 LAYER_UI);
+    }
+}
+
 static void over_ops(dive_gfx_t* g) {
     const dive_t* d = g->d;
     char s[48];
     int m = (int)dive_depth_m(d->y);
+    if (g->v->versus) { versus_over_ops(g, m); return; }
     add_dim(g, 0.76f);
     snprintf(s, sizeof(s), "氧气耗尽 · %s", kZoneName[dive_zone_of(d->y < 0 ? 0 : d->y)]);
     add_text(g, &nabo_menu_font_16, s, 24, 86, DIVE_ALIGN_LEFT, 3, rgb565(200, 230, 245), 0.75f, false, false,

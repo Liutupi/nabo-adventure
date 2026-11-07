@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BOARD = ROOT / 'firmware/main'
 SOURCES = ['nabo_dive_model.c', 'nabo_dive_anim.c', 'nabo_dive_render.c', 'nabo_dive_draw.c', 'nabo_dive_text.c',
            'nabo_dive_sound.c', 'nabo_dive_sprites.c', 'nabo_menu_font_16.c', 'nabo_ui_font_18.c',
-           'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c','collection_font_12.c']
+           'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c','collection_font_12.c','collection_font_16.c']
 TITLE, PLAY, PAUSE, OVER = 0, 1, 2, 3
 X, Y, O2, VY, PHASE, CAM, LB, ZONE, HITS, INV = range(10)
 
@@ -165,6 +165,28 @@ class Renderer(unittest.TestCase):
         rgb = bytearray()
         for v in snapshot(): rgb.extend(((v >> 11) * 255 // 31, ((v >> 5) & 63) * 255 // 63, (v & 31) * 255 // 31))
         Image.frombytes('RGB', (240, 320), bytes(rgb)).save(ROOT / 'docs/images/ui/dive-over-medals.png')
+    def test_versus_race_overlay(self):
+        from PIL import Image
+        lib.host_versus.argtypes = [ctypes.c_char_p, ctypes.c_char_p]
+        out = ROOT / 'private/previews'
+        out.mkdir(parents=True, exist_ok=True)
+        def shot(name):
+            rgb = bytearray()
+            for v in snapshot(): rgb.extend(((v >> 11) * 255 // 31, ((v >> 5) & 63) * 255 // 63, (v & 31) * 255 // 31))
+            Image.frombytes('RGB', (240, 320), bytes(rgb)).save(out / name)
+        lib.host_init(5, 0.0)
+        lib.host_jump(1331.0, 60.0)
+        lib.host_versus('NABO 1214 m 已结束'.encode(), '超过 1214 m 你就赢'.encode())
+        for _ in range(30): lib.host_step(1 / 60, 0, 0, PLAY); lib.host_frame(-1, 0)
+        lib.host_invalidate(); lib.host_frame(-1, 0)
+        shot('versus-dive-play.png')
+        lib.host_die()
+        lib.host_versus('对手 180 m'.encode(), '对手要超过 1350 m 才赢'.encode())
+        for _ in range(240): lib.host_step(1 / 60, 0, 0, OVER); lib.host_frame(-1, 0)
+        lib.host_invalidate(); lib.host_frame(-1, 0)
+        shot('versus-dive-over.png')
+        lib.host_versus(None, None)
+
     def test_dirty_rectangles_match_a_full_redraw(self):
         # Incremental frames (hardware scroll + dirty rects) must leave the same picture as
         # redrawing the final state from scratch; any stale pixel is a renderer bug.

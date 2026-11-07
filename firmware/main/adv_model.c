@@ -45,6 +45,7 @@ static void end_session(adv_model_t *m)
     free(m->game);
     m->game = NULL;
     m->in_session = false;
+    m->versus = false;
 }
 
 void adv_free(adv_model_t *m) { end_session(m); }
@@ -164,6 +165,18 @@ static bool pause_key(const adv_model_t *m, adv_btn_t b, adv_ev_t e)
 
 static void session_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
 {
+    if (m->versus) {   // the room owns leaving; only play edges reach the game
+        if (m->phase != ADV_PLAY) return;
+        if (e == ADV_EV_PRESS) {
+            if (b == ADV_BTN_OK) m->input.ok_down = 1;
+            if (b == ADV_BTN_UP) m->input.up_down = 1;
+            if (b == ADV_BTN_DOWN) m->input.down_down = 1;
+        } else if (e == ADV_EV_RELEASE) {
+            if (b == ADV_BTN_OK) m->input.ok_up = 1;
+            if (b == ADV_BTN_DOWN) m->input.down_up = 1;
+        }
+        return;
+    }
     adv_btn_t confirm=v2(m->station)?ADV_BTN_DOWN:ADV_BTN_OK,restart=v2(m->station)?ADV_BTN_OK:ADV_BTN_DOWN;
     if(adv_game_map_key(b,e)) {
         if(v2(m->station)&&m->phase==ADV_PLAY)return;
@@ -233,7 +246,7 @@ int adv_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
         break;
     case ADV_PAGE_KIOSK:
         if (click && (b == ADV_BTN_UP || b == ADV_BTN_DOWN)) {
-            m->kiosk = (m->kiosk + (b == ADV_BTN_UP ? 2 : 1)) % 3;
+            m->kiosk = (m->kiosk + (b == ADV_BTN_UP ? 3 : 1)) % 4;
             cue(m, ADV_CUE_MOVE);
         } else if (click && b == ADV_BTN_OK) {
             if (m->kiosk == 0) open_passport(m, ADV_PAGE_KIOSK);
@@ -243,7 +256,8 @@ int adv_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
                 m->cfg.settings_cursor = 0;
                 m->cfg.editing = -1;
                 cue(m, ADV_CUE_ENTER);
-            } else { cue(m, ADV_CUE_BACK); to_map(m); }
+            } else if (m->kiosk == 2) { m->page = ADV_PAGE_LEGACY; m->fx |= ADV_FX_OPEN_VERSUS; cue(m, ADV_CUE_ENTER); }
+            else { cue(m, ADV_CUE_BACK); to_map(m); }
         } else if (is_back(b, e)) { cue(m, ADV_CUE_BACK); to_map(m); }
         break;
     case ADV_PAGE_PASSPORT:
@@ -271,6 +285,47 @@ int adv_event(adv_model_t *m, adv_btn_t b, adv_ev_t e)
         break;
     default: break;   // LEGACY: the platform routes buttons to the legacy game
     }
+    return m->fx;
+}
+
+int adv_versus_race(adv_model_t *m, int station, uint32_t seed)
+{
+    m->fx = 0;
+    m->cue = ADV_CUE_NONE;
+    if (station < 3 || station >= ADV_STATIONS || adv_station[station].kind != ADV_KIND_SESSION) return 0;
+    end_session(m);
+    begin_session(m, station);
+    if (!m->in_session) return m->fx;
+    m->versus = true;
+    m->best_before = m->best[station];
+    m->seed = seed;
+    session_game(m)->start(m->game, seed);
+    m->phase = ADV_PLAY;
+    m->t = 0;
+    memset(&m->input, 0, sizeof(m->input));
+    m->cue = ADV_CUE_NONE;
+    cue(m, ADV_CUE_GO);
+    m->fx |= ADV_FX_REDRAW;
+    return m->fx;
+}
+
+void adv_versus_stop(adv_model_t *m)
+{
+    end_session(m);
+    m->page = ADV_PAGE_LEGACY;
+    m->held = 0;
+}
+
+// The versus room (opened from the kiosk) closed: back to the kiosk with its cursor kept.
+int adv_versus_done(adv_model_t *m)
+{
+    m->fx = 0;
+    m->cue = ADV_CUE_NONE;
+    if (m->page != ADV_PAGE_LEGACY) return 0;
+    m->page = ADV_PAGE_KIOSK;
+    m->kiosk = 2;
+    cue(m, ADV_CUE_BACK);
+    m->fx |= ADV_FX_REDRAW;
     return m->fx;
 }
 
@@ -310,7 +365,8 @@ int adv_step(adv_model_t *m)
     } else if (m->phase == ADV_END) {
         adv_input_t none = {0};
         game->step(m->game, &none);
-        if (--m->t == 0) {
+        if (m->versus) { if (m->t > 1) m->t--; }   // hold the end scene; the room shows the result
+        else if (--m->t == 0) {
             m->phase = ADV_RESULT;
             record_result(m);
         }

@@ -6,6 +6,8 @@ FoloToy AI Passport（ESP32-C3 / 8 MB）上的 NABO 游戏合集，独立离线�
 
 **AI Passport社区已上架：** [NABO 冒险之旅 · 八站离线游戏](https://ai-passport.folotoy.cn/plays/1662/?v=3808-2)。五张新图、八款玩法/按键/结束条件、解锁与安装说明见[社区材料](docs/community/v0.1.0/README.md)。
 
+**v0.3.0 预览固件 · 双人对战：** 八款游戏都能两块工牌 ESP-NOW 直连对战（同一张图比分数），一块也能和 NABO 练习。跳一跳已双机实测和真人对玩，七款自动对战一致，火箭登月对战待测。[下载固件](https://github.com/Liutupi/nabo-adventure/releases/tag/v0.3.0) · [安装与升级](docs/INSTALL_v0.3.0.md) · [本版说明](docs/RELEASE_v0.3.0.md)。
+
 **v0.2.0 预览固件：** 邮政快车、双线攀岩、风层邮差V2及六款共用界面已接入，跳一跳/深潜界面一并更新。八款各十轮串口回归、存档/静音及帧率短窗已验证，实体手感/读图/睡醒仍待人工验收。[下载固件](https://github.com/Liutupi/nabo-adventure/releases/tag/v0.2.0) · [安装与升级](docs/INSTALL_v0.2.0.md) · [本版说明](docs/RELEASE_v0.2.0.md)。
 
 > **开发中。** 八款正式游戏引擎及各关[独立主题服装A款](docs/COSTUME_INTEGRATION.md)已接入，正在逐项真机验收。POST与NIGHT已有先前精确镜像的用户验收；CLIMB/SKI/SKY/SPACE为新接入玩法，不能沿用旧镜像的验收。银章B款选择系统尚未完成。见[开发进度](docs/DEVELOPMENT_PROGRESS.md)与[验证记录](docs/VALIDATION.md)。

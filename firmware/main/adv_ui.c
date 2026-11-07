@@ -177,12 +177,12 @@ static void draw_kiosk(ag_t *g, const adv_model_t *m)
     ui_header(g, "护照亭", count);
     ag_text(g, &collection_font_18, "欢迎来到小镇护照亭", 120, 72, NT_ALIGN_CENTER, UI_INK);
     ag_text(g, &collection_font_12, "盖过的章都收在冒险护照里", 120, 94, NT_ALIGN_CENTER, UI_INK);
-    static const char *const items[] = {"冒险护照", "设置", "返回地图"};
-    for (int i = 0; i < 3; i++) {
+    static const char *const items[] = {"冒险护照", "设置", "双人对战", "返回地图"};
+    for (int i = 0; i < 4; i++) {
         bool on = i == m->kiosk;
-        int y = 124 + i * 46;
-        ui_card(g, 30, y, 180, 36, on, false);
-        ag_text_top(g, &collection_font_18, items[i], 120, y + 8, NT_ALIGN_CENTER, on ? UI_WHITE : UI_INK);
+        int y = 116 + i * 42;
+        ui_card(g, 30, y, 180, 34, on, false);
+        ag_text_top(g, &collection_font_18, items[i], 120, y + 7, NT_ALIGN_CENTER, on ? UI_WHITE : UI_INK);
     }
     ui_footer(g, "上/下选择 · OK确认 · 长按上返回");
 }
@@ -232,6 +232,53 @@ static void draw_status(ag_t *g, int battery, int mv)
     ui_footer(g, "按任意键返回设置");
 }
 
+// ---------- versus room ----------
+
+static char s_vs_pill[40], s_vs_banner[64];
+void adv_ui_versus_overlay(const char *pill, const char *banner)
+{
+    snprintf(s_vs_pill, sizeof(s_vs_pill), "%s", pill ? pill : "");
+    snprintf(s_vs_banner, sizeof(s_vs_banner), "%s", banner ? banner : "");
+}
+
+// Free spots per landscape game (station 3..8), chosen against each game's HUD and play field.
+static void versus_overlay(ag_t *g, const adv_model_t *m)
+{
+    static const int8_t pill_y[6] = {24, 28, 24, 4, 24, 20};
+    static const uint8_t banner_y[6] = {50, 214, 222, 196, 224, 196};
+    if (!m->versus || m->station < 3 || m->station > 8) return;
+    int i = m->station - 3;
+    if (s_vs_pill[0]) {
+        int w = ag_text_width(&collection_font_12, s_vs_pill) + 14;
+        ag_rect(g, 316 - w, pill_y[i], w, 18, 8, UI_INK, 200, 0, 0);
+        ag_text_top(g, &collection_font_12, s_vs_pill, 309, pill_y[i] + 2, NT_ALIGN_RIGHT, UI_WHITE);
+    }
+    if (s_vs_banner[0]) {
+        int w = ag_text_width(&collection_font_16, s_vs_banner) + 20, y = banner_y[i];
+        ag_rect(g, 160 - w / 2, y - 12, w, 24, 10, UI_RED, 235, UI_WHITE, 1);
+        ag_text_top(g, &collection_font_16, s_vs_banner, 160, y - 10, NT_ALIGN_CENTER, UI_WHITE);
+    }
+}
+
+void adv_ui_draw_versus(const struct adv_vs_t *vs, uint32_t ms)
+{
+    s_millis = ms;
+    if (!s_gfx) return;
+    ag_t *g = s_gfx;
+    finish_transfer();
+    // A finished landscape race leaves its play-field caches behind; the room never needs them.
+    ui_space_close();
+    ui_climb_v2_close();
+    ui_sky_v2_close();
+    (void)ag_strips(g, s_strip[0], s_strip[1], AG_STRIP);
+    s_landscape = false;
+    (void)ag_viewport(g, 240, 320);
+    ui_draw_versus(g, vs, ms);
+    ag_flush(g);
+    finish_transfer();
+    s_capture = false;
+}
+
 // ---------- dispatch ----------
 
 void adv_ui_draw(const adv_model_t *m, uint32_t ms, int battery, int mv)
@@ -263,7 +310,7 @@ void adv_ui_draw(const adv_model_t *m, uint32_t ms, int battery, int mv)
         else { ag_begin(g, UI_SCENE_SETTINGS); draw_settings(g, m); }
         break;
     case ADV_PAGE_STAMP: ag_begin(g, UI_SCENE_STAMP); ui_draw_stamp(g, m); break;
-    case ADV_PAGE_SESSION: ui_draw_session(g, m); break;
+    case ADV_PAGE_SESSION: ui_draw_session(g, m); versus_overlay(g, m); break;
     default: return;   // legacy games draw themselves
     }
     // The extra V2 buffers reduce command/fence overhead without changing LCD

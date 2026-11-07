@@ -115,7 +115,7 @@ function kioskAndSettings() {
   const r = recorder(99, [30, 30, 700, 12, 0, 0, 0, 0, 0], 0x7ffffff);
   r.click(BTN.OK);
   r.click(BTN.DOWN); r.click(BTN.OK);  // kiosk
-  r.click(BTN.UP); r.click(BTN.DOWN); r.click(BTN.DOWN); r.click(BTN.UP);   // 2, 0, 1, 0
+  r.click(BTN.UP); r.click(BTN.DOWN); r.click(BTN.DOWN); r.click(BTN.UP);   // 3, 0, 1, 0
   r.click(BTN.OK);                     // passport from the kiosk
   r.click(BTN.DOWN); r.click(BTN.OK);  // back to the kiosk
   r.click(BTN.DOWN); r.click(BTN.OK);  // settings
@@ -127,7 +127,10 @@ function kioskAndSettings() {
   r.click(BTN.OK);
   r.click(BTN.DOWN); r.click(BTN.OK); r.click(BTN.OK);   // status page and back
   r.click(BTN.DOWN); r.click(BTN.OK);  // settings -> 返回 -> kiosk
-  r.click(BTN.DOWN); r.click(BTN.OK);  // kiosk 返回地图
+  r.click(BTN.DOWN); r.click(BTN.OK);  // kiosk 双人对战 (platform room)
+  r.double(BTN.UP);                    // the room's double UP returns through the legacy page
+  r.click(BTN.DOWN); r.click(BTN.OK);  // kiosk
+  r.click(BTN.UP); r.click(BTN.OK);    // kiosk 返回地图 (UP wraps 0 -> 3)
   for (let i = 0; i < 10; i++) r.click(BTN.UP);   // walk to the top
   r.click(BTN.OK); r.double(BTN.UP);
   return r.trace;

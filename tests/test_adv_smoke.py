@@ -71,10 +71,10 @@ class BadgeSerial(FakeSerial):
                     s['page'] = 2 if s['cursor'] == 0 else 6
                     if s['page'] == 6: s['owner'] = s['cursor']
             elif page == 2:
-                if key == 'down': self.kiosk = (self.kiosk + 1) % 3
+                if key == 'down': self.kiosk = (self.kiosk + 1) % 4
                 elif key == 'ok':
                     self.from_page = 2
-                    s['page'] = [3, 4, 1][self.kiosk]
+                    s['page'] = [3, 4, 6, 1][self.kiosk]
                 elif key == 'long_up': s['page'] = 1
             elif page == 3 and key == 'ok': s['page'] = self.from_page
             elif page == 4 and key == 'long_up': s['page'] = 2

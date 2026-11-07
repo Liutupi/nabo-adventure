@@ -32,6 +32,9 @@ typedef struct {
     float time;          // seconds since this screen opened, for UI blinking
     int best_m;          // best depth in metres, -1 if none
     bool dash_hint;      // first-run hint about holding DOWN
+    bool versus;         // versus race: opponent pill/banner, no records or medals
+    const char* vs_pill;
+    const char* vs_banner;
 } dive_view_t;
 
 #define DIVE_MAX_RECTS 48

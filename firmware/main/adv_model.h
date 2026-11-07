@@ -37,6 +37,7 @@ enum {
     ADV_FX_APPLY_SETTINGS = 32,
     ADV_FX_CUE = 64,             // play cue
     ADV_FX_NOMEM = 128,          // a session could not allocate its game
+    ADV_FX_OPEN_VERSUS = 256,    // kiosk: open the jump versus room (platform owner)
 };
 
 typedef struct {
@@ -58,6 +59,7 @@ typedef struct {
     bool record;
     void *game;                  // calloc'd state of adv_station[station].game
     bool test;                   // scripted tests: never raise ADV_FX_SAVE_BEST
+    bool versus;                 // versus race: no title/ready/pause/result, never a record
     int fx;
     adv_cue_t cue;
 } adv_model_t;
@@ -73,6 +75,11 @@ int adv_test_open(adv_model_t *m,int station);
 int adv_practice_open(adv_model_t *m);
 // The legacy game on the cursor closed; best is its best score in game units.
 int adv_legacy_done(adv_model_t *m, uint32_t best);
+int adv_versus_done(adv_model_t *m);
+// Versus room (platform owner): run one race of session station 3..8 with the shared seed, straight
+// into PLAY. The run ends at END (held there, nothing recorded) until adv_versus_stop.
+int adv_versus_race(adv_model_t *m, int station, uint32_t seed);
+void adv_versus_stop(adv_model_t *m);
 
 uint32_t adv_stamp_bit(int station, int tier);
 uint32_t adv_earned(const adv_model_t *m);

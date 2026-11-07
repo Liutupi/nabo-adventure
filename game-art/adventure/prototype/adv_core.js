@@ -16,7 +16,7 @@
   const EV = { PRESS: 0, CLICK: 1, DOUBLE: 2, LONG: 3, RELEASE: 4 };   // = bsp_btn_ev_t
   const PAGE = { COVER: 0, MAP: 1, KIOSK: 2, PASSPORT: 3, SETTINGS: 4, STAMP: 5, LEGACY: 6, SESSION: 7 };
   const PHASE = { TITLE: 0, READY: 1, PLAY: 2, PAUSE: 3, END: 4, RESULT: 5 };
-  const FX = { REDRAW: 1, OPEN_LEGACY: 2, SAVE_PROGRESS: 4, SAVE_BEST: 8, SAVE_SETTINGS: 16, APPLY_SETTINGS: 32, CUE: 64 };
+  const FX = { REDRAW: 1, OPEN_LEGACY: 2, SAVE_PROGRESS: 4, SAVE_BEST: 8, SAVE_SETTINGS: 16, APPLY_SETTINGS: 32, CUE: 64, OPEN_VERSUS: 256 };
   const CUE = { NONE: 0, MOVE: 1, ENTER: 2, DENY: 3, STAMP: 4, BACK: 5, HIT: 6, MISS: 7, OVER: 8, GO: 9, WHISTLE: 10 };
   const READY_STEPS = 180, END_STEPS = 120;
   const STATIONS = 9, KIOSK = 0;
@@ -279,12 +279,13 @@
         else if (isBack(btn, ev)) { m.page = PAGE.COVER; cue(m, CUE.BACK); }
         break;
       case PAGE.KIOSK:
-        if (click && (btn === BTN.UP || btn === BTN.DOWN)) { m.kiosk = (m.kiosk + (btn === BTN.UP ? 2 : 1)) % 3; cue(m, CUE.MOVE); }
+        if (click && (btn === BTN.UP || btn === BTN.DOWN)) { m.kiosk = (m.kiosk + (btn === BTN.UP ? 3 : 1)) % 4; cue(m, CUE.MOVE); }
         else if (click && btn === BTN.OK) {
           if (m.kiosk === 0) openPassport(m, PAGE.KIOSK);
           else if (m.kiosk === 1) {
             m.page = PAGE.SETTINGS; m.cfg.page = CG.SETTINGS; m.cfg.cursor = 0; m.cfg.editing = -1; cue(m, CUE.ENTER);
-          } else { cue(m, CUE.BACK); toMap(m); }
+          } else if (m.kiosk === 2) { m.page = PAGE.LEGACY; m.fx |= FX.OPEN_VERSUS; cue(m, CUE.ENTER); }
+          else { cue(m, CUE.BACK); toMap(m); }
         } else if (isBack(btn, ev)) { cue(m, CUE.BACK); toMap(m); }
         break;
       case PAGE.PASSPORT:

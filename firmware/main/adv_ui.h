@@ -21,6 +21,18 @@ int adv_ui_width(void);
 int adv_ui_height(void);
 // Legacy 跳一跳 page (its own row renderer, from the NABO games collection).
 void adv_jump_draw(const nabo_jump_t *game, uint32_t ms, bool full);
+void adv_jump_invalidate(void);
+// Versus overlay on the jump page: opponent line at the top right, game-over card text and footer.
+// Pass opp=NULL to return to the normal medal/best overlay.
+// footer=NULL keeps the default play hint; a footer is drawn in red (the rule that matters right now).
+void adv_jump_versus(const char *opp, const char *opp_state, const char *card_title, const char *card_line,
+                     const char *footer);
+// Versus room pages (lobby, invitations, countdown, result).
+// Versus race on a landscape session game: a small opponent pill and, when one side has finished,
+// a red banner with the pass-to-win rule. NULL/empty clears.
+void adv_ui_versus_overlay(const char *pill, const char *banner);
+struct adv_vs_t;
+void adv_ui_draw_versus(const struct adv_vs_t *vs, uint32_t ms);
 
 #ifdef __cplusplus
 }

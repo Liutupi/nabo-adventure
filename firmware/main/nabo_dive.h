@@ -27,6 +27,13 @@ void nabo_dive_profile(bool on);
 void nabo_dive_button(int button, bool pressed, uint32_t event_ms);
 // Menu keys (UP click pauses). Returns true when consumed.
 bool nabo_dive_key(muse_menu_key_t key);
+// Versus race: the next nabo_dive_open() dives straight away with exactly this seed, never pauses,
+// records nothing and stays on the over screen. Cleared by nabo_dive_close().
+void nabo_dive_versus(bool on, uint32_t seed);
+// Depth in metres and whether the dive ended (versus race).
+void nabo_dive_versus_state(int* depth_m, bool* over);
+// Opponent pill and red rule banner drawn by the dive (UTF-8, copied; NULL clears).
+void nabo_dive_versus_text(const char* pill, const char* banner);
 // Fills 16 kHz mono PCM for the apps worker.
 void nabo_dive_audio_fill(int16_t* out, size_t count);
 

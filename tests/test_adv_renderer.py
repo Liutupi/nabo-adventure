@@ -21,7 +21,7 @@ PRESS, CLICK, DOUBLE, LONG, RELEASE = 0, 1, 2, 3, 4
 SOURCES = ['adv_boot_motion.c', 'adv_post_v2.c','adv_climb_v2.c','adv_sky_v2.c','adv_model.c', 'adv_stations.c', 'adv_demo.c', 'adv_post.c','adv_night.c','adv_ui_night.c','adv_climb.c','adv_ui_climb.c','adv_ski.c','adv_ui_ski.c','adv_sky.c','adv_ui_sky.c','adv_space.c','adv_ui_space.c', 'adv_ui_post.c', 'adv_ui_post_session.c', 'collection_model.c', 'adv_gfx.c', 'adv_ninepatch.c', 'adv_shapes.c', 'adv_sprite.c',
            'adv_text.c', 'adv_ui.c', 'adv_ui_animation.c', 'adv_ui_art.c', 'adv_ui_map.c', 'adv_ui_session.c','adv_ui_cards.c','adv_ui_post_v2.c','adv_ui_sky_v2.c','adv_ui_climb_v2.c', 'adv_ui_jump.c', 'collection_portrait.c',
            'nabo_jump_model.c', 'nabo_jump_rig.c', 'nabo_jump_codec.c','nabo_dive_text.c', 'collection_font_12.c', 'collection_font_16.c',
-           'collection_font_18.c','collection_font_26.c', 'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c','adv_video.c','adv_ui_boot_video.c']
+           'collection_font_18.c','collection_font_26.c', 'nabo_poster_font_28.c', 'nabo_poster_font_48.c', 'nabo_mono_font_12.c','adv_video.c','adv_ui_boot_video.c','adv_vs.c','adv_ui_versus.c']
 
 def ui_color(name):
     palette=json.loads((ROOT/'game-art/adventure/art/ui/palette.json').read_text('utf-8'))
@@ -241,6 +241,31 @@ class Renderer(unittest.TestCase):
         self.click(OK)
         for _ in range(4): self.click(DOWN)
         self.click(OK); self.save('status.png', True)
+
+    def test_jump_versus_pages(self):
+        self.lib.host_versus_case.argtypes = [ctypes.c_int]
+        names = ['lobby', 'lobby-no-radio', 'lobby-searching', 'wait', 'invited', 'countdown', 'result-win',
+                 'result-lose-again', 'notice-lost', 'race', 'race-fallen', 'race-opp-fallen', 'pick', 'lobby-games']
+        for i, name in enumerate(names):
+            self.lib.host_versus_case(i)
+            self.assertFalse(self.lib.host_overflow(), name)
+            self.save(f'versus-{name}.png')
+
+    def test_versus_idle_races_end(self):
+        # The unattended two-badge test lets landscape races run with no input: each must end alone.
+        self.new([0] * 9)
+        for station in range(3, 9):
+            for seed in (1, 77, 4242):
+                frames = self.lib.host_versus_idle(station, 60 * 240, seed)
+                self.assertGreater(frames, 0, (station, seed))
+
+    def test_versus_races_on_every_landscape_game(self):
+        self.new([0] * 9)
+        for station, name in zip(range(3, 9), ['post', 'night', 'climb', 'ski', 'sky', 'space']):
+            for banner in (0, 1):
+                self.assertEqual(self.lib.host_versus_race(station, 150, banner), 1, name)
+                self.assertFalse(self.lib.host_overflow(), name)
+                self.save(f'versus-race-{name}{"-banner" if banner else ""}.png')
 
     def test_post_native_playfield_reactions_and_dense_scene(self):
         self.new([0,99,0,0,0,0,0,0,0],seen=7)

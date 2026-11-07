@@ -104,9 +104,9 @@
     header('护照亭', `章 ${stampCount(A, m)}/24`);
     text('f18', '欢迎来到小镇护照亭', 120, 72, 'center', INK);
     text('f12', '盖过的章都收在冒险护照里', 120, 94, 'center', INK);
-    ['冒险护照', '设置', '返回地图'].forEach((s, i) => {
-      const on = i === m.kiosk, y = 124 + i * 46;
-      rect(30, y, 180, 36, 10, on ? GOLD : PAPER, 255, INK, on ? 2 : 1); text('f18', s, 120, y + 25, 'center', INK);
+    ['冒险护照', '设置', '双人对战', '返回地图'].forEach((s, i) => {
+      const on = i === m.kiosk, y = 116 + i * 42;
+      rect(30, y, 180, 34, 10, on ? GOLD : PAPER, 255, INK, on ? 2 : 1); text('f18', s, 120, y + 24, 'center', INK);
     });
     footer('上/下选择 · OK确认 · 长按上返回');
   }

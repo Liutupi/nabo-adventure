@@ -27,3 +27,4 @@ __pycache__/
 
 # Isolated local V2 candidates; exact deliverables are frozen under private/.
 /firmware/build-v2-*/
+/firmware/build-*/

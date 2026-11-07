@@ -35,6 +35,8 @@ void ui_stamps(ag_t *g, const adv_model_t *m, int station, int x, int cy, int r,
 int ui_stamp_count(const adv_model_t *m);
 uint32_t ui_millis(void);
 
+struct adv_vs_t;
+void ui_draw_versus(ag_t *g, const struct adv_vs_t *vs, uint32_t ms);
 void ui_draw_map(ag_t *g, const adv_model_t *m);
 void ui_map_reset(void);
 void ui_draw_passport(ag_t *g, const adv_model_t *m);

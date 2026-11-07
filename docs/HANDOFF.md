@@ -1,5 +1,14 @@
 # 交接本
 
+## v0.3.0 双人对战 · 2026-11-07（GitHub 预览版）
+
+用户要求“更新到 GitHub 并发布新固件”。八款游戏均可双人对战（ESP-NOW），发布应用 91b850dd（2,267,040 B，`ADV_LINK=1` 无线构建），与两块工牌（98:c3:77:f4:a9:58 / 98:c3:77:f5:78:74）测试的应用逐字节相同。
+
+- 代码：`adv_vs.[ch]`（纯 C 对战模型、44 字节包、NABO 机器人/影子对手）、`adv_link.[ch]`（移植自声音实验室 sd_radio）、`adv_ui_versus.c`（选游戏/大厅/倒数/结算页）、`adv_model` 的 `adv_versus_race/stop`（横屏六款原游戏对战模式）、深潜 `nabo_dive_versus*`。护照亭菜单第3项“双人对战”，JS 原型与金样轨迹同步。
+- 证据：`validation/v3-20261107-91b850dd.json`。宿主 322 项；跳一跳双机 5/5、零丢包、真人对玩；八款自动对战七款一致，**火箭登月对战未上真机**（测试脚本在热气球结算后因串口回复延迟崩溃，已在 `tools/vs_device_test.py` 修复）。
+- 用户两块工牌已是新布局，NVS 未被写过；备份在用户 Windows 下载目录 `nabo-versus*/`。不要自动操作工牌。
+- 宿主渲染测试在 gcc 13 上需 `CC` 加 `-Wno-error=sign-compare -Wno-error=misleading-indentation`（未改动的 main 同样失败）；渲染测试会重写 `docs/images/ui/`，只提交真正变化的图。
+
 ## 社区 v0.2.0 更新已提交 · 1662 / 4154（审核中）
 
 用户明确要求“同样发布更新到社区”，已在原项目 **1662，slug nabo-4** 提交新修订 **4154**。服务器初始状态 **pending / 审核中**，原公开3808保留；不能把projectStatus=published当作新修订已公开。实际后续状态以 `docs/community/v0.2.0/submission-status.json` 为准，不重复提交、不撤回、不催审。

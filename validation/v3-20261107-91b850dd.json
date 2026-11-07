@@ -1,0 +1,140 @@
+{
+  "schema": "nabo-adventure-validation-v1",
+  "version": "0.3.0",
+  "date": "2026-11-07",
+  "candidate_sha256": "91b850dd1654c456d9ccd609e7a09017274bdba5fa395f51d9604a4c26970827",
+  "candidate_bytes": 2267040,
+  "build": {
+    "idf": "v6.0.2",
+    "defaults": [
+      "sdkconfig.defaults",
+      "sdkconfig.link.defaults"
+    ],
+    "env": "ADV_LINK=1",
+    "note": "wireless build; the plain build (no ADV_LINK) stays radio-free at 1,903,584 B and fits the legacy 2 MB factory"
+  },
+  "status": "BUILD AND HOST PASS; DEVICE TWO-BADGE AUTOMATION PASS FOR 7 OF 8 GAMES; SPACE NOT DEVICE-TESTED",
+  "host": {
+    "tests": 322,
+    "result": "OK",
+    "notes": [
+      "two adv_vs instances over a simulated link: 40 matches at 10% loss with reordering, outcomes mirrored and scores agreed 40/40; rematch 40/40",
+      "link cut is voided after <=4.1 s; leave, decline, no-answer and game-choice cases",
+      "every landscape race ends without input within 40 s (unattended device test relies on it)",
+      "all versus pages and the six landscape plus dive race overlays rendered and inspected",
+      "renderer tests built with -Wno-error=sign-compare/misleading-indentation on host gcc 13: unmodified main fails the same way there"
+    ]
+  },
+  "device": {
+    "badges": {
+      "A": "COM12 98:c3:77:f4:a9:58",
+      "B": "COM11 98:c3:77:f5:78:74"
+    },
+    "install": "each badge fully backed up (8,388,608 B) before writing only 0x8000 partition table and 0x10000 app; bootloader and NVS not written",
+    "jump_two_badge_run": {
+      "build": "c8c2508a (jump-only predecessor)",
+      "rounds": "5/5 consistent",
+      "packets_dropped": 0,
+      "leave_detected_s": 0.1,
+      "open_close_heap_drift": 0
+    },
+    "manual_play": "two people played jump versus by hand after the rule banner change and reported success",
+    "games": {
+      "jump": {
+        "status": "PASS",
+        "scores": [
+          42,
+          29
+        ],
+        "play_heap_low": [
+          208516,
+          114688
+        ]
+      },
+      "dive": {
+        "status": "PASS",
+        "scores": [
+          345,
+          342
+        ],
+        "play_heap_low": [
+          185964,
+          114688
+        ]
+      },
+      "post": {
+        "status": "PASS (idle players, draw)",
+        "scores": [
+          1,
+          1
+        ],
+        "play_heap_low": [
+          146288,
+          114688
+        ]
+      },
+      "night": {
+        "status": "PASS (idle players, draw)",
+        "scores": [
+          0,
+          0
+        ],
+        "play_heap_low": [
+          145104,
+          114688
+        ]
+      },
+      "climb": {
+        "status": "PASS (idle players, draw)",
+        "scores": [
+          0,
+          0
+        ],
+        "play_heap_low": [
+          137388,
+          114688
+        ]
+      },
+      "ski": {
+        "status": "PASS (idle players, draw)",
+        "scores": [
+          249,
+          249
+        ],
+        "play_heap_low": [
+          146224,
+          114688
+        ]
+      },
+      "sky": {
+        "status": "PASS ON DEVICE (idle players, draw 59:59); the test script then crashed on a late serial reply (fixed in tools/vs_device_test.py)",
+        "scores": [
+          59,
+          59
+        ],
+        "play_heap_low": [
+          72140,
+          40960
+        ]
+      },
+      "space": {
+        "status": "NOT DEVICE-TESTED (run stopped before it)"
+      }
+    },
+    "radio": {
+      "packets_dropped": 0,
+      "send_failures": 0
+    },
+    "kiosk_heap_after_each_game": [
+      232260,
+      232996
+    ]
+  },
+  "unverified": [
+    "火箭登月 versus on hardware",
+    "landscape games played by hand in versus (the device run used idle players)",
+    "sleep/wake during a race",
+    "first full install from 0x0 on an empty badge with this exact image",
+    "badges with other firmware layouts than the two tested"
+  ]
+}

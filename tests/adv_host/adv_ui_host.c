@@ -283,6 +283,70 @@ void host_jump_item(int size, int skin)
 int host_jump_hold(void) { return (game.gap - 4) * 1000 / 150; }
 int host_jump_score(void) { return (int)game.score; }
 
+// ---------- jump versus room ----------
+#include "adv_vs.h"
+static adv_vs_t vs;
+void host_versus_case(int which)
+{
+    static const uint8_t me[6] = {0x98, 0xC3, 0x77, 0xF4, 0xA9, 0x58}, a[6] = {1, 2, 3, 4, 0x11, 0x22}, b[6] = {1, 2, 3, 4, 0x3C, 0x07};
+    adv_ui_close();
+    if (!adv_ui_open()) return;
+    now = 5000;
+    adv_vs_init(&vs, me, which != 1, 1, now, which == 12 ? 0 : which == 13 ? 6 : 1);
+    if (which == 12) vs.pick = 5;
+    if (which == 0 || which >= 3) {
+        memcpy(vs.peers[0].mac, a, 6); memcpy(vs.peers[1].mac, b, 6);
+        vs.peers[0].seen = vs.peers[1].seen = now; vs.peers[1].busy = true; vs.npeers = 2; vs.cursor = 1;
+    }
+    memcpy(vs.opp, a, 6);
+    if (which == 3) vs.page = VS_WAIT;
+    if (which == 4) vs.page = VS_INVITED;
+    if (which == 5) { vs.page = VS_COUNTDOWN; vs.go_at = now + 2400; }
+    if (which == 6 || which == 7) {
+        vs.page = VS_RESULT; vs.mine.score = which == 6 ? 37 : 12; vs.theirs.score = which == 6 ? 21 : 44;
+        vs.outcome = which == 6 ? VS_WIN : VS_LOSE; vs.wins = 2; vs.losses = 1; vs.they_again = which == 7;
+    }
+    if (which == 8) { vs.page = VS_NOTICE; vs.note = VS_NOTE_LOST; }
+    if (which == 13) { vs.peers[0].game = 6; vs.peers[1].game = 3; vs.peers[1].busy = false; }
+    if (which <= 8 || which >= 12) { adv_ui_draw_versus(&vs, now); return; }
+    // 9: racing with the opponent overlay; 10: fallen, waiting for the opponent
+    nabo_jump_reset(&game, 7, 0);
+    game.score = 9;
+    if (which == 10) game.phase = JUMP_OVER;
+    if (which == 10) adv_jump_versus("对手 6 分", "还在跳", "你掉下去了", "对手 6 分，还在跳", "对手要超过 9 分才算赢");
+    else if (which == 11) adv_jump_versus("对手 12 分", "已经掉下去了", "你掉下去了", "", "对手掉了！超过 12 分你就赢");
+    else adv_jump_versus("对手 12 分", "还在跳", "你掉下去了", "对手 12 分，还在跳", NULL);
+    adv_jump_draw(&game, now, true);
+    adv_jump_versus(NULL, NULL, NULL, NULL, NULL);
+}
+
+// A landscape versus race: the real game a few seconds in, with the opponent pill and the rule banner.
+int host_versus_race(int station, int frames, int banner)
+{
+    adv_ui_close();
+    if (!adv_ui_open()) return 0;
+    if (!(adv_versus_race(&model, station, 12345) & ADV_FX_REDRAW)) return 0;
+    for (int i = 0; i < frames; i++) { adv_step(&model); now += 16; }
+    adv_ui_versus_overlay("对手 1280", banner ? "对手结束了！超过 1280 分你就赢" : NULL);
+    adv_ui_invalidate();
+    adv_ui_draw(&model, now, 85, 4010);
+    adv_ui_versus_overlay(NULL, NULL);
+    int ok = model.versus && model.page == ADV_PAGE_SESSION;
+    adv_versus_stop(&model);
+    return ok;
+}
+
+// Frames until an untouched versus race ends (the unattended two-badge test relies on it), -1 if never.
+int host_versus_idle(int station, int max_frames, uint32_t seed)
+{
+    if (!(adv_versus_race(&model, station, seed) & ADV_FX_REDRAW)) return -2;
+    int f = 0;
+    while (f < max_frames && model.phase == ADV_PLAY) { adv_step(&model); f++; }
+    int r = model.phase == ADV_PLAY ? -1 : f;
+    adv_versus_stop(&model);
+    return r;
+}
+
 // ---------- raw renderer ----------
 
 static void bitmap_send(void *ctx, int x, int y, int w, int h, uint16_t *px)

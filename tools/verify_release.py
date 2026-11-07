@@ -4,7 +4,7 @@ import argparse
 import json
 from pathlib import Path
 import zipfile
-from package_release import APP_SHA,VERSION,sha,safe_member,verify_padding
+from package_release import RELEASES,sha,safe_member,verify_padding
 
 def parse_sums(raw):
     result={}
@@ -16,6 +16,9 @@ def parse_sums(raw):
 
 def verify(folder):
     folder=Path(folder);checks=parse_sums((folder/'SHA256SUMS.txt').read_bytes())
+    VERSION=json.loads((folder/'manifest.json').read_text('utf-8'))['version']
+    if VERSION not in RELEASES:raise ValueError('Unknown release version')
+    APP_SHA=RELEASES[VERSION]['app_sha']
     expected={'nabo-adventure-v'+VERSION+s for s in ('-app.bin','-full.bin','.zip')}|{'manifest.json','INSTALL.md','VALIDATION.json'}
     if set(checks)!=expected or {p.name for p in folder.iterdir()}!=expected|{'SHA256SUMS.txt'}:
         raise ValueError('Unexpected or missing release assets')

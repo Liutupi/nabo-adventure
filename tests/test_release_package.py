@@ -27,6 +27,20 @@ class ReleaseGuards(unittest.TestCase):
             wrong=copy.deepcopy(valid);del wrong['device']['games']['sky']
             with self.assertRaises(ValueError):validate_binding(app,wrong)
 
+    def test_v030_binding_names_all_eight_games(self):
+        import json
+        from package_release import RELEASES, ROOT
+        cfg = RELEASES['0.3.0']
+        record = json.loads((ROOT / cfg['validation']).read_text('utf-8'))
+        app = b'x'
+        with patch('package_release.sha', lambda data: cfg['app_sha']):
+            validate_binding(app, record, '0.3.0')
+            wrong = copy.deepcopy(record); del wrong['device']['games']['space']
+            with self.assertRaises(ValueError): validate_binding(app, wrong, '0.3.0')
+            wrong = copy.deepcopy(record); wrong['version'] = '0.2.0'
+            with self.assertRaises(ValueError): validate_binding(app, wrong, '0.3.0')
+        with self.assertRaises(ValueError): validate_binding(b'rebuilt', record, '0.3.0')
+
     def test_rejects_archive_traversal_and_absolute_names(self):
         for name in ('../app.bin','/app.bin','C:/app.bin','tools\\app.py'):
             with self.subTest(name=name),self.assertRaises(ValueError):safe_member(name)
